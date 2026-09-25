@@ -241,7 +241,7 @@ const mix = (a, b, k) => a + (b - a) * k;
 function set(el, { o = 1, x = 0, y = 0, s = 1, r = 0, blur = 0 } = {}) {
   el = typeof el === 'string' ? $(el) : el;
   el.style.opacity = o;
-  el.style.display = o <= 0.001 ? 'none' : '';
+  el.style.visibility = o <= 0.001 ? 'hidden' : 'visible';
   el.style.transform = `translate(${x}px,${y}px) scale(${s}) rotate(${r}deg)`;
   el.style.filter = blur > 0.05 ? `blur(${blur}px)` : '';
 }

@@ -1,4 +1,4 @@
 voiceover/clips/
 __pycache__/
-out/
+out/*
 !out/villaem3_final.mp4
