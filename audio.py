@@ -202,12 +202,18 @@ def sfx_best3():
     add(pop(1300, 0.15), 7.15, 0.3)                   # 3 SUHU
     for i in range(3):                                # titisan mendarat
         add(pop(900 + 200 * i, 0.1), 7.9 + i * .2, 0.25, pan=-0.3 + 0.3 * i)
-    # --- Villaem 3 ---
+    # --- Villaem 3 (video) ---
     add(pop(1100), 10.1, 0.28)
     add(shimmer(1.4), 10.75, 0.12)                    # PREMIUM
     add(pop(700, 0.2), 11.35, 0.35)                   # GENERASI 3
-    for i, tk in enumerate([12.15, 13.1, 13.95, 14.75]):
-        add(pop(800 + 120 * i), tk, 0.28, pan=-0.2)
+    add(pop(900, 0.2), 11.85, 0.25)                   # panel
+    for i, tk in enumerate([12.1, 12.5]):             # pilihan suhu / suam
+        add(pop(800 + 150 * i), tk, 0.28, pan=-0.2)
+    add(whoosh(0.3), 13.05, 0.2)                      # potong ke tangki
+    add(impact(0.8), 13.5, 0.3)                       # PALING BESAR
+    add(whoosh(0.3), 14.85, 0.2)                      # potong ke presenter
+    for i, tk in enumerate([15.2, 15.55]):            # senang guna / pilihan ramai
+        add(pop(1000 + 150 * i), tk, 0.28, pan=0.2)
     # --- Ais (video) ---
     add(pop(1100), 16.6, 0.28)
     add(pop(1300, 0.15), 17.25, 0.28)                 # Siap keluar AIS!

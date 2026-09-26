@@ -1,5 +1,5 @@
 {
-  "_comment": "Klip video yang dipecahkan jadi frame JPG oleh render.py (out/clips/<nama>/f0001.jpg ...). start/dur dalam saat dari fail sumber.",
+  "_comment": "Klip video yang dipecahkan jadi frame JPG oleh render.py (out/clips/<nama>/f0001.jpg ...). start/dur dalam saat dari fail sumber; speed < 1 = slow-mo.",
   "neonA": {
     "src": "assets/video/neon3.mp4",
     "start": 3.6,
@@ -9,6 +9,22 @@
     "src": "assets/video/neon2.mp4",
     "start": 4.0,
     "dur": 3.4
+  },
+  "vilA": {
+    "src": "assets/video/vil2.mp4",
+    "start": 0.0,
+    "dur": 2.6,
+    "speed": 0.75
+  },
+  "vilB": {
+    "src": "assets/video/vil2.mp4",
+    "start": 3.9,
+    "dur": 1.95
+  },
+  "vilC": {
+    "src": "assets/video/vil2.mp4",
+    "start": 6.6,
+    "dur": 1.8
   },
   "aisA": {
     "src": "assets/video/ais3.mp4",

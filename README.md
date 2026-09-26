@@ -37,7 +37,7 @@ Sasaran: orang yang tengah plan nak pasang Coway. **Video siap:** `out/best3_fin
 |------|-------|
 | 0 – 4s | Hook: "Tengah plan nak PASANG COWAY?" → "Ni 3 model paling laris tahun ni" + 3 produk |
 | 4 – 9.8s | #1 **Neon** (video): mampu milik · lengkap 3 suhu (panas, suhu bilik, sejuk) |
-| 9.8 – 16.3s | #2 **Villaem 3**: premium · generasi 3 · pilihan ramai, senang guna · banyak pilihan suhu, ada air suam · tangki paling besar |
+| 9.8 – 16.3s | #2 **Villaem 3** (video): premium · generasi 3 · banyak pilihan suhu, ada air suam · tangki paling besar · senang guna, pilihan ramai |
 | 16.3 – 22.2s | #3 **Coway Ais** (video): siap keluar ais · paling special · pagi / petang / malam |
 | 22.2 – 27.8s | Promo semua model: RM20 je dah boleh pasang · rebate RM20 × 7 bulan · hantar & pasang percuma seluruh Malaysia |
 | 27.8 – 30s | "Nak yang mana satu?" + butang WhatsApp |
@@ -47,6 +47,9 @@ Sasaran: orang yang tengah plan nak pasang Coway. **Video siap:** `out/best3_fin
 
 **Ais:** babak video penuh skrin dari `assets/video/ais3.mp4` (ais jatuh ke gelas) + `ais1.mov` (tuang kopi ais).
 Sari kata asal dalam `ais1.mov` ditutup oleh panel Pagi/Petang/Malam. Thumbnail: `assets/img/ais.png`.
+
+**Villaem 3:** babak video dari `assets/video/vil2.mp4` sahaja (tekan butang suhu → tangki UV → presenter) —
+klip lain ada teks tertanam (ECO MODE, DUAL LOCK MODE, SERENDAH RM20). Thumbnail: `assets/img/villaem3-front.png`.
 
 Voiceover: `voiceover/best3/skrip_voiceover.md` (+ `best3.srt`).
 
