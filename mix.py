@@ -2,10 +2,13 @@
 
     python mix.py
       -> out/villaem3_final.mp4   (music + SFX, + VO when voiceover/clips/*.mp3 exist)
+    python mix.py --project neoplus
+      -> out/neoplus_final.mp4    (VO from neoplus/clips/*.mp3)
 
 Voiceover clips are placed at the start times in voiceover/lines.json, and the music bed
 is ducked (~-9 dB) underneath the voice.
 """
+import argparse
 import json
 import pathlib
 import subprocess
@@ -37,14 +40,22 @@ def smooth(x, sec):
     return np.convolve(x, k, mode="same")
 
 
-def main():
-    bed = read_wav(ROOT / "out" / "music_sfx.wav")
+PROJECTS = {
+    "villaem3": dict(bed="out/music_sfx.wav", video="out/villaem3_video_noaudio.mp4", lines="voiceover/lines.json",
+                     clips="voiceover/clips", out="out/villaem3_final.mp4"),
+    "neoplus": dict(bed="out/neoplus_music_sfx.wav", video="out/neoplus_video_noaudio.mp4", lines="neoplus/lines.json",
+                    clips="neoplus/clips", out="out/neoplus_final.mp4"),
+}
+
+
+def main(cfg):
+    bed = read_wav(ROOT / cfg["bed"])
     N = len(bed)
     vo = np.zeros(N)
-    lines = json.loads((ROOT / "voiceover" / "lines.json").read_text())
+    lines = json.loads((ROOT / cfg["lines"]).read_text())
     used = 0
     for ln in lines:
-        clip = ROOT / "voiceover" / "clips" / f"{ln['id']}.mp3"
+        clip = ROOT / cfg["clips"] / f"{ln['id']}.mp3"
         if not clip.exists():
             clip = clip.with_suffix(".wav")
         if not clip.exists():
@@ -71,8 +82,8 @@ def main():
         w.setframerate(SR)
         w.writeframes((mix * 32767).astype("<i2").tobytes())
 
-    out = ROOT / "out" / "villaem3_final.mp4"
-    subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / "out" / "villaem3_video_noaudio.mp4"), "-i", str(tmp),
+    out = ROOT / cfg["out"]
+    subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / cfg["video"]), "-i", str(tmp),
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out)],
                    check=True)
     tmp.unlink()
@@ -80,4 +91,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--project", default="villaem3", choices=PROJECTS)
+    main(PROJECTS[ap.parse_args().project])
