@@ -1,6 +1,7 @@
 """Skrip VO penuh Neo Plus + garis masa.
 
-    python neoplus_full/timeline.py
+    python neoplus_full/timeline.py                              # anggaran daripada panjang teks
+    python neoplus_full/timeline.py --clips neoplus_full/clips   # guna tempoh klip suara sebenar
 
 Menulis:
   neoplus_full/lines.json   slot setiap baris (untuk generate_vo.py & mix.py)
@@ -11,9 +12,11 @@ Tempoh setiap baris dianggar daripada panjang teks (CPS aksara/saat + jeda tanda
 index.html dan audio.py guna fungsi anggaran yang sama (at(i, 'perkataan')) untuk
 meletakkan animasi & SFX tepat pada perkataan yang disebut.
 """
+import argparse
 import json
 import pathlib
 import re
+import subprocess
 
 HERE = pathlib.Path(__file__).resolve().parent
 
@@ -72,13 +75,27 @@ def est(text):
     return len(text) / CPS + stops * P_STOP + commas * P_COMMA
 
 
-def build():
+def clip_duration(clips, i):
+    """Tempoh klip suara <clips>/<id>.wav|.mp3, atau None jika tiada."""
+    for ext in (".mp3", ".wav"):
+        f = clips / f"{i + 1:02d}{ext}"
+        if f.exists():
+            import imageio_ffmpeg
+            err = subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-i", str(f)], capture_output=True, text=True).stderr
+            h, m, s = err.split("Duration: ")[1].split(",")[0].split(":")
+            return int(h) * 3600 + int(m) * 60 + float(s)
+    return None
+
+
+def build(clips=None):
+    """Slot setiap baris. Jika `clips` diberi, slot = tempoh klip suara sebenar (video ikut suara)."""
     t = START
     rows = []
     for i, (vo, sub, extra) in enumerate(SCRIPT):
         if i:
             t += GAP + extra
-        d = round(est(vo) / 0.05) * 0.05
+        real = clip_duration(clips, i) if clips else None
+        d = round((real if real else est(vo)) / 0.05) * 0.05
         rows.append({"id": f"{i + 1:02d}", "start": round(t, 2), "end": round(t + d, 2), "text": vo, **({"sub": sub} if sub else {})})
         t += d
     return rows, round(t + HOLD, 2)
@@ -102,7 +119,10 @@ def ts(x):
 
 
 if __name__ == "__main__":
-    rows, dur = build()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--clips", help="folder klip suara; slot diambil daripada tempoh sebenar klip")
+    a = ap.parse_args()
+    rows, dur = build(pathlib.Path(a.clips).resolve() if a.clips else None)
     body = "[\n" + ",\n".join("  " + json.dumps(r, ensure_ascii=False) for r in rows) + "\n]\n"
     (HERE / "lines.json").write_text(body)
     (HERE / "lines.js").write_text(

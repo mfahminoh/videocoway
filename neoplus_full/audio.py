@@ -5,6 +5,7 @@
 Masa diambil daripada skrip dalam timeline.py: at(i, 'perkataan') = bila perkataan itu disebut,
 sama seperti index.html, jadi SFX sentiasa selari dengan animasi.
 """
+import json
 import pathlib
 import sys
 import wave
@@ -16,7 +17,8 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 import timeline  # noqa: E402
 
-ROWS, DUR = timeline.build()
+ROWS = json.loads((HERE / "lines.json").read_text())   # ditulis oleh timeline.py (anggaran atau klip sebenar)
+DUR = round(ROWS[-1]["end"] + timeline.HOLD, 2)
 SR = 44100
 N = int(SR * DUR)
 rng = np.random.default_rng(11)

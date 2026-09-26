@@ -58,3 +58,16 @@ python neoplus_full/audio.py                                     # muzik + SFX
 python voiceover/generate_vo.py --lines neoplus_full/lines.json --clips neoplus_full/clips --voice ms-MY-YasminNeural
 python mix.py --project neoplus_full                             # -> out/neoplus_full_final.mp4
 ```
+
+## Suara dengan Gemini TTS (alternatif kepada edge-tts)
+Perlu `GEMINI_API_KEY` (Google AI Studio). Video versi penuh akan **ikut tempoh suara sebenar**:
+```
+python voiceover/generate_vo_gemini.py --lines neoplus_full/lines.json --clips neoplus_full/clips   # suara lalai: Sulafat
+python neoplus_full/timeline.py --clips neoplus_full/clips      # slot = tempoh klip sebenar
+python render.py --page neoplus_full/index.html --out out/neoplus_full_video_noaudio.mp4 --workers 4
+python neoplus_full/audio.py
+python mix.py --project neoplus_full
+```
+`--voice Kore` / `Aoede` / `Leda` untuk tukar suara, `--style "..."` untuk tukar gaya bacaan,
+`--only 03,11` untuk jana semula baris tertentu, `--list` untuk lihat model TTS yang ada.
+

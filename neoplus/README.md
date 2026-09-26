@@ -35,3 +35,10 @@ python mix.py --project neoplus                                                 
 ```
 `generate_vo.py` perlukan internet (speech.platform.bing.com). Jika satu baris terlalu panjang untuk slotnya,
 ia dijana semula sedikit laju supaya muat. Boleh juga rakam suara sendiri sebagai `neoplus/clips/01.mp3` … `12.mp3`.
+
+**Alternatif: Gemini TTS** (perlu `GEMINI_API_KEY`; klip yang terlebih panjang dipercepat sedikit supaya muat slot):
+```
+python voiceover/generate_vo_gemini.py --lines neoplus/lines.json --clips neoplus/clips --fit
+python mix.py --project neoplus
+```
+
