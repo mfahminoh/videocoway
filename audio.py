@@ -17,7 +17,7 @@ AD = ap.parse_args().ad
 # ad -> (duration, when kick & hats come in, music fade-out start, output file)
 DUR, REVEAL, END_FADE, OUTFILE = {
     "villaem3": (29.5, 8.6, 28.3, "music_sfx.wav"),
-    "best3": (30.0, 4.0, 29.0, "best3_music_sfx.wav"),
+    "best3": (35.0, 3.85, 34.0, "best3_music_sfx.wav"),
 }[AD]
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
@@ -187,7 +187,10 @@ def sfx_villaem3():
 
 
 def sfx_best3():
-    for tw in [3.7, 9.55, 16.05, 21.9, 27.55]:        # peralihan babak
+    # sama seperti objek T dan masa potongan dalam src/best3.html
+    T = dict(iris=3.6, neon=3.85, vil=8.2, ais=17.1, promo=24.3, cta=32.3)
+    ncut, vcut1, vcut2, acut = T["neon"] + 2.4, T["vil"] + 5.5, T["vil"] + 6.7, T["ais"] + 3.4
+    for tw in [T["iris"] - .05, T["vil"] - .25, T["ais"] - .25, T["promo"] - .3, T["cta"] - .25]:   # peralihan babak
         add(whoosh(), tw, 0.22)
     add(impact(), 0.3, 0.5)                           # PASANG
     add(impact(0.8), 0.55, 0.3)                       # COWAY
@@ -195,46 +198,46 @@ def sfx_best3():
     for i in range(3):                                # 3 produk jatuh
         add(pop(500 + 150 * i), 2.3 + i * .2, 0.35, pan=-0.4 + 0.4 * i)
     # --- Neon (video) ---
-    add(pop(1100), 4.3, 0.28)
-    add(pop(700, 0.2), 5.55, 0.35)                    # pelekat MAMPU MILIK
-    add(whoosh(0.3), 6.45, 0.2)                       # potong klip
-    add(pop(900, 0.2), 6.95, 0.25)                    # panel
-    add(pop(1300, 0.15), 7.15, 0.3)                   # 3 SUHU
+    add(pop(1100), T["neon"] + .3, 0.28)
+    add(pop(700, 0.2), T["neon"] + 1.55, 0.35)        # pelekat MAMPU MILIK
+    add(whoosh(0.3), ncut - .15, 0.2)                 # potong klip
+    add(pop(900, 0.2), ncut + .35, 0.25)              # panel
+    add(pop(1300, 0.15), ncut + .55, 0.3)             # 3 SUHU
     for i in range(3):                                # titisan mendarat
-        add(pop(900 + 200 * i, 0.1), 7.9 + i * .2, 0.25, pan=-0.3 + 0.3 * i)
+        add(pop(900 + 200 * i, 0.1), ncut + 1.3 + i * .2, 0.25, pan=-0.3 + 0.3 * i)
     # --- Villaem 3 (video) ---
-    add(pop(1100), 10.1, 0.28)
-    add(shimmer(1.4), 10.75, 0.12)                    # PREMIUM
-    add(pop(700, 0.2), 11.35, 0.35)                   # GENERASI 3
-    add(pop(900, 0.2), 11.85, 0.25)                   # panel
-    for i, tk in enumerate([12.1, 12.5]):             # pilihan suhu / suam
-        add(pop(800 + 150 * i), tk, 0.28, pan=-0.2)
-    add(whoosh(0.3), 13.05, 0.2)                      # potong ke tangki
-    add(impact(0.8), 13.5, 0.3)                       # PALING BESAR
-    add(whoosh(0.3), 14.85, 0.2)                      # potong ke presenter
-    for i, tk in enumerate([15.2, 15.55]):            # senang guna / pilihan ramai
-        add(pop(1000 + 150 * i), tk, 0.28, pan=0.2)
+    add(pop(1100), T["vil"] + .3, 0.28)
+    add(shimmer(1.4), T["vil"] + 1.55, 0.12)          # PREMIUM
+    add(pop(700, 0.2), T["vil"] + 2.35, 0.35)         # GENERASI 3
+    add(pop(900, 0.2), T["vil"] + 3.3, 0.25)          # panel
+    for i, dt in enumerate([3.6, 4.85]):              # pilihan suhu / suam
+        add(pop(800 + 150 * i), T["vil"] + dt, 0.28, pan=-0.2)
+    add(whoosh(0.3), vcut1 - .15, 0.2)                # potong ke tangki
+    add(impact(0.8), vcut1 + .3, 0.3)                 # PALING BESAR
+    add(whoosh(0.3), vcut2 - .15, 0.2)                # potong ke presenter
+    for i, dt in enumerate([.2, 1.05]):               # senang guna / pilihan ramai
+        add(pop(1000 + 150 * i), vcut2 + dt, 0.28, pan=0.2)
     # --- Ais (video) ---
-    add(pop(1100), 16.6, 0.28)
-    add(pop(1300, 0.15), 17.25, 0.28)                 # Siap keluar AIS!
-    add(pop(700, 0.2), 17.65, 0.35)                   # PALING SPECIAL
+    add(pop(1100), T["ais"] + .3, 0.28)
+    add(pop(700, 0.2), T["ais"] + 1.55, 0.35)         # PALING SPECIAL
+    add(pop(1300, 0.15), T["ais"] + 2.15, 0.28)       # Siap keluar AIS!
     for j in range(4):                                # ais jatuh "ting"
-        add(bell(2800 + 300 * j, 0.3), 17.4 + j * .22, 0.05, pan=0.1)
-    add(pop(900, 0.2), 18.15, 0.25)                   # panel
-    add(whoosh(0.3), 18.45, 0.2)                      # potong klip
+        add(bell(2800 + 300 * j, 0.3), T["ais"] + 1.5 + j * .22, 0.05, pan=0.1)
+    add(pop(900, 0.2), acut - .45, 0.25)              # panel
+    add(whoosh(0.3), acut - .15, 0.2)                 # potong klip
     for c in range(3):                                # pagi / petang / malam
-        add(pop(600 + 150 * c, 0.15), 18.85 + c * .45, 0.28, pan=-0.4 + 0.4 * c)
+        add(pop(600 + 150 * c, 0.15), acut + .95 + c * .4, 0.28, pan=-0.4 + 0.4 * c)
     # --- Promo ---
-    add(pop(1200), 22.35, 0.3)
-    add(impact(0.8), 22.65, 0.35)                     # RM20
+    add(pop(1200), T["promo"] + .2, 0.3)
+    add(impact(0.8), T["promo"] + 1.85, 0.35)         # RM20
     for i, f in enumerate([2637, 3136, 3951, 4699, 5274]):
-        add(bell(f, 0.7), 23.15 + i * 0.07, 0.07)
-    add(pop(900, 0.2), 24.2, 0.3)                     # kad rebate
-    add(pop(1000), 25.55, 0.28)
-    add(pop(1150), 26.15, 0.28)
+        add(bell(f, 0.7), T["promo"] + 2.3 + i * 0.07, 0.07)
+    add(pop(900, 0.2), T["promo"] + 3.45, 0.3)        # kad rebate
+    add(pop(1000), T["promo"] + 5.6, 0.28)
+    add(pop(1150), T["promo"] + 6.4, 0.28)
     # --- CTA ---
-    add(shimmer(1.6), 28.0, 0.12)
-    add(pop(900, 0.2), 28.75, 0.3)                    # butang
+    add(shimmer(1.6), T["cta"] + .2, 0.12)
+    add(pop(900, 0.2), T["cta"] + .95, 0.3)           # butang
 
 
 {"villaem3": sfx_villaem3, "best3": sfx_best3}[AD]()

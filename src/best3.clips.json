@@ -1,39 +1,40 @@
 {
-  "_comment": "Klip video yang dipecahkan jadi frame JPG oleh render.py (out/clips/<nama>/f0001.jpg ...). start/dur dalam saat dari fail sumber; speed < 1 = slow-mo.",
+  "_comment": "Klip video yang dipecahkan jadi frame JPG oleh render.py (out/clips/<nama>/f0001.jpg ...). start/dur dalam saat dari fail sumber; speed < 1 = slow-mo; smooth = interpolasi gerakan untuk slow-mo.",
   "neonA": {
     "src": "assets/video/neon3.mp4",
     "start": 3.6,
-    "dur": 2.8
+    "dur": 2.7
   },
   "neonB": {
     "src": "assets/video/neon2.mp4",
     "start": 4.0,
-    "dur": 3.4
+    "dur": 2.6
   },
   "vilA": {
     "src": "assets/video/vil2.mp4",
     "start": 0.0,
-    "dur": 2.6,
-    "speed": 0.75
+    "dur": 2.85,
+    "speed": 0.5,
+    "smooth": true
   },
   "vilB": {
     "src": "assets/video/vil2.mp4",
-    "start": 3.9,
-    "dur": 1.95
+    "start": 4.3,
+    "dur": 1.5
   },
   "vilC": {
     "src": "assets/video/vil2.mp4",
     "start": 6.6,
-    "dur": 1.8
+    "dur": 2.9
   },
   "aisA": {
     "src": "assets/video/ais3.mp4",
     "start": 6.1,
-    "dur": 2.5
+    "dur": 3.6
   },
   "aisB": {
     "src": "assets/video/ais1.mov",
-    "start": 6.2,
-    "dur": 3.8
+    "start": 5.9,
+    "dur": 4.1
   }
 }

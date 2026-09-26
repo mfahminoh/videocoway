@@ -246,8 +246,8 @@ function sticker(id, t, tin, tout) {
   set(id, { o: Math.min(clamp(a * 2), 1 - b), s: mix(0, 1, a) * (1 + .04 * Math.sin((t - tin) * 5)), r: mix(-60, -8, a), y: -b * 60 });
 }
 
-/* ===== Garis masa (saat) — selari dengan voiceover/best3/lines.json ===== */
-const T = { hook: 0.0, iris: 3.75, neon: 4.0, vil: 9.8, ais: 16.3, promo: 22.2, cta: 27.8, end: 30.0 };
+/* ===== Garis masa (saat) — selari dengan voiceover/best3/lines.json (VO Gemini, 1.1x) ===== */
+const T = { hook: 0.0, iris: 3.6, neon: 3.85, vil: 8.2, ais: 17.1, promo: 24.3, cta: 32.3, end: 35.0 };
 window.DURATION = T.end;
 
 /* ikon pagi / petang / malam dalam panel Ais */
@@ -334,7 +334,7 @@ function seek(t) {
   $('rs3').style.transform = `scaleX(${p(t, T.ais + .1, T.ais + .6, E.inOut)})`;
 
   /* ---------- NEON (video) ---------- */
-  const nout = T.vil - .25, ncut = T.neon + 2.6, acut = T.ais + 2.3, vcut1 = T.vil + 3.4, vcut2 = T.vil + 5.2;
+  const nout = T.vil - .25, ncut = T.neon + 2.4, acut = T.ais + 3.4, vcut1 = T.vil + 5.5, vcut2 = T.vil + 6.7;
   set('flash', { o: Math.max(
     videoScene('nvidwrap', 'nvid', t, T.neon, T.vil, [['neonA', 0], ['neonB', ncut]]),
     videoScene('vvidwrap', 'vvid', t, T.vil, T.ais, [['vilA', 0], ['vilB', vcut1], ['vilC', vcut2]]),
@@ -354,29 +354,29 @@ function seek(t) {
   inout('v1', t, T.vil + .1, vtop, { dy: 30 });
   inout('v2', t, T.vil + .25, vtop, { pop: true, sFrom: .6, dy: 0 });
   {
-    inout('vprem', t, T.vil + .9, vtop, { pop: true, sFrom: .3, dy: 0 });
+    inout('vprem', t, T.vil + 1.5, vtop, { pop: true, sFrom: .3, dy: 0 });
     const sh = ((t - T.vil - 1.2) % 2.2) / 2.2;   // kilauan emas
     $('vprem').firstElementChild.style.backgroundPosition = `${sh * 300}% 0`;
     $('vprem').firstElementChild.style.backgroundSize = '200% 100%';
   }
-  sticker('vstk', t, T.vil + 1.5, vtop);
-  inout('vpanel', t, T.vil + 2.0, vout, { dy: 80, dur: .4 });
-  inout('vk1', t, T.vil + 2.25, vcut1 - .2, { dx: -100, dy: 0 });
-  inout('vk2', t, T.vil + 2.65, vcut1 - .2, { dx: -100, dy: 0 });
+  sticker('vstk', t, T.vil + 2.3, vtop);
+  inout('vpanel', t, T.vil + 3.3, vout, { dy: 80, dur: .4 });
+  inout('vk1', t, T.vil + 3.55, vcut1 - .2, { dx: -100, dy: 0 });
+  inout('vk2', t, T.vil + 4.8, vcut1 - .2, { dx: -100, dy: 0 });
   inout('vt1', t, vcut1 + .1, vcut2 - .2, { dy: 30 });
   inout('vt2', t, vcut1 + .25, vcut2 - .2, { pop: true, sFrom: .5, dy: 0 });
   inout('vk3', t, vcut2 + .15, vout, { dx: -100, dy: 0 });
-  inout('vk4', t, vcut2 + .5, vout, { dx: -100, dy: 0 });
+  inout('vk4', t, vcut2 + 1.0, vout, { dx: -100, dy: 0 });
 
   /* ---------- AIS (video) ---------- */
   const aout = T.promo - .35;
   inout('a1', t, T.ais + .1, aout, { dy: 30 });
   inout('a2', t, T.ais + .25, aout, { pop: true, sFrom: .6, dy: 0 });
-  inout('a3', t, T.ais + .9, aout, { pop: true, sFrom: .4, dy: 0 });
-  sticker('astk', t, T.ais + 1.3, aout);
+  inout('a3', t, T.ais + 2.1, aout, { pop: true, sFrom: .4, dy: 0 });
+  sticker('astk', t, T.ais + 1.5, aout);
   inout('apanel', t, acut - .45, aout, { dy: 80, dur: .4 });   // tutup sari kata dalam klip B
-  ['ai1', 'ai2', 'ai3'].forEach((k, i) => inout(k, t, acut + .2 + i * .45, aout, { pop: true, sFrom: .4, dy: 30 }));
-  inout('a4', t, acut + 1.7, aout, { dy: 30 });
+  ['ai1', 'ai2', 'ai3'].forEach((k, i) => inout(k, t, acut + .9 + i * .4, aout, { pop: true, sFrom: .4, dy: 30 }));
+  inout('a4', t, acut + 2.4, aout, { dy: 30 });
 
   /* ---------- PROMO ---------- */
   const pout = T.cta - .15;
@@ -386,15 +386,15 @@ function seek(t) {
     $('p1').style.transform += ` rotate(${wig}deg)`;
   }
   {
-    const a = p(t, T.promo + .4, T.promo + .9, E.back), b = p(t, pout, pout + .35, E.in);
-    set('p2', { o: Math.min(clamp(a * 2), 1 - b), s: mix(.4, 1, a) * (1 + .05 * Math.sin(clamp((t - T.promo - 1.0) * 4) * Math.PI)), y: -b * 60 });
-    $('p2n').textContent = Math.round(mix(0, 20, p(t, T.promo + .4, T.promo + 1.0, E.out)));
+    const a = p(t, T.promo + 1.8, T.promo + 2.3, E.back), b = p(t, pout, pout + .35, E.in);
+    set('p2', { o: Math.min(clamp(a * 2), 1 - b), s: mix(.4, 1, a) * (1 + .05 * Math.sin(clamp((t - T.promo - 2.4) * 4) * Math.PI)), y: -b * 60 });
+    $('p2n').textContent = Math.round(mix(0, 20, p(t, T.promo + 1.8, T.promo + 2.4, E.out)));
   }
-  inout('p3', t, T.promo + .9, pout, { dy: 40 });
-  inout('pcard', t, T.promo + 1.9, pout, { pop: true, sFrom: .7, dy: 60 });
-  inout('pk1', t, T.promo + 3.3, pout, { dx: -100, dy: 0 });
-  inout('pk2', t, T.promo + 3.9, pout, { dx: -100, dy: 0 });
-  inout('tnc', t, T.promo + 4.1, pout, { dy: 10 });
+  inout('p3', t, T.promo + 2.4, pout, { dy: 40 });
+  inout('pcard', t, T.promo + 3.4, pout, { pop: true, sFrom: .7, dy: 60 });
+  inout('pk1', t, T.promo + 5.55, pout, { dx: -100, dy: 0 });
+  inout('pk2', t, T.promo + 6.35, pout, { dx: -100, dy: 0 });
+  inout('tnc', t, T.promo + 6.6, pout, { dy: 10 });
 
   /* ---------- CTA ---------- */
   inout('e1', t, T.cta + .15, null, { pop: true, sFrom: .7, dy: 0 });

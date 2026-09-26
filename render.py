@@ -40,7 +40,9 @@ def prepare_clips(src):
         for old in d.glob("*.jpg"):
             old.unlink()
         subprocess.run([ffmpeg, "-v", "error", "-y", "-ss", str(c["start"]), "-t", str(c["dur"]), "-i", str(ROOT / c["src"]),
-                        "-vf", f"setpts=PTS/{c.get('speed', 1)},fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
+                        "-vf", f"setpts=PTS/{c.get('speed', 1)},"
+                        + (f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:vsbmc=1," if c.get("smooth") else f"fps={FPS},")
+                        + f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}",
                         "-q:v", "3", str(d / "f%04d.jpg")], check=True)
         counts[name] = len(list(d.glob("*.jpg")))
     (ROOT / "out" / "clips" / (src.replace(".html", "_clips.js"))).write_text(f"window.CLIPS = {json.dumps(counts)};\n")
