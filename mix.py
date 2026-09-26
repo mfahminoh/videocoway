@@ -2,10 +2,13 @@
 
     python mix.py
       -> out/villaem3_final.mp4   (music + SFX, + VO when voiceover/clips/*.mp3 exist)
+    python mix.py --ad best3
+      -> out/best3_final.mp4      (VO from voiceover/best3/clips/*.mp3)
 
 Voiceover clips are placed at the start times in voiceover/lines.json, and the music bed
 is ducked (~-9 dB) underneath the voice.
 """
+import argparse
 import json
 import pathlib
 import subprocess
@@ -17,6 +20,11 @@ import numpy as np
 ROOT = pathlib.Path(__file__).parent
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 SR = 44100
+# ad -> (silent video, music+SFX bed, voiceover folder, final output)
+ADS = {
+    "villaem3": ("villaem3_video_noaudio.mp4", "music_sfx.wav", "voiceover", "villaem3_final.mp4"),
+    "best3": ("best3_video_noaudio.mp4", "best3_music_sfx.wav", "voiceover/best3", "best3_final.mp4"),
+}
 
 
 def read_wav(path):
@@ -38,13 +46,17 @@ def smooth(x, sec):
 
 
 def main():
-    bed = read_wav(ROOT / "out" / "music_sfx.wav")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ad", choices=ADS, default="villaem3")
+    video, bed_wav, vo_dir, final = ADS[ap.parse_args().ad]
+    vo_dir = ROOT / vo_dir
+    bed = read_wav(ROOT / "out" / bed_wav)
     N = len(bed)
     vo = np.zeros(N)
-    lines = json.loads((ROOT / "voiceover" / "lines.json").read_text())
+    lines = json.loads((vo_dir / "lines.json").read_text())
     used = 0
     for ln in lines:
-        clip = ROOT / "voiceover" / "clips" / f"{ln['id']}.mp3"
+        clip = vo_dir / "clips" / f"{ln['id']}.mp3"
         if not clip.exists():
             clip = clip.with_suffix(".wav")
         if not clip.exists():
@@ -71,8 +83,8 @@ def main():
         w.setframerate(SR)
         w.writeframes((mix * 32767).astype("<i2").tobytes())
 
-    out = ROOT / "out" / "villaem3_final.mp4"
-    subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / "out" / "villaem3_video_noaudio.mp4"), "-i", str(tmp),
+    out = ROOT / "out" / final
+    subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / "out" / video), "-i", str(tmp),
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out)],
                    check=True)
     tmp.unlink()

@@ -26,3 +26,32 @@ python mix.py             # gabung (+ voiceover jika ada voiceover/clips/*.mp3)
 ```
 Edit teks/harga terus dalam `src/index.html`; masa babak dalam objek `T`.
 Warna: navy/biru Coway, aksen biru langit; merah/biru panas-sejuk ikut garis pada produk. Font: Poppins.
+
+---
+
+# Iklan 2 — 3 Model Coway Paling Laris (Portrait 1080×1920, 30s)
+
+Sasaran: orang yang tengah plan nak pasang Coway. **Video siap:** `out/best3_final.mp4`.
+
+| Masa | Babak |
+|------|-------|
+| 0 – 4s | Hook: "Tengah plan nak PASANG COWAY?" → "Ni 3 model paling laris tahun ni" + 3 produk |
+| 4 – 9.8s | #1 **Neon**: mampu milik · lengkap 3 suhu |
+| 9.8 – 16.3s | #2 **Villaem 3**: premium · generasi 3 · pilihan ramai, senang guna · banyak pilihan suhu, ada air suam · tangki paling besar |
+| 16.3 – 22.2s | #3 **Coway Ais**: paling special, keluar ais · pagi / petang / malam |
+| 22.2 – 27.8s | Promo semua model: RM20 je dah boleh pasang · rebate RM20 × 7 bulan · hantar & pasang percuma seluruh Malaysia |
+| 27.8 – 30s | "Nak yang mana satu?" + butang WhatsApp |
+
+**Neon:** babak video penuh skrin dari `assets/video/neon3.mp4` + `neon2.mp4` (potongan ditetapkan dalam
+`src/best3.clips.json`; `render.py` pecahkan jadi frame JPG dalam `out/clips/`). Thumbnail: `assets/img/neon-thumb.jpg`.
+
+**Ais:** `assets/img/ais.png` masih **gambar sementara** — ganti dengan gambar sebenar (PNG latar lutsinar/putih,
+nama fail sama) atau tambah klip video seperti Neon, kemudian render semula.
+
+Voiceover: `voiceover/best3/skrip_voiceover.md` (+ `best3.srt`).
+
+```
+python render.py --ad best3   # src/best3.html -> out/best3_video_noaudio.mp4
+python audio.py --ad best3    # -> out/best3_music_sfx.wav
+python mix.py --ad best3      # -> out/best3_final.mp4 (+ VO jika ada voiceover/best3/clips/*.mp3)
+```
