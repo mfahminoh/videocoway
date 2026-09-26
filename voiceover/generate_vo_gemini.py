@@ -47,7 +47,7 @@ def call(url, body=None):
                 return json.load(r)
         except urllib.error.HTTPError as e:
             msg = e.read().decode(errors="replace")
-            if e.code in (429, 500, 503) and attempt < 5:
+            if e.code in (429, 500, 502, 503, 504) and attempt < 5:
                 m = re.search(r"retry in ([\d.]+)s", msg)   # had kuota seminit: tunggu seperti yang diminta
                 time.sleep(float(m.group(1)) + 2 if m else 2 ** attempt * 5)
                 continue

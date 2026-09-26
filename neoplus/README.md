@@ -4,7 +4,10 @@ Motion graphic bercerita dari sudut anak yang duduk jauh: mak teringin penapis a
 → tak perlu canggih, cukup senang guna (pulas tombol, tekan tuil) → kongsi bayar adik-beradik → **Coway Neo Plus**
 → double promo → CTA butang WhatsApp.
 
-Suara: AI perempuan Bahasa Melayu (`ms-MY-YasminNeural`, Microsoft Edge TTS, percuma).
+Suara: AI perempuan Bahasa Melayu.
+> **Suara semasa:** Gemini TTS (`gemini-3.1-flash-tts-preview`, suara `Sulafat`), klip dalam `neoplus/clips/` (disimpan
+> dalam repo supaya boleh bina semula tanpa guna kuota). Dijana dengan `--style "[warm] [conversational] [fast-paced]" --batch 6 --fit` supaya muat slot 60s.
+
 
 ## Babak
 | Masa | Babak | VO |
@@ -38,7 +41,7 @@ ia dijana semula sedikit laju supaya muat. Boleh juga rakam suara sendiri sebaga
 
 **Alternatif: Gemini TTS** (perlu `GEMINI_API_KEY`; klip yang terlebih panjang dipercepat sedikit supaya muat slot):
 ```
-python voiceover/generate_vo_gemini.py --lines neoplus/lines.json --clips neoplus/clips --fit
+python voiceover/generate_vo_gemini.py --lines neoplus/lines.json --clips neoplus/clips --fit --batch 6 --style "[warm] [conversational] [fast-paced]"
 python mix.py --project neoplus
 ```
 

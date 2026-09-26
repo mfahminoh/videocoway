@@ -1,6 +1,4 @@
 voiceover/clips/
-neoplus/clips/
-neoplus_full/clips/
 __pycache__/
 out/*
 !out/villaem3_final.mp4
