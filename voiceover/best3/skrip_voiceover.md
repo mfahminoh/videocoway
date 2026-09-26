@@ -26,3 +26,12 @@ pip install edge-tts imageio-ffmpeg
 python voiceover/generate_vo.py --ad best3
 python mix.py --ad best3
 ```
+
+**Pilihan C — Gemini TTS (perlu `GEMINI_API_KEY` dari Google AI Studio):**
+```
+pip install imageio-ffmpeg
+export GEMINI_API_KEY=...
+python voiceover/generate_vo_gemini.py --ad best3 --voice Puck   # suara lain: Kore, Charon, Fenrir, Aoede
+python mix.py --ad best3
+```
+Satu baris sahaja: `--only 03`. Klip yang terlebih masa akan dilajukan sedikit supaya muat.
