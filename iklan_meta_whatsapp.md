@@ -94,7 +94,7 @@ Tanya detail di WhatsApp 👇
 *Tertakluk kepada terma & syarat.
 ```
 
-**Tajuk:** `Pulas, Tekan, Siap. Senang Untuk Mak Ayah`
+**Tajuk:** `Pulas, Tekan, Siap. Mudah Untuk Mak Ayah`
 **Penerangan:** `Double promo. Tertakluk T&C.`
 
 ---
@@ -103,7 +103,7 @@ Tanya detail di WhatsApp 👇
 - `Penapis Air Untuk Mak Ayah Di Kampung`
 - `Hantar & Pasang Percuma`
 - `RM59/Bulan. Asal RM104.`
-- `Panas, Sejuk & Suhu Bilik. Pulas & Tekan.`
+- `Panas, Sejuk, Suhu Bilik. Pulas & Tekan`
 
 ---
 
