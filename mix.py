@@ -45,6 +45,12 @@ def main(long=False):
     vo = np.zeros(N)
     lines = json.loads((ROOT / "voiceover" / f"lines{sfx}.json").read_text())
     used = 0
+    placed = ROOT / "out" / "vo_long.wav"
+    if long and placed.exists():            # voiceover sebenar, sudah diletak oleh retime_long.py
+        x = decode(placed)[:N]
+        vo[:len(x)] = x
+        used = len(lines)
+        lines = []
     for ln in lines:
         clip = ROOT / "voiceover" / f"clips{sfx}" / f"{ln['id']}.mp3"
         if not clip.exists():
@@ -78,7 +84,7 @@ def main(long=False):
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out)],
                    check=True)
     tmp.unlink()
-    print(f"wrote {out}  (voiceover clips used: {used}/{len(lines)})")
+    print(f"wrote {out}  (voiceover lines: {used})")
 
 
 if __name__ == "__main__":

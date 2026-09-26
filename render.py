@@ -4,8 +4,11 @@ Usage:
   python render.py                                  # 30s version -> out/villaem3_video_noaudio.mp4
   python render.py --src long.html --out out/villaem3_long_noaudio.mp4 --jobs 4
   python render.py --src long.html --stills 1,5.5,10  # PNG previews -> out/stills/
+  python render.py --src long.html --warp out/warp_long.json --out out/villaem3_long_video_noaudio.mp4 --jobs 4
+                                                    # retimed to a real voiceover
 """
 import argparse
+import json
 import multiprocessing as mp
 import pathlib
 import subprocess
@@ -48,8 +51,16 @@ def duration(src):
     return d
 
 
+def anim_time(i, warp):
+    t = i / FPS
+    if not warp:
+        return t
+    import numpy as np
+    return float(np.interp(t, warp["out"], warp["anim"]))
+
+
 def render_range(args):
-    src, start, end, path = args
+    src, start, end, path, warp = args
     proc = subprocess.Popen(
         [FF, "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "png", "-i", "-",
          "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", str(path)],
@@ -58,7 +69,7 @@ def render_range(args):
     with sync_playwright() as p:
         browser, page = open_page(p, src)
         for i in range(start, end):
-            page.evaluate(f"seek({i / FPS})")
+            page.evaluate(f"seek({anim_time(i, warp)})")
             proc.stdin.write(page.screenshot(type="png"))
             if (i - start) % 150 == 0:
                 print(f"[{start}-{end}] frame {i}", flush=True)
@@ -68,12 +79,12 @@ def render_range(args):
     return path
 
 
-def video(src, path, jobs):
-    n = int(round(duration(src) * FPS))
+def video(src, path, jobs, warp=None):
+    n = int(round((warp["duration"] if warp else duration(src)) * FPS))
     tmp = ROOT / "out" / "_parts"
     tmp.mkdir(parents=True, exist_ok=True)
     bounds = [round(n * k / jobs) for k in range(jobs + 1)]
-    parts = [(src, bounds[k], bounds[k + 1], tmp / f"part{k}.mp4") for k in range(jobs)]
+    parts = [(src, bounds[k], bounds[k + 1], tmp / f"part{k}.mp4", warp) for k in range(jobs)]
     with mp.Pool(jobs) as pool:
         files = pool.map(render_range, parts)
     lst = tmp / "list.txt"
@@ -92,8 +103,9 @@ if __name__ == "__main__":
     ap.add_argument("--stills")
     ap.add_argument("--out", default=str(ROOT / "out" / "villaem3_video_noaudio.mp4"))
     ap.add_argument("--jobs", type=int, default=1)
+    ap.add_argument("--warp", help="JSON time map from voiceover/retime_long.py")
     a = ap.parse_args()
     if a.stills:
         stills(a.src, [float(x) for x in a.stills.split(",")], prefix=pathlib.Path(a.src).stem + "_")
     else:
-        video(a.src, a.out, a.jobs)
+        video(a.src, a.out, a.jobs, json.loads(pathlib.Path(a.warp).read_text()) if a.warp else None)

@@ -3,21 +3,41 @@
 Story part is light, the problem scene (40–56 s) turns tense (minor, ticking clock),
 then it lifts at the water-drop bridge and goes full beat from the product reveal.
 """
+import json
 import pathlib
+import sys
 import wave
 
 import numpy as np
 
 ROOT = pathlib.Path(__file__).parent
 SR = 44100
-DUR = 112.5
+ANIM_DUR = 112.5
+# --warp out/warp_long.json : semua masa di bawah ditulis dalam masa animasi, dan dipetakan ke masa output
+WARP = json.loads(pathlib.Path(sys.argv[sys.argv.index("--warp") + 1]).read_text()) if "--warp" in sys.argv else None
+DUR = WARP["duration"] if WARP else ANIM_DUR
+
+
+def W(t):       # masa animasi -> masa output
+    return float(np.interp(t, WARP["anim"], WARP["out"])) if WARP else t
+
+
+def Winv(t):    # masa output -> masa animasi
+    return float(np.interp(t, WARP["out"], WARP["anim"])) if WARP else t
+
+
 N = int(SR * DUR)
 rng = np.random.default_rng(11)
 L = np.zeros(N)
 R = np.zeros(N)
 
 
+SFX_MODE = False
+
+
 def add(sig, t0, gain=1.0, pan=0.0):
+    if SFX_MODE:
+        t0 = W(t0)
     i = int(t0 * SR)
     if i >= N or i < 0:
         return
@@ -60,7 +80,7 @@ MINOR = [[45, 57, 60, 64], [41, 53, 57, 60], [38, 50, 53, 57], [40, 52, 56, 59]]
 PROB = (40.0, 56.0)
 BRIDGE = (56.0, 63.35)
 BEAT_ON = 63.35
-FADE_START = 110.8
+FADE_START = DUR - 1.7
 
 
 def section(t):
@@ -74,7 +94,7 @@ def section(t):
 bar_i = 0
 t0 = 0.0
 while t0 < DUR:
-    sec = section(t0 + 0.01)
+    sec = section(Winv(t0) + 0.01)
     ch = (MINOR if sec == "prob" else MAJOR)[bar_i % 4]
     d = BAR + 0.4
     t = tt(d)
@@ -83,7 +103,7 @@ while t0 < DUR:
     add(pad * np.minimum(1, t / 0.35) * np.minimum(1, (d - t) / 0.4), t0, 0.045 if sec in ("prob", "bridge") else 0.035)
     for b in range(4):
         tb = t0 + b * BEAT
-        s = section(tb)
+        s = section(Winv(tb))
         bd = BEAT * 0.9
         if s != "bridge":
             add(np.sin(2 * np.pi * hz(ch[0] - 12) * tt(bd)) * env(bd, 0.01, bd * 1.6), tb,
@@ -106,12 +126,12 @@ while t0 < DUR:
                 add(np.sin(2 * np.pi * np.cumsum(45 + 40 * np.exp(-tt(kd) * 20)) / SR) * env(kd, 0.002, 0.45), tb, 0.35)
         elif s == "story" and b in (1, 3):
             add(lowpass(rng.standard_normal(int(0.05 * SR)), 3500) * env(0.05, 0.001, 0.03), tb, 0.12)
-    if section(t0 + 0.01) in ("story", "full"):
+    if section(Winv(t0) + 0.01) in ("story", "full"):
         for k in range(8):
             tn = t0 + k * BEAT / 2
-            if section(tn) not in ("story", "full"):
+            if section(Winv(tn)) not in ("story", "full"):
                 continue
-            m = ARP_MAJ[bar_i % 4][k % 4] + (12 if k >= 4 and tn >= BEAT_ON else 0)
+            m = ARP_MAJ[bar_i % 4][k % 4] + (12 if k >= 4 and Winv(tn) >= BEAT_ON else 0)
             x = np.sin(2 * np.pi * hz(m) * tt(0.45)) + 0.3 * np.sin(2 * np.pi * 2 * hz(m) * tt(0.45))
             add(x * env(0.45, 0.003, 0.35), tn, 0.06, pan=0.35 if k % 2 else -0.35)
     bar_i += 1
@@ -120,6 +140,7 @@ while t0 < DUR:
 music = (L.copy(), R.copy())
 L[:] = 0
 R[:] = 0
+SFX_MODE = True
 
 
 # ---------------- SFX ----------------
