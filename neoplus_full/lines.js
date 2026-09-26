@@ -1,0 +1,36 @@
+// Dijana oleh timeline.py — jangan edit terus.
+window.LINES = [
+  {"id": "01", "start": 0.3, "end": 3.9, "text": "Mak ayah dah lama teringin nak ada penapis air dekat rumah?"},
+  {"id": "02", "start": 4.25, "end": 7.5, "text": "Atau mungkin mak dekat kampung sendiri pernah cakap,"},
+  {"id": "03", "start": 7.85, "end": 10.9, "text": "Kalau ada penapis air dekat kampung, kan senang…"},
+  {"id": "04", "start": 11.55, "end": 15.05, "text": "Kita yang duduk jauh ni, kadang-kadang rasa serba salah."},
+  {"id": "05", "start": 15.4, "end": 19.2, "text": "Dekat rumah sendiri, air panas, air sejuk, semua dah ada."},
+  {"id": "06", "start": 19.55, "end": 26.9, "text": "Tapi dekat rumah mak ayah di kampung, masih kena masak air, tunggu air panas, atau isi air dalam bekas macam biasa."},
+  {"id": "07", "start": 27.25, "end": 31.85, "text": "Dah lama kita fikir nak bantu. Nak belikan penapis air untuk mak ayah."},
+  {"id": "08", "start": 32.4, "end": 38.4, "text": "Mak ayah tak perlukan produk paling canggih. Tapi apa yang paling senang untuk mak ayah guna."},
+  {"id": "09", "start": 38.75, "end": 43.25, "text": "Sebab bagi kita, model yang banyak elektronik mungkin nampak lagi moden."},
+  {"id": "10", "start": 43.6, "end": 47.55, "text": "Tapi bagi mak ayah, yang dah biasa dengan barang-barang manual…"},
+  {"id": "11", "start": 47.9, "end": 52.75, "text": "Pulas tombol suhu, tekan tuil, terus keluar air. Itu yang lagi senang."},
+  {"id": "12", "start": 53.1, "end": 55.2, "text": "Tak perlu pening tengok nombor LED."},
+  {"id": "13", "start": 55.55, "end": 59.0, "text": "Takkan nak ambil air pun, kena ambil spek membaca dulu?"},
+  {"id": "14", "start": 59.55, "end": 65.4, "text": "Yang penting, air panas, air sejuk, dan air biasa, semuanya dah tersedia bila diperlukan."},
+  {"id": "15", "start": 65.75, "end": 72.55, "text": "Nak buat kopi? Tekan. Nak buat teh? Tekan. Nak bancuh susu? Air panas dah tersedia."},
+  {"id": "16", "start": 73.1, "end": 78.0, "text": "Dan sebagai anak, kita pun kena fikir satu lagi benda. Bajet mampu milik."},
+  {"id": "17", "start": 78.35, "end": 81.7, "text": "Sebab kalau adik-beradik nak kongsi bayar pun, boleh."},
+  {"id": "18", "start": 82.05, "end": 87.95, "text": "Tahun ni kita bayar. Tahun depan, mungkin abang pula. Tahun seterusnya, adik pula."},
+  {"id": "19", "start": 88.3, "end": 92.05, "text": "Gilir-gilir. Jadi tak terasa sangat membebankan seorang."},
+  {"id": "20", "start": 92.8, "end": 99.2, "text": "Kalau untuk mak ayah dekat kampung, salah satu model yang boleh dipertimbangkan ialah, Coway Neo Plus."},
+  {"id": "21", "start": 99.55, "end": 103.05, "text": "Ada tiga suhu air. Panas, sejuk, dan suhu bilik."},
+  {"id": "22", "start": 103.4, "end": 105.65, "text": "Saiz pun sesuai untuk keluarga kecil."},
+  {"id": "23", "start": 106.0, "end": 114.8, "text": "Kalau dekat rumah mak ayah cuma dua orang, atau ada adik yang masih tinggal bersama, tak lah perlukan model dengan tangki yang terlalu besar."},
+  {"id": "24", "start": 115.15, "end": 119.4, "text": "Yang penting, cukup, mudah, dan praktikal untuk kegunaan harian."},
+  {"id": "25", "start": 120.05, "end": 122.85, "text": "Dan sekarang, Neo Plus ni ada harga promosi."},
+  {"id": "26", "start": 123.2, "end": 130.7, "text": "Serendah lima puluh sembilan ringgit sebulan. Jimat empat puluh lima ringgit, dari harga asal seratus empat ringgit.", "sub": "Serendah RM59 sebulan. Jimat RM45, dari harga asal RM104."},
+  {"id": "27", "start": 131.05, "end": 136.0, "text": "Dan ada double promo. Tujuh bulan pertama, cuma dua puluh ringgit sebulan!", "sub": "Dan ada double promo. 7 bulan pertama, cuma RM20 sebulan!"},
+  {"id": "28", "start": 136.35, "end": 138.75, "text": "Penghantaran dan pemasangan pun percuma."},
+  {"id": "29", "start": 139.4, "end": 143.95, "text": "Jadi kalau memang dah lama terfikir nak belikan penapis air untuk mak ayah…"},
+  {"id": "30", "start": 144.3, "end": 149.4, "text": "mungkin sekarang, masa yang sesuai untuk buatkan hidup mereka sedikit lebih mudah."},
+  {"id": "31", "start": 149.75, "end": 152.5, "text": "Klik WhatsApp sekarang, untuk tanya detail."}
+];
+window.DURATION = 154.7;
+window.TIMING = {CPS: 16.5, P_STOP: 0.35, P_COMMA: 0.12};

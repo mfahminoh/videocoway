@@ -4,6 +4,7 @@
 |---|---|---|
 | Villaem 3 (±29s, suara lelaki) | `src/`, `voiceover/` | `out/villaem3_final.mp4` |
 | Neo Plus — untuk mak ayah (60s, suara perempuan) | `neoplus/` — lihat [neoplus/README.md](neoplus/README.md) | `out/neoplus_final.mp4` |
+| Neo Plus — versi penuh, semua poin skrip (±2:35) | `neoplus_full/` — lihat [neoplus_full/README.md](neoplus_full/README.md) | `out/neoplus_full_final.mp4` |
 
 ---
 

@@ -4,6 +4,8 @@
       -> out/villaem3_final.mp4   (music + SFX, + VO when voiceover/clips/*.mp3 exist)
     python mix.py --project neoplus
       -> out/neoplus_final.mp4    (VO from neoplus/clips/*.mp3)
+    python mix.py --project neoplus_full
+      -> out/neoplus_full_final.mp4
 
 Voiceover clips are placed at the start times in voiceover/lines.json, and the music bed
 is ducked (~-9 dB) underneath the voice.
@@ -45,6 +47,8 @@ PROJECTS = {
                      clips="voiceover/clips", out="out/villaem3_final.mp4"),
     "neoplus": dict(bed="out/neoplus_music_sfx.wav", video="out/neoplus_video_noaudio.mp4", lines="neoplus/lines.json",
                     clips="neoplus/clips", out="out/neoplus_final.mp4"),
+    "neoplus_full": dict(bed="out/neoplus_full_music_sfx.wav", video="out/neoplus_full_video_noaudio.mp4",
+                         lines="neoplus_full/lines.json", clips="neoplus_full/clips", out="out/neoplus_full_final.mp4"),
 }
 
 
