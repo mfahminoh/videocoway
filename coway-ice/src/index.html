@@ -240,6 +240,7 @@
   <div class="el emo" id="hand" style="top:1380px; left:760px; font-size:120px">👆</div>
 </div>
 
+<script src="timeline.js"></script>
 <script>
 /* ================= Enjin animasi deterministik =================
    window.seek(t) melukis satu bingkai pada masa t (saat); window.render(t) juga
@@ -368,14 +369,15 @@ function drawBin(id, t, dropAt, gaugeFrom = 0) {
 /* ---------- Footage (bingkai JPG dari prep.py) ---------- */
 const CLIP = { drop: { n: 73, img: 'imgDrop' }, dispense: { n: 88, img: 'imgDisp' } };
 window.__pending = [];
-function clipFrame(name, t, t0) {
-  const c = CLIP[name], f = clamp(Math.floor((t - t0) * 30) + 1, 1, c.n);
+function clipFrame(name, t, t0, dur) {
+  // dur: masa paparan klip; jika lebih panjang dari klip, ia dimainkan slow-mo
+  const c = CLIP[name], rate = Math.min(1, c.n / 30 / dur), f = clamp(Math.floor((t - t0) * 30 * rate) + 1, 1, c.n);
   const src = `../build/frames/${name}/${String(f).padStart(4, '0')}.jpg`, img = $(c.img);
   if (img.getAttribute('src') !== src) { img.setAttribute('src', src); window.__pending.push(img.decode().catch(() => {})); }
 }
 
 /* ===== Garis masa (saat) — selari dengan skrip voiceover ===== */
-const T = { s1: 0, s2: 4.0, s3: 8.0, rdy: 11.0, cap: 13.4, tmr: 17.0, fresh: 20.4, offer: 23.0, cta: 27.6, end: 31.0 };
+const T = window.T;
 window.DURATION = T.end;
 
 function seek(t) {
@@ -422,9 +424,10 @@ function seek(t) {
   /* ---------- S2: montaj masa ---------- */
   const s2out = T.s3;
   for (let k = 0; k < 4; k++) {
-    const t0 = T.s2 + k, a = p(t, t0 - .02, t0 + .28, E.out), b = k < 3 ? p(t, t0 + 1 - .02, t0 + 1.28, E.out) : p(t, s2out, s2out + .3, E.in);
+    const t0 = T.cards[k], t1 = T.cards[k + 1];
+    const a = p(t, t0 - .02, t0 + .28, E.out), b = k < 3 ? p(t, t1 - .02, t1 + .28, E.out) : p(t, s2out, s2out + .3, E.in);
     const card = $(`k${k}`);
-    const vis = t >= t0 - .02 && (k < 3 ? t < t0 + 1.3 : t < s2out + .3);
+    const vis = t >= t0 - .02 && (k < 3 ? t < t1 + .3 : t < s2out + .3);
     set(card, { o: vis ? (k === 3 ? 1 - b : 1) : 0, x: mix(1080, 0, a) - (k < 3 ? b * 1080 : 0), r: mix(6, 0, a),
                 blur: (1 - a) * 12 + (k < 3 ? b * 12 : 0) });
     const g = $(`kg${k}`), gi = p(t, t0 + .05, t0 + .5, E.back);
@@ -435,7 +438,7 @@ function seek(t) {
     const vis = t >= T.s2 && t < s2out + .3, b = p(t, s2out, s2out + .3, E.in);
     set('chips', { o: vis ? 1 - b : 0, y: mix(-40, 0, p(t, T.s2, T.s2 + .3)) });
     ['cA', 'cB', 'cC'].forEach((c, i) => {
-      const a = p(t, T.s2 + .1 + i, T.s2 + .4 + i, E.out);
+      const a = p(t, T.cards[i] + .1, T.cards[i] + .4, E.out);
       $(c).style.opacity = a; $(c).style.display = a > 0 ? 'inline' : 'none';
     });
   }
@@ -466,7 +469,7 @@ function seek(t) {
   {
     const a = p(t, T.rdy + .05, T.rdy + .55, E.out), b = p(t, rout, rout + .3, E.in);
     set('cardDrop', { o: Math.min(clamp(a * 1.5), 1 - b), y: mix(260, 0, a) - b * 80, s: mix(.9, 1, a) * mix(1, .95, b), r: mix(4, 0, a) });
-    if (t >= T.rdy - .1 && t < rout + .4) clipFrame('drop', t, T.rdy);
+    if (t >= T.rdy - .1 && t < rout + .4) clipFrame('drop', t, T.rdy, T.cap - T.rdy - .1);
   }
 
   /* ---------- S4b: storan 700g ---------- */
@@ -516,7 +519,7 @@ function seek(t) {
   {
     const a = p(t, T.fresh + .05, T.fresh + .55, E.out), b = p(t, fout, fout + .3, E.in);
     set('cardDisp', { o: Math.min(clamp(a * 1.5), 1 - b), y: mix(260, 0, a) - b * 80, s: mix(.9, 1, a), r: mix(-4, 0, a) });
-    if (t >= T.fresh - .1 && t < fout + .4) clipFrame('dispense', t, T.fresh - .3);
+    if (t >= T.fresh - .1 && t < fout + .4) clipFrame('dispense', t, T.fresh - .3, T.offer - T.fresh + .2);
   }
 
   /* ---------- S6a: tawaran ---------- */
@@ -536,11 +539,11 @@ function seek(t) {
     set('prod2', { o: Math.min(a, 1 - b), y: mix(200, 0, a) + Math.sin(t * 2.2) * 6 - b * 60 });
     set('oglow', { o: Math.min(a, 1 - b) * (.8 + Math.sin(t * 3) * .2), s: mix(.5, 1, a) });
   }
-  inout('o5', t, T.offer + 2.3, oout, { pop: true, sFrom: .6, dy: 0 });
-  inout('o6', t, T.offer + 2.6, oout, { dy: 30 });
-  $('obar').style.transform = `scaleX(${mix(.55, .08, p(t, T.offer + 2.7, oout, E.inOut))})`;
+  inout('o5', t, T.hantar, oout, { pop: true, sFrom: .6, dy: 0 });
+  inout('o6', t, T.hantar + .3, oout, { dy: 30 });
+  $('obar').style.transform = `scaleX(${mix(.55, .08, p(t, T.hantar + .4, oout, E.inOut))})`;
   $('obar').style.opacity = .75 + .25 * Math.sin(t * 12);
-  inout('tnc', t, T.offer + 2.8, oout, { dy: 10 });
+  inout('tnc', t, T.hantar + .5, oout, { dy: 10 });
 
   /* ---------- S6b: CTA ---------- */
   inout('e1', t, T.cta + .15, null, { pop: true, sFrom: .5, dy: 0 });

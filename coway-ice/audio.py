@@ -1,16 +1,22 @@
 """Synthesize a royalty-free music bed + ice sound effects matched to the Coway Ice timeline.
 
-Output: out/music_sfx.wav (44.1 kHz stereo, 31 s). Everything is generated with numpy,
+Output: out/music_sfx.wav (44.1 kHz stereo, panjang ikut src/timeline.js). Everything is generated with numpy,
 so there are no licensing concerns for Meta Ads.
 """
+import json
 import pathlib
+import re
 import wave
 
 import numpy as np
 
 ROOT = pathlib.Path(__file__).parent
 SR = 44100
-DUR = 31.0
+# garis masa dikongsi dengan animasi (src/timeline.js)
+_tl = (ROOT / "src" / "timeline.js").read_text()
+_tl = re.sub(r"/\*.*?\*/", "", _tl, flags=re.S).split("=", 1)[1].rsplit(";", 1)[0]
+T = json.loads(re.sub(r"(\w+):", r'"\1":', _tl))
+DUR = T["end"]
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
 
@@ -60,8 +66,8 @@ BAR = 4 * BEAT
 CHORDS = [[41, 53, 57, 60, 65], [36, 52, 55, 60, 64], [38, 50, 57, 62, 65], [34, 50, 53, 58, 62]]
 ARP = [[77, 81, 84, 81], [76, 79, 84, 79], [74, 77, 81, 77], [74, 77, 82, 77]]
 
-REVEAL = 8.45         # dram penuh masuk bila Coway Ice muncul
-END_FADE = 30.2
+REVEAL = T["s3"] + .45        # dram penuh masuk bila Coway Ice muncul
+END_FADE = DUR - 0.8
 
 bar_idx = 0
 t0 = 0.0
@@ -177,62 +183,73 @@ add(clink(2500), 2.48, 0.3, pan=.2)
 rattle(2.48, 3)
 add(pop(1100), 1.55, 0.3)                           # MESTI ADA AIS!
 # S2 montaj
-for k in range(4):
-    add(whoosh(0.3), 3.85 + k, 0.2)
-    rattle(4.15 + k, 3, gain=.22)
-    add(pop(900 + 120 * k), 4.15 + k, 0.2)
+for k, tc in enumerate(T["cards"]):
+    add(whoosh(0.3), tc - .15, 0.2)
+    rattle(tc + .15, 3, gain=.22)
+    add(pop(900 + 120 * k), tc + .15, 0.2)
 # S3 gelas masuk -> COWAY ICE
+s3 = T["s3"]
 for i in range(4):
-    add(whoosh(0.35), 7.95 + i * .06, 0.12, pan=[-.6, .6, -.4, .4][i])
-add(impact(1.6), 8.45, 0.6)
-add(shimmer(1.4), 8.5, 0.14)
-add(pop(1200, 0.15), 8.95, 0.3)
-# S4a footage ais jatuh
-add(whoosh(), 10.85, 0.2)
-for tc in [11.35, 11.65, 11.95, 12.25, 12.55, 12.85, 13.15]:
-    rattle(tc, 2, .06, .3)
+    add(whoosh(0.35), s3 - .05 + i * .06, 0.12, pan=[-.6, .6, -.4, .4][i])
+add(impact(1.6), s3 + .45, 0.6)
+add(shimmer(1.4), s3 + .5, 0.14)
+add(pop(1200, 0.15), s3 + .95, 0.3)
+# S4a footage ais jatuh (slow-mo ikut panjang babak)
+r = T["rdy"]
+add(whoosh(), r - .15, 0.2)
+slow = max(1, (T["cap"] - r - .1) / (73 / 30))
+for k in [.35, .65, .95, 1.25, 1.55, 1.85, 2.15]:
+    rattle(r + k * slow, 2, .06, .3)
 # S4b bekas 700g
-add(whoosh(), 13.25, 0.2)
-add(impact(0.8), 13.6, 0.35)                        # 700g
+c = T["cap"]
+add(whoosh(), c - .15, 0.2)
+add(impact(0.8), c + .2, 0.35)                      # 700g
 for i in range(48):
-    add(clack(d=0.07), 13.85 + i * .055 + .18, 0.14, pan=rng.uniform(-.5, .5))
-add(shimmer(1.4), 16.55, 0.14)
-add(bell(1568, 0.6), 16.4, 0.12)
+    add(clack(d=0.07), c + .45 + i * .055 + .18, 0.14, pan=rng.uniform(-.5, .5))
+add(bell(1568, 0.6), c + 3.0, 0.12)
+add(shimmer(1.4), c + 3.15, 0.14)
 # S5a pemasa 15 minit
-add(whoosh(), 16.85, 0.2)
-add(pop(1000), 17.3, 0.28)
-for tk in [17.05, 17.6, 18.0]:
+m = T["tmr"]
+add(whoosh(), m - .15, 0.2)
+add(pop(1000), m + .3, 0.28)
+for tk in [m + .05, m + .6, m + 1.0]:
     add(tick(), tk, 0.35)
-tk = 18.0
-while tk < 19.15:                                   # tik semakin laju
+tk = m + 1.0
+while tk < m + 2.15:                                # tik semakin laju
     add(tick(), tk, 0.25)
-    tk += max(0.035, 0.22 * (1 - (tk - 18.0) / 1.15) ** 1.5)
+    tk += max(0.035, 0.22 * (1 - (tk - m - 1.0) / 1.15) ** 1.5)
 for i, f in enumerate([1568, 2093, 2637]):          # ding 00:00
-    add(bell(f, 0.9), 19.2 + i * 0.08, 0.1)
+    add(bell(f, 0.9), m + 2.2 + i * 0.08, 0.1)
 for i in range(8):
-    add(clack(d=0.08), 19.3 + i * .09 + .2, 0.22, pan=rng.uniform(-.4, .4))
+    add(clack(d=0.08), m + 2.3 + i * .09 + .2, 0.22, pan=rng.uniform(-.4, .4))
 # S5b footage fresh ice
-add(whoosh(), 20.25, 0.2)
-for tc in [20.55, 20.95, 21.35, 21.7, 22.05, 22.4, 22.7]:
-    rattle(tc, 2, .06, .28)
+f0 = T["fresh"]
+add(whoosh(), f0 - .15, 0.2)
+for k in [.15, .55, .95, 1.3, 1.65, 2.0, 2.3]:
+    rattle(f0 + k, 2, .06, .28)
 # S6a tawaran
-add(whoosh(), 22.85, 0.22)
-add(pop(1300, 0.15), 23.15, 0.3)                    # LAST CALL
-add(impact(0.9), 23.4, 0.45)                        # RM20
-for i, f in enumerate([2637, 3136, 3951, 4699, 5274]):
-    add(bell(f, 0.7), 23.45 + i * 0.07, 0.07)
-add(pop(900), 23.75, 0.22)
-add(pop(1100), 24.35, 0.28)                         # SELAMA 7 BULAN
-add(pop(1250), 25.35, 0.28)                         # HANTAR & PASANG
-for i in range(int((27.4 - 25.7) / 0.25)):          # jam berdetik (urgent)
-    add(tick(), 25.7 + i * 0.25, 0.16)
+o = T["offer"]
+add(whoosh(), o - .15, 0.22)
+add(pop(1300, 0.15), o + .15, 0.3)                  # LAST CALL
+add(impact(0.9), o + .4, 0.45)                      # RM20
+for i, fq in enumerate([2637, 3136, 3951, 4699, 5274]):
+    add(bell(fq, 0.7), o + .45 + i * 0.07, 0.07)
+add(pop(900), o + .75, 0.22)
+add(pop(1100), o + 1.35, 0.28)                      # SELAMA 7 BULAN
+h = T["hantar"]
+add(pop(1250), h + .05, 0.28)                       # HANTAR & PASANG
+for i in range(int((T["cta"] - .2 - (h + .4)) / 0.25)):   # jam berdetik (urgent)
+    add(tick(), h + .4 + i * 0.25, 0.16)
 # S6b CTA
-add(whoosh(), 27.45, 0.22)
-add(shimmer(1.6), 27.8, 0.12)
-add(pop(1000), 27.8, 0.25)
-add(pop(900, 0.2), 28.65, 0.3)                      # butang WhatsApp
-add(pop(1500, 0.08), 29.86, 0.3)                    # tekan
-add(pop(1500, 0.08), 30.91, 0.2)
+e = T["cta"]
+add(whoosh(), e - .15, 0.22)
+add(shimmer(1.6), e + .2, 0.12)
+add(pop(1000), e + .2, 0.25)
+add(pop(900, 0.2), e + 1.05, 0.3)                   # butang WhatsApp
+tap = e + 2.0 + (np.pi / 2) / 6                     # puncak "tekan" jari (ikut index.html)
+while tap < DUR - .1:
+    add(pop(1500, 0.08), tap, 0.28)
+    tap += 2 * np.pi / 6
 
 sfx_L, sfx_R = L, R
 

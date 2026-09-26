@@ -1,5 +1,4 @@
 build/
-voiceover/clips/
 __pycache__/
 out/*
 !out/coway_ice_final.mp4
