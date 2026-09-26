@@ -156,74 +156,97 @@ Nanti saya semak slot pemasangan & terangkan langkah seterusnya ya 🙏
 
 ---
 
-# Versi Teaser — tak dedahkan jalan cerita video
+# Versi Teaser v2 — tak dedahkan jalan cerita video
 
-Tujuan: buat orang **tonton video sampai habis**, lepas tu WhatsApp. Teks tak ulang babak dalam video
-(chat mak, kongsi bayar gilir-gilir, spek membaca, pulas/tekan). Biar video yang bercerita.
+Formula setiap iklan: **cangkuk spesifik** (baris pertama, ≤125 aksara) → **ketegangan / soalan terbuka** →
+**video sebagai jawapan** → **CTA ringan** ("tanya je dulu, takde paksaan"). Tiada babak video diulang
+(chat mak, gilir-gilir, spek, pulas/tekan). Padankan dengan video penuh 2:51.
 
-## Teaser 1 — Soalan
+## T1 — "Mak ayah takkan minta" (emosi)
 ```
-Pernah terfikir apa yang mak ayah betul-betul perlukan dekat rumah? 🤔
+Mak ayah takkan minta. Tapi tak bermakna mereka tak teringin. 🤍
 
-Jawapannya mungkin tak macam yang kita sangka.
+Selalunya benda yang paling mereka perlukan, benda yang kita tak terfikir langsung. Sebab kita dah biasa ada.
 
-Tonton sampai habis 🎬 Kalau rasa kena dengan keluarga sendiri, tekan "Hantar Mesej" 👇
+Tengok video ni sampai habis. Lepas tu, bayangkan rumah mak ayah sendiri.
+
+Tanya je dulu di WhatsApp, takde paksaan 👇
 ```
-**Tajuk:** `Tonton Sampai Habis 👀`
+**Tajuk:** `Mak Ayah Takkan Minta. Tapi…`
+**Penerangan:** `Tanya je dulu, takde paksaan`
+
+## T2 — "Hadiah yang diguna setiap hari" (kontras)
+```
+Phone baru. Baju raya. Duit belanja. Semua dah pernah bagi mak ayah. 🎁
+
+Tapi hadiah yang mak ayah guna SETIAP HARI, dari subuh sampai malam? Yang ni ramai terlepas pandang.
+
+Jawapannya dalam video ni 🎬
+Nak tahu detail, WhatsApp kami 👇
+```
+**Tajuk:** `Hadiah Yang Mak Ayah Guna Setiap Hari`
+**Penerangan:** `Double promo sekarang*`
+
+## T3 — "Anak sulung, tengah, bongsu" (untuk share)
+```
+Anak sulung, anak tengah, anak bongsu: video ni untuk korang semua. 👨‍👩‍👧‍👦
+
+Ada cara nak hadiahkan sesuatu yang besar untuk mak ayah, tanpa sorang pun rasa terbeban.
+
+Tengok sampai habis, lepas tu share dalam group family 😉
+WhatsApp kami untuk detail 👇
+```
+**Tajuk:** `Adik-Beradik, Tengok Video Ni Dulu`
 **Penerangan:** `Tanya detail di WhatsApp`
 
-## Teaser 2 — Untuk anak yang duduk jauh
+## T4 — "Raya lambat lagi" (promo + urgensi jujur)
 ```
-Video ni untuk semua anak yang duduk jauh dari mak ayah 🤍
+Tak payah tunggu raya untuk balas jasa mak ayah. ⏳
 
-Tengok dulu. Mungkin ada sesuatu yang dah lama kita nak buat, tapi asyik tertangguh.
+Sekarang ada double promo penapis air Coway Neo Plus:
+🎁 7 bulan pertama cuma RM20/bulan*
+🚚 Penghantaran & pemasangan percuma
 
-WhatsApp kami untuk tanya detail 👇
+Kenapa model ni sesuai sangat untuk mak ayah di kampung? Video ni jawab 🎬
+WhatsApp untuk semak promo 👇
+
+*Kemudian RM59/bulan (harga asal RM104). Tertakluk kepada terma & syarat.
 ```
-**Tajuk:** `Untuk Mak Ayah Di Kampung`
-**Penerangan:** `Tertakluk T&C`
+**Tajuk:** `Mula RM20/Bulan Untuk Mak Ayah*`
+**Penerangan:** `Hantar & pasang percuma`
 
-## Teaser 3 — Promo dulu, cerita dalam video
+## T5 — Pendek (Reels/Stories)
 ```
-Ada double promo penapis air yang ramai tak perasan 👀
-
-7 bulan pertama cuma RM20/bulan* dengan penghantaran & pemasangan percuma.
-
-Tapi kenapa ia sesuai sangat untuk mak ayah? Jawapannya dalam video ni 🎬
-
-Tekan "Hantar Mesej" untuk detail 👇
-*RM20/bulan untuk 7 bulan pertama, kemudian RM59/bulan (harga asal RM104). Tertakluk kepada terma & syarat.
+Mak ayah jarang minta apa-apa. Yang ni pun mereka takkan sebut. 🤍
+Tengok sampai habis 👀 Tanya je dulu di WhatsApp.
 ```
-**Tajuk:** `Double Promo Coway Neo Plus`
-**Penerangan:** `7 bulan pertama RM20/bulan*`
+**Tajuk:** `Yang Mak Ayah Takkan Sebut`
 
-## Teaser 4 — Pendek untuk Reels/Stories
-```
-Hadiah untuk mak ayah yang ramai terlepas pandang 🎁
-Tonton sampai habis 👀 WhatsApp untuk detail.
-```
-**Tajuk:** `Hadiah Untuk Mak Ayah`
+---
 
-## Teaser 5 — Ajak share
-```
-Tengok video ni, lepas tu share dalam group family. Ada sebab kenapa 😉
+### Bank cangkuk (baris pertama untuk ujian A/B)
+- `Bila kali terakhir kita tanya mak ayah: "Ada apa-apa yang mak nak?"`
+- `Mak ayah besarkan kita tanpa minta balasan. Ini antara cara kecil untuk balas.`
+- `Balik kampung sebulan sekali. Tapi mak ayah hidup di situ setiap hari.`
+- `Hadiah terbaik untuk mak ayah bukan yang paling mahal. Tapi yang paling kerap digunakan.`
+- `Satu keputusan kecil yang mak ayah akan rasa setiap hari.`
 
-Nak tahu lebih? WhatsApp kami 👇
-```
-**Tajuk:** `Share Dengan Adik-Beradik`
-**Penerangan:** `Tanya detail di WhatsApp`
+### Tajuk tambahan (≤40 aksara)
+- `Satu Hadiah, Guna Setiap Hari`
+- `Untuk Mak Ayah Yang Jarang Minta`
+- `Tanya Je Dulu. Takde Paksaan.`
 
-### Tajuk tambahan (tanpa spoiler, ≤40 aksara)
-- `Mak Ayah Mesti Suka Yang Ni`
-- `Dah Lama Nak Belikan Untuk Mak Ayah?`
-- `Tanya Detail Di WhatsApp`
+### Penutup CTA (pilih satu)
+- `Tanya je dulu di WhatsApp, takde paksaan 👇`
+- `Nak tahu sesuai ke tak untuk rumah mak ayah? WhatsApp kami 👇`
+- `Tekan "Hantar Mesej", kami terangkan satu-satu 🙏`
 
-### Mesej WhatsApp diisi awal (neutral)
+### Mesej WhatsApp diisi awal
 ```
-Hai, saya dah tengok video Coway Neo Plus. Nak tahu detail promo.
+Hai, saya dah tengok video Neo Plus untuk mak ayah. Nak tahu detail promo.
 ```
 
-### Tip
-- Padankan teaser dengan **video penuh (2:51)**. Ceritanya perlukan penonton sampai habis, dan teaser memberi sebab untuk tonton.
-- Jangan letak senarai ciri atau harga dalam 125 aksara pertama teaser 1, 2, 4 & 5. Biar video yang mendedahkan.
-- Teaser 3 sebut harga, jadi kekalkan baris penjelasan (* RM59 selepas 7 bulan, T&C) supaya tak mengelirukan.
+### Nota
+- T1, T2, T3 & T5 sengaja tanpa harga: rasa ingin tahu bawa orang ke video, video bawa ke WhatsApp.
+- T4 untuk penonton yang lebih "sejuk" (perlu sebab untuk bertindak sekarang); kekalkan baris * supaya RM20 tak disalah faham sebagai harga tetap.
+- Elak tuntutan yang tak boleh dibuktikan (cth. "ramai anak pilih", "paling laris") kecuali ada data.
