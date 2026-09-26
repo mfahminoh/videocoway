@@ -2,12 +2,14 @@
 
 Run on your own computer (needs internet):
     pip install edge-tts imageio-ffmpeg
-    python voiceover/generate_vo.py
+    python voiceover/generate_vo.py          # 30s version  -> voiceover/clips/
+    python voiceover/generate_vo.py --long   # 1:52 version -> voiceover/clips_long/
 
 Each line in lines.json becomes voiceover/clips/<id>.mp3. If a line is longer than its
 slot in the video, it is regenerated a little faster so it still fits.
 You can also skip this script and record your own voice as clips/01.mp3 ... clips/08.mp3.
 """
+import argparse
 import asyncio
 import json
 import pathlib
@@ -40,12 +42,15 @@ async def make(line, dest):
     print(f"{line['id']}: {d:.2f}s / slot {slot:.2f}s  (rate +{rate}%)")
 
 
-async def main():
-    clips = HERE / "clips"
+async def main(long=False):
+    sfx = "_long" if long else ""
+    clips = HERE / f"clips{sfx}"
     clips.mkdir(exist_ok=True)
-    for line in json.loads((HERE / "lines.json").read_text()):
+    for line in json.loads((HERE / f"lines{sfx}.json").read_text()):
         await make(line, clips / f"{line['id']}.mp3")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--long", action="store_true")
+    asyncio.run(main(ap.parse_args().long))

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Villaem 3 – Iklan Cerita (Panjang)</title>
+<style>
+  @font-face { font-family: P; font-weight: 400; src: url(../assets/fonts/Poppins-Regular.ttf); }
+  @font-face { font-family: P; font-weight: 500; src: url(../assets/fonts/Poppins-Medium.ttf); }
+  @font-face { font-family: P; font-weight: 600; src: url(../assets/fonts/Poppins-SemiBold.ttf); }
+  @font-face { font-family: P; font-weight: 700; src: url(../assets/fonts/Poppins-Bold.ttf); }
+  @font-face { font-family: P; font-weight: 800; src: url(../assets/fonts/Poppins-ExtraBold.ttf); }
+
+  :root {
+    --navy: #0B2F6B; --blue: #0B4DA2; --sky: #2EA7E0;
+    --hot: #E5322D; --cold: #2F8BE6; --cream: #FBF3E6; --warm: #C0602A; --yellow: #FFD23F;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  body { font-family: P, sans-serif; color: #fff; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  .layer, .el, .scene { position: absolute; }
+  .layer, .scene { inset: 0; }
+  .el { transform-origin: 50% 50%; }
+  .c { left: 0; width: 1080px; text-align: center; }
+  [data-in] { display: inline-block; }
+  .ib { display: inline-block; }
+
+  /* latar */
+  #bgCream { background: radial-gradient(circle at 20% 15%, #fff9ef 0, transparent 45%), radial-gradient(circle at 85% 80%, #f6e3c8 0, transparent 50%), var(--cream); }
+  #bgCream::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(#e7d3b4 2px, transparent 2.5px); background-size: 44px 44px; opacity: .45; }
+  #bgRed { background: radial-gradient(ellipse at 50% 35%, #3a1a1d 0, #1c0e10 55%, #0c0607 100%); }
+  #bgDark { background: radial-gradient(ellipse at 50% 42%, #26303f 0, #11161f 45%, #05070a 100%); }
+  #bgBlue { background: radial-gradient(ellipse at 50% 30%, #1768c9 0, #0B4DA2 40%, #062A5E 100%); }
+  #bgBlue::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 40px, transparent 40px 80px); }
+  #bgDark2 { background: radial-gradient(ellipse at 50% 30%, #1f2733 0, #090c11 60%, #030405 100%); }
+
+  /* komponen */
+  .pill { display: inline-block; padding: 14px 36px; border-radius: 60px; font-weight: 700; letter-spacing: 4px; font-size: 34px; }
+  .pill.navy { color: var(--navy); border: 3px solid var(--navy); }
+  .strike { position: absolute; left: -12px; width: calc(100% + 24px); height: 12px; top: 52%; background: var(--hot); border-radius: 6px; transform-origin: 0 50%; display: block; }
+  .hl { position: relative; display: inline-block; z-index: 0; }
+  .hl > .bar { position: absolute; left: -14px; right: -14px; bottom: 10px; height: 46%; background: var(--yellow); z-index: -1; transform-origin: 0 50%; border-radius: 6px; display: block; }
+  .chip { position: absolute; width: 440px; height: 110px; border-radius: 28px; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.18);
+          display: flex !important; align-items: center; gap: 22px; padding: 0 30px; font-size: 40px; font-weight: 600; }
+  .chip b { width: 30px; height: 30px; border-radius: 50%; flex: none; box-shadow: 0 0 22px currentColor; }
+  .chip small { display: block; font-size: 26px; font-weight: 400; opacity: .7; margin-top: -6px; }
+  .check { display: flex !important; align-items: center; gap: 22px; font-size: 44px; font-weight: 600; }
+  .tick { width: 62px; height: 62px; border-radius: 50%; background: var(--yellow); color: var(--navy); display: grid; place-items: center; font-size: 38px; font-weight: 800; flex: none; }
+  .step { display: flex !important; align-items: center; gap: 30px; font-size: 62px; font-weight: 700; }
+  .xmark { width: 92px; height: 92px; border-radius: 50%; background: var(--hot); display: grid; place-items: center; font-size: 56px; font-weight: 800; flex: none;
+           box-shadow: 0 0 30px rgba(229,50,45,.6); }
+  .meter { display: flex !important; align-items: center; gap: 30px; font-size: 46px; font-weight: 600; width: 820px; }
+  .meter .lbl { width: 320px; flex: none; }
+  .meter .trk { flex: 1; height: 34px; border-radius: 17px; background: rgba(255,255,255,.12); overflow: hidden; }
+  .meter .fill { height: 100%; width: 100%; background: linear-gradient(90deg, #ff7a59, var(--hot)); transform-origin: 0 50%; display: block; border-radius: 17px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- ========== LATAR ========== -->
+  <div class="layer bg" id="bgCream" data-s="0"    data-e="40"></div>
+  <div class="layer bg" id="bgRed"   data-s="40"   data-e="56.3"></div>
+  <div class="layer bg" id="bgDark"  data-s="56.3" data-e="90"></div>
+  <div class="layer bg" id="bgBlue"  data-s="90"   data-e="104.5"></div>
+  <div class="layer bg" id="bgDark2" data-s="104.5" data-e="999"></div>
+
+  <!-- ========== 1. HOOK (0 – 6.2) ========== -->
+  <div class="scene" data-s="0" data-e="6.2">
+    <div class="el c" style="top:300px"><span class="pill navy" data-in=".15" data-a="pop">KISAH SAYA</span></div>
+    <div class="el" id="h3" style="top:360px; left:150px; font-size:400px; font-weight:800; color:var(--blue); line-height:1" data-in=".3" data-a="slam">3</div>
+    <div class="el" style="top:450px; left:450px; font-size:140px; font-weight:800; color:var(--navy); line-height:1" data-in=".6" data-a="left">TAHUN</div>
+    <div class="el" style="top:600px; left:456px; font-size:84px; font-weight:600; color:var(--sky); line-height:1" data-in=".8" data-a="left">jual Coway</div>
+    <div class="el" style="top:1140px; left:190px; width:700px; height:60px; border-radius:50%; background: radial-gradient(ellipse, rgba(11,47,107,.22) 0, transparent 70%)" data-in=".9" data-a="fade"></div>
+    <div class="el avatars" style="top:880px; left:0; width:1080px; height:260px">
+      <svg class="el av" data-i="0" style="top:20px; left:190px" width="220" height="240" viewBox="0 0 220 240"><circle cx="110" cy="110" r="100" fill="#fff" stroke="#dbe7f5" stroke-width="6"/><clipPath id="c1"><circle cx="110" cy="110" r="94"/></clipPath><g clip-path="url(#c1)"><path d="M30 220 Q30 150 110 150 Q190 150 190 220 Z" fill="#2EA7E0"/><circle cx="110" cy="95" r="42" fill="#e0ac7e"/><path d="M68 90 Q70 45 110 45 Q150 45 152 90 Q140 62 110 64 Q80 62 68 90 Z" fill="#2b1d14"/></g><circle cx="180" cy="180" r="28" fill="#0B4DA2" stroke="#fff" stroke-width="6"/><path d="M167 180 L177 190 L194 171" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="el av" data-i="1" style="top:0; left:430px" width="220" height="240" viewBox="0 0 220 240"><circle cx="110" cy="110" r="100" fill="#fff" stroke="#dbe7f5" stroke-width="6"/><clipPath id="c2"><circle cx="110" cy="110" r="94"/></clipPath><g clip-path="url(#c2)"><path d="M30 220 Q30 150 110 150 Q190 150 190 220 Z" fill="#0B4DA2"/><path d="M62 100 Q60 42 110 40 Q160 42 158 100 L158 150 L62 150 Z" fill="#6d4c9f"/><circle cx="110" cy="98" r="36" fill="#c98b5e"/></g><circle cx="180" cy="180" r="28" fill="#0B4DA2" stroke="#fff" stroke-width="6"/><path d="M167 180 L177 190 L194 171" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="el av" data-i="2" style="top:20px; left:670px" width="220" height="240" viewBox="0 0 220 240"><circle cx="110" cy="110" r="100" fill="#fff" stroke="#dbe7f5" stroke-width="6"/><clipPath id="c3"><circle cx="110" cy="110" r="94"/></clipPath><g clip-path="url(#c3)"><path d="M30 220 Q30 150 110 150 Q190 150 190 220 Z" fill="#E5322D"/><circle cx="110" cy="95" r="42" fill="#f0c29a"/><path d="M70 85 Q75 50 110 50 Q145 50 150 85 Q135 70 110 72 Q85 70 70 85 Z" fill="#555"/></g><circle cx="180" cy="180" r="28" fill="#0B4DA2" stroke="#fff" stroke-width="6"/><path d="M167 180 L177 190 L194 171" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="el c" id="hcap" style="top:1250px; font-size:54px; font-weight:500; color:#4a3a2a; padding:0 90px; line-height:1.3"></div>
+  </div>
+
+  <!-- ========== 2. PATTERN #1 TELEFON (6.2 – 20) ========== -->
+  <div class="scene" data-s="6.2" data-e="20">
+    <div class="el c" style="top:250px"><span class="pill navy" data-in=".1" data-a="pop">PATTERN #1</span></div>
+    <div class="el c" style="top:330px; font-size:110px; font-weight:800; color:var(--navy)" data-in=".3" data-a="up">TELEFON</div>
+    <svg class="el" id="phone" style="top:490px; left:430px" width="220" height="420" viewBox="0 0 220 420" data-in=".5" data-a="pop">
+      <defs><linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2EA7E0"/><stop offset="1" stop-color="#0B2F6B"/></linearGradient></defs>
+      <rect x="4" y="4" width="212" height="412" rx="36" fill="#1b1f27" stroke="#0B2F6B" stroke-width="6"/>
+      <rect x="16" y="16" width="188" height="388" rx="26" fill="url(#scr)"/>
+      <rect x="80" y="26" width="60" height="14" rx="7" fill="#1b1f27"/>
+      <text x="110" y="150" text-anchor="middle" font-family="P" font-weight="700" font-size="54" fill="#fff" id="phoneClock">09:41</text>
+      <g fill="rgba(255,255,255,.85)"><rect x="40" y="260" width="40" height="40" rx="10"/><rect x="90" y="260" width="40" height="40" rx="10"/><rect x="140" y="260" width="40" height="40" rx="10"/>
+        <rect x="40" y="315" width="40" height="40" rx="10"/><rect x="90" y="315" width="40" height="40" rx="10"/><rect x="140" y="315" width="40" height="40" rx="10"/></g>
+    </svg>
+    <div class="el c" style="top:950px; font-size:62px; font-weight:600; color:#7a6a58">
+      <span style="position:relative" data-in="1.4" data-a="up">Paling latest<i class="strike" data-in="2.6"></i></span></div>
+    <div class="el c" style="top:1040px"><span class="pill" style="background:var(--blue); color:#fff; font-size:46px; letter-spacing:3px" data-in="4.6" data-a="pop">✓ HIGH SPEC</span></div>
+    <div class="el c" style="top:1130px; font-size:40px; font-weight:500; color:#4a3a2a" data-in="5.0" data-a="up">(masa tahun diorang beli)</div>
+    <div class="el c" style="top:1215px; font-size:100px; font-weight:800; color:var(--navy); line-height:1" data-in="7.3" data-a="up">
+      Pakai <span style="color:var(--blue)" data-count="1,8,7.6,12.2">1</span> TAHUN</div>
+    <div class="el" style="top:1360px; left:190px; width:700px; height:26px; border-radius:13px; background:#e9dcc6; overflow:hidden" data-in="7.4" data-a="fade">
+      <i class="fillx" data-grow="7.6,12.2" style="display:block; height:100%; width:100%; background:linear-gradient(90deg,var(--sky),var(--blue)); transform-origin:0 50%"></i></div>
+    <div class="el c" style="top:1410px; font-size:52px; font-weight:600; color:var(--warm)" data-in="12.4" data-a="pop">…baru tukar.</div>
+  </div>
+
+  <!-- ========== 3. PATTERN #2 KERETA (20 – 31) ========== -->
+  <div class="scene" data-s="20" data-e="31">
+    <div class="el c" style="top:250px"><span class="pill navy" data-in=".1" data-a="pop">PATTERN #2</span></div>
+    <div class="el c" style="top:330px; font-size:110px; font-weight:800; color:var(--navy)" data-in=".3" data-a="up">KERETA</div>
+    <div class="el" style="top:880px; left:90px; width:900px; height:8px; border-radius:4px; background:#d9c7a8" data-in=".4" data-a="fade"></div>
+    <svg class="el" id="car" style="top:560px; left:190px" width="700" height="330" viewBox="0 0 700 330">
+      <path d="M40 240 L62 178 Q80 150 140 144 L230 86 Q262 66 330 64 L440 64 Q490 64 526 96 L590 146 Q650 152 664 196 L664 240 Z" fill="#0B2F6B"/>
+      <path d="M250 98 Q270 82 330 80 L380 80 L380 146 L200 146 Z" fill="#9fd4f0"/>
+      <path d="M400 80 L438 80 Q478 80 506 104 L548 146 L400 146 Z" fill="#9fd4f0"/>
+      <rect x="610" y="170" width="40" height="18" rx="6" fill="#FFD23F"/><rect x="44" y="190" width="30" height="16" rx="5" fill="#E5322D"/>
+      <g id="w1" transform="translate(180 244)"><circle r="52" fill="#1b1f27"/><circle r="26" fill="#c9ced6"/><g stroke="#1b1f27" stroke-width="7"><line x1="-24" y1="0" x2="24" y2="0"/><line x1="0" y1="-24" x2="0" y2="24"/></g></g>
+      <g id="w2" transform="translate(530 244)"><circle r="52" fill="#1b1f27"/><circle r="26" fill="#c9ced6"/><g stroke="#1b1f27" stroke-width="7"><line x1="-24" y1="0" x2="24" y2="0"/><line x1="0" y1="-24" x2="0" y2="24"/></g></g>
+    </svg>
+    <div class="el c" style="top:950px; font-size:62px; font-weight:600; color:#7a6a58">
+      <span style="position:relative" data-in="1.6" data-a="up">Paling terbaru<i class="strike" data-in="2.9"></i></span></div>
+    <div class="el c" style="top:1040px"><span class="pill" style="background:var(--yellow); color:var(--navy); font-size:46px; letter-spacing:2px" data-in="4.6" data-a="pop">★ TERBAIK DALAM KELAS</span></div>
+    <div class="el c" style="top:1180px; font-size:40px; font-weight:600; color:#7a6a58; letter-spacing:6px" data-in="6.0" data-a="up">ODOMETER</div>
+    <div class="el c" style="top:1230px" data-in="6.2" data-a="up">
+      <span style="display:inline-block; background:#1b1f27; color:#fff; font-size:90px; font-weight:700; padding:6px 36px; border-radius:20px; letter-spacing:6px; font-variant-numeric: tabular-nums">
+        <span data-count="12000,238000,6.4,10.4" data-fmt="k">12,000</span> <span style="font-size:44px; color:var(--sky)">km</span></span></div>
+  </div>
+
+  <!-- ========== 4. MINDSET (31 – 40) ========== -->
+  <div class="scene" data-s="31" data-e="40">
+    <div class="el c" style="top:300px; font-size:80px; font-weight:800; color:var(--navy)" data-in=".1" data-a="pop"><svg width="70" height="110" viewBox="0 0 70 110" style="vertical-align:middle"><rect x="3" y="3" width="64" height="104" rx="12" fill="#0B2F6B"/><rect x="9" y="10" width="52" height="88" rx="7" fill="#2EA7E0"/></svg> <span style="vertical-align:middle">+</span> <svg width="150" height="80" viewBox="0 0 700 330" style="vertical-align:middle"><path d="M40 240 L62 178 Q80 150 140 144 L230 86 Q262 66 330 64 L440 64 Q490 64 526 96 L590 146 Q650 152 664 196 L664 240 Z" fill="#0B2F6B"/><circle cx="180" cy="244" r="52" fill="#1b1f27"/><circle cx="530" cy="244" r="52" fill="#1b1f27"/></svg></div>
+    <div class="el c" style="top:470px; font-size:54px; font-weight:600; color:#7a6a58" data-in=".4" data-a="up">Prinsip diorang senang je:</div>
+    <div class="el c" style="top:560px; font-size:150px; font-weight:800; color:var(--navy); line-height:1.1" data-in="1.4" data-a="slam">BELI SEKALI.</div>
+    <div class="el c" style="top:740px; font-size:150px; font-weight:800; color:var(--navy); line-height:1.1" data-in="2.3" data-a="slam">
+      <span class="hl"><i class="bar" data-grow="2.7,3.1"></i>PAKAI LAMA.</span></div>
+    <div class="el c" style="top:1010px; font-size:62px; font-weight:600; color:var(--warm)" data-in="4.2" data-a="up">Sanggup bayar lebih sikit,</div>
+    <div class="el c" style="top:1100px; font-size:90px; font-weight:800; color:var(--navy)" data-in="5.6" data-a="pop">
+      asalkan <span class="hl" style="color:var(--blue)"><i class="bar" data-grow="6.0,6.4"></i>BERKUALITI.</span></div>
+  </div>
+
+  <!-- ========== 5. MASALAH (40 – 56) ========== -->
+  <div class="scene" data-s="40" data-e="56">
+    <div class="el c" style="top:250px; font-size:96px; font-weight:800" data-in=".2" data-a="up">Beli murah…</div>
+    <div class="el c" style="top:370px; font-size:56px; font-weight:600; color:#ffb3a8" data-in="1.4" data-a="up">selalunya <span style="color:#fff; background:var(--hot); padding:0 16px; border-radius:10px">MAHAL</span> akhirnya.</div>
+    <div class="el" id="vline" style="top:560px; left:225px; width:6px; height:470px; background:rgba(229,50,45,.5); transform-origin:50% 0"></div>
+    <div class="el step" style="top:520px; left:180px" data-in="3.8" data-a="left"><span class="xmark">✕</span>Rosak</div>
+    <div class="el step" style="top:650px; left:180px" data-in="5.0" data-a="left"><span class="xmark">✕</span>Panggil technician</div>
+    <div class="el step" style="top:780px; left:180px" data-in="6.4" data-a="left"><span class="xmark">✕</span>Rosak lagi</div>
+    <div class="el step" style="top:910px; left:180px" data-in="7.6" data-a="left"><span class="xmark">✕</span>Beli baru</div>
+    <div class="el meter" style="top:1110px; left:130px" data-in="10.8" data-a="up"><span class="lbl">Duit habis</span><span class="trk"><i class="fill" data-grow="11.0,11.8"></i></span></div>
+    <div class="el meter" style="top:1200px; left:130px" data-in="11.6" data-a="up"><span class="lbl">Masa habis</span><span class="trk"><i class="fill" data-grow="11.8,12.6"></i></span></div>
+    <div class="el meter" style="top:1290px; left:130px" data-in="12.4" data-a="up"><span class="lbl">Sakit kepala</span><span class="trk"><i class="fill" data-grow="12.6,13.4"></i></span></div>
+    <div class="el layer" id="dim" style="background:rgba(10,4,5,.82)" data-in="14.0" data-a="fade"></div>
+    <svg class="el" id="crack" style="top:0; left:0" width="1080" height="1920" viewBox="0 0 1080 1920">
+      <g fill="none" stroke="rgba(255,255,255,.75)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M540 900 L470 780 L500 640 L420 470 L440 300"/><path d="M540 900 L650 820 L700 700 L860 620 L1000 480"/>
+        <path d="M540 900 L420 960 L300 930 L150 1040 L40 1020"/><path d="M540 900 L600 1040 L560 1180 L640 1340 L610 1520"/>
+        <path d="M540 900 L700 960 L820 1100 L1040 1160"/><path d="M500 640 L380 600"/><path d="M700 700 L760 780"/><path d="M300 930 L260 820"/>
+      </g></svg>
+    <div class="el c" style="top:1340px; font-size:92px; font-weight:800; line-height:1.15" data-in="14.4" data-a="slam">Murah…<br><span style="color:#ff6b5e">tapi berulang kali.</span></div>
+  </div>
+
+  <!-- tirai bulatan ke gelap -->
+  <div class="layer" id="iris" style="background:#0d1118"></div>
+
+  <!-- ========== 6. JAMBATAN (56 – 62) ========== -->
+  <div class="scene" data-s="56" data-e="62">
+    <svg class="el" id="drop" style="top:0; left:440px" width="200" height="260" viewBox="0 0 200 260">
+      <defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fe0ff"/><stop offset="1" stop-color="#2EA7E0"/></linearGradient></defs>
+      <path d="M100 10 C130 70 180 120 180 170 A80 80 0 0 1 20 170 C20 120 70 70 100 10 Z" fill="url(#dg)"/>
+      <ellipse cx="70" cy="160" rx="16" ry="30" fill="rgba(255,255,255,.5)"/></svg>
+    <svg class="el" id="ripples" style="top:780px; left:140px" width="800" height="240" viewBox="0 0 800 240"><g id="rip" fill="none" stroke="#2EA7E0"></g></svg>
+    <div class="el c" style="top:1080px; font-size:60px; font-weight:500; color:rgba(255,255,255,.9)" data-in="1.1" data-a="up">Jadi bila diorang pilih</div>
+    <div class="el c" style="top:1160px; font-size:120px; font-weight:800; color:var(--sky)" data-in="1.8" data-a="pop">PENAPIS AIR…</div>
+    <div class="el c" style="top:1330px; font-size:56px; font-weight:500; color:rgba(255,255,255,.85)" data-in="3.4" data-a="up">kebanyakan diorang pilih ni.</div>
+  </div>
+
+  <!-- ========== 7. PENDEDAHAN (62 – 68) ========== -->
+  <div class="scene" data-s="62" data-e="68">
+    <div class="el" id="glow" style="top:560px; left:140px; width:800px; height:800px; border-radius:50%; background: radial-gradient(circle, rgba(46,167,224,.45) 0, rgba(46,167,224,.12) 40%, transparent 70%)"></div>
+    <div class="el" id="floor" style="top:1225px; left:240px; width:600px; height:70px; border-radius:50%; background: radial-gradient(ellipse, rgba(0,0,0,.75) 0, transparent 70%)"></div>
+    <img class="el" id="prod" src="../assets/img/villaem3-front.png" style="top:470px; left:160px; width:760px; height:760px">
+    <div class="el c" style="top:1290px; font-size:44px; font-weight:600; letter-spacing:18px; color:var(--sky)" data-in="1.2" data-a="up">COWAY</div>
+    <div class="el c" style="top:1340px; font-size:140px; font-weight:800; line-height:1.1" data-in="1.35" data-a="slam">Villaem 3</div>
+  </div>
+
+  <!-- ========== 8a. HIGH SPEC (68 – 73) ========== -->
+  <div class="scene" data-s="68" data-e="73">
+    <div class="el c" style="top:280px"><span class="pill" style="background:linear-gradient(90deg,var(--sky),#5cc8ff); color:#04213f" data-in=".1" data-a="pop">HIGH SPEC</span></div>
+    <div class="el c" style="top:400px; font-size:60px; font-weight:500; color:rgba(255,255,255,.85)" data-in=".3" data-a="up">Macam telefon diorang,</div>
+    <div class="el c" style="top:490px; font-size:66px; font-weight:600" data-in="1.2" data-a="up">antara model</div>
+    <div class="el c" style="top:570px; font-size:140px; font-weight:800; line-height:1.05" data-in="1.5" data-a="slam">PALING<br><span style="color:var(--sky)">HIGH SPEC</span></div>
+    <img class="el" id="prod3" src="../assets/img/villaem3-front.png" style="top:880px; left:290px; width:500px; height:500px" data-in=".6" data-a="up">
+  </div>
+
+  <!-- ========== 8b. TANGKI (73 – 78) ========== -->
+  <div class="scene" data-s="73" data-e="78">
+    <div class="el c" style="top:300px; font-size:90px; font-weight:600; color:rgba(255,255,255,.9)" data-in=".15" data-a="up">Tangki</div>
+    <div class="el c" style="top:440px; font-size:140px; font-weight:800; line-height:1.1" data-in=".3" data-a="slam">PALING <span style="color:var(--sky)">BESAR</span></div>
+    <svg class="el" style="top:680px; left:300px" width="480" height="560" viewBox="0 0 480 560" data-in=".4" data-a="up">
+      <defs><clipPath id="tankClip"><rect x="30" y="30" width="420" height="500" rx="46"/></clipPath>
+        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5cc8ff"/><stop offset="1" stop-color="#0B4DA2"/></linearGradient></defs>
+      <g clip-path="url(#tankClip)"><rect x="30" y="30" width="420" height="500" fill="rgba(255,255,255,.05)"/><path id="wave" fill="url(#water)"/><g id="bubbles" fill="rgba(255,255,255,.55)"></g></g>
+      <rect x="30" y="30" width="420" height="500" rx="46" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="8"/>
+      <rect x="60" y="70" width="18" height="160" rx="9" fill="rgba(255,255,255,.35)"/>
+      <g fill="rgba(255,255,255,.6)"><rect x="400" y="140" width="34" height="5"/><rect x="400" y="260" width="34" height="5"/><rect x="400" y="380" width="34" height="5"/></g>
+    </svg>
+    <div class="el c" style="top:1290px; font-size:52px; font-weight:500; color:rgba(255,255,255,.85)" data-in="1.6" data-a="up">Cukup untuk seisi keluarga</div>
+  </div>
+
+  <!-- ========== 8c. SUHU (78 – 85) ========== -->
+  <div class="scene" data-s="78" data-e="85">
+    <div class="el" style="top:250px; left:110px; font-size:300px; font-weight:800; line-height:1; background:linear-gradient(90deg,var(--hot),#ff9a3c 45%,var(--cold)); -webkit-background-clip:text; color:transparent" data-in=".05" data-a="slam">8+</div>
+    <div class="el" style="top:330px; left:560px; font-size:84px; font-weight:800; line-height:1.05" data-in=".3" data-a="left">PILIHAN<br>SUHU</div>
+    <div class="el" style="top:600px; left:90px; width:900px; height:520px; border-radius:40px; overflow:hidden; box-shadow: 0 40px 80px rgba(0,0,0,.5), 0 0 0 3px rgba(255,255,255,.12)" data-in=".45" data-a="up">
+      <img id="panelImg" src="../assets/img/panel-closeup.jpg" style="position:absolute; width:1100px; left:-170px; top:-150px; transform-origin: 55% 40%"></div>
+    <div class="chip el" style="top:1170px; left:90px;  color:var(--hot)" data-in="1.9" data-a="pop"><b style="background:var(--hot)"></b><div style="color:#fff">Panas<small>nak masak</small></div></div>
+    <div class="chip el" style="top:1170px; left:550px; color:#ff9a3c" data-in="3.4" data-a="pop"><b style="background:#ff9a3c"></b><div style="color:#fff">Suam<small>nak minum</small></div></div>
+    <div class="chip el" style="top:1300px; left:90px;  color:#39d0a0" data-in="4.1" data-a="pop"><b style="background:#39d0a0"></b><div style="color:#fff">Suhu Bilik<small>ambient</small></div></div>
+    <div class="chip el" style="top:1300px; left:550px; color:var(--cold)" data-in="4.8" data-a="pop"><b style="background:var(--cold)"></b><div style="color:#fff">Sejuk<small>cold</small></div></div>
+  </div>
+
+  <!-- ========== 8d. TAHAN LASAK (85 – 90) ========== -->
+  <div class="scene" data-s="85" data-e="89.7">
+    <svg class="el" style="top:280px; left:390px" width="300" height="340" viewBox="0 0 300 340" data-in=".05" data-a="pop">
+      <path id="shieldPath" d="M150 14 L270 60 V160 C270 250 210 305 150 326 C90 305 30 250 30 160 V60 Z" fill="rgba(46,167,224,.15)" stroke="#2EA7E0" stroke-width="12" stroke-linejoin="round"/>
+      <path id="shieldTick" d="M95 170 L138 212 L212 128" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="el c" style="top:660px; font-size:90px; font-weight:600; color:rgba(255,255,255,.9)" data-in=".25" data-a="up">Paling</div>
+    <div class="el c" style="top:750px; font-size:140px; font-weight:800; line-height:1.1" data-in=".4" data-a="slam">TAHAN <span style="color:var(--sky)">LASAK</span></div>
+    <div class="el c" style="top:930px; font-size:50px; font-weight:500; color:rgba(255,255,255,.85); padding:0 100px; line-height:1.35" data-in="1.4" data-a="up">
+      Technician pun <span style="color:var(--yellow); font-weight:700">jarang</span> dapat repair!</div>
+    <img class="el" src="../assets/img/villaem3-front.png" style="top:1060px; left:315px; width:450px; height:450px" data-in=".7" data-a="up">
+  </div>
+
+  <!-- tirai ke biru -->
+  <div class="layer" id="wipeBlue" style="background:var(--blue)"></div>
+
+  <!-- ========== 9. PROMO (90 – 104.5) ========== -->
+  <div class="scene" data-s="90" data-e="104.5">
+    <div class="el c" style="top:250px"><span class="pill" style="background:var(--yellow); color:var(--navy); font-size:40px; padding:16px 44px" data-in=".1" data-a="pop" id="promoPill">PROMO</span></div>
+    <div class="el c" style="top:370px; font-size:48px; font-weight:500; opacity:.85" data-in=".4" data-a="up">Harga asal</div>
+    <div class="el c" style="top:425px; font-size:96px; font-weight:700; color:rgba(255,255,255,.75)" data-in=".55" data-a="up">
+      <span style="position:relative">RM120<span style="font-size:48px">/bulan</span><i class="strike" data-in="2.4"></i></span></div>
+    <div class="el c" style="top:580px; font-size:50px; font-weight:600" data-in="3.0" data-a="up">Promosi diskaun · <span style="color:var(--yellow)">serendah</span></div>
+    <div class="el c" style="top:630px; white-space:nowrap; line-height:1.1" data-in="3.2" data-a="slam">
+      <span style="font-size:220px; font-weight:800">RM<span data-count="120,74,3.3,5.3">120</span></span><span style="font-size:64px; font-weight:600; opacity:.9">/bulan</span></div>
+    <div class="el" style="top:915px; left:170px" data-in="6.4" data-a="stamp">
+      <span class="pill" style="background:var(--hot); color:#fff; font-size:44px; letter-spacing:3px; transform:rotate(-4deg)">GANDA LAGI!</span></div>
+    <div class="el" style="top:990px; left:110px; width:860px; height:220px; border-radius:36px; background:rgba(255,255,255,.1); border:3px solid rgba(255,210,63,.7); text-align:center; padding-top:26px" data-in="7.0" data-a="pop">
+      <div style="font-size:40px; font-weight:600">Rebat Ulang Tahun Coway</div>
+      <div style="font-size:104px; font-weight:800; color:var(--yellow); line-height:1.1">RM20 × 7 BULAN</div></div>
+    <div class="el c" style="top:1225px; font-size:32px; font-weight:500; opacity:.8" data-in="9.6" data-a="up">Selepas 7 bulan: RM74/bulan</div>
+    <div class="el check" style="top:1285px; left:190px" data-in="10.3" data-a="left"><span class="tick">✓</span>Pemasangan <span style="color:var(--yellow)">PERCUMA</span></div>
+    <div class="el check" style="top:1370px; left:190px" data-in="11.1" data-a="left"><span class="tick">✓</span>Servis setiap 2 / 4 bulan</div>
+    <div class="el c" style="top:1465px" data-in="12.2" data-a="slam" id="lastcall">
+      <span style="display:inline-block; background:var(--hot); color:#fff; font-size:50px; font-weight:800; padding:14px 50px; border-radius:16px; letter-spacing:1px; box-shadow:0 0 40px rgba(229,50,45,.7)">LAST CALL untuk promo ini!</span></div>
+    <div class="el c" style="top:1575px; font-size:26px; opacity:.6" data-in="12.6" data-a="fade">*Tertakluk kepada terma &amp; syarat</div>
+  </div>
+
+  <!-- ========== 10. CTA (104.5 – 112.5) ========== -->
+  <div class="scene" data-s="104.5" data-e="999">
+    <div class="el" id="two" style="top:170px; left:0; width:1080px; height:925px; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 80%, transparent 100%);" data-in=".1" data-a="fade">
+      <img src="../assets/img/two-colors.jpg" style="width:1080px; height:925px; display:block"></div>
+    <div class="el c" style="top:1060px; font-size:84px; font-weight:800; line-height:1.15" data-in=".6" data-a="slam">Beli sekali. Pakai lama.</div>
+    <div class="el c" style="top:1160px; font-size:100px; font-weight:800; color:var(--sky)" data-in="1.1" data-a="slam">Puas hati.</div>
+    <div class="el c" style="top:1310px; font-size:44px; font-weight:500; opacity:.9" data-in="1.8" data-a="up">Cari penapis air <b style="color:var(--yellow)">high spec</b>?</div>
+    <div class="el" id="btn" style="top:1390px; left:110px; width:860px; height:140px; border-radius:80px; background:#25D366; display:flex !important; align-items:center; justify-content:center; gap:22px; font-size:44px; font-weight:800; white-space:nowrap; box-shadow: 0 20px 50px rgba(37,211,102,.45)" data-in="2.2" data-a="pop">
+      <svg width="60" height="60" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.700-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>
+      WHATSAPP SAYA SEKARANG</div>
+    <div class="el c" style="top:1570px; font-size:32px; font-weight:500; opacity:.7; letter-spacing:2px" data-in="2.8" data-a="fade">COWAY VILLAEM 3 · Pebble Gray | Porcelain White</div>
+  </div>
+
+  <div class="layer" id="flash" style="background:#fff; opacity:0"></div>
+</div>
+
+<script>
+/* ===== Enjin animasi deterministik: seek(t) melukis bingkai pada masa t ===== */
+const $ = id => document.getElementById(id);
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const E = {
+  lin: x => x, out: x => 1 - Math.pow(1 - x, 3), in: x => x * x * x,
+  inOut: x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
+  back: x => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); },
+  elastic: x => x === 0 ? 0 : x === 1 ? 1 : Math.pow(2, -10 * x) * Math.sin((x * 10 - .75) * (2 * Math.PI) / 3) + 1,
+};
+const p = (t, t0, t1, e = E.out) => e(clamp((t - t0) / (t1 - t0)));
+const mix = (a, b, k) => a + (b - a) * k;
+function tf(el, { o = 1, x = 0, y = 0, s = 1, r = 0, blur = 0 }) {
+  el.style.opacity = o;
+  el.style.visibility = o <= 0.001 ? 'hidden' : 'visible';
+  el.style.transform = `translate(${x}px,${y}px) scale(${s}) rotate(${r}deg)`;
+  el.style.filter = blur > .05 ? `blur(${blur}px)` : '';
+}
+
+const END = 112.5;
+window.DURATION = END;
+
+const scenes = [...document.querySelectorAll('.scene')].map(el => ({
+  el, s: +el.dataset.s, e: +el.dataset.e,
+  items: [...el.querySelectorAll('[data-in]')].map(n => ({ n, t: +n.dataset.in, a: n.dataset.a || 'up' })),
+  strikes: [...el.querySelectorAll('.strike')],
+  grows: [...el.querySelectorAll('[data-grow]')].map(n => ({ n, r: n.dataset.grow.split(',').map(Number) })),
+  counts: [...el.querySelectorAll('[data-count]')].map(n => ({ n, r: n.dataset.count.split(',').map(Number), fmt: n.dataset.fmt })),
+}));
+const bgs = [...document.querySelectorAll('.bg')].map(el => ({ el, s: +el.dataset.s, e: +el.dataset.e }));
+
+function animItem(n, a, k) {       // k: masa sejak masuk (s)
+  if (k < 0) return tf(n, { o: 0 });
+  const q = p(k, 0, a === 'slam' || a === 'pop' || a === 'stamp' ? .55 : .5, a === 'pop' || a === 'stamp' ? E.back : E.out);
+  const fadeIn = clamp(k / .25);
+  switch (a) {
+    case 'pop':   return tf(n, { o: fadeIn, s: mix(.5, 1, q) });
+    case 'slam':  return tf(n, { o: fadeIn, s: mix(1.6, 1, p(k, 0, .45, E.out)), blur: (1 - clamp(k / .3)) * 10 });
+    case 'stamp': return tf(n, { o: fadeIn, s: mix(2.2, 1, q), r: mix(-14, 0, q) });
+    case 'left':  return tf(n, { o: fadeIn, x: mix(120, 0, q), blur: (1 - clamp(k / .35)) * 8 });
+    case 'fade':  return tf(n, { o: p(k, 0, .6, E.inOut) });
+    default:      return tf(n, { o: fadeIn, y: mix(60, 0, q), blur: (1 - clamp(k / .35)) * 8 });
+  }
+}
+
+const fmt = (v, f) => f === 'k' ? Math.round(v).toLocaleString('en-US') : String(Math.round(v));
+const hookCap = '…saya perasan ada satu jenis customer ni.';
+const hookCap2 = 'Dan cara diorang beli barang… memang lain.';
+
+function seek(t) {
+  /* latar: silang pudar 0.4s */
+  bgs.forEach(b => tf(b.el, { o: Math.min(p(t, b.s - .2, b.s + .2, E.inOut) + (b.s === 0 ? 1 : 0), 1 - p(t, b.e + .1, b.e + .5, E.inOut)) }));
+
+  scenes.forEach(sc => {
+    const vis = t >= sc.s - .01 && t < sc.e + .45;
+    sc.el.style.display = vis ? '' : 'none';
+    if (!vis) return;
+    const k = t - sc.s, out = p(t, sc.e - .05, sc.e + .35, E.in);
+    tf(sc.el, { o: 1 - out, y: -out * 70, blur: out * 8 });
+    sc.items.forEach(it => animItem(it.n, it.a, k - it.t));
+    sc.strikes.forEach(st => { st.style.transform = `scaleX(${p(k, +st.dataset.in, +st.dataset.in + .35, E.inOut)})`; st.style.opacity = 1; st.style.filter = ''; });
+    sc.grows.forEach(g => { g.n.style.transform = `scaleX(${p(k, g.r[0], g.r[1], E.inOut)})`; g.n.style.opacity = 1; g.n.style.visibility = 'visible'; g.n.style.filter = ''; });
+    sc.counts.forEach(c => { c.n.textContent = fmt(mix(c.r[0], c.r[1], p(k, c.r[2], c.r[3], E.inOut)), c.fmt); c.n.style.opacity = 1; c.n.style.transform = ''; c.n.style.filter = ''; c.n.style.visibility = 'visible'; });
+  });
+
+  /* ---- khas: hook ---- */
+  document.querySelectorAll('.av').forEach((av, i) => {
+    const t0 = 1.1 + i * .22, a = p(t, t0, t0 + .6, E.elastic);
+    const focus = p(t, 4.4, 5.0, E.inOut);                       // customer tengah dibesarkan
+    const others = i === 1 ? 0 : focus;
+    tf(av, { o: clamp((t - t0) * 6) * (1 - others * .75), y: mix(-420, 0, a) + Math.sin((t - t0) * 3 + i) * 4 * clamp(t - t0 - .6) + (i === 1 ? -focus * 20 : 0),
+             s: i === 1 ? 1 + focus * .35 : 1 - others * .15, r: mix(-20 + i * 20, 0, a) });
+  });
+  {
+    const c = $('hcap');
+    if (t < 4.3) { const k = clamp((t - 2.0) / 1.3); c.textContent = hookCap.slice(0, Math.round(k * hookCap.length)); }
+    else { const k = clamp((t - 4.5) / 1.1); c.textContent = hookCap2.slice(0, Math.round(k * hookCap2.length)); }
+    tf(c, { o: t < 2.0 ? 0 : 1 });
+  }
+
+  /* ---- telefon: jam berjalan ---- */
+  $('phoneClock').textContent = (() => { const m = Math.floor(9 * 60 + 41 + (t - 6.2) * 20) % 1440; return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); })();
+
+  /* ---- kereta: memandu masuk, roda berpusing, sedikit melantun ---- */
+  {
+    const k = t - 20, a = p(k, .4, 1.6, E.out);
+    const car = $('car');
+    tf(car, { o: clamp((k - .4) * 4), x: mix(-900, 0, a), y: Math.sin(k * 14) * 2 * (1 - a * .6) });
+    const rot = (mix(-900, 0, a) + k * 40) * 1.4;
+    $('w1').setAttribute('transform', `translate(180 244) rotate(${rot})`);
+    $('w2').setAttribute('transform', `translate(530 244) rotate(${rot})`);
+  }
+
+  /* ---- masalah: garis masa + retak ---- */
+  {
+    const k = t - 40;
+    tf($('vline'), { o: k > 3.8 ? 1 : 0 });
+    $('vline').style.transform = `scaleY(${p(k, 3.8, 8.2, E.inOut)})`;
+    const cr = $('crack'), cp = p(k, 14.1, 14.5, E.out);
+    cr.style.display = k > 14.1 && k < 16.4 ? '' : 'none';
+    cr.querySelectorAll('path').forEach(pa => { pa.style.strokeDasharray = 1000; pa.style.strokeDashoffset = 1000 * (1 - cp); });
+    // gegar skrin bila retak
+    const sh = k > 14.1 && k < 14.6 ? Math.sin(k * 90) * 10 * (1 - (k - 14.1) / .5) : 0;
+    document.querySelectorAll('.scene')[4].style.transform += ` translateX(${sh}px)`;
+  }
+
+  /* ---- tirai bulatan ke gelap ---- */
+  {
+    const ir = p(t, 56.0, 56.55, E.inOut);
+    $('iris').style.clipPath = `circle(${ir * 1200}px at 540px 960px)`;
+    tf($('iris'), { o: t >= 56.0 && t < 56.7 ? 1 : 0 });
+  }
+
+  /* ---- titisan air + riak ---- */
+  {
+    const k = t - 56;
+    const a = p(k, .3, 1.0, E.in);
+    tf($('drop'), { o: k > .3 && k < 1.05 ? 1 : 0, y: mix(-260, 640, a), s: mix(.8, 1, a) });
+    let r = '';
+    for (let i = 0; i < 3; i++) {
+      const q = clamp((k - 1.0 - i * .25) / 1.6);
+      if (q > 0 && q < 1) r += `<ellipse cx="400" cy="120" rx="${60 + q * 340}" ry="${14 + q * 80}" stroke-width="${6 - q * 4}" opacity="${1 - q}"/>`;
+    }
+    $('rip').innerHTML = r;
+  }
+
+  /* ---- pendedahan produk ---- */
+  {
+    const k = t - 62, a = p(k, .1, 1.0, E.out);
+    tf($('prod'), { o: clamp(a * 1.6), y: mix(160, 0, a) + Math.sin(t * 2.2) * 6 * a, s: mix(.85, 1, a), blur: (1 - clamp(a * 1.4)) * 14 });
+    tf($('glow'), { o: a * (.85 + Math.sin(t * 3) * .15), s: mix(.5, 1, a) });
+    tf($('floor'), { o: a * .9, s: mix(.6, 1, a) });
+    tf($('flash'), { o: t >= 63.35 ? (1 - p(t, 63.35, 63.8, E.out)) * .35 : 0 });
+  }
+  $('prod3').style.transform += ` translateY(${Math.sin(t * 2.2) * 6}px)`;
+
+  /* ---- tangki ---- */
+  {
+    const lvl = p(t, 73.6, 75.2, E.inOut), top = mix(530, 90, lvl), amp = 14 * (1 - lvl * .4);
+    let d = `M30 ${top}`;
+    for (let x = 30; x <= 450; x += 10) d += ` L${x} ${top + Math.sin(x / 38 + t * 6) * amp}`;
+    $('wave').setAttribute('d', d + ' L450 540 L30 540 Z');
+    let bub = '';
+    for (let i = 0; i < 9; i++) {
+      const ph = (t * .8 + i * .37) % 1, bx = 70 + (i * 47) % 360, by = mix(520, top + 20, ph);
+      if (by > top + 10) bub += `<circle cx="${bx + Math.sin(t * 3 + i) * 8}" cy="${by}" r="${5 + (i % 3) * 3}"/>`;
+    }
+    $('bubbles').innerHTML = bub;
+  }
+  $('panelImg').style.transform = `scale(${mix(1, 1.18, p(t, 78.4, 85, E.lin))})`;
+
+  /* ---- perisai ---- */
+  {
+    const k = t - 85, sp = $('shieldPath'), tk = $('shieldTick');
+    sp.style.strokeDasharray = 900; sp.style.strokeDashoffset = 900 * (1 - p(k, .05, .7, E.inOut));
+    tk.style.strokeDasharray = 240; tk.style.strokeDashoffset = 240 * (1 - p(k, .55, .9, E.out));
+  }
+
+  /* ---- tirai biru ---- */
+  {
+    const wb = p(t, 89.7, 90.15, E.inOut);
+    $('wipeBlue').style.clipPath = `inset(${(1 - wb) * 100}% 0 0 0)`;
+    tf($('wipeBlue'), { o: t >= 89.7 && t < 90.5 ? 1 : 0 });
+  }
+
+  /* ---- promo: goyang pil, kelip LAST CALL ---- */
+  if (t > 90.7 && t < 104.5) $('promoPill').style.transform += ` rotate(${Math.sin(t * 9) * 2.5}deg)`;
+  if (t > 102.9 && t < 104.6) { const lc = $('lastcall'); lc.style.transform += ` scale(${1 + .05 * Math.max(0, Math.sin((t - 102.9) * 8))})`; }
+
+  /* ---- CTA: butang berdenyut, imej zum perlahan ---- */
+  if (t > 107.3) $('btn').style.transform += ` scale(${1 + .04 * Math.max(0, Math.sin((t - 107.3) * 6))})`;
+  if (t > 104.6) $('two').style.transform += ` scale(${mix(1.1, 1, p(t, 104.6, END, E.out))})`;
+}
+window.seek = seek;
+seek(0);
+</script>
+</body>
+</html>
