@@ -1,5 +1,23 @@
 {
   "_comment": "Klip video yang dipecahkan jadi frame JPG oleh render.py (out/clips/<nama>/f0001.jpg ...). start/dur dalam saat dari fail sumber.",
-  "neonA": {"src": "assets/video/neon3.mp4", "start": 3.6, "dur": 2.8},
-  "neonB": {"src": "assets/video/neon2.mp4", "start": 4.0, "dur": 3.4}
+  "neonA": {
+    "src": "assets/video/neon3.mp4",
+    "start": 3.6,
+    "dur": 2.8
+  },
+  "neonB": {
+    "src": "assets/video/neon2.mp4",
+    "start": 4.0,
+    "dur": 3.4
+  },
+  "aisA": {
+    "src": "assets/video/ais3.mp4",
+    "start": 6.1,
+    "dur": 2.5
+  },
+  "aisB": {
+    "src": "assets/video/ais1.mov",
+    "start": 6.2,
+    "dur": 3.8
+  }
 }

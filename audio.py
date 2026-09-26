@@ -194,29 +194,30 @@ def sfx_best3():
     add(pop(1400, 0.15), 1.0, 0.3)                    # "?"
     for i in range(3):                                # 3 produk jatuh
         add(pop(500 + 150 * i), 2.3 + i * .2, 0.35, pan=-0.4 + 0.4 * i)
-    # --- Neon ---
+    # --- Neon (video) ---
     add(pop(1100), 4.3, 0.28)
-    add(shimmer(1.2), 4.6, 0.1)
-    add(pop(700, 0.2), 5.65, 0.35)                    # pelekat MAMPU MILIK
-    add(pop(1300, 0.15), 7.25, 0.3)                   # 3 SUHU
-    for i in range(3):                                # titisan
-        add(pop(900 + 200 * i, 0.1), 7.85 + i * .18, 0.25, pan=-0.3 + 0.3 * i)
+    add(pop(700, 0.2), 5.55, 0.35)                    # pelekat MAMPU MILIK
+    add(whoosh(0.3), 6.45, 0.2)                       # potong klip
+    add(pop(900, 0.2), 6.95, 0.25)                    # panel
+    add(pop(1300, 0.15), 7.15, 0.3)                   # 3 SUHU
+    for i in range(3):                                # titisan mendarat
+        add(pop(900 + 200 * i, 0.1), 7.9 + i * .2, 0.25, pan=-0.3 + 0.3 * i)
     # --- Villaem 3 ---
     add(pop(1100), 10.1, 0.28)
     add(shimmer(1.4), 10.75, 0.12)                    # PREMIUM
     add(pop(700, 0.2), 11.35, 0.35)                   # GENERASI 3
     for i, tk in enumerate([12.15, 13.1, 13.95, 14.75]):
         add(pop(800 + 120 * i), tk, 0.28, pan=-0.2)
-    # --- Ais ---
+    # --- Ais (video) ---
     add(pop(1100), 16.6, 0.28)
-    add(shimmer(1.4), 16.8, 0.12)
-    add(pop(700, 0.2), 17.55, 0.35)                   # PALING SPECIAL
-    add(pop(1300, 0.15), 17.85, 0.28)
+    add(pop(1300, 0.15), 17.25, 0.28)                 # Siap keluar AIS!
+    add(pop(700, 0.2), 17.65, 0.35)                   # PALING SPECIAL
+    for j in range(4):                                # ais jatuh "ting"
+        add(bell(2800 + 300 * j, 0.3), 17.4 + j * .22, 0.05, pan=0.1)
+    add(pop(900, 0.2), 18.15, 0.25)                   # panel
+    add(whoosh(0.3), 18.45, 0.2)                      # potong klip
     for c in range(3):                                # pagi / petang / malam
-        t0 = 19.0 + c * .55
-        add(pop(600 + 150 * c, 0.15), t0 + .05, 0.25, pan=-0.4 + 0.4 * c)
-        for j in range(3):                            # ketulan ais "ting"
-            add(bell(2600 + 350 * j + 150 * c, 0.3), t0 + .45 + j * .12, 0.05, pan=-0.4 + 0.4 * c)
+        add(pop(600 + 150 * c, 0.15), 18.85 + c * .45, 0.28, pan=-0.4 + 0.4 * c)
     # --- Promo ---
     add(pop(1200), 22.35, 0.3)
     add(impact(0.8), 22.65, 0.35)                     # RM20

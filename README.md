@@ -36,17 +36,17 @@ Sasaran: orang yang tengah plan nak pasang Coway. **Video siap:** `out/best3_fin
 | Masa | Babak |
 |------|-------|
 | 0 – 4s | Hook: "Tengah plan nak PASANG COWAY?" → "Ni 3 model paling laris tahun ni" + 3 produk |
-| 4 – 9.8s | #1 **Neon**: mampu milik · lengkap 3 suhu |
+| 4 – 9.8s | #1 **Neon** (video): mampu milik · lengkap 3 suhu (panas, suhu bilik, sejuk) |
 | 9.8 – 16.3s | #2 **Villaem 3**: premium · generasi 3 · pilihan ramai, senang guna · banyak pilihan suhu, ada air suam · tangki paling besar |
-| 16.3 – 22.2s | #3 **Coway Ais**: paling special, keluar ais · pagi / petang / malam |
+| 16.3 – 22.2s | #3 **Coway Ais** (video): siap keluar ais · paling special · pagi / petang / malam |
 | 22.2 – 27.8s | Promo semua model: RM20 je dah boleh pasang · rebate RM20 × 7 bulan · hantar & pasang percuma seluruh Malaysia |
 | 27.8 – 30s | "Nak yang mana satu?" + butang WhatsApp |
 
 **Neon:** babak video penuh skrin dari `assets/video/neon3.mp4` + `neon2.mp4` (potongan ditetapkan dalam
 `src/best3.clips.json`; `render.py` pecahkan jadi frame JPG dalam `out/clips/`). Thumbnail: `assets/img/neon-thumb.jpg`.
 
-**Ais:** `assets/img/ais.png` masih **gambar sementara** — ganti dengan gambar sebenar (PNG latar lutsinar/putih,
-nama fail sama) atau tambah klip video seperti Neon, kemudian render semula.
+**Ais:** babak video penuh skrin dari `assets/video/ais3.mp4` (ais jatuh ke gelas) + `ais1.mov` (tuang kopi ais).
+Sari kata asal dalam `ais1.mov` ditutup oleh panel Pagi/Petang/Malam. Thumbnail: `assets/img/ais.png`.
 
 Voiceover: `voiceover/best3/skrip_voiceover.md` (+ `best3.srt`).
 
