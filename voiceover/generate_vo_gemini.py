@@ -1,6 +1,8 @@
 """Jana voiceover Bahasa Melayu dengan Gemini text-to-speech (Google Gemini API).
 
-Perlu API key Gemini dalam pembolehubah persekitaran GEMINI_API_KEY (https://aistudio.google.com/apikey).
+Perlu API key Gemini (https://aistudio.google.com/apikey), sama ada dalam pembolehubah GEMINI_API_KEY, atau
+(dalam sesi cloud Claude Code) sebagai "API credential" environment untuk hos generativelanguage.googleapis.com
+dengan header x-goog-api-key.
 
     python voiceover/generate_vo_gemini.py --lines neoplus_full/lines.json --clips neoplus_full/clips
     python voiceover/generate_vo_gemini.py --lines neoplus/lines.json --clips neoplus/clips --fit
@@ -35,9 +37,10 @@ STYLE = ("Baca dalam Bahasa Melayu Malaysia, loghat standard. Suara wanita muda 
 
 
 def call(url, body=None):
-    req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None,
-                                 headers={"Content-Type": "application/json",
-                                          "x-goog-api-key": os.environ["GEMINI_API_KEY"]})
+    headers = {"Content-Type": "application/json"}
+    if os.environ.get("GEMINI_API_KEY"):     # tanpa ini, kunci dipasang oleh "API credentials" environment Claude
+        headers["x-goog-api-key"] = os.environ["GEMINI_API_KEY"]
+    req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, headers=headers)
     for attempt in range(5):
         try:
             with urllib.request.urlopen(req, timeout=180) as r:
@@ -128,7 +131,7 @@ def main():
     ap.add_argument("--list", action="store_true")
     a = ap.parse_args()
     if not os.environ.get("GEMINI_API_KEY"):
-        raise SystemExit("Tetapkan GEMINI_API_KEY dahulu.")
+        print("GEMINI_API_KEY tiada — anggap kunci dipasang oleh API credentials environment (header x-goog-api-key).")
     if a.list:
         print("\n".join(tts_models()))
         return
