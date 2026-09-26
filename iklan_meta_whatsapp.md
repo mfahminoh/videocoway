@@ -153,3 +153,77 @@ Nanti saya semak slot pemasangan & terangkan langkah seterusnya ya 🙏
 - [ ] Harga dalam teks = harga dalam video (RM59, asal RM104, 7 bulan pertama RM20). Jangan guna "diskaun 50%": RM104 → RM59 ialah 43%.
 - [ ] Muat naik sarikata: `neoplus/neoplus.srt` (60s) atau `neoplus_full/neoplus_full.srt` (penuh).
 - [ ] Jawapan untuk soalan cepat 2 & 4 (kawasan pemasangan, dokumen) disediakan dan tepat.
+
+---
+
+# Versi Teaser — tak dedahkan jalan cerita video
+
+Tujuan: buat orang **tonton video sampai habis**, lepas tu WhatsApp. Teks tak ulang babak dalam video
+(chat mak, kongsi bayar gilir-gilir, spek membaca, pulas/tekan). Biar video yang bercerita.
+
+## Teaser 1 — Soalan
+```
+Pernah terfikir apa yang mak ayah betul-betul perlukan dekat rumah? 🤔
+
+Jawapannya mungkin tak macam yang kita sangka.
+
+Tonton sampai habis 🎬 Kalau rasa kena dengan keluarga sendiri, tekan "Hantar Mesej" 👇
+```
+**Tajuk:** `Tonton Sampai Habis 👀`
+**Penerangan:** `Tanya detail di WhatsApp`
+
+## Teaser 2 — Untuk anak yang duduk jauh
+```
+Video ni untuk semua anak yang duduk jauh dari mak ayah 🤍
+
+Tengok dulu. Mungkin ada sesuatu yang dah lama kita nak buat, tapi asyik tertangguh.
+
+WhatsApp kami untuk tanya detail 👇
+```
+**Tajuk:** `Untuk Mak Ayah Di Kampung`
+**Penerangan:** `Tertakluk T&C`
+
+## Teaser 3 — Promo dulu, cerita dalam video
+```
+Ada double promo penapis air yang ramai tak perasan 👀
+
+7 bulan pertama cuma RM20/bulan* dengan penghantaran & pemasangan percuma.
+
+Tapi kenapa ia sesuai sangat untuk mak ayah? Jawapannya dalam video ni 🎬
+
+Tekan "Hantar Mesej" untuk detail 👇
+*RM20/bulan untuk 7 bulan pertama, kemudian RM59/bulan (harga asal RM104). Tertakluk kepada terma & syarat.
+```
+**Tajuk:** `Double Promo Coway Neo Plus`
+**Penerangan:** `7 bulan pertama RM20/bulan*`
+
+## Teaser 4 — Pendek untuk Reels/Stories
+```
+Hadiah untuk mak ayah yang ramai terlepas pandang 🎁
+Tonton sampai habis 👀 WhatsApp untuk detail.
+```
+**Tajuk:** `Hadiah Untuk Mak Ayah`
+
+## Teaser 5 — Ajak share
+```
+Tengok video ni, lepas tu share dalam group family. Ada sebab kenapa 😉
+
+Nak tahu lebih? WhatsApp kami 👇
+```
+**Tajuk:** `Share Dengan Adik-Beradik`
+**Penerangan:** `Tanya detail di WhatsApp`
+
+### Tajuk tambahan (tanpa spoiler, ≤40 aksara)
+- `Mak Ayah Mesti Suka Yang Ni`
+- `Dah Lama Nak Belikan Untuk Mak Ayah?`
+- `Tanya Detail Di WhatsApp`
+
+### Mesej WhatsApp diisi awal (neutral)
+```
+Hai, saya dah tengok video Coway Neo Plus. Nak tahu detail promo.
+```
+
+### Tip
+- Padankan teaser dengan **video penuh (2:51)**. Ceritanya perlukan penonton sampai habis, dan teaser memberi sebab untuk tonton.
+- Jangan letak senarai ciri atau harga dalam 125 aksara pertama teaser 1, 2, 4 & 5. Biar video yang mendedahkan.
+- Teaser 3 sebut harga, jadi kekalkan baris penjelasan (* RM59 selepas 7 bulan, T&C) supaya tak mengelirukan.
