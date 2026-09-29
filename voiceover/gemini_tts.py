@@ -89,7 +89,7 @@ if __name__ == "__main__":
                 i = j
             else:
                 i += 1
-        if best[1] - best[0] >= 80:     # jeda >= 0.8s: tanda arahan dibaca (3.1-preview biasanya tak baca)
+        if best[1] - best[0] >= 60:     # jeda >= 0.6s: tanda arahan dibaca (3.1-preview biasanya tak baca)
             cut = max(0, best[1] / 100 - 0.1)
     y = x[int(cut * sr):].copy()
     f = int(0.01 * sr)
