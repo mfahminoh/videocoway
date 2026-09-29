@@ -8,6 +8,7 @@ Check the result against the on-screen captions: product names and "beg biru" ar
 """
 import base64
 import json
+import os
 import pathlib
 import subprocess
 import sys
@@ -18,6 +19,9 @@ import urllib.request
 import imageio_ffmpeg
 
 HERE = pathlib.Path(__file__).parent
+# Key sendiri (cth. projek Google AI Studio berbayar) jika ditetapkan; jika tidak, proxy persekitaran menyuntik key.
+HEADERS = {"Content-Type": "application/json", **({"x-goog-api-key": os.environ["GEMINI_API_KEY"]} if os.environ.get("GEMINI_API_KEY") else {})}
+
 MODELS = ["gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-lite-latest"]
 PROMPT = """Ini audio video TikTok/Reels Bahasa Melayu tentang penapis air Coway. Pulangkan JSON sahaja:
 {"ringkasan": "1-2 ayat", "penutur": "lelaki/perempuan, atas kamera/voiceover, gaya & nada",
@@ -42,7 +46,7 @@ def transcribe(mp3):
     for i in range(12):
         m = MODELS[i % len(MODELS)]
         req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
-                                     data=body, headers={"Content-Type": "application/json"})
+                                     data=body, headers=HEADERS)
         try:
             d = json.load(urllib.request.urlopen(req, timeout=300))
             r = json.loads(d["candidates"][0]["content"]["parts"][0]["text"])

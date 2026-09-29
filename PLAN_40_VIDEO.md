@@ -69,7 +69,7 @@ Lajur: **Kat** = Cerita / Edukasi / Produk · **Gaya** = kod §3 · **Suara** = 
 | V02 | Cerita | B | 40 | "Kenapa Villaem 3 lagi mahal dari model lain?" | Chat customer ragu → agent: beli sekali pakai lama, tangki terbesar, jarang rosak → customer: "ok, nak slot pemasangan" | Aoede |
 | V03 | Edukasi | D | 38 | "Air dalam tangki penapis boleh basi ke?" | Bakteria dalam tangki tertutup → lampu UV menyala → 99.9% bakteria dihapuskan → Villaem 3 buat ini automatik | Kore |
 | V04 | Produk | G | 35 | "11.4 liter tu banyak mana sebenarnya?" | Botol 1.5L terisi satu-satu → ±7.6 botol → pecahan 6.1/2.6/2.7L → promo | Puck |
-| V05 | Produk | C | 40 | "Satu mesin, lapan suhu" *(ref R01)* | Panel LED 95/80/70 → 60/50/40 → isipadu 120ml–∞ → child lock 3s → 11.4L → harga (potong klip sendiri clip2/clip5) | Puck |
+| V05 | Produk | C | 40 | "Satu mesin, lapan suhu" *(ref R01, ✅ siap: out/V05_final.mp4)* | Panel LED 95/80/70 → 60/50/40 → isipadu 120ml–∞ → child lock 3s → 11.4L → harga (potong klip sendiri clip2/clip5) | Puck |
 | V06 | Cerita | I | 44 | "Sehari dalam rumah keluarga 6 orang" | 6:30 pagi air suam ubat · 1 petang air sejuk balik sekolah · 8 malam air panas maggi · tangki tak pernah kosong | Orus |
 | V07 | Edukasi | F | 38 | "Penapis besar = bil elektrik mahal?" | MITOS dipangkah → FAKTA: ECO Mode; + Dual Lock keselamatan anak → Villaem 3 | Kore |
 | V08 | Produk | E | 42 | "Villaem 3 atau Neo Plus — mana satu untuk rumah anda?" | Kiri NP 5.8L / kanan V3 11.4L; ahli keluarga ≤3 vs 4+; "pilih ikut rumah, bukan ikut harga" | Aoede |
@@ -119,7 +119,7 @@ Lajur: **Kat** = Cerita / Edukasi / Produk · **Gaya** = kod §3 · **Suara** = 
 | E01 | Cerita | A | 38 | "Siapa kata bajet kecil tak boleh cantik?" *(ref R04)* | Dapur pastel, penapis lama kelabu → Neon 5 warna → 3 suhu, < RM2 sehari → RM54 → RM27 | Aoede |
 | E02 | Produk | J | 35 | "Warna dapur anda yang mana?" | Pilih: Peach Pink / Mint Green / Ciel Blue / Pebble Gray / Porcelain White → "komen warna pilihan" | Puck |
 | E03 | Edukasi | H | 40 | "4 logam berat yang boleh ada dalam paip lama" | Merkuri · plumbum · besi · aluminium → Nanotrap Neon tapis → promo | Kore |
-| E04 | Produk | H | 40 | "3 sebab ramai pasang Coway Neon" *(ref R02)* | 1. kompak + 5 warna 2. pakej servis / self-service 3. harga RM54 → RM27 | Aoede |
+| E04 | Produk | H | 40 | "3 sebab ramai pasang Coway Neon" *(ref R02, ✅ siap: out/E04_final.mp4)* | 1. kompak + 5 warna 2. pakej servis / self-service 3. harga RM54 → RM27 | Orus |
 | E05 | Produk | E | 40 | "Servis sendiri atau technician datang?" *(ref R03)* | Kiri: pakej beserta servis / kanan: self-service → 4 langkah tukar filter → filter percuma tiap 8 bulan → RM54 | Orus |
 
 ### Coway umum (4)
