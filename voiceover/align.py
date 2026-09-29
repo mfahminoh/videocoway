@@ -4,13 +4,16 @@ Finds pauses in the recording, then picks one pause per line boundary with dynam
 programming so that each segment's speech length matches the line's text length and
 its internal pause count matches the line's punctuation.
 Output: voiceover/vo_segments_long.json  [{id, a, b}]  (seconds in the recording)
+
+    python voiceover/align.py [recording.wav] [lines.json] [out.json]
 """
 import json, pathlib, re, sys, wave
 import numpy as np
 
 HERE = pathlib.Path(__file__).parent
 src = sys.argv[1] if len(sys.argv) > 1 else str(HERE / "source" / "gemini_tts_long.wav")
-L = json.loads((HERE / "lines_long.json").read_text())
+L = json.loads(pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else HERE / "lines_long.json").read_text())
+OUT = pathlib.Path(sys.argv[3] if len(sys.argv) > 3 else HERE / "vo_segments_long.json")
 
 w = wave.open(src); sr = w.getframerate()
 x = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(float) / 32768
@@ -62,6 +65,7 @@ for k in range(K - 1, -1, -1):
     segs.append({"id": L[k]["id"], "a": round(a, 2), "b": round(ends[e], 2)})
     e = s
 segs.reverse()
-(HERE / "vo_segments_long.json").write_text(json.dumps(segs, indent=1))
+OUT.write_text(json.dumps(segs, indent=1))
 for sgm, l in zip(segs, L):
-    print(f"{sgm['id']} {sgm['a']:6.2f}-{sgm['b']:6.2f} ({sgm['b']-sgm['a']:5.2f}s, slot {l['end']-l['start']:5.2f}s)  {l['text'][:60]}")
+    slot = f", slot {l['end']-l['start']:5.2f}s" if "end" in l else ""
+    print(f"{sgm['id']} {sgm['a']:6.2f}-{sgm['b']:6.2f} ({sgm['b']-sgm['a']:5.2f}s{slot})  {l['text'][:60]}")

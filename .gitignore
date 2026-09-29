@@ -7,3 +7,5 @@ voiceover/clips_long/
 !out/villaem3_long_tanpa_vo.mp4
 reference/raw/*.mp3
 reference/*.mp4
+!out/V05_final.mp4
+videos/*/vo_raw.wav
