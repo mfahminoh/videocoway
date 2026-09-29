@@ -6,28 +6,28 @@
  },
  {
   "id": "02",
-  "text": "Harga bulanan, lima puluh empat ringgit.",
-  "cap": "Bulanan *RM54*."
+  "text": "Harga asal, seratus empat ringgit sebulan.",
+  "cap": "Harga asal *RM104* sebulan."
  },
  {
   "id": "03",
-  "text": "Bahagi tiga puluh hari, satu ringgit lapan puluh sen je.",
-  "cap": "÷ 30 hari = *RM1.80*."
+  "text": "Tapi promosi sekarang, lima puluh empat ringgit je.",
+  "cap": "Promosi sekarang *RM54* je."
  },
  {
   "id": "04",
-  "text": "Tapi sekarang ada diskaun lima puluh peratus, enam bulan pertama.",
-  "cap": "Diskaun *50%*, 6 bulan pertama."
+  "text": "Bahagi tiga puluh hari, satu ringgit lapan puluh sen sehari.",
+  "cap": "÷ 30 hari = *RM1.80* sehari."
  },
  {
   "id": "05",
-  "text": "Jadi, dua puluh tujuh ringgit sebulan.",
-  "cap": "Jadi *RM27* sebulan."
+  "text": "Tambah lagi rebat ulang tahun Coway, dua puluh ringgit, selama tujuh bulan.",
+  "cap": "+ Rebat ulang tahun *RM20 × 7 bulan*."
  },
  {
   "id": "06",
-  "text": "Sehari? Sembilan puluh sen. Bawah seringgit!",
-  "cap": "Sehari *90 sen*. *Bawah RM1!*"
+  "text": "Tujuh bulan pertama, bersamaan satu ringgit tiga belas sen sehari.",
+  "cap": "7 bulan pertama ≈ *RM1.13* sehari!"
  },
  {
   "id": "07",

@@ -165,8 +165,8 @@
    "type": "price",
    "in": "@10",
    "out": "@11",
-   "top": 560,
-   "label": "SELF-SERVICE DARI",
+   "top": 520,
+   "label": "SELF-SERVICE",
    "from": "RM54"
   },
   {

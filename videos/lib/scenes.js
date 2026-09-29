@@ -72,8 +72,8 @@ SP.els.forEach((e, i) => {
         <div id="${e.id}_l" style="font-size:60px; font-weight:700; letter-spacing:6px">${e.label || 'DARI'}</div>
         <div class="h1" id="${e.id}_f" style="font-size:230px"><span style="position:relative; display:inline-block">${e.from}<i id="${e.id}_s" style="position:absolute; left:-10px; right:-10px; top:48%; height:22px; background:var(--red); border-radius:11px; transform-origin:0 50%; transform:scaleX(0)"></i></span></div>
         <div id="${e.id}_u" style="font-size:56px; font-weight:600">${e.sub || 'sebulan'}</div>
-        <div id="${e.id}_b" style="margin-top:30px"><span class="pill" style="background:var(--yellow); color:var(--navy)">${e.badge || ''}</span></div>
-        <div class="h1" id="${e.id}_t" style="font-size:250px; color:var(--yellow); text-shadow:0 10px 40px rgba(0,0,0,.4)">${e.to || ''}</div></div>`; break;
+        <div class="h1" id="${e.id}_t" style="font-size:250px; color:var(--yellow); text-shadow:0 10px 40px rgba(0,0,0,.4)">${e.to || ''}</div>
+        <div id="${e.id}_b" style="margin-top:10px"><span class="pill" style="background:var(--yellow); color:var(--navy)">${e.badge || ''}</span></div></div>`; break;
     case 'delivery': h = `<div class="el" style="left:0; top:${e.top || 620}px; width:1080px; height:600px">
         <svg style="position:absolute; left:640px; top:20px" width="340" height="340" viewBox="0 0 340 340"><path d="M40 160 L170 50 L300 160" fill="none" stroke="#fff" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/><rect x="75" y="150" width="190" height="160" rx="16" fill="#fff"/><rect x="145" y="210" width="50" height="100" rx="8" fill="#0B4DA2"/></svg>
         <svg id="${e.id}_box" style="position:absolute; left:130px; top:100px" width="230" height="230" viewBox="0 0 64 64"><path d="M8 20 L32 8 L56 20 V46 L32 58 L8 46 Z" fill="#E8B27A" stroke="#8a5a2a" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 20 L32 32 L56 20 M32 32 V58" fill="none" stroke="#8a5a2a" stroke-width="2.5"/></svg>

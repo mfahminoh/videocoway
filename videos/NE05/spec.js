@@ -3,78 +3,78 @@ window.SPEC = {
   {
    "t0": 0.0,
    "bg": "night",
-   "t1": 2.68
+   "t1": 3.28
   },
   {
-   "t0": 2.68,
+   "t0": 3.28,
    "bg": {
     "clip": "bottles_busy",
     "c0": 0.0,
-    "c1": 3.0
+    "c1": 3.9
    },
-   "t1": 7.52
+   "t1": 8.91
   },
   {
-   "t0": 7.52,
+   "t0": 8.91,
    "bg": {
     "clip": "press_pour",
     "c0": 0.0,
     "c1": 3.0
    },
-   "t1": 11.01
+   "t1": 12.82
   },
   {
-   "t0": 11.01,
+   "t0": 12.82,
    "bg": {
     "image": "../../assets/img/neon/pink.jpg",
     "color": "pink",
     "top": 380,
     "h": 1080
    },
-   "t1": 14.27
+   "t1": 16.2
   },
   {
-   "t0": 14.27,
+   "t0": 16.2,
    "bg": {
     "clip": "press_pour",
     "c0": 3.0,
     "c1": 6.6
    },
-   "t1": 18.56
+   "t1": 20.58
   },
   {
-   "t0": 18.56,
+   "t0": 20.58,
    "bg": {
     "image": "../../assets/img/neon/pink.jpg",
     "color": "pink",
     "top": 380,
     "h": 1080
    },
-   "t1": 22.76
+   "t1": 24.97
   },
   {
-   "t0": 22.76,
+   "t0": 24.97,
    "bg": "navy",
-   "t1": 25.12
+   "t1": 27.3
   },
   {
-   "t0": 25.12,
+   "t0": 27.3,
    "bg": "pastel",
-   "t1": 27.88
+   "t1": 30.09
   },
   {
-   "t0": 27.88,
+   "t0": 30.09,
    "bg": {
     "clip": "bottle_to_baby",
-    "c0": 7.2,
+    "c0": 4.5,
     "c1": 10.0
    },
-   "t1": 31.13
+   "t1": 35.55
   },
   {
-   "t0": 31.13,
+   "t0": 35.55,
    "bg": "blue",
-   "t1": 36.27
+   "t1": 40.03
   }
  ],
  "els": [
@@ -83,8 +83,8 @@ window.SPEC = {
    "top": 560,
    "size": 260,
    "html": "03:00",
-   "t0": 0.21,
-   "t1": 2.68
+   "t0": 0.18,
+   "t1": 3.28
   },
   {
    "type": "text",
@@ -92,8 +92,8 @@ window.SPEC = {
    "size": 56,
    "weight": 700,
    "html": "Baby menangis... 😢",
-   "t0": 1.126,
-   "t1": 2.68
+   "t0": 1.32,
+   "t1": 3.28
   },
   {
    "type": "pill",
@@ -101,8 +101,8 @@ window.SPEC = {
    "html": "DEKAT & CEPAT",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 7.52,
-   "t1": 11.01
+   "t0": 8.91,
+   "t1": 12.82
   },
   {
    "type": "title",
@@ -111,8 +111,8 @@ window.SPEC = {
    "html": "COWAY <span style='color:#E86E5A'>NEON</span>",
    "color": "#0B2F6B",
    "shadow": false,
-   "t0": 11.01,
-   "t1": 14.27
+   "t0": 12.82,
+   "t1": 16.2
   },
   {
    "type": "pill",
@@ -120,8 +120,8 @@ window.SPEC = {
    "html": "TEKAN JE",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 14.27,
-   "t1": 16.23
+   "t0": 16.2,
+   "t1": 18.44
   },
   {
    "type": "chips",
@@ -131,23 +131,23 @@ window.SPEC = {
      "text": "PANAS",
      "color": "#ff7a6b",
      "at": "@07",
-     "t": 16.23
+     "t": 18.44
     },
     {
      "text": "SEJUK",
      "color": "#6cc2ff",
      "at": "@07%30",
-     "t": 16.833
+     "t": 19.028
     },
     {
      "text": "SUHU BILIK",
      "color": "#e9eef5",
      "at": "@07%60",
-     "t": 17.436
+     "t": 19.616
     }
    ],
-   "t0": 16.23,
-   "t1": 18.56
+   "t0": 18.44,
+   "t1": 20.58
   },
   {
    "type": "photo",
@@ -162,10 +162,10 @@ window.SPEC = {
    "zx": 74,
    "zy": 29,
    "zs": 2.6,
-   "t0": 18.56,
-   "t1": 22.76,
-   "zt0": 18.56,
-   "zt1": 20.319
+   "t0": 20.58,
+   "t1": 24.97,
+   "zt0": 20.58,
+   "zt1": 22.362
   },
   {
    "type": "pill",
@@ -173,8 +173,8 @@ window.SPEC = {
    "html": "250ml · BERHENTI SENDIRI",
    "bg": "#fff",
    "color": "var(--navy)",
-   "t0": 20.124,
-   "t1": 22.76
+   "t0": 22.164,
+   "t1": 24.97
   },
   {
    "type": "card",
@@ -182,8 +182,8 @@ window.SPEC = {
    "icon": "filter",
    "title": "PENAPIS NANOTRAP",
    "sub": "Teknologi penapisan Coway",
-   "t0": 22.76,
-   "t1": 25.12
+   "t0": 24.97,
+   "t1": 27.3
   },
   {
    "type": "card",
@@ -193,17 +193,17 @@ window.SPEC = {
    "iccolor": "#E86E5A",
    "title": "SUHU AIR SUSU?",
    "sub": "Ikut nasihat doktor / pakar kanak-kanak",
-   "t0": 25.12,
-   "t1": 27.88
+   "t0": 27.3,
+   "t1": 30.09
   },
   {
    "type": "pill",
    "top": 270,
-   "html": "DARI RM27/BULAN*",
+   "html": "PROMOSI RM54 + REBAT RM20 × 7 BULAN*",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 27.88,
-   "t1": 31.13
+   "t0": 30.09,
+   "t1": 35.55
   },
   {
    "type": "photo",
@@ -212,27 +212,27 @@ window.SPEC = {
    "w": 420,
    "h": 420,
    "src": "../../assets/img/neon/pink.jpg",
-   "t0": 31.13,
+   "t0": 35.55,
    "t1": null
   },
   {
    "type": "cta",
    "top": 720,
    "ticks": [
-    "PENGHANTARAN PERCUMA",
-    "PEMASANGAN PERCUMA",
-    "DARI RM27 SEBULAN*"
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway.",
-   "t0": 31.13,
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "t0": 35.55,
    "t1": null
   }
  ],
  "clips": {
   "bottles_busy": {
    "dir": "../../out/frames/NE05_bottles_busy/",
-   "n": 94,
+   "n": 120,
    "start": 0.0
   },
   "press_pour": {
@@ -242,8 +242,8 @@ window.SPEC = {
   },
   "bottle_to_baby": {
    "dir": "../../out/frames/NE05_bottle_to_baby/",
-   "n": 84,
-   "start": 7.2
+   "n": 165,
+   "start": 4.5
   }
  }
 };

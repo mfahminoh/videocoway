@@ -1,5 +1,5 @@
 {
- "slug": "bawah-rm1-sehari",
+ "slug": "kos-sehari-coway-neon",
  "voice": "Orus",
  "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
  "scenes": [
@@ -8,11 +8,15 @@
    "bg": "navy"
   },
   {
-   "at": "@04",
+   "at": "@02",
    "bg": "blue"
   },
   {
-   "at": "@06",
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
    "bg": "navy"
   },
   {
@@ -56,37 +60,38 @@
    "src": "../../assets/img/neon/pink.jpg"
   },
   {
-   "type": "title",
+   "type": "price",
    "in": "@02",
    "out": "@04",
-   "top": 380,
-   "size": 70,
-   "html": "BULANAN"
+   "top": 420,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "strikeAt": "@03",
+   "to": "RM54",
+   "toAt": "@03%25"
   },
   {
-   "type": "counter",
-   "in": "@02",
-   "out": "@03",
-   "top": 470,
-   "from": 0,
-   "to": 54,
-   "prefix": "RM",
-   "dur": 0.7
+   "type": "title",
+   "in": "@04",
+   "out": "@07",
+   "top": 300,
+   "size": 80,
+   "html": "SEHARI"
   },
   {
    "type": "text",
-   "in": "@03",
-   "out": "@04",
-   "top": 760,
-   "size": 60,
-   "weight": 800,
-   "html": "÷ 30 hari"
+   "in": "@04",
+   "out": "@05",
+   "top": 400,
+   "size": 50,
+   "weight": 700,
+   "html": "RM54 ÷ 30 hari"
   },
   {
    "type": "counter",
-   "in": "@03%30",
-   "out": "@04",
-   "top": 860,
+   "in": "@04%20",
+   "out": "@07",
+   "top": 480,
    "from": 54,
    "to": 1.8,
    "prefix": "RM",
@@ -95,43 +100,33 @@
    "color": "#fff"
   },
   {
-   "type": "price",
-   "in": "@04",
-   "out": "@06",
-   "top": 420,
-   "label": "DARI",
-   "from": "RM54",
-   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
-   "badgeAt": "@04%30",
-   "strikeAt": "@05",
-   "to": "RM27",
-   "toAt": "@05%30"
+   "type": "pill",
+   "in": "@05",
+   "out": "@07",
+   "top": 790,
+   "html": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
   },
   {
-   "type": "title",
+   "type": "text",
    "in": "@06",
    "out": "@07",
-   "top": 380,
-   "size": 80,
-   "html": "SEHARI"
+   "top": 900,
+   "size": 50,
+   "weight": 700,
+   "html": "7 bulan pertama: (RM54 − RM20) ÷ 30"
   },
   {
    "type": "counter",
-   "in": "@06",
+   "in": "@06%20",
    "out": "@07",
-   "top": 480,
+   "top": 980,
    "from": 1.8,
-   "to": 0.9,
+   "to": 1.13,
    "prefix": "RM",
    "decimals": 2,
    "dur": 0.8
-  },
-  {
-   "type": "stamp",
-   "in": "@06%60",
-   "out": "@07",
-   "top": 820,
-   "html": "BAWAH RM1!"
   },
   {
    "type": "icon",
@@ -197,11 +192,12 @@
    "in": "@10",
    "top": 720,
    "ticks": [
-    "RM27/BULAN* = RM0.90 SEHARI",
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
     "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
    "btnAt": "@10%60"
   }
  ]

@@ -3,10 +3,10 @@ window.SPEC = {
   {
    "t0": 0.0,
    "bg": "pastel",
-   "t1": 4.26
+   "t1": 3.9
   },
   {
-   "t0": 4.26,
+   "t0": 3.9,
    "bg": {
     "image": "../../assets/img/neon/podium5.jpg",
     "color": "pastel",
@@ -14,55 +14,55 @@ window.SPEC = {
     "h": 1080,
     "mask": true
    },
-   "t1": 6.09
+   "t1": 5.25
   },
   {
-   "t0": 6.09,
+   "t0": 5.25,
    "bg": "pastel",
-   "t1": 12.45
+   "t1": 9.93
   },
   {
-   "t0": 12.45,
+   "t0": 9.93,
    "bg": {
     "clip": "presenter",
     "c0": 6.4,
     "c1": 9.6
    },
-   "t1": 15.02
+   "t1": 13.0
   },
   {
-   "t0": 15.02,
+   "t0": 13.0,
    "bg": {
     "clip": "press_pour",
     "c0": 3.0,
     "c1": 6.6
    },
-   "t1": 18.28
+   "t1": 15.09
   },
   {
-   "t0": 18.28,
+   "t0": 15.09,
    "bg": "navy",
-   "t1": 20.8
+   "t1": 17.71
   },
   {
-   "t0": 20.8,
+   "t0": 17.71,
    "bg": "blue",
-   "t1": 27.43
+   "t1": 27.51
   },
   {
-   "t0": 27.43,
+   "t0": 27.51,
    "bg": {
     "image": "../../assets/img/neon/pink.jpg",
     "color": "pink",
     "top": 380,
     "h": 1080
    },
-   "t1": 29.91
+   "t1": 30.11
   },
   {
-   "t0": 29.91,
+   "t0": 30.11,
    "bg": "blue",
-   "t1": 34.69
+   "t1": 36.34
   }
  ],
  "els": [
@@ -73,8 +73,8 @@ window.SPEC = {
    "html": "BAJET KECIL",
    "color": "#0B2F6B",
    "shadow": false,
-   "t0": 0.29,
-   "t1": 4.26
+   "t0": 0.3,
+   "t1": 3.9
   },
   {
    "type": "title",
@@ -83,15 +83,15 @@ window.SPEC = {
    "html": "= TAK CANTIK?",
    "color": "#E86E5A",
    "shadow": false,
-   "t0": 1.996,
-   "t1": 4.26
+   "t0": 1.812,
+   "t1": 3.9
   },
   {
    "type": "stamp",
    "top": 960,
    "html": "SALAH!",
-   "t0": 3.88,
-   "t1": 4.26
+   "t0": 3.46,
+   "t1": 3.9
   },
   {
    "type": "title",
@@ -100,8 +100,8 @@ window.SPEC = {
    "html": "COWAY <span style='color:#E86E5A'>NEON</span>",
    "color": "#0B2F6B",
    "shadow": false,
-   "t0": 4.26,
-   "t1": 6.09
+   "t0": 3.9,
+   "t1": 5.25
   },
   {
    "type": "title",
@@ -110,8 +110,8 @@ window.SPEC = {
    "html": "<span style='color:#E86E5A'>5</span> WARNA",
    "color": "#0B2F6B",
    "shadow": false,
-   "t0": 6.09,
-   "t1": 12.45
+   "t0": 5.25,
+   "t1": 9.93
   },
   {
    "type": "lineup",
@@ -119,41 +119,41 @@ window.SPEC = {
     {
      "unit": "all",
      "zoom": 1,
-     "t": 6.09
+     "t": 5.25
     },
     {
      "unit": "pink",
      "zoom": 2.1,
-     "t": 7.44
+     "t": 6.0
     },
     {
      "unit": "mint",
      "zoom": 2.1,
-     "t": 8.459
+     "t": 6.684
     },
     {
      "unit": "ciel",
      "zoom": 2.1,
-     "t": 9.421
+     "t": 7.33
     },
     {
      "unit": "gray",
      "zoom": 2.1,
-     "t": 10.45
+     "t": 7.95
     },
     {
      "unit": "white",
      "zoom": 2.1,
-     "t": 11.237
+     "t": 8.769
     },
     {
      "unit": "all",
      "zoom": 1,
-     "t": 12.2
+     "t": 9.77
     }
    ],
-   "t0": 6.09,
-   "t1": 12.45
+   "t0": 5.25,
+   "t1": 9.93
   },
   {
    "type": "reason",
@@ -161,8 +161,8 @@ window.SPEC = {
    "num": "✓",
    "title": "KOMPAK",
    "sub": "ngam untuk dapur kecil",
-   "t0": 12.45,
-   "t1": 15.02
+   "t0": 9.93,
+   "t1": 13.0
   },
   {
    "type": "chips",
@@ -172,31 +172,31 @@ window.SPEC = {
      "text": "PANAS",
      "color": "#ff7a6b",
      "at": "@07",
-     "t": 15.02
+     "t": 13.0
     },
     {
      "text": "SEJUK",
      "color": "#6cc2ff",
      "at": "@07%25",
-     "t": 15.732
+     "t": 13.49
     },
     {
      "text": "SUHU BILIK",
      "color": "#e9eef5",
      "at": "@07%50",
-     "t": 16.445
+     "t": 13.98
     }
    ],
-   "t0": 15.02,
-   "t1": 18.28
+   "t0": 13.0,
+   "t1": 15.09
   },
   {
    "type": "title",
    "top": 520,
    "size": 80,
    "html": "KOS SEHARI",
-   "t0": 18.28,
-   "t1": 20.8
+   "t0": 15.09,
+   "t1": 17.71
   },
   {
    "type": "counter",
@@ -206,15 +206,15 @@ window.SPEC = {
    "prefix": "RM",
    "decimals": 2,
    "dur": 0.8,
-   "t0": 19.208,
-   "t1": 20.8
+   "t0": 16.082,
+   "t1": 17.71
   },
   {
    "type": "text",
    "top": 940,
    "html": "RM54 sebulan ÷ 30 hari",
-   "t0": 19.672,
-   "t1": 20.8
+   "t0": 16.578,
+   "t1": 17.71
   },
   {
    "type": "photo",
@@ -223,21 +223,21 @@ window.SPEC = {
    "w": 360,
    "h": 360,
    "src": "../../assets/img/neon/pink.jpg",
-   "t0": 20.8,
-   "t1": 27.43
+   "t0": 17.71,
+   "t1": 27.51
   },
   {
    "type": "price",
-   "top": 560,
-   "label": "DARI",
-   "from": "RM54",
-   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
-   "to": "RM27",
-   "t0": 20.8,
-   "t1": 27.43,
-   "badgeT": 22.193,
-   "strikeT": 24.89,
-   "toT": 25.709
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "to": "RM54",
+   "t0": 17.71,
+   "t1": 27.51,
+   "badgeT": 22.9,
+   "strikeT": 19.974,
+   "toT": 20.728
   },
   {
    "type": "title",
@@ -246,8 +246,8 @@ window.SPEC = {
    "html": "DAPUR <span style='color:#E86E5A'>CANTIK</span><br>AIR <span style='color:#2EA7E0'>BERSIH</span>",
    "color": "#0B2F6B",
    "shadow": false,
-   "t0": 27.43,
-   "t1": 29.91
+   "t0": 27.51,
+   "t1": 30.11
   },
   {
    "type": "photo",
@@ -256,22 +256,22 @@ window.SPEC = {
    "w": 420,
    "h": 420,
    "src": "../../assets/img/neon/pink.jpg",
-   "t0": 29.91,
+   "t0": 30.11,
    "t1": null
   },
   {
    "type": "cta",
    "top": 720,
    "ticks": [
-    "PENGHANTARAN PERCUMA",
-    "PEMASANGAN PERCUMA",
-    "SERENDAH RM27 SEBULAN*"
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway.",
-   "t0": 29.91,
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "t0": 30.11,
    "t1": null,
-   "btnT": 30.326
+   "btnT": 30.816
   }
  ],
  "clips": {

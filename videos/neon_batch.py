@@ -4,7 +4,8 @@
     python videos/build_video.py NE03 --tts --render
 
 Rujukan: R02-R05 (kreator TikTok, ditulis semula), R06 (thread RO vs mineral), aset klip & gambar Neon anda.
-Fakta yang perlu disahkan sebelum iklan berbayar: RM54 -> RM27 (50% x 6 bulan), tangki 1L/1.5L + direct flow (R05),
+Harga (disahkan pengguna 29/9): asal RM104/bulan, promosi RM54/bulan (jangan sebut %), + rebat ulang tahun Coway RM20 x 7 bulan.
+Fakta lain yang perlu disahkan: tangki 1L/1.5L + direct flow (R05),
 filter self-service setiap 8 bulan (R02/R03), dakwaan Nanotrap (laman Coway Neon).
 """
 import json
@@ -15,7 +16,7 @@ FEM = "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTo
 MALE = "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling"
 IMG = "../../assets/img/neon/"
 NAVY, CORAL, SKY = "#0B2F6B", "#E86E5A", "#2EA7E0"
-FINE = "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway."
+FINE = "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
 
 
 def L(*rows):
@@ -27,10 +28,11 @@ def title(at, out, html, top=240, size=110, dark=False, **kw):
             **({"color": NAVY, "shadow": False} if dark else {}), **kw}
 
 
-def price(at, out, strike=None, to_at=None, badge_at=None, top=560, label="DARI", frm="RM54", to="RM27"):
+def price(at, out, strike=None, to_at=None, badge_at=None, top=520, label="HARGA ASAL", frm="RM104", to="RM54"):
+    """HARGA ASAL RM104 (dipangkah) -> RM54 -> lencana rebat ulang tahun."""
     e = {"type": "price", "in": at, "out": out, "top": top, "label": label, "from": frm}
     if badge_at:
-        e.update(badge="DISKAUN 50% · 6 BULAN PERTAMA", badgeAt=badge_at)
+        e.update(badge="+ REBAT ULANG TAHUN RM20 × 7 BULAN", badgeAt=badge_at)
     if strike:
         e.update(strikeAt=strike, to=to, toAt=to_at)
     return e
@@ -82,8 +84,8 @@ V["NE01"] = dict(slug="bajet-kecil-tak-boleh-cantik", voice="Aoede", style=FEM, 
     ("Saiz kompak, ngam untuk dapur kecil.", "Saiz *kompak*, ngam dapur kecil."),
     ("Panas, sejuk, suhu bilik, semua ada.", "*Panas*, *sejuk*, *suhu bilik*, semua ada."),
     ("Kos sehari? Tak sampai dua ringgit.", "Kos sehari? *Bawah RM2.*"),
-    ("Order sekarang, dapat diskaun lima puluh peratus, enam bulan pertama.", "Order sekarang, diskaun *50%*, 6 bulan pertama."),
-    ("Jadi serendah dua puluh tujuh ringgit sebulan.", "Serendah *RM27* sebulan."),
+    ("Harga asal seratus empat ringgit, promosi sekarang lima puluh empat ringgit je.", "Harga asal *RM104*, promosi *RM54* je."),
+    ("Tambah lagi rebat ulang tahun Coway, dua puluh ringgit, selama tujuh bulan.", "+ Rebat ulang tahun *RM20 × 7 bulan*."),
     ("Dapur cantik, air pun bersih.", "Dapur *cantik*, air pun *bersih*."),
     ("WhatsApp saya, saya uruskan sampai siap pasang.", "*WhatsApp* saya, saya uruskan sampai *siap pasang*.")),
   scenes=[(0, "pastel"), ("@02", PODIUM), ("@03", "pastel"), ("@06", PRES_C), ("@07", POUR), ("@08", "navy"),
@@ -100,10 +102,10 @@ V["NE01"] = dict(slug="bajet-kecil-tak-boleh-cantik", voice="Aoede", style=FEM, 
        {"type": "counter", "in": "@08%40", "out": "@09", "top": 660, "from": 0, "to": 1.8, "prefix": "RM", "decimals": 2, "dur": .8},
        {"type": "text", "in": "@08%60", "out": "@09", "top": 940, "html": "RM54 sebulan ÷ 30 hari"},
        photo("@09", "@11"),
-       price("@09", "@11", strike="@10", to_at="@10%35", badge_at="@09%35"),
+       price("@09", "@11", strike="@09%45", to_at="@09%60", badge_at="@10"),
        title("@11", "@12", f"DAPUR <span style='color:{CORAL}'>CANTIK</span><br>AIR <span style='color:{SKY}'>BERSIH</span>", top=170, size=96, dark=True),
        photo("@12", None, top=200, size=420),
-       cta("@12", ["PENGHANTARAN PERCUMA", "PEMASANGAN PERCUMA", "SERENDAH RM27 SEBULAN*"], btn_at="@12%20")])
+       cta("@12", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"], btn_at="@12%20")])
 
 # ---------------------------------------------------------------- NE02 (R05)
 V["NE02"] = dict(slug="baru-kahwin-rumah-pertama", voice="Aoede", style=FEM, lines=L(
@@ -116,8 +118,8 @@ V["NE02"] = dict(slug="baru-kahwin-rumah-pertama", voice="Aoede", style=FEM, lin
     ("Cukup untuk berdua, sampai anak pertama.", "Cukup untuk *berdua*, sampai *anak pertama*."),
     ("Saiz kompak, cantik di dapur rumah sewa.", "Saiz *kompak*, cantik di dapur."),
     ("Pilih warna ikut tema rumah, ada lima.", "Pilih warna ikut tema, ada *5*."),
-    ("Dari lima puluh empat ringgit sebulan,", "Dari *RM54* sebulan,"),
-    ("dan sekarang diskaun lima puluh peratus, enam bulan pertama.", "diskaun *50%*, 6 bulan pertama."),
+    ("Harga asal seratus empat ringgit, promosi lima puluh empat ringgit sebulan,", "Harga asal *RM104*, promosi *RM54*,"),
+    ("Dan tambah lagi rebat ulang tahun, dua puluh ringgit, selama tujuh bulan.", "+ rebat ulang tahun Coway *RM20 × 7 bulan*."),
     ("WhatsApp saya, penghantaran dan pemasangan percuma.", "*WhatsApp* saya, pemasangan *percuma*.")),
   scenes=[(0, "pastel"), ("@03", PODIUM), ("@04", {"clip": "press_pour", "c0": 3.0, "c1": 5.3}), ("@05", "navy"), ("@07", COT), ("@08", PRES_C), ("@09", "pastel"),
           ("@10", "blue"), ("@12", "blue")],
@@ -136,9 +138,9 @@ V["NE02"] = dict(slug="baru-kahwin-rumah-pertama", voice="Aoede", style=FEM, lin
        title("@09", "@10", f"<span style='color:{CORAL}'>5</span> WARNA", size=120, dark=True),
        lineup("@09", "@10", [("@09", "all"), ("@09%35", "pink"), ("@09%70", "mint"), ("@09e", "all")]),
        photo("@10", "@12", src="mint.jpg"),
-       price("@10", "@12", strike="@11%45", to_at="@11%65", badge_at="@11"),
+       price("@10", "@12", strike="@10%45", to_at="@10%60", badge_at="@11"),
        photo("@12", None, src="mint.jpg", top=200, size=420),
-       cta("@12", ["PENGHANTARAN PERCUMA", "PEMASANGAN PERCUMA", "5 PILIHAN WARNA"])])
+       cta("@12", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"])])
 
 # ---------------------------------------------------------------- NE03 (R03)
 V["NE03"] = dict(slug="pakej-self-service", voice="Orus", style=MALE, lines=L(
@@ -168,39 +170,38 @@ V["NE03"] = dict(slug="pakej-self-service", voice="Orus", style=MALE, lines=L(
        {"type": "delivery", "in": "@09", "out": "@10", "top": 620},
        {"type": "stamp", "in": "@09%80", "out": "@10", "top": 1250, "html": "PERCUMA"},
        photo("@10", "@11", src="mint.jpg"),
-       price("@10", "@11", label="SELF-SERVICE DARI"),
+       price("@10", "@11", label="SELF-SERVICE", frm="RM54"),
        photo("@11", None, src="mint.jpg", top=200, size=420),
        cta("@11", ["PAKEJ SERVIS / SELF-SERVICE", "PENGHANTARAN PERCUMA", "PEMASANGAN PERCUMA"], fine="*Tertakluk pada terma &amp; promosi semasa Coway.")])
 
 # ---------------------------------------------------------------- NE04 (kos sehari)
-V["NE04"] = dict(slug="bawah-rm1-sehari", voice="Orus", style=MALE, lines=L(
+V["NE04"] = dict(slug="kos-sehari-coway-neon", voice="Orus", style=MALE, lines=L(
     ("Berapa sebenarnya kos pasang Coway Neon, sehari?", "Berapa kos Coway Neon *sehari?*"),
-    ("Harga bulanan, lima puluh empat ringgit.", "Bulanan *RM54*."),
-    ("Bahagi tiga puluh hari, satu ringgit lapan puluh sen je.", "÷ 30 hari = *RM1.80*."),
-    ("Tapi sekarang ada diskaun lima puluh peratus, enam bulan pertama.", "Diskaun *50%*, 6 bulan pertama."),
-    ("Jadi, dua puluh tujuh ringgit sebulan.", "Jadi *RM27* sebulan."),
-    ("Sehari? Sembilan puluh sen. Bawah seringgit!", "Sehari *90 sen*. *Bawah RM1!*"),
+    ("Harga asal, seratus empat ringgit sebulan.", "Harga asal *RM104* sebulan."),
+    ("Tapi promosi sekarang, lima puluh empat ringgit je.", "Promosi sekarang *RM54* je."),
+    ("Bahagi tiga puluh hari, satu ringgit lapan puluh sen sehari.", "÷ 30 hari = *RM1.80* sehari."),
+    ("Tambah lagi rebat ulang tahun Coway, dua puluh ringgit, selama tujuh bulan.", "+ Rebat ulang tahun *RM20 × 7 bulan*."),
+    ("Tujuh bulan pertama, bersamaan satu ringgit tiga belas sen sehari.", "7 bulan pertama ≈ *RM1.13* sehari!"),
     ("Lebih murah dari secawan teh tarik.", "Lebih murah dari *teh tarik*."),
     ("Untuk tu, you dapat air panas, sejuk, dan suhu bilik.", "*Panas*, *sejuk*, *suhu bilik*."),
     ("Ditapis dengan Nanotrap, pemasangan pun percuma.", "*Nanotrap*, pemasangan *percuma*."),
     ("Nak saya kirakan pakej yang sesuai? WhatsApp saya.", "Nak saya kirakan? *WhatsApp* saya.")),
-  scenes=[(0, "navy"), ("@04", "blue"), ("@06", "navy"), ("@08", POUR), ("@09", PRES_C), ("@10", "blue")],
+  scenes=[(0, "navy"), ("@02", "blue"), ("@04", "navy"), ("@07", "navy"), ("@08", POUR), ("@09", PRES_C), ("@10", "blue")],
   els=[title("@01", "@02", f"BERAPA<br><span style='color:var(--yellow)'>SEHARI?</span>", top=300, size=130),
        photo("@01%40", "@02", top=760, size=460),
-       title("@02", "@04", "BULANAN", top=380, size=70),
-       {"type": "counter", "in": "@02", "out": "@03", "top": 470, "from": 0, "to": 54, "prefix": "RM", "dur": .7},
-       {"type": "text", "in": "@03", "out": "@04", "top": 760, "size": 60, "weight": 800, "html": "÷ 30 hari"},
-       {"type": "counter", "in": "@03%30", "out": "@04", "top": 860, "from": 54, "to": 1.8, "prefix": "RM", "decimals": 2, "dur": .8, "color": "#fff"},
-       price("@04", "@06", strike="@05", to_at="@05%30", badge_at="@04%30", top=420),
-       title("@06", "@07", "SEHARI", top=380, size=80),
-       {"type": "counter", "in": "@06", "out": "@07", "top": 480, "from": 1.8, "to": .9, "prefix": "RM", "decimals": 2, "dur": .8},
-       {"type": "stamp", "in": "@06%60", "out": "@07", "top": 820, "html": "BAWAH RM1!"},
+       price("@02", "@04", strike="@03", to_at="@03%25", top=420),
+       title("@04", "@07", "SEHARI", top=300, size=80),
+       {"type": "text", "in": "@04", "out": "@05", "top": 400, "size": 50, "weight": 700, "html": "RM54 ÷ 30 hari"},
+       {"type": "counter", "in": "@04%20", "out": "@07", "top": 480, "from": 54, "to": 1.8, "prefix": "RM", "decimals": 2, "dur": .8, "color": "#fff"},
+       pill("@05", "@07", "+ REBAT ULANG TAHUN RM20 × 7 BULAN", top=790),
+       {"type": "text", "in": "@06", "out": "@07", "top": 900, "size": 50, "weight": 700, "html": "7 bulan pertama: (RM54 − RM20) ÷ 30"},
+       {"type": "counter", "in": "@06%20", "out": "@07", "top": 980, "from": 1.8, "to": 1.13, "prefix": "RM", "decimals": 2, "dur": .8},
        {"type": "icon", "in": "@07", "out": "@08", "top": 420, "icon": "cup", "size": 300, "color": "#fff"},
        title("@07", "@08", f"LEBIH MURAH DARI<br><span style='color:var(--yellow)'>SECAWAN TEH TARIK</span>", top=800, size=76),
        chips("@08", "@09", [("PANAS", "@08%30"), ("SEJUK", "@08%55"), ("SUHU BILIK", "@08%75")]),
        pill("@09", "@10", "NANOTRAP · PEMASANGAN PERCUMA", top=270),
        photo("@10", None, top=200, size=420),
-       cta("@10", ["RM27/BULAN* = RM0.90 SEHARI", "PEMASANGAN PERCUMA"], btn_at="@10%60")])
+       cta("@10", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"], btn_at="@10%60")])
 
 # ---------------------------------------------------------------- NE05 (bayi, 3 pagi)
 V["NE05"] = dict(slug="pukul-3-pagi-bancuh-susu", voice="Aoede", style=FEM, lines=L(
@@ -214,10 +215,10 @@ V["NE05"] = dict(slug="pukul-3-pagi-bancuh-susu", voice="Aoede", style=FEM, line
     ("Nak cepat, pilih dua ratus lima puluh mililiter, dia berhenti sendiri.", "Pilih *250ml*, berhenti *sendiri*."),
     ("Air ditapis dengan penapis Nanotrap.", "Ditapis *Nanotrap*."),
     ("Untuk suhu air susu, ikut nasihat doktor ya.", "Suhu air susu? *Ikut nasihat doktor.*"),
-    ("Dari dua puluh tujuh ringgit sebulan, untuk enam bulan pertama.", "Dari *RM27* sebulan*."),
+    ("Promosi lima puluh empat ringgit sebulan, tambah rebat dua puluh ringgit, tujuh bulan.", "Promosi *RM54*, + rebat *RM20 × 7 bulan*."),
     ("WhatsApp saya, saya uruskan sampai siap pasang.", "*WhatsApp* saya, saya uruskan sampai *siap pasang*.")),
-  scenes=[(0, "night"), ("@02", BUSY), ("@04", PREP), ("@05", PINKBG), ("@06", POUR), ("@08", PINKBG), ("@09", "navy"),
-          ("@10", "pastel"), ("@11", COT), ("@12", "blue")],
+  scenes=[(0, "night"), ("@02", {"clip": "bottles_busy", "c0": 0.0, "c1": 3.9}), ("@04", PREP), ("@05", PINKBG), ("@06", POUR), ("@08", PINKBG), ("@09", "navy"),
+          ("@10", "pastel"), ("@11", {"clip": "bottle_to_baby", "c0": 4.5, "c1": 10.0}), ("@12", "blue")],
   els=[title("@01", "@02", "03:00", top=560, size=260),
        {"type": "text", "in": "@01%40", "out": "@02", "top": 880, "size": 56, "weight": 700, "html": "Baby menangis... 😢"},
        pill("@04", "@05", "DEKAT & CEPAT", top=270),
@@ -229,9 +230,9 @@ V["NE05"] = dict(slug="pukul-3-pagi-bancuh-susu", voice="Aoede", style=FEM, line
        pill("@08%40", "@09", "250ml · BERHENTI SENDIRI", top=250, bg="#fff"),
        {"type": "card", "in": "@09", "out": "@10", "top": 760, "icon": "filter", "title": "PENAPIS NANOTRAP", "sub": "Teknologi penapisan Coway"},
        {"type": "card", "in": "@10", "out": "@11", "top": 760, "icon": "baby", "icbg": "#fde8e4", "iccolor": CORAL, "title": "SUHU AIR SUSU?", "sub": "Ikut nasihat doktor / pakar kanak-kanak"},
-       pill("@11", "@12", "DARI RM27/BULAN*", top=270),
+       pill("@11", "@12", "PROMOSI RM54 + REBAT RM20 × 7 BULAN*", top=270),
        photo("@12", None, top=200, size=420),
-       cta("@12", ["PENGHANTARAN PERCUMA", "PEMASANGAN PERCUMA", "DARI RM27 SEBULAN*"])])
+       cta("@12", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"])])
 
 # ---------------------------------------------------------------- NE06 (R06 RO vs Nanotrap)
 V["NE06"] = dict(slug="coway-semua-ro-ke", voice="Aoede", style=FEM, lines=L(
@@ -274,7 +275,7 @@ V["NE07"] = dict(slug="kuiz-warna-dapur", voice="Aoede", style=FEM, lines=L(
     ("Peach pink, mint green, ciel blue, pebble gray, porcelain white.", "*5 warna* Coway Neon."),
     ("Kompak, dan ada tiga suhu. Panas, sejuk, suhu bilik.", "*Kompak*, *3 suhu*."),
     ("Komen huruf pilihan you kat bawah!", "*Komen* huruf pilihan you!"),
-    ("Nak pasang warna tu? WhatsApp saya, dari dua puluh tujuh ringgit sebulan.", "*WhatsApp* saya, dari *RM27* sebulan*.")),
+    ("Nak pasang warna tu? WhatsApp saya. Promosi lima puluh empat ringgit sebulan, tambah rebat ulang tahun.", "*WhatsApp* saya. Promosi *RM54* + *rebat*!")),
   scenes=[(0, "pastel"), ("@08", "pastel"), ("@09", PRES_C), ("@10", PODIUM), ("@11", "blue")],
   els=[title("@01", "@08", f"KUIZ <span style='color:{CORAL}'>10 SAAT</span>", top=200, size=110, dark=True),
        pill("@01%50", "@08", "DAPUR ANDA WARNA APA?", top=350, bg=NAVY, color="#fff"),
@@ -288,7 +289,7 @@ V["NE07"] = dict(slug="kuiz-warna-dapur", voice="Aoede", style=FEM, lines=L(
        chips("@09", "@10", [("KOMPAK", "@09"), ("3 SUHU", "@09%40")]),
        title("@10", "@11", f"KOMEN<br><span style='color:{CORAL}'>A · B · C · D · E</span>", top=180, size=100, dark=True),
        photo("@11", None, top=200, size=420),
-       cta("@11", ["5 PILIHAN WARNA", "PEMASANGAN PERCUMA", "DARI RM27 SEBULAN*"])])
+       cta("@11", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "5 PILIHAN WARNA"])])
 
 # ---------------------------------------------------------------- NE08 (logam berat)
 V["NE08"] = dict(slug="logam-berat-paip-lama", voice="Orus", style=MALE, lines=L(
@@ -301,10 +302,10 @@ V["NE08"] = dict(slug="logam-berat-paip-lama", voice="Orus", style=MALE, lines=L
     ("Coway Neon guna penapis Nanotrap.", "Neon guna *Nanotrap*."),
     ("Ia bantu tapis logam berat ni, termasuk bakteria dan virus.", "Tapis *logam berat*, *bakteria* & *virus*."),
     ("Air bersih, terus dari dapur you.", "Air *bersih*, terus dari dapur."),
-    ("Dari dua puluh tujuh ringgit sebulan, untuk enam bulan pertama.", "Dari *RM27* sebulan*."),
+    ("Harga asal seratus empat, promosi lima puluh empat ringgit, tambah rebat dua puluh ringgit, tujuh bulan.", "Asal *RM104*, promosi *RM54*, + rebat *RM20 × 7 bulan*."),
     ("WhatsApp saya, pemasangan percuma.", "*WhatsApp* saya, pemasangan *percuma*."),
     ("Jom, pastikan air untuk keluarga you betul-betul bersih.", "Pastikan air keluarga *bersih*.")),
-  scenes=[(0, "dark"), ("@03", "dark"), ("@07", PODIUM), ("@08", "navy"), ("@09", POUR), ("@10", "blue"), ("@11", "blue")],
+  scenes=[(0, "dark"), ("@03", "dark"), ("@07", PODIUM), ("@08", "navy"), ("@09", {"clip": "press_pour", "c0": 3.0, "c1": 5.2}), ("@10", "blue"), ("@11", "blue")],
   els=[{"type": "icon", "in": "@01", "out": "@03", "top": 360, "icon": "pipe", "size": 300, "color": "#9aa6b8"},
        title("@01", "@03", f"PAIP <span style='color:var(--yellow)'>LAMA?</span>", top=760, size=130),
        {"type": "text", "in": "@02", "out": "@03", "top": 960, "size": 50, "html": "Air boleh bawa <b style='color:var(--yellow)'>logam berat</b>"},
@@ -317,9 +318,9 @@ V["NE08"] = dict(slug="logam-berat-paip-lama", voice="Orus", style=MALE, lines=L
        chips("@08", "@09", [("LOGAM BERAT", "@08%25"), ("BAKTERIA", "@08%55"), ("VIRUS", "@08%75")], top=700),
        pill("@09", "@10", "AIR BERSIH DARI DAPUR", top=270),
        photo("@10", "@11"),
-       price("@10", "@11", strike="@10%40", to_at="@10%55", badge_at="@10%15"),
+       price("@10", "@11", strike="@10%30", to_at="@10%45", badge_at="@10%72"),
        photo("@11", None, top=200, size=420),
-       cta("@11", ["PENAPISAN NANOTRAP", "PEMASANGAN PERCUMA"])])
+       cta("@11", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"])])
 
 # ---------------------------------------------------------------- NE09 (3 tanda)
 V["NE09"] = dict(slug="3-tanda-neon-sesuai", voice="Orus", style=MALE, lines=L(
@@ -331,7 +332,7 @@ V["NE09"] = dict(slug="3-tanda-neon-sesuai", voice="Orus", style=MALE, lines=L(
     ("Tiga, ada budak kecil di rumah.", "*3.* Ada *budak kecil*."),
     ("Air panas ada kunci, tekan tiga saat.", "Air panas *berkunci*, tekan *3 saat*."),
     ("Bonus, lima warna, pilih yang ngam dengan dapur.", "*Bonus:* *5 warna*!"),
-    ("Dari dua puluh tujuh ringgit sebulan, enam bulan pertama.", "Dari *RM27* sebulan*."),
+    ("Harga asal seratus empat, promosi lima puluh empat ringgit, tambah rebat dua puluh ringgit, tujuh bulan.", "Asal *RM104*, promosi *RM54*, + rebat *RM20 × 7 bulan*."),
     ("WhatsApp saya, penghantaran dan pemasangan percuma.", "*WhatsApp* saya, pasang *percuma*."),
     ("Jom, pilih warna you sekarang.", "Jom, pilih *warna* you!")),
   scenes=[(0, "navy"), ("@02", PRES_C), ("@04", BUSY), ("@05", "navy"), ("@06", PINKBG), ("@08", "pastel"), ("@09", "blue"), ("@10", "blue")],
@@ -348,9 +349,9 @@ V["NE09"] = dict(slug="3-tanda-neon-sesuai", voice="Orus", style=MALE, lines=L(
        title("@08", "@09", f"BONUS: <span style='color:{CORAL}'>5 WARNA</span>", size=100, dark=True),
        lineup("@08", "@09", [("@08", "all"), ("@08%35", "mint"), ("@08%65", "ciel"), ("@08e", "all")]),
        photo("@09", "@10"),
-       price("@09", "@10", strike="@09%35", to_at="@09%50", badge_at="@09%10"),
+       price("@09", "@10", strike="@09%30", to_at="@09%45", badge_at="@09%72"),
        photo("@10", None, top=200, size=420),
-       cta("@10", ["PENGHANTARAN PERCUMA", "PEMASANGAN PERCUMA", "DARI RM27 SEBULAN*"])])
+       cta("@10", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"])])
 
 # ---------------------------------------------------------------- NE10 (proses pasang)
 V["NE10"] = dict(slug="proses-pasang-4-langkah", voice="Orus", style=MALE, lines=L(
@@ -361,8 +362,8 @@ V["NE10"] = dict(slug="proses-pasang-4-langkah", voice="Orus", style=MALE, lines
     ("Langkah empat, technician datang pasang, percuma.", "*4.* Technician pasang, *percuma*."),
     ("Lepas tu, terus guna. Panas, sejuk, suhu bilik.", "Terus guna: *panas*, *sejuk*, *suhu bilik*."),
     ("Kalau ambil self-service, filter baru dihantar setiap lapan bulan.", "Self-service: filter tiap *8 bulan*."),
-    ("Harga dari lima puluh empat ringgit,", "Dari *RM54*,"),
-    ("dan sekarang diskaun lima puluh peratus, enam bulan pertama.", "diskaun *50%*, 6 bulan pertama."),
+    ("Harga asal seratus empat ringgit, tapi promosi sekarang lima puluh empat ringgit je,", "Harga asal *RM104*, promosi *RM54*,"),
+    ("dan tambah rebat ulang tahun Coway, dua puluh ringgit, selama tujuh bulan.", "+ rebat ulang tahun *RM20 × 7 bulan*."),
     ("Jom, tekan WhatsApp sekarang.", "Jom, tekan *WhatsApp*!")),
   scenes=[(0, "navy"), ("@02", "navy"), ("@03", "pastel"), ("@04", "navy"), ("@05", PRES_C), ("@06", POUR), ("@07", "navy"),
           ("@08", "blue"), ("@10", "blue")],
@@ -380,9 +381,48 @@ V["NE10"] = dict(slug="proses-pasang-4-langkah", voice="Orus", style=MALE, lines
        title("@07", "@08", f"SELF-SERVICE:<br>FILTER TIAP <span style='color:var(--yellow)'>8 BULAN</span>", top=250, size=80),
        {"type": "delivery", "in": "@07", "out": "@08", "top": 620},
        photo("@08", "@10"),
-       price("@08", "@10", strike="@09%45", to_at="@09%65", badge_at="@09"),
+       price("@08", "@10", strike="@08%45", to_at="@08%60", badge_at="@09"),
        photo("@10", None, top=200, size=420),
-       cta("@10", ["PENGHANTARAN PERCUMA", "PEMASANGAN PERCUMA", "DARI RM27 SEBULAN*"], btn_at="@10%30")])
+       cta("@10", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"], btn_at="@10%30")])
+
+# ---------------------------------------------------------------- E04 (R02, versi template; ganti videos/E04 asal)
+V["E04"] = dict(slug="3-sebab-ramai-pasang", voice="Orus", style=MALE, lines=L(
+    ("Kenapa ramai sangat pasang Coway Neon sekarang?", "Kenapa ramai pasang *Coway Neon*?"),
+    ("Tiga sebab.", "*3 sebab.*"),
+    ("Satu, saiz dia kompak, tak makan ruang dapur.", "*1.* Saiz *kompak*, tak makan ruang dapur."),
+    ("Dan ada lima warna.", "Ada *5 warna*."),
+    ("Pink, mint, biru, kelabu, dan putih.", "*Pink*, *mint*, *biru*, *kelabu* & *putih*."),
+    ("Dua, pakej ikut gaya hidup.", "*2.* Pakej ikut *gaya hidup*."),
+    ("Nak technician datang servis? Boleh.", "Nak *technician* datang? *Boleh.*"),
+    ("Selalu sibuk? Ambil pakej self-service.", "Selalu *sibuk?* Ambil *self-service*."),
+    ("Filter baru dihantar setiap lapan bulan, percuma.", "Filter baru setiap *8 bulan*, *percuma*."),
+    ("Tiga, harga.", "*3.* *Harga.*"),
+    ("Panas, sejuk, suhu bilik, semua ada.", "*Panas*, *sejuk*, *suhu bilik*."),
+    ("Harga asal seratus empat ringgit, promosi sekarang lima puluh empat ringgit je.", "Harga asal *RM104*, promosi *RM54* je."),
+    ("Tambah rebat ulang tahun Coway, dua puluh ringgit, tujuh bulan.", "+ Rebat ulang tahun *RM20 × 7 bulan*."),
+    ("Nak pasang? Tekan WhatsApp, penghantaran dan pemasangan percuma.", "*WhatsApp* saya, pasang *percuma*.")),
+  scenes=[(0, PRES_W), ("@02", {"clip": "presenter", "c0": 6.4, "c1": 8.0}), ("@03", PREP), ("@04", PODIUM), ("@05", "pastel"),
+          ("@06", "navy"), ("@08", BUSY), ("@09", "navy"), ("@10", "navy"), ("@11", POUR), ("@12", "blue"), ("@14", COT), ("@14e", "blue")],
+  els=[{"type": "banner", "in": "@01", "out": "@02", "top": 230, "html": "KENAPA RAMAI PASANG<br><em>COWAY NEON?</em>"},
+       title("@02", "@03", "3 SEBAB", top=760, size=200, color="var(--yellow)"),
+       {"type": "reason", "in": "@03", "out": "@04", "top": 250, "num": "1", "title": "KOMPAK", "sub": "tak makan ruang dapur"},
+       title("@04", "@06", f"<span style='color:{CORAL}'>5</span> WARNA", size=120, dark=True),
+       lineup("@05", "@06", [("@05", "pink"), ("@05%20", "mint"), ("@05%40", "ciel"), ("@05%60", "gray"), ("@05%80", "white"), ("@05e", "all")]),
+       {"type": "reason", "in": "@06", "out": "@08", "top": 330, "num": "2", "title": "PAKEJ IKUT<br>GAYA HIDUP"},
+       {"type": "card", "in": "@07", "out": "@08", "top": 760, "icon": "tech", "title": "BESERTA SERVIS", "sub": "Technician datang ke rumah"},
+       {"type": "stamp", "in": "@07%70", "out": "@08", "top": 1080, "html": "BOLEH ✓", "color": "#1faa59", "rot": -8},
+       title("@08", "@09", f"SELALU <span style='color:var(--yellow)'>SIBUK?</span>", top=260, size=120),
+       {"type": "card", "in": "@08%50", "out": "@09", "top": 1180, "icon": "box", "icbg": "#fff3cc", "iccolor": "#b07b00", "title": "SELF-SERVICE", "sub": "Tukar filter sendiri, bila-bila masa"},
+       title("@09", "@10", f"FILTER BARU<br>SETIAP <span style='color:var(--yellow)'>8 BULAN</span>", top=270, size=82),
+       {"type": "delivery", "in": "@09", "out": "@10", "top": 620},
+       {"type": "stamp", "in": "@09%80", "out": "@10", "top": 1250, "html": "PERCUMA"},
+       {"type": "reason", "in": "@10", "out": "@11", "top": 760, "num": "3", "title": "HARGA"},
+       chips("@11", "@12", [("PANAS", "@11"), ("SEJUK", "@11%30"), ("SUHU BILIK", "@11%55")]),
+       photo("@12", "@14"),
+       price("@12", "@14", strike="@12%45", to_at="@12%60", badge_at="@13"),
+       title("@14", "@14e", "NAK PASANG?", top=260, size=120),
+       photo("@14e", None, src="mint.jpg", top=200, size=420),
+       cta("@14", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"], btn_at="@14%40")])
 
 
 if __name__ == "__main__":

@@ -221,14 +221,14 @@
    "type": "price",
    "in": "@09",
    "out": "@11",
-   "top": 560,
-   "label": "DARI",
-   "from": "RM54",
-   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
-   "badgeAt": "@09%35",
-   "strikeAt": "@10",
-   "to": "RM27",
-   "toAt": "@10%35"
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@10",
+   "strikeAt": "@09%45",
+   "to": "RM54",
+   "toAt": "@09%60"
   },
   {
    "type": "title",
@@ -255,12 +255,12 @@
    "in": "@12",
    "top": 720,
    "ticks": [
-    "PENGHANTARAN PERCUMA",
-    "PEMASANGAN PERCUMA",
-    "SERENDAH RM27 SEBULAN*"
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
    "btnAt": "@12%20"
   }
  ]

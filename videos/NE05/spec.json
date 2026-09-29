@@ -12,7 +12,7 @@
    "bg": {
     "clip": "bottles_busy",
     "c0": 0.0,
-    "c1": 3.0
+    "c1": 3.9
    }
   },
   {
@@ -61,7 +61,7 @@
    "at": "@11",
    "bg": {
     "clip": "bottle_to_baby",
-    "c0": 7.2,
+    "c0": 4.5,
     "c1": 10.0
    }
   },
@@ -191,7 +191,7 @@
    "in": "@11",
    "out": "@12",
    "top": 270,
-   "html": "DARI RM27/BULAN*",
+   "html": "PROMOSI RM54 + REBAT RM20 × 7 BULAN*",
    "bg": "var(--yellow)",
    "color": "var(--navy)"
   },
@@ -210,12 +210,12 @@
    "in": "@12",
    "top": 720,
    "ticks": [
-    "PENGHANTARAN PERCUMA",
-    "PEMASANGAN PERCUMA",
-    "DARI RM27 SEBULAN*"
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway."
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
   }
  ]
 }

@@ -30,7 +30,7 @@
    "bg": {
     "clip": "press_pour",
     "c0": 3.0,
-    "c1": 6.6
+    "c1": 5.2
    }
   },
   {
@@ -169,14 +169,14 @@
    "type": "price",
    "in": "@10",
    "out": "@11",
-   "top": 560,
-   "label": "DARI",
-   "from": "RM54",
-   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
-   "badgeAt": "@10%15",
-   "strikeAt": "@10%40",
-   "to": "RM27",
-   "toAt": "@10%55"
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@10%72",
+   "strikeAt": "@10%30",
+   "to": "RM54",
+   "toAt": "@10%45"
   },
   {
    "type": "photo",
@@ -193,11 +193,12 @@
    "in": "@11",
    "top": 720,
    "ticks": [
-    "PENAPISAN NANOTRAP",
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
     "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway."
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
   }
  ]
 }

@@ -172,8 +172,8 @@ window.SPEC = {
   },
   {
    "type": "price",
-   "top": 560,
-   "label": "SELF-SERVICE DARI",
+   "top": 520,
+   "label": "SELF-SERVICE",
    "from": "RM54",
    "t0": 25.23,
    "t1": 28.38

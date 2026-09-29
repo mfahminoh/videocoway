@@ -3,15 +3,15 @@ window.SPEC = {
   {
    "t0": 0.0,
    "bg": "dark",
-   "t1": 6.97
+   "t1": 6.06
   },
   {
-   "t0": 6.97,
+   "t0": 6.06,
    "bg": "dark",
-   "t1": 10.5
+   "t1": 9.67
   },
   {
-   "t0": 10.5,
+   "t0": 9.67,
    "bg": {
     "image": "../../assets/img/neon/podium5.jpg",
     "color": "pastel",
@@ -19,31 +19,31 @@ window.SPEC = {
     "h": 1080,
     "mask": true
    },
-   "t1": 13.15
+   "t1": 11.83
   },
   {
-   "t0": 13.15,
+   "t0": 11.83,
    "bg": "navy",
-   "t1": 17.08
+   "t1": 15.39
   },
   {
-   "t0": 17.08,
+   "t0": 15.39,
    "bg": {
     "clip": "press_pour",
     "c0": 3.0,
-    "c1": 6.6
+    "c1": 5.2
    },
-   "t1": 19.39
+   "t1": 17.65
   },
   {
-   "t0": 19.39,
+   "t0": 17.65,
    "bg": "blue",
-   "t1": 22.83
+   "t1": 23.46
   },
   {
-   "t0": 22.83,
+   "t0": 23.46,
    "bg": "blue",
-   "t1": 31.12
+   "t1": 31.11
   }
  ],
  "els": [
@@ -53,32 +53,32 @@ window.SPEC = {
    "icon": "pipe",
    "size": 300,
    "color": "#9aa6b8",
-   "t0": 0.29,
-   "t1": 6.97
+   "t0": 0.1,
+   "t1": 6.06
   },
   {
    "type": "title",
    "top": 760,
    "size": 130,
    "html": "PAIP <span style='color:var(--yellow)'>LAMA?</span>",
-   "t0": 0.29,
-   "t1": 6.97
+   "t0": 0.1,
+   "t1": 6.06
   },
   {
    "type": "text",
    "top": 960,
    "size": 50,
    "html": "Air boleh bawa <b style='color:var(--yellow)'>logam berat</b>",
-   "t0": 4.03,
-   "t1": 6.97
+   "t0": 3.24,
+   "t1": 6.06
   },
   {
    "type": "title",
    "top": 250,
    "size": 100,
    "html": "LOGAM BERAT",
-   "t0": 6.97,
-   "t1": 10.5
+   "t0": 6.06,
+   "t1": 9.67
   },
   {
    "type": "grid",
@@ -88,29 +88,29 @@ window.SPEC = {
      "big": "Hg",
      "small": "MERKURI",
      "at": "@03",
-     "t": 6.97
+     "t": 6.06
     },
     {
      "big": "Pb",
      "small": "PLUMBUM",
      "at": "@04",
-     "t": 8.5
+     "t": 7.45
     },
     {
      "big": "Fe",
      "small": "BESI",
      "at": "@05",
-     "t": 9.2
+     "t": 8.0
     },
     {
      "big": "Al",
      "small": "ALUMINIUM",
      "at": "@06",
-     "t": 9.75
+     "t": 8.32
     }
    ],
-   "t0": 6.97,
-   "t1": 10.5
+   "t0": 6.06,
+   "t1": 9.67
   },
   {
    "type": "title",
@@ -119,8 +119,8 @@ window.SPEC = {
    "html": "PENAPIS<br><span style='color:#E86E5A'>NANOTRAP</span>",
    "color": "#0B2F6B",
    "shadow": false,
-   "t0": 10.5,
-   "t1": 13.15
+   "t0": 9.67,
+   "t1": 11.83
   },
   {
    "type": "icon",
@@ -128,8 +128,8 @@ window.SPEC = {
    "icon": "shield",
    "size": 260,
    "color": "#fff",
-   "t0": 13.15,
-   "t1": 17.08
+   "t0": 11.83,
+   "t1": 15.39
   },
   {
    "type": "chips",
@@ -139,23 +139,23 @@ window.SPEC = {
      "text": "LOGAM BERAT",
      "color": "#fff",
      "at": "@08%25",
-     "t": 14.068
+     "t": 12.598
     },
     {
      "text": "BAKTERIA",
      "color": "#fff",
      "at": "@08%55",
-     "t": 15.168
+     "t": 13.518
     },
     {
      "text": "VIRUS",
      "color": "#fff",
      "at": "@08%75",
-     "t": 15.902
+     "t": 14.133
     }
    ],
-   "t0": 13.15,
-   "t1": 17.08
+   "t0": 11.83,
+   "t1": 15.39
   },
   {
    "type": "pill",
@@ -163,8 +163,8 @@ window.SPEC = {
    "html": "AIR BERSIH DARI DAPUR",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 17.08,
-   "t1": 19.39
+   "t0": 15.39,
+   "t1": 17.65
   },
   {
    "type": "photo",
@@ -173,21 +173,21 @@ window.SPEC = {
    "w": 360,
    "h": 360,
    "src": "../../assets/img/neon/pink.jpg",
-   "t0": 19.39,
-   "t1": 22.83
+   "t0": 17.65,
+   "t1": 23.46
   },
   {
    "type": "price",
-   "top": 560,
-   "label": "DARI",
-   "from": "RM54",
-   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
-   "to": "RM27",
-   "t0": 19.39,
-   "t1": 22.83,
-   "badgeT": 19.875,
-   "strikeT": 20.682,
-   "toT": 21.166
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "to": "RM54",
+   "t0": 17.65,
+   "t1": 23.46,
+   "badgeT": 21.516,
+   "strikeT": 19.261,
+   "toT": 20.066
   },
   {
    "type": "photo",
@@ -196,26 +196,27 @@ window.SPEC = {
    "w": 420,
    "h": 420,
    "src": "../../assets/img/neon/pink.jpg",
-   "t0": 22.83,
+   "t0": 23.46,
    "t1": null
   },
   {
    "type": "cta",
    "top": 720,
    "ticks": [
-    "PENAPISAN NANOTRAP",
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
     "PEMASANGAN PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway.",
-   "t0": 22.83,
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "t0": 23.46,
    "t1": null
   }
  ],
  "clips": {
   "press_pour": {
    "dir": "../../out/frames/NE08_press_pour/",
-   "n": 111,
+   "n": 70,
    "start": 3.0
   }
  }

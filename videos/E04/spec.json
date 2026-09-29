@@ -1,0 +1,314 @@
+{
+ "slug": "3-sebab-ramai-pasang",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "presenter",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "presenter",
+    "c0": 6.4,
+    "c1": 8.0
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "neon/podium5.jpg",
+    "color": "pastel",
+    "top": 420,
+    "h": 1080,
+    "mask": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "pastel"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": {
+    "clip": "bottles_busy",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@09",
+   "bg": "navy"
+  },
+  {
+   "at": "@10",
+   "bg": "navy"
+  },
+  {
+   "at": "@11",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@12",
+   "bg": "blue"
+  },
+  {
+   "at": "@14",
+   "bg": {
+    "clip": "bottle_to_baby",
+    "c0": 7.2,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@14e",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "KENAPA RAMAI PASANG<br><em>COWAY NEON?</em>"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@03",
+   "top": 760,
+   "size": 200,
+   "html": "3 SEBAB",
+   "color": "var(--yellow)"
+  },
+  {
+   "type": "reason",
+   "in": "@03",
+   "out": "@04",
+   "top": 250,
+   "num": "1",
+   "title": "KOMPAK",
+   "sub": "tak makan ruang dapur"
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@06",
+   "top": 240,
+   "size": 120,
+   "html": "<span style='color:#E86E5A'>5</span> WARNA",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "lineup",
+   "in": "@05",
+   "out": "@06",
+   "keys": [
+    {
+     "at": "@05",
+     "unit": "pink",
+     "zoom": 2.1
+    },
+    {
+     "at": "@05%20",
+     "unit": "mint",
+     "zoom": 2.1
+    },
+    {
+     "at": "@05%40",
+     "unit": "ciel",
+     "zoom": 2.1
+    },
+    {
+     "at": "@05%60",
+     "unit": "gray",
+     "zoom": 2.1
+    },
+    {
+     "at": "@05%80",
+     "unit": "white",
+     "zoom": 2.1
+    },
+    {
+     "at": "@05e",
+     "unit": "all",
+     "zoom": 1
+    }
+   ]
+  },
+  {
+   "type": "reason",
+   "in": "@06",
+   "out": "@08",
+   "top": 330,
+   "num": "2",
+   "title": "PAKEJ IKUT<br>GAYA HIDUP"
+  },
+  {
+   "type": "card",
+   "in": "@07",
+   "out": "@08",
+   "top": 760,
+   "icon": "tech",
+   "title": "BESERTA SERVIS",
+   "sub": "Technician datang ke rumah"
+  },
+  {
+   "type": "stamp",
+   "in": "@07%70",
+   "out": "@08",
+   "top": 1080,
+   "html": "BOLEH ✓",
+   "color": "#1faa59",
+   "rot": -8
+  },
+  {
+   "type": "title",
+   "in": "@08",
+   "out": "@09",
+   "top": 260,
+   "size": 120,
+   "html": "SELALU <span style='color:var(--yellow)'>SIBUK?</span>"
+  },
+  {
+   "type": "card",
+   "in": "@08%50",
+   "out": "@09",
+   "top": 1180,
+   "icon": "box",
+   "icbg": "#fff3cc",
+   "iccolor": "#b07b00",
+   "title": "SELF-SERVICE",
+   "sub": "Tukar filter sendiri, bila-bila masa"
+  },
+  {
+   "type": "title",
+   "in": "@09",
+   "out": "@10",
+   "top": 270,
+   "size": 82,
+   "html": "FILTER BARU<br>SETIAP <span style='color:var(--yellow)'>8 BULAN</span>"
+  },
+  {
+   "type": "delivery",
+   "in": "@09",
+   "out": "@10",
+   "top": 620
+  },
+  {
+   "type": "stamp",
+   "in": "@09%80",
+   "out": "@10",
+   "top": 1250,
+   "html": "PERCUMA"
+  },
+  {
+   "type": "reason",
+   "in": "@10",
+   "out": "@11",
+   "top": 760,
+   "num": "3",
+   "title": "HARGA"
+  },
+  {
+   "type": "chips",
+   "in": "@11",
+   "out": "@12",
+   "top": 280,
+   "items": [
+    {
+     "text": "PANAS",
+     "color": "#ff7a6b",
+     "at": "@11"
+    },
+    {
+     "text": "SEJUK",
+     "color": "#6cc2ff",
+     "at": "@11%30"
+    },
+    {
+     "text": "SUHU BILIK",
+     "color": "#e9eef5",
+     "at": "@11%55"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "in": "@12",
+   "out": "@14",
+   "top": 160,
+   "left": 360,
+   "w": 360,
+   "h": 360,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "price",
+   "in": "@12",
+   "out": "@14",
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@13",
+   "strikeAt": "@12%45",
+   "to": "RM54",
+   "toAt": "@12%60"
+  },
+  {
+   "type": "title",
+   "in": "@14",
+   "out": "@14e",
+   "top": 260,
+   "size": 120,
+   "html": "NAK PASANG?"
+  },
+  {
+   "type": "photo",
+   "in": "@14e",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/mint.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@14",
+   "top": 720,
+   "ticks": [
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "btnAt": "@14%40"
+  }
+ ]
+}

@@ -1,7 +1,72 @@
 [
-  {"id": "01", "text": "Kenapa ramai sangat pasang Coway Neon sekarang? Tiga sebab."},
-  {"id": "02", "text": "Satu, saiz dia kompak, tak makan ruang dapur. Dan ada lima warna, pink, hijau mint, biru, kelabu dan putih. Pilih yang ngam dengan dapur you."},
-  {"id": "03", "text": "Dua, pakej ikut gaya hidup. Nak technician datang servis, boleh. Selalu sibuk? Ambil pakej self-service, Coway hantar filter baru setiap lapan bulan, percuma."},
-  {"id": "04", "text": "Tiga, harga. Panas, sejuk, suhu bilik, semua ada, dari lima puluh empat ringgit sebulan. Order sekarang, diskaun lima puluh peratus enam bulan pertama. Jadi dua puluh tujuh ringgit je."},
-  {"id": "05", "text": "Nak pasang? Tekan WhatsApp, penghantaran dan pemasangan percuma."}
+ {
+  "id": "01",
+  "text": "Kenapa ramai sangat pasang Coway Neon sekarang?",
+  "cap": "Kenapa ramai pasang *Coway Neon*?"
+ },
+ {
+  "id": "02",
+  "text": "Tiga sebab.",
+  "cap": "*3 sebab.*"
+ },
+ {
+  "id": "03",
+  "text": "Satu, saiz dia kompak, tak makan ruang dapur.",
+  "cap": "*1.* Saiz *kompak*, tak makan ruang dapur."
+ },
+ {
+  "id": "04",
+  "text": "Dan ada lima warna.",
+  "cap": "Ada *5 warna*."
+ },
+ {
+  "id": "05",
+  "text": "Pink, mint, biru, kelabu, dan putih.",
+  "cap": "*Pink*, *mint*, *biru*, *kelabu* & *putih*."
+ },
+ {
+  "id": "06",
+  "text": "Dua, pakej ikut gaya hidup.",
+  "cap": "*2.* Pakej ikut *gaya hidup*."
+ },
+ {
+  "id": "07",
+  "text": "Nak technician datang servis? Boleh.",
+  "cap": "Nak *technician* datang? *Boleh.*"
+ },
+ {
+  "id": "08",
+  "text": "Selalu sibuk? Ambil pakej self-service.",
+  "cap": "Selalu *sibuk?* Ambil *self-service*."
+ },
+ {
+  "id": "09",
+  "text": "Filter baru dihantar setiap lapan bulan, percuma.",
+  "cap": "Filter baru setiap *8 bulan*, *percuma*."
+ },
+ {
+  "id": "10",
+  "text": "Tiga, harga.",
+  "cap": "*3.* *Harga.*"
+ },
+ {
+  "id": "11",
+  "text": "Panas, sejuk, suhu bilik, semua ada.",
+  "cap": "*Panas*, *sejuk*, *suhu bilik*."
+ },
+ {
+  "id": "12",
+  "text": "Harga asal seratus empat ringgit, promosi sekarang lima puluh empat ringgit je.",
+  "cap": "Harga asal *RM104*, promosi *RM54* je."
+ },
+ {
+  "id": "13",
+  "text": "Tambah rebat ulang tahun Coway, dua puluh ringgit, tujuh bulan.",
+  "cap": "+ Rebat ulang tahun *RM20 × 7 bulan*."
+ },
+ {
+  "id": "14",
+  "text": "Nak pasang? Tekan WhatsApp, penghantaran dan pemasangan percuma.",
+  "cap": "*WhatsApp* saya, pasang *percuma*."
+ }
 ]
