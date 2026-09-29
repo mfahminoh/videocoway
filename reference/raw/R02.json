@@ -1,0 +1,60 @@
+{
+ "ringkasan": "Video ini mempromosikan penapis air Coway Neon yang mempunyai reka bentuk cantik, saiz yang sesuai, pelbagai pilihan warna, dan pakej servis yang berbaloi.",
+ "penutur": "Lelaki, on-screen presenter, dengan gaya santai dan meyakinkan.",
+ "segmen": [
+  {
+   "mula": 0.0,
+   "tamat": 3.2,
+   "skrip": "Tiga sebab kenapa ramai yang pasang penapis air Coway Neon dekat rumah.",
+   "nada": "ceria dan menarik perhatian"
+  },
+  {
+   "mula": 3.2,
+   "tamat": 9.9,
+   "skrip": "Yang pertama, sebab Neon ni mempunyai reka bentuk yang cantik, saiz dia just nice aje tak besar sangat so tak makan space yang banyak dekat dapur korang.",
+   "nada": "bersemangat"
+  },
+  {
+   "mula": 9.9,
+   "tamat": 18.2,
+   "skrip": "Dan yang bestnya Coway Neon ni ada lima pilihan warna yang korang boleh pilih dan match dengan reka bentuk dapur rumah korang. So bila pasang je Coway Neon ni confirm dapur korang akan naik seri.",
+   "nada": "teruja"
+  },
+  {
+   "mula": 18.2,
+   "tamat": 26.5,
+   "skrip": "Yang kedua adalah sebab Neon ni mempunyai pilihan pakej beserta servis atau pakej self servis. So untuk golongan yang selalu busy tak ada masa kat rumah, korang boleh pilih pakej self servis aje.",
+   "nada": "informatif"
+  },
+  {
+   "mula": 26.5,
+   "tamat": 35.5,
+   "skrip": "Filter tu jangan risau korang tak payah beli asing. Coway akan hantar filter kat rumah korang setiap lapan bulan tanpa sebarang caj. Sebab semua tu dah include dalam harga bulanan yang korang bayar tu.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 35.5,
+   "tamat": 42.4,
+   "skrip": "Last sekali of course sebab harga yang mampu milik. Coway Neon ni antara penapis air tiga suhu paling mampu milik yang korang boleh dapatkan dalam pasaran.",
+   "nada": "menarik"
+  },
+  {
+   "mula": 42.4,
+   "tamat": 52.2,
+   "skrip": "Iaitu bulanan serendah RM54 sahaja. Kalau korang berminat nak pasang penapis air, nak yang harga jimat, reka bentuk cantik dan ada komplit tiga suhu, korang boleh consider untuk pasang Coway Neon.",
+   "nada": "memujuk"
+  },
+  {
+   "mula": 52.2,
+   "tamat": 57.0,
+   "skrip": "Untuk tempahan atau info lanjut korang boleh isi beg biru dekat bawah ni ataupun tekan link dekat baju saya sekarang.",
+   "nada": "call to action"
+  }
+ ],
+ "muzik_sfx": "Muzik latar belakang ceria dan santai",
+ "produk": [
+  "Coway Neon"
+ ],
+ "harga_promo": "RM54 sahaja",
+ "_model": "gemini-3.5-flash-lite"
+}

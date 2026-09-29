@@ -1,0 +1,78 @@
+{
+ "ringkasan": "Video promosi penapis air Coway dengan pakej servis sendiri dan penghantaran serta pemasangan percuma di seluruh Malaysia.",
+ "penutur": "Lelaki, voiceover, gaya promosi yang cepat, mesra dan meyakinkan.",
+ "segmen": [
+  {
+   "mula": 0.0,
+   "tamat": 4.1,
+   "skrip": "Satu benda yang bestnya pasal penapis air Coway ni adalah dia ada pakej self-service tau.",
+   "nada": "teruja"
+  },
+  {
+   "mula": 4.1,
+   "tamat": 6.7,
+   "skrip": "Di mana kau orang boleh servis sendiri penapis air ni.",
+   "nada": "santai"
+  },
+  {
+   "mula": 6.7,
+   "tamat": 10.7,
+   "skrip": "Since ramai juga yang selalu ada masalah tak ada masa kat rumah untuk set appointment servis kan?",
+   "nada": "pasti"
+  },
+  {
+   "mula": 10.7,
+   "tamat": 14.9,
+   "skrip": "Ha so kau orang boleh servis je penapis air ni dengan cara tukar je filter lama ni dengan yang baru.",
+   "nada": "memberitahu"
+  },
+  {
+   "mula": 14.9,
+   "tamat": 21.4,
+   "skrip": "Nak tukar pun senang, buka je penutup ni, cabut filter lama, pasang filter baru, buat flushing and dah boleh terus guna.",
+   "nada": "teruja"
+  },
+  {
+   "mula": 21.4,
+   "tamat": 23.0,
+   "skrip": "Tapi filter ni nak beli kat mana?",
+   "nada": "tanya"
+  },
+  {
+   "mula": 23.0,
+   "tamat": 27.8,
+   "skrip": "Ha yang tu kau orang tak payah risau sebab filter ni Coway akan hantar ke rumah kau orang secara percuma setiap 8 bulan.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 27.8,
+   "tamat": 32.1,
+   "skrip": "So kau orang tak payah bayar ekstra kos untuk dapatkan filter original daripada Coway ni.",
+   "nada": "menarik"
+  },
+  {
+   "mula": 32.1,
+   "tamat": 36.9,
+   "skrip": "Untuk Coway neon package self service ni, kau orang boleh dapatkan dengan harga bulanan serendah RM54 sahaja.",
+   "nada": "teruja"
+  },
+  {
+   "mula": 36.9,
+   "tamat": 39.8,
+   "skrip": "Penghantaran dan pemasangan percuma ke seluruh Malaysia tau.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 39.8,
+   "tamat": 43.8,
+   "skrip": "Kalau kau orang minat boleh isi baby dekat bawah ni ataupun tekan link kat bawah saya sekarang.",
+   "nada": "memujuk"
+  }
+ ],
+ "muzik_sfx": "Muzik latar belakang ceria dan santai",
+ "produk": [
+  "Coway Neon"
+ ],
+ "harga_promo": "RM54 sahaja sebulan",
+ "_model": "gemini-3.5-flash-lite"
+}

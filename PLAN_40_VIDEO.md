@@ -6,6 +6,7 @@ motion graphic bercerita, suara santai "content creator", tanpa footage stok, mu
 sebagai animasi HTML → dirender ke MP4 dengan `render.py`, tanpa kamera atau editor.
 
 Tracker (boleh import ke Google Sheets): [`plan/senarai_video.csv`](plan/senarai_video.csv)
+Video rujukan kreator lain (skrip, analisis, skrip adaptasi): [`reference/`](reference/README.md)
 Sampel suara Gemini TTS untuk dipilih: [`voiceover/sampel_suara/`](voiceover/sampel_suara/)
 
 ---
@@ -19,10 +20,11 @@ Sampel suara Gemini TTS untuk dipilih: [`voiceover/sampel_suara/`](voiceover/sam
 | **Ais** | AIS | RM120/bln, servis percuma 7 tahun | Pembuat ais (0.7 kg), RO, Ice Lock + Hot Water Lock, sensor cahaya jimat tenaga | 6 |
 | **Cinnamon** | CN | RM32/bln | Paling mampu milik, RO, air suhu bilik 5.0L, booster pump (tekanan air lemah), pilih ½ / 1 / 2 cawan | 5 |
 | **Dazzie** | DZ | RM74/bln | Kompak, 4 suhu pratetap 45°C susu bayi / 70°C teh / 85°C kopi / 98°C mi segera, Nanotrap (99.999% Murine Norovirus), UV | 5 |
-| **Neon** | NE | *(sahkan)* | 5 warna pastel, Nanotrap (merkuri, plumbum, besi, aluminium), Eco Mode, kunci keselamatan kanak-kanak, muncung panjang | 5 |
+| **Neon** | NE | RM54/bln → RM27 (diskaun 50% × 6 bulan)† | 5 warna pastel, Nanotrap (merkuri, plumbum, besi, aluminium), Eco Mode, kunci kanak-kanak, pakej *self-service* (filter percuma setiap 8 bulan) | 5 |
 | Coway umum | GEN | — | Edukasi penapis air, servis, kos, pilih model | 4 |
 | | | | **Jumlah** | **40** |
 
+† Daripada video rujukan R02–R05 (`reference/`).
 \* Harga & promo berubah setiap bulan — **sahkan sebelum render**. Semua harga disimpan dalam satu fail config
 (`plan/harga.json`, dicadang) supaya satu perubahan terus kemas kini semua video.
 
@@ -67,7 +69,7 @@ Lajur: **Kat** = Cerita / Edukasi / Produk · **Gaya** = kod §3 · **Suara** = 
 | V02 | Cerita | B | 40 | "Kenapa Villaem 3 lagi mahal dari model lain?" | Chat customer ragu → agent: beli sekali pakai lama, tangki terbesar, jarang rosak → customer: "ok, nak slot pemasangan" | Aoede |
 | V03 | Edukasi | D | 38 | "Air dalam tangki penapis boleh basi ke?" | Bakteria dalam tangki tertutup → lampu UV menyala → 99.9% bakteria dihapuskan → Villaem 3 buat ini automatik | Kore |
 | V04 | Produk | G | 35 | "11.4 liter tu banyak mana sebenarnya?" | Botol 1.5L terisi satu-satu → ±7.6 botol → pecahan 6.1/2.6/2.7L → promo | Puck |
-| V05 | Produk | C | 32 | "Satu mesin. Lapan lebih suhu." | Panas masak → suam → bilik → sejuk (kinetic) → harga → CTA | Puck |
+| V05 | Produk | C | 40 | "Satu mesin, lapan suhu" *(ref R01)* | Panel LED 95/80/70 → 60/50/40 → isipadu 120ml–∞ → child lock 3s → 11.4L → harga (potong klip sendiri clip2/clip5) | Puck |
 | V06 | Cerita | I | 44 | "Sehari dalam rumah keluarga 6 orang" | 6:30 pagi air suam ubat · 1 petang air sejuk balik sekolah · 8 malam air panas maggi · tangki tak pernah kosong | Orus |
 | V07 | Edukasi | F | 38 | "Penapis besar = bil elektrik mahal?" | MITOS dipangkah → FAKTA: ECO Mode; + Dual Lock keselamatan anak → Villaem 3 | Kore |
 | V08 | Produk | E | 42 | "Villaem 3 atau Neo Plus — mana satu untuk rumah anda?" | Kiri NP 5.8L / kanan V3 11.4L; ahli keluarga ≤3 vs 4+; "pilih ikut rumah, bukan ikut harga" | Aoede |
@@ -75,7 +77,7 @@ Lajur: **Kat** = Cerita / Edukasi / Produk · **Gaya** = kod §3 · **Suara** = 
 ### Neo Plus (7)
 | ID | Kat | Gaya | Saat | Tajuk / Hook | Jalan cerita ringkas | Suara |
 |---|---|---|---|---|---|---|
-| N01 | Cerita | A | 42 | "Baru kahwin, baru pindah rumah sewa, bajet ketat…" | Senarai barang dapur panjang → penapis air "nanti dulu" → rupanya RM59 dah dapat panas/sejuk/bilik + pemasangan percuma | Aoede |
+| N01 | Cerita | A | 38 | "Baru kahwin? Ini penapis air yang saya cadangkan" *(ref R05)* | Rumah pertama → Neo Plus → 1.0/2.3/2.5L ngam berdua sampai anak pertama → RO 4 peringkat → RM59 | Aoede |
 | N02 | Edukasi | D | 40 | "4 lapisan dalam Neo Plus — apa kerja setiap satu?" | Neo-Sense (sedimen + pra-karbon) → membran RO → Inno-Sense (pasca-karbon + halus) → antibakteria | Kore |
 | N03 | Produk | G | 35 | "5.8 liter cukup untuk berapa orang?" | Gelas terisi mengikut isi rumah → 2.5 / 2.3 / 1.0L → sesuai 2–4 orang → promo | Puck |
 | N04 | Cerita | B | 40 | "Duduk sorang, perlu ke penapis air?" | Chat pekerja bujang → agent kira: air botol + gas masak air vs RM59 → "ok la, pasang" | Orus |
@@ -114,11 +116,11 @@ Lajur: **Kat** = Cerita / Edukasi / Produk · **Gaya** = kod §3 · **Suara** = 
 ### Neon (5)
 | ID | Kat | Gaya | Saat | Tajuk / Hook | Jalan cerita ringkas | Suara |
 |---|---|---|---|---|---|---|
-| E01 | Cerita | A | 40 | "Siap reno dapur tema pastel… penapis air pun kena match" | Dapur cantik tapi penapis lama kelabu → Neon 5 warna → "cantik dan bersih" | Aoede |
+| E01 | Cerita | A | 38 | "Siapa kata bajet kecil tak boleh cantik?" *(ref R04)* | Dapur pastel, penapis lama kelabu → Neon 5 warna → 3 suhu, < RM2 sehari → RM54 → RM27 | Aoede |
 | E02 | Produk | J | 35 | "Warna dapur anda yang mana?" | Pilih: Peach Pink / Mint Green / Ciel Blue / Pebble Gray / Porcelain White → "komen warna pilihan" | Puck |
 | E03 | Edukasi | H | 40 | "4 logam berat yang boleh ada dalam paip lama" | Merkuri · plumbum · besi · aluminium → Nanotrap Neon tapis → promo | Kore |
-| E04 | Produk | H | 36 | "3 ciri keselamatan untuk rumah ada anak kecil" | 1. kunci kanak-kanak 2. muncung panjang elak tumpah 3. Eco Mode | Aoede |
-| E05 | Produk | E | 40 | "Bajet rendah: Neon atau Cinnamon?" | Kiri CN: bilik sahaja, paling murah / kanan NE: panas-sejuk-bilik + warna → pilih ikut keperluan | Orus |
+| E04 | Produk | H | 40 | "3 sebab ramai pasang Coway Neon" *(ref R02)* | 1. kompak + 5 warna 2. pakej servis / self-service 3. harga RM54 → RM27 | Aoede |
+| E05 | Produk | E | 40 | "Servis sendiri atau technician datang?" *(ref R03)* | Kiri: pakej beserta servis / kanan: self-service → 4 langkah tukar filter → filter percuma tiap 8 bulan → RM54 | Orus |
 
 ### Coway umum (4)
 | ID | Kat | Gaya | Saat | Tajuk / Hook | Jalan cerita ringkas | Suara |

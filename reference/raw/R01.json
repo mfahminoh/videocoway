@@ -1,0 +1,54 @@
+{
+ "ringkasan": "Video promosi penapis air Coway Villaem III dengan pelbagai pilihan suhu dan kapasiti air.",
+ "penutur": "Perempuan, presenter atas kamera, gaya mesra, ceria dan memujuk",
+ "segmen": [
+  {
+   "mula": 0.0,
+   "tamat": 4.1,
+   "skrip": "Ha, korang familiar tak ramai nak tangki yang besar, nilah pilihan dia.",
+   "nada": "ceria dan teruja"
+  },
+  {
+   "mula": 4.1,
+   "tamat": 11.0,
+   "skrip": "Untuk model Villaem III ni, dia ada lapan pilihan suhu tau. Okey untuk suhu panas korang boleh pilih 95°C, 80°C ataupun 70°C.",
+   "nada": "memberi penerangan"
+  },
+  {
+   "mula": 11.0,
+   "tamat": 16.5,
+   "skrip": "Untuk warm pula korang boleh pilih 60°C, 50°C ataupun 40°C dan dia juga ada suhu biasa dan juga suhu sejuk.",
+   "nada": "memberi penerangan"
+  },
+  {
+   "mula": 16.5,
+   "tamat": 26.6,
+   "skrip": "Okey dekat sini korang boleh pilih amount juga tau di mana untuk amount korang boleh pilih 120 ml, 250 ml, 500 ml, 1000 ml dan juga unlimited. So korang boleh korang boleh ambil air sebanyak mana yang korang nak ambillah.",
+   "nada": "memberi penerangan"
+  },
+  {
+   "mula": 26.7,
+   "tamat": 32.2,
+   "skrip": "Kalau korang ada anak kecil dekat rumah korang tak perlu risau tau sebab untuk Villaem III ni dia ada safety child lock. Just tekan tiga saat je dia akan terus lock.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 32.2,
+   "tamat": 35.6,
+   "skrip": "Untuk Villaem III ni dia ada dua pilihan warna iaitu pebble grey and white.",
+   "nada": "memberi penerangan"
+  },
+  {
+   "mula": 35.6,
+   "tamat": 41.0,
+   "skrip": "Ha, korang nak dapatkan harga promosi ni boleh tekan dekat beg biru farah sekarang. Bye-bye.",
+   "nada": "memujuk dan ceria"
+  }
+ ],
+ "muzik_sfx": "Muzik latar riang dengan bunyi 'bye-bye' pada penghujung video",
+ "produk": [
+  "Coway Villaem III"
+ ],
+ "harga_promo": "Tiada harga spesifik disebut",
+ "_model": "gemini-3.5-flash-lite"
+}

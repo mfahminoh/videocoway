@@ -1,0 +1,60 @@
+{
+ "ringkasan": "Video promosi penapis air Coway model Cowyn untuk pasangan baru berkahwin dengan tiga pilihan suhu dan sistem direct flow.",
+ "penutur": "Lelaki, voiceover, gaya promosi dan mesra pelanggan.",
+ "segmen": [
+  {
+   "mula": 0.0,
+   "tamat": 4.1,
+   "skrip": "Ini adalah penapis air pilihan golongan yang baru berkahwin. Nama model ni Cowyn.",
+   "nada": "ceria dan menarik"
+  },
+  {
+   "mula": 4.1,
+   "tamat": 13.3,
+   "skrip": "Ada komplit tiga suhu iaitu air panas dengan tangki sebesar 1 liter, air sejuk dengan tangki sebesar 1.5 liter dan menggunakan sistem direct flow untuk air ambient.",
+   "nada": "penerangan"
+  },
+  {
+   "mula": 13.3,
+   "tamat": 17.6,
+   "skrip": "Jadi dengan kapasiti tangki macam ni memang sesuai sangat untuk golongan yang baru berkahwin.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 17.6,
+   "tamat": 20.4,
+   "skrip": "Dan yang lagi menarik, Cowyn ni mempunyai lima pilihan warna yang cantik tahu.",
+   "nada": "teruja"
+  },
+  {
+   "mula": 20.4,
+   "tamat": 24.3,
+   "skrip": "Saiz pun tak terlampau besar, so kalau kau orang nak pasang kat dapur memang lawa.",
+   "nada": "mempromosi"
+  },
+  {
+   "mula": 24.3,
+   "tamat": 31.4,
+   "skrip": "Harga pun memang mampu milik, bulanan tak sampai RM60 pun and kalau kau orang order sekarang kau orang boleh dapat diskaun tambahan sebanyak 50% selama 6 bulan.",
+   "nada": "teruja dan menarik"
+  },
+  {
+   "mula": 31.4,
+   "tamat": 34.0,
+   "skrip": "So harga akan jadi serendah RM27 sahaja.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 34.0,
+   "tamat": 41.5,
+   "skrip": "Kalau kau orang berminat boleh isi beg biro ataupun tekan link dekat bio saya untuk penghantaran dan pemasangan percuma ke seluruh Malaysia.",
+   "nada": "panggilan untuk bertindak"
+  }
+ ],
+ "muzik_sfx": "Muzik latar riang, ceria dan santai",
+ "produk": [
+  "Coway Cowyn"
+ ],
+ "harga_promo": "Bulanan tidak sampai RM60, diskaun tambahan sebanyak 50% selama 6 bulan, harga serendah RM27",
+ "_model": "gemini-3.5-flash-lite"
+}
