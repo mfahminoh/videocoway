@@ -76,11 +76,11 @@
 
   <!-- 5 warna -->
   <div class="el c h1" id="colHead" style="top:250px; font-size:120px; color:var(--navy)"><span style="color:#E86E5A">5</span> WARNA</div>
-  <div class="el" id="n0" style="left:45px; top:470px; width:300px; height:470px"><div class="nsvg"></div><div class="nlab">Peach Pink</div></div>
-  <div class="el" id="n1" style="left:390px; top:470px; width:300px; height:470px"><div class="nsvg"></div><div class="nlab">Mint Green</div></div>
-  <div class="el" id="n2" style="left:735px; top:470px; width:300px; height:470px"><div class="nsvg"></div><div class="nlab">Ciel Blue</div></div>
-  <div class="el" id="n3" style="left:215px; top:960px; width:300px; height:470px"><div class="nsvg"></div><div class="nlab">Pebble Gray</div></div>
-  <div class="el" id="n4" style="left:565px; top:960px; width:300px; height:470px"><div class="nsvg"></div><div class="nlab">Porcelain White</div></div>
+  <img class="el" id="podium" src="../../assets/img/neon/podium5.jpg" style="left:0; top:420px; width:1080px; height:1080px; -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 12%, #000 88%, transparent 100%)">
+  <div class="el" id="lineupBox" style="left:0; top:0; width:1080px; height:1920px; overflow:hidden">
+    <img id="lineup" src="../../assets/img/neon/lineup5.png" style="position:absolute; left:0; top:0; width:1080px"></div>
+  <div class="el c" id="colLab" style="top:1330px"><span class="pill" style="background:#fff; color:var(--navy); box-shadow:0 10px 30px rgba(0,0,0,.12)">
+    <i id="colDot" style="display:inline-block; width:40px; height:40px; border-radius:50%; vertical-align:-6px; margin-right:16px; border:3px solid rgba(0,0,0,.12)"></i><span id="colName"></span></span></div>
 
   <!-- Sebab 2 -->
   <div class="el c" id="r2" style="top:330px"><div class="reason"><div class="num">2</div><div class="rt">PAKEJ IKUT<br>GAYA HIDUP</div></div></div>
@@ -113,7 +113,7 @@
   <div class="el c" id="tChips" style="top:290px"><span class="chip" id="tc0" style="color:#ff7a6b">PANAS</span><span class="chip" id="tc1" style="color:#6cc2ff">SEJUK</span><span class="chip" id="tc2" style="color:#e9eef5">SUHU BILIK</span></div>
   <div class="el c" id="tAll" style="top:420px"><span class="tick"><i>✓</i>SEMUA ADA</span></div>
 
-  <div class="el" id="pNeon" style="left:390px; top:170px; width:300px; height:420px"><div class="nsvg"></div></div>
+  <img class="el" id="pNeon" src="../../assets/img/neon/pink.jpg" style="left:330px; top:150px; width:420px; height:420px; border-radius:40px; box-shadow:0 24px 60px rgba(0,0,0,.35)">
   <div class="el c" id="pr1" style="top:640px; font-size:60px; font-weight:700; letter-spacing:6px">DARI</div>
   <div class="el c h1" id="pr2" style="top:700px; font-size:230px"><span style="position:relative; display:inline-block">RM54<i id="strike" style="position:absolute; left:-10px; right:-10px; top:48%; height:22px; background:var(--red); border-radius:11px; transform-origin:0 50%"></i></span></div>
   <div class="el c" id="pr3" style="top:950px; font-size:56px; font-weight:600">sebulan</div>
@@ -122,7 +122,7 @@
 
   <!-- CTA -->
   <div class="el c h1" id="ctaHead" style="top:260px; font-size:120px; text-shadow:0 8px 30px rgba(0,0,0,.6)">NAK PASANG?</div>
-  <div class="el" id="cNeon" style="left:390px; top:230px; width:300px; height:420px"><div class="nsvg"></div></div>
+  <img class="el" id="cNeon" src="../../assets/img/neon/mint.jpg" style="left:310px; top:190px; width:460px; height:460px; border-radius:44px; box-shadow:0 24px 60px rgba(0,0,0,.35)">
   <div class="el c" id="c1" style="top:760px"><span class="tick"><i>✓</i>PENGHANTARAN PERCUMA</span></div>
   <div class="el c" id="c2" style="top:850px"><span class="tick"><i>✓</i>PEMASANGAN PERCUMA</span></div>
   <div class="el c" id="c3" style="top:940px"><span class="tick"><i>✓</i>DARI RM27 SEBULAN*</span></div>
@@ -138,26 +138,24 @@
 <script src="timing.js"></script>
 <script src="../lib/engine.js"></script>
 <script>
-/* Ilustrasi Coway Neon (SVG) dalam sebarang warna */
-function neon(c, dark) {
-  return `<svg width="300" height="420" viewBox="0 0 300 420">
-    <ellipse cx="150" cy="408" rx="120" ry="10" fill="rgba(0,0,0,.18)"/>
-    <rect x="62" y="170" width="176" height="200" rx="10" fill="${dark}"/>
-    <rect x="80" y="190" width="140" height="170" rx="8" fill="${c}" opacity=".55"/>
-    <rect x="44" y="360" width="212" height="40" rx="12" fill="${c}"/>
-    <g stroke="${dark}" stroke-width="3" opacity=".7"><path d="M70 372 V392 M90 372 V392 M110 372 V392 M130 372 V392 M150 372 V392 M170 372 V392 M190 372 V392 M210 372 V392 M230 372 V392"/></g>
-    <rect x="20" y="18" width="260" height="170" rx="18" fill="${c}"/>
-    <rect x="20" y="18" width="260" height="30" rx="18" fill="#fff" opacity=".18"/>
-    <text x="42" y="58" font-family="P" font-weight="700" font-size="20" fill="${dark}">coway</text>
-    ${[0, 1, 2, 3, 4].map(i => `<circle cx="${62 + i * 40}" cy="${95}" r="3" fill="${dark}"/><rect x="${50 + i * 40}" y="${112}" width="24" height="20" rx="4" fill="none" stroke="${dark}" stroke-width="2.5"/>`).join('')}
-    <path d="M150 146 C156 156 160 162 160 168 a10 10 0 0 1 -20 0 C140 162 144 156 150 146 Z" fill="none" stroke="${dark}" stroke-width="3"/>
-    <rect x="138" y="188" width="24" height="10" rx="3" fill="#aab2bb"/>
-  </svg>`;
+/* Kamera atas gambar lineup5.png (1464px): pusat-x setiap unit, kiri -> kanan: mint, biru, pink, putih, kelabu */
+const UNIT = { mint: 150, ciel: 430, pink: 715, white: 1020, gray: 1262, all: 732 };
+const NAMES = { pink: ['Peach Pink', '#F3C9BD'], mint: ['Mint Green', '#C5DCCB'], ciel: ['Ciel Blue', '#BFD5E8'],
+                gray: ['Pebble Gray', '#3a3d42'], white: ['Porcelain White', '#F4F3EF'] };
+// [masa, unit, zoom]
+const CAM = [[9.0, 'all', 1], [9.04, 'pink', 2.1], [9.64, 'mint', 2.1], [10.53, 'ciel', 2.1], [11.28, 'gray', 2.1], [11.93, 'white', 2.1], [12.91, 'all', 1]];
+function camera(t) {
+  let i = CAM.length - 1; while (i > 0 && CAM[i][0] > t) i--;
+  const [t1, u1, z1] = CAM[i], prev = CAM[Math.max(0, i - 1)];
+  const k = p(t, t1, t1 + .4, E.inOut);
+  const cx = mix(UNIT[prev[1]], UNIT[u1], i === 0 ? 1 : k), z = mix(prev[2], z1, i === 0 ? 1 : k);
+  const s = 1080 / 1464 * z;
+  const im = $('lineup');
+  im.style.width = (1464 * s) + 'px';
+  im.style.left = (540 - cx * s) + 'px';
+  im.style.top = (900 - 700 * s) + 'px';
+  return u1;
 }
-const COLS = [['#F3C9BD', '#c99486'], ['#C5DCCB', '#8fae98'], ['#BFD5E8', '#86a4c0'], ['#8E9398', '#5f6469'], ['#F4F3EF', '#c9c7c0']];
-COLS.forEach(([c, d], i) => { $('n' + i).querySelector('.nsvg').innerHTML = neon(c, d); });
-$('pNeon').querySelector('.nsvg').innerHTML = neon(...COLS[2]);
-$('cNeon').querySelector('.nsvg').innerHTML = neon(...COLS[2]);
 
 Clips.define({
   n1w: { dir: '../../out/frames/e04_n1w/', n: 79 }, n1c: { dir: '../../out/frames/e04_n1c/', n: 49 },
@@ -202,14 +200,18 @@ function seek(T) {
 
   /* 5 warna */
   inout('colHead', t, 7.35, S.r2 - .25, { pop: true, sFrom: .6, dy: 0 });
-  const named = [9.04, 9.64, 10.53, 11.28, 11.93];
-  for (let i = 0; i < 5; i++) {
-    const tin = 7.5 + i * .12, a = p(t, tin, tin + .5, E.back), b = p(t, S.r2 - .3, S.r2, E.in);
-    const act = within(named[i], named[i] + (i < 4 ? named[i + 1] - named[i] : 1.0)) || t >= 12.91;
-    const hl = p(t, named[i], named[i] + .25, E.back) * (act ? 1 : 0);
-    const bob = Math.sin(t * 2.4 + i) * 5;
-    set('n' + i, { o: within(S.col, S.r2) ? Math.min(clamp(a * 2), 1 - b) * (t < named[0] || act ? 1 : .45) : 0,
-                   s: mix(.4, 1, a) * (1 + hl * .1), y: mix(80, 0, a) + bob });
+  {
+    const onPod = within(S.col, 9.0), onLine = within(9.0, S.r2);
+    const a = p(t, S.col, S.col + .5), b = p(t, 8.8, 9.05, E.in);
+    set('podium', { o: onPod ? Math.min(a, 1 - b) : 0, s: mix(1.08, 1.0, p(t, S.col, 9.0, E.lin)) });
+    const u = camera(t), la = p(t, 9.0, 9.3), lb = p(t, S.r2 - .3, S.r2, E.in);
+    set('lineupBox', { o: onLine ? Math.min(la, 1 - lb) : 0 });
+    const named = u !== 'all';
+    if (named) { $('colName').textContent = NAMES[u][0]; $('colDot').style.background = NAMES[u][1]; }
+    const lastN = Math.max(...CAM.filter(c => c[0] <= t && c[1] !== 'all').map(c => c[0]), -9);
+    const pa = p(t, lastN, lastN + .3, E.back);
+    set('colLab', { o: onLine && named ? 1 : 0, s: mix(.6, 1, pa) });
+    $('colHead').innerHTML = t >= 12.91 ? 'PILIH YANG <span style="color:#E86E5A">NGAM</span>' : '<span style="color:#E86E5A">5</span> WARNA';
   }
 
   /* Sebab 2 */

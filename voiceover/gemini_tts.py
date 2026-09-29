@@ -56,7 +56,10 @@ if __name__ == "__main__":
     ap.add_argument("out")
     ap.add_argument("--voice", default="Puck")
     ap.add_argument("--style", default="Bacakan dalam Bahasa Melayu Malaysia, gaya santai macam content creator")
+    ap.add_argument("--models", help="senarai model dipisah koma (cth. gemini-3.8-flash-tts); lalai: MODELS")
     a = ap.parse_args()
+    if a.models:
+        MODELS[:] = a.models.split(",")
     script = " ".join(l["text"] for l in json.loads(pathlib.Path(a.lines).read_text()))
     data, model = tts(f"{a.style}: {script}" if a.style else script, a.voice)
     out = pathlib.Path(a.out)

@@ -1,0 +1,221 @@
+{
+ "slug": "pukul-3-pagi-bancuh-susu",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "night"
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "bottles_busy",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "neon/pink.jpg",
+    "color": "pink",
+    "top": 380,
+    "h": 1080
+   }
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@08",
+   "bg": {
+    "image": "neon/pink.jpg",
+    "color": "pink",
+    "top": 380,
+    "h": 1080
+   }
+  },
+  {
+   "at": "@09",
+   "bg": "navy"
+  },
+  {
+   "at": "@10",
+   "bg": "pastel"
+  },
+  {
+   "at": "@11",
+   "bg": {
+    "clip": "bottle_to_baby",
+    "c0": 7.2,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@12",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 560,
+   "size": 260,
+   "html": "03:00"
+  },
+  {
+   "type": "text",
+   "in": "@01%40",
+   "out": "@02",
+   "top": 880,
+   "size": 56,
+   "weight": 700,
+   "html": "Baby menangis... 😢"
+  },
+  {
+   "type": "pill",
+   "in": "@04",
+   "out": "@05",
+   "top": 270,
+   "html": "DEKAT & CEPAT",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 190,
+   "size": 110,
+   "html": "COWAY <span style='color:#E86E5A'>NEON</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "pill",
+   "in": "@06",
+   "out": "@07",
+   "top": 270,
+   "html": "TEKAN JE",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "chips",
+   "in": "@07",
+   "out": "@08",
+   "top": 280,
+   "items": [
+    {
+     "text": "PANAS",
+     "color": "#ff7a6b",
+     "at": "@07"
+    },
+    {
+     "text": "SEJUK",
+     "color": "#6cc2ff",
+     "at": "@07%30"
+    },
+    {
+     "text": "SUHU BILIK",
+     "color": "#e9eef5",
+     "at": "@07%60"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "in": "@08",
+   "out": "@09",
+   "top": 380,
+   "left": 0,
+   "w": 1080,
+   "h": 1080,
+   "radius": 0,
+   "shadow": false,
+   "float": false,
+   "src": "../../assets/img/neon/pink.jpg",
+   "zx": 74,
+   "zy": 29,
+   "zs": 2.6,
+   "zin": "@08",
+   "zout": "@08%45"
+  },
+  {
+   "type": "pill",
+   "in": "@08%40",
+   "out": "@09",
+   "top": 250,
+   "html": "250ml · BERHENTI SENDIRI",
+   "bg": "#fff",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "card",
+   "in": "@09",
+   "out": "@10",
+   "top": 760,
+   "icon": "filter",
+   "title": "PENAPIS NANOTRAP",
+   "sub": "Teknologi penapisan Coway"
+  },
+  {
+   "type": "card",
+   "in": "@10",
+   "out": "@11",
+   "top": 760,
+   "icon": "baby",
+   "icbg": "#fde8e4",
+   "iccolor": "#E86E5A",
+   "title": "SUHU AIR SUSU?",
+   "sub": "Ikut nasihat doktor / pakar kanak-kanak"
+  },
+  {
+   "type": "pill",
+   "in": "@11",
+   "out": "@12",
+   "top": 270,
+   "html": "DARI RM27/BULAN*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "photo",
+   "in": "@12",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@12",
+   "top": 720,
+   "ticks": [
+    "PENGHANTARAN PERCUMA",
+    "PEMASANGAN PERCUMA",
+    "DARI RM27 SEBULAN*"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

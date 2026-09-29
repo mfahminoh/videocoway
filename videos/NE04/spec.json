@@ -1,0 +1,208 @@
+{
+ "slug": "bawah-rm1-sehari",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@04",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@09",
+   "bg": {
+    "clip": "presenter",
+    "c0": 6.4,
+    "c1": 9.6
+   }
+  },
+  {
+   "at": "@10",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 300,
+   "size": 130,
+   "html": "BERAPA<br><span style='color:var(--yellow)'>SEHARI?</span>"
+  },
+  {
+   "type": "photo",
+   "in": "@01%40",
+   "out": "@02",
+   "top": 760,
+   "left": 310,
+   "w": 460,
+   "h": 460,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@04",
+   "top": 380,
+   "size": 70,
+   "html": "BULANAN"
+  },
+  {
+   "type": "counter",
+   "in": "@02",
+   "out": "@03",
+   "top": 470,
+   "from": 0,
+   "to": 54,
+   "prefix": "RM",
+   "dur": 0.7
+  },
+  {
+   "type": "text",
+   "in": "@03",
+   "out": "@04",
+   "top": 760,
+   "size": 60,
+   "weight": 800,
+   "html": "÷ 30 hari"
+  },
+  {
+   "type": "counter",
+   "in": "@03%30",
+   "out": "@04",
+   "top": 860,
+   "from": 54,
+   "to": 1.8,
+   "prefix": "RM",
+   "decimals": 2,
+   "dur": 0.8,
+   "color": "#fff"
+  },
+  {
+   "type": "price",
+   "in": "@04",
+   "out": "@06",
+   "top": 420,
+   "label": "DARI",
+   "from": "RM54",
+   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
+   "badgeAt": "@04%30",
+   "strikeAt": "@05",
+   "to": "RM27",
+   "toAt": "@05%30"
+  },
+  {
+   "type": "title",
+   "in": "@06",
+   "out": "@07",
+   "top": 380,
+   "size": 80,
+   "html": "SEHARI"
+  },
+  {
+   "type": "counter",
+   "in": "@06",
+   "out": "@07",
+   "top": 480,
+   "from": 1.8,
+   "to": 0.9,
+   "prefix": "RM",
+   "decimals": 2,
+   "dur": 0.8
+  },
+  {
+   "type": "stamp",
+   "in": "@06%60",
+   "out": "@07",
+   "top": 820,
+   "html": "BAWAH RM1!"
+  },
+  {
+   "type": "icon",
+   "in": "@07",
+   "out": "@08",
+   "top": 420,
+   "icon": "cup",
+   "size": 300,
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@07",
+   "out": "@08",
+   "top": 800,
+   "size": 76,
+   "html": "LEBIH MURAH DARI<br><span style='color:var(--yellow)'>SECAWAN TEH TARIK</span>"
+  },
+  {
+   "type": "chips",
+   "in": "@08",
+   "out": "@09",
+   "top": 280,
+   "items": [
+    {
+     "text": "PANAS",
+     "color": "#ff7a6b",
+     "at": "@08%30"
+    },
+    {
+     "text": "SEJUK",
+     "color": "#6cc2ff",
+     "at": "@08%55"
+    },
+    {
+     "text": "SUHU BILIK",
+     "color": "#e9eef5",
+     "at": "@08%75"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@09",
+   "out": "@10",
+   "top": 270,
+   "html": "NANOTRAP · PEMASANGAN PERCUMA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "photo",
+   "in": "@10",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@10",
+   "top": 720,
+   "ticks": [
+    "RM27/BULAN* = RM0.90 SEHARI",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "btnAt": "@10%60"
+  }
+ ]
+}

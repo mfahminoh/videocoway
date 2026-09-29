@@ -1,0 +1,52 @@
+[
+ {
+  "id": "01",
+  "text": "Nak pasang Coway Neon, tapi tak tahu prosesnya? Senang je.",
+  "cap": "Tak tahu *proses* pasang? Senang je."
+ },
+ {
+  "id": "02",
+  "text": "Langkah satu, WhatsApp saya.",
+  "cap": "*1.* WhatsApp saya."
+ },
+ {
+  "id": "03",
+  "text": "Langkah dua, pilih warna. Ada lima.",
+  "cap": "*2.* Pilih *warna*, ada 5."
+ },
+ {
+  "id": "04",
+  "text": "Langkah tiga, pilih pakej. Beserta servis, atau self-service.",
+  "cap": "*3.* Pilih *pakej*."
+ },
+ {
+  "id": "05",
+  "text": "Langkah empat, technician datang pasang, percuma.",
+  "cap": "*4.* Technician pasang, *percuma*."
+ },
+ {
+  "id": "06",
+  "text": "Lepas tu, terus guna. Panas, sejuk, suhu bilik.",
+  "cap": "Terus guna: *panas*, *sejuk*, *suhu bilik*."
+ },
+ {
+  "id": "07",
+  "text": "Kalau ambil self-service, filter baru dihantar setiap lapan bulan.",
+  "cap": "Self-service: filter tiap *8 bulan*."
+ },
+ {
+  "id": "08",
+  "text": "Harga dari lima puluh empat ringgit,",
+  "cap": "Dari *RM54*,"
+ },
+ {
+  "id": "09",
+  "text": "dan sekarang diskaun lima puluh peratus, enam bulan pertama.",
+  "cap": "diskaun *50%*, 6 bulan pertama."
+ },
+ {
+  "id": "10",
+  "text": "Jom, tekan WhatsApp sekarang.",
+  "cap": "Jom, tekan *WhatsApp*!"
+ }
+]

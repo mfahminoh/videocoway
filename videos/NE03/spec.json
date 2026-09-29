@@ -1,0 +1,195 @@
+{
+ "slug": "pakej-self-service",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "presenter",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "presenter",
+    "c0": 6.4,
+    "c1": 9.6
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "clip": "bottles_busy",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "navy"
+  },
+  {
+   "at": "@09",
+   "bg": "navy"
+  },
+  {
+   "at": "@10",
+   "bg": "blue"
+  },
+  {
+   "at": "@11",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "SATU BENDA BEST PASAL<br><em>COWAY NEON</em>"
+  },
+  {
+   "type": "pill",
+   "in": "@01%55",
+   "out": "@02",
+   "top": 450,
+   "html": "PAKEJ SELF-SERVICE",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@02",
+   "out": "@03",
+   "top": 270,
+   "html": "SERVIS SENDIRI · BILA-BILA MASA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@04",
+   "top": 260,
+   "size": 120,
+   "html": "SELALU <span style='color:var(--yellow)'>SIBUK?</span>"
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@08",
+   "top": 250,
+   "size": 110,
+   "html": "<span style='color:var(--yellow)'>4</span> LANGKAH"
+  },
+  {
+   "type": "steps",
+   "in": "@04",
+   "out": "@08",
+   "top": 480,
+   "items": [
+    {
+     "text": "Buka penutup",
+     "at": "@04%45"
+    },
+    {
+     "text": "Cabut filter lama",
+     "at": "@05"
+    },
+    {
+     "text": "Pasang filter baru",
+     "at": "@06"
+    },
+    {
+     "text": "Alirkan air, siap ✓",
+     "at": "@07"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@08",
+   "out": "@09",
+   "top": 420,
+   "size": 110,
+   "html": "FILTER BELI<br>KAT MANA?"
+  },
+  {
+   "type": "stamp",
+   "in": "@08%60",
+   "out": "@09",
+   "top": 760,
+   "html": "TAK PAYAH!",
+   "color": "#1faa59"
+  },
+  {
+   "type": "title",
+   "in": "@09",
+   "out": "@10",
+   "top": 250,
+   "size": 84,
+   "html": "FILTER ORIGINAL<br>SETIAP <span style='color:var(--yellow)'>8 BULAN</span>"
+  },
+  {
+   "type": "delivery",
+   "in": "@09",
+   "out": "@10",
+   "top": 620
+  },
+  {
+   "type": "stamp",
+   "in": "@09%80",
+   "out": "@10",
+   "top": 1250,
+   "html": "PERCUMA"
+  },
+  {
+   "type": "photo",
+   "in": "@10",
+   "out": "@11",
+   "top": 160,
+   "left": 360,
+   "w": 360,
+   "h": 360,
+   "src": "../../assets/img/neon/mint.jpg"
+  },
+  {
+   "type": "price",
+   "in": "@10",
+   "out": "@11",
+   "top": 560,
+   "label": "SELF-SERVICE DARI",
+   "from": "RM54"
+  },
+  {
+   "type": "photo",
+   "in": "@11",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/mint.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@11",
+   "top": 720,
+   "ticks": [
+    "PAKEJ SERVIS / SELF-SERVICE",
+    "PENGHANTARAN PERCUMA",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

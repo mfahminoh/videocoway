@@ -1,0 +1,213 @@
+{
+ "slug": "coway-semua-ro-ke",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "pastel"
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "image": "neon/podium5.jpg",
+    "color": "pastel",
+    "top": 420,
+    "h": 1080,
+    "mask": true
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "pastel"
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 520,
+   "size": 140,
+   "html": "COWAY<br>SEMUA RO?",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "stamp",
+   "in": "@01e-0.1",
+   "out": "@02",
+   "top": 900,
+   "html": "MITOS"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@05",
+   "top": 260,
+   "size": 90,
+   "html": "COWAY ADA <span style='color:#E86E5A'>2 JENIS</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "vs",
+   "in": "@02%50",
+   "out": "@05",
+   "top": 480,
+   "left": {
+    "title": "RO",
+    "color": "#0B4DA2",
+    "items": [
+     "Villaem 3",
+     "Neo Plus",
+     "Cinnamon",
+     "Ais"
+    ],
+    "at": "@03"
+   },
+   "right": {
+    "title": "NANOTRAP",
+    "color": "#E86E5A",
+    "items": [
+     "Neon",
+     "Dazzie",
+     "(bukan RO)"
+    ],
+    "at": "@04"
+   }
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 250,
+   "size": 84,
+   "html": "AIR RUMAH ANDA"
+  },
+  {
+   "type": "chips",
+   "in": "@05",
+   "out": "@06",
+   "top": 460,
+   "items": [
+    {
+     "text": "KERUH",
+     "color": "#fff",
+     "at": "@05"
+    },
+    {
+     "text": "BERKARAT",
+     "color": "#fff",
+     "at": "@05%20"
+    },
+    {
+     "text": "BERKELADAK",
+     "color": "#fff",
+     "at": "@05%40"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@05%70",
+   "out": "@06",
+   "top": 880,
+   "html": "→ PILIH RO",
+   "bg": "#2EA7E0",
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@06",
+   "out": "@07",
+   "top": 200,
+   "size": 100,
+   "html": "AIR JERNIH?<br><span style='color:#E86E5A'>NEON BOLEH</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "icon",
+   "in": "@07",
+   "out": "@08",
+   "top": 330,
+   "icon": "shield",
+   "size": 260,
+   "color": "#fff"
+  },
+  {
+   "type": "chips",
+   "in": "@07",
+   "out": "@08",
+   "top": 700,
+   "items": [
+    {
+     "text": "BAKTERIA",
+     "color": "#fff",
+     "at": "@07%20"
+    },
+    {
+     "text": "VIRUS",
+     "color": "#fff",
+     "at": "@07%40"
+    },
+    {
+     "text": "LOGAM BERAT",
+     "color": "#fff",
+     "at": "@07%65"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@08",
+   "out": "@09",
+   "top": 520,
+   "size": 120,
+   "html": "PILIH IKUT<br><span style='color:#E86E5A'>AIR RUMAH</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "text",
+   "in": "@08%50",
+   "out": "@09",
+   "top": 820,
+   "color": "#0B2F6B",
+   "html": "bukan ikut siapa paling kuat jual 🙂"
+  },
+  {
+   "type": "icon",
+   "in": "@09",
+   "out": null,
+   "top": 300,
+   "icon": "drop",
+   "size": 260,
+   "color": "#fff"
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 720,
+   "ticks": [
+    "NASIHAT PERCUMA",
+    "TAKDE PAKSAAN"
+   ],
+   "button": "Hantar gambar air paip",
+   "fine": "Saya cadangkan model yang sesuai dengan air rumah anda."
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "slug": "logam-berat-paip-lama",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "dark"
+  },
+  {
+   "at": "@03",
+   "bg": "dark"
+  },
+  {
+   "at": "@07",
+   "bg": {
+    "image": "neon/podium5.jpg",
+    "color": "pastel",
+    "top": 420,
+    "h": 1080,
+    "mask": true
+   }
+  },
+  {
+   "at": "@08",
+   "bg": "navy"
+  },
+  {
+   "at": "@09",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@10",
+   "bg": "blue"
+  },
+  {
+   "at": "@11",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "icon",
+   "in": "@01",
+   "out": "@03",
+   "top": 360,
+   "icon": "pipe",
+   "size": 300,
+   "color": "#9aa6b8"
+  },
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@03",
+   "top": 760,
+   "size": 130,
+   "html": "PAIP <span style='color:var(--yellow)'>LAMA?</span>"
+  },
+  {
+   "type": "text",
+   "in": "@02",
+   "out": "@03",
+   "top": 960,
+   "size": 50,
+   "html": "Air boleh bawa <b style='color:var(--yellow)'>logam berat</b>"
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@07",
+   "top": 250,
+   "size": 100,
+   "html": "LOGAM BERAT"
+  },
+  {
+   "type": "grid",
+   "in": "@03",
+   "out": "@07",
+   "top": 470,
+   "items": [
+    {
+     "big": "Hg",
+     "small": "MERKURI",
+     "at": "@03"
+    },
+    {
+     "big": "Pb",
+     "small": "PLUMBUM",
+     "at": "@04"
+    },
+    {
+     "big": "Fe",
+     "small": "BESI",
+     "at": "@05"
+    },
+    {
+     "big": "Al",
+     "small": "ALUMINIUM",
+     "at": "@06"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@07",
+   "out": "@08",
+   "top": 180,
+   "size": 100,
+   "html": "PENAPIS<br><span style='color:#E86E5A'>NANOTRAP</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "icon",
+   "in": "@08",
+   "out": "@09",
+   "top": 330,
+   "icon": "shield",
+   "size": 260,
+   "color": "#fff"
+  },
+  {
+   "type": "chips",
+   "in": "@08",
+   "out": "@09",
+   "top": 700,
+   "items": [
+    {
+     "text": "LOGAM BERAT",
+     "color": "#fff",
+     "at": "@08%25"
+    },
+    {
+     "text": "BAKTERIA",
+     "color": "#fff",
+     "at": "@08%55"
+    },
+    {
+     "text": "VIRUS",
+     "color": "#fff",
+     "at": "@08%75"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@09",
+   "out": "@10",
+   "top": 270,
+   "html": "AIR BERSIH DARI DAPUR",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "photo",
+   "in": "@10",
+   "out": "@11",
+   "top": 160,
+   "left": 360,
+   "w": 360,
+   "h": 360,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "price",
+   "in": "@10",
+   "out": "@11",
+   "top": 560,
+   "label": "DARI",
+   "from": "RM54",
+   "badge": "DISKAUN 50% · 6 BULAN PERTAMA",
+   "badgeAt": "@10%15",
+   "strikeAt": "@10%40",
+   "to": "RM27",
+   "toAt": "@10%55"
+  },
+  {
+   "type": "photo",
+   "in": "@11",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@11",
+   "top": 720,
+   "ticks": [
+    "PENAPISAN NANOTRAP",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

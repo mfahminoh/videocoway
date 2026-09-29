@@ -1,0 +1,204 @@
+{
+ "slug": "kuiz-warna-dapur",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "pastel"
+  },
+  {
+   "at": "@08",
+   "bg": "pastel"
+  },
+  {
+   "at": "@09",
+   "bg": {
+    "clip": "presenter",
+    "c0": 6.4,
+    "c1": 9.6
+   }
+  },
+  {
+   "at": "@10",
+   "bg": {
+    "image": "neon/podium5.jpg",
+    "color": "pastel",
+    "top": 420,
+    "h": 1080,
+    "mask": true
+   }
+  },
+  {
+   "at": "@11",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@08",
+   "top": 200,
+   "size": 110,
+   "html": "KUIZ <span style='color:#E86E5A'>10 SAAT</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "pill",
+   "in": "@01%50",
+   "out": "@08",
+   "top": 350,
+   "html": "DAPUR ANDA WARNA APA?",
+   "bg": "#0B2F6B",
+   "color": "#fff"
+  },
+  {
+   "type": "quiz",
+   "in": "@01%60",
+   "out": "@08",
+   "top": 500,
+   "answer": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "answerAt": "@07",
+   "options": [
+    {
+     "text": "Pink lembut",
+     "color": "#F3C9BD",
+     "at": "@02"
+    },
+    {
+     "text": "Hijau mint",
+     "color": "#C5DCCB",
+     "at": "@03"
+    },
+    {
+     "text": "Biru langit",
+     "color": "#BFD5E8",
+     "at": "@04"
+    },
+    {
+     "text": "Kelabu gelap",
+     "color": "#3a3d42",
+     "at": "@05"
+    },
+    {
+     "text": "Putih bersih",
+     "color": "#F4F3EF",
+     "at": "@06"
+    }
+   ]
+  },
+  {
+   "type": "stamp",
+   "in": "@07",
+   "out": "@08",
+   "top": 1250,
+   "html": "SEMUA BETUL!",
+   "color": "#1faa59"
+  },
+  {
+   "type": "title",
+   "in": "@08",
+   "out": "@09",
+   "top": 240,
+   "size": 110,
+   "html": "<span style='color:#E86E5A'>5</span> WARNA NEON",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "lineup",
+   "in": "@08",
+   "out": "@09",
+   "keys": [
+    {
+     "at": "@08",
+     "unit": "pink",
+     "zoom": 2.1
+    },
+    {
+     "at": "@08%20",
+     "unit": "mint",
+     "zoom": 2.1
+    },
+    {
+     "at": "@08%40",
+     "unit": "ciel",
+     "zoom": 2.1
+    },
+    {
+     "at": "@08%60",
+     "unit": "gray",
+     "zoom": 2.1
+    },
+    {
+     "at": "@08%80",
+     "unit": "white",
+     "zoom": 2.1
+    },
+    {
+     "at": "@08e",
+     "unit": "all",
+     "zoom": 1
+    }
+   ]
+  },
+  {
+   "type": "chips",
+   "in": "@09",
+   "out": "@10",
+   "top": 280,
+   "items": [
+    {
+     "text": "KOMPAK",
+     "color": "#fff",
+     "at": "@09"
+    },
+    {
+     "text": "3 SUHU",
+     "color": "#fff",
+     "at": "@09%40"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@10",
+   "out": "@11",
+   "top": 180,
+   "size": 100,
+   "html": "KOMEN<br><span style='color:#E86E5A'>A · B · C · D · E</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "photo",
+   "in": "@11",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@11",
+   "top": 720,
+   "ticks": [
+    "5 PILIHAN WARNA",
+    "PEMASANGAN PERCUMA",
+    "DARI RM27 SEBULAN*"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Diskaun 50% untuk 6 bulan pertama. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}
