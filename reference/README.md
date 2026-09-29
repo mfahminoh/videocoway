@@ -1,4 +1,4 @@
-# Video Rujukan — Batch 1 (R01–R05)
+# Video Rujukan — R01–R06
 
 Lima video TikTok yang anda beri (29 Sep 2026). Skrip ditranskrip dengan Gemini (`gemini-3.5-flash-lite`) dan disemak dengan kapsyen
 di skrin. Frame 1 saat/sekeping ada dalam [`frames/`](frames/). Fail MP4 asal **tidak** dimasukkan ke repo.
@@ -10,6 +10,7 @@ di skrin. Frame 1 saat/sekeping ada dalam [`frames/`](frames/). Fail MP4 asal **
 | R03 | @_syaifulaiman | Neon (pakej self-service) | 48s | *"Satu benda yang best pasal…"* | **E05** (versus: self-service vs servis) |
 | R04 | @_syaifulaiman | Neon | 36s | Bantah mitos: *"Siapa cakap harga murah tak boleh dapat penapis air cantik?"* | **E01** (cerita dapur pastel) |
 | R05 | @_syaifulaiman | Neon | 44s | Label golongan: *"Ini penapis air pilihan golongan baru berkahwin"* | **N01** (formula sama, produk Neo Plus) |
+| R06 | Threads @sasya.zee (teks) | RO vs mineral | — | Topik perdebatan: *"Coway ke cuckoo?"* | **G01** versi A & B + post Threads, lihat [`R06_threads_ro_vs_mineral.md`](R06_threads_ro_vs_mineral.md) |
 
 Skrip asal penuh: [`skrip_rujukan.md`](skrip_rujukan.md) · Skrip baharu kita (ditulis semula, sedia untuk Gemini TTS):
 [`skrip_adaptasi.md`](skrip_adaptasi.md)

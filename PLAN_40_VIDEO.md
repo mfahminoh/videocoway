@@ -125,7 +125,7 @@ Lajur: **Kat** = Cerita / Edukasi / Produk · **Gaya** = kod §3 · **Suara** = 
 ### Coway umum (4)
 | ID | Kat | Gaya | Saat | Tajuk / Hook | Jalan cerita ringkas | Suara |
 |---|---|---|---|---|---|---|
-| G01 | Edukasi | F | 38 | "Air paip dah dirawat, tak perlu tapis lagi?" | MITOS → FAKTA: air dirawat di loji, tapi melalui paip & tangki rumah → penapis di hujung | Kore |
+| G01 | Edukasi | F | 42 | "Coway ke mineral? Soalan sebenar: air rumah anda macam mana?" *(ref R06, ada versi B gaya chat untuk uji A/B)* | Mitos "Coway semua RO" → fakta: RO (V3, NP) & Nanotrap (NE, DZ) · air keruh/karat → RO · air jernih → bukan RO pun ok · mineral kebanyakan dari makanan · CTA hantar gambar air paip | Kore |
 | G02 | Edukasi | G | 40 | "Berapa keluarga anda habis beli air botol setahun?" | Kalkulator: 4 orang × 2L/hari → botol & RM setahun → banding sewa Coway (andaian ditulis jelas di skrin) | Puck |
 | G03 | Cerita | I | 44 | "Ikut technician Coway sehari" | Ketuk pintu → tukar penapis → cuci tangki → uji air → rumah seterusnya; "servis setiap 2/4 bulan" | Orus |
 | G04 | Produk | J | 40 | "10 saat: model Coway mana untuk anda?" | Soalan pokok keputusan: ada bayi? → Dazzie · nak ais? → AIS · keluarga besar? → V3 · bajet? → CN/NP | Aoede |
