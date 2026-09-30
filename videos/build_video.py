@@ -8,7 +8,7 @@ lines.json : [{"id": "01", "text": "<what TTS says, numbers spelled out>", "cap"
 spec.json  : {"voice", "style", "slug", "scenes": [{"at", "bg"}], "els": [{"type", "in", "out", ...}]}
 Time expressions: "@07" start of line 07, "@07e" its end, "@07%40" 40 % through it, optional "+0.3"/"-0.2";
 plain numbers are voiceover seconds. Output: videos/<ID>/index.html + timing.js + spec.js, out/<ID>_final.mp4,
-and a copy in review/<folder>/.
+and a copy named <ID>_<slug>.mp4 in out/ (--review to change).
 """
 import argparse
 import json
@@ -159,7 +159,7 @@ def main():
     ap.add_argument("--tts", action="store_true")
     ap.add_argument("--render", action="store_true")
     ap.add_argument("--stills")
-    ap.add_argument("--review", default="review/neon")
+    ap.add_argument("--review", default="out")
     ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--no-align", action="store_true")
     a = ap.parse_args()

@@ -9,4 +9,10 @@ reference/raw/*.mp3
 reference/*.mp4
 !out/V05_final.mp4
 videos/*/vo_raw.wav
-!out/E04_final.mp4
+# video Neon siap (nama deskriptif), bukan fail kerja render
+!out/NE[0-9][0-9]_*.mp4
+!out/E04_*.mp4
+!out/README_neon.md
+out/*_noaudio.mp4
+out/NE[0-9][0-9]_final.mp4
+out/E04_final.mp4

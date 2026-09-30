@@ -1,4 +1,6 @@
-# Review: 10 Video Coway Neon (NE01–NE10) + bonus E04
+# 10 Video Coway Neon (NE01–NE10) + bonus E04
+
+Fail video ada dalam folder ni (`out/`), sama seperti video Villaem 3 (`villaem3_final.mp4`, `V05_final.mp4`).
 
 Semua video portrait 1080×1920, 30 fps, 31–40 saat. Suara dijana dengan Gemini TTS, muzik & SFX dijana sendiri (tiada lesen pihak ketiga).
 Aset yang digunakan: klip Neon anda (`assets/clips/neon/`), gambar rasmi Neon (`assets/img/neon/`).
