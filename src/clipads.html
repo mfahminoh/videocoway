@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Villaem 3 – Iklan Klip</title>
+<style>
+  @font-face { font-family: P; font-weight: 500; src: url(../assets/fonts/Poppins-Medium.ttf); }
+  @font-face { font-family: P; font-weight: 600; src: url(../assets/fonts/Poppins-SemiBold.ttf); }
+  @font-face { font-family: P; font-weight: 700; src: url(../assets/fonts/Poppins-Bold.ttf); }
+  @font-face { font-family: P; font-weight: 800; src: url(../assets/fonts/Poppins-ExtraBold.ttf); }
+  :root { --navy:#0B2F6B; --blue:#0B4DA2; --sky:#2EA7E0; --hot:#E5322D; --yellow:#FFD23F; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1080px; height:1920px; overflow:hidden; background:transparent; }
+  body { font-family:P, sans-serif; color:#fff; }
+  #stage { position:relative; width:1080px; height:1920px; overflow:hidden; }
+  .layer, .el, .scene { position:absolute; }
+  .layer, .scene { inset:0; }
+  .el { transform-origin:50% 50%; }
+  .c { left:0; width:1080px; text-align:center; }
+  [data-in] { display:inline-block; }
+
+  /* kapsyen atas footage */
+  .band { position:absolute; left:70px; width:940px; top:1230px; text-align:center; }
+  .band .m { display:inline-block; background:#fff; color:var(--navy); font-size:66px; font-weight:800; line-height:1.15;
+             padding:18px 40px; border-radius:26px; box-shadow:0 14px 40px rgba(0,0,0,.35); }
+  .band .m em { font-style:normal; color:var(--blue); }
+  .band .s { display:inline-block; margin-top:14px; background:var(--navy); color:#fff; font-size:40px; font-weight:600;
+             padding:10px 30px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.3); }
+  .cover { position:absolute; border-radius:36px; text-align:center; box-shadow:0 20px 50px rgba(0,0,0,.4); }
+
+  #bgBlue { background: radial-gradient(ellipse at 50% 30%, #1768c9 0, #0B4DA2 40%, #062A5E 100%); }
+  #bgBlue::after { content:""; position:absolute; inset:0; background: repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 40px, transparent 40px 80px); }
+  #bgDark { background: radial-gradient(ellipse at 50% 30%, #1f2733 0, #090c11 60%, #030405 100%); }
+  .pill { display:inline-block; padding:14px 36px; border-radius:60px; font-weight:700; letter-spacing:4px; font-size:34px; }
+  .strike { position:absolute; left:-12px; width:calc(100% + 24px); height:12px; top:52%; background:var(--hot); border-radius:6px; transform-origin:0 50%; display:block; }
+  .check { display:flex !important; align-items:center; gap:22px; font-size:44px; font-weight:600; }
+  .tick { width:62px; height:62px; border-radius:50%; background:var(--yellow); color:var(--navy); display:grid; place-items:center; font-size:38px; font-weight:800; flex:none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- footage overlays (0–10s) diisi oleh skrip ikut ?v= -->
+  <div class="scene" id="foot" data-s="0" data-e="10"></div>
+
+  <!-- tirai + kad promo (10s ke atas; masa di bawah relatif kepada 10s) -->
+  <div class="layer" id="bgBlue"></div>
+  <div class="layer" id="bgDark"></div>
+
+  <div class="scene" id="promo" data-s="10" data-e="24.95">
+    <div class="el c" style="top:250px"><span class="pill" id="promoPill" style="background:var(--yellow); color:var(--navy); font-size:40px; padding:16px 44px" data-in=".2" data-a="pop">PROMO</span></div>
+    <div class="el c" style="top:370px; font-size:48px; font-weight:500; opacity:.85" data-in=".4" data-a="up">Harga asal</div>
+    <div class="el c" style="top:425px; font-size:96px; font-weight:700; color:rgba(255,255,255,.75)" data-in=".55" data-a="up">
+      <span style="position:relative">RM120<span style="font-size:48px">/bulan</span><i class="strike" data-in="2.0"></i></span></div>
+    <div class="el c" style="top:580px; font-size:50px; font-weight:600" data-in="3.2" data-a="up">Promosi diskaun · <span style="color:var(--yellow)">serendah</span></div>
+    <div class="el c" style="top:630px; white-space:nowrap; line-height:1.1" data-in="4.6" data-a="slam">
+      <span style="font-size:220px; font-weight:800">RM<span data-count="120,74,4.7,6.2">120</span></span><span style="font-size:64px; font-weight:600; opacity:.9">/bulan</span></div>
+    <div class="el" style="top:915px; left:170px" data-in="7.8" data-a="stamp">
+      <span class="pill" style="background:var(--hot); color:#fff; font-size:44px; letter-spacing:3px; transform:rotate(-4deg)">GANDA LAGI!</span></div>
+    <div class="el" style="top:990px; left:110px; width:860px; height:220px; border-radius:36px; background:rgba(255,255,255,.1); border:3px solid rgba(255,210,63,.7); text-align:center; padding-top:26px" data-in="8.5" data-a="pop">
+      <div style="font-size:40px; font-weight:600">Rebat Ulang Tahun Coway</div>
+      <div style="font-size:104px; font-weight:800; color:var(--yellow); line-height:1.1">RM20 × 7 BULAN</div></div>
+    <div class="el c" style="top:1225px; font-size:32px; font-weight:500; opacity:.8" data-in="11.4" data-a="up">Selepas 7 bulan: RM74/bulan</div>
+    <div class="el check" style="top:1285px; left:190px" data-in="11.8" data-a="left"><span class="tick">✓</span>Pemasangan <span style="color:var(--yellow)">PERCUMA</span></div>
+    <div class="el check" style="top:1370px; left:190px" data-in="12.3" data-a="left"><span class="tick">✓</span>Servis setiap 2 / 4 bulan</div>
+    <div class="el c" style="top:1465px" data-in="13.2" data-a="slam" id="lastcall">
+      <span style="display:inline-block; background:var(--hot); color:#fff; font-size:50px; font-weight:800; padding:14px 50px; border-radius:16px; box-shadow:0 0 40px rgba(229,50,45,.7)">LAST CALL untuk promo ini!</span></div>
+    <div class="el c" style="top:1575px; font-size:26px; opacity:.6" data-in="13.6" data-a="fade">*Tertakluk kepada terma &amp; syarat</div>
+  </div>
+
+  <div class="scene" id="cta" data-s="25" data-e="999">
+    <div class="el" id="two" style="top:170px; left:0; width:1080px; height:925px; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 80%, transparent 100%);" data-in=".1" data-a="fade">
+      <img src="../assets/img/two-colors.jpg" style="width:1080px; height:925px; display:block"></div>
+    <div class="el c" style="top:1060px; font-size:84px; font-weight:800; line-height:1.15" data-in=".5" data-a="slam">Beli sekali. Pakai lama.</div>
+    <div class="el c" style="top:1160px; font-size:100px; font-weight:800; color:var(--sky)" data-in="1.0" data-a="slam">Puas hati.</div>
+    <div class="el c" style="top:1310px; font-size:44px; font-weight:500; opacity:.9" data-in="1.6" data-a="up">Cari penapis air <b style="color:var(--yellow)">high spec</b>?</div>
+    <div class="el" id="btn" style="top:1390px; left:110px; width:860px; height:140px; border-radius:80px; background:#25D366; display:flex !important; align-items:center; justify-content:center; gap:22px; font-size:44px; font-weight:800; white-space:nowrap; box-shadow:0 20px 50px rgba(37,211,102,.45)" data-in="2.0" data-a="pop">
+      <svg width="60" height="60" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>
+      WHATSAPP SAYA SEKARANG</div>
+    <div class="el c" style="top:1570px; font-size:32px; font-weight:500; opacity:.7; letter-spacing:2px" data-in="2.6" data-a="fade">COWAY VILLAEM 3 · Pebble Grey | Porcelain White</div>
+  </div>
+</div>
+
+<script>
+/* ---------- kandungan setiap video (0–10s atas footage) ---------- */
+const V = {
+  1: { bands: [[.2, 3.0, 'Jenis beli <em>sekali</em>,<br>pakai <em>lama</em>?', 'Ni penapis air untuk you.'],
+               [3.1, 7.0, 'Coway Villaem 3', 'antara model paling high spec'],
+               [7.1, 9.9, 'Beli sekali. <em>Puas hati.</em>', 'Tengok promo ni ↓']],
+       covers: [[3.1, 7.0, 'top:230px; left:60px; width:960px; height:490px;',
+                 `<div style="padding-top:40px; font-size:40px; font-weight:600">Promosi diskaun · serendah</div>
+                  <div style="font-size:170px; font-weight:800; line-height:1.05">RM74<span style="font-size:56px">/bulan</span></div>
+                  <div style="display:inline-block; margin-top:14px; background:var(--yellow); color:var(--navy); font-size:44px; font-weight:800; padding:10px 34px; border-radius:18px">+ Rebat RM20 × 7 bulan</div>`]] },
+  2: { bands: [[.2, 3.0, '<em>8+</em> PILIHAN SUHU', 'Panas · suam · suhu bilik · sejuk'],
+               [3.1, 6.0, 'Tangki <em>PALING BESAR</em>', 'cukup untuk seisi keluarga'],
+               [6.1, 9.9, 'Paling <em>tahan lasak</em>', 'technician pun jarang dapat repair!']], covers: [] },
+  3: { bands: [[.2, 3.0, 'Penapis air <em>HIGH SPEC</em>', 'Eco mode · jimat elektrik'],
+               [3.1, 6.3, 'Hot/Warm <em>Lock</em>', 'lebih selamat untuk keluarga'],
+               [6.4, 9.9, '2 warna pilihan', 'Pebble Grey · Porcelain White']],
+       covers: [[6.4, 10.2, 'top:150px; left:190px; width:700px; height:230px;',
+                 `<div style="padding-top:34px; font-size:44px; font-weight:600; color:var(--sky); letter-spacing:10px">COWAY</div>
+                  <div style="font-size:96px; font-weight:800; line-height:1.1">Villaem 3</div>`]] },
+  4: { bands: [[.2, 3.0, 'Beli <em>sekali</em>. Pakai <em>lama</em>.', 'Ni yang customer saya pilih'],
+               [3.1, 6.0, 'Coway Villaem 3', 'model paling high spec'],
+               [6.1, 9.9, '<em>8+</em> pilihan suhu', 'nak masak, air panas terus ada']], covers: [] },
+  5: { bands: [[.2, 3.5, 'Tangki <em>PALING BESAR</em>', 'jumlah 11.4L · cukup untuk seisi keluarga'],
+               [3.6, 6.0, 'Paling <em>tahan lasak</em>', 'jarang rosak, jarang repair'],
+               [6.1, 9.9, '<em>8+</em> pilihan suhu', 'tekan, pilih, siap']], covers: [] },
+};
+const vid = +(new URLSearchParams(location.search).get('v') || 1);
+const cfg = V[vid];
+const foot = document.getElementById('foot');
+cfg.covers.forEach((c, i) => foot.insertAdjacentHTML('beforeend',
+  `<div class="cover el" id="cov${i}" style="${c[2]} background:linear-gradient(160deg,#1768c9,#0B2F6B); border:3px solid rgba(255,255,255,.25)">${c[3]}</div>`));
+cfg.bands.forEach((b, i) => foot.insertAdjacentHTML('beforeend',
+  `<div class="band el" id="band${i}"><div class="m">${b[2]}</div><br><div class="s">${b[3]}</div></div>`));
+
+/* ---------- enjin ---------- */
+const $ = id => document.getElementById(id);
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const E = { out: x => 1 - Math.pow(1 - x, 3), in: x => x * x * x, inOut: x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
+  back: x => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); } };
+const p = (t, t0, t1, e = E.out) => e(clamp((t - t0) / (t1 - t0)));
+const mix = (a, b, k) => a + (b - a) * k;
+function tf(el, { o = 1, x = 0, y = 0, s = 1, r = 0, blur = 0 }) {
+  el.style.opacity = o; el.style.visibility = o <= .001 ? 'hidden' : 'visible';
+  el.style.transform = `translate(${x}px,${y}px) scale(${s}) rotate(${r}deg)`;
+  el.style.filter = blur > .05 ? `blur(${blur}px)` : '';
+}
+function animItem(n, a, k) {
+  if (k < 0) return tf(n, { o: 0 });
+  const q = p(k, 0, .55, a === 'pop' || a === 'stamp' ? E.back : E.out), fi = clamp(k / .25);
+  if (a === 'pop') return tf(n, { o: fi, s: mix(.5, 1, q) });
+  if (a === 'slam') return tf(n, { o: fi, s: mix(1.6, 1, p(k, 0, .45)), blur: (1 - clamp(k / .3)) * 10 });
+  if (a === 'stamp') return tf(n, { o: fi, s: mix(2.2, 1, q), r: mix(-14, 0, q) });
+  if (a === 'left') return tf(n, { o: fi, x: mix(120, 0, q), blur: (1 - clamp(k / .35)) * 8 });
+  if (a === 'fade') return tf(n, { o: p(k, 0, .6, E.inOut) });
+  return tf(n, { o: fi, y: mix(60, 0, q), blur: (1 - clamp(k / .35)) * 8 });
+}
+const END = 10 + 21.6;
+window.DURATION = END;
+const scenes = ['promo', 'cta'].map(id => { const el = $(id); return { el, s: +el.dataset.s, e: +el.dataset.e,
+  items: [...el.querySelectorAll('[data-in]')].map(n => ({ n, t: +n.dataset.in, a: n.dataset.a })),
+  strikes: [...el.querySelectorAll('.strike')],
+  counts: [...el.querySelectorAll('[data-count]')].map(n => ({ n, r: n.dataset.count.split(',').map(Number) })) }; });
+
+function seek(t) {
+  /* footage: kapsyen & penutup */
+  const fv = t < 10.4; foot.style.display = fv ? '' : 'none';
+  if (fv) {
+    cfg.bands.forEach((b, i) => {
+      const el = $('band' + i), a = p(t, b[0], b[0] + .45, E.back), out = p(t, b[1] - .2, b[1], E.in);
+      tf(el, { o: Math.min(clamp((t - b[0]) * 5), 1 - out), s: mix(.7, 1, a) * mix(1, .92, out), y: out * 30 });
+    });
+    cfg.covers.forEach((c, i) => {
+      const el = $('cov' + i), a = p(t, c[0], c[0] + .3, E.out), out = p(t, c[1] - .15, c[1], E.in);
+      tf(el, { o: t >= c[0] - .02 && t < c[1] ? Math.max(.999 * (1 - out), a > 0 ? 1 : 0) : 0, s: mix(1.04, 1, a) });
+    });
+  }
+  /* tirai biru naik 10.0–10.45, kemudian gelap untuk CTA */
+  const wb = p(t, 10.0, 10.45, E.inOut);
+  $('bgBlue').style.clipPath = `inset(${(1 - wb) * 100}% 0 0 0)`;
+  tf($('bgBlue'), { o: t >= 10 && t < 25.5 ? 1 : 0 });
+  tf($('bgDark'), { o: p(t, 24.9, 25.3, E.inOut) });
+  scenes.forEach(sc => {
+    const vis = t >= sc.s - .01 && t < sc.e + .45;
+    sc.el.style.display = vis ? '' : 'none';
+    if (!vis) return;
+    const k = t - sc.s, out = p(t, sc.e - .05, sc.e + .35, E.in);
+    tf(sc.el, { o: 1 - out, y: -out * 70, blur: out * 8 });
+    sc.items.forEach(it => animItem(it.n, it.a, k - it.t));
+    sc.strikes.forEach(st => { st.style.transform = `scaleX(${p(k, +st.dataset.in, +st.dataset.in + .35, E.inOut)})`; st.style.opacity = 1; st.style.filter = ''; });
+    sc.counts.forEach(c => { c.n.textContent = Math.round(mix(c.r[0], c.r[1], p(k, c.r[2], c.r[3], E.inOut))); c.n.style.opacity = 1; c.n.style.transform = ''; c.n.style.filter = ''; c.n.style.visibility = 'visible'; });
+  });
+  if (t > 10.9 && t < 25) $('promoPill').style.transform += ` rotate(${Math.sin(t * 9) * 2.5}deg)`;
+  if (t > 23.7 && t < 25) $('lastcall').style.transform += ` scale(${1 + .05 * Math.max(0, Math.sin((t - 23.7) * 8))})`;
+  if (t > 27.5) $('btn').style.transform += ` scale(${1 + .04 * Math.max(0, Math.sin((t - 27.5) * 6))})`;
+  if (t > 25) $('two').style.transform += ` scale(${mix(1.1, 1, p(t, 25, END, E.out))})`;
+}
+window.seek = seek;
+seek(0);
+</script>
+</body>
+</html>
