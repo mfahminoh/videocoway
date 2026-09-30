@@ -34,8 +34,8 @@ def decode(path):
 
 def smooth(x, sec):
     n = max(1, int(sec * SR))
-    k = np.ones(n) / n
-    return np.convolve(x, k, mode="same")
+    c = np.cumsum(np.concatenate([np.zeros(n // 2 + 1), x, np.zeros(n)]))
+    return (c[n:n + len(x)] - c[:len(x)]) / n
 
 
 def main(long=False):

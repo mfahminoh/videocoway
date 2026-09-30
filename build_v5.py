@@ -76,6 +76,12 @@ def decode(path, start=None, dur=None):
 
 
 # ---------------- audio ----------------
+def movavg(x, n):
+    """Purata bergerak (berpusat) guna cumsum — jauh lebih laju dari np.convolve untuk tetingkap besar."""
+    c = np.cumsum(np.concatenate([np.zeros(n // 2 + 1), x, np.zeros(n)]))
+    return (c[n:n + len(x)] - c[:len(x)]) / n
+
+
 def tt(d): return np.arange(int(d * SR)) / SR
 def env(d, a=.005, rel=None): t = tt(d); return np.minimum(1, t / a) * np.exp(-t / ((rel or d) / 5))
 def hz(m): return 440 * 2 ** ((m - 69) / 12)
@@ -174,7 +180,7 @@ def build_audio(name, cfg, dur, path):
 
     t = np.arange(N) / SR
     voice = np.abs(vo) + np.abs(pres)
-    speech = np.convolve((voice > .02).astype(float), np.ones(int(.25 * SR)) / int(.25 * SR), "same")
+    speech = movavg((voice > .02).astype(float), int(.25 * SR))
     body_gain = 1.0 if m["mood"] == "hard" else .85
     g = np.where(t < e, body_gain, .9) * (1 - .6 * np.clip(speech * 3, 0, 1)) * np.clip((dur - t) / 1.5, 0, 1)
     mix = mus * g + sfx * .8 + vo + pres
@@ -205,9 +211,13 @@ def build(name):
     n = int(round(dur * FPS))
     silent = OUT / f"_{name}.mp4"
     if cfg["edl"]:
+        # 1) trek footage dahulu (fail berasingan) supaya paip overlay tak tersekat menunggu nyahkod
+        base = OUT / f"_{name}_base.mp4"
         ins = sum((["-i", str(ROOT / "assets" / "clips" / f"clip{k}.mp4")] for k in range(1, 6)), [])
-        cmd = [FF, "-y", "-loglevel", "error", *ins, "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "png", "-i", "-",
-               "-filter_complex", base_filter(cfg, dur) + ";[bg][5:v]overlay=0:0:shortest=1,format=yuv420p[v]",
+        subprocess.run([FF, "-y", "-loglevel", "error", *ins, "-filter_complex", base_filter(cfg, dur), "-map", "[bg]",
+                        "-t", str(dur), "-c:v", "libx264", "-preset", "veryfast", "-crf", "14", "-pix_fmt", "yuv420p", str(base)], check=True)
+        cmd = [FF, "-y", "-loglevel", "error", "-i", str(base), "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "png", "-i", "-",
+               "-filter_complex", "[0:v][1:v]overlay=0:0:shortest=1,format=yuv420p[v]",
                "-map", "[v]", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-r", str(FPS), str(silent)]
     else:
         cmd = [FF, "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "png", "-i", "-",
@@ -228,6 +238,7 @@ def build(name):
     subprocess.run([FF, "-y", "-v", "error", "-i", str(silent), "-i", str(wav), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-shortest", "-movflags", "+faststart", str(final)], check=True)
     silent.unlink(); wav.unlink()
+    (OUT / f"_{name}_base.mp4").unlink(missing_ok=True)
     print("wrote", final, flush=True)
 
 

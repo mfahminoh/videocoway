@@ -57,6 +57,12 @@ def decode(path, start=None, dur=None, ch=1):
 rng = np.random.default_rng(3)
 
 
+def movavg(x, n):
+    """Purata bergerak (berpusat) guna cumsum — jauh lebih laju dari np.convolve untuk tetingkap besar."""
+    c = np.cumsum(np.concatenate([np.zeros(n // 2 + 1), x, np.zeros(n)]))
+    return (c[n:n + len(x)] - c[:len(x)]) / n
+
+
 def tt(d): return np.arange(int(d * SR)) / SR
 def env(d, a=.005, rel=None): t = tt(d); return np.minimum(1, t / a) * np.exp(-t / ((rel or d) / 5))
 def hz(m): return 440 * 2 ** ((m - 69) / 12)
@@ -136,7 +142,7 @@ def build_audio(v, path):
     vo *= .9 / (np.abs(vo).max() + 1e-9)
 
     t = np.arange(N) / SR
-    speech = np.convolve((np.abs(vo) > .02).astype(float), np.ones(int(.25 * SR)) / int(.25 * SR), "same")
+    speech = movavg((np.abs(vo) > .02).astype(float), int(.25 * SR))
     music_gain = np.where(t < FOOT, .35, 1.0) * (1 - .6 * np.clip(speech * 3, 0, 1))
     music_gain *= np.clip((END - t) / 1.5, 0, 1)
     mix = mus * music_gain + sfx * .8 + vo
