@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>V3 Keluarga</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  :root { --brown:#3B2412; --orange:#F97316; --orange-d:#EA580C;
+    --ec-bg: radial-gradient(circle at 25% 15%, #fffaf2 0, transparent 45%), #FFF1DF;
+    --ec-text:#3B2412; --ec-accent:#F97316; --ec-on-accent:#fff; --ec-accent-text:#EA580C; --ec-price:#3B2412;
+    --ec-card:rgba(249,115,22,.08); --ec-red:#DC2626; }
+  #bg { background: radial-gradient(circle at 20% 15%, #fffaf2 0, transparent 45%), radial-gradient(circle at 85% 85%, #FDE3C3 0, transparent 50%), #FFF1DF; }
+  #bg::after { content:""; position:absolute; inset:0; background-image: radial-gradient(#F6D2A6 2px, transparent 2.5px); background-size:44px 44px; opacity:.5; }
+  .h { font-size:120px; font-weight:800; color:var(--brown); line-height:1.08; }
+  .h b { color:var(--orange); }
+  .card { left:110px; top:250px; width:860px; height:1000px; border-radius:44px; overflow:hidden; border:16px solid #fff;
+          box-shadow:0 40px 80px rgba(120,60,10,.28); background:#ddd; }
+  .card img { position:absolute; width:100%; height:100%; object-fit:cover; transform-origin:50% 45%; }
+  .capbox { top:1300px; }
+  .capbox .m { display:inline-block; background:var(--orange); color:#fff; font-size:70px; font-weight:800; padding:12px 40px; border-radius:24px; box-shadow:0 14px 30px rgba(234,88,12,.35); }
+  .capbox .s { display:inline-block; margin-top:14px; color:var(--brown); font-size:44px; font-weight:600; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"></div>
+
+  <div class="scene" data-s="0" data-e="3.5">
+    <svg class="el" style="top:360px; left:140px" width="800" height="300" viewBox="0 0 800 300" data-in=".1" data-a="pop">
+      <g id="fam">
+        <g transform="translate(100 150)"><circle r="70" fill="#F97316"/><circle cy="-10" r="30" fill="#FDE3C3"/><path d="M-45 55 Q0 10 45 55" fill="#FDE3C3"/></g>
+        <g transform="translate(250 130)"><circle r="85" fill="#0B4DA2"/><circle cy="-12" r="36" fill="#E0AC7E"/><path d="M-55 65 Q0 12 55 65" fill="#E0AC7E"/></g>
+        <g transform="translate(410 130)"><circle r="85" fill="#6d4c9f"/><circle cy="-12" r="36" fill="#C98B5E"/><path d="M-55 65 Q0 12 55 65" fill="#C98B5E"/></g>
+        <g transform="translate(560 160)"><circle r="60" fill="#14B8A6"/><circle cy="-8" r="26" fill="#F0C29A"/><path d="M-38 45 Q0 8 38 45" fill="#F0C29A"/></g>
+        <g transform="translate(690 170)"><circle r="52" fill="#E5322D"/><circle cy="-6" r="22" fill="#E0AC7E"/><path d="M-32 40 Q0 8 32 40" fill="#E0AC7E"/></g>
+      </g></svg>
+    <div class="el c h" style="top:760px" data-in=".4" data-a="up">Keluarga <b>besar?</b></div>
+    <div class="el c" style="top:1030px; font-size:58px; font-weight:600; color:var(--brown)" data-in="1.4" data-a="up">Air panas selalu <b style="color:var(--orange)">tak cukup?</b></div>
+  </div>
+
+  <div class="scene" data-s="3.5" data-e="6.5">
+    <svg class="el" id="clock" style="top:380px; left:365px" width="350" height="350" viewBox="0 0 350 350" data-in=".1" data-a="pop">
+      <circle cx="175" cy="175" r="160" fill="#fff" stroke="#3B2412" stroke-width="14"/>
+      <g stroke="#3B2412" stroke-width="8" stroke-linecap="round"><line x1="175" y1="40" x2="175" y2="65"/><line x1="310" y1="175" x2="285" y2="175"/><line x1="175" y1="310" x2="175" y2="285"/><line x1="40" y1="175" x2="65" y2="175"/></g>
+      <line id="hand" x1="175" y1="175" x2="175" y2="75" stroke="#F97316" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="175" cy="175" r="14" fill="#3B2412"/></svg>
+    <div class="el c h" style="top:820px; font-size:96px" data-in=".4" data-a="up">Asyik tunggu<br>air panas <b id="dots">lagi</b></div>
+    <div class="el c" style="top:1110px; font-size:52px; font-weight:600; color:var(--brown)" data-in="1.5" data-a="up">nak masak pun kena bergilir…</div>
+  </div>
+
+  <div class="scene" data-s="6.5" data-e="9.5">
+    <div class="el card" data-in="0" data-a="left" id="c1" style="transform:rotate(-2deg)"><img src="../../assets/stills/capacity.jpg" id="i1"></div>
+    <div class="el c capbox" data-in=".4" data-a="up"><span class="m">Tangki PALING BESAR</span><br><span class="s">jumlah 11.4L dalam satu mesin</span></div>
+  </div>
+  <div class="scene" data-s="9.5" data-e="12.0">
+    <div class="el card" data-in="0" data-a="left" id="c2"><img src="../../assets/stills/tank.jpg" id="i2"></div>
+    <div class="el c capbox" data-in=".3" data-a="up"><span class="m" style="font-size:56px">2.7L · 6.1L · 2.6L</span><br><span class="s">panas · suhu bilik · sejuk</span></div>
+  </div>
+  <div class="scene" data-s="12.0" data-e="14.5">
+    <div class="el card" data-in="0" data-a="left" id="c3"><img src="../../assets/stills/panelpress.jpg" id="i3"></div>
+    <div class="el c capbox" data-in=".3" data-a="up"><span class="m">8+ pilihan suhu</span><br><span class="s">semua ahli keluarga dapat apa dia nak</span></div>
+  </div>
+  <div class="scene" data-s="14.5" data-e="17.0">
+    <div class="el card" data-in="0" data-a="left" id="c4"><img src="../../assets/stills/hero.jpg" id="i4"></div>
+    <div class="el c capbox" data-in=".3" data-a="up"><span class="m">Coway Villaem 3</span><br><span class="s">model premium · high spec</span></div>
+  </div>
+</div>
+<script src="engine.js"></script>
+<script>
+  const S = 17.0;
+  Engine.addEndcard(S, { tag: 'PROMO KELUARGA', line: ['Satu mesin.', 'Cukup satu keluarga.'], ask: 'Keluarga besar? <b>WhatsApp saya.</b>' });
+  const KB = [[6.5, 9.5, 'i1', 'c1', -2], [9.5, 12, 'i2', 'c2', 2], [12, 14.5, 'i3', 'c3', -2], [14.5, 17, 'i4', 'c4', 1.5]];
+  Engine.init({ duration: S + 17.8, endcard: S, endWipe: 'fade', hooks: t => {
+    const { p, mix, $, E } = Engine;
+    KB.forEach(([a, b, img, card, rot], i) => {
+      const k = p(t, a, b, E.lin);
+      $(img).style.transform = `scale(${mix(1.02, 1.16, k)}) translate(${mix(0, i % 2 ? -18 : 18, k)}px, ${mix(0, -14, k)}px)`;
+      $(card).style.transform += ` rotate(${rot}deg)`;
+    });
+    $('hand').setAttribute('transform', `rotate(${(t - 3.5) * 220} 175 175)`);
+    $('dots').textContent = 'lagi' + '.'.repeat(1 + Math.floor(Math.max(0, t - 3.9) * 3) % 3);
+  }});
+</script></body></html>

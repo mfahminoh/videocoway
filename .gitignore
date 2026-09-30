@@ -7,3 +7,5 @@ voiceover/clips_long/
 !out/villaem3_long_tanpa_vo.mp4
 out/clipads/_*
 !out/clipads/
+!out/v5/
+out/v5/_*

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>V4 Kinetic</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  :root { --y:#FFD400; --r:#FF2D2D;
+    --ec-bg:#0A0A0A; --ec-text:#fff; --ec-accent:#FFD400; --ec-on-accent:#000; --ec-accent-text:#FFD400; --ec-price:#fff;
+    --ec-card:rgba(255,212,0,.06); --ec-red:#FF2D2D; }
+  #bg { background:#0A0A0A; }
+  .k { font-family:Anton; line-height:1; text-align:center; white-space:nowrap; left:0; width:1080px; letter-spacing:2px; }
+  .full { position:absolute; inset:0; }
+  .ck { font-family:Anton; font-size:92px; left:90px; letter-spacing:1px; display:flex !important; align-items:center; gap:28px; }
+  .ck span { width:96px; height:96px; border-radius:50%; background:var(--y); color:#000; display:grid; place-items:center; font-family:P; font-weight:800; font-size:62px; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"></div>
+  <div id="shake" class="layer">
+    <div class="scene" data-s="0" data-e="0.6" data-cut="1"><div class="el k fit" style="top:760px; font-size:300px" data-in="0" data-a="slam">KALAU</div></div>
+    <div class="scene" data-s="0.6" data-e="1.2" data-cut="1"><div class="el k fit" style="top:760px; font-size:340px" data-in="0" data-a="slam">BELI</div></div>
+    <div class="scene" data-s="1.2" data-e="2.5" data-cut="1">
+      <div class="el k fit" style="top:600px; font-size:200px" data-in="0" data-a="slam">BIAR</div>
+      <div class="el k fit" style="top:830px; font-size:250px; color:var(--y)" data-in=".35" data-a="slam">PUAS HATI.</div></div>
+    <div class="scene" data-s="2.5" data-e="3.9" data-cut="1">
+      <div class="full" style="background:var(--y)"></div>
+      <div class="el k fit" style="top:620px; font-size:220px; color:#000" data-in="0" data-a="slam">JANGAN</div>
+      <div class="el k fit" style="top:860px; font-size:210px; color:#000" data-in=".4" data-a="slam">ALANG-ALANG.</div></div>
+    <div class="scene" data-s="3.9" data-e="5.0" data-cut="1">
+      <div class="el k fit" style="top:740px; font-size:230px" data-in="0" data-a="slam">BELI MURAH?</div></div>
+    <div class="scene" data-s="5.0" data-e="5.7" data-cut="1"><div class="full" style="background:var(--r)"></div>
+      <div class="el k fit" style="top:760px; font-size:320px" data-in="0" data-a="slam">ROSAK.</div></div>
+    <div class="scene" data-s="5.7" data-e="6.4" data-cut="1">
+      <div class="el k fit" style="top:760px; font-size:300px; color:var(--r)" data-in="0" data-a="slam">REPAIR.</div></div>
+    <div class="scene" data-s="6.4" data-e="7.2" data-cut="1"><div class="full" style="background:var(--r)"></div>
+      <div class="el k fit" style="top:720px; font-size:270px" data-in="0" data-a="slam">ROSAK<br>LAGI.</div></div>
+    <div class="scene" data-s="7.2" data-e="8.4" data-cut="1">
+      <div class="el k fit" style="top:620px; font-size:230px" data-in="0" data-a="slam"><span style="position:relative; display:inline-block">BELI BARU.<i class="strike" data-in=".4" style="height:22px; background:var(--r)"></i></span></div>
+      <div class="el k fit" style="top:900px; font-size:200px; color:var(--r)" data-in=".55" data-a="stamp">= RUGI.</div></div>
+    <div class="scene" data-s="8.4" data-e="9.8" data-cut="1">
+      <div class="el k fit" style="top:600px; font-size:230px; color:var(--y)" data-in="0" data-a="slam">SEKALI BELI.</div>
+      <div class="el k fit" style="top:860px; font-size:230px" data-in=".45" data-a="slam">PAKAI LAMA.</div></div>
+    <div class="scene" data-s="9.8" data-e="11.0" data-cut="1">
+      <div class="el k fit" style="top:620px; font-size:220px" data-in="0" data-a="slam">PENAPIS AIR</div>
+      <div class="el k fit" style="top:860px; font-size:220px; color:var(--y)" data-in=".4" data-a="slam">PUN SAMA.</div></div>
+    <div class="scene" data-s="11.0" data-e="14.6" data-cut="1">
+      <div class="el k fit" style="top:320px; font-size:110px; color:var(--y)" data-in="0" data-a="up">PILIH YANG:</div>
+      <div class="el ck" style="top:520px" data-in=".1" data-a="left"><span>✓</span>HIGH SPEC</div>
+      <div class="el ck" style="top:700px" data-in=".8" data-a="left"><span>✓</span>TANGKI PALING BESAR</div>
+      <div class="el ck" style="top:880px" data-in="1.5" data-a="left"><span>✓</span>8+ PILIHAN SUHU</div>
+      <div class="el ck" style="top:1060px" data-in="2.2" data-a="left"><span>✓</span>PALING TAHAN LASAK</div></div>
+    <div class="scene" data-s="14.6" data-e="16.4" data-cut="1">
+      <img class="el" src="../../assets/img/villaem3-front.png" style="top:330px; left:190px; width:700px; height:700px" data-in="0" data-a="zoom">
+      <div class="el k fit" style="top:1050px; font-size:110px; color:var(--y); letter-spacing:14px" data-in=".2" data-a="slam">COWAY</div>
+      <div class="el k fit" style="top:1170px; font-size:200px" data-in=".35" data-a="slam">VILLAEM 3</div></div>
+  </div>
+</div>
+<script src="engine.js"></script>
+<script>
+  const S = 16.4;
+  Engine.addEndcard(S, { tag: 'JANGAN ALANG-ALANG', line: ['Kalau beli,', 'biar puas hati.'], ask: 'Beli sekali, pakai lama. <b>WhatsApp saya.</b>' });
+  const HITS = [5.0, 5.7, 6.4];
+  Engine.init({ duration: S + 17.8, endcard: S, endWipe: 'fade', hooks: t => {
+    const sh = HITS.reduce((m, h) => t >= h && t < h + .3 ? Math.sin((t - h) * 80) * 18 * (1 - (t - h) / .3) : m, 0);
+    Engine.$('shake').style.transform = `translate(${sh}px, ${sh * .4}px)`;
+  }});
+</script></body></html>

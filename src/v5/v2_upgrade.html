@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>V2 Upgrade</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  :root { --teal:#14B8A6; --teal-d:#0D9488;
+    --ec-bg: radial-gradient(ellipse at 50% 25%, #ffffff 0, #E8F8F5 55%, #CFEFEA 100%);
+    --ec-text:#0F3D3E; --ec-accent:#14B8A6; --ec-on-accent:#fff; --ec-accent-text:#0D9488; --ec-price:#0F3D3E;
+    --ec-card:rgba(20,184,166,.08); --ec-red:#E5484D; }
+  .tk { top:760px; white-space:nowrap; font-size:80px; font-weight:800; line-height:1.18; color:#fff;
+        text-shadow: 0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000, 0 4px 0 #000, 0 -4px 0 #000, 4px 0 0 #000, -4px 0 0 #000, 0 10px 30px rgba(0,0,0,.5); }
+  .tk b { background:var(--teal); color:#fff; text-shadow:none; padding:0 18px; border-radius:14px; }
+  .tk y { color:#FFE14D; }
+  .pov { display:inline-block; background:#fff; color:#111; font-size:50px; font-weight:800; padding:10px 30px; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.3); }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bar" style="top:70px; left:60px; right:60px; bottom:auto; height:10px; border-radius:5px; background:rgba(255,255,255,.35)">
+    <i id="barFill" style="display:block; height:100%; width:100%; background:#fff; border-radius:5px; transform-origin:0 50%"></i></div>
+
+  <div class="scene" data-s="0" data-e="3.0" data-cut="1">
+    <div class="el c" style="top:620px" data-in=".1" data-a="pop"><span class="pov">POV:</span></div>
+    <div class="el c tk fit" data-in=".35" data-a="pop">penapis air kat rumah<br>dah <b>HABIS BAYAR</b></div>
+  </div>
+  <div class="scene" data-s="3.0" data-e="6.0" data-cut="1">
+    <div class="el c tk fit" data-in=".05" data-a="pop">tapi dah bertahun pakai…</div>
+    <div class="el c tk fit" style="top:1000px; font-size:66px" data-in="1.0" data-a="pop"><y>tangki kecil, suhu terhad.</y></div>
+  </div>
+  <div class="scene" data-s="6.0" data-e="8.5" data-cut="1">
+    <div class="el c tk fit" data-in=".05" data-a="pop">masa untuk <b>UPGRADE</b><br>ke model lebih power</div>
+  </div>
+  <div class="scene" data-s="8.5" data-e="11.0" data-cut="1">
+    <div class="el c tk fit" data-in=".05" data-a="pop"><b>8+</b> pilihan suhu</div>
+    <div class="el c tk fit" style="top:900px; font-size:60px" data-in=".6" data-a="pop">panas · suam · suhu bilik · sejuk</div>
+  </div>
+  <div class="scene" data-s="11.0" data-e="13.5" data-cut="1">
+    <div class="el c tk fit" style="top:1250px" data-in=".05" data-a="pop">tangki <b>PALING BESAR</b></div>
+  </div>
+  <div class="scene" data-s="13.5" data-e="16.0" data-cut="1">
+    <div class="el c tk fit" data-in=".05" data-a="pop">model <b>PREMIUM</b><br><y>high spec</y></div>
+  </div>
+  <div class="scene" data-s="16.0" data-e="19.0">
+    <div class="el c tk fit" style="top:1130px" data-in=".05" data-a="pop">Coway Villaem 3</div>
+    <div class="el c tk fit" style="top:1250px; font-size:70px" data-in=".6" data-a="pop"><y>upgrade yang berbaloi.</y></div>
+  </div>
+</div>
+<script src="engine.js"></script>
+<script>
+  const S = 19.0;
+  Engine.addEndcard(S, { tag: 'PROMO UPGRADE', line: ['Dah habis bayar?', 'Jom upgrade.'], ask: 'Nak <b>upgrade</b> penapis air rumah?' });
+  Engine.init({ duration: S + 17.8, endcard: S, endWipe: 'up', hooks: t => {
+    const { tf, $ } = Engine;
+    tf($('bar'), { o: t < S ? 1 : 0 });
+    $('barFill').style.transform = `scaleX(${Math.min(1, t / S)})`;
+  }});
+</script></body></html>

@@ -1,0 +1,21 @@
+@font-face { font-family: P; font-weight: 400; src: url(../../assets/fonts/Poppins-Regular.ttf); }
+@font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+@font-face { font-family: Serif; src: url(../../assets/fonts/PlayfairDisplay.ttf); font-weight: 400 900; }
+@font-face { font-family: Bebas; src: url(../../assets/fonts/BebasNeue-Regular.ttf); }
+@font-face { font-family: Anton; src: url(../../assets/fonts/Anton-Regular.ttf); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+body { font-family: P, sans-serif; color: #fff; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+.layer, .el, .scene { position: absolute; }
+.layer, .scene { inset: 0; }
+.el { transform-origin: 50% 50%; }
+.c { left: 0; width: 1080px; text-align: center; }
+[data-in] { display: inline-block; }
+.strike { position: absolute; left: -12px; width: calc(100% + 24px); height: 12px; top: 52%; background: #E5322D; border-radius: 6px; transform-origin: 0 50%; display: block; }
+.ecchk { display: flex !important; align-items: center; gap: 22px; font-size: 44px; font-weight: 600; }
+.ectick { width: 62px; height: 62px; border-radius: 50%; background: var(--ec-accent); color: var(--ec-on-accent); display: grid; place-items: center; font-size: 38px; font-weight: 800; flex: none; }

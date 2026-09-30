@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>V1 Premium</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  :root { --gold:#D4AF37; --gold2:#F1D27A;
+    --ec-bg: radial-gradient(ellipse at 50% 30%, #2a2210 0, #0d0b07 55%, #030303 100%);
+    --ec-text:#F5EBD7; --ec-accent:#D4AF37; --ec-on-accent:#111; --ec-accent-text:#F1D27A; --ec-price:#F1D27A;
+    --ec-card:rgba(212,175,55,.08); --ec-red:#B3261E; }
+  .cap { top:1230px; font-family:Serif; font-weight:600; font-size:92px; line-height:1.12; color:#fff; text-shadow:0 6px 30px rgba(0,0,0,.6); }
+  .cap i { color:var(--gold2); font-style:italic; }
+  .sub { top:1470px; font-size:36px; font-weight:500; letter-spacing:6px; color:var(--gold2); text-transform:uppercase; }
+  .rule { left:340px; width:400px; height:2px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+</style></head>
+<body><div id="stage">
+  <!-- bingkai sinematik atas footage -->
+  <div class="layer" id="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,.55) 0, transparent 22%, transparent 55%, rgba(0,0,0,.85) 100%)"></div>
+  <div class="layer" id="frame" style="border:2px solid rgba(212,175,55,.55); inset:40px; border-radius:6px"></div>
+  <div class="el c" id="brand" style="top:150px; font-size:34px; letter-spacing:22px; color:var(--gold2); font-weight:600">COWAY</div>
+
+  <div class="scene" data-s="0" data-e="3.0" data-cut="1">
+    <div class="el c cap" data-in=".3" data-a="up">Rumah dah <i>cantik.</i></div>
+    <div class="el rule" style="top:1420px" data-in=".8" data-a="fade"></div>
+  </div>
+  <div class="scene" data-s="3.0" data-e="5.5" data-cut="1">
+    <div class="el c cap" style="top:1180px" data-in=".1" data-a="up">Penapis air pun<br>kena <i>setaraf.</i></div>
+  </div>
+  <div class="scene" data-s="5.5" data-e="8.0" data-cut="1">
+    <div class="el c" style="top:1180px; font-family:Serif; font-weight:700; font-size:170px; letter-spacing:18px; color:var(--gold2); text-shadow:0 8px 40px rgba(0,0,0,.6)" data-in=".1" data-a="zoom">PREMIUM</div>
+    <div class="el c sub" style="top:1420px" data-in=".6" data-a="up">Coway Villaem 3 · model high spec</div>
+  </div>
+  <div class="scene" data-s="8.0" data-e="10.5" data-cut="1">
+    <div class="el c cap" data-in=".1" data-a="up">Tangki<br><i>paling besar.</i></div>
+  </div>
+  <div class="scene" data-s="10.5" data-e="13.0" data-cut="1">
+    <div class="el c cap" data-in=".1" data-a="up"><i>8+</i> pilihan suhu.</div>
+    <div class="el c sub" data-in=".5" data-a="up">panas · suam · suhu bilik · sejuk</div>
+  </div>
+  <div class="scene" data-s="13.0" data-e="15.5" data-cut="1">
+    <div class="el c cap" data-in=".1" data-a="up">Cukup untuk<br><i>seisi keluarga.</i></div>
+  </div>
+  <div class="scene" data-s="15.5" data-e="18.0" data-cut="1">
+    <div class="el c cap" data-in=".1" data-a="up">Paling <i>tahan lasak.</i></div>
+    <div class="el c sub" data-in=".5" data-a="up">technician pun jarang repair</div>
+  </div>
+  <div class="scene" data-s="18.0" data-e="20.5">
+    <div class="el c cap" style="top:1180px" data-in=".1" data-a="up">Beli sekali.<br><i>Tak perlu dua kali.</i></div>
+  </div>
+  <div class="layer" id="flash" style="background:#fff; opacity:0"></div>
+</div>
+<script src="engine.js"></script>
+<script>
+  const S = 20.5, CUTS = [3.0, 5.5, 8.0, 10.5, 13.0, 15.5, 18.0];
+  Engine.addEndcard(S, { tag: 'PROMO PREMIUM', line: ['Rumah premium.', 'Penapis air premium.'], ask: 'Nak rasa <b>premium</b> setiap hari?' });
+  Engine.init({ duration: S + 17.8, endcard: S, endWipe: 'fade', hooks: t => {
+    const { tf, p, $ } = Engine;
+    const f = CUTS.reduce((m, c) => Math.max(m, t >= c && t < c + .25 ? 1 - (t - c) / .25 : 0), 0);
+    tf($('flash'), { o: f * .35 });
+    const body = t < S + .2 ? 1 : 0;
+    ['shade', 'frame', 'brand'].forEach(id => tf($(id), { o: body * (id === 'brand' ? p(t, .2, .9) : 1) }));
+  }});
+</script></body></html>
