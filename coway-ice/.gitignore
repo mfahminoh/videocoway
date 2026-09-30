@@ -2,3 +2,5 @@ build/
 __pycache__/
 out/*
 !out/coway_ice_final.mp4
+!out/reel1_final.mp4
+!out/reel2_final.mp4

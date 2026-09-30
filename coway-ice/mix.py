@@ -1,11 +1,13 @@
 """Mux the rendered video with music/SFX and (if present) the voiceover clips.
 
-    python mix.py
+    python mix.py                     # video utama
+    python mix.py --video V --bed B --lines L --clips C --out O   # cth. Reels
       -> out/coway_ice_final.mp4   (music + SFX, + VO when voiceover/clips/*.mp3 exist)
 
 Voiceover clips are placed at the start times in voiceover/lines.json, and the music bed
 is ducked (~-9 dB) underneath the voice.
 """
+import argparse
 import json
 import pathlib
 import subprocess
@@ -37,14 +39,14 @@ def smooth(x, sec):
     return np.convolve(x, k, mode="same")
 
 
-def main():
-    bed = read_wav(ROOT / "out" / "music_sfx.wav")
+def main(a):
+    bed = read_wav(a.bed)
     N = len(bed)
     vo = np.zeros(N)
-    lines = json.loads((ROOT / "voiceover" / "lines.json").read_text())
+    lines = json.loads(pathlib.Path(a.lines).read_text())
     used = 0
     for ln in lines:
-        clip = ROOT / "voiceover" / "clips" / f"{ln['id']}.mp3"
+        clip = pathlib.Path(a.clips) / f"{ln['id']}.mp3"
         if not clip.exists():
             clip = clip.with_suffix(".wav")
         if not clip.exists():
@@ -64,15 +66,15 @@ def main():
         mix = bed
     mix = mix / max(1.0, np.abs(mix).max() / 0.95)
 
-    tmp = ROOT / "out" / "_mix.wav"
+    tmp = pathlib.Path(a.out).with_suffix(".mix.wav")
     with wave.open(str(tmp), "wb") as w:
         w.setnchannels(2)
         w.setsampwidth(2)
         w.setframerate(SR)
         w.writeframes((mix * 32767).astype("<i2").tobytes())
 
-    out = ROOT / "out" / "coway_ice_final.mp4"
-    subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / "out" / "coway_ice_video_noaudio.mp4"), "-i", str(tmp),
+    out = pathlib.Path(a.out)
+    subprocess.run([FF, "-y", "-v", "error", "-i", str(a.video), "-i", str(tmp),
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out)],
                    check=True)
     tmp.unlink()
@@ -80,4 +82,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--video", default=str(ROOT / "out" / "coway_ice_video_noaudio.mp4"))
+    ap.add_argument("--bed", default=str(ROOT / "out" / "music_sfx.wav"))
+    ap.add_argument("--lines", default=str(ROOT / "voiceover" / "lines.json"))
+    ap.add_argument("--clips", default=str(ROOT / "voiceover" / "clips"))
+    ap.add_argument("--out", default=str(ROOT / "out" / "coway_ice_final.mp4"))
+    main(ap.parse_args())

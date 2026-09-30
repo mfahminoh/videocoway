@@ -1,0 +1,57 @@
+  @font-face { font-family: P; font-weight: 400; src: url(../../assets/fonts/Poppins-Regular.ttf); }
+  @font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+  @font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+  @font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+  @font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+
+  :root {
+    --navy: #0B2F6B;      /* Coway navy */
+    --blue: #0B4DA2;      /* Coway blue */
+    --sky:  #2EA7E0;      /* Coway sky accent */
+    --ice:  #DFF3FF;
+    --frost:#A9DDF7;
+    --red:  #E5322D;
+    --yellow:#FFD23F;
+    --wa:   #25D366;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  body { font-family: P, "Noto Color Emoji", sans-serif; color: #fff; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  .layer, .el { position: absolute; }
+  .layer { inset: 0; }
+  .el { will-change: transform, opacity; transform-origin: 50% 50%; }
+  .c { left: 0; width: 1080px; text-align: center; }
+  .emo { font-family: "Noto Color Emoji"; font-weight: 400; }
+
+  /* ---------- Latar ---------- */
+  #bgIce { background: radial-gradient(circle at 50% 18%, #ffffff 0, #EAF7FF 38%, #C6E8FB 100%); }
+  #bgIce::after, #bgNavy::after { content: ""; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(46,167,224,.22) 2px, transparent 2.5px); background-size: 54px 54px; }
+  #bgNavy { background: radial-gradient(ellipse at 50% 38%, #1B63BF 0, #0B3F88 42%, #06224F 100%); }
+  #bgNavy::after { background-image: radial-gradient(rgba(255,255,255,.10) 2px, transparent 2.5px); }
+  #bgPromo { background: radial-gradient(ellipse at 50% 30%, #1768c9 0, #0B4DA2 40%, #062A5E 100%); }
+  #bgPromo::after { content: ""; position: absolute; inset: 0;
+      background: repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 40px, transparent 40px 80px); }
+
+  .h { font-weight: 800; line-height: 1.05; letter-spacing: -1px; }
+  .pill { display: inline-block; padding: 14px 40px; border-radius: 70px; font-weight: 800; }
+  .lbl { font-size: 38px; font-weight: 700; color: var(--navy); text-align: center; width: 260px; }
+
+  /* kad masa (babak 2) */
+  .card { position: absolute; inset: 0; overflow: hidden; }
+  .card .when { position: absolute; top: 360px; left: 0; width: 1080px; text-align: center;
+                font-size: 150px; font-weight: 800; line-height: 1; text-shadow: 0 10px 30px rgba(0,0,0,.18); }
+  .card .sub  { position: absolute; top: 525px; left: 0; width: 1080px; text-align: center; font-size: 50px; font-weight: 600; opacity: .9; }
+  .card .sun  { position: absolute; border-radius: 50%; }
+  .card .drink{ position: absolute; top: 1440px; left: 0; width: 1080px; text-align: center; font-size: 64px; font-weight: 800; }
+  .card .prop { position: absolute; top: 1090px; left: 700px; font-size: 190px; }
+  .card svg.big { position: absolute; top: 700px; left: 330px; }
+
+  .clipcard { width: 840px; height: 980px; left: 120px; border-radius: 48px; overflow: hidden;
+              box-shadow: 0 40px 90px rgba(6,34,79,.35), 0 0 0 10px #fff; background: #111; }
+  .clipcard img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .check { display: flex; align-items: center; gap: 22px; font-size: 52px; font-weight: 800; white-space: nowrap; }
+  .tick { width: 72px; height: 72px; border-radius: 50%; background: var(--yellow); color: var(--navy);
+          display: grid; place-items: center; font-size: 44px; font-weight: 800; flex: none; }

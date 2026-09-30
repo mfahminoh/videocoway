@@ -17,30 +17,29 @@ W, H = 1080, 1920
 CHROMIUM = next((str(x) for x in sorted(pathlib.Path("/opt/pw-browsers").glob("chromium-*/chrome-linux/chrome"))), None)
 
 
-def open_page(p):
+def open_page(p, page_path):
     browser = p.chromium.launch(executable_path=CHROMIUM) if CHROMIUM else p.chromium.launch()
     page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
-    page.goto((ROOT / "src" / "index.html").as_uri())
+    page.goto(pathlib.Path(page_path).resolve().as_uri())
     page.evaluate("document.fonts.ready")
     page.wait_for_function("[...document.images].filter(i => i.getAttribute('src')).every(i => i.complete && i.naturalWidth > 0)")
     return browser, page
 
 
-def stills(times):
-    out = ROOT / "out" / "stills"
+def stills(times, page_path, out):
     out.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
-        browser, page = open_page(p)
+        browser, page = open_page(p, page_path)
         for t in times:
             page.evaluate(f"render({t})")
             page.screenshot(path=str(out / f"t{t:05.2f}.png"))
         browser.close()
 
 
-def video(path):
+def video(path, page_path):
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     with sync_playwright() as p:
-        browser, page = open_page(p)
+        browser, page = open_page(p, page_path)
         duration = page.evaluate("window.DURATION")
         n = int(round(duration * FPS))
         proc = subprocess.Popen(
@@ -63,9 +62,11 @@ def video(path):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--stills")
+    ap.add_argument("--page", default=str(ROOT / "src" / "index.html"), help="halaman animasi (cth. reels/reel1.html)")
+    ap.add_argument("--stills-dir", default=str(ROOT / "out" / "stills"))
     ap.add_argument("--out", default=str(ROOT / "out" / "coway_ice_video_noaudio.mp4"))
     a = ap.parse_args()
     if a.stills:
-        stills([float(x) for x in a.stills.split(",")])
+        stills([float(x) for x in a.stills.split(",")], a.page, pathlib.Path(a.stills_dir))
     else:
-        video(a.out)
+        video(a.out, a.page)
