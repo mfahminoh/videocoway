@@ -51,8 +51,6 @@ V = {
     "v4_kinetic": dict(S=16.4, edl=None, presenter=[], music=dict(bpm=128, mood="hard", drums_from=0.0),
         cuts=[], pops=[11.1, 11.8, 12.5, 13.2],
         impacts=[0.0, 0.6, 1.2, 1.55, 2.5, 2.9, 3.9, 5.0, 5.7, 6.4, 7.2, 7.75, 8.4, 8.85, 9.8, 10.2, 14.6, 14.95]),
-    "v5_compare": dict(S=22.0, edl=None, presenter=[], music=dict(bpm=104, mood="tension_then_lift", drums_from=2.8, lift=17.0),
-        cuts=[2.8, 17.0], pops=[0.2, 0.4, 3.4, 5.9, 8.4, 10.9, 13.4, 17.6], impacts=[1.6, 19.0]),
     # cerita trade-in: kad CTA sendiri (tiada harga promo), VO CTA Gemini sahaja
     "v6_tradein": dict(S=35.0, dur=44.0, trade=True, edl=None, presenter=[],
         music=dict(bpm=92, mood="tension_then_lift", drums_from=20.4, lift=20.4),

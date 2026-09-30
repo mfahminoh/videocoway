@@ -81,17 +81,6 @@ SCRIPTS = {
         *E(16.4),
         ("Kalau beli, biar puas hati. WhatsApp saya sekarang.", 27.6, 32.7),
     ]),
-    "v5_compare": dict(S=22.0, end=39.8, lines=[
-        ("Penapis air biasa, atau Coway Villaem 3?", 0.0, 3.4),
-        ("Spec asas, lawan high spec.", 3.4, 5.9),
-        ("Tangki kecil, lawan tangki paling besar.", 5.9, 8.4),
-        ("Suhu terhad, lawan lebih lapan pilihan suhu.", 8.4, 10.9),
-        ("Selalu panggil technician, lawan jarang rosak.", 10.9, 13.4),
-        ("Cepat nak tukar, lawan pakai bertahun-tahun.", 13.4, 17.0),
-        ("Beli murah, rugi berulang. Pilih yang berbaloi.", 17.0, 22.0),
-        *E(22.0),
-        ("Sekali beli, pakai lama. WhatsApp saya sekarang.", 33.2, 38.3),
-    ]),
     "v6_tradein": dict(S=35.0, end=44.0, lines=[
         ("Orang tua-tua kata, alah membeli, menang memakai.", 0.0, 4.2),
         ("Ada seorang customer saya, beli Coway Villaem tahun dua ribu enam belas.", 4.2, 9.2),

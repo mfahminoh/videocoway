@@ -58,19 +58,6 @@ Nada: laju, tegas, ikut rentak. (Video ni kuat tanpa VO — teks sendiri dah "be
 | 11.0–14.6 | ✓ HIGH SPEC ✓ TANGKI PALING BESAR ✓ 8+ SUHU ✓ TAHAN LASAK | High spec. Tangki paling besar. Lapan lebih pilihan suhu. Tahan lasak. |
 | 14.6–16.4 | COWAY VILLAEM 3 | Coway Villaem 3. |
 
-## V5 — Perbandingan (navy vs biru langit) · 39.8s · `villaem3_v5_compare.mp4`
-Nada: meyakinkan, macam kawan yang bagi nasihat.
-
-| Masa | Visual | Badan VO |
-|---|---|---|
-| 0.0–2.8 | PENAPIS AIR BIASA vs COWAY VILLAEM 3 | Penapis air biasa, atau Coway Villaem 3? |
-| 3.4–5.9 | SPEC: Asas vs HIGH SPEC | Spec asas, lawan high spec. |
-| 5.9–8.4 | TANGKI: Kecil vs Paling besar 11.4L | Tangki kecil, lawan tangki paling besar. |
-| 8.4–10.9 | SUHU: Terhad vs 8+ pilihan | Suhu terhad, lawan lebih lapan pilihan. |
-| 10.9–13.4 | KEROSAKAN: Selalu panggil technician vs Jarang rosak | Selalu panggil technician, lawan jarang rosak. |
-| 13.4–17.0 | JANGKA HAYAT: Cepat nak tukar vs Pakai bertahun-tahun | Cepat nak tukar, lawan pakai bertahun-tahun. |
-| 17.0–22.0 | "Beli murah, rugi berulang." → "PILIHAN YANG BERBALOI." | Beli murah, rugi berulang. Pilih yang berbaloi. |
-
 ## V6 — Alah membeli, menang memakai (hijau & emas, cerita trade-in) · 44s · `villaem3_v6_tradein.mp4`
 Nada: bercerita, nostalgik → bersemangat bila upgrade. Kad CTA sudah guna VO Gemini ("Kalau anda tengah cari penapis air high spec… WhatsApp saya sekarang").
 Tiada harga promo dipaparkan — hanya "harga diskaun" trade-in (beri angka tepat jika mahu dipaparkan).

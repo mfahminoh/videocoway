@@ -27,14 +27,13 @@ python mix.py             # gabung (+ voiceover jika ada voiceover/clips/*.mp3)
 Edit teks/harga terus dalam `src/index.html`; masa babak dalam objek `T`.
 Warna: navy/biru Coway, aksen biru langit; merah/biru panas-sejuk ikut garis pada produk. Font: Poppins.
 
-## 6 video gaya (out/v5/)
+## 5 video gaya (out/v5/)
 | Fail | Gaya | Sudut | Panjang |
 |---|---|---|---|
 | `villaem3_v1_premium.mp4` | Edit footage sinematik, hitam & emas | Premium / high spec | 38.3s |
 | `villaem3_v2_upgrade.mp4` | UGC / POV TikTok, putih & teal | Penapis lama dah habis bayar → upgrade | 36.8s |
 | `villaem3_v3_family.mp4` | Slideshow Ken Burns, krim & oren | Keluarga besar / tangki paling besar | 34.8s |
 | `villaem3_v4_kinetic.mp4` | Kinetic typography, hitam/kuning/merah | Beli tak alang-alang | 34.2s |
-| `villaem3_v5_compare.mp4` | Perbandingan split-screen, navy vs biru | Penapis biasa vs Villaem 3 | 39.8s |
 | `villaem3_v6_tradein.mp4` | Cerita testimoni, hijau & emas | Alah membeli, menang memakai (trade-in) | 44.0s |
 
 Bina semula: `python build_v5.py [--only v1_premium]`. Skrip VO badan: `voiceover/skrip_v5.md`.
