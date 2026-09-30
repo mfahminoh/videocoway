@@ -20,5 +20,7 @@ python mix.py --project airbotol               # -> out/airbotol_final.mp4
 ## Nota suara
 - Suara: Gemini TTS `Sulafat` (perempuan). Klip disimpan dalam `clips/` supaya boleh bina semula tanpa kuota.
 - Dalam teks suara, "Coway" di baris 13 & 17 ditulis **"Kowei"** (ejaan sebutan) kerana suara AI tersilap sebut
-  jenama ("CCTV", "Coenzyme"). Sarikata (`airbotol.srt`) tetap tulis "Coway".
+  jenama ("CCTV", "Coenzyme"). Selepas ditukar, transkripsi mendengarnya sebagai "kuih", sama seperti sebutan
+  Malaysia "Ko-way" dalam rakaman asal ejen. Sarikata (`airbotol.srt`) tetap tulis "Coway".
+- Model suara: `gemini-3.8-flash-lite-tts` (semua 21 baris).
 - "Sonang kojo!" = loghat Negeri Sembilan untuk "senang kerja"; dipaparkan dengan sarikata *(senang kerja)*.
