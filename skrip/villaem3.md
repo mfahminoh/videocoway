@@ -3,9 +3,23 @@
 Harga dalam skrip: **harga asal RM120 → promosi RM74/bulan + rebat ulang tahun Coway RM20 × 7 bulan** (sahkan masih sah).
 Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (perempuan mesra), **Kore** (perempuan pendidik).
 
+## Status semakan (30/9)
+| ID | Status | Catatan |
+|---|---|---|
+| V3-01 | ❌ Ditolak | |
+| V3-02 | ✅ Lulus | |
+| V3-03 | ✅ Lulus (dipinda) | "basi" → "tercemar", tatabahasa dibaiki |
+| V3-04 | ✅ Lulus (dipinda) | Baris 6: "hampir 8 botol besar air standby setiap hari" |
+| V3-05 | ✅ Lulus (dipinda) | Baris 5: suam untuk susu baby, air minum, rendam bihun |
+| V3-06 | ❌ Ditolak | |
+| V3-07 | ✅ Lulus | |
+| V3-08 | ✅ Lulus | |
+| V3-09 | ✅ Lulus | |
+| V3-10 | ✅ Lulus | |
+
 ---
 
-## V3-01 · "Raya tahun ni, 20 orang datang rumah" · Cerita (A) · Orus · ±40s
+## ❌ V3-01 · "Raya tahun ni, 20 orang datang rumah" · Cerita (A) · Orus · ±40s · DITOLAK
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Raya tahun lepas, dua puluh orang datang rumah mertua. | Ikon rumah + ramai orang pop masuk |
@@ -19,7 +33,7 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 9 | Tambah rebat ulang tahun Coway, RM20 selama 7 bulan. | Lencana rebat |
 | 10 | Raya ni, biar air yang cukup, bukan tetamu yang tunggu. WhatsApp saya. | Butang WhatsApp |
 
-## V3-02 · "Kenapa Villaem 3 lagi mahal?" · Chat Story (B) · Aoede · ±40s
+## ✅ V3-02 · "Kenapa Villaem 3 lagi mahal?" · Chat Story (B) · Aoede · ±40s
 | # | Skrip (VO) | Gelembung chat |
 |---|---|---|
 | 1 | Customer selalu tanya saya satu soalan ni. | *(tajuk)* SOALAN PALING KERAP |
@@ -33,20 +47,20 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 9 | "Boleh, set tarikh pasang." | 👤 "Ok, nak slot pasang 👍" |
 | 10 | Nak tanya soalan yang sama? WhatsApp saya. | Butang WhatsApp |
 
-## V3-03 · "Air dalam tangki penapis boleh basi ke?" · Explainer (D) · Kore · ±38s
+## ✅ V3-03 · "Air dalam tangki penapis boleh tercemar ke?" · Explainer (D) · Kore · ±38s
 | # | Skrip (VO) | Visual |
 |---|---|---|
-| 1 | Air dalam tangki penapis, boleh basi ke? | Tangki lutsinar, tanda soal |
-| 2 | Air yang duduk lama dalam tangki tertutup, bakteria boleh membiak. | Titik-titik bakteria animasi |
-| 3 | Sebab tu Villaem 3 ada sistem sterilisasi UV dalam tangki. | Klip `clip2` 4–6s: tangki dengan cahaya UV |
-| 4 | Cahaya UV hapuskan sembilan puluh sembilan perpuluhan sembilan peratus bakteria. | Kaunter 99.9% |
-| 5 | Jadi air yang disimpan pun kekal bersih. | Titisan jernih |
-| 6 | Tambah pula penapisan RO sebelum air masuk tangki. | Lapisan RO menyala |
-| 7 | Tangki besar sebelas perpuluhan empat liter, tapi tetap terjaga. | 11.4L |
-| 8 | Promosi RM74 sebulan, tambah rebat RM20 selama 7 bulan. | Kad harga |
-| 9 | Nak air yang bersih sampai titisan terakhir? WhatsApp saya. | Butang WhatsApp |
+| 1 | Air dalam tangki penapis, boleh tercemar ke? | Tangki lutsinar, tanda soal |
+| 2 | Air yang lama tersimpan dalam tangki boleh dicemari bakteria. | Titik-titik bakteria animasi |
+| 3 | Sebab itu, Villaem 3 dilengkapi sistem sterilisasi UV di dalam tangki. | Klip `clip2` 4–6s: tangki dengan cahaya UV |
+| 4 | Cahaya UV menghapuskan 99.9% bakteria. | Kaunter 99.9% |
+| 5 | Jadi, air yang disimpan kekal bersih. | Titisan jernih |
+| 6 | Sebelum masuk ke tangki, air ditapis dahulu dengan sistem RO. | Lapisan RO menyala |
+| 7 | Tangkinya besar, 11.4 liter, tetapi kebersihannya tetap terjaga. | 11.4L |
+| 8 | Promosi RM74 sebulan, tambah rebat ulang tahun Coway RM20 selama 7 bulan. | Kad harga |
+| 9 | Mahu air yang bersih hingga titisan terakhir? WhatsApp saya. | Butang WhatsApp |
 
-## V3-04 · "11.4 liter tu banyak mana sebenarnya?" · Infografik (G) · Puck · ±35s
+## ✅ V3-04 · "11.4 liter tu banyak mana sebenarnya?" · Infografik (G) · Puck · ±35s
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Sebelas perpuluhan empat liter. Banyak mana tu sebenarnya? | Nombor 11.4L besar |
@@ -54,25 +68,25 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 3 | Enam perpuluhan satu liter suhu bilik. | Bar 6.1L |
 | 4 | Dua perpuluhan enam liter air sejuk. | Bar 2.6L biru |
 | 5 | Dua perpuluhan tujuh liter air panas. | Bar 2.7L merah |
-| 6 | Maksudnya, rumah ramai orang pun tak payah tunggu air sedia. | Ikon keluarga besar |
+| 6 | Maksudnya, anda ada hampir 8 botol besar air standby setiap hari. | 8 botol besar berbaris, label "STANDBY" |
 | 7 | Ini antara tangki paling besar dalam barisan Coway. | Lencana "TANGKI PALING BESAR" |
 | 8 | Harga asal RM120, promosi RM74 sebulan, tambah rebat RM20, 7 bulan. | Kad harga |
 | 9 | WhatsApp saya untuk slot pemasangan percuma. | Butang WhatsApp |
 
-## V3-05 · "95° sampai 40°: setiap suhu untuk apa?" · Listicle (H) · Aoede · ±40s
+## ✅ V3-05 · "95° sampai 40°: setiap suhu untuk apa?" · Listicle (H) · Aoede · ±40s
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Villaem 3 ada lapan suhu. Tapi setiap satu untuk apa? | Panel replika, "8 SUHU" |
 | 2 | Sembilan puluh lima darjah, untuk mi segera dan masakan cepat. | LED 95° + ikon mangkuk |
 | 3 | Lapan puluh, untuk kopi. | LED 80° + cawan kopi |
 | 4 | Tujuh puluh, untuk teh. | LED 70° + teh |
-| 5 | Enam puluh, lima puluh, empat puluh, air suam ikut selera. | LED 60/50/40 |
+| 5 | Air suam pun ada tiga: 40 untuk susu baby, 50 untuk air minum, 60 untuk rendam bihun. | LED 40° + botol susu · 50° + gelas · 60° + mangkuk bihun |
 | 6 | Suhu bilik untuk minum banyak, dan air sejuk bila cuaca panas. | Chip BILIK / SEJUK |
 | 7 | Isipadu pun boleh set, dari seratus dua puluh mililiter sampai tanpa had. | 120ml → ∞ |
 | 8 | Semua ni dalam satu mesin, tangki sebelas perpuluhan empat liter. | Produk |
 | 9 | Promosi RM74 sebulan, tambah rebat RM20 selama 7 bulan. WhatsApp saya. | Kad harga + WhatsApp |
 
-## V3-06 · "Sehari dalam rumah keluarga 6 orang" · Sehari Bersama (I) · Orus · ±42s
+## ❌ V3-06 · "Sehari dalam rumah keluarga 6 orang" · Sehari Bersama (I) · Orus · ±42s · DITOLAK
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Enam orang dalam satu rumah. Jom tengok sehari macam mana. | Jam 6:30 pagi, rumah |
@@ -86,7 +100,7 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 9 | Tambah rebat ulang tahun Coway, RM20 selama 7 bulan. | Lencana rebat |
 | 10 | Rumah ramai? WhatsApp saya. | Butang WhatsApp |
 
-## V3-07 · "Penapis besar = bil elektrik tinggi?" · Mitos vs Fakta (F) · Kore · ±38s
+## ✅ V3-07 · "Penapis besar = bil elektrik tinggi?" · Mitos vs Fakta (F) · Kore · ±38s
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Ramai takut ambil penapis air besar. Katanya bil elektrik naik. | Bil TNB (ikon generik) + tanda soal |
@@ -98,7 +112,7 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 7 | Promosi RM74 sebulan, tambah rebat RM20 selama 7 bulan. | Kad harga |
 | 8 | Ada soalan lain? WhatsApp saya, saya jawab jujur. | Butang WhatsApp |
 
-## V3-08 · "Villaem 3 atau Neon: mana satu untuk rumah anda?" · Versus (E) · Aoede · ±40s
+## ✅ V3-08 · "Villaem 3 atau Neon: mana satu untuk rumah anda?" · Versus (E) · Aoede · ±40s
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Villaem 3 atau Neon? Ni soalan yang ramai tanya. | Skrin belah dua |
@@ -110,7 +124,7 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 7 | Neon, promosi RM54, tambah rebat yang sama. | Harga kanan |
 | 8 | Masih tak pasti? WhatsApp saya, saya bantu pilih. | Butang WhatsApp |
 
-## V3-09 · "Customer jenis beli sekali, pakai lama" · Cerita (A) · Orus · ±40s
+## ✅ V3-09 · "Customer jenis beli sekali, pakai lama" · Cerita (A) · Orus · ±40s
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Tiga tahun saya jual Coway, ada satu jenis customer yang saya paling suka. | "3 TAHUN" + ikon customer |
@@ -123,7 +137,7 @@ Suara: **Orus** (lelaki bercerita), **Puck** (lelaki bertenaga), **Aoede** (pere
 | 8 | Tambah rebat ulang tahun Coway, RM20 selama 7 bulan. | Lencana rebat |
 | 9 | Kalau you pun jenis beli sekali pakai lama, WhatsApp saya. | Butang WhatsApp |
 
-## V3-10 · "3 sebab sekarang masa terbaik pasang Villaem 3" · Kinetic (C) · Puck · ±35s
+## ✅ V3-10 · "3 sebab sekarang masa terbaik pasang Villaem 3" · Kinetic (C) · Puck · ±35s
 | # | Skrip (VO) | Visual |
 |---|---|---|
 | 1 | Tiga sebab sekarang masa paling best pasang Villaem 3. | "3 SEBAB" |
