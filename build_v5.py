@@ -9,6 +9,7 @@ All share the promo/CTA end card (engine.js) voiced with Gemini VO excerpts.
 """
 import argparse
 import io
+import json
 import multiprocessing as mp
 import pathlib
 import subprocess
@@ -115,19 +116,31 @@ def promo_card_sfx(add, sfx, e, pop, whoosh, impact, bell, rng):
     add(sfx, impact(.6), e + 11.7, .3); add(sfx, impact(.6), e + 12.2, .3); add(sfx, pop(900, .2), e + 13.2, .3)
 
 
-def build_audio(name, cfg, dur, path):
+def load_fit(name):
+    """Peta masa dari voiceover/fit_v5.py (jika ada): output-time -> animation-time."""
+    p = OUT / f"fit_{name}.json"
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+def build_audio(name, cfg, dur, path, fit=None):
     rng = np.random.default_rng(abs(hash(name)) % 2 ** 32)
     N = int(dur * SR); S = cfg["S"]; m = cfg["music"]
     mus = np.zeros(N); sfx = np.zeros(N)
+    W_ = (lambda a: float(np.interp(a, fit["anim"], fit["out"]))) if fit else (lambda a: a)      # animasi -> output
+    Winv = (lambda o: float(np.interp(o, fit["out"], fit["anim"]))) if fit else (lambda o: o)   # output -> animasi
 
     def add(buf, sig, t0, g):
         i = int(t0 * SR)
         if 0 <= i < N:
             s = sig[: N - i] * g; buf[i:i + len(s)] += s
 
+    def adds(buf, sig, t0, g):          # SFX ditulis dalam masa animasi
+        add(buf, sig, W_(t0), g)
+
     beat = 60 / m["bpm"]; t0 = 0.0; bi = 0
     while t0 < dur:
-        minor = m["mood"] == "lush" or (m["mood"] == "tension_then_lift" and t0 < m.get("lift", 0) and t0 < S)
+        ta = Winv(t0)
+        minor = m["mood"] == "lush" or (m["mood"] == "tension_then_lift" and ta < m.get("lift", 0) and ta < S)
         ch = (MINOR if minor else MAJOR)[bi % 4]; d = 4 * beat + .4; t = tt(d)
         wave_ = (lambda f, t: 2 * np.abs(2 * ((f * t) % 1) - 1) - 1) if m["mood"] == "warm" else (lambda f, t: np.sin(2 * np.pi * f * t))
         pad = sum(np.sin(2 * np.pi * hz(n) * t + .3 * np.sin(2 * np.pi * .3 * t)) for n in ch[1:]) + .5 * np.sin(2 * np.pi * hz(ch[0]) * t)
@@ -135,7 +148,7 @@ def build_audio(name, cfg, dur, path):
         for b in range(4):
             tb = t0 + b * beat
             add(mus, np.sin(2 * np.pi * hz(ch[0] - 12) * tt(beat * .9)) * env(beat * .9, .01, beat * 1.4), tb, .15)
-            if tb >= m["drums_from"]:
+            if Winv(tb) >= m["drums_from"]:
                 kd = .35
                 add(mus, np.sin(2 * np.pi * np.cumsum(50 + 110 * np.exp(-tt(kd) * 30)) / SR) * env(kd, .001, .3), tb,
                     {"hard": .6, "lush": .3}.get(m["mood"], .42))
@@ -155,24 +168,27 @@ def build_audio(name, cfg, dur, path):
     def bell(f, d=.6): t = tt(d); return (np.sin(2 * np.pi * f * t) + .5 * np.sin(2 * np.pi * 2.76 * f * t)) * env(d, .002, .5)
 
     for c in cfg["cuts"]:
-        add(sfx, whoosh(), c - .2, .22)
+        adds(sfx, whoosh(), c - .2, .22)
     for i, x in enumerate(cfg["pops"]):
-        add(sfx, pop(850 + 60 * (i % 5)), x, .25)
+        adds(sfx, pop(850 + 60 * (i % 5)), x, .25)
     for x in cfg["impacts"]:
-        add(sfx, impact(), x, .45 if m["mood"] == "hard" else .35)
+        adds(sfx, impact(), x, .45 if m["mood"] == "hard" else .35)
     e = S  # kad promo
     if not cfg.get("trade"):
-        promo_card_sfx(add, sfx, e, pop, whoosh, impact, bell, rng)
+        promo_card_sfx(adds, sfx, e, pop, whoosh, impact, bell, rng)
     src = decode(ROOT / "voiceover" / "source" / "gemini_tts_long.wav")
     vo = np.zeros(N)
-    for a, b, at in (TRADE_VO if cfg.get("trade") else [(a, b, e + x) for a, b, x in ENDCARD_VO]):
+    if fit:   # voiceover penuh yang sudah diletak oleh fit_v5.py
+        x = decode(OUT / f"vo_{name}.wav")[:N]
+        vo[:len(x)] = x
+    for a, b, at in ([] if fit else TRADE_VO if cfg.get("trade") else [(a, b, e + x) for a, b, x in ENDCARD_VO]):
         c = src[int((a - .04) * SR): int((b + .12) * SR)].copy()
         f = int(.01 * SR); c[:f] *= np.linspace(0, 1, f); c[-f:] *= np.linspace(1, 0, f)
         i = int((at - .04) * SR); c = c[: N - i]; vo[i:i + len(c)] += c
     vo *= .9 / (np.abs(vo).max() + 1e-9)
 
     pres = np.zeros(N)
-    for clip, a, d, at in cfg.get("presenter", []):
+    for clip, a, d, at in ([] if fit else cfg.get("presenter", [])):
         x = decode(ROOT / "assets" / "clips" / f"clip{clip}.mp4", a, d)
         f = int(.08 * SR); x[:f] *= np.linspace(0, 1, f); x[-f:] *= np.linspace(1, 0, f)
         i = int(at * SR); x = x[: N - i]; pres[i:i + len(x)] += x
@@ -183,7 +199,7 @@ def build_audio(name, cfg, dur, path):
     voice = np.abs(vo) + np.abs(pres)
     speech = movavg((voice > .02).astype(float), int(.25 * SR))
     body_gain = 1.0 if m["mood"] == "hard" else .85
-    g = np.where(t < e, body_gain, .9) * (1 - .6 * np.clip(speech * 3, 0, 1)) * np.clip((dur - t) / 1.5, 0, 1)
+    g = np.where(t < W_(e), body_gain, .9) * (1 - .6 * np.clip(speech * 3, 0, 1)) * np.clip((dur - t) / 1.5, 0, 1)
     mix = mus * g + sfx * .8 + vo + pres
     mix = mix / max(1.0, np.abs(mix).max() / .95)
     with wave.open(str(path), "wb") as w:
@@ -192,15 +208,18 @@ def build_audio(name, cfg, dur, path):
 
 
 # ---------------- video ----------------
-def base_filter(cfg, dur):
+def base_filter(cfg, dur, fit=None):
     parts, labels = [], []
+    W_ = (lambda a: float(np.interp(a, fit["anim"], fit["out"]))) if fit else (lambda a: a)
+    acc = 0.0; body = 0.0
     for i, (clip, a, d) in enumerate(cfg["edl"]):
-        f = f"[{clip - 1}:v]trim={a}:{a + d},setpts=PTS-STARTPTS,fps={FPS},scale={W}:{H}"
+        od = W_(acc + d) - W_(acc)          # tempoh segmen dalam masa output (footage dipercepat/diperlahan)
+        acc += d; body += od
+        f = f"[{clip - 1}:v]trim={a}:{a + d},setpts=(PTS-STARTPTS)*{od / d:.5f},fps={FPS},scale={W}:{H}"
         if cfg.get("zoom"):
-            n = int(d * FPS)
+            n = int(od * FPS)
             f += f",scale={W * 2}:{H * 2},zoompan=z='1+0.06*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}"
         parts.append(f + f",setsar=1[s{i}]"); labels.append(f"[s{i}]")
-    body = sum(d for _, _, d in cfg["edl"])
     parts.append("".join(labels) + f"concat=n={len(labels)}:v=1:a=0,tpad=stop_mode=clone:stop_duration={dur - body + 1}[bg]")
     return ";".join(parts)
 
@@ -208,14 +227,16 @@ def base_filter(cfg, dur):
 def build(name):
     cfg = V[name]
     OUT.mkdir(parents=True, exist_ok=True)
-    dur = cfg.get("dur", cfg["S"] + ENDLEN)
+    fit = load_fit(name)
+    dur = fit["duration"] if fit else cfg.get("dur", cfg["S"] + ENDLEN)
     n = int(round(dur * FPS))
+    anim = (lambda t: float(np.interp(t, fit["out"], fit["anim"]))) if fit else (lambda t: t)
     silent = OUT / f"_{name}.mp4"
     if cfg["edl"]:
         # 1) trek footage dahulu (fail berasingan) supaya paip overlay tak tersekat menunggu nyahkod
         base = OUT / f"_{name}_base.mp4"
         ins = sum((["-i", str(ROOT / "assets" / "clips" / f"clip{k}.mp4")] for k in range(1, 6)), [])
-        subprocess.run([FF, "-y", "-loglevel", "error", *ins, "-filter_complex", base_filter(cfg, dur), "-map", "[bg]",
+        subprocess.run([FF, "-y", "-loglevel", "error", *ins, "-filter_complex", base_filter(cfg, dur, fit), "-map", "[bg]",
                         "-t", str(dur), "-c:v", "libx264", "-preset", "veryfast", "-crf", "14", "-pix_fmt", "yuv420p", str(base)], check=True)
         cmd = [FF, "-y", "-loglevel", "error", "-i", str(base), "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "png", "-i", "-",
                "-filter_complex", "[0:v][1:v]overlay=0:0:shortest=1,format=yuv420p[v]",
@@ -227,14 +248,14 @@ def build(name):
     with sync_playwright() as p:
         b, page = open_page(p, name)
         for i in range(n):
-            page.evaluate(f"seek({i / FPS})")
+            page.evaluate(f"seek({anim(i / FPS)})")
             proc.stdin.write(page.screenshot(type="png", omit_background=bool(cfg["edl"])))
             if i % 150 == 0:
                 print(f"[{name}] frame {i}/{n}", flush=True)
         b.close()
     proc.stdin.close(); proc.wait()
     wav = OUT / f"_{name}.wav"
-    build_audio(name, cfg, dur, wav)
+    build_audio(name, cfg, dur, wav, fit)
     final = OUT / f"villaem3_{name}.mp4"
     subprocess.run([FF, "-y", "-v", "error", "-i", str(silent), "-i", str(wav), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-shortest", "-movflags", "+faststart", str(final)], check=True)
