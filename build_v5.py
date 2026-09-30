@@ -51,7 +51,13 @@ V = {
         impacts=[0.0, 0.6, 1.2, 1.55, 2.5, 2.9, 3.9, 5.0, 5.7, 6.4, 7.2, 7.75, 8.4, 8.85, 9.8, 10.2, 14.6, 14.95]),
     "v5_compare": dict(S=22.0, edl=None, presenter=[], music=dict(bpm=104, mood="tension_then_lift", drums_from=2.8, lift=17.0),
         cuts=[2.8, 17.0], pops=[0.2, 0.4, 3.4, 5.9, 8.4, 10.9, 13.4, 17.6], impacts=[1.6, 19.0]),
+    # cerita trade-in: kad CTA sendiri (tiada harga promo), VO CTA Gemini sahaja
+    "v6_tradein": dict(S=35.0, dur=44.0, trade=True, edl=None, presenter=[],
+        music=dict(bpm=92, mood="tension_then_lift", drums_from=20.4, lift=20.4),
+        cuts=[4.2, 9.2, 15.2, 20.4, 26.4, 31.4, 35.0], pops=[0.4, 5.3, 12.6, 13.3, 14.0, 15.3, 20.5, 21.8, 36.8, 37.2, 37.6],
+        impacts=[4.7, 11.9, 26.5, 28.2]),
 }
+TRADE_VO = [(89.10, 94.39, 38.3)]   # "Kalau anda tengah cari penapis air high spec, ... WhatsApp saya sekarang."
 
 
 def open_page(p, name):
@@ -84,6 +90,22 @@ def lowpass(x, c):
 
 MAJOR = [[48, 55, 60, 64, 67], [43, 55, 59, 62, 67], [45, 57, 60, 64, 69], [41, 53, 57, 60, 65]]
 MINOR = [[45, 57, 60, 64], [41, 53, 57, 60], [48, 55, 60, 64], [43, 55, 59, 62]]
+
+
+def promo_card_sfx(add, sfx, e, pop, whoosh, impact, bell, rng):
+    """SFX untuk kad promo dikongsi (masa ikut engine.js addEndcard)."""
+    add(sfx, whoosh(.6), e - .35, .3)
+    add(sfx, pop(1200), e + .15, .3)
+    add(sfx, lowpass(rng.standard_normal(int(.35 * SR)), 3000) * np.sin(np.pi * tt(.35) / .35), e + 1.1, .15)
+    add(sfx, impact(), e + 2.3, .45)
+    for i, f in enumerate([2637, 3136, 3951, 4699, 5274]):
+        add(sfx, bell(f, .7), e + 3.9 + i * .07, .07)
+    add(sfx, impact(), e + 5.0, .4); add(sfx, pop(1100), e + 5.6, .3)
+    add(sfx, pop(1000), e + 8.9, .25); add(sfx, pop(1150), e + 9.4, .25)
+    for x in (e + 10.1, e + 10.35):
+        add(sfx, bell(1760, .2), x, .12)
+    add(sfx, whoosh(), e + 11.0, .25)
+    add(sfx, impact(.6), e + 11.7, .3); add(sfx, impact(.6), e + 12.2, .3); add(sfx, pop(900, .2), e + 13.2, .3)
 
 
 def build_audio(name, cfg, dur, path):
@@ -132,26 +154,16 @@ def build_audio(name, cfg, dur, path):
     for x in cfg["impacts"]:
         add(sfx, impact(), x, .45 if m["mood"] == "hard" else .35)
     e = S  # kad promo
-    add(sfx, whoosh(.6), e - .35, .3)
-    add(sfx, pop(1200), e + .15, .3)
-    add(sfx, lowpass(rng.standard_normal(int(.35 * SR)), 3000) * np.sin(np.pi * tt(.35) / .35), e + 1.1, .15)
-    add(sfx, impact(), e + 2.3, .45)
-    for i, f in enumerate([2637, 3136, 3951, 4699, 5274]):
-        add(sfx, bell(f, .7), e + 3.9 + i * .07, .07)
-    add(sfx, impact(), e + 5.0, .4); add(sfx, pop(1100), e + 5.6, .3)
-    add(sfx, pop(1000), e + 8.9, .25); add(sfx, pop(1150), e + 9.4, .25)
-    for x in (e + 10.1, e + 10.35):
-        add(sfx, bell(1760, .2), x, .12)
-    add(sfx, whoosh(), e + 11.0, .25)
-    add(sfx, impact(.6), e + 11.7, .3); add(sfx, impact(.6), e + 12.2, .3); add(sfx, pop(900, .2), e + 13.2, .3)
-
+    if not cfg.get("trade"):
+        promo_card_sfx(add, sfx, e, pop, whoosh, impact, bell, rng)
     src = decode(ROOT / "voiceover" / "source" / "gemini_tts_long.wav")
     vo = np.zeros(N)
-    for a, b, at in ENDCARD_VO:
+    for a, b, at in (TRADE_VO if cfg.get("trade") else [(a, b, e + x) for a, b, x in ENDCARD_VO]):
         c = src[int((a - .04) * SR): int((b + .12) * SR)].copy()
         f = int(.01 * SR); c[:f] *= np.linspace(0, 1, f); c[-f:] *= np.linspace(1, 0, f)
-        i = int((e + at - .04) * SR); c = c[: N - i]; vo[i:i + len(c)] += c
+        i = int((at - .04) * SR); c = c[: N - i]; vo[i:i + len(c)] += c
     vo *= .9 / (np.abs(vo).max() + 1e-9)
+
     pres = np.zeros(N)
     for clip, a, d, at in cfg.get("presenter", []):
         x = decode(ROOT / "assets" / "clips" / f"clip{clip}.mp4", a, d)
@@ -189,7 +201,7 @@ def base_filter(cfg, dur):
 def build(name):
     cfg = V[name]
     OUT.mkdir(parents=True, exist_ok=True)
-    dur = cfg["S"] + ENDLEN
+    dur = cfg.get("dur", cfg["S"] + ENDLEN)
     n = int(round(dur * FPS))
     silent = OUT / f"_{name}.mp4"
     if cfg["edl"]:

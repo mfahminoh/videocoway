@@ -70,3 +70,17 @@ Nada: meyakinkan, macam kawan yang bagi nasihat.
 | 10.9–13.4 | KEROSAKAN: Selalu panggil technician vs Jarang rosak | Selalu panggil technician, lawan jarang rosak. |
 | 13.4–17.0 | JANGKA HAYAT: Cepat nak tukar vs Pakai bertahun-tahun | Cepat nak tukar, lawan pakai bertahun-tahun. |
 | 17.0–22.0 | "Beli murah, rugi berulang." → "PILIHAN YANG BERBALOI." | Beli murah, rugi berulang. Pilih yang berbaloi. |
+
+## V6 — Alah membeli, menang memakai (hijau & emas, cerita trade-in) · 44s · `villaem3_v6_tradein.mp4`
+Nada: bercerita, nostalgik → bersemangat bila upgrade. Kad CTA sudah guna VO Gemini ("Kalau anda tengah cari penapis air high spec… WhatsApp saya sekarang").
+Tiada harga promo dipaparkan — hanya "harga diskaun" trade-in (beri angka tepat jika mahu dipaparkan).
+
+| Masa | Visual | Badan VO |
+|---|---|---|
+| 0.0–4.2 | "Kata orang tua-tua: Alah membeli, menang memakai." | Orang tua-tua kata, alah membeli, menang memakai. |
+| 4.2–9.2 | "Kisah customer saya… 2016" + gambar unit lama | Ada seorang customer saya, beli Coway Villaem tahun 2016. |
+| 9.2–15.2 | 2016→2026 "10 TAHUN. Masih OK. Masih steady." | Sepuluh tahun pakai, sampai sekarang masih okay, masih steady. |
+| 15.2–20.4 | Rumah + kotak: "Tahun ni pindah rumah… nak tukar model baru" | Tahun ni dia pindah rumah. Alang-alang pindah, dia nak tukar model baru. |
+| 20.4–26.4 | Unit lama → Villaem 3 "Model yang sama — versi terbaru" | Dan dia pilih model yang sama, versi terbaru, Villaem 3. |
+| 26.4–31.4 | "TRADE-IN — dapat harga DISKAUN" | Dia trade-in unit lama, dapat harga diskaun. |
+| 31.4–35.0 | "Betul lah… alah membeli, menang memakai." | Sepuluh tahun pakai, masih puas hati. Betul lah, alah membeli, menang memakai. |
