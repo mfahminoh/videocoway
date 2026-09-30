@@ -13,8 +13,9 @@ videos/*/vo_raw.wav
 !out/NE[0-9][0-9]_*.mp4
 !out/E04_*.mp4
 !out/README_neon.md
-out/*_noaudio.mp4
 out/NE[0-9][0-9]_final.mp4
 out/E04_final.mp4
 !out/V3[0-9][0-9]_*.mp4
+# fail kerja render sentiasa diabaikan (mesti selepas senarai putih di atas)
+out/*_noaudio.mp4
 out/V3[0-9][0-9]_final.mp4
