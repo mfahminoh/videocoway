@@ -49,6 +49,8 @@ PROJECTS = {
                     clips="neoplus/clips", out="out/neoplus_final.mp4"),
     "neoplus_full": dict(bed="out/neoplus_full_music_sfx.wav", video="out/neoplus_full_video_noaudio.mp4",
                          lines="neoplus_full/lines.json", clips="neoplus_full/clips", out="out/neoplus_full_final.mp4"),
+    "airbotol": dict(bed="out/airbotol_music_sfx.wav", video="out/airbotol_video_noaudio.mp4",
+                     lines="airbotol/lines.json", clips="airbotol/clips", out="out/airbotol_final.mp4"),
 }
 
 
