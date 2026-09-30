@@ -1,0 +1,174 @@
+{
+ "slug": "villaem3-atau-neon",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "pastel"
+  },
+  {
+   "at": "@02",
+   "bg": "pastel"
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "clip": "clip4",
+    "c0": 6.0,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "neon/podium5.jpg",
+    "color": "pastel",
+    "top": 420,
+    "h": 1080,
+    "mask": true
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 240,
+   "size": 110,
+   "html": "VILLAEM 3<br><span style='color:#E86E5A'>ATAU NEON?</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "photo",
+   "in": "@01",
+   "out": "@02",
+   "top": 620,
+   "left": 40,
+   "w": 500,
+   "h": 500,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "photo",
+   "in": "@01%30",
+   "out": "@02",
+   "top": 650,
+   "left": 580,
+   "w": 440,
+   "h": 440,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "vs",
+   "in": "@02",
+   "out": "@04",
+   "top": 420,
+   "left": {
+    "title": "VILLAEM 3",
+    "color": "#0B4DA2",
+    "items": [
+     "Sistem RO",
+     "Tangki 11.4L",
+     "8 suhu",
+     "UV dalam tangki"
+    ],
+    "at": "@02"
+   },
+   "right": {
+    "title": "NEON",
+    "color": "#E86E5A",
+    "items": [
+     "Nanotrap",
+     "Kompak",
+     "3 suhu",
+     "5 warna"
+    ],
+    "at": "@03"
+   }
+  },
+  {
+   "type": "pill",
+   "in": "@04",
+   "out": "@05",
+   "top": 270,
+   "html": "KELUARGA BESAR → VILLAEM 3",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@05",
+   "out": "@06",
+   "top": 250,
+   "html": "RUMAH KECIL → NEON",
+   "bg": "#E86E5A",
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@06",
+   "out": "@08",
+   "top": 330,
+   "size": 80,
+   "html": "VILLAEM 3"
+  },
+  {
+   "type": "title",
+   "in": "@06%20",
+   "out": "@08",
+   "top": 430,
+   "size": 180,
+   "html": "<span style='color:var(--yellow)'>RM74</span><small style='font-size:50px'> /bulan*</small>"
+  },
+  {
+   "type": "title",
+   "in": "@07",
+   "out": "@08",
+   "top": 730,
+   "size": 80,
+   "html": "NEON"
+  },
+  {
+   "type": "title",
+   "in": "@07%20",
+   "out": "@08",
+   "top": 830,
+   "size": 180,
+   "html": "<span style='color:var(--yellow)'>RM54</span><small style='font-size:50px'> /bulan*</small>"
+  },
+  {
+   "type": "pill",
+   "in": "@06%60",
+   "out": "@08",
+   "top": 1110,
+   "html": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 620,
+   "ticks": [
+    "NASIHAT PERCUMA",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

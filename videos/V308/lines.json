@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Vila-em Tiga atau Neon? Ni soalan yang ramai tanya.",
+  "cap": "*Villaem 3* atau *Neon*?"
+ },
+ {
+  "id": "02",
+  "text": "Vila-em Tiga, sistem RO, tangki sebelas perpuluhan empat liter, lapan suhu.",
+  "cap": "*Villaem 3*: RO, *11.4L*, *8 suhu*."
+ },
+ {
+  "id": "03",
+  "text": "Neon, sistem Nanotrap, kompak, tiga suhu, lima warna.",
+  "cap": "*Neon*: Nanotrap, kompak, *3 suhu*, *5 warna*."
+ },
+ {
+  "id": "04",
+  "text": "Keluarga besar, masak banyak, air rumah kurang jernih? Pilih Vila-em Tiga.",
+  "cap": "Keluarga besar, air kurang jernih? *Villaem 3*."
+ },
+ {
+  "id": "05",
+  "text": "Rumah kecil, bajet ketat, air paip dah jernih? Neon memang ngam.",
+  "cap": "Rumah kecil, air jernih? *Neon* ngam."
+ },
+ {
+  "id": "06",
+  "text": "Vila-em Tiga, promosi tujuh puluh empat ringgit, tambah rebat dua puluh ringgit selama tujuh bulan.",
+  "cap": "Villaem 3: promosi *RM74* + rebat *RM20 × 7 bulan*."
+ },
+ {
+  "id": "07",
+  "text": "Neon, promosi lima puluh empat ringgit, tambah rebat yang sama.",
+  "cap": "Neon: promosi *RM54* + rebat sama."
+ },
+ {
+  "id": "08",
+  "text": "Masih tak pasti? WhatsApp saya, saya bantu pilih.",
+  "cap": "Tak pasti? *WhatsApp* saya, saya bantu pilih."
+ }
+]

@@ -1,0 +1,177 @@
+{
+ "slug": "beli-sekali-pakai-lama",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "clip1",
+    "c0": 0.0,
+    "c1": 2.9
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "pastel"
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "clip": "clip4",
+    "c0": 6.0,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "clip5",
+    "c0": 4.5,
+    "c1": 6.2
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "<em>3 TAHUN</em> JUAL COWAY"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@03",
+   "top": 560,
+   "size": 90,
+   "html": "BELI BARANG MURAH<br>BERULANG KALI",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "stamp",
+   "in": "@02%50",
+   "out": "@03",
+   "top": 860,
+   "html": "✕"
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@04",
+   "top": 560,
+   "size": 120,
+   "html": "BELI SEKALI.<br><span style='color:#E86E5A'>PAKAI LAMA.</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 250,
+   "size": 120,
+   "html": "VILLAEM 3"
+  },
+  {
+   "type": "chips",
+   "in": "@05",
+   "out": "@06",
+   "top": 280,
+   "items": [
+    {
+     "text": "SPEC TINGGI",
+     "color": "#fff",
+     "at": "@05"
+    },
+    {
+     "text": "11.4L",
+     "color": "#fff",
+     "at": "@05%35"
+    },
+    {
+     "text": "8 SUHU",
+     "color": "#fff",
+     "at": "@05%70"
+    }
+   ]
+  },
+  {
+   "type": "icon",
+   "in": "@06",
+   "out": "@07",
+   "top": 420,
+   "icon": "shield",
+   "size": 280,
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@06",
+   "out": "@07",
+   "top": 800,
+   "size": 120,
+   "html": "<span style='color:var(--yellow)'>TAHAN LASAK</span>"
+  },
+  {
+   "type": "text",
+   "in": "@06%50",
+   "out": "@07",
+   "top": 960,
+   "size": 46,
+   "html": "Technician pun jarang dapat repair"
+  },
+  {
+   "type": "price",
+   "in": "@07",
+   "out": "@09",
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM120",
+   "strikeAt": "@07%45",
+   "to": "RM74",
+   "toAt": "@07%60",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@08"
+  },
+  {
+   "type": "photo",
+   "in": "@09",
+   "out": null,
+   "top": 150,
+   "left": 310,
+   "w": 460,
+   "h": 460,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 760,
+   "ticks": [
+    "PROMOSI RM74 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

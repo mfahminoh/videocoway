@@ -1,0 +1,178 @@
+{
+ "slug": "kenapa-villaem3-lagi-mahal",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "pastel"
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "clip": "clip5",
+    "c0": 0.3,
+    "c1": 4.2
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "clip2",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "clip": "clip2",
+    "c0": 3.3,
+    "c1": 6.2
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "pastel"
+  },
+  {
+   "at": "@10",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "pill",
+   "in": "@01",
+   "out": "@04",
+   "top": 210,
+   "html": "SOALAN PALING KERAP",
+   "bg": "#0B2F6B",
+   "color": "#fff"
+  },
+  {
+   "type": "photo",
+   "in": "@01",
+   "out": "@02",
+   "top": 520,
+   "left": 260,
+   "w": 560,
+   "h": 560,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "chat",
+   "in": "@02",
+   "out": "@04",
+   "top": 380,
+   "items": [
+    {
+     "side": "L",
+     "text": "Kenapa Villaem 3 lagi mahal dari model lain? 🤔",
+     "at": "@02"
+    },
+    {
+     "side": "R",
+     "text": "Sebab ni jenis beli sekali, pakai lama 🙂",
+     "at": "@03"
+    }
+   ]
+  },
+  {
+   "type": "chips",
+   "in": "@04",
+   "out": "@05",
+   "top": 280,
+   "items": [
+    {
+     "text": "TANGKI 11.4L",
+     "color": "#fff",
+     "at": "@04"
+    }
+   ]
+  },
+  {
+   "type": "chips",
+   "in": "@05",
+   "out": "@06",
+   "top": 280,
+   "items": [
+    {
+     "text": "8 SUHU",
+     "color": "#fff",
+     "at": "@05"
+    },
+    {
+     "text": "40° – 95°",
+     "color": "#fff",
+     "at": "@05%40"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@06",
+   "out": "@07",
+   "top": 270,
+   "html": "UV DALAM TANGKI · 99.9% BAKTERIA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "chat",
+   "in": "@07",
+   "out": "@10",
+   "top": 330,
+   "items": [
+    {
+     "side": "L",
+     "text": "Okay, tapi sebulan berapa? 💸",
+     "at": "@07"
+    },
+    {
+     "side": "R",
+     "text": "Harga asal RM120. Promosi RM74 sebulan ✅",
+     "at": "@08"
+    },
+    {
+     "side": "R",
+     "text": "+ Rebat ulang tahun Coway RM20 × 7 bulan 🎉",
+     "at": "@08%60"
+    },
+    {
+     "side": "L",
+     "text": "Okay, boleh set tarikh pasang 👍",
+     "at": "@09"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "in": "@10",
+   "out": null,
+   "top": 150,
+   "left": 310,
+   "w": 460,
+   "h": 460,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "cta",
+   "in": "@10",
+   "top": 760,
+   "ticks": [
+    "PROMOSI RM74 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

@@ -59,7 +59,7 @@ SP.els.forEach((e, i) => {
     case 'card': h = `<div class="el" style="${top} left:${e.left != null ? e.left : 140}px"><div class="card"><div class="ic" style="background:${e.icbg || '#e3eefc'}">${svgIcon(e.icon, e.iccolor)}</div><div><h3>${e.title}</h3>${e.sub ? `<p>${e.sub}</p>` : ''}</div></div></div>`; break;
     case 'stamp': h = `<div class="el c" style="${top}"><span class="stamp" style="border-color:${e.color || 'var(--red)'}; color:${e.color || 'var(--red)'}; transform:rotate(${e.rot != null ? e.rot : -6}deg)">${e.html}</span></div>`; break;
     case 'icon': h = `<div class="el c" style="${top}">${svgIcon(e.icon, e.color || '#fff', e.size || 220)}</div>`; break;
-    case 'photo': h = `<div class="el" style="${top} left:${e.left}px; width:${e.w}px; height:${e.h}px; border-radius:${e.radius != null ? e.radius : 40}px; overflow:hidden; ${e.shadow === false ? '' : 'box-shadow:0 24px 60px rgba(0,0,0,.35);'}"><img id="${e.id}_img" src="${e.src}" style="width:100%; height:100%; object-fit:${e.fit || 'cover'}; transform-origin:${e.zx || 50}% ${e.zy || 50}%"></div>`; break;
+    case 'photo': h = `<div class="el" style="${top} left:${e.left}px; width:${e.w}px; height:${e.h}px; border-radius:${e.radius != null ? e.radius : 40}px; overflow:hidden; background:${e.bg || 'transparent'}; ${e.shadow === false ? '' : 'box-shadow:0 24px 60px rgba(0,0,0,.35);'}"><img id="${e.id}_img" src="${e.src}" style="width:100%; height:100%; object-fit:${e.fit || 'cover'}; transform-origin:${e.zx || 50}% ${e.zy || 50}%"></div>`; break;
     case 'lineup': h = `<div class="el" style="left:0; top:0; width:1080px; height:1920px; overflow:hidden"><img id="${e.id}_img" src="../../assets/img/neon/lineup5.png" style="position:absolute; width:1080px"></div>
         <div class="el c" id="${e.id}_lab" style="top:${e.labelTop || 1330}px"><span class="pill" style="background:#fff; color:var(--navy); box-shadow:0 10px 30px rgba(0,0,0,.12)"><i id="${e.id}_dot" style="display:inline-block; width:40px; height:40px; border-radius:50%; vertical-align:-6px; margin-right:16px; border:3px solid rgba(0,0,0,.12)"></i><span id="${e.id}_name"></span></span></div>`; break;
     case 'steps': h = `<div class="el c${light}" style="${top}">${e.items.map((s, k) => `<div class="row" id="${e.id}_${k}"><b>${s.num || k + 1}</b><span>${s.text}</span></div>`).join('')}</div>`; break;
@@ -78,6 +78,20 @@ SP.els.forEach((e, i) => {
         <svg style="position:absolute; left:640px; top:20px" width="340" height="340" viewBox="0 0 340 340"><path d="M40 160 L170 50 L300 160" fill="none" stroke="#fff" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/><rect x="75" y="150" width="190" height="160" rx="16" fill="#fff"/><rect x="145" y="210" width="50" height="100" rx="8" fill="#0B4DA2"/></svg>
         <svg id="${e.id}_box" style="position:absolute; left:130px; top:100px" width="230" height="230" viewBox="0 0 64 64"><path d="M8 20 L32 8 L56 20 V46 L32 58 L8 46 Z" fill="#E8B27A" stroke="#8a5a2a" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 20 L32 32 L56 20 M32 32 V58" fill="none" stroke="#8a5a2a" stroke-width="2.5"/></svg>
         <div id="${e.id}_m" style="position:absolute; left:0; width:1080px; top:420px; text-align:center; font-size:56px; font-weight:800; letter-spacing:6px"></div></div>`; break;
+    case 'chat': h = `<div class="el" style="${top} left:70px; width:940px">${e.items.map((c, k) => `<div id="${e.id}_${k}" style="display:flex; justify-content:${c.side === 'R' ? 'flex-end' : 'flex-start'}; margin-bottom:22px">
+        <div style="max-width:720px; padding:24px 32px; border-radius:${c.side === 'R' ? '34px 34px 8px 34px' : '34px 34px 34px 8px'}; font-size:42px; font-weight:600; line-height:1.25;
+          background:${c.side === 'R' ? '#0B4DA2' : '#ffffff'}; color:${c.side === 'R' ? '#fff' : '#0B2F6B'}; box-shadow:0 10px 30px rgba(11,47,107,.15)">
+          <div style="font-size:26px; font-weight:700; opacity:.6; margin-bottom:4px">${c.who || (c.side === 'R' ? 'Agent Coway' : 'Customer')}</div>${c.text}</div></div>`).join('')}</div>`; break;
+    case 'led': h = `<div class="el c" style="${top}"><div style="display:inline-block; width:760px; padding:40px 30px 34px; border-radius:48px; background:linear-gradient(160deg,#3a3f47,#1b1e23);
+          box-shadow:0 30px 80px rgba(0,0,0,.55), inset 0 2px 0 rgba(255,255,255,.12)">
+        <div style="font-size:30px; font-weight:700; color:rgba(255,255,255,.6); text-align:left; padding-left:14px">coway</div>
+        <div style="color:#eef8ff; text-shadow:0 0 18px rgba(170,220,255,.9), 0 0 40px rgba(120,190,255,.5); font-weight:400; line-height:1"><span id="${e.id}_n" style="font-size:250px; letter-spacing:6px"></span><span id="${e.id}_u" style="font-size:70px; vertical-align:top; position:relative; top:30px"></span></div>
+        <div id="${e.id}_l" style="margin-top:18px; display:inline-block; padding:12px 36px; border-radius:40px; background:var(--yellow); color:var(--navy); font-size:46px; font-weight:800"></div></div></div>`; break;
+    case 'bottles': h = `<div class="el c" style="${top}">${Array.from({ length: e.n }, (_, k) => `<svg id="${e.id}_${k}" width="${e.w || 110}" height="${(e.w || 110) * 2.2}" viewBox="0 0 50 110" style="margin:10px 8px">
+        <defs><clipPath id="${e.id}_c${k}"><path d="M18 4 h14 v10 c0 4 10 8 10 20 v66 a6 6 0 0 1 -6 6 h-22 a6 6 0 0 1 -6 -6 v-66 c0 -12 10 -16 10 -20 Z"/></clipPath></defs>
+        <g clip-path="url(#${e.id}_c${k})"><rect id="${e.id}_w${k}" x="0" y="110" width="50" height="110" fill="#5cc8ff"/></g>
+        <path d="M18 4 h14 v10 c0 4 10 8 10 20 v66 a6 6 0 0 1 -6 6 h-22 a6 6 0 0 1 -6 -6 v-66 c0 -12 10 -16 10 -20 Z" fill="rgba(255,255,255,.08)" stroke="#fff" stroke-width="3"/></svg>`).join('')}
+        <div id="${e.id}_t" style="font-size:64px; font-weight:800; margin-top:20px; color:var(--yellow)"></div></div>`; break;
     case 'cta': h = `<div class="el c" style="${top}">${(e.ticks || []).map((s, k) => `<div id="${e.id}_k${k}" style="margin-bottom:22px"><span class="tick"><i>✓</i>${s}</span></div>`).join('')}
         <div id="${e.id}_btn" style="margin-top:50px"><span class="wa">${WA_SVG}${e.button || 'WhatsApp saya'}</span></div>
         <div id="${e.id}_fine" style="margin-top:40px; font-size:28px; color:${e.fineColor || 'rgba(255,255,255,.75)'}; padding:0 80px">${e.fine || '*Tertakluk pada terma &amp; promosi semasa Coway.'}</div></div>`; break;
@@ -141,6 +155,28 @@ function drawEl(e, t) {
       o('b', e.badgeT != null ? e.badgeT : 1e9); o('t', e.toT != null ? e.toT : 1e9);
       $(e.id + '_s').style.transform = `scaleX(${e.strikeT != null ? p(t, e.strikeT, e.strikeT + .3, E.inOut) : 0})`;
       if (e.strikeT != null && t >= e.strikeT) { const k = p(t, e.strikeT, e.strikeT + .4, E.inOut); set(`${e.id}_f`, { s: mix(1, .55, k), o: mix(1, .8, k) }); set(`${e.id}_u`, { o: 1 - k }); }
+      break;
+    }
+    case 'chat': e.items.forEach((c, k) => kid(`${e.id}_${k}`, t, c.t, out, .7)); break;
+    case 'led': {
+      let cur = e.items[0];
+      e.items.forEach(it => { if (t >= it.t) cur = it; });
+      $(e.id + '_n').textContent = cur.num; $(e.id + '_u').textContent = cur.unit != null ? cur.unit : '°C';
+      $(e.id + '_l').textContent = cur.label || '';
+      const k = p(t, cur.t, cur.t + .35, E.back);
+      set(e.id + '_n', { s: 1 + (1 - k) * .15 }); set(e.id + '_l', { o: cur.label ? clamp(k * 2) : 0, s: mix(.6, 1, k) });
+      break;
+    }
+    case 'bottles': {
+      const f0 = e.t0 + (e.delay || .3), per = (e.dur || 2) / e.n, full = e.fill != null ? e.fill : e.n;
+      let shown = 0;
+      for (let k = 0; k < e.n; k++) {
+        const lvl = clamp(full - k) * p(t, f0 + k * per, f0 + (k + 1) * per, E.out);
+        $(`${e.id}_w${k}`).setAttribute('y', 110 - 102 * lvl);
+        shown += lvl;
+        set(`${e.id}_${k}`, { o: clamp((t - e.t0 - k * .05) * 4) });
+      }
+      $(e.id + '_t').textContent = e.label ? e.label.replace('{n}', shown.toFixed(1)) : '';
       break;
     }
     case 'delivery': {

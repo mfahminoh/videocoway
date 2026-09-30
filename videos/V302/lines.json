@@ -1,0 +1,52 @@
+[
+ {
+  "id": "01",
+  "text": "Customer selalu tanya saya satu soalan ni.",
+  "cap": "Customer selalu tanya *satu soalan* ni."
+ },
+ {
+  "id": "02",
+  "text": "Kenapa Vila-em Tiga lagi mahal dari model lain?",
+  "cap": "Kenapa *Villaem 3* lagi mahal?"
+ },
+ {
+  "id": "03",
+  "text": "Jawapan saya, sebab ni jenis beli sekali, pakai lama.",
+  "cap": "Sebab ni jenis *beli sekali, pakai lama*."
+ },
+ {
+  "id": "04",
+  "text": "Tangki paling besar, sebelas perpuluhan empat liter.",
+  "cap": "Tangki paling besar, *11.4 liter*."
+ },
+ {
+  "id": "05",
+  "text": "Lapan pilihan suhu, dari empat puluh sampai sembilan puluh lima darjah.",
+  "cap": "*8 suhu*, dari *40°* sampai *95°*."
+ },
+ {
+  "id": "06",
+  "text": "Dan ada lampu UV dalam tangki, hapuskan sembilan puluh sembilan perpuluhan sembilan peratus bakteria.",
+  "cap": "*UV* dalam tangki, hapuskan *99.9%* bakteria."
+ },
+ {
+  "id": "07",
+  "text": "Okay, tapi sebulan berapa?",
+  "cap": "Okay, tapi *sebulan berapa?*"
+ },
+ {
+  "id": "08",
+  "text": "Harga asal seratus dua puluh ringgit, promosi tujuh puluh empat ringgit sebulan, tambah rebat dua puluh ringgit, tujuh bulan.",
+  "cap": "Asal *RM120*, promosi *RM74*, + rebat *RM20 × 7 bulan*."
+ },
+ {
+  "id": "09",
+  "text": "Okay, boleh set tarikh pasang.",
+  "cap": "Okay, boleh *set tarikh pasang*!"
+ },
+ {
+  "id": "10",
+  "text": "Nak tanya soalan yang sama? WhatsApp saya.",
+  "cap": "Nak tanya juga? *WhatsApp* saya."
+ }
+]

@@ -24,6 +24,7 @@ ROOT = pathlib.Path(__file__).parent.parent
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 OFF, TAIL = 0.3, 2.4
 CLIPDIR = ROOT / "assets" / "clips" / "neon"
+CLIPS = ROOT / "assets" / "clips"          # klip Villaem (clip1..clip5) terus di sini
 
 PAGE = """<!DOCTYPE html>
 <html lang="ms"><head><meta charset="utf-8"><title>{id}</title><link rel="stylesheet" href="../lib/scenes.css"></head>
@@ -91,7 +92,7 @@ def prep(vid, align=True):
         if fd.exists():
             shutil.rmtree(fd)
         fd.mkdir(parents=True)
-        subprocess.run([FF, "-v", "error", "-y", "-ss", str(lo), "-t", str(hi - lo + .1), "-i", str(CLIPDIR / f"{name}.mp4"),
+        subprocess.run([FF, "-v", "error", "-y", "-ss", str(lo), "-t", str(hi - lo + .1), "-i", str(CLIPDIR / f"{name}.mp4" if (CLIPDIR / f"{name}.mp4").exists() else CLIPS / f"{name}.mp4"),
                         "-vf", "fps=30", "-q:v", "3", str(fd / "%04d.jpg")], check=True)
         clips[name] = {"dir": f"../../out/frames/{vid}_{name}/", "n": len(list(fd.glob("*.jpg"))), "start": lo}
 

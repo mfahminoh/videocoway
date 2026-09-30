@@ -16,3 +16,5 @@ videos/*/vo_raw.wav
 out/*_noaudio.mp4
 out/NE[0-9][0-9]_final.mp4
 out/E04_final.mp4
+!out/V3[0-9][0-9]_*.mp4
+out/V3[0-9][0-9]_final.mp4

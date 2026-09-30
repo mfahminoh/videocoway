@@ -1,0 +1,150 @@
+{
+ "slug": "8-suhu-untuk-apa",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "dark"
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "clip": "clip4",
+    "c0": 6.0,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@07",
+   "bg": {
+    "clip": "clip5",
+    "c0": 6.3,
+    "c1": 9.5
+   }
+  },
+  {
+   "at": "@08",
+   "bg": {
+    "clip": "clip5",
+    "c0": 0.3,
+    "c1": 4.2
+   }
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 240,
+   "size": 110,
+   "html": "<span style='color:var(--yellow)'>8 SUHU</span><br>UNTUK APA?"
+  },
+  {
+   "type": "led",
+   "in": "@01%40",
+   "out": "@06",
+   "top": 560,
+   "items": [
+    {
+     "num": "8",
+     "unit": "",
+     "label": "PILIHAN SUHU",
+     "at": "@01%40"
+    },
+    {
+     "num": "95",
+     "label": "MI SEGERA",
+     "at": "@02"
+    },
+    {
+     "num": "80",
+     "label": "KOPI",
+     "at": "@03"
+    },
+    {
+     "num": "70",
+     "label": "TEH",
+     "at": "@04"
+    },
+    {
+     "num": "40",
+     "label": "SUSU BABY",
+     "at": "@05%20"
+    },
+    {
+     "num": "50",
+     "label": "AIR MINUM",
+     "at": "@05%52"
+    },
+    {
+     "num": "60",
+     "label": "RENDAM BIHUN",
+     "at": "@05%78"
+    }
+   ]
+  },
+  {
+   "type": "chips",
+   "in": "@06",
+   "out": "@07",
+   "top": 280,
+   "items": [
+    {
+     "text": "SUHU BILIK",
+     "color": "#e9eef5",
+     "at": "@06"
+    },
+    {
+     "text": "SEJUK",
+     "color": "#6cc2ff",
+     "at": "@06%50"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@07",
+   "out": "@08",
+   "top": 270,
+   "html": "120ml → TANPA HAD",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@08",
+   "out": "@09",
+   "top": 1250,
+   "html": "SATU MESIN · 11.4L",
+   "bg": "#0B2F6B",
+   "color": "#fff"
+  },
+  {
+   "type": "price",
+   "in": "@09",
+   "out": null,
+   "top": 380,
+   "label": "HARGA ASAL",
+   "from": "RM120",
+   "strikeAt": "@09%10",
+   "to": "RM74",
+   "toAt": "@09%22",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@09%45"
+  },
+  {
+   "type": "cta",
+   "in": "@09%75",
+   "top": 1300,
+   "ticks": [],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

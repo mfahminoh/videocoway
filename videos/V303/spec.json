@@ -1,0 +1,188 @@
+{
+ "slug": "air-tangki-boleh-tercemar",
+ "voice": "Kore",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "dark"
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "clip": "clip2",
+    "c0": 3.3,
+    "c1": 6.2
+   }
+  },
+  {
+   "at": "@03%55",
+   "bg": {
+    "clip": "clip4",
+    "c0": 6.0,
+    "c1": 8.3
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "clip5",
+    "c0": 4.5,
+    "c1": 6.2
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": {
+    "clip": "clip5",
+    "c0": 0.3,
+    "c1": 4.2
+   }
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "icon",
+   "in": "@01",
+   "out": "@03",
+   "top": 380,
+   "icon": "drop",
+   "size": 280,
+   "color": "#9aa6b8"
+  },
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@03",
+   "top": 760,
+   "size": 120,
+   "html": "BOLEH <span style='color:var(--yellow)'>TERCEMAR?</span>"
+  },
+  {
+   "type": "text",
+   "in": "@02",
+   "out": "@03",
+   "top": 1110,
+   "size": 50,
+   "html": "Air lama tersimpan boleh dicemari <b style='color:var(--yellow)'>bakteria</b>"
+  },
+  {
+   "type": "pill",
+   "in": "@03",
+   "out": "@04",
+   "top": 270,
+   "html": "STERILISASI UV DALAM TANGKI",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 420,
+   "size": 70,
+   "html": "BAKTERIA DIHAPUSKAN"
+  },
+  {
+   "type": "counter",
+   "in": "@04",
+   "out": "@05",
+   "top": 540,
+   "from": 0,
+   "to": 99.9,
+   "suffix": "%",
+   "decimals": 1,
+   "dur": 1.2
+  },
+  {
+   "type": "pill",
+   "in": "@05",
+   "out": "@06",
+   "top": 270,
+   "html": "AIR KEKAL BERSIH ✓",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "card",
+   "in": "@06",
+   "out": "@07",
+   "top": 760,
+   "icon": "filter",
+   "title": "PENAPISAN RO",
+   "sub": "Sebelum air masuk ke tangki"
+  },
+  {
+   "type": "chips",
+   "in": "@07",
+   "out": "@08",
+   "top": 280,
+   "items": [
+    {
+     "text": "TANGKI 11.4L",
+     "color": "#fff",
+     "at": "@07"
+    },
+    {
+     "text": "TETAP BERSIH ✓",
+     "color": "#fff",
+     "at": "@07%50"
+    }
+   ]
+  },
+  {
+   "type": "price",
+   "in": "@08",
+   "out": "@09",
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM120",
+   "strikeAt": "@08%10",
+   "to": "RM74",
+   "toAt": "@08%25",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@08%55"
+  },
+  {
+   "type": "photo",
+   "in": "@09",
+   "out": null,
+   "top": 150,
+   "left": 310,
+   "w": 460,
+   "h": 460,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 760,
+   "ticks": [
+    "PROMOSI RM74 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}
