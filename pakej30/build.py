@@ -31,19 +31,22 @@ def title_png(path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     # kegelapan lembut di tengah supaya teks sentiasa jelas di atas apa-apa shot
     shade = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(shade).rounded_rectangle([40, 640, W - 40, 1290], 120, fill=150)
+    ImageDraw.Draw(shade).rounded_rectangle([60, 700, W - 60, 1260], 120, fill=175)
     shade = shade.filter(ImageFilter.GaussianBlur(70))
     img.paste(Image.new("RGBA", (W, H), (4, 18, 44, 255)), (0, 0), shade)
 
     d = ImageDraw.Draw(img)
-    f1, f2 = ImageFont.truetype(FONT, 250), ImageFont.truetype(FONT, 132)
     t1, t2 = "30 VIDEO", "WP COWAY"
+    size = 250
+    while ImageDraw.Draw(img).textlength(t1, font=ImageFont.truetype(FONT, size)) + 28 > 920:   # muat dalam skrin
+        size -= 5
+    f1, f2 = ImageFont.truetype(FONT, size), ImageFont.truetype(FONT, 120)
     w1 = d.textlength(t1, font=f1)
-    y1 = 700
+    y1 = 960 - size - 20
     d.text(((W - w1) / 2 + 8, y1 + 12), t1, font=f1, fill=(0, 0, 0, 110))                   # bayang
     d.text(((W - w1) / 2, y1), t1, font=f1, fill="white", stroke_width=14, stroke_fill=(11, 47, 107))
     w2 = d.textlength(t2, font=f2)
-    px, py, ph = (W - w2) / 2 - 50, 1010, 190
+    px, py, ph = (W - w2) / 2 - 50, 1000, 175
     d.rounded_rectangle([px + 8, py + 12, px + w2 + 108, py + ph + 12], 60, fill=(0, 0, 0, 110))
     d.rounded_rectangle([px, py, px + w2 + 100, py + ph], 60, fill=(255, 210, 63), outline=(11, 47, 107), width=10)
     d.text(((W - w2) / 2, py + 12), t2, font=f2, fill=(11, 47, 107))
