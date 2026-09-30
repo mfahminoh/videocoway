@@ -1,9 +1,7 @@
 # Skrip Motion Graphic — "Menyampah Tengok Air Botol"
 
-Pencerita: **ejen jualan Coway** (orang pertama, "saya"), bercerita pasal customer terbaru.
+Pencerita: **ejen jualan Coway, suara perempuan** (orang pertama, "saya"), bercerita pasal customer terbaru.
 Format: portrait 1080×1920. Anggaran tempoh: **±70–80 saat**. Nada: santai, macam bercerita kepada kawan.
-
-> ⚠️ Perlu disahkan sebelum produksi: ayat harga baris 19 (lihat nota di bawah).
 
 ## HOOK
 
@@ -31,7 +29,7 @@ Format: portrait 1080×1920. Anggaran tempoh: **±70–80 saat**. Nada: santai, 
 | # | VO | Visual |
 |---|----|--------|
 | 12 | Sampailah dia balik kampung. Tengok mak dia dah pasang Coway. | Tirai ke rumah kampung (ilustrasi rumah kayu). Dapur mak dengan Neo Plus (foto produk). |
-| 13 | "Eh, mak pasang Coway?" Mak dia jawab, "Senang kau jo!" | Dua gelembung dialog; "Senang kau jo!" melantun dengan gaya lawak. |
+| 13 | "Eh, mak pasang Coway?" Mak dia jawab, "Sonang kojo!" | Dua gelembung dialog; "Sonang kojo!" melantun dengan gaya lawak, sarikata kecil di bawah: *(senang kerja)*. |
 | 14 | Dia rasa air tu sedap, kena dengan tekak. Air sejuk pun ada, tak payah simpan dalam peti ais. | Gelas air sejuk berembun; ikon peti ais dipangkah. |
 | 15 | Balik rumah sendiri, tengok balik kotak air tepi dapur… makin tak best. | Kembali ke dapur sendiri; timbunan kotak dengan awan hitam kecil. |
 | 16 | Dua tiga bulan lepas tu, dia tak tahan dah. "Aku nak pasang penapis air jugak." | Kalendar berlari 3 bulan; ekspresi "cukup!"; kotak-kotak meletup hilang. |
@@ -42,7 +40,7 @@ Format: portrait 1080×1920. Anggaran tempoh: **±70–80 saat**. Nada: santai, 
 |---|----|--------|
 | 17 | Minggu lepas, saya pasangkan Coway Neo Plus untuk dia. | Pendedahan produk dengan cahaya, "COWAY Neo Plus". |
 | 18 | Air panas, air sejuk, suhu bilik. Semua dah ada. Sesuai untuk keluarga kecil, bawah lima orang. | 3 cip suhu (merah/biru/hijau); ikon keluarga 3 orang dengan "< 5 orang". |
-| 19 | Sebulan tak sampai enam puluh ringgit. Plus rebat dua puluh ringgit, selama tujuh bulan. | Kad harga: "< RM60/bulan" + lencana "Rebat RM20 × 7 bulan". *(sahkan — lihat nota)* |
+| 19 | Sebulan lima puluh sembilan ringgit je. Tapi tujuh bulan pertama, cuma dua puluh ringgit! | Kad harga: "RM59/bulan" → lencana besar "7 BULAN PERTAMA **RM20/bulan**"; nota kecil "Bulan ke-8 dan seterusnya RM59". |
 | 20 | Kata dia, berbaloi-baloi. | Cop "BERBALOI!" + ruang dapur kini lapang, tiada kotak. |
 
 ## CTA
@@ -54,11 +52,11 @@ Format: portrait 1080×1920. Anggaran tempoh: **±70–80 saat**. Nada: santai, 
 ---
 
 ## Nota
-1. **Harga (baris 19) — perlu disahkan.** Untuk video Neo Plus sebelum ni, promo ditulis sebagai
-   "7 bulan pertama **RM20/bulan**, kemudian RM59/bulan". Dalam cerita ni pula disebut
-   "tak sampai RM60 sebulan, **plus rebat RM20** selama 7 bulan", yang boleh difahami sebagai
-   RM59 − RM20 = **RM39/bulan** untuk 7 bulan pertama. Pilih satu versi yang tepat supaya semua iklan konsisten.
-2. **"Senang kau jo!"** (loghat Negeri Sembilan) menambah perisa. Kalau guna suara AI, loghat mungkin kurang tepat;
-   alternatif: "Senang kau je!".
-3. Cerita customer sebenar: jangan dedahkan nama/wajah tanpa izin. Skrip ni tak guna nama.
-4. Nombor 48 botol seminggu (2 kotak × 24) diambil terus dari cerita customer.
+1. **Harga (disahkan):** 7 bulan pertama **RM20/bulan**; mulai bulan ke-8 **RM59/bulan** sehingga habis tempoh
+   sewa beli. Sama dengan video & copywriting Neo Plus yang lain. Dalam video, letak "*Tertakluk kepada terma & syarat".
+2. **"Sonang kojo!"** = loghat Negeri Sembilan untuk "senang kerja". Papar sarikata *(senang kerja)* supaya penonton
+   negeri lain faham. Dengar semula sebutan suara AI untuk baris ni; kalau tak menjadi, rakam baris ni sahaja
+   dengan suara sendiri.
+3. Suara pencerita: **perempuan** (Gemini TTS, suara `Sulafat`, sama seperti video Neo Plus).
+4. Cerita customer sebenar: jangan dedahkan nama/wajah tanpa izin. Skrip ni tak guna nama.
+5. Nombor 48 botol seminggu (2 kotak × 24) diambil terus dari cerita customer.
