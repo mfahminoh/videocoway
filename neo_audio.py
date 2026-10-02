@@ -1,5 +1,5 @@
 """Muzik ceria + SFX kertas + voiceover Gemini (voiceover/source/neo15_tts.wav, dilajukan 1.2x) -> out/neo_papercut_final.mp4"""
-import subprocess, wave, numpy as np, imageio_ffmpeg, pathlib
+import sys, subprocess, wave, numpy as np, imageio_ffmpeg, pathlib
 R = pathlib.Path(__file__).parent; FF = imageio_ffmpeg.get_ffmpeg_exe(); SR = 44100; D = 15.0; N = int(D * SR)
 rng = np.random.default_rng(5); t = lambda d: np.arange(int(d * SR)) / SR
 hz = lambda m: 440 * 2 ** ((m - 69) / 12)
@@ -35,5 +35,5 @@ m = (mus * .8 * (1 - .6 * np.clip(act * 3, 0, 1)) + sfx) * fade + vo
 m /= max(1, np.abs(m).max() / .95)
 tmp = R / "out/_neo.wav"
 with wave.open(str(tmp), "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((m * 32767).astype("<i2").tobytes())
-subprocess.run([FF, "-y", "-v", "error", "-i", str(R / "out/neo_papercut_noaudio.mp4"), "-i", str(tmp), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(R / "out/neo_papercut_final.mp4")], check=True)
+subprocess.run([FF, "-y", "-v", "error", "-i", str(R / f"out/{sys.argv[1]}_noaudio.mp4"), "-i", str(tmp), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(R / f"out/{sys.argv[1]}_final.mp4")], check=True)
 tmp.unlink(); print("ok")

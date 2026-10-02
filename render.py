@@ -26,7 +26,7 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 def open_page(p, src):
     browser = p.chromium.launch(executable_path=CHROMIUM) if CHROMIUM else p.chromium.launch()
     page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
-    page.goto((ROOT / "src" / src).as_uri())
+    page.goto((ROOT / "src" / src.split("?")[0]).as_uri() + ("?" + src.split("?")[1] if "?" in src else ""))
     page.evaluate("document.fonts.ready")
     page.wait_for_function("[...document.images].every(i => i.complete)")
     return browser, page

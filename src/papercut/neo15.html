@@ -132,10 +132,8 @@ scene(3.2, 6.2, '#f2b84b', layers(['#ffe08a','#ff9d6b','#c8553d'], 1180, 100) + 
 scene(6.2, 9.2, '#e9895b', layers(['#f6c9a0','#c8553d','#7a2f2a'], 1100, 90) + `
   ${L('Size <span style="color:#ff6b57">COMPACT</span>', 100, 130, {in:.1, r:1.5})}
   ${L('muat dapur kecil', 62, 300, {in:.5, r:-1.5, c:'c1'})}
-  ${P('left:70px; top:640px', `<svg class="paper" width="430" height="600" viewBox="0 0 430 600"><rect x="6" y="6" width="418" height="588" rx="20" fill="#fffaf0"/><rect x="40" y="40" width="350" height="230" rx="14" fill="#dccdae"/><rect x="40" y="310" width="350" height="250" rx="14" fill="#dccdae"/><circle cx="360" cy="150" r="14" fill="#9a8a68"/><circle cx="360" cy="430" r="14" fill="#9a8a68"/></svg>`, {in:.6, a:'left'})}
-  ${P('left:560px; top:640px', unit(320), {in:1.0})}
-  ${P('left:520px; top:1330px', `<svg class="flat" width="400" height="90" viewBox="0 0 400 90"><path d="M20 45 H380 M20 45 l30 -26 M20 45 l30 26 M380 45 l-30 -26 M380 45 l-30 26" stroke="#fffaf0" stroke-width="12" stroke-linecap="round" fill="none"/></svg>`, {in:1.7})}
-  ${L('3 suhu · 1 mesin kecil', 52, 1470, {in:2.0, c:'c3'})}
+  ${P('left:110px; top:470px', `<div class="paper" style="width:860px;height:860px;background:#fffaf0;padding:18px;border-radius:10px"><img src="../../assets/img/neo-lineup.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>`, {in:.6, a:'left'})}
+  ${L('3 suhu · 1 mesin kecil', 52, 1470, {in:1.8, c:'c3'})}
 `);
 
 // 4 — promo
@@ -145,17 +143,16 @@ scene(9.2, 12.2, '#1b6e7a', layers(['#2a8c94','#ffd23f','#ff6b57'], 1300, 90) + 
   ${L('RM20 × 7 BULAN', 112, 470, {in:.7, c:'c1', r:-2})}
   ${L('✓ Pemasangan PERCUMA', 58, 780, {in:1.4, r:1.5})}
   ${L('✓ Servis setiap 2 / 4 bulan', 54, 930, {in:1.8, r:-1.5})}
-  ${P('left:90px; top:1230px', unit(210), {in:.9})}
+  ${P('left:60px; top:1180px; transform-origin:0 0', `<div class="paper" style="width:330px;height:330px;background:#fffaf0;padding:18px;border-radius:10px"><img src="../../assets/img/neo-colours.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>`, {in:.9})}
   ${L('LAST CALL!', 84, 1560, {in:2.3, c:'c2', r:-3})}
   <div id="conf"></div>
 `);
 
 // 5 — CTA
 scene(12.2, 15.0, '#ffd23f', layers(['#ffe590','#ff9d6b','#c8553d'], 1250, 100) + `
-  ${P('left:70px; top:520px', unit(380), {in:.1})}
-  ${L(NAME, 92, 170, {in:.1, c:'c3', r:-2})}
-  ${L('Sesuai untuk<br>keluarga kecil', 62, 330, {in:.4, r:1.5}).replace('class="el c" style="top','class="el" style="left:470px; width:560px; top:640px;').replace('top:330px','')}
-  ${L('3 suhu · compact', 54, 1010, {in:.7, c:'c1'}).replace('class="el c" style="top','class="el" style="left:470px; width:560px; top')}
+  ${L(NAME, 92, 150, {in:.1, c:'c3', r:-2})}
+  ${L('Sesuai untuk keluarga kecil', 52, 310, {in:.4, r:1.5})}
+  ${P('left:150px; top:470px', `<div class="paper" style="width:780px;height:780px;background:#fffaf0;padding:18px;border-radius:10px"><img src="../../assets/img/neo-colours.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>`, {in:.7})}
   <div class="el c" style="top:1380px" data-in="1.0" data-a="pop"><span class="flat" style="display:inline-flex; align-items:center; gap:22px; background:#25d366; color:#fff; font-weight:800; font-size:52px; padding:30px 56px; border-radius:90px; white-space:nowrap">${wa} WHATSAPP SAYA</span></div>
   ${L('Tanya promo hari ni', 50, 1600, {in:1.5})}
 `);
@@ -198,6 +195,12 @@ function seek(t) {
     d.style.visibility = pk > .3 && pk < 3.1 ? 'visible' : 'hidden';
     d.style.transform = `translateY(${y}px) rotate(${q * 120 + i * 40}deg)`;
   });
+}
+if (/[?&]wm=1/.test(location.search)) {
+  const tile = Array.from({length: 16}, (_, i) => `<span style="position:absolute; left:${(i % 2) * 760 - 250 + (Math.floor(i / 2) % 2) * 380}px; top:${Math.floor(i / 2) * 330 - 150}px">SAMPLE</span>`).join('');
+  stage.insertAdjacentHTML('beforeend', `<div style="position:absolute; inset:0; z-index:99; pointer-events:none; overflow:hidden">
+    <div style="position:absolute; inset:-300px; transform:rotate(-28deg); font:800 120px P,sans-serif; letter-spacing:8px; color:rgba(255,255,255,.34); text-shadow:0 0 0 rgba(0,0,0,.2); -webkit-text-stroke:3px rgba(0,0,0,.18)">${tile}</div>
+    <div style="position:absolute; left:0; right:0; bottom:60px; text-align:center"><span style="display:inline-block; background:rgba(16,52,58,.88); color:#fff; font:800 40px P,sans-serif; padding:18px 38px; border-radius:16px; border:4px solid #ffd23f">SAMPLE · DM untuk beli pakej 30 video</span></div></div>`);
 }
 window.DURATION = 15.0; window.seek = seek; seek(0);
 </script></body></html>
