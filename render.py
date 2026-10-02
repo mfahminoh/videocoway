@@ -28,7 +28,7 @@ def open_page(p, src):
     page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
     page.goto((ROOT / "src" / src).as_uri())
     page.evaluate("document.fonts.ready")
-    page.wait_for_function("[...document.images].every(i => i.complete && i.naturalWidth > 0)")
+    page.wait_for_function("[...document.images].every(i => i.complete)")
     return browser, page
 
 
