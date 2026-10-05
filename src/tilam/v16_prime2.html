@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>Coway Prime II — Bedah Tilam (Video 16)</title>
+<style>
+@font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+@font-face { font-family: S; src: url(../../assets/fonts/PlayfairDisplay.ttf); }
+:root { --navy:#0a1530; --navy2:#16295a; --gold:#e2bd72; --gold2:#f6dca0; --cloud:#f4f6fb; --cyan:#7fd6ff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy); font-family:P,sans-serif; color:#fff; }
+#stage { position:relative; width:1080px; height:1920px; overflow:hidden;
+  background: radial-gradient(1100px 900px at 50% 58%, #1d3570 0%, #12224b 45%, #0a1530 100%); }
+.abs { position:absolute; }
+#stars, #wrap, #fx { position:absolute; left:0; top:0; }
+#wrap { transform-origin:0 0; }
+.slab { position:absolute; overflow:visible; }
+.txt { position:absolute; left:0; width:1080px; text-align:center; }
+.kick { font-weight:700; font-size:34px; letter-spacing:10px; color:var(--gold); }
+.title { font-weight:800; font-size:92px; line-height:1.04; margin-top:14px; text-shadow:0 8px 30px rgba(0,0,0,.45); }
+.title .g { color:var(--gold2); }
+.sub { font-weight:500; font-size:42px; margin-top:20px; color:rgba(255,255,255,.82); }
+.badge { position:absolute; display:inline-flex; align-items:center; gap:14px; white-space:nowrap; font-weight:700; font-size:38px;
+  padding:18px 34px; border-radius:60px; background:rgba(10,21,48,.72); border:3px solid var(--gold); color:#fff;
+  box-shadow:0 14px 40px rgba(0,0,0,.35); }
+.badge i { font-style:normal; color:var(--gold2); }
+#cap { position:absolute; left:70px; width:940px; top:1660px; text-align:center; }
+#cap span { display:inline; font-weight:600; font-size:44px; line-height:1.5; padding:6px 18px; border-radius:12px;
+  background:rgba(4,10,26,.62); -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+#topshade { position:absolute; left:0; top:0; width:1080px; height:720px;
+  background:linear-gradient(to bottom, rgba(10,21,48,.95) 0%, rgba(10,21,48,.75) 55%, rgba(10,21,48,0) 100%); }
+#botshade { position:absolute; left:0; top:1480px; width:1080px; height:440px;
+  background:linear-gradient(to top, rgba(10,21,48,.92) 0%, rgba(10,21,48,.6) 60%, rgba(10,21,48,0) 100%); }
+.wa { display:flex; align-items:center; justify-content:center; gap:24px; width:880px; height:150px; border-radius:90px;
+  background:#25d366; font-weight:800; font-size:48px; color:#fff; box-shadow:0 22px 60px rgba(37,211,102,.45); }
+</style>
+<script src="v16_timing.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="pQuilt" width="64" height="64" patternUnits="userSpaceOnUse">
+      <rect width="64" height="64" fill="#f6f8fc"/>
+      <path d="M0 32 L32 0 L64 32 L32 64 Z" fill="none" stroke="#c8d2e2" stroke-width="2.4"/>
+      <circle cx="16" cy="16" r="2.2" fill="#7fd6ff"/><circle cx="48" cy="48" r="2.2" fill="#7fd6ff"/>
+      <circle cx="48" cy="16" r="1.8" fill="#4a5466"/><circle cx="16" cy="48" r="1.8" fill="#4a5466"/>
+    </pattern>
+    <pattern id="pYarn" width="18" height="22" patternUnits="userSpaceOnUse">
+      <rect width="18" height="22" fill="#e9eef6"/><path d="M0 11 H18" stroke="#9fdcff" stroke-width="3"/><path d="M9 0 V22" stroke="#59627a" stroke-width="1.6"/>
+    </pattern>
+    <radialGradient id="gPuff"><stop offset="0" stop-color="#ffffff"/><stop offset=".75" stop-color="#f2efe6"/><stop offset="1" stop-color="#dcd6c6"/></radialGradient>
+    <pattern id="pTopper" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="#e4dfd0"/><circle cx="40" cy="40" r="37" fill="url(#gPuff)"/>
+    </pattern>
+    <pattern id="pTopperF" width="40" height="48" patternUnits="userSpaceOnUse">
+      <rect width="40" height="48" fill="#f1eee5"/><path d="M20 0 V48" stroke="#d6cfbd" stroke-width="2"/>
+      <path d="M0 24 Q10 16 20 24 T40 24" fill="none" stroke="#e1dbcb" stroke-width="2"/>
+    </pattern>
+    <pattern id="pLatex" width="26" height="26" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#f2e1ad"/><circle cx="7" cy="7" r="4" fill="#d8c07f"/><circle cx="20" cy="20" r="4" fill="#d8c07f"/>
+    </pattern>
+    <pattern id="pFoam" width="34" height="30" patternUnits="userSpaceOnUse">
+      <rect width="34" height="30" fill="#c9d7e8"/>
+      <ellipse cx="8" cy="8" rx="6" ry="5" fill="#a9bdd6"/><ellipse cx="25" cy="22" rx="6" ry="5" fill="#a9bdd6"/>
+      <circle cx="26" cy="6" r="2.5" fill="#b4c6dc"/><circle cx="9" cy="23" r="2.5" fill="#b4c6dc"/>
+    </pattern>
+    <pattern id="pPocket" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#dfe5ee"/><circle cx="20" cy="20" r="16" fill="#eef2f7" stroke="#b5c0d0" stroke-width="2.5"/>
+      <circle cx="20" cy="20" r="6" fill="none" stroke="#c6cfdc" stroke-width="2"/>
+    </pattern>
+    <pattern id="pCoil" width="40" height="128" patternUnits="userSpaceOnUse">
+      <rect width="40" height="128" fill="#d9e0ea"/>
+      <rect x="2" y="3" width="36" height="122" rx="12" fill="#e9eef5" stroke="#bfc9d7" stroke-width="2"/>
+      <path d="M8 12 L32 20 L8 28 L32 36 L8 44 L32 52 L8 60 L32 68 L8 76 L32 84 L8 92 L32 100 L8 108 L32 116" fill="none" stroke="#7d8aa2" stroke-width="3.2" stroke-linejoin="round"/>
+    </pattern>
+    <pattern id="pCover" width="64" height="64" patternUnits="userSpaceOnUse">
+      <rect width="64" height="64" fill="#f7f8fb"/>
+      <path d="M0 32 L32 0 L64 32 L32 64 Z" fill="none" stroke="#d3dae6" stroke-width="2.2"/>
+      <circle cx="32" cy="32" r="3" fill="#cfd7e4"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div id="stage">
+  <svg id="stars" width="1080" height="1920"></svg>
+  <div id="wrap"></div>
+  <div id="topshade"></div>
+  <div id="botshade"></div>
+  <div id="ui"></div>
+  <div id="cap"></div>
+</div>
+
+<script>
+/* ===================== masa (dari tilam/vo/v16_timing.json melalui v16_timing.js) ===================== */
+const TM = {}; (window.TIMING || []).forEach(x => TM[x.scene] = x);
+const ORDER = ['hook', 'fabric', 'topper', 'latex', 'foam', 'spring', 'coconut', 'assemble', 'price', 'cta'];
+const HOLD = 2.6;                                         // tahan CTA selepas VO tamat
+const S = k => TM[k].start, Eo = k => TM[k].end;
+const NEXT = k => { const i = ORDER.indexOf(k); return i < ORDER.length - 1 ? S(ORDER[i + 1]) : DURATION; };
+const DURATION = Eo('cta') + HOLD;
+
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const outC = x => 1 - Math.pow(1 - x, 3), inOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const backOut = x => { const c1 = 1.6, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const P = (t, a, b, e = outC) => e(clamp((t - a) / (b - a)));
+const mix = (a, b, k) => a + (b - a) * k;
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+/* ===================== geometri lapisan ===================== */
+const W = 640, DX = 220, DY = 140, DL = 360;              // muka depan W×h, muka atas condong (DX,DY)
+const LAYERS = [
+  { id: 'fabric',  h: 22,  col: '#eef2f8', top: 'url(#pQuilt)',  front: 'url(#pYarn)' },
+  { id: 'topper',  h: 48,  col: '#efebe0', top: 'url(#pTopper)', front: 'url(#pTopperF)' },
+  { id: 'latex',   h: 60,  col: '#f0dda6', top: 'url(#pLatex)',  front: 'url(#pLatex)', zones: [.16, .19, .3, .19, .16] },
+  { id: 'foam',    h: 44,  col: '#c6d4e6', top: 'url(#pFoam)',   front: 'url(#pFoam)' },
+  { id: 'spring',  h: 128, col: '#dbe2ec', top: 'url(#pPocket)', front: 'url(#pCoil)', zones: [.12, .13, .15, .2, .15, .13, .12] },
+  { id: 'coconut', h: 38,  col: '#7b4f2e', top: '#7b4f2e',       front: '#6e4426' },
+];
+const TOTAL_H = LAYERS.reduce((a, l) => a + l.h, 0);
+const GAP = 112;
+LAYERS.forEach((l, i) => {
+  l.A = LAYERS.slice(0, i).reduce((a, x) => a + x.h, 0);   // y bila tercantum
+  l.X = l.A + i * GAP;                                    // y bila terburai
+});
+
+const topM = `matrix(1,0,${DX / DL},${-DY / DL},0,${DY})`;
+const sideM = (x0) => `matrix(${DX / DL},${-DY / DL},0,1,${x0},${DY})`;
+
+function fibres(w, h, n, cols) {
+  let s = '';
+  for (let i = 0; i < n; i++) {
+    const x = rnd() * w, y = rnd() * h, a = rnd() * Math.PI, l = 10 + rnd() * 26;
+    s += `<path d="M${x.toFixed(1)} ${y.toFixed(1)} q${(Math.cos(a) * l / 2).toFixed(1)} ${(rnd() * 8 - 4).toFixed(1)} ${(Math.cos(a) * l).toFixed(1)} ${(Math.sin(a) * l).toFixed(1)}" stroke="${cols[i % cols.length]}" stroke-width="${(1.4 + rnd() * 1.6).toFixed(1)}" fill="none" stroke-linecap="round"/>`;
+  }
+  return s;
+}
+
+function zonesSvg(l) {
+  if (!l.zones) return '';
+  let x = 0, s = '';
+  l.zones.forEach((z, j) => {
+    const w = z * W;
+    s += `<rect class="zone" data-j="${j}" x="${x + 3}" y="6" width="${w - 6}" height="${DL - 12}" rx="10" fill="#e2bd72" opacity="0"/>`;
+    if (j) s += `<line x1="${x}" y1="0" x2="${x}" y2="${DL}" stroke="rgba(10,21,48,.18)" stroke-width="3" stroke-dasharray="10 10"/>`;
+    x += w;
+  });
+  return s;
+}
+
+function airflow() {   // garis aliran udara pada muka atas foam
+  let s = '';
+  for (let k = 0; k < 4; k++) {
+    const y = 60 + k * 80;
+    s += `<path class="air" d="M-40 ${y} q80 -26 160 0 t160 0 t160 0 t160 0 t160 0" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="70 90" opacity="0"/>`;
+  }
+  return s;
+}
+
+function slabSvg(l) {
+  const h = l.h, wtot = W + DX;
+  const coir = l.id === 'coconut';
+  const topFill = coir ? `<rect width="${W}" height="${DL}" fill="${l.top}"/>${fibres(W, DL, 520, ['#a8774a', '#5a361c', '#c08d5c', '#8a5a33'])}` : `<rect width="${W}" height="${DL}" fill="${l.top}"/>`;
+  const frontFill = coir ? `<rect width="${W}" height="${h}" fill="${l.front}"/>${fibres(W, h, 160, ['#a8774a', '#4f2f18', '#b98656'])}` : `<rect width="${W}" height="${h}" fill="${l.front}"/>`;
+  return `<svg class="slab" id="L_${l.id}" width="${wtot}" height="${DY + h + 4}" viewBox="0 0 ${wtot} ${DY + h + 4}">
+    <defs><clipPath id="ct_${l.id}"><rect width="${W}" height="${DL}" rx="18"/></clipPath>
+          <clipPath id="cf_${l.id}"><rect width="${W}" height="${h}"/></clipPath></defs>
+    <g transform="${sideM(W)}"><rect width="${DL}" height="${h}" fill="${l.col}"/><rect width="${DL}" height="${h}" fill="#000" opacity=".34"/></g>
+    <g transform="translate(0,${DY})" clip-path="url(#cf_${l.id})">${frontFill}<rect width="${W}" height="${h}" fill="#000" opacity=".13"/>
+      <rect width="${W}" height="3" fill="#fff" opacity=".35"/></g>
+    <g transform="${topM}"><g clip-path="url(#ct_${l.id})">${topFill}${zonesSvg(l)}${l.id === 'foam' ? airflow() : ''}</g>
+      <rect width="${W}" height="${DL}" rx="18" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/></g>
+  </svg>`;
+}
+
+function coverSvg() {   // sarung tilam siap (bila tercantum)
+  const h = TOTAL_H, wtot = W + DX;
+  return `<svg class="slab" id="L_cover" width="${wtot}" height="${DY + h + 4}" viewBox="0 0 ${wtot} ${DY + h + 4}">
+    <g transform="${sideM(W)}"><rect width="${DL}" height="${h}" fill="#e9edf4"/><rect width="${DL}" height="${h}" fill="#000" opacity=".3"/>
+      <rect y="${h * .62}" width="${DL}" height="${h * .3}" fill="#0f1d40" opacity=".9"/></g>
+    <g transform="translate(0,${DY})">
+      <rect width="${W}" height="${h}" fill="#eef1f7"/>
+      <rect y="0" width="${W}" height="${h * .55}" fill="url(#pCover)" opacity=".8"/>
+      <rect y="${h * .62}" width="${W}" height="${h * .3}" fill="#0f1d40"/>
+      <rect y="${h * .62}" width="${W}" height="4" fill="#e2bd72"/><rect y="${h * .92 - 4}" width="${W}" height="4" fill="#e2bd72"/>
+      <text x="${W / 2}" y="${h * .62 + h * .15 + 14}" text-anchor="middle" font-family="P" font-weight="800" font-size="40" letter-spacing="14" fill="#f6dca0">COWAY · PRIME II</text>
+      <rect width="${W}" height="${h}" fill="url(#gShade)" opacity="0"/>
+      <rect width="${W}" height="6" fill="#e2bd72"/>
+    </g>
+    <g transform="${topM}"><rect width="${W}" height="${DL}" rx="22" fill="url(#pCover)"/>
+      <rect width="${W}" height="${DL}" rx="22" fill="none" stroke="#e2bd72" stroke-width="6"/></g>
+  </svg>`;
+}
+
+/* ===================== bina adegan ===================== */
+const wrap = document.getElementById('wrap'), ui = document.getElementById('ui'), cap = document.getElementById('cap');
+[...LAYERS].reverse().forEach(l => wrap.insertAdjacentHTML('afterbegin', slabSvg(l)));   // lapisan bawah dilukis dulu
+LAYERS.forEach((l, i) => { l.el = document.getElementById('L_' + l.id); l.el.style.zIndex = 10 - i; });
+wrap.insertAdjacentHTML('beforeend', coverSvg());
+const cover = document.getElementById('L_cover'); cover.style.zIndex = 20;
+
+// nombor zon tegak (atas muka atas latex & spring)
+LAYERS.forEach(l => { if (!l.zones) return; let x = 0; l.nums = l.zones.map((z, j) => {
+  const u = x + z * W / 2; x += z * W;
+  wrap.insertAdjacentHTML('beforeend', `<div class="abs znum" style="z-index:40; left:${u + DX / 2 - 34}px; top:${DY / 2 - 34}px; width:68px; height:68px; border-radius:50%; background:#e2bd72; color:#0a1530; font-weight:800; font-size:42px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,.35)">${j + 1}</div>`);
+  return wrap.lastElementChild; }); });
+
+// zarah sejuk (fabrik)
+wrap.insertAdjacentHTML('beforeend', `<div id="cool" class="abs" style="left:0;top:0;z-index:30"></div>`);
+const cool = document.getElementById('cool');
+for (let i = 0; i < 22; i++) cool.insertAdjacentHTML('beforeend',
+  `<div class="abs" style="width:${10 + (i % 3) * 5}px;height:${10 + (i % 3) * 5}px;border-radius:50%;background:${i % 4 ? '#9fe1ff' : '#ffffff'};box-shadow:0 0 18px #7fd6ff" data-x="${(rnd() * 760 + 40).toFixed(0)}" data-y="${(rnd() * 120).toFixed(0)}" data-d="${rnd().toFixed(3)}"></div>`);
+
+// bintang
+const stars = document.getElementById('stars');
+for (let i = 0; i < 90; i++) stars.insertAdjacentHTML('beforeend',
+  `<circle cx="${(rnd() * 1080).toFixed(0)}" cy="${(rnd() * 1920).toFixed(0)}" r="${(rnd() * 2.2 + .6).toFixed(1)}" fill="#fff" opacity="${(rnd() * .5 + .1).toFixed(2)}" data-tw="${rnd().toFixed(3)}"/>`);
+
+// teks tajuk setiap adegan
+const TEXT = {
+  hook:    { k: 'BEDAH TILAM', t: 'Apa ada <span class="g">DALAM</span><br>tilam ni?', s: 'Coway Prime II' },
+  fabric:  { k: 'LAPISAN 01', t: 'Fabrik Anti-Statik<br>&amp; <span class="g">Penyejuk</span>', s: 'Benang karbon + benang penyejuk' },
+  topper:  { k: 'LAPISAN 02', t: 'Topper<br><span class="g">Boleh Tukar</span>', s: 'Tilam sentiasa rasa macam baru' },
+  latex:   { k: 'LAPISAN 03', t: 'Latex Asli<br><span class="g">5 Zon</span> Ketumpatan', s: 'Ikut lengkuk badan you' },
+  foam:    { k: 'LAPISAN 04', t: 'Foam <span class="g">Berliang</span>', s: 'Udara mengalir, kurang panas terperangkap' },
+  spring:  { k: 'LAPISAN 05', t: 'Pocket Spring<br><span class="g">7 Zon</span>', s: 'Sokongan tepat setiap bahagian badan' },
+  coconut: { k: 'LAPISAN 06', t: 'Sabut <span class="g">Kelapa</span>', s: 'Sokongan padu · bantu serap lembapan' },
+  assemble:{ k: 'SEMUA DALAM SATU TILAM', t: 'COWAY<br><span class="g">PRIME II</span>', s: 'Tinggi 33 cm · Queen &amp; King' },
+};
+Object.entries(TEXT).forEach(([k, v]) => ui.insertAdjacentHTML('beforeend',
+  `<div class="txt" id="T_${k}" style="top:${k === 'assemble' ? 190 : 150}px"><div class="kick">${v.k}</div><div class="title" ${k === 'assemble' ? 'style="font-family:P;font-size:120px;letter-spacing:6px"' : ''}>${v.t}</div><div class="sub">${v.s}</div></div>`));
+
+// lencana
+const BADGES = [
+  ['fabric', 1.2, 'Buang cas statik', 120, 1440], ['fabric', 1.9, 'Permukaan sejuk', 560, 1440],
+  ['topper', 1.5, 'Tukar topper, tak perlu tukar tilam', 0, 1440],
+  ['foam', 1.0, 'Aliran udara lebih baik', 0, 1440],
+  ['spring', 3.4, 'Pasangan pusing? Tak terasa', 0, 1440],
+  ['coconut', 1.2, 'Sokongan padu', 140, 1440], ['coconut', 2.0, 'Serap lembapan', 570, 1440],
+];
+BADGES.forEach((b, i) => ui.insertAdjacentHTML('beforeend',
+  `<div class="badge" id="B${i}" style="top:${b[4]}px; ${b[3] ? `left:${b[3]}px` : 'left:50%'}"><i>✓</i>${b[2]}</div>`));
+BADGES.forEach((b, i) => { const el = document.getElementById('B' + i); b.el = el; b.center = !b[3]; });
+
+// harga + CTA
+const WA = '<svg width="74" height="74" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>';
+ui.insertAdjacentHTML('beforeend', `
+  <div class="abs" id="pr" style="left:0; top:0; width:1080px; height:1920px">
+    <div class="txt pi" data-in=".1" style="top:880px"><span style="display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:38px;letter-spacing:6px;padding:14px 40px;border-radius:50px">SEWA SERENDAH</span></div>
+    <div class="txt pi" data-in=".5" style="top:960px; white-space:nowrap"><span style="font-weight:800;font-size:230px;line-height:1.1;color:#fff">RM<span id="cnt">0</span></span><span style="font-weight:600;font-size:64px;opacity:.9">/bulan</span></div>
+    <div class="txt pi" data-in="1.0" style="top:1225px; font-size:38px; font-weight:500; opacity:.75">Saiz Queen · King RM159/bulan</div>
+    <div class="abs pi" data-in="1.6" style="left:110px; top:1300px; width:860px; height:130px; border-radius:30px; background:rgba(226,189,114,.14); border:3px solid var(--gold); display:flex; align-items:center; justify-content:center; gap:16px; font-size:46px; font-weight:700; white-space:nowrap"><span style="color:var(--gold2)">✓</span> Servis tilam <span style="color:var(--gold2)">PERCUMA 5 tahun</span></div>
+    <div class="abs pi" data-in="3.6" data-a="stamp" style="left:730px; top:520px; transform-origin:50% 50%"><div style="width:300px;height:300px;border-radius:50%;background:#e2564a;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(10deg);box-shadow:0 18px 50px rgba(0,0,0,.4);border:6px dashed rgba(255,255,255,.6)">
+      <div style="font-weight:700;font-size:36px">BAWAH</div><div style="font-weight:800;font-size:96px;line-height:1">RM5</div><div style="font-weight:700;font-size:36px">SEMALAM!</div></div></div>
+    <div class="txt pi" data-in="1.9" style="top:1458px; font-size:28px; opacity:.55">*Harga sewa bulanan. Tertakluk kepada terma &amp; syarat Coway.</div>
+  </div>
+  <div class="abs" id="cta" style="left:0; top:0; width:1080px; height:1920px">
+    <div class="txt ci" data-in=".05" style="top:1000px; font-weight:800; font-size:96px">Nak rasa <span style="color:var(--gold2)">sendiri?</span></div>
+    <div class="abs ci" data-in=".5" data-a="pop" style="left:100px; top:1170px"><div class="wa">${WA} WHATSAPP SAYA SEKARANG</div></div>
+    <div class="txt ci" data-in="1.1" style="top:1370px; font-size:40px; font-weight:600; letter-spacing:6px; color:var(--gold2)">COWAY PRIME II</div>
+    <div class="txt ci" data-in="1.3" style="top:1430px; font-size:34px; opacity:.75">Tanya saiz, harga &amp; promo terkini</div>
+  </div>`);
+const PR = document.getElementById('pr'), CTA = document.getElementById('cta'), CNT = document.getElementById('cnt');
+
+// kapsyen (dipecah ikut tanda baca, masa ikut bilangan huruf)
+const CAPS = [];
+(window.TIMING || []).forEach(x => {
+  let parts = x.text.split(/(?<=[.?!])\s+/), merged = [];
+  parts.forEach(p => { if (merged.length && (merged[merged.length - 1].length < 16 || p.length < 12)) merged[merged.length - 1] += ' ' + p; else merged.push(p); });
+  merged = merged.flatMap(p => p.length > 60 ? p.split(/(?<=,)\s+/).reduce((a, q) => { if (a.length && (a[a.length - 1] + q).length < 56) a[a.length - 1] += ' ' + q; else a.push(q); return a; }, []) : [p]);
+  const n = merged.reduce((a, p) => a + p.length, 0); let t0 = x.start;
+  merged.forEach(p => { const d = (x.end - x.start) * p.length / n; CAPS.push({ s: t0, e: t0 + d, txt: p }); t0 += d; });
+});
+CAPS.forEach(c => c.txt = c.txt.replace(/Coway Prime 2/g, 'Coway Prime II'));
+
+/* ===================== keadaan kamera & lapisan setiap adegan ===================== */
+const FOCUS = ['fabric', 'topper', 'latex', 'foam', 'spring', 'coconut'];
+function explodeAt(t) {
+  const e1 = S('hook') + (Eo('hook') - S('hook')) * .62;
+  const up = P(t, e1, e1 + 1.2, inOut), down = P(t, S('assemble') - .1, S('assemble') + .9, inOut);
+  return up * (1 - down);
+}
+function layerY(l, i, t) {
+  const e1 = S('hook') + (Eo('hook') - S('hook')) * .62;
+  const up = P(t, e1 + (5 - i) * .06, e1 + 1.2 + (5 - i) * .06, inOut), down = P(t, S('assemble') - .1 + i * .04, S('assemble') + .8 + i * .04, inOut);
+  return mix(l.A, l.X, up * (1 - down));
+}
+const stackMid = (t) => { const e = explodeAt(t); return { x: (W + DX) / 2, y: (DY + mix(TOTAL_H, LAYERS[5].X + LAYERS[5].h, e)) / 2 }; };
+function target(k, t) {   // {x,y,s,sy}: titik wrap -> (540, sy) pada skala s
+  if (k === 'hook') { const m = stackMid(t), e = explodeAt(t); return { x: m.x, y: m.y, s: mix(1.08, .86, e), sy: mix(1080, 1090, e) }; }
+  const fi = FOCUS.indexOf(k);
+  if (fi >= 0) { const l = LAYERS[fi]; return { x: (W + DX) / 2, y: l.X + (DY + l.h) / 2, s: l.id === 'spring' ? 1.08 : 1.16, sy: 1080 }; }
+  if (k === 'assemble') { const m = stackMid(t); return { x: m.x, y: m.y, s: 1.08, sy: 1080 }; }
+  if (k === 'price') return { x: (W + DX) / 2, y: (DY + TOTAL_H) / 2, s: .62, sy: 600 };
+  return { x: (W + DX) / 2, y: (DY + TOTAL_H) / 2, s: .78, sy: 700 };
+}
+function sceneAt(t) { let k = 0; ORDER.forEach((n, i) => { if (t >= S(n) - .25) k = i; }); return k; }
+function camera(t) {
+  const k = sceneAt(t), cur = target(ORDER[k], t);
+  if (k === 0) return cur;
+  const prev = target(ORDER[k - 1], t), b = P(t, S(ORDER[k]) - .25, S(ORDER[k]) + .65, inOut);
+  return { x: mix(prev.x, cur.x, b), y: mix(prev.y, cur.y, b), s: mix(prev.s, cur.s, b), sy: mix(prev.sy, cur.sy, b) };
+}
+function layerAlpha(i, k) {   // kelegapan lapisan i dalam adegan ORDER[k]
+  const fi = FOCUS.indexOf(ORDER[k]); return fi < 0 ? 1 : (fi === i ? 1 : .22);
+}
+
+/* ===================== seek ===================== */
+function seek(t) {
+  // bintang berkelip
+  [...stars.children].forEach(c => c.style.opacity = (.12 + .45 * (.5 + .5 * Math.sin(t * 1.3 + c.dataset.tw * 40))).toFixed(3));
+
+  // kamera
+  const c = camera(t), bob = Math.sin(t * 1.1) * 6;
+  wrap.style.transform = `translate(${540 - c.s * c.x}px, ${c.sy - c.s * c.y + bob}px) scale(${c.s})`;
+
+  const k = sceneAt(t), kn = ORDER[k], b = k ? P(t, S(kn) - .25, S(kn) + .5, inOut) : 1;
+  LAYERS.forEach((l, i) => {
+    let y = layerY(l, i, t), x = 0;
+    const a = k ? mix(layerAlpha(i, k - 1), layerAlpha(i, k), b) : 1;
+    const isF = FOCUS[i] === kn, lift = isF ? -26 * b : (FOCUS[i] === ORDER[k - 1] ? -26 * (1 - b) : 0);
+    if (l.id === 'topper' && kn === 'topper') {               // topper ditarik keluar & ganti baru
+      const kk = t - S('topper');
+      x = kk < 2.0 ? 980 * P(kk, 1.3, 1.9, x => x * x) : -980 * (1 - P(kk, 2.0, 2.7, outC));
+    }
+    l.el.style.transform = `translate(${x}px, ${y + lift}px)`;
+    l.el.style.opacity = a.toFixed(3);
+    const g = isF ? b : (FOCUS[i] === ORDER[k - 1] ? 1 - b : 0);
+    l.el.style.filter = g > .01 ? `drop-shadow(0 0 ${(22 * g).toFixed(1)}px rgba(246,220,160,${(.85 * g).toFixed(2)}))` : '';
+  });
+  // sarung: kelihatan bila tercantum
+  const ex = explodeAt(t), cov = 1 - clamp(ex * 4);
+  cover.style.transform = `translate(0px, 0px)`;
+  cover.style.opacity = cov.toFixed(3);
+
+  // zon (latex 5, spring 7) menyala satu-satu
+  [['latex', 1.0, .32], ['spring', 1.0, .3]].forEach(([id, t0, st]) => {
+    const kk = t - S(id), on = kn === id;
+    document.querySelectorAll(`#L_${id} .zone`).forEach(z => {
+      const j = +z.dataset.j, p = on ? P(kk, t0 + j * st, t0 + j * st + .35) : 0;
+      z.setAttribute('opacity', (on ? p * (.55 - .3 * P(kk, t0 + j * st + .5, t0 + j * st + 1.1)) : 0).toFixed(3));
+    });
+    const L = LAYERS.find(l => l.id === id), ly = layerY(L, LAYERS.indexOf(L), t) - 26 * (on ? P(t, S(id) - .25, S(id) + .5, inOut) : 0);
+    L.nums.forEach((z, j) => {
+      const q = on ? P(kk, t0 + j * st, t0 + j * st + .4, backOut) : 0, o = on ? clamp((kk - t0 - j * st) / .2) * (1 - P(t, NEXT(id) - .45, NEXT(id) - .2)) : 0;
+      z.style.opacity = o.toFixed(3); z.style.visibility = o < .002 ? 'hidden' : 'visible';
+      z.style.transform = `translateY(${(ly - 30 * (1 - q)).toFixed(1)}px) scale(${mix(.4, 1, q).toFixed(3)})`;
+    });
+  });
+  // aliran udara foam
+  const fa = kn === 'foam' ? P(t, S('foam') + .3, S('foam') + .9) : 0;
+  document.querySelectorAll('#L_foam .air').forEach((p, j) => { p.setAttribute('opacity', (fa * .85).toFixed(3)); p.setAttribute('stroke-dashoffset', (-(t * 260) - j * 60).toFixed(1)); });
+  // zarah sejuk naik dari fabrik
+  const fl = LAYERS[0], cv = kn === 'fabric' ? P(t, S('fabric') + .6, S('fabric') + 1.2) * (1 - P(t, NEXT('fabric') - .5, NEXT('fabric'))) : 0;
+  [...cool.children].forEach(d => {
+    const ph = ((t * .45 + +d.dataset.d) % 1);
+    const x = +d.dataset.x * (W / 860) + (1 - +d.dataset.y / 120) * DX * .9, y = layerY(fl, 0, t) - 26 + DY - +d.dataset.y - ph * 220;
+    d.style.transform = `translate(${x}px, ${y}px)`; d.style.opacity = (cv * Math.sin(ph * Math.PI)).toFixed(3);
+  });
+
+  // teks tajuk
+  Object.keys(TEXT).forEach(n => {
+    const el = document.getElementById('T_' + n), s0 = S(n) - .1, e0 = n === 'assemble' ? S('price') - .2 : NEXT(n) - .2;
+    const pin = P(t, s0, s0 + .5), pout = P(t, e0, e0 + .3);
+    const o = pin * (1 - pout);
+    el.style.opacity = o.toFixed(3); el.style.visibility = o < .002 ? 'hidden' : 'visible';
+    el.style.transform = `translateY(${(1 - pin) * 50 - pout * 30}px)`;
+    el.style.filter = pin < 1 ? `blur(${((1 - pin) * 8).toFixed(1)}px)` : '';
+  });
+  // lencana
+  BADGES.forEach(bd => {
+    const s0 = S(bd[0]) + bd[1], e0 = NEXT(bd[0]) - .25, pin = P(t, s0, s0 + .45, backOut), o = clamp((t - s0) / .2) * (1 - P(t, e0, e0 + .25));
+    bd.el.style.opacity = o.toFixed(3); bd.el.style.visibility = o < .002 ? 'hidden' : 'visible';
+    bd.el.style.transform = `${bd.center ? 'translateX(-50%) ' : ''}scale(${mix(.6, 1, pin).toFixed(3)})`;
+  });
+  // harga
+  const pk = t - S('price'), pon = t >= S('price') - .2 && t < S('cta') - .1;
+  PR.style.visibility = pon ? 'visible' : 'hidden';
+  PR.style.opacity = (1 - P(t, S('cta') - .4, S('cta') - .1)).toFixed(3);
+  PR.querySelectorAll('.pi').forEach(el => {
+    const d = +el.dataset.in, q = P(pk, d, d + .5, el.dataset.a === 'stamp' ? backOut : outC), o = clamp((pk - d) / .2);
+    el.style.opacity = o.toFixed(3);
+    el.style.transform = el.dataset.a === 'stamp' ? `scale(${mix(2.2, 1, q).toFixed(3)}) rotate(${mix(-20, 0, q).toFixed(2)}deg)` : `translateY(${((1 - q) * 50).toFixed(1)}px)`;
+  });
+  CNT.textContent = Math.round(139 * P(pk, .55, 1.6, outC));
+  // CTA
+  const ck = t - S('cta');
+  CTA.style.visibility = ck > -.1 ? 'visible' : 'hidden';
+  CTA.querySelectorAll('.ci').forEach(el => {
+    const d = +el.dataset.in, q = P(ck, d, d + .5, el.dataset.a === 'pop' ? backOut : outC), o = clamp((ck - d) / .2);
+    el.style.opacity = o.toFixed(3);
+    const pulse = el.dataset.a === 'pop' && ck > 1.2 ? 1 + .035 * Math.sin((ck - 1.2) * 6) : 1;
+    el.style.transform = el.dataset.a === 'pop' ? `scale(${(mix(.5, 1, q) * pulse).toFixed(3)})` : `translateY(${((1 - q) * 40).toFixed(1)}px)`;
+  });
+  // kapsyen
+  const cc = CAPS.find(x => t >= x.s - .05 && t < x.e + .25);
+  const html = cc ? `<span>${cc.txt}</span>` : '';
+  if (cap.innerHTML !== html) cap.innerHTML = html;
+  cap.style.opacity = t > S('cta') - .1 ? 0 : 1;
+}
+window.DURATION = DURATION; window.seek = seek; seek(0);
+</script></body></html>

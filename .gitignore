@@ -11,3 +11,5 @@ out/clipads/_*
 out/v5/_*
 out/v5/old/
 !out/siap_dengan_vo/
+!out/tilam/
+out/tilam/_*

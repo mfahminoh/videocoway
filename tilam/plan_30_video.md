@@ -7,10 +7,14 @@ Panjang sasaran: 15–40s (iklan), kebanyakan ±25–30s.
 > (rujukan lama: *serendah RM139/bulan*), tempoh kontrak, promo bulan ini, dan kekerapan servis tilam.
 > Angka dalam plan ni ialah placeholder — tukar ikut harga terkini.
 
-## Fakta produk yang boleh guna (USP)
-- Tilam **hybrid**: 5-zon pocket spring · latex asli 100% · memory foam · sabut kelapa
-- Kurang rasa gerakan pasangan (motion transfer rendah)
+## Fakta produk yang boleh guna (USP) — model utama: **Coway Prime II**
+- Fabrik anti-statik + benang penyejuk (karbon & cooling yarn)
 - **Topper boleh tukar** (changeable topper)
+- Latex asli dengan **5 zon ketumpatan**
+- Foam berliang (ventilated) — aliran udara, kurang panas
+- **Pocket spring 7 zon** — sokongan tepat, kurang rasa gerakan pasangan
+- Sabut kelapa — sokongan padu, serap lembapan · tinggi 33 cm · Queen & King
+- Sewa: Queen RM139/bulan, King RM159/bulan (servis percuma 5 tahun) — *sahkan harga terkini*
 - **Servis penjagaan tilam 7 langkah** berkala: ukur tahap habuk → lap rangka katil → bersih tepi → bersih tilam → penghalau hama → **UV sterilisasi** tilam & rangka
 - Sewa bulanan → kira **"bawah RM5 semalam"** (jika RM139/bulan)
 
@@ -56,8 +60,8 @@ Gaya merujuk enjin sedia ada dalam repo:
 ### D. Bahan & teknologi — bina kepercayaan
 | # | Tajuk | Gaya | Hook 3 saat | Isi | Panjang |
 |---|---|---|---|---|---|
-| 16 | Bedah tilam: apa ada dalam? | PREM | "Ni apa yang ada DALAM tilam Coway." | Lapisan: topper → latex → memory foam → pocket spring → sabut kelapa | 35s |
-| 17 | 5 zon, 5 bahagian badan | PAPER | "Kepala, bahu, pinggang, pinggul, kaki — sokongan lain-lain." | Animasi badan atas 5 zon | 20s |
+| 16 | Bedah tilam: apa ada dalam? ✅ **siap** (`out/tilam/v16_prime2_final.mp4`) | PREM | "Apa sebenarnya yang ada dalam tilam Coway Prime 2?" | Prime II: fabrik sejuk → topper → latex 5 zon → foam berliang → pocket spring 7 zon → sabut kelapa | 51s |
+| 17 | 7 zon spring, 7 bahagian badan | PAPER | "Kepala, bahu, pinggang, pinggul, kaki — sokongan lain-lain." | Animasi badan atas 7 zon | 20s |
 | 18 | Latex asli vs foam biasa | KIN | "LATEX ASLI ≠ FOAM BIASA" | Lantunan, tahan lama, tak mendap | 20s |
 | 19 | Topper boleh tukar | POV | "Suka keras? Suka lembut? Tukar je topper." | Changeable topper — sesuai pasangan beza citarasa | 25s |
 | 20 | Ujian gelas air / bola boling | CLIP | "Kita letak gelas air… lepas tu lompat." | Demo motion transfer (perlu rakam) | 15s |
