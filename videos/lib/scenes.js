@@ -27,6 +27,22 @@ const NEON_NAME = { pink: ['Peach Pink', '#F3C9BD'], mint: ['Mint Green', '#C5DC
                     gray: ['Pebble Gray', '#3a3d42'], white: ['Porcelain White', '#F4F3EF'] };
 
 const SP = window.SPEC;
+const TH = SP.theme === 'coway';
+if (TH) {
+  document.body.classList.add('theme-coway');
+  const BG = { navy: 'cw-white', dark: 'cw-soft', night: 'cw-soft', pastel: 'cw-white', pink: 'cw-pink', mint: 'cw-mint', blue: 'cw-blue' };
+  SP.scenes.forEach(sc => {
+    if (typeof sc.bg === 'string') sc.bg = BG[sc.bg] || sc.bg;
+    else if (sc.bg.image && sc.bg.color !== 'dark') sc.bg.color = BG[sc.bg.color] || sc.bg.color;
+  });
+  const MAP = [['#0B2F6B', '#2f3337'], ['#E86E5A', '#04A4E4'], ['#ffd23f', '#04A4E4'], ['#6cc2ff', '#04A4E4'], ['#e9eef5', '#5f6b75'], ['var(--navy)', '#ffffff']];
+  let js = JSON.stringify(SP.els);
+  MAP.forEach(([a, b]) => { js = js.split(a).join(b); });
+  SP.els = JSON.parse(js);
+}
+const LIGHT = ['cw-white', 'cw-soft', 'cw-pink', 'cw-mint'];
+const sceneAt = t => SP.scenes.find(sc => t >= sc.t0 && t < sc.t1) || SP.scenes[SP.scenes.length - 1];
+const isLight = t => { const b = sceneAt(t).bg; return typeof b === 'string' ? LIGHT.includes(b) : !!(b.image && LIGHT.includes(b.color)); };
 window.DURATION = V.dur;
 const CH = buildChunks(V.lines);
 Clips.define(SP.clips);
@@ -46,8 +62,16 @@ const $img = $('bgImg');
 
 SP.els.forEach((e, i) => {
   e.id = 'e' + i;
+  e.light = e.light || (TH && isLight(e.t0 + .05));
+  if (TH && e.light) {                       // teks/ikon putih tak nampak atas latar cerah
+    if (['title', 'text', 'counter'].includes(e.type) && (!e.color || e.color === '#fff')) { e.color = '#2f3337'; e.shadow = false; }
+    if (e.type === 'icon' && (!e.color || e.color === '#fff')) e.color = '#04A4E4';
+  }
+  if (TH && e.type === 'pill' && !e.color) e.color = '#ffffff';
+  if (TH && e.type === 'pill' && /^#fff(fff)?$/i.test(e.bg || '') && /^#fff(fff)?$/i.test(e.color || '')) e.color = '#04A4E4';
+  if (TH && e.light && e.type === 'chips') e.items.forEach(c => { if (!c.color || /^#fff(fff)?$/i.test(c.color)) c.color = '#2f3337'; });
   const top = e.top != null ? `top:${e.top}px;` : '';
-  const light = e.light ? ' light' : '';
+  const light = e.light ? ' light onlight' : '';
   let h = '';
   switch (e.type) {
     case 'title': h = `<div class="el c h1${e.shadow === false ? '' : ' shadow'}" style="${top} font-size:${e.size || 110}px; color:${e.color || '#fff'}">${e.html}</div>`; break;
@@ -67,13 +91,13 @@ SP.els.forEach((e, i) => {
     case 'ticks': h = `<div class="el c" style="${top}">${e.items.map((s, k) => `<div id="${e.id}_${k}" style="margin-bottom:26px"><span class="tick"><i>✓</i>${s.text}</span></div>`).join('')}</div>`; break;
     case 'quiz': h = `<div class="el c" style="${top}">${e.options.map((o, k) => `<div class="opt" id="${e.id}_${k}"><b>${'ABCDE'[k]}</b><span>${o.text}</span><i style="background:${o.color}"></i></div>`).join('')}</div>`; break;
     case 'vs': h = `<div class="el c" style="${top}"><div class="vs">${[e.left, e.right].map((col, k) => `<div id="${e.id}_${k}"><h4 style="background:${col.color}">${col.title}</h4><ul>${col.items.map(it => `<li>${it}</li>`).join('')}</ul></div>`).join('')}</div></div>`; break;
-    case 'counter': h = `<div class="el c h1 shadow" style="${top} font-size:${e.size || 220}px; color:${e.color || 'var(--yellow)'}"><span id="${e.id}_n"></span></div>`; break;
+    case 'counter': h = `<div class="el c h1${e.shadow === false ? '' : ' shadow'}" style="${top} font-size:${e.size || 220}px; color:${e.color || 'var(--yellow)'}"><span id="${e.id}_n"></span></div>`; break;
     case 'price': h = `<div class="el c" style="${top}">
         <div id="${e.id}_l" style="font-size:60px; font-weight:700; letter-spacing:6px">${e.label || 'DARI'}</div>
         <div class="h1" id="${e.id}_f" style="font-size:230px"><span style="position:relative; display:inline-block">${e.from}<i id="${e.id}_s" style="position:absolute; left:-10px; right:-10px; top:48%; height:22px; background:var(--red); border-radius:11px; transform-origin:0 50%; transform:scaleX(0)"></i></span></div>
         <div id="${e.id}_u" style="font-size:56px; font-weight:600">${e.sub || 'sebulan'}</div>
-        <div class="h1" id="${e.id}_t" style="font-size:250px; color:var(--yellow); text-shadow:0 10px 40px rgba(0,0,0,.4)">${e.to || ''}</div>
-        <div id="${e.id}_b" style="margin-top:10px"><span class="pill" style="background:var(--yellow); color:var(--navy)">${e.badge || ''}</span></div></div>`; break;
+        <div class="h1 pto" id="${e.id}_t" style="font-size:250px; color:var(--yellow); text-shadow:0 10px 40px rgba(0,0,0,.4)">${e.to || ''}</div>
+        <div class="pbadge" id="${e.id}_b" style="margin-top:10px"><span class="pill" style="background:var(--yellow); color:var(--navy)">${e.badge || ''}</span></div></div>`; break;
     case 'delivery': h = `<div class="el" style="left:0; top:${e.top || 620}px; width:1080px; height:600px">
         <svg style="position:absolute; left:640px; top:20px" width="340" height="340" viewBox="0 0 340 340"><path d="M40 160 L170 50 L300 160" fill="none" stroke="#fff" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/><rect x="75" y="150" width="190" height="160" rx="16" fill="#fff"/><rect x="145" y="210" width="50" height="100" rx="8" fill="#0B4DA2"/></svg>
         <svg id="${e.id}_box" style="position:absolute; left:130px; top:100px" width="230" height="230" viewBox="0 0 64 64"><path d="M8 20 L32 8 L56 20 V46 L32 58 L8 46 Z" fill="#E8B27A" stroke="#8a5a2a" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 20 L32 32 L56 20 M32 32 V58" fill="none" stroke="#8a5a2a" stroke-width="2.5"/></svg>
@@ -93,11 +117,13 @@ SP.els.forEach((e, i) => {
         <path d="M18 4 h14 v10 c0 4 10 8 10 20 v66 a6 6 0 0 1 -6 6 h-22 a6 6 0 0 1 -6 -6 v-66 c0 -12 10 -16 10 -20 Z" fill="rgba(255,255,255,.08)" stroke="#fff" stroke-width="3"/></svg>`).join('')}
         <div id="${e.id}_t" style="font-size:64px; font-weight:800; margin-top:20px; color:var(--yellow)"></div></div>`; break;
     case 'cta': h = `<div class="el c" style="${top}">${(e.ticks || []).map((s, k) => `<div id="${e.id}_k${k}" style="margin-bottom:22px"><span class="tick"><i>✓</i>${s}</span></div>`).join('')}
-        <div id="${e.id}_btn" style="margin-top:50px"><span class="wa">${WA_SVG}${e.button || 'WhatsApp saya'}</span></div>
+        ${SP.tagline ? `<div class="tagline">${SP.tagline}</div>` : ''}
+        <div id="${e.id}_btn" style="margin-top:${SP.tagline ? 34 : 50}px"><span class="wa">${WA_SVG}${e.button || 'WhatsApp saya'}</span></div>
         <div id="${e.id}_fine" style="margin-top:40px; font-size:28px; color:${e.fineColor || 'rgba(255,255,255,.75)'}; padding:0 80px">${e.fine || '*Tertakluk pada terma &amp; promosi semasa Coway.'}</div></div>`; break;
   }
-  add(h.replace('class="el', `id="${e.id}" class="el`));
+  add(h.replace('class="el', `id="${e.id}" class="${e.light ? 'onlight ' : ''}el`));
 });
+if (SP.brand) add(`<div class="el" id="brandTag">${SP.brand}</div>`);
 add('<div class="el c" id="cap"><div id="capText"></div></div><div class="layer" id="flash" style="background:#fff; opacity:0"></div>');
 
 /* ---------- lukis ---------- */
@@ -220,6 +246,7 @@ function seek(T) {
   set('flash', { o: SP.scenes.slice(1).some(s => t >= s.t0 && t < s.t0 + .2) ? (1 - (t - sc.t0) / .2) * .3 : 0 });
   SP.els.forEach(e => drawEl(e, t));
   caption(CH, t);
+  if (SP.brand) { const L = isLight(t); $('brandTag').style.color = L ? '#04A4E4' : '#fff'; $('brandTag').style.textShadow = L ? 'none' : '0 2px 10px rgba(0,0,0,.4)'; }
   return pending;
 }
 window.seek = seek;

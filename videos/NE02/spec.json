@@ -73,7 +73,7 @@
    "in": "@01",
    "out": "@03",
    "top": 720,
-   "size": 130,
+   "size": 118,
    "html": "BARU KAHWIN?",
    "color": "#0B2F6B",
    "shadow": false
@@ -254,5 +254,8 @@
    "button": "WhatsApp saya",
    "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
   }
- ]
+ ],
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
 }

@@ -346,5 +346,8 @@ window.SPEC = {
    "n": 84,
    "start": 7.2
   }
- }
+ },
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
 };

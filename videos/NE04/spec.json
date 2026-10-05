@@ -113,7 +113,7 @@
    "in": "@06",
    "out": "@07",
    "top": 900,
-   "size": 50,
+   "size": 42,
    "weight": 700,
    "html": "7 bulan pertama: (RM54 − RM20) ÷ 30"
   },
@@ -200,5 +200,8 @@
    "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
    "btnAt": "@10%60"
   }
- ]
+ ],
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
 }

@@ -222,5 +222,8 @@ window.SPEC = {
    "t1": null
   }
  ],
- "clips": {}
+ "clips": {},
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
 };

@@ -124,7 +124,7 @@ V["NE02"] = dict(slug="baru-kahwin-rumah-pertama", voice="Aoede", style=FEM, lin
   scenes=[(0, "pastel"), ("@03", PODIUM), ("@04", {"clip": "press_pour", "c0": 3.0, "c1": 5.3}), ("@05", "navy"), ("@07", COT), ("@08", PRES_C), ("@09", "pastel"),
           ("@10", "blue"), ("@12", "blue")],
   els=[{"type": "icon", "in": "@01", "out": "@03", "top": 420, "icon": "home", "color": CORAL, "size": 240},
-       title("@01", "@03", "BARU KAHWIN?", top=720, size=130, dark=True),
+       title("@01", "@03", "BARU KAHWIN?", top=720, size=118, dark=True),
        pill("@01%50", "@03", "RUMAH PERTAMA", top=900),
        title("@03", "@04", f"COWAY <span style='color:{CORAL}'>NEON</span>", size=120, dark=True),
        chips("@04", "@05", [("PANAS", "@04"), ("SEJUK", "@04%25"), ("SUHU BILIK", "@04%55")]),
@@ -194,7 +194,7 @@ V["NE04"] = dict(slug="kos-sehari-coway-neon", voice="Orus", style=MALE, lines=L
        {"type": "text", "in": "@04", "out": "@05", "top": 400, "size": 50, "weight": 700, "html": "RM54 ÷ 30 hari"},
        {"type": "counter", "in": "@04%20", "out": "@07", "top": 480, "from": 54, "to": 1.8, "prefix": "RM", "decimals": 2, "dur": .8, "color": "#fff"},
        pill("@05", "@07", "+ REBAT ULANG TAHUN RM20 × 7 BULAN", top=790),
-       {"type": "text", "in": "@06", "out": "@07", "top": 900, "size": 50, "weight": 700, "html": "7 bulan pertama: (RM54 − RM20) ÷ 30"},
+       {"type": "text", "in": "@06", "out": "@07", "top": 900, "size": 42, "weight": 700, "html": "7 bulan pertama: (RM54 − RM20) ÷ 30"},
        {"type": "counter", "in": "@06%20", "out": "@07", "top": 980, "from": 1.8, "to": 1.13, "prefix": "RM", "decimals": 2, "dur": .8},
        {"type": "icon", "in": "@07", "out": "@08", "top": 420, "icon": "cup", "size": 300, "color": "#fff"},
        title("@07", "@08", f"LEBIH MURAH DARI<br><span style='color:var(--yellow)'>SECAWAN TEH TARIK</span>", top=800, size=76),
@@ -230,7 +230,7 @@ V["NE05"] = dict(slug="pukul-3-pagi-bancuh-susu", voice="Aoede", style=FEM, line
        pill("@08%40", "@09", "250ml · BERHENTI SENDIRI", top=250, bg="#fff"),
        {"type": "card", "in": "@09", "out": "@10", "top": 760, "icon": "filter", "title": "PENAPIS NANOTRAP", "sub": "Teknologi penapisan Coway"},
        {"type": "card", "in": "@10", "out": "@11", "top": 760, "icon": "baby", "icbg": "#fde8e4", "iccolor": CORAL, "title": "SUHU AIR SUSU?", "sub": "Ikut nasihat doktor / pakar kanak-kanak"},
-       pill("@11", "@12", "PROMOSI RM54 + REBAT RM20 × 7 BULAN*", top=270),
+       pill("@11", "@12", "RM54 + REBAT RM20 × 7 BULAN*", top=270),
        photo("@12", None, top=200, size=420),
        cta("@12", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"])])
 
@@ -425,13 +425,17 @@ V["E04"] = dict(slug="3-sebab-ramai-pasang", voice="Orus", style=MALE, lines=L(
        cta("@14", ["PROMOSI RM54 SEBULAN*", "+ REBAT RM20 × 7 BULAN*", "PEMASANGAN PERCUMA"], btn_at="@14%40")])
 
 
+BRAND = {"theme": "coway", "brand": "COWAY", "tagline": "Own Your Aesthetics, Affordably."}
+
 if __name__ == "__main__":
+    import sys
+    plain = "--plain" in sys.argv          # --plain: gaya asal tanpa tema brand Coway
     for vid, v in V.items():
         d = HERE / vid
         d.mkdir(exist_ok=True)
         (d / "lines.json").write_text(json.dumps(v["lines"], ensure_ascii=False, indent=1))
         spec = {"slug": v["slug"], "voice": v["voice"], "style": v["style"],
-                "scenes": [{"at": a, "bg": b} for a, b in v["scenes"]], "els": v["els"]}
+                "scenes": [{"at": a, "bg": b} for a, b in v["scenes"]], "els": v["els"], **({} if plain else BRAND)}
         (d / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1))
         words = sum(len(l["text"].split()) for l in v["lines"])
         print(f"{vid} {v['slug']:32s} {v['voice']:6s} {len(v['lines']):2d} baris, {words} perkataan (~{words / 2.6:.0f}s)")

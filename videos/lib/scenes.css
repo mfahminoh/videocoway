@@ -76,3 +76,33 @@ body { font-family: P, sans-serif; color: #fff; }
 #capText { font-size: 70px; font-weight: 800; text-transform: uppercase; line-height: 1.12; text-align: center; letter-spacing: 1px;
   text-shadow: 0 0 2px #000, 4px 4px 0 #000, -4px 4px 0 #000, 4px -4px 0 #000, -4px -4px 0 #000, 0 5px 0 #000, 0 -5px 0 #000, 5px 0 0 #000, -5px 0 0 #000, 0 10px 24px rgba(0,0,0,.6); }
 #capText b { color: var(--yellow); font-weight: 800; }
+
+/* ================= Tema "coway" (warna brand: Cerulean #04A4E4, Onahau #CEF3FF, Tundora #454545) ================= */
+.bg-cw-white { background: radial-gradient(circle at 85% 8%, #CEF3FF 0, transparent 38%), radial-gradient(circle at 10% 92%, #e6f8ff 0, transparent 40%), linear-gradient(180deg, #ffffff 0, #f3fbff 100%); }
+.bg-cw-soft { background: radial-gradient(circle at 50% 30%, #ffffff 0, #eaf8ff 60%, #d8f2fd 100%); }
+.bg-cw-pink { background: radial-gradient(circle at 50% 35%, #fff 0, #fdf0f2 60%, #f8e2e6 100%); }
+.bg-cw-mint { background: radial-gradient(circle at 50% 35%, #fff 0, #f0faee 60%, #e2f3dc 100%); }
+.bg-cw-blue { background: radial-gradient(circle at 80% 10%, #3ec0f2 0, transparent 45%), linear-gradient(165deg, #04A4E4 0, #0391cc 60%, #027bb0 100%); }
+.bg-cw-blue::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 15% 85%, rgba(255,255,255,.12) 0, transparent 35%); }
+.theme-coway { --yellow: #04A4E4; --cw: #04A4E4; --ink: #2f3337; }
+.theme-coway .banner { color: var(--ink); }
+.theme-coway .banner em { background: var(--cw); color: #fff; }
+.theme-coway .num { background: var(--cw); color: #fff; }
+.theme-coway .onlight .rt { color: var(--ink); text-shadow: none; }
+.theme-coway .onlight .chip { background: #fff; border-color: #cdeefc; box-shadow: 0 10px 26px rgba(4,164,228,.15); }
+.theme-coway .onlight .tile { background: #fff; border-color: #cdeefc; box-shadow: 0 10px 26px rgba(4,164,228,.15); }
+.theme-coway .onlight .tile small { color: var(--ink); }
+.theme-coway .onlight .row { background: #fff; border-color: #cdeefc; color: var(--ink); box-shadow: 0 10px 26px rgba(4,164,228,.12); }
+.theme-coway .row b { background: var(--cw); color: #fff; }
+.theme-coway .onlight svg path[stroke="#fff"] { stroke: var(--cw); }
+.theme-coway .onlight svg rect[fill="#fff"] { fill: var(--cw); }
+.theme-coway .onlight [id$="_m"] { color: var(--ink); }
+.theme-coway .pto { color: #fff !important; text-shadow: 0 10px 30px rgba(0,0,0,.18) !important; }
+.theme-coway .pbadge .pill { background: #fff !important; color: var(--cw) !important; }
+.theme-coway .tick i { background: #fff; color: var(--cw); }
+.theme-coway #capText { display: inline-block; background: #fff; color: var(--ink); padding: 16px 36px; border-radius: 28px; text-shadow: none;
+  box-shadow: 0 12px 34px rgba(0,0,0,.18); font-size: 62px; }
+.theme-coway #capText b { color: var(--cw); }
+.theme-coway .tagline { font-size: 40px; font-weight: 600; font-style: italic; margin-top: 30px; opacity: .95; }
+#brandTag { top: 64px; left: 60px; font-size: 46px; font-weight: 800; letter-spacing: 1px; text-transform: lowercase; }
+#brandTag span { font-weight: 500; opacity: .8; }

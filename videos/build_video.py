@@ -148,7 +148,7 @@ def prep(vid, align=True):
     caps = [[g["a"], g["b"], l.get("cap", l["text"])] for g, l in zip(segs, lines)]
     V = {"off": OFF, "dur": dur, "lines": caps, "sfx": sfx}
     (d / "timing.js").write_text("window.V = " + json.dumps(V, ensure_ascii=False, indent=1) + ";\n")
-    (d / "spec.js").write_text("window.SPEC = " + json.dumps({"scenes": scenes, "els": els, "clips": clips}, ensure_ascii=False, indent=1) + ";\n")
+    (d / "spec.js").write_text("window.SPEC = " + json.dumps({"scenes": scenes, "els": els, "clips": clips, **{k: spec[k] for k in ("theme", "brand", "tagline") if k in spec}}, ensure_ascii=False, indent=1) + ";\n")
     (d / "index.html").write_text(PAGE.format(id=vid))
     print(f"{vid}: {dur:.1f}s, {len(scenes)} babak, {len(els)} elemen, klip {list(clips)}")
     return spec

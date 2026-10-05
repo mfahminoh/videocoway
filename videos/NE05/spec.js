@@ -199,7 +199,7 @@ window.SPEC = {
   {
    "type": "pill",
    "top": 270,
-   "html": "PROMOSI RM54 + REBAT RM20 × 7 BULAN*",
+   "html": "RM54 + REBAT RM20 × 7 BULAN*",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
    "t0": 30.09,
@@ -245,5 +245,8 @@ window.SPEC = {
    "n": 165,
    "start": 4.5
   }
- }
+ },
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
 };

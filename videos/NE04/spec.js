@@ -115,7 +115,7 @@ window.SPEC = {
   {
    "type": "text",
    "top": 900,
-   "size": 50,
+   "size": 42,
    "weight": 700,
    "html": "7 bulan pertama: (RM54 − RM20) ÷ 30",
    "t0": 17.62,
@@ -220,5 +220,8 @@ window.SPEC = {
    "n": 101,
    "start": 6.4
   }
- }
+ },
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
 };
