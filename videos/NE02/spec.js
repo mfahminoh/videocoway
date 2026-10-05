@@ -77,7 +77,7 @@ window.SPEC = {
   {
    "type": "title",
    "top": 720,
-   "size": 130,
+   "size": 118,
    "html": "BARU KAHWIN?",
    "color": "#0B2F6B",
    "shadow": false,
