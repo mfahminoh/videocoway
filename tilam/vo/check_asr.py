@@ -9,7 +9,7 @@ ONLY = sys.argv[2].split(",") if len(sys.argv) > 2 else [x["id"] for x in tm]
 def ask(parts):
     body = json.dumps({"contents": [{"parts": parts}]}).encode()
     for a in range(6):
-        for m in ["gemini-3.6-flash", "gemini-3.7-flash", "gemini-flash-latest", "gemini-3.8-flash"]:
+        for m in ["gemini-3.6-flash", "gemini-3.7-flash", "gemini-flash-latest", "gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-3.1-flash-lite", "gemini-2.5-flash-lite"]:
             try:
                 r = urllib.request.urlopen(urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent", body, {"Content-Type": "application/json"}), timeout=200)
                 return json.load(r)["candidates"][0]["content"]["parts"][0]["text"].strip()

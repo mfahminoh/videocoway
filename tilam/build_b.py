@@ -1,4 +1,4 @@
-"""Siri video tilam B (spec dalam tilam/b/<vid>.json) -> out/tilam/<vid>_<slug>.mp4
+"""Siri video tilam B, C, D (spec dalam tilam/b/<vid>.json) -> out/tilam/<vid>_<slug>.mp4
 
     python tilam/build_b.py b1                 # VO (Gemini, sekali) + render + audio
     python tilam/build_b.py b1 --stills 2,6,12 # pratonton PNG -> out/stills/
@@ -79,5 +79,5 @@ def run(vid, stills=None, jobs=4):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("vid"); ap.add_argument("--stills"); ap.add_argument("--jobs", type=int, default=4)
     a = ap.parse_args()
-    for v in (sorted(p.stem for p in SPECS.glob("b*.json")) if a.vid == "all" else [a.vid]):
+    for v in (sorted(p.stem for p in SPECS.glob("[bcd][0-9]*.json")) if a.vid == "all" else [a.vid]):
         run(v, a.stills, a.jobs)

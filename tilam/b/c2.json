@@ -1,0 +1,22 @@
+{
+  "id": "c2", "slug": "prime2-lembut-ke-keras", "title": "C2 — Prime II lembut ke keras?",
+  "pain": ["#24", "#23", "#26"], "mood": "calm",
+  "lines": [
+    {"id": "01", "text": "Ada yang tanya, Prime 2 ni tilam dia lembut ke keras?",
+     "scene": {"head": {"k": "BALAS KOMEN", "y": 300, "at": 0.05},
+               "comment": {"t": "prime two series ni tilam dia lembut ke keras ya ? sbb sy xnk tilam lembut sgt", "src": "TikTok · 2026", "y": 560, "at": 0.3, "tag": "SOALAN"}}},
+    {"id": "02", "text": "Jawapannya, dua-dua ada. Prime 2 ada versi Soft, dan versi Firm.",
+     "scene": {"words": [{"t": "DUA-DUA <b>ADA.</b>", "at": 0.05, "size": 120, "y": 560}],
+               "items": [{"t": "Versi <b>Soft</b>", "icon": "S", "at": "Soft", "y": 820}, {"t": "Versi <b>Firm</b>", "icon": "F", "at": "Firm", "y": 970}]}},
+    {"id": "03", "text": "Cara pilih senang je. Tengok cara you tidur.",
+     "scene": {"head": {"k": "CARA PILIH", "t": "Ikut <b>cara you tidur</b>", "y": 170}, "media": {"img": "assets/tilam/prime2/firm-soft-mattress-for-all-sleepers-coway-prime2-series.jpg", "box": [0, 520, 1080, 608]}}},
+    {"id": "04", "text": "Kalau suka tidur mengiring, pilih Soft. Bahu dan pinggul boleh tenggelam sikit, lebih selesa.",
+     "scene": {"cont": true, "items": [{"t": "Tidur mengiring: <b>Soft</b>", "icon": "S", "at": "mengiring", "y": 1170}]}},
+    {"id": "05", "text": "Kalau tidur terlentang, pilih Firm. Sokongan lebih padu untuk belakang.",
+     "scene": {"cont": true, "items": [{"t": "Tidur terlentang: <b>Firm</b>", "icon": "F", "at": "terlentang", "y": 1320}]}},
+    {"id": "06", "text": "Dan kalau berat lebih tujuh puluh kilo, Firm biasanya lebih sesuai.",
+     "scene": {"words": [{"t": "Lebih 70 kg?", "at": 0.05, "size": 110, "y": 620, "anim": "up"}, {"t": "Pilih <b>FIRM.</b>", "at": "Firm", "size": 140, "y": 800}]}},
+    {"id": "07", "text": "Tak pasti? WhatsApp saya. Bagi tahu cara you tidur, saya cadangkan.",
+     "scene": {"cta": {"at": 0.1, "t": "Bagi tahu cara tidur. Saya cadangkan."}}}
+  ]
+}
