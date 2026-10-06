@@ -85,7 +85,7 @@
 | **Kurang gangguan gerakan** (motion transfer) | ✅ | "good night's sleep with your loved ones without any disturbance" |
 | **Cooling ticking / cooling fabric** | ✅ | "keeps the mattress cool" |
 | **Foam berliang** (ventilated foam) + **felt** | ✅ | Lapisan rasmi: fabrik sejuk → foam berliang → spring 5 zon → felt |
-| **Medium** dan **Soft** | ✅ ejen (6 Okt) | Laman rasmi hanya tulis "Medium Firm"; ejen sahkan ada Medium & Soft. Prime II: Soft & Firm |
+| **Medium Firm** sahaja: all-rounder | ✅ | Sesuai untuk banyak posisi tidur, cth. suami mengiring, isteri terlentang. Prime II: pilih Soft atau Firm |
 | **Topper ber-zip, boleh tanggal sepenuhnya, tukar percuma** | ✅ | "Free for rental customer with T&C" |
 | **Bucu lembut melengkung** | ✅ | "Protecting you from accidental bumps" |
 | **Jarak 12 cm divan–lantai** | ✅ | "Ample space for vacuum robot". Sudut unik, belum digunakan ejen |
@@ -125,14 +125,14 @@
 |---|---|---|
 | Spring | Pocket spring **5 zon** | Pocket spring **7 zon** |
 | Lapisan | Fabrik penyejuk → foam berliang → spring → felt | Fabrik anti-statik & sejuk → topper → **latex asli 5 zon** → foam → spring → **sabut kelapa** |
-| Kekerasan | **Medium** atau **Soft** (disahkan ejen) | **Soft** atau **Firm** |
+| Kekerasan | **Medium Firm** (all-rounder, satu tilam untuk pelbagai posisi tidur) | **Soft** atau **Firm** (pilih ikut posisi tidur) |
 | Tinggi | 305 mm (±12") | 330 mm (±13") |
 | Topper | Zip, tanggal sepenuhnya, cuci di rumah, **tukar percuma 3 tahun sekali** (sewa) | Boleh tukar (sewa, 3 tahun sekali) |
 | Rangka | Fabrik **biru muda**, bucu lembut, **ruang 12 cm** robot vakum | **Velvet biru gelap / PU leather kelabu gelap**, tufted |
 | Servis | 7 langkah + fogging, **setiap 4 bulan** (pakej termasuk servis) | Sama |
-| Sesuai untuk | Keluarga muda, rumah pertama, bilik anak | Yang nak pilih kekerasan, latex, sokongan 7 zon, rupa premium |
+| Sesuai untuk | Pasangan dengan cara tidur berbeza, keluarga muda, rumah pertama, bilik anak | Yang nak pilih kekerasan, latex, sokongan 7 zon, rupa premium |
 
-**Mesej utama Lite:** *"Tilam Coway dengan sokongan pocket spring, praktikal untuk keluarga: Medium atau Soft, topper zip, servis setiap 4 bulan."* Tilam pintu masuk ke Coway: praktikal, mudah dijaga, untuk keluarga.
+**Mesej utama Lite:** *"Satu tilam untuk semua cara tidur: Medium Firm all-rounder, pocket spring 5 zon, topper zip, servis setiap 4 bulan."* Tilam pintu masuk ke Coway: praktikal, mudah dijaga, untuk keluarga.
 
 ---
 
@@ -149,9 +149,9 @@ Legenda:
 | **L2** | Patutlah ramai order | R (r3) | "Patutlah lately ni ramai order tilam ni." | Senarai cepat: 12" · 5 zon · fabrik sejuk · topper zip · hantar & pasang percuma, Sabah & Sarawak termasuk | panel bilik, video produk rasmi | ✅ |
 | **L3** | Anak terkencing? Buka zip je | R (r5) / P | Komen sebenar: "anak terkencing atas tilam, cuci macam mana?" | Topper ber-zip, tanggal sepenuhnya → **cuci topper di rumah**, bukan seluruh tilam → fabrik rangka mudah dibersihkan. *Jangan sebut dobi* | gambar zip rasmi, video produk | ✅ |
 | **L4** | Prime Lite vs Prime II: beza 30 saat | B (r4) | Balas komen: "Part 2 please: beza Lite dengan Prime II?" | Jadual: zon spring, lapisan, kekerasan, tinggi, rangka. "Dua-dua bagus, beza ikut keperluan" | gambar kedua-dua tilam, rajah lapisan | ✅ |
-| **L5** | Lite atau Prime II? Pilih dalam 10 saat | B | "Tengah survey tilam Coway? Jawab 3 soalan ni." | Nak latex asli & 7 zon? → Prime II. Suka lebih keras (Firm)? → Prime II. Nak praktikal untuk keluarga, Medium atau Soft? → Lite | carta keputusan (PAPER) | ✅ |
+| **L5** | Lite atau Prime II? Pilih dalam 10 saat | B | "Tengah survey tilam Coway? Jawab 3 soalan ni." | Nak latex asli & 7 zon? → Prime II. Suka lebih keras (Firm)? → Prime II. Kongsi tilam dengan pasangan yang cara tidurnya lain, nak satu rasa all-rounder? → Lite | carta keputusan (PAPER) | ✅ |
 | **L6** | 5 zon vs 7 zon: apa beza sebenar? | B / P | "5 zon, 7 zon… ni bukan nombor kosong." | Rajah rasmi: 5 zon (kepala, bahu, pinggang, pinggul, kaki) vs 7 zon Prime II (kepala & leher, bahu, pinggang, pinggul, lutut, betis, buku lali): bahagian kaki dipecah kepada 3 zon | rajah 5 zon Lite + 7 zon Prime II | ✅ |
-| **L7** | Medium atau Soft? | P (#23–#29) | Komen: "mana paling keras, soft n firm apa beza?" | Prime Lite ada **Medium** dan **Soft**. Pilih ikut cara tidur & rasa yang you suka. *(Panduan siapa sesuai yang mana perlu disahkan)* | ikon skala rasmi | ✅ (*sahkan panduan*) |
+| **L7** | Suami mengiring, isteri terlentang | P (#23–#29, #164) | "Suami tidur mengiring, isteri terlentang. Nak pilih soft ke firm?" | Prime Lite **Medium Firm**: all-rounder, satu tilam untuk pelbagai posisi tidur + spring 5 zon kurang gangguan gerakan. Tak perlu bertekak pilih soft atau firm | ikon skala medium firm rasmi, rajah side/back sleeper rasmi | ✅ |
 | **L8** | 12 inci: tidur rasa hotel | R (r1/r5) | "Siapa suka tilam tebal, tidur rasa macam hotel?" | 305 mm, 4 lapisan, fabrik sejuk, foam berliang. (Banding Prime II 13") | gambar close-up tepi, rajah lapisan | ✅ / 🎥 (pita ukur) |
 | **L9** | Robot vakum masuk bawah katil | U | "Bawah katil you penuh habuk?" | Jarak **12 cm** divan–lantai → robot vakum boleh masuk. Bucu lembut, fabrik mudah dibersihkan | gambar rasmi 12 cm + robot | ✅ |
 | **L10** | Anak lasak? Bucu lembut | U / P (#164) | "Anak lari keliling katil, terhantuk bucu…" | Rangka berfabrik lembut, **bucu melengkung**. Spring kurang gangguan bila anak tidur sekali | gambar bucu bulat, keluarga atas tilam | ✅ |
@@ -187,7 +187,7 @@ Legenda:
 | Cucian topper | Cuci di rumah sahaja. **Tidak boleh hantar dobi** |
 | Tukar topper Prime Lite | **3 tahun sekali**, sama macam Prime II (pelanggan sewa) |
 | Servis tilam | **Setiap 4 bulan** untuk pakej termasuk servis |
-| Kekerasan Prime Lite | **Medium dan Soft** (laman rasmi hanya tulis "Medium Firm") |
+| Kekerasan Prime Lite | **Medium Firm sahaja**: all-rounder, sesuai pelbagai posisi tidur (cth. suami mengiring, isteri terlentang) |
 | Free 2 bantal / hadiah | Promo bulanan. Tidak dimasukkan dalam video |
 
-**Masih terbuka:** panduan Medium vs Soft Prime Lite (siapa sesuai yang mana: cara tidur? berat badan?).
+**Semua soalan dah dijawab.** Draf sedia untuk dirender.
