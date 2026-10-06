@@ -1,0 +1,199 @@
+{
+ "id": "l08",
+ "slug": "12-inci-rasa-hotel",
+ "title": "L08 — 12 inci: tidur rasa hotel",
+ "pain": [
+  "r1",
+  "r5"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Siapa suka tilam tebal, tidur rasa macam dekat hotel?",
+   "scene": {
+    "bg": {
+     "clip": "wake",
+     "dim": 1
+    },
+    "head": {
+     "t": "Suka tilam <b>tebal</b>?",
+     "s": "Tidur rasa macam hotel",
+     "y": 220
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Coway Prime Lite tebal dua belas inci.",
+   "scene": {
+    "words": [
+     {
+      "t": "<b>12 INCI</b>",
+      "at": 0.05,
+      "size": 180,
+      "y": 330
+     }
+    ],
+    "media": {
+     "clip": "press",
+     "box": [
+      90,
+      640,
+      900,
+      760
+     ]
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Dalam dua belas inci tu, ada empat lapisan.",
+   "scene": {
+    "head": {
+     "t": "<b>4 lapisan</b>",
+     "k": "DALAM 12 INCI",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/an-image-of-layers-for-the-coway-prime-lite-series-mattress-with-descriptions.png",
+     "box": [
+      0,
+      560,
+      1080,
+      694
+     ],
+     "bgc": "#000"
+    }
+   }
+  },
+  {
+   "id": "04",
+   "text": "Fabrik penyejuk di atas, dan foam berliang untuk aliran udara.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Fabrik penyejuk",
+      "at": "Fabrik",
+      "y": 1290
+     },
+     {
+      "t": "Foam berliang",
+      "at": "foam",
+      "y": 1395
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Pocket spring lima zon, dan felt di bawah untuk lindungi lapisan.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Pocket spring 5 zon",
+      "at": "Pocket",
+      "y": 1490
+     },
+     {
+      "t": "Felt pelindung",
+      "at": "felt",
+      "y": 1595
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Nak lagi tebal? Prime 2 tiga belas inci, dengan latex dan sabut kelapa.",
+   "scene": {
+    "head": {
+     "t": "Nak lagi tebal?",
+     "s": "Prime II: 13 inci + latex &amp; sabut kelapa",
+     "y": 200
+    },
+    "media": {
+     "img": "assets/tilam/prime2/prime2-panel3-desktop.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Nak tidur macam hotel setiap malam? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Rasa hotel, setiap malam."
+    }
+   }
+  }
+ ]
+}

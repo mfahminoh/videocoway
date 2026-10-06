@@ -1,0 +1,195 @@
+{
+ "id": "l10",
+ "slug": "anak-lasak-bucu-lembut",
+ "title": "L10 — Anak lasak? Bucu lembut",
+ "pain": [
+  "#164",
+  "#165"
+ ],
+ "mood": "warm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Anak lari keliling katil. Terhantuk bucu, menangis lagi.",
+   "scene": {
+    "bg": {
+     "clip": "kid",
+     "dim": 1
+    },
+    "head": {
+     "t": "Anak <b>lasak?</b>",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Rangka Prime Lite dibalut fabrik lembut, dengan bucu melengkung.",
+   "scene": {
+    "head": {
+     "t": "Bucu <b>melengkung</b>",
+     "k": "RANGKA PRIME LITE",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/high-view-of-the-coway-prime-lite-series-mattress-on-a-wooden-floor-featuring-its-round-corners.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Untuk lindungi dari terhantuk secara tak sengaja.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Fabrik lembut",
+      "at": "lindungi",
+      "y": 1260
+     },
+     {
+      "t": "Lindungi dari terhantuk",
+      "at": "terhantuk",
+      "y": 1365
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Anak melompat atas katil? Pocket spring lima zon bergerak secara individu.",
+   "scene": {
+    "head": {
+     "t": "Spring <b>bergerak sendiri</b>",
+     "y": 170
+    },
+    "media": {
+     "clip": "kid",
+     "box": [
+      140,
+      520,
+      800,
+      900
+     ]
+    }
+   }
+  },
+  {
+   "id": "05",
+   "text": "Jadi bila anak bergerak, mak ayah kurang terasa.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Mak ayah kurang terasa",
+      "at": "kurang",
+      "y": 1470
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Topper pula ber-zip, boleh tanggal dan cuci di rumah.",
+   "scene": {
+    "head": {
+     "t": "Topper <b>ber-zip</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/white-mattress-topper-getting-unzipped-from-a-blue-mattress-to-get-changed.jpg",
+     "box": [
+      190,
+      520,
+      700,
+      700
+     ]
+    },
+    "chips": [
+     {
+      "t": "Cuci di rumah",
+      "at": "cuci",
+      "y": 1260
+     }
+    ]
+   }
+  },
+  {
+   "id": "07",
+   "text": "Untuk keluarga yang aktif. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Untuk keluarga yang aktif.",
+     "img": "assets/tilam/primelite/family-of-three-laying-down-on-the-coway-prime-lite-series-mattress-without-any-bedsheets.jpg"
+    }
+   }
+  }
+ ]
+}

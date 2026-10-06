@@ -1,0 +1,203 @@
+{
+ "id": "l09",
+ "slug": "robot-vakum-bawah-katil",
+ "title": "L09 — Robot vakum masuk bawah katil",
+ "pain": [
+  "#93",
+  "#89"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Bawah katil you penuh habuk? Robot vakum tak boleh masuk?",
+   "scene": {
+    "words": [
+     {
+      "t": "BAWAH KATIL",
+      "at": 0.05,
+      "size": 120,
+      "y": 560
+     },
+     {
+      "t": "<b>PENUH HABUK?</b>",
+      "at": "penuh",
+      "size": 120,
+      "y": 720
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Rangka Prime Lite ada jarak dua belas sentimeter dari lantai.",
+   "scene": {
+    "head": {
+     "t": "Jarak <b>12 cm</b>",
+     "k": "RANGKA PRIME LITE",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/an-image-of-a-gap-between-the-bed-and-the-wooden-floor-with-the-measurement-of-12cm-and-a-robot-vacuum-cleaner-at-the-side.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Cukup untuk robot vakum masuk, dan bersihkan bawah katil.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Robot vakum boleh masuk",
+      "at": "robot",
+      "y": 1260
+     },
+     {
+      "t": "Bawah katil bersih",
+      "at": "bersihkan",
+      "y": 1365
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Fabrik rangka pula tahan lama, dan mudah dibersihkan.",
+   "scene": {
+    "head": {
+     "t": "Fabrik <b>mudah dibersihkan</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/an-image-of-high-quality-durable-blue-fabric-for-the-coway-prime-lite-series-mattress.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "05",
+   "text": "Bucu dia lembut dan melengkung.",
+   "scene": {
+    "head": {
+     "t": "Bucu <b>lembut</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/high-view-of-the-coway-prime-lite-series-mattress-on-a-wooden-floor-featuring-its-round-corners.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "06",
+   "text": "Untuk tilam pula, servis penjagaan Coway setiap empat bulan.",
+   "scene": {
+    "head": {
+     "t": "Servis tilam<br><b>setiap 4 bulan*</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/coway-mattress-care-service-for-prime-lite.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "note": {
+     "t": "*Untuk pakej termasuk servis.",
+     "y": 1260,
+     "at": "empat"
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Rumah kemas, tidur pun bersih. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Rumah kemas, tidur pun bersih."
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "id": "l13",
+ "slug": "topper-tukar-percuma",
+ "title": "L13 — Topper tukar percuma, tilam kekal segar",
+ "pain": [
+  "#73",
+  "#117"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Tilam lama-lama rasa nipis? Kena beli baru?",
+   "scene": {
+    "words": [
+     {
+      "t": "TILAM DAH NIPIS?",
+      "at": 0.05,
+      "size": 110,
+      "y": 600
+     },
+     {
+      "t": "Kena beli <b>baru?</b>",
+      "at": "Kena",
+      "size": 96,
+      "y": 770,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Dengan Prime Lite, tak perlu. Topper dia ber-zip, dan boleh ditanggal sepenuhnya.",
+   "scene": {
+    "head": {
+     "t": "Topper <b>ber-zip</b>",
+     "k": "COWAY PRIME LITE",
+     "y": 170
+    },
+    "media": {
+     "clip": "topper",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Untuk pelanggan sewa, topper ditukar percuma, tiga tahun sekali.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Tukar percuma 3 tahun sekali*",
+      "at": "percuma",
+      "y": 1270
+     }
+    ],
+    "note": {
+     "t": "*Untuk pelanggan sewa. Tertakluk kepada terma &amp; syarat.",
+     "y": 1400,
+     "at": "percuma"
+    }
+   }
+  },
+  {
+   "id": "04",
+   "text": "Jadi lapisan atas sentiasa segar, tanpa perlu buang tilam.",
+   "scene": {
+    "words": [
+     {
+      "t": "LAPISAN ATAS <b>SEGAR.</b>",
+      "at": 0.05,
+      "size": 96,
+      "y": 620
+     },
+     {
+      "t": "Tak perlu buang tilam.",
+      "at": "tanpa",
+      "size": 70,
+      "y": 790,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Topper dia juga ada lapisan lembut, untuk tidur yang lebih selesa.",
+   "scene": {
+    "head": {
+     "t": "Lapisan <b>lembut</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/a-close-up-view-of-the-coway-prime-lite-series-mattress-white-fabric.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "06",
+   "text": "Nak tilam yang kekal segar? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Tukar topper, bukan tilam."
+    }
+   }
+  }
+ ]
+}

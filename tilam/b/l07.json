@@ -1,0 +1,224 @@
+{
+ "id": "l07",
+ "slug": "suami-mengiring-isteri-terlentang",
+ "title": "L07 — Suami mengiring, isteri terlentang",
+ "pain": [
+  "#23",
+  "#164"
+ ],
+ "mood": "warm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Suami tidur mengiring. Isteri tidur terlentang. Nak pilih soft ke firm?",
+   "scene": {
+    "words": [
+     {
+      "t": "Suami: <b>mengiring.</b>",
+      "at": 0.05,
+      "size": 96,
+      "y": 520,
+      "anim": "up"
+     },
+     {
+      "t": "Isteri: <b>terlentang.</b>",
+      "at": "Isteri",
+      "size": 96,
+      "y": 670,
+      "anim": "up"
+     },
+     {
+      "t": "SOFT KE FIRM?",
+      "at": "Nak",
+      "size": 120,
+      "y": 860
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Ramai pening bab ni. Ni antara soalan yang paling kerap ditanya.",
+   "scene": {
+    "comment": {
+     "t": "mana paling keras mana satu yg bagus soft n firm apa beza",
+     "src": "TikTok · 2026",
+     "y": 620,
+     "at": 0.1,
+     "tag": "SOALAN"
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Prime Lite datang dengan satu kekerasan, medium firm. Jenis all-rounder.",
+   "scene": {
+    "head": {
+     "t": "<b>Medium Firm</b>",
+     "k": "COWAY PRIME LITE",
+     "s": "All-rounder",
+     "y": 170
+    },
+    "media": {
+     "clip": "positions",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "04",
+   "text": "Sesuai untuk banyak posisi tidur. Mengiring, terlentang, atau tukar-tukar sepanjang malam.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Mengiring",
+      "at": "Mengiring",
+      "y": 1250
+     },
+     {
+      "t": "Terlentang",
+      "at": "terlentang",
+      "y": 1355
+     },
+     {
+      "t": "Tukar-tukar sepanjang malam",
+      "at": "tukar",
+      "y": 1460
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Spring lima zon sokong ikut bentuk badan masing-masing. Bila seorang pusing, seorang lagi kurang terasa.",
+   "scene": {
+    "head": {
+     "t": "Spring <b>5 zon</b>",
+     "s": "Ikut bentuk badan masing-masing",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/an-image-showing-a-side-sleeper-and-a-back-sleeper-on-the-coway-prime-lite-series-mattress-with-5-zones-separated.png",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ],
+     "bgc": "#000"
+    },
+    "chips": [
+     {
+      "t": "Kurang gangguan pasangan",
+      "at": "pusing",
+      "y": 1260
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Satu tilam, dua cara tidur. Tak perlu bertekak.",
+   "scene": {
+    "words": [
+     {
+      "t": "SATU TILAM.",
+      "at": 0.05,
+      "size": 130,
+      "y": 560
+     },
+     {
+      "t": "<b>DUA CARA TIDUR.</b>",
+      "at": "dua",
+      "size": 110,
+      "y": 730
+     },
+     {
+      "t": "Tak perlu bertekak.",
+      "at": "Tak",
+      "size": 70,
+      "y": 920,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "07",
+   "text": "Nak cuba tilam all-rounder ni? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Satu tilam untuk berdua.",
+     "img": "assets/tilam/primelite/family-of-three-laying-down-on-the-coway-prime-lite-series-mattress-without-any-bedsheets.jpg"
+    }
+   }
+  }
+ ]
+}

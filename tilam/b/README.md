@@ -1,4 +1,4 @@
-# Siri B, C, D — Video tilam Coway Prime II
+# Siri B, C, D (Prime II) & L (Prime Lite) — Video tilam Coway
 
 Berdasarkan `tilam/plan_v2_draft.md` (Tiang B). Kategori A ditolak.
 
@@ -63,3 +63,29 @@ selepas kuota model 3.1 reset (±10 permintaan/hari).
 
 Nota semakan: `check_asr.py` jatuh ke model Gemini "lite" bila kuota habis. Model lite sering salah dengar "Coway"
 (cth. "Koei", "Kuari") walaupun pada VO yang betul — jadi semakan sebutan jenama perlu didengar sendiri.
+
+## Siri L — Coway Prime Lite (15 video)
+Spesifikasi dijana oleh `tilam/lite/gen_specs.py` (tema biru muda, footage & gambar rasmi `assets/tilam/primelite/`).
+Analisa & sumber: `tilam/lite/analisis_dan_plan.md`.
+
+| Video | Fail | Sudut | Rujukan |
+|---|---|---|---|
+| L01 | `out/tilam/l01_3-sebab-ramai-pilih-prime-lite.mp4` | 3 sebab ramai pilih Prime Lite | r1 r6 |
+| L02 | `out/tilam/l02_patutlah-ramai-order.mp4` | Patutlah ramai order | r3 |
+| L03 | `out/tilam/l03_anak-terkencing-buka-zip.mp4` | Anak terkencing? Buka zip je | #87 r5 |
+| L04 | `out/tilam/l04_lite-vs-prime2-30-saat.mp4` | Prime Lite vs Prime II: beza 30 saat | r4 |
+| L05 | `out/tilam/l05_lite-atau-prime2-pilih.mp4` | Lite atau Prime II? Pilih dalam 10 saat | #57 #70 |
+| L06 | `out/tilam/l06_5-zon-vs-7-zon.mp4` | 5 zon vs 7 zon | #62 #66 |
+| L07 | `out/tilam/l07_suami-mengiring-isteri-terlentang.mp4` | Suami mengiring, isteri terlentang | #23 #164 |
+| L08 | `out/tilam/l08_12-inci-rasa-hotel.mp4` | 12 inci: tidur rasa hotel | r1 r5 |
+| L09 | `out/tilam/l09_robot-vakum-bawah-katil.mp4` | Robot vakum masuk bawah katil | #93 #89 |
+| L10 | `out/tilam/l10_anak-lasak-bucu-lembut.mp4` | Anak lasak? Bucu lembut | #164 #165 |
+| L11 | `out/tilam/l11_pasangan-pusing-terjaga.mp4` | Pasangan pusing, you terjaga? | #164 #166 |
+| L12 | `out/tilam/l12_bilik-panas-cooling.mp4` | Bilik panas, kipas satu je | #160 #161 #162 |
+| L13 | `out/tilam/l13_topper-tukar-percuma.mp4` | Topper tukar percuma, tilam kekal segar | #73 #117 |
+| L14 | `out/tilam/l14_rumah-pertama-set-biru.mp4` | Rumah pertama, set biru lembut | #2 #57 |
+| L15 | `out/tilam/l15_lite-servis-tetap-penuh.mp4` | Tilam Lite, servis tetap penuh | #93 #114 |
+
+Fakta disahkan ejen (6 Okt): Medium Firm sahaja (all-rounder), topper cuci di rumah (bukan dobi), tukar topper 3 tahun sekali
+(pelanggan sewa), servis setiap 4 bulan (pakej termasuk servis), hantar & pasang percuma termasuk Sabah & Sarawak.
+VO: `gemini-3.1-flash-tts-preview` untuk L01–L08, `gemini-3.8-flash-tts` untuk L09–L15.

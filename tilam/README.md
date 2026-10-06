@@ -1,7 +1,7 @@
 # Video Tilam Coway
 
 - **Draf plan v2 (berasaskan data pain 169 ayat):** [`plan_v2_draft.md`](plan_v2_draft.md)
-- **Siri B, C, D (19 video):** [`b/README.md`](b/README.md)
+- **Siri B, C, D (19 video Prime II) + Siri L (15 video Prime Lite):** [`b/README.md`](b/README.md)
 - **Prime Lite: analisa 5 video rujukan + draf 15 video:** [`lite/analisis_dan_plan.md`](lite/analisis_dan_plan.md)
 - Plan asal 30 video: [`plan_30_video.md`](plan_30_video.md)
 - Padanan pain × produk (data Lowyat): [`padanan_pain_coway.md`](padanan_pain_coway.md)

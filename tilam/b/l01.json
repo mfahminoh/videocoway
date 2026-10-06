@@ -1,0 +1,196 @@
+{
+ "id": "l01",
+ "slug": "3-sebab-ramai-pilih-prime-lite",
+ "title": "L01 — 3 sebab ramai pilih Prime Lite",
+ "pain": [
+  "r1",
+  "r6"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Tilam dua belas inci, topper ber-zip, servis Coway. Biar betul? Ni tiga sebab ramai pilih Coway Prime Lite.",
+   "scene": {
+    "bg": {
+     "clip": "sheets",
+     "dim": 1
+    },
+    "head": {
+     "t": "3 sebab<br><b>ramai pilih</b>",
+     "k": "COWAY PRIME LITE",
+     "y": 200,
+     "at": "tiga sebab"
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Satu, pocket spring lima zon. Sokong ikut bentuk badan, dari kepala sampai kaki.",
+   "scene": {
+    "head": {
+     "t": "Pocket spring <b>5 zon</b>",
+     "k": "SEBAB 1",
+     "y": 170
+    },
+    "media": {
+     "clip": "zone5",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Dan bila pasangan bergerak, you kurang terasa.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Kurang gangguan pasangan",
+      "at": "pasangan",
+      "y": 1260
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Dua, tebal dua belas inci. Tidur rasa macam dekat hotel.",
+   "scene": {
+    "head": {
+     "t": "<b>12 inci</b> tebal",
+     "k": "SEBAB 2",
+     "y": 170
+    },
+    "media": {
+     "clip": "press",
+     "box": [
+      90,
+      560,
+      900,
+      760
+     ]
+    },
+    "chips": [
+     {
+      "t": "Rasa macam hotel",
+      "at": "hotel",
+      "y": 1400
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Tiga, topper dia ber-zip. Boleh tanggal, cuci di rumah, dan ditukar percuma tiga tahun sekali.",
+   "scene": {
+    "head": {
+     "t": "Topper <b>ber-zip</b>",
+     "k": "SEBAB 3",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/white-mattress-topper-getting-unzipped-from-a-blue-mattress-to-get-changed.jpg",
+     "box": [
+      190,
+      520,
+      700,
+      700
+     ]
+    },
+    "chips": [
+     {
+      "t": "Cuci di rumah",
+      "at": "cuci",
+      "y": 1260
+     },
+     {
+      "t": "Tukar percuma 3 tahun sekali*",
+      "at": "ditukar",
+      "y": 1365
+     }
+    ],
+    "note": {
+     "t": "*Untuk pelanggan sewa. Tertakluk kepada terma &amp; syarat.",
+     "y": 1480,
+     "at": "ditukar"
+    }
+   }
+  },
+  {
+   "id": "06",
+   "text": "Nak tidur atas tilam macam ni? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Tanya dulu. Tak ada paksa."
+    }
+   }
+  }
+ ]
+}
