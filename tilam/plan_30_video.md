@@ -8,7 +8,7 @@ Panjang sasaran: 15–40s (iklan), kebanyakan ±25–30s.
 > Angka dalam plan ni ialah placeholder — tukar ikut harga terkini.
 
 ## Fakta produk yang boleh guna (USP) — model utama: **Coway Prime II**
-Susunan lapisan ikut laman rasmi (atas → bawah):
+Susunan lapisan ikut animasi rasmi Coway (atas → bawah):
 - Fabrik anti-statik + benang penyejuk (karbon & cooling yarn)
 - **Topper boleh tukar** (changeable topper)
 - Latex asli dengan **5 zon ketumpatan**
@@ -60,7 +60,7 @@ Gaya merujuk enjin sedia ada dalam repo:
 ### D. Bahan & teknologi — bina kepercayaan
 | # | Tajuk | Gaya | Hook 3 saat | Isi | Panjang |
 |---|---|---|---|---|---|
-| 16 | Bedah tilam: apa ada dalam? ✅ **siap** (`out/tilam/v16_prime2_final.mp4`) | PREM | "Apa sebenarnya yang ada dalam tilam Coway Prime 2?" | Prime II: fabrik sejuk → topper → latex 5 zon → foam berliang → sabut kelapa → pocket spring 7 zon → Soft/Firm → promo bulan ini (tanpa harga) | 54s |
+| 16 | Bedah tilam: apa ada dalam? ✅ **siap** (`out/tilam/v16_prime2_final.mp4`) | PREM | "Apa sebenarnya yang ada dalam tilam Coway Prime 2?" | Prime II: fabrik sejuk → topper → latex 5 zon → foam berliang → pocket spring 7 zon → sabut kelapa → Soft/Firm → promo bulan ini (tanpa harga) | 52s |
 | 17 | 7 zon spring, 7 bahagian badan | PAPER | "Kepala, bahu, pinggang, pinggul, kaki — sokongan lain-lain." | Animasi badan atas 7 zon | 20s |
 | 18 | Latex asli vs foam biasa | KIN | "LATEX ASLI ≠ FOAM BIASA" | Lantunan, tahan lama, tak mendap | 20s |
 | 19 | Topper boleh tukar | POV | "Suka keras? Suka lembut? Tukar je topper." | Changeable topper — sesuai pasangan beza citarasa | 25s |

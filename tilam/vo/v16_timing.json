@@ -36,37 +36,37 @@
  },
  {
   "id": "06",
-  "scene": "coconut",
+  "scene": "spring",
   "start": 25.44,
-  "end": 30.23,
-  "text": "Lepas tu, sabut kelapa. Sokongan padu, dan bantu serap lembapan."
+  "end": 32.06,
+  "text": "Ni bintang utama. Pocket spring tujuh zon. Sokong setiap bahagian badan, dan bila pasangan pusing, you tak terasa."
  },
  {
   "id": "07",
-  "scene": "spring",
-  "start": 30.55,
-  "end": 39.45,
-  "text": "Dan paling bawah, bintang utama. Pocket spring tujuh zon. Sokong setiap bahagian badan, dan bila pasangan pusing, you tak terasa."
+  "scene": "coconut",
+  "start": 32.38,
+  "end": 36.36,
+  "text": "Paling bawah, sabut kelapa. Sokongan padu, dan bantu serap lembapan."
  },
  {
   "id": "08",
   "scene": "assemble",
-  "start": 39.77,
-  "end": 42.85,
+  "start": 36.68,
+  "end": 39.76,
   "text": "Semua ni, dalam satu tilam. Coway Prime 2."
  },
  {
   "id": "09",
   "scene": "promo",
-  "start": 43.17,
-  "end": 49.91,
+  "start": 40.08,
+  "end": 46.82,
   "text": "Ada pilihan Soft dan Firm, saiz Queen dan King. Promosi Coway bertukar setiap bulan, jadi tanya saya harga terkini."
  },
  {
   "id": "10",
   "scene": "cta",
-  "start": 50.23,
-  "end": 52.0,
+  "start": 47.14,
+  "end": 48.91,
   "text": "Nak rasa sendiri? WhatsApp saya sekarang."
  }
 ]

@@ -64,7 +64,7 @@ def audio(T, path):
     # SFX ikut animasi (src/tilam/v16_prime2.html)
     add(sfx, whoosh(1.1), e1 - .2, .32)
     for i in range(6): add(sfx, pop(700 + i * 90), e1 + .15 + (5 - i) * .06 + .5, .1)
-    for k in ["fabric", "topper", "latex", "foam", "coconut", "spring", "assemble", "promo", "cta"]:
+    for k in ["fabric", "topper", "latex", "foam", "spring", "coconut", "assemble", "promo", "cta"]:
         add(sfx, whoosh(.55), T[k]["start"] - .45, .16)
     s = T["fabric"]["start"]
     for x in (1.2, 1.9): add(sfx, pop(1000), s + x, .18)
@@ -73,8 +73,8 @@ def audio(T, path):
     add(sfx, pop(1000), s + 1.5, .18)
     for j in range(5): add(sfx, pop(800 + j * 70), T["latex"]["start"] + 1.0 + j * .32, .17)
     add(sfx, whoosh(1.6), T["foam"]["start"] + .3, .12); add(sfx, pop(1000), T["foam"]["start"] + 1.0, .18)
-    for j in range(7): add(sfx, pop(760 + j * 60), T["spring"]["start"] + 2.6 + j * .3, .16)
-    add(sfx, pop(1000), T["spring"]["start"] + 5.6, .18)
+    for j in range(7): add(sfx, pop(760 + j * 60), T["spring"]["start"] + 1.0 + j * .3, .16)
+    add(sfx, pop(1000), T["spring"]["start"] + 3.4, .18)
     for x in (1.2, 2.0): add(sfx, pop(1000), T["coconut"]["start"] + x, .18)
     add(sfx, thud(), T["assemble"]["start"] + .75, .5)
     for j, f in enumerate([1568, 2093, 2637]): add(sfx, bell(f), T["assemble"]["start"] + 1.0 + j * .1, .05)

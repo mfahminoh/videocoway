@@ -93,7 +93,7 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 <script>
 /* ===================== masa (dari tilam/vo/v16_timing.json melalui v16_timing.js) ===================== */
 const TM = {}; (window.TIMING || []).forEach(x => TM[x.scene] = x);
-const ORDER = ['hook', 'fabric', 'topper', 'latex', 'foam', 'coconut', 'spring', 'assemble', 'promo', 'cta'];
+const ORDER = ['hook', 'fabric', 'topper', 'latex', 'foam', 'spring', 'coconut', 'assemble', 'promo', 'cta'];
 const HOLD = 2.6;                                         // tahan CTA selepas VO tamat
 const S = k => TM[k].start, Eo = k => TM[k].end;
 const NEXT = k => { const i = ORDER.indexOf(k); return i < ORDER.length - 1 ? S(ORDER[i + 1]) : DURATION; };
@@ -113,8 +113,8 @@ const LAYERS = [
   { id: 'topper',  h: 48,  col: '#efebe0', top: 'url(#pTopper)', front: 'url(#pTopperF)' },
   { id: 'latex',   h: 60,  col: '#f0dda6', top: 'url(#pLatex)',  front: 'url(#pLatex)', zones: [.16, .19, .3, .19, .16] },
   { id: 'foam',    h: 44,  col: '#c6d4e6', top: 'url(#pFoam)',   front: 'url(#pFoam)' },
-  { id: 'coconut', h: 38,  col: '#7b4f2e', top: '#7b4f2e',       front: '#6e4426' },
   { id: 'spring',  h: 128, col: '#dbe2ec', top: 'url(#pPocket)', front: 'url(#pCoil)', zones: [.12, .13, .15, .2, .15, .13, .12] },
+  { id: 'coconut', h: 38,  col: '#7b4f2e', top: '#7b4f2e',       front: '#6e4426' },
 ];
 const TOTAL_H = LAYERS.reduce((a, l) => a + l.h, 0);
 const GAP = 112;
@@ -222,8 +222,8 @@ const TEXT = {
   topper:  { k: 'LAPISAN 02', t: 'Topper<br><span class="g">Boleh Tukar</span>', s: 'Tilam sentiasa rasa macam baru' },
   latex:   { k: 'LAPISAN 03', t: 'Latex Asli<br><span class="g">5 Zon</span> Ketumpatan', s: 'Ikut lengkuk badan you' },
   foam:    { k: 'LAPISAN 04', t: 'Foam <span class="g">Berliang</span>', s: 'Udara mengalir, kurang panas terperangkap' },
-  spring:  { k: 'LAPISAN 06', t: 'Pocket Spring<br><span class="g">7 Zon</span>', s: 'Sokongan tepat setiap bahagian badan' },
-  coconut: { k: 'LAPISAN 05', t: 'Sabut <span class="g">Kelapa</span>', s: 'Sokongan padu · bantu serap lembapan' },
+  spring:  { k: 'LAPISAN 05', t: 'Pocket Spring<br><span class="g">7 Zon</span>', s: 'Sokongan tepat setiap bahagian badan' },
+  coconut: { k: 'LAPISAN 06', t: 'Sabut <span class="g">Kelapa</span>', s: 'Sokongan padu · bantu serap lembapan' },
   assemble:{ k: 'SEMUA DALAM SATU TILAM', t: 'COWAY<br><span class="g">PRIME II</span>', s: 'Tinggi 33 cm · Soft &amp; Firm · Queen &amp; King' },
 };
 Object.entries(TEXT).forEach(([k, v]) => ui.insertAdjacentHTML('beforeend',
@@ -234,7 +234,7 @@ const BADGES = [
   ['fabric', 1.2, 'Buang cas statik', 120, 1440], ['fabric', 1.9, 'Permukaan sejuk', 560, 1440],
   ['topper', 1.5, 'Tukar topper, tak perlu tukar tilam', 0, 1440],
   ['foam', 1.0, 'Aliran udara lebih baik', 0, 1440],
-  ['spring', 5.6, 'Pasangan pusing? Tak terasa', 0, 1440],
+  ['spring', 3.4, 'Pasangan pusing? Tak terasa', 0, 1440],
   ['coconut', 1.2, 'Sokongan padu', 140, 1440], ['coconut', 2.0, 'Serap lembapan', 570, 1440],
 ];
 BADGES.forEach((b, i) => ui.insertAdjacentHTML('beforeend',
@@ -274,7 +274,7 @@ const CAPS = [];
 CAPS.forEach(c => c.txt = c.txt.replace(/Coway Prime 2/g, 'Coway Prime II'));
 
 /* ===================== keadaan kamera & lapisan setiap adegan ===================== */
-const FOCUS = ['fabric', 'topper', 'latex', 'foam', 'coconut', 'spring'];
+const FOCUS = ['fabric', 'topper', 'latex', 'foam', 'spring', 'coconut'];
 function explodeAt(t) {
   const e1 = S('hook') + (Eo('hook') - S('hook')) * .62;
   const up = P(t, e1, e1 + 1.2, inOut), down = P(t, S('assemble') - .1, S('assemble') + .9, inOut);
@@ -334,7 +334,7 @@ function seek(t) {
   cover.style.opacity = cov.toFixed(3);
 
   // zon (latex 5, spring 7) menyala satu-satu
-  [['latex', 1.0, .32], ['spring', 2.6, .3]].forEach(([id, t0, st]) => {
+  [['latex', 1.0, .32], ['spring', 1.0, .3]].forEach(([id, t0, st]) => {
     const kk = t - S(id), on = kn === id;
     document.querySelectorAll(`#L_${id} .zone`).forEach(z => {
       const j = +z.dataset.j, p = on ? P(kk, t0 + j * st, t0 + j * st + .35) : 0;
