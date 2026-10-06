@@ -93,7 +93,7 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 <script>
 /* ===================== masa (dari tilam/vo/v16_timing.json melalui v16_timing.js) ===================== */
 const TM = {}; (window.TIMING || []).forEach(x => TM[x.scene] = x);
-const ORDER = ['hook', 'fabric', 'topper', 'latex', 'foam', 'spring', 'coconut', 'assemble', 'price', 'cta'];
+const ORDER = ['hook', 'fabric', 'topper', 'latex', 'foam', 'coconut', 'spring', 'assemble', 'promo', 'cta'];
 const HOLD = 2.6;                                         // tahan CTA selepas VO tamat
 const S = k => TM[k].start, Eo = k => TM[k].end;
 const NEXT = k => { const i = ORDER.indexOf(k); return i < ORDER.length - 1 ? S(ORDER[i + 1]) : DURATION; };
@@ -113,8 +113,8 @@ const LAYERS = [
   { id: 'topper',  h: 48,  col: '#efebe0', top: 'url(#pTopper)', front: 'url(#pTopperF)' },
   { id: 'latex',   h: 60,  col: '#f0dda6', top: 'url(#pLatex)',  front: 'url(#pLatex)', zones: [.16, .19, .3, .19, .16] },
   { id: 'foam',    h: 44,  col: '#c6d4e6', top: 'url(#pFoam)',   front: 'url(#pFoam)' },
-  { id: 'spring',  h: 128, col: '#dbe2ec', top: 'url(#pPocket)', front: 'url(#pCoil)', zones: [.12, .13, .15, .2, .15, .13, .12] },
   { id: 'coconut', h: 38,  col: '#7b4f2e', top: '#7b4f2e',       front: '#6e4426' },
+  { id: 'spring',  h: 128, col: '#dbe2ec', top: 'url(#pPocket)', front: 'url(#pCoil)', zones: [.12, .13, .15, .2, .15, .13, .12] },
 ];
 const TOTAL_H = LAYERS.reduce((a, l) => a + l.h, 0);
 const GAP = 112;
@@ -222,9 +222,9 @@ const TEXT = {
   topper:  { k: 'LAPISAN 02', t: 'Topper<br><span class="g">Boleh Tukar</span>', s: 'Tilam sentiasa rasa macam baru' },
   latex:   { k: 'LAPISAN 03', t: 'Latex Asli<br><span class="g">5 Zon</span> Ketumpatan', s: 'Ikut lengkuk badan you' },
   foam:    { k: 'LAPISAN 04', t: 'Foam <span class="g">Berliang</span>', s: 'Udara mengalir, kurang panas terperangkap' },
-  spring:  { k: 'LAPISAN 05', t: 'Pocket Spring<br><span class="g">7 Zon</span>', s: 'Sokongan tepat setiap bahagian badan' },
-  coconut: { k: 'LAPISAN 06', t: 'Sabut <span class="g">Kelapa</span>', s: 'Sokongan padu · bantu serap lembapan' },
-  assemble:{ k: 'SEMUA DALAM SATU TILAM', t: 'COWAY<br><span class="g">PRIME II</span>', s: 'Tinggi 33 cm · Queen &amp; King' },
+  spring:  { k: 'LAPISAN 06', t: 'Pocket Spring<br><span class="g">7 Zon</span>', s: 'Sokongan tepat setiap bahagian badan' },
+  coconut: { k: 'LAPISAN 05', t: 'Sabut <span class="g">Kelapa</span>', s: 'Sokongan padu · bantu serap lembapan' },
+  assemble:{ k: 'SEMUA DALAM SATU TILAM', t: 'COWAY<br><span class="g">PRIME II</span>', s: 'Tinggi 33 cm · Soft &amp; Firm · Queen &amp; King' },
 };
 Object.entries(TEXT).forEach(([k, v]) => ui.insertAdjacentHTML('beforeend',
   `<div class="txt" id="T_${k}" style="top:${k === 'assemble' ? 190 : 150}px"><div class="kick">${v.k}</div><div class="title" ${k === 'assemble' ? 'style="font-family:P;font-size:120px;letter-spacing:6px"' : ''}>${v.t}</div><div class="sub">${v.s}</div></div>`));
@@ -234,24 +234,25 @@ const BADGES = [
   ['fabric', 1.2, 'Buang cas statik', 120, 1440], ['fabric', 1.9, 'Permukaan sejuk', 560, 1440],
   ['topper', 1.5, 'Tukar topper, tak perlu tukar tilam', 0, 1440],
   ['foam', 1.0, 'Aliran udara lebih baik', 0, 1440],
-  ['spring', 3.4, 'Pasangan pusing? Tak terasa', 0, 1440],
+  ['spring', 5.6, 'Pasangan pusing? Tak terasa', 0, 1440],
   ['coconut', 1.2, 'Sokongan padu', 140, 1440], ['coconut', 2.0, 'Serap lembapan', 570, 1440],
 ];
 BADGES.forEach((b, i) => ui.insertAdjacentHTML('beforeend',
   `<div class="badge" id="B${i}" style="top:${b[4]}px; ${b[3] ? `left:${b[3]}px` : 'left:50%'}"><i>✓</i>${b[2]}</div>`));
 BADGES.forEach((b, i) => { const el = document.getElementById('B' + i); b.el = el; b.center = !b[3]; });
 
-// harga + CTA
+// pilihan + promo (tanpa harga: promo Coway bertukar setiap bulan) + CTA
 const WA = '<svg width="74" height="74" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>';
 ui.insertAdjacentHTML('beforeend', `
   <div class="abs" id="pr" style="left:0; top:0; width:1080px; height:1920px">
-    <div class="txt pi" data-in=".1" style="top:880px"><span style="display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:38px;letter-spacing:6px;padding:14px 40px;border-radius:50px">SEWA SERENDAH</span></div>
-    <div class="txt pi" data-in=".5" style="top:960px; white-space:nowrap"><span style="font-weight:800;font-size:230px;line-height:1.1;color:#fff">RM<span id="cnt">0</span></span><span style="font-weight:600;font-size:64px;opacity:.9">/bulan</span></div>
-    <div class="txt pi" data-in="1.0" style="top:1225px; font-size:38px; font-weight:500; opacity:.75">Saiz Queen · King RM159/bulan</div>
-    <div class="abs pi" data-in="1.6" style="left:110px; top:1300px; width:860px; height:130px; border-radius:30px; background:rgba(226,189,114,.14); border:3px solid var(--gold); display:flex; align-items:center; justify-content:center; gap:16px; font-size:46px; font-weight:700; white-space:nowrap"><span style="color:var(--gold2)">✓</span> Servis tilam <span style="color:var(--gold2)">PERCUMA 5 tahun</span></div>
-    <div class="abs pi" data-in="3.6" data-a="stamp" style="left:730px; top:520px; transform-origin:50% 50%"><div style="width:300px;height:300px;border-radius:50%;background:#e2564a;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(10deg);box-shadow:0 18px 50px rgba(0,0,0,.4);border:6px dashed rgba(255,255,255,.6)">
-      <div style="font-weight:700;font-size:36px">BAWAH</div><div style="font-weight:800;font-size:96px;line-height:1">RM5</div><div style="font-weight:700;font-size:36px">SEMALAM!</div></div></div>
-    <div class="txt pi" data-in="1.9" style="top:1458px; font-size:28px; opacity:.55">*Harga sewa bulanan. Tertakluk kepada terma &amp; syarat Coway.</div>
+    <div class="txt pi" data-in=".05" style="top:860px"><span style="display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:38px;letter-spacing:6px;padding:14px 40px;border-radius:50px">PILIH IKUT CARA TIDUR</span></div>
+    <div class="abs pi" data-in=".35" style="left:90px; top:960px; width:430px; height:230px; border-radius:30px; background:rgba(127,214,255,.10); border:3px solid #9fdcff; text-align:center; padding-top:30px">
+      <div style="font-weight:800; font-size:86px; line-height:1; color:#bfe9ff">SOFT</div><div style="font-weight:600; font-size:38px; margin-top:22px">Tidur mengiring</div></div>
+    <div class="abs pi" data-in=".75" style="left:560px; top:960px; width:430px; height:230px; border-radius:30px; background:rgba(226,189,114,.12); border:3px solid var(--gold); text-align:center; padding-top:30px">
+      <div style="font-weight:800; font-size:86px; line-height:1; color:var(--gold2)">FIRM</div><div style="font-weight:600; font-size:38px; margin-top:22px">Tidur terlentang</div></div>
+    <div class="txt pi" data-in="1.6" style="top:1222px; font-size:44px; font-weight:600">Saiz <span style="color:var(--gold2)">Queen</span> &amp; <span style="color:var(--gold2)">King</span></div>
+    <div class="abs pi" data-in="3.2" data-a="stamp" style="left:140px; top:1320px; width:800px; transform-origin:50% 50%"><div style="background:#e2564a; border-radius:26px; padding:22px 0; text-align:center; transform:rotate(-2deg); box-shadow:0 18px 50px rgba(0,0,0,.4); border:4px dashed rgba(255,255,255,.55)">
+      <div style="font-weight:800; font-size:62px; line-height:1.1">PROMO BULAN INI</div><div style="font-weight:600; font-size:38px; margin-top:6px">Tanya saya harga terkini</div></div></div>
   </div>
   <div class="abs" id="cta" style="left:0; top:0; width:1080px; height:1920px">
     <div class="txt ci" data-in=".05" style="top:1000px; font-weight:800; font-size:96px">Nak rasa <span style="color:var(--gold2)">sendiri?</span></div>
@@ -259,7 +260,7 @@ ui.insertAdjacentHTML('beforeend', `
     <div class="txt ci" data-in="1.1" style="top:1370px; font-size:40px; font-weight:600; letter-spacing:6px; color:var(--gold2)">COWAY PRIME II</div>
     <div class="txt ci" data-in="1.3" style="top:1430px; font-size:34px; opacity:.75">Tanya saiz, harga &amp; promo terkini</div>
   </div>`);
-const PR = document.getElementById('pr'), CTA = document.getElementById('cta'), CNT = document.getElementById('cnt');
+const PR = document.getElementById('pr'), CTA = document.getElementById('cta');
 
 // kapsyen (dipecah ikut tanda baca, masa ikut bilangan huruf)
 const CAPS = [];
@@ -273,7 +274,7 @@ const CAPS = [];
 CAPS.forEach(c => c.txt = c.txt.replace(/Coway Prime 2/g, 'Coway Prime II'));
 
 /* ===================== keadaan kamera & lapisan setiap adegan ===================== */
-const FOCUS = ['fabric', 'topper', 'latex', 'foam', 'spring', 'coconut'];
+const FOCUS = ['fabric', 'topper', 'latex', 'foam', 'coconut', 'spring'];
 function explodeAt(t) {
   const e1 = S('hook') + (Eo('hook') - S('hook')) * .62;
   const up = P(t, e1, e1 + 1.2, inOut), down = P(t, S('assemble') - .1, S('assemble') + .9, inOut);
@@ -290,7 +291,7 @@ function target(k, t) {   // {x,y,s,sy}: titik wrap -> (540, sy) pada skala s
   const fi = FOCUS.indexOf(k);
   if (fi >= 0) { const l = LAYERS[fi]; return { x: (W + DX) / 2, y: l.X + (DY + l.h) / 2, s: l.id === 'spring' ? 1.08 : 1.16, sy: 1080 }; }
   if (k === 'assemble') { const m = stackMid(t); return { x: m.x, y: m.y, s: 1.08, sy: 1080 }; }
-  if (k === 'price') return { x: (W + DX) / 2, y: (DY + TOTAL_H) / 2, s: .62, sy: 600 };
+  if (k === 'promo') return { x: (W + DX) / 2, y: (DY + TOTAL_H) / 2, s: .62, sy: 600 };
   return { x: (W + DX) / 2, y: (DY + TOTAL_H) / 2, s: .78, sy: 700 };
 }
 function sceneAt(t) { let k = 0; ORDER.forEach((n, i) => { if (t >= S(n) - .25) k = i; }); return k; }
@@ -333,7 +334,7 @@ function seek(t) {
   cover.style.opacity = cov.toFixed(3);
 
   // zon (latex 5, spring 7) menyala satu-satu
-  [['latex', 1.0, .32], ['spring', 1.0, .3]].forEach(([id, t0, st]) => {
+  [['latex', 1.0, .32], ['spring', 2.6, .3]].forEach(([id, t0, st]) => {
     const kk = t - S(id), on = kn === id;
     document.querySelectorAll(`#L_${id} .zone`).forEach(z => {
       const j = +z.dataset.j, p = on ? P(kk, t0 + j * st, t0 + j * st + .35) : 0;
@@ -359,7 +360,7 @@ function seek(t) {
 
   // teks tajuk
   Object.keys(TEXT).forEach(n => {
-    const el = document.getElementById('T_' + n), s0 = S(n) - .1, e0 = n === 'assemble' ? S('price') - .2 : NEXT(n) - .2;
+    const el = document.getElementById('T_' + n), s0 = S(n) - .1, e0 = n === 'assemble' ? S('promo') - .2 : NEXT(n) - .2;
     const pin = P(t, s0, s0 + .5), pout = P(t, e0, e0 + .3);
     const o = pin * (1 - pout);
     el.style.opacity = o.toFixed(3); el.style.visibility = o < .002 ? 'hidden' : 'visible';
@@ -373,7 +374,7 @@ function seek(t) {
     bd.el.style.transform = `${bd.center ? 'translateX(-50%) ' : ''}scale(${mix(.6, 1, pin).toFixed(3)})`;
   });
   // harga
-  const pk = t - S('price'), pon = t >= S('price') - .2 && t < S('cta') - .1;
+  const pk = t - S('promo'), pon = t >= S('promo') - .2 && t < S('cta') - .1;
   PR.style.visibility = pon ? 'visible' : 'hidden';
   PR.style.opacity = (1 - P(t, S('cta') - .4, S('cta') - .1)).toFixed(3);
   PR.querySelectorAll('.pi').forEach(el => {
@@ -381,7 +382,6 @@ function seek(t) {
     el.style.opacity = o.toFixed(3);
     el.style.transform = el.dataset.a === 'stamp' ? `scale(${mix(2.2, 1, q).toFixed(3)}) rotate(${mix(-20, 0, q).toFixed(2)}deg)` : `translateY(${((1 - q) * 50).toFixed(1)}px)`;
   });
-  CNT.textContent = Math.round(139 * P(pk, .55, 1.6, outC));
   // CTA
   const ck = t - S('cta');
   CTA.style.visibility = ck > -.1 ? 'visible' : 'hidden';

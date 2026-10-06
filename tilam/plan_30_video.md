@@ -4,19 +4,19 @@ Format: portrait 1080×1920, untuk Meta (FB/IG Reels) + TikTok. CTA utama: **Wha
 Panjang sasaran: 15–40s (iklan), kebanyakan ±25–30s.
 
 > **Sahkan dulu sebelum render:** nama model & saiz yang dijual sekarang, harga sewa bulanan semasa
-> (rujukan lama: *serendah RM139/bulan*), tempoh kontrak, promo bulan ini, dan kekerapan servis tilam.
+> **Harga & promo:** jangan ambil dari website — promo Coway bertukar setiap bulan. Video guna "Promo bulan ini, tanya harga terkini"; kalau nak papar angka, guna promo bulan semasa dari ejen.
 > Angka dalam plan ni ialah placeholder — tukar ikut harga terkini.
 
 ## Fakta produk yang boleh guna (USP) — model utama: **Coway Prime II**
+Susunan lapisan ikut laman rasmi (atas → bawah):
 - Fabrik anti-statik + benang penyejuk (karbon & cooling yarn)
 - **Topper boleh tukar** (changeable topper)
 - Latex asli dengan **5 zon ketumpatan**
 - Foam berliang (ventilated) — aliran udara, kurang panas
 - **Pocket spring 7 zon** — sokongan tepat, kurang rasa gerakan pasangan
-- Sabut kelapa — sokongan padu, serap lembapan · tinggi 33 cm · Queen & King
-- Sewa: Queen RM139/bulan, King RM159/bulan (servis percuma 5 tahun) — *sahkan harga terkini*
+- Sabut kelapa — sokongan padu, serap lembapan
+- Pilihan **Soft** (tidur mengiring) & **Firm** (tidur terlentang) · Queen & King · tinggi 33 cm
 - **Servis penjagaan tilam 7 langkah** berkala: ukur tahap habuk → lap rangka katil → bersih tepi → bersih tilam → penghalau hama → **UV sterilisasi** tilam & rangka
-- Sewa bulanan → kira **"bawah RM5 semalam"** (jika RM139/bulan)
 
 **Elak** dakwaan perubatan ("sembuh sakit belakang", "hilang semput"). Guna ayat selamat:
 "bangun rasa lebih segar", "sokongan badan lebih sekata", "kurang habuk & hama".
@@ -51,7 +51,7 @@ Gaya merujuk enjin sedia ada dalam repo:
 ### C. Harga & sewa vs beli — atasi bantahan harga
 | # | Tajuk | Gaya | Hook 3 saat | Isi | Panjang |
 |---|---|---|---|---|---|
-| 11 | Tilam hotel 5 bintang, bawah RM5 semalam | KIN | "TILAM HOTEL. BAWAH RM5 SEMALAM." | RM139 ÷ 30 malam, banding harga secawan kopi | 20s |
+| 11 | Tilam hotel 5 bintang, kos semalam lebih murah dari kopi | KIN | "TILAM HOTEL. HARGA SEMALAM < SECAWAN KOPI." | Harga bulanan promo semasa ÷ 30 malam (isi angka ikut promo bulan tu) | 20s |
 | 12 | Tilam boleh SEWA? | POV | "Saya baru tahu tilam pun boleh sewa…" | Konsep sewa + servis termasuk | 25s |
 | 13 | Beli tilam RM5k sekali vs sewa | SLIDE | "RM5,000 keluar sekali gus… atau?" | Perbandingan aliran tunai, tiada servis vs ada servis | 30s |
 | 14 | Tilam murah = mahal akhirnya | KIN | "BELI MURAH. MENDAP. BELI LAGI. RUGI." | Selari gaya v4 Villaem — "sekali pilih, pakai lama" | 25s |
@@ -60,7 +60,7 @@ Gaya merujuk enjin sedia ada dalam repo:
 ### D. Bahan & teknologi — bina kepercayaan
 | # | Tajuk | Gaya | Hook 3 saat | Isi | Panjang |
 |---|---|---|---|---|---|
-| 16 | Bedah tilam: apa ada dalam? ✅ **siap** (`out/tilam/v16_prime2_final.mp4`) | PREM | "Apa sebenarnya yang ada dalam tilam Coway Prime 2?" | Prime II: fabrik sejuk → topper → latex 5 zon → foam berliang → pocket spring 7 zon → sabut kelapa | 51s |
+| 16 | Bedah tilam: apa ada dalam? ✅ **siap** (`out/tilam/v16_prime2_final.mp4`) | PREM | "Apa sebenarnya yang ada dalam tilam Coway Prime 2?" | Prime II: fabrik sejuk → topper → latex 5 zon → foam berliang → sabut kelapa → pocket spring 7 zon → Soft/Firm → promo bulan ini (tanpa harga) | 54s |
 | 17 | 7 zon spring, 7 bahagian badan | PAPER | "Kepala, bahu, pinggang, pinggul, kaki — sokongan lain-lain." | Animasi badan atas 7 zon | 20s |
 | 18 | Latex asli vs foam biasa | KIN | "LATEX ASLI ≠ FOAM BIASA" | Lantunan, tahan lama, tak mendap | 20s |
 | 19 | Topper boleh tukar | POV | "Suka keras? Suka lembut? Tukar je topper." | Changeable topper — sesuai pasangan beza citarasa | 25s |
@@ -82,7 +82,7 @@ Gaya merujuk enjin sedia ada dalam repo:
 | 27 | Saiz apa yang sesuai? | SLIDE | "Queen ke King? Ni cara pilih." | Saiz bilik & bilangan penghuni (ikut saiz yang dijual) | 25s |
 | 28 | Proses dari WhatsApp sampai pasang | PAPER | "Dari WhatsApp sampai tidur atas tilam baru — 4 langkah." | Mesej → pilih → hantar & pasang → servis berkala | 20s |
 | 29 | Promo bulan ini | PREM | "Promo tilam Coway bulan ni — tinggal beberapa hari." | Harga/rebat semasa + urgency (kemas kini tiap bulan) | 20s |
-| 30 | Last call / ringkasan semua | KIN | "SEMUA DALAM SATU TILAM." | Recap: 5 zon · latex · servis 7 langkah · <RM5 semalam · WhatsApp | 15s |
+| 30 | Last call / ringkasan semua | KIN | "SEMUA DALAM SATU TILAM." | Recap: latex 5 zon · spring 7 zon · servis 7 langkah · promo bulan ini · WhatsApp | 15s |
 
 ---
 
