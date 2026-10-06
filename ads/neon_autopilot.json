@@ -1,0 +1,118 @@
+{
+  "_nota": "Rekod untuk skill neon-autopilot. Kemas kini fail ini setiap kali kempen di-pause atau dibina, kemudian commit dan push.",
+  "peraturan": {
+    "had_kos_setiap_mesej_myr": 15,
+    "tempoh_nilai_hari": 2,
+    "bajet_kempen_baru_myr_sehari": 10,
+    "objektif_kempen_baru": "OUTCOME_ENGAGEMENT + CONVERSATIONS ke WHATSAPP",
+    "struktur": "1-1-1",
+    "kecuali_wilayah": [
+      {"key": "2551", "name": "Sabah", "country": "MY"},
+      {"key": "2546", "name": "Sarawak", "country": "MY"}
+    ],
+    "label_ai": "OPT_IN"
+  },
+  "video": {
+    "_sumber": "Senarai video ikut folder Google Drive '30 Video Coway - Batch 1 / 30 Video Coway / 01 Neon'. Fail yang dimuat naik ialah versi brand Coway yang sama di GitHub (url).",
+    "urutan_gantian": ["NE09", "NE05", "E04"],
+    "senarai": {
+      "NE01": {
+        "nama": "Neon 1 Bajet Kecil",
+        "url": "https://raw.githubusercontent.com/mfahminoh/videocoway/1f91b982289d9e601bead1abdb7193363f458f4c/out/coway/NE01_bajet-kecil-tak-boleh-cantik.mp4",
+        "thumb": "https://raw.githubusercontent.com/mfahminoh/videocoway/2780842dd644cfe02764cbc4920e4bfc83cc849e/assets/thumbs/NE01_thumb.jpg"
+      },
+      "NE02": {
+        "nama": "Neon 2 Baru Kahwin",
+        "url": "https://raw.githubusercontent.com/mfahminoh/videocoway/1f91b982289d9e601bead1abdb7193363f458f4c/out/coway/NE02_baru-kahwin-rumah-pertama.mp4",
+        "thumb": "https://raw.githubusercontent.com/mfahminoh/videocoway/2780842dd644cfe02764cbc4920e4bfc83cc849e/assets/thumbs/NE02_thumb.jpg"
+      },
+      "NE03": {
+        "nama": "Neon 3 Self Service",
+        "url": "https://raw.githubusercontent.com/mfahminoh/videocoway/1f91b982289d9e601bead1abdb7193363f458f4c/out/coway/NE03_pakej-self-service.mp4",
+        "thumb": "https://raw.githubusercontent.com/mfahminoh/videocoway/2780842dd644cfe02764cbc4920e4bfc83cc849e/assets/thumbs/NE03_thumb.jpg"
+      },
+      "NE09": {
+        "nama": "Neon 4 3 Tanda Sesuai",
+        "url": "https://raw.githubusercontent.com/mfahminoh/videocoway/1f91b982289d9e601bead1abdb7193363f458f4c/out/coway/NE09_3-tanda-neon-sesuai.mp4",
+        "thumb": "https://raw.githubusercontent.com/mfahminoh/videocoway/cce7e25a9523ff913840fc5191d3fbc25bdb56da/assets/thumbs/NE09_thumb.jpg",
+        "headline": "3 tanda Coway Neon sesuai untuk rumah anda",
+        "teks": "3 tanda COWAY NEON memang sesuai untuk rumah anda 👇\n\n1️⃣ Dapur kecil? Neon kompak, tak makan ruang.\n2️⃣ Selalu sibuk? Ambil pakej self-service, filter dihantar setiap 8 bulan.\n3️⃣ Ada budak kecil? Air panas ada kunci keselamatan, tekan 3 saat.\n\n🎨 Bonus: 5 warna, pilih yang ngam dengan dapur.\n\nHarga asal RM104, promosi RM54 sebulan!\n🎉 Tambah rebat ulang tahun Coway RM20 x 7 bulan.\n\nWhatsApp saya sekarang. Penghantaran & pemasangan PERCUMA 👇"
+      },
+      "NE05": {
+        "nama": "Neon 5 Pukul 3 Pagi",
+        "url": "https://raw.githubusercontent.com/mfahminoh/videocoway/1f91b982289d9e601bead1abdb7193363f458f4c/out/coway/NE05_pukul-3-pagi-bancuh-susu.mp4",
+        "thumb": "https://raw.githubusercontent.com/mfahminoh/videocoway/cce7e25a9523ff913840fc5191d3fbc25bdb56da/assets/thumbs/NE05_thumb.jpg",
+        "headline": "Bancuh susu pukul 3 pagi? Tekan je.",
+        "teks": "Pukul 3 pagi. Baby menangis. Susu kena siap SEKARANG 😴🍼\n\nMasa macam ni, semua benda kena dekat dan cepat. Sebab tu COWAY NEON ngam untuk dapur keluarga muda:\n✅ Tekan je, air terus keluar\n✅ Panas, sejuk atau suhu bilik\n✅ Pilih 250ml, dia berhenti sendiri\n✅ Air ditapis dengan penapis Nanotrap\n\n(Untuk suhu air susu, ikut nasihat doktor ya.)\n\nPromosi RM54 sebulan!\n🎉 Tambah rebat RM20 x 7 bulan.\n\nWhatsApp saya, saya uruskan sampai siap pasang 👇"
+      },
+      "E04": {
+        "nama": "Neon 6 3 Sebab Ramai Pasang",
+        "url": "https://raw.githubusercontent.com/mfahminoh/videocoway/1f91b982289d9e601bead1abdb7193363f458f4c/out/coway/E04_3-sebab-ramai-pasang.mp4",
+        "thumb": "https://raw.githubusercontent.com/mfahminoh/videocoway/cce7e25a9523ff913840fc5191d3fbc25bdb56da/assets/thumbs/E04_thumb.jpg",
+        "headline": "Kenapa ramai pasang Coway Neon?",
+        "teks": "Kenapa ramai sangat pasang COWAY NEON sekarang? 3 sebab 👇\n\n1️⃣ Kompak, tak makan ruang dapur. Ada 5 warna: pink, mint, biru, kelabu & putih.\n2️⃣ Pakej ikut gaya hidup. Nak technician datang servis? Boleh. Selalu sibuk? Ambil self-service, filter baru dihantar setiap 8 bulan, PERCUMA.\n3️⃣ Harga. Panas, sejuk & suhu bilik semua ada. Harga asal RM104, promosi RM54 je!\n\n🎉 Tambah rebat ulang tahun Coway RM20 x 7 bulan.\n\nTekan WhatsApp sekarang. Penghantaran & pemasangan PERCUMA 👇"
+      }
+    }
+  },
+  "akaun": {
+    "330501574246452": {
+      "nama": "Aina Yoona",
+      "mod": "draft",
+      "page_id": "161160071443859",
+      "boleh_upload": true,
+      "awalan_nama": "Engagement | Whatsapp",
+      "targeting": {"age_min": 23, "age_max": 44, "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "locales": [6, 24, 41], "targeting_automation": {"advantage_audience": 0}},
+      "video_id": {"NE01": "1971228176885448", "NE02": "1005015638808835", "NE03": "1740934048036099"},
+      "kempen": [
+        {"video": "NE01", "campaign_id": "120249936693630149", "ad_id": "120249936698130149", "mula": "2026-10-05", "bajet": 20, "objektif": "LEADS", "status": "ACTIVE"},
+        {"video": "NE02", "campaign_id": "120249936897740149", "ad_id": "120249940628080149", "mula": "2026-10-05", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE03", "campaign_id": "120249936897790149", "ad_id": "120249940628140149", "mula": "2026-10-05", "bajet": 10, "status": "ACTIVE"}
+      ]
+    },
+    "1862577198038556": {
+      "nama": "Atie Coway",
+      "mod": "draft",
+      "page_id": "1180078601863856",
+      "instagram_user_id": "17841446014131556",
+      "boleh_upload": true,
+      "awalan_nama": "Engagement | Whatsapp",
+      "targeting": {"age_min": 18, "age_max": 65, "age_range": [25, 40], "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "locales": [6, 24, 41], "flexible_spec": [{"family_statuses": [{"id": "6002714398372", "name": "Parents (All)"}]}], "targeting_automation": {"advantage_audience": 1}},
+      "video_id": {"NE01": "1433535408881662", "NE02": "2894799794240693", "NE03": "1748075203146411"},
+      "kempen": [
+        {"video": "NE01", "campaign_id": "120255442589100110", "ad_id": "120255446944540110", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE02", "campaign_id": "120255442589740110", "ad_id": "120255446944610110", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE03", "campaign_id": "120255442590180110", "ad_id": "120255446944710110", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"}
+      ],
+      "nota": "Sejak dipublish, 3 iklan ini ACTIVE tetapi 0 impression. Jangan anggap sebagai gagal; laporkan kepada user."
+    },
+    "1822078195813883": {
+      "nama": "Coway Temp 1",
+      "mod": "live",
+      "page_id": "1337994036063063",
+      "boleh_upload": false,
+      "nota_upload": "ads_creative_upload_media ditolak untuk akaun ini. Muat naik video ke akaun Zara/Atie dahulu, kemudian guna video_id itu dalam creative inline akaun ini (cara ini berjaya pada 5 Okt).",
+      "awalan_nama": "Eng | Whatsapp",
+      "targeting": {"age_min": 24, "age_max": 65, "age_range": [24, 51], "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "locales": [6, 24, 41], "flexible_spec": [{"family_statuses": [{"id": "6002714398372", "name": "Parents (All)"}]}], "targeting_automation": {"advantage_audience": 1}},
+      "kempen": [
+        {"video": "NE01", "campaign_id": "120248141526380489", "ad_id": "120248145312030489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE02", "campaign_id": "120248141527290489", "ad_id": "120248145312410489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE03", "campaign_id": "120248141527570489", "ad_id": "120248145312470489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"}
+      ]
+    },
+    "941054315716379": {
+      "nama": "Zara Coway",
+      "mod": "live",
+      "page_id": "100241812556730",
+      "boleh_upload": true,
+      "awalan_nama": "Eng | Whatsapp",
+      "targeting": {"age_min": 18, "age_max": 65, "age_range": [24, 44], "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "targeting_automation": {"advantage_audience": 1}},
+      "video_id": {"NE01": "1456307243056364", "NE02": "1802720914251374", "NE03": "1430856793435012"},
+      "kempen": [
+        {"video": "NE01", "campaign_id": "52532395943689", "ad_id": "52532396032289", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE02", "campaign_id": "52532395946089", "ad_id": "52532396041489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
+        {"video": "NE03", "campaign_id": "52532395947889", "ad_id": "52532396043089", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"}
+      ]
+    }
+  },
+  "log": []
+}
