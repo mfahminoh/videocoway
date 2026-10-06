@@ -1,119 +1,138 @@
-# Kempen Threads 10 Hari — Pakej Video Content Coway
+# Kempen Threads 10 Hari: Pakej Video Content Coway (gaya Gradualisation)
 
 **Sasaran:** Ejen Coway yang tak ada masa buat content, tak ada content bank, post ikut mood / on the spot.
 **Tawaran:** Pakej WP (Neon, Neon Plus, Villaem 3) 30 video RM68 · Pakej Tilam (Prime, Prime Light) 30 video RM68 · Combo RM110. Slot terhad 30 orang.
 
-## Plan & aliran kempen
+## Cara gradualisation dipakai
 
-| Hari | Tema | Tujuan |
-|---|---|---|
-| 1 | Story kosong / tiada plan | Ejen nampak diri sendiri dalam masalah |
-| 2 | Post tak konsisten & tak mendalam | Tunjuk kenapa post promosi saja tak jalan |
-| 3 | Strategi "satu minggu, satu produk" | Bagi solusi (nilai dulu, belum jual) |
-| 4 | Jangan anggap prospek tak ada duit | Mindset konsultan |
-| 5 | Prospek berkualiti tinggi | Hasil bila content dah buat kerja |
-| 6 | Kira masa (2-3 jam sehari) | Rasa sakit kos masa + teaser |
-| 7 | **LAUNCH pakej** | Tawaran + harga |
-| 8 | Cara guna pakej | Nampak senang, nampak sistem |
-| 9 | Had 30 orang + video penerangan | Kekurangan (scarcity) yang jujur |
-| 10 | Bantahan "rugi" + recap | Tutup kempen, last call |
+Setiap post **mula dengan benda yang pembaca dah setuju**, kemudian naik **satu anak tangga logik** setiap baris, sampai pembaca sampai sendiri pada kesimpulan. Tak ada lompatan terus ke "beli".
+
+Seluruh kempen pun satu tangga. Setiap hari bina atas kepercayaan hari sebelumnya:
+
+| Hari | Anak tangga (apa pembaca setuju hujung hari tu) |
+|---|---|
+| 1 | Prospek beli dengan ejen yang dia nampak. Story kosong = hilang dari ingatan. |
+| 2 | Nampak saja tak cukup. Prospek kena **faham** dulu, dan post promosi tak buat dia faham. |
+| 3 | Nak buat dia faham perlukan **struktur**: satu minggu, satu produk. |
+| 4 | Struktur kena cover **semua** produk, sebab keperluan setiap rumah berbeza. Jangan anggap prospek tak ada duit. |
+| 5 | Prospek yang faham = prospek berkualiti. Puncanya: **content bank**. |
+| 6 | Bina content bank sendiri makan 2-3 jam sehari, iaitu masa untuk closing. |
+| 7 | **Jadi:** pakej video siap. (Launch + harga) |
+| 8 | Pakej ni senang guna, 15 minit seminggu. |
+| 9 | Pakej ni berkesan sebab terhad, 30 orang sahaja. |
+| 10 | Beli dari sumber betul = rezeki berkat. Recap seluruh tangga + last call. |
 
 **Waktu post:** Post A pagi (8:00–9:00 pagi) · Post B malam (8:30–9:30 malam).
 
 **Peraturan:**
-- Satu kotak = satu post Threads (had 500 aksara; semua kotak di bawah dah disemak bawah had). Post bertanda `1/2`, `2/3` → post kotak pertama, kemudian sambung kotak seterusnya sebagai *reply* pada post sendiri (thread).
+- Satu kotak = satu post Threads (had 500 aksara; semua kotak dah disemak bawah had). Post bertanda `1/2`, `2/3` → post kotak pertama, kemudian sambung kotak seterusnya sebagai *reply* pada post sendiri.
 - Topic tag (Threads benarkan satu): `Ejen Coway`.
-- Balas setiap komen dalam 1 jam pertama, sebab itu yang tolak reach.
-- `__/30`: isi bilangan slot sebenar sahaja. Jangan tulis nombor rekaan.
-- Hari 1–6 **jangan sebut harga**. Bina masalah & kepercayaan dulu.
+- Balas setiap komen dalam 1 jam pertama.
+- `__/30`: isi bilangan slot sebenar sahaja.
+- Hari 1–6 **jangan sebut harga**. Tangga belum sampai.
 
 ---
 
-## HARI 1: Story kosong
+## HARI 1: Prospek beli dengan ejen yang dia nampak
 
 ### 1A · Pagi
 ```
-Jujur tanya, ejen Coway.
+Prospek beli dengan orang yang dia kenal.
 
-Bila kali terakhir story awak update pasal produk Coway?
+Dia kenal orang yang dia selalu nampak.
 
-Bukan pasal live. Bukan pasal makan. Pasal Coway.
+Dia selalu nampak orang yang selalu muncul dalam story dan feed dia.
 
-Ramai ejen yang saya kenal, story kosong 2-3 hari. Bukan malas. Sibuk. Tak sempat fikir nak post apa.
+Jadi bila story awak kosong 3 hari, apa jadi?
 
-Tapi prospek tak nampak "sibuk" awak. Yang dia nampak cuma... senyap.
+Awak bukan sekadar "tak post".
+Awak sedang hilang dari ingatan prospek.
 
-Dan bila awak senyap, dia beli dengan ejen yang dia nampak hari tu.
+Dan prospek yang lupa awak, akan beli dengan ejen yang dia nampak hari tu.
 ```
 
 ### 1B · Malam
 ```
-Soalan untuk ejen Coway malam ni 👇
+Setiap ejen Coway nak post setiap hari.
 
-Pagi tadi buka phone, benda pertama terlintas:
-"Hari ni nak post apa?"
+Tapi nak post, kena ada idea.
+Nak ada idea, kena ada masa untuk fikir.
+Nak ada masa untuk fikir, kena ada ruang dalam jadual.
 
-Kalau jawapan awak "fikir masa tu jugak", awak tak keseorangan.
+Masalahnya, jadual ejen dah penuh dengan follow up, live, layan customer.
 
-Kebanyakan ejen tak ada content bank. Tak ada plan. Post ikut apa yang terlintas.
+Jadi yang tinggal cuma satu cara: fikir on the spot, pagi tu jugak.
 
-Komen "SAYA" kalau awak pun macam ni. Minggu ni saya nak kongsi sesuatu.
+Komen "SAYA" kalau ini rutin awak.
 ```
 
 ---
 
-## HARI 2: Post tak konsisten, tak mendalam
+## HARI 2: Nampak saja tak cukup, prospek kena faham
 
 ### 2A · Pagi (thread 1/2)
 ```
-Isnin promote penapis air.
-Selasa promote penapis udara.
-Rabu promote tilam.
-Khamis... tak sempat post.
+Kita semua setuju, ejen Coway jual banyak produk.
 
-Nampak macam rajin. Tapi dari mata prospek, dia tak sempat faham satu produk pun.
+Penapis air. Penapis udara. Tilam.
 
-Sebab setiap post cuma: "Promo bulan ni! PM saya!"
+Dan bila jual banyak produk, kita rasa kena promote semua.
 
-Tak ada penerangan. Tak ada fungsi. Tak ada sebab kenapa dia perlu.
+Isnin penapis air. Selasa penapis udara. Rabu tilam.
+
+Nampak rajin. Tapi cuba tengok dari mata prospek.
 ```
 
 ### 2A · Pagi (thread 2/2)
 ```
-Prospek bukan tak nak beli.
+Prospek nampak satu post pasal penapis air. Satu je.
 
-Dia tak cukup faham untuk rasa yakin.
+Satu post tak cukup untuk dia faham fungsi.
+Tak faham fungsi, dia tak nampak kenapa dia perlu.
+Tak nampak kenapa perlu, dia tak yakin.
+Tak yakin, dia tak DM.
 
-Post promosi tak salah. Tapi kalau SEMUA post promosi, orang scroll lepas. Dia dah nampak 100 ejen lain post benda sama.
-
-Yang buat orang berhenti scroll: content yang ajar dia sesuatu yang dia tak tahu.
+Bukan sebab dia tak berminat.
+Sebab kita tak pernah bagi dia peluang untuk faham.
 ```
 
 ### 2B · Malam
 ```
-Cuba test ni.
+Kebanyakan post ejen berbunyi:
+"Promo bulan ni! PM saya!"
 
-Kalau prospek scroll story & wall awak sekarang, boleh tak dia jawab sendiri soalan ni:
+Prospek dah nampak ayat ni beratus kali. Dari beratus ejen.
 
-- Apa beza Neon dengan Neon Plus?
-- Kenapa Villaem 3 lebih tinggi harganya?
-- Tilam Prime sesuai untuk siapa?
+Bila semua orang cakap benda sama, mata dia dah biasa.
+Bila mata dah biasa, ibu jari terus scroll.
 
-Kalau tak boleh, dia akan DM tanya soalan asas... atau lebih teruk, dia tak tanya langsung.
+Yang buat dia berhenti scroll cuma satu: benda yang dia belum tahu.
 
-Content awak sepatutnya dah jawab sebelum dia tanya.
+Promosi beritahu harga.
+Penerangan beritahu sebab.
+
+Dan orang beli kerana sebab, bukan kerana harga.
 ```
 
 ---
 
-## HARI 3: Satu minggu, satu produk
+## HARI 3: Faham perlukan struktur
 
 ### 3A · Pagi (thread 1/3)
 ```
-Strategi yang saya guna: SATU MINGGU, SATU PRODUK.
+Kalau prospek perlu faham sebelum beli,
+dan satu post tak cukup untuk dia faham,
+soalannya: berapa post yang cukup?
 
-Minggu ni nak jual Neon? Seminggu post Neon je.
+Jawapan saya: satu minggu.
 
+Satu minggu, satu produk.
+
+Minggu ni jual Neon? Seminggu post Neon je. Setiap hari satu sudut berbeza.
+```
+
+### 3A · Pagi (thread 2/3)
+```
 Hari 1: Masalah air paip di rumah
 Hari 2: Cara Neon tapis air
 Hari 3: Fungsi & ciri utama
@@ -122,146 +141,164 @@ Hari 5: Servis & penyelenggaraan
 Hari 6: Soalan lazim
 Hari 7: Promo + CTA
 
-Sehari satu video. Satu fungsi, satu hari.
-```
+Perasan tak? Promo cuma hari ke-7.
 
-### 3A · Pagi (thread 2/3)
-```
-Kenapa ni berkesan?
-
-Orang yang langsung tak kenal Neon, lepas seminggu tengok story awak, dia dah faham: apa fungsi dia, kenapa dia perlu, sesuai tak dengan rumah dia.
-
-Awak tak payah terangkan dari kosong bila dia DM.
-
-Dia datang dengan kepercayaan. Bukan sekadar "berapa sebulan?"
+Sebab bila sampai hari ke-7, prospek dah faham. Promo tu bukan lagi gangguan. Ia jadi jemputan.
 ```
 
 ### 3A · Pagi (thread 3/3)
 ```
 Minggu depan tukar produk. Villaem 3 pula. Lepas tu tilam.
 
-Dalam sebulan, followers awak dah "belajar" 4 produk secara mendalam.
+Satu minggu, prospek faham satu produk.
+Sebulan, dia faham 4 produk.
+Bila dia faham 4 produk dari awak, siapa yang dia anggap pakar?
 
-Ini beza ejen yang sekadar post promosi... dengan ejen yang orang anggap pakar.
+Awak.
+
+Dan orang beli dengan pakar.
 ```
 
 ### 3B · Malam
 ```
-Prospek tak beli sebab awak post banyak.
+Post banyak tak semestinya jual banyak.
 
-Prospek beli sebab dia faham, dan dia percaya awak faham lebih dari dia.
+Post banyak tapi bersepah → prospek keliru.
+Prospek keliru → tangguh keputusan.
+Tangguh keputusan → lupa.
+
+Post tersusun → prospek faham.
+Prospek faham → yakin.
+Yakin → DM.
 
 Struktur > kuantiti.
 ```
 
 ---
 
-## HARI 4: Jangan anggap prospek tak ada duit
+## HARI 4: Keperluan berbeza, jangan anggap prospek tak ada duit
 
 ### 4A · Pagi (thread 1/2)
 ```
-Satu pesanan mentor yang saya pegang sampai sekarang:
+Kita setuju, setiap rumah ada keperluan berbeza.
 
-"Jangan anggap prospek kita tak ada duit."
+Rumah 2 orang tak sama dengan rumah 8 orang.
+Rumah sewa tak sama dengan rumah sendiri.
 
-Ramai ejen (termasuk saya dulu) asyik promote model paling murah. Neon, Neon, Neon. Sebab dalam kepala kita: "Orang nak yang murah."
+Kalau keperluan berbeza, produk yang sesuai pun berbeza.
 
-Hakikatnya, customer tak cari yang murah.
-Dia cari yang SESUAI dengan keperluan dia.
+Tapi kenapa feed kita cuma promote satu model? Neon, Neon, Neon.
+
+Sebab dalam kepala kita: "Prospek nak yang murah."
 ```
 
 ### 4A · Pagi (thread 2/2)
 ```
+Mentor saya pernah pesan: "Jangan anggap prospek tak ada duit."
+
 Ada prospek yang mampu ambil Villaem 3. Rumah ramai orang, nak yang high spec, tahan lama.
 
-Tapi dia tak pernah tahu pun Villaem 3 wujud, sebab feed kita penuh dengan model entry je.
+Tapi dia tak tahu pun Villaem 3 wujud. Sebab kita tak pernah cerita.
 
-Kita rugi sale bukan sebab dia tak mampu.
-Kita rugi sebab dia tak tahu.
+Dia tak beli bukan sebab tak mampu.
+Dia tak beli sebab tak tahu.
 
-Terangkan setiap produk elok-elok. Biar dia yang pilih.
+Dan dia tak tahu sebab kita tak pernah beritahu.
 ```
 
 ### 4B · Malam
 ```
-Jadi konsultan, bukan sekadar penjual.
+Bila keperluan setiap rumah berbeza, kerja ejen bukan tolak satu produk.
 
-Penjual: "Promo bulan ni murah, nak tak?"
+Kerja ejen: faham rumah dia, kemudian padankan produk.
 
-Konsultan: "Rumah berapa orang? Selalu minum air panas ke sejuk? Ruang dapur macam mana?"
+"Rumah berapa orang?"
+"Selalu minum panas ke sejuk?"
+"Ruang dapur macam mana?"
 
-Penjual kejar closing. Konsultan selesaikan masalah.
+Itu kerja konsultan.
 
-Dan orang lebih senang beli dengan orang yang selesaikan masalah dia.
+Penjual kejar closing.
+Konsultan selesaikan masalah.
+
+Dan bila masalah selesai, closing datang sendiri.
 ```
 
 ---
 
-## HARI 5: Prospek berkualiti tinggi
+## HARI 5: Prospek berkualiti datang dari content bank
 
 ### 5A · Pagi
 ```
-Pernah dapat DM macam ni?
+Pernah dapat DM satu perkataan?
 
 "Berapa?"
 
-Lepas bagi harga, terus bluetick.
+Bagi harga. Bluetick.
 
-Itu prospek yang belum faham. Dia cuma bandingkan harga.
+Kenapa? Dia tak tahu apa-apa pasal produk. Yang dia boleh bandingkan cuma harga. Bila harga je jadi ukuran, mana-mana ejen pun boleh menang.
 
-Sekarang bandingkan dengan DM ni:
-"Saya dah tengok story awak pasal Villaem 3. Rumah saya 7 orang, sesuai kan ambil yang ni?"
+Sekarang bayangkan DM ni:
+"Saya dah tengok story awak pasal Villaem 3. Rumah saya 7 orang, sesuai kan?"
 
-Yang kedua, closing jauh lebih senang. Kenapa? Content awak dah buat kerja dulu.
+Yang ni dah faham. Dia cuma nak pengesahan.
 ```
 
 ### 5B · Malam
 ```
-Content yang baik = staf jualan yang kerja 24 jam.
+Prospek yang faham datang dari content yang menerangkan.
 
-Masa awak tidur, story awak sedang terangkan fungsi produk.
-Masa awak layan customer lain, wall awak sedang jawab soalan prospek baru.
+Content yang menerangkan datang dari post yang konsisten.
 
-Tapi syaratnya satu: content tu kena ADA. Setiap hari.
+Post yang konsisten datang dari content yang dah siap awal.
+
+Jadi kalau nak prospek berkualiti, mulanya bukan pada skrip closing.
+
+Mulanya pada content bank.
 ```
 
 ---
 
-## HARI 6: Kira masa
+## HARI 6: Content bank makan masa closing
 
 ### 6A · Pagi (thread 1/2)
 ```
-Jom kira masa sekejap.
+Kalau content bank tu kunci, jom kira kos nak bina sendiri.
 
-Kalau buat content on the spot setiap pagi:
-- Fikir nak post apa: 30 minit
-- Cari / tulis skrip: 30-60 minit
-- Generate / edit video: 1-2 jam
+Buat on the spot setiap pagi:
+Fikir idea: 30 minit
+Cari / tulis skrip: 30-60 minit
+Generate / edit video: 1-2 jam
 
-2-3 jam SEHARI. Untuk satu post.
+2-3 jam sehari.
 
-Kalau nak buat sekali gus 30 video untuk sebulan? Paling cepat pun 8-10 jam. Itu kalau semua lancar.
+Buat sekali gus 30 video untuk sebulan? Paling cepat pun 8-10 jam. Itu kalau semua lancar.
 ```
 
 ### 6A · Pagi (thread 2/2)
 ```
-2-3 jam tu sepatutnya untuk apa?
+Sekarang tanya diri: ejen dapat komisen bila?
 
-Follow up prospek.
-Call customer lama.
-Buat live.
-Closing.
+Bukan bila siap edit video.
+Bila closing.
 
-Ejen dapat komisen bila closing. Bukan bila edit video.
+Closing datang dari follow up, live, layan DM.
+Semua tu perlukan masa.
+Masa yang sama yang kita habiskan untuk edit video.
 
-Content penting. Tapi kerja utama awak: JUAL.
+Content penting. Tapi bila content makan masa closing, kita tukar kerja yang bayar dengan kerja yang tak bayar.
 ```
 
 ### 6B · Malam (teaser)
 ```
-Esok saya nak kongsi sesuatu yang saya dah siapkan khas untuk ejen Coway yang tak ada masa buat content.
+Jadi ada dua perkara yang kita dah setuju:
 
-30 video siap. Ikut struktur. Sehari satu video.
+1. Ejen perlukan content tersusun setiap hari.
+2. Ejen tak patut habiskan berjam-jam buat content.
+
+Dua-dua betul. Macam mana nak dapat dua-dua?
+
+Esok saya kongsi apa yang saya dah siapkan untuk masalah ni.
 
 Follow dulu supaya tak terlepas 🔔
 ```
@@ -272,13 +309,15 @@ Follow dulu supaya tak terlepas 🔔
 
 ### 7A · Pagi (thread 1/3)
 ```
-Okay, ni dia.
+Semalam kita setuju: ejen perlukan content tersusun, tapi tak patut habiskan masa buat sendiri.
 
-PAKEJ VIDEO CONTENT COWAY: siap untuk post.
+Jadi saya buatkan.
 
-Saya dah sediakan video template ready-made untuk produk Coway. Awak tak perlu fikir, tak perlu edit, tak perlu cari skrip.
+PAKEJ VIDEO CONTENT COWAY: video template ready-made, siap ikut struktur "satu minggu, satu produk".
 
-Download → post. Itu je.
+Tak perlu fikir. Tak perlu edit. Tak perlu cari skrip.
+
+Download → post.
 ```
 
 ### 7A · Pagi (thread 2/3)
@@ -299,92 +338,99 @@ RM68
 ```
 Setiap video terangkan SATU perkara. Satu fungsi, satu kelebihan, satu hari.
 
-Jadi awak boleh jalankan strategi "satu minggu, satu produk" tanpa sakit kepala.
+Satu hari satu video → story tak kosong.
+Story tak kosong → prospek ingat awak.
+Prospek ingat + faham → DM yang berkualiti.
 
-Story tak kosong. Wall ada isi. Prospek datang dengan faham.
+Semua yang kita bincang 6 hari ni, dalam satu pakej.
 
 Nak? Komen "NAK" atau DM saya.
 ```
 
 ### 7B · Malam
 ```
-RM68 ÷ 30 video = lebih kurang RM2.27 satu video.
+Jom kira semula.
 
-Kurang dari harga secawan teh tarik.
+Buat sendiri: 8-10 jam untuk 30 video.
 
-Ambil combo? RM110 ÷ 60 video = RM1.83 satu video.
+Pakej: RM68 untuk 30 video. Lebih kurang RM2.27 satu video, kurang dari harga secawan teh tarik.
 
-Bandingkan dengan 8-10 jam masa awak untuk siapkan sendiri.
+Combo: RM110 untuk 60 video. RM1.83 satu video.
 
-Satu closing pun dah cover berkali ganda.
+8-10 jam yang awak jimat tu, kalau guna untuk follow up, satu closing pun dah cover berkali ganda.
 ```
 
 ---
 
-## HARI 8: Cara guna
+## HARI 8: Senang guna
 
 ### 8A · Pagi (thread 1/2)
 ```
-Macam mana nak guna pakej ni? Senang.
+Pakej ni hanya berguna kalau senang guna. Jadi saya buat ia senang.
 
 AHAD MALAM (15 minit):
 Pilih produk minggu ni. Contoh: Neon.
 Pilih 7 video Neon.
-Schedule semua untuk seminggu.
+Schedule semua.
 
 SETIAP PAGI:
-Tak payah buat apa-apa. Video dah naik sendiri.
+Video naik sendiri.
 
 Tak suka schedule? Pagi download satu, terus post. 2 minit siap.
 ```
 
 ### 8A · Pagi (thread 2/2)
 ```
-Lepas tu masa awak 100% untuk:
-- Reply DM yang masuk
-- Follow up
-- Live
-- Closing
+15 minit seminggu untuk content.
 
-Content jalan sendiri. Awak fokus jual.
+Maknanya 2-3 jam setiap hari kembali pada awak.
+
+Untuk reply DM.
+Untuk follow up.
+Untuk live.
+Untuk closing.
+
+Content jalan sendiri. Awak fokus pada kerja yang bayar.
 
 Ini yang saya maksudkan "ejen yang ada sistem".
 ```
 
 ### 8B · Malam
 ```
-Contoh plan sebulan guna combo:
+Satu minggu, satu produk. Kalau ambil combo, sebulan nampak macam ni:
 
 Minggu 1 → Neon
 Minggu 2 → Villaem 3
 Minggu 3 → Tilam Prime
 Minggu 4 → Neon Plus / Prime Light
 
-Followers awak "belajar" 5 produk dalam sebulan.
+Sebulan, followers awak faham 5 produk.
+Faham 5 produk, dia boleh pilih yang sesuai.
+Bila dia ready nak pilih, dia cari siapa?
 
-Bila dia ready nak beli, ejen mana yang dia ingat?
-
-Yang dah ajar dia.
+Orang yang ajar dia.
 ```
 
 ---
 
-## HARI 9: Had 30 orang
+## HARI 9: Berkesan sebab terhad
 
 ### 9A · Pagi (thread 1/2)
 ```
-Satu perkara penting: pakej ni saya buka untuk 30 ORANG SAHAJA.
+Video berkesan bila prospek belum pernah nampak.
 
-Bukan gimik.
+Kalau prospek dah nampak video sama dari 10 ejen lain, dia scroll.
 
-Ejen Coway ada beribu orang. Semua jual produk yang sama. Kalau video ni saya jual pada semua, feed prospek akan penuh dengan video yang sama dari puluhan ejen berbeza.
+Ejen Coway ada beribu orang. Semua jual produk yang sama, pada prospek yang sama.
 
-Bila tu jadi, video ni hilang kesan.
+Jadi kalau saya jual pakej ni pada semua orang, saya sendiri yang hilangkan kesan video ni.
 ```
 
 ### 9A · Pagi (thread 2/2)
 ```
-Saya hadkan sebab nak jaga kualiti, dan jaga hasil untuk orang yang dah beli.
+Sebab tu saya buka untuk 30 ORANG SAHAJA.
+
+Bukan gimik. Ini cara jaga hasil untuk orang yang dah beli.
 
 30 slot. Bila penuh, saya tutup.
 
@@ -405,45 +451,45 @@ Slot terisi: __/30
 
 ---
 
-## HARI 10: Bantahan "rugi" + last call
+## HARI 10: Sumber betul, rezeki berkat + last call
 
 ### 10A · Pagi (thread 1/2)
 ```
-Ada yang tanya:
-"Kalau saya beli, tapi nanti orang lain dapat video ni free entah dari mana, tak rugi ke saya?"
+Ada yang tanya: "Kalau saya beli, tapi orang lain dapat video ni free entah dari mana, tak rugi ke saya?"
 
-Jawapan saya: jangan kira macam tu.
+Jom fikir sama-sama.
 
-Awak dapat video ni dengan cara yang betul. Dari sumber yang betul. Bayar pada orang yang buat.
+Rezeki datang dari Allah.
+Rezeki yang berkat datang dari usaha yang betul.
+Usaha yang betul termasuk guna aset dari sumber yang betul.
+
+Awak dapat video ni dengan cara yang betul. Bayar pada orang yang buat.
 ```
 
 ### 10A · Pagi (thread 2/2)
 ```
-Bila kita guna aset dari sumber yang betul, InsyaAllah rezeki kita berkat.
+Jadi apa orang lain buat dengan barang yang dia dapat secara tak sah, itu urusan dia.
 
-Apa orang lain buat dengan barang yang dia dapat secara tak sah, itu urusan dia.
+Bukan urusan kita.
 
-Fokus kita: post konsisten, layan prospek elok-elok, closing.
+Urusan kita: post konsisten, layan prospek elok-elok, closing.
 
 Rezeki tak pernah tertukar.
 ```
 
 ### 10B · Malam (last call)
 ```
-Recap 10 hari untuk ejen Coway:
+10 hari, satu tangga:
 
-✅ Story jangan senyap
-✅ Satu minggu, satu produk
-✅ Jangan anggap prospek tak ada duit
-✅ Jadi konsultan, bukan sekadar penjual
-✅ Masa awak untuk closing, bukan edit video
+Prospek beli dengan ejen yang dia ingat.
+Dia ingat ejen yang dia nampak setiap hari.
+Dia yakin dengan ejen yang menerangkan, bukan yang promo je.
+Menerangkan perlukan struktur: satu minggu, satu produk.
+Struktur perlukan content siap.
+Content siap tak patut makan masa closing awak.
 
-Pakej video siap:
-WP 30 video: RM68
-Tilam 30 video: RM68
-Combo 60 video: RM110
-
-Slot terhad 30 orang. Terisi: __/30
+WP RM68 | Tilam RM68 | Combo RM110
+Slot terisi: __/30
 
 DM "NAK" sekarang.
 ```
@@ -452,13 +498,16 @@ DM "NAK" sekarang.
 
 ## Skrip video penerangan (Hari 9B) · ±40 saat, potret 9:16
 
+Gradualisation juga: mula dari fakta yang ejen setuju, naik satu langkah setiap babak.
+
 | Masa | Visual | Voiceover / teks skrin |
 |---|---|---|
-| 0–4s | Muka depan kamera, teks besar "KENAPA 30 ORANG JE?" | "Ramai tanya, kenapa pakej video Coway saya buka untuk 30 orang je?" |
-| 4–12s | B-roll scroll feed, video sama berulang | "Sebab ejen Coway ada beribu orang, dan semua jual produk yang sama. Kalau semua guna video yang sama, prospek akan nampak benda sama berulang-ulang." |
-| 12–18s | Teks: "Video sama = kesan hilang" | "Bila tu jadi, video ni dah tak berkesan. Yang rugi, orang yang dah beli." |
-| 18–26s | Tunjuk contoh 2-3 video dalam pakej | "Jadi saya hadkan. Saya nak jaga kualiti, dan saya nak video ni betul-betul bantu awak closing." |
-| 26–34s | Teks: "Sumber betul → rezeki berkat" | "Dan kalau ada yang dapat video ni dengan cara tak sah, jangan risau. Awak dapat dengan cara yang betul. InsyaAllah rezeki awak berkat." |
+| 0–4s | Muka depan kamera, teks "KENAPA 30 ORANG JE?" | "Ramai tanya, kenapa pakej video Coway saya buka untuk 30 orang je?" |
+| 4–10s | B-roll scroll feed | "Kita semua tahu, video berkesan bila prospek belum pernah nampak." |
+| 10–16s | Video sama berulang dalam feed | "Kalau dia dah nampak video sama dari ramai ejen, dia scroll. Dan ejen Coway ada beribu orang, semua jual produk yang sama." |
+| 16–22s | Teks: "Video sama = kesan hilang" | "Jadi kalau saya jual pada semua orang, saya sendiri yang hilangkan kesan video ni. Yang rugi, orang yang dah beli." |
+| 22–28s | Tunjuk 2-3 contoh video dalam pakej | "Sebab tu saya hadkan kepada 30 orang. Untuk jaga kualiti, dan jaga hasil awak." |
+| 28–34s | Teks: "Sumber betul → rezeki berkat" | "Kalau ada yang dapat video ni dengan cara tak sah, itu urusan dia. Awak dapat dengan cara yang betul. InsyaAllah rezeki awak berkat." |
 | 34–40s | Teks harga + "Slot terisi __/30" | "WP RM68, Tilam RM68, combo RM110. Bila 30 slot penuh, saya tutup. DM saya sekarang." |
 
 ---
@@ -478,4 +527,4 @@ DM "NAK" sekarang.
 | 9 | A / B | | ☐ ☐ | | | | |
 | 10 | A / B | | ☐ ☐ | | | | |
 
-Selepas Hari 10: post yang paling banyak komen/DM → guna semula sudut sama untuk kempen seterusnya.
+Selepas Hari 10: post yang paling banyak komen/DM → guna semula anak tangga yang sama untuk kempen seterusnya.
