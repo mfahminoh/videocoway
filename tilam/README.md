@@ -1,6 +1,9 @@
 # Video Tilam Coway
 
-Plan 30 video: [`plan_30_video.md`](plan_30_video.md)
+- **Draf plan v2 (berasaskan data pain 169 ayat):** [`plan_v2_draft.md`](plan_v2_draft.md)
+- Plan asal 30 video: [`plan_30_video.md`](plan_30_video.md)
+- Padanan pain × produk (data Lowyat): [`padanan_pain_coway.md`](padanan_pain_coway.md)
+- Data research: `research/`
 
 ## Video 16 — Bedah tilam Coway Prime II (±52s, 1080×1920)
 **Siap:** `out/tilam/v16_prime2_final.mp4`
