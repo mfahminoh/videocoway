@@ -1,0 +1,37 @@
+{
+  "id": "b1", "slug": "sakit-pinggang-bangun-pagi", "title": "B1 — Bangun pagi sakit pinggang: tilam ke puncanya?",
+  "pain": ["#45", "#49", "#39"], "mood": "calm",
+  "clips": {
+    "topview": {"from": 11.2, "to": 14.0},
+    "press":   {"from": 8.2,  "to": 11.0},
+    "support": {"from": 30.0, "to": 34.0}
+  },
+  "lines": [
+    {"id": "01", "text": "Bangun pagi, pinggang dulu yang bangun. Pernah rasa macam ni?",
+     "scene": {"bg": {"clip": "topview", "dim": 1}, "head": {"k": "POV", "t": "Alarm bunyi…<br>pinggang <b>dah bangun dulu</b>", "y": 190}}},
+    {"id": "02", "text": "Ramai terus salahkan umur. Tapi kadang-kadang, puncanya tilam.",
+     "scene": {"words": [
+       {"t": "SALAHKAN UMUR?", "at": 0.15, "strike": "Tapi", "size": 104, "y": 660},
+       {"t": "CEK <b>TILAM</b> DULU.", "at": "kadang", "size": 120, "y": 860}]}},
+    {"id": "03", "text": "Cuba check tiga tanda ni.",
+     "scene": {"head": {"k": "3 TANDA", "t": "Tilam dah tak<br><b>menyokong</b> badan", "y": 160},
+               "media": {"clip": "press", "box": [140, 1150, 800, 450], "at": 0.3}}},
+    {"id": "04", "text": "Satu, ada lekuk di tempat you selalu tidur.",
+     "scene": {"cont": true, "items": [{"t": "Ada <b>lekuk</b> di tempat tidur", "icon": "1", "y": 640, "at": "Satu"}]}},
+    {"id": "05", "text": "Dua, bangun pagi lagi penat dari sebelum tidur.",
+     "scene": {"cont": true, "items": [{"t": "Bangun lebih <b>penat</b> dari sebelum tidur", "icon": "2", "y": 790, "at": "Dua"}]}},
+    {"id": "06", "text": "Tiga, dah bertahun-tahun pakai, atau spring dah mula berbunyi.",
+     "scene": {"cont": true, "items": [{"t": "Dah bertahun, spring <b>berbunyi</b>", "icon": "3", "y": 940, "at": "Tiga"}]}},
+    {"id": "07", "text": "Coway Prime 2 guna pocket spring tujuh zon dan latex lima zon, supaya sokongan lebih sekata dari bahu sampai pinggul.",
+     "scene": {"head": {"k": "COWAY PRIME II", "t": "Spring <b>7 zon</b><br>+ latex <b>5 zon</b>", "y": 160},
+               "media": {"clip": "support", "box": [0, 640, 1080, 608], "at": 0.2},
+               "chips": [{"t": "Sokongan lebih sekata", "at": "sekata", "y": 1300}]}},
+    {"id": "08", "text": "Ada pilihan Soft untuk yang tidur mengiring, dan Firm untuk yang tidur terlentang.",
+     "scene": {"head": {"t": "<b>Soft</b> atau <b>Firm</b>?", "s": "Ikut cara you tidur", "y": 170},
+               "media": {"img": "assets/tilam/prime2/firm-soft-mattress-for-all-sleepers-coway-prime2-series.jpg", "box": [0, 520, 1080, 608], "at": 0.1},
+               "chips": [{"t": "Soft · tidur mengiring", "at": "Soft", "y": 1200}, {"t": "Firm · tidur terlentang", "at": "Firm", "y": 1310}]}},
+    {"id": "09", "text": "Kalau sakit berterusan, jumpa doktor ya. Tapi kalau nak tukar tilam, WhatsApp saya dulu.",
+     "scene": {"cta": {"at": 0.1, "t": "Tanya dulu. Tak ada paksa."},
+               "note": {"t": "*Bukan nasihat perubatan. Rujuk doktor jika sakit berterusan.", "y": 1470, "at": 0.4}}}
+  ]
+}

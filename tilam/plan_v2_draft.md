@@ -7,7 +7,9 @@
 
 **Produk:** Coway Prime II. Fakta dari laman rasmi dan aset dalam `assets/tilam/prime2/`.
 
-**Status:** draf untuk semakan. Plan ini menggantikan susunan dalam `plan_30_video.md` selepas diluluskan.
+**Status:** Tiang A **ditolak**. Tiang B (7 video) **dibina** — lihat `tilam/b/README.md`. Tiang C & D belum.
+
+~~**Status:** draf untuk semakan.~~ Plan ini menggantikan susunan dalam `plan_30_video.md` selepas diluluskan.
 
 ---
 
@@ -60,7 +62,7 @@ Nada keseluruhan: **ejen yang jujur dan telus, bukan jurujual yang push.**
 
 ## 3. Senarai 30 video
 
-### A. Duit & kepercayaan (10 video)
+### A. Duit & kepercayaan (10 video) — ❌ DITOLAK
 | # | Tajuk | Pain (#) | Hook 3 saat | Isi / mesej | Format | Funnel | Perlu |
 |---|---|---|---|---|---|---|---|
 | A1 | **"49 × 12 × 7 = gila?"** | Kontrak #111, #112, #116 | Tulisan tangan "49×12×7 = 4,116 😱". VO: "Ramai kira macam ni. Jom kira betul-betul." | Apa yang termasuk dalam bayaran bulanan (servis berkala, topper boleh tukar). Banding dengan beli tunai + kos cuci/ganti sendiri. Akhir: "Kalau tetap rasa tak berbaloi, beli tunai pun ada." | EJEN + KIN | M | Harga bulan semasa; terma kontrak |
@@ -74,7 +76,7 @@ Nada keseluruhan: **ejen yang jujur dan telus, bukan jurujual yang push.**
 | A9 | **"Warranty tilam apa je?"** | #148, #149, #150 | Balas komen: "warranty TILAM apa je?" | Jawapan rasmi: mendap/lengkung, rangka patah, topper. | BALAS | B | ⚠️ Sahkan dengan Coway dulu |
 | A10 | **Habis kontrak / ada masalah masa kontrak?** | #119, #120 | "Masa kontrak ada masalah, Coway buat tak tahu ke?" | Saluran aduan, careline, apa ejen buat untuk pelanggan. | EJEN | B | ⚠️ Sahkan proses |
 
-### B. Badan & tahan lama (7 video)
+### B. Badan & tahan lama (7 video) — ✅ dibina (`tilam/b/`)
 | # | Tajuk | Pain (#) | Hook 3 saat | Isi / mesej | Format | Funnel | Perlu |
 |---|---|---|---|---|---|---|---|
 | B1 | **Bangun pagi sakit pinggang: tilam ke puncanya?** | #45, #49, #39 | "Bangun pagi, pinggang dulu yang 'bangun'." | 3 tanda tilam dah tak menyokong. Spring 7 zon + latex 5 zon. "Rujuk doktor jika sakit berterusan." | POV | T | — |

@@ -1,0 +1,32 @@
+{
+  "id": "b4", "slug": "badan-besar-tilam-tahan", "title": "B4 — Badan besar, tilam tahan tak?",
+  "pain": ["#80", "#64", "#76"], "mood": "calm",
+  "clips": {"topper": {"from": 34.0, "to": 40.5}},
+  "lines": [
+    {"id": "01", "text": "Ada yang tanya, kalau badan besar, lama-lama tilam ni lendut tak?",
+     "scene": {"head": {"k": "BALAS KOMEN", "y": 300, "at": 0.05}, "comment": {"t": "kalau obese lama² lendut tak", "src": "TikTok · 2026", "y": 560, "at": 0.3, "tag": "SOALAN"}}},
+    {"id": "02", "text": "Soalan ni penting. Tilam yang tak sesuai dengan berat badan, memang cepat mendap.",
+     "scene": {"words": [{"t": "SOALAN <b>PENTING.</b>", "at": 0.05, "size": 110, "y": 560}],
+               "items": [{"t": "Tak sesuai berat = <b>cepat mendap</b>", "x": true, "at": "Tilam", "y": 800}]}},
+    {"id": "03", "text": "Coway Prime 2 guna pocket spring tujuh zon. Setiap spring dalam poket sendiri, sokong ikut zon badan.",
+     "scene": {"head": {"k": "COWAY PRIME II", "t": "Pocket spring <b>7 zon</b>", "y": 170},
+               "media": {"img": "assets/tilam/prime2/coway-prime2-7-zone-pocket-spring.png", "box": [0, 560, 1080, 608], "bgc": "#cfd9ea", "kb": "none"},
+               "chips": [{"t": "Sokong ikut zon badan", "at": "sokong", "y": 1260}]}},
+    {"id": "04", "text": "Had berat gabungan, sekitar seratus enam puluh hingga dua ratus kilogram, bergantung pada saiz dan jenis.",
+     "scene": {"head": {"k": "HAD BERAT GABUNGAN", "y": 380, "at": 0.05},
+               "words": [{"t": "<b>±160–200 kg</b>", "at": 0.35, "size": 150, "y": 560}],
+               "items": [{"t": "Bergantung saiz: <b>Queen / King</b>", "icon": "1", "at": "saiz", "y": 860}, {"t": "Bergantung jenis: <b>Soft / Firm</b>", "icon": "2", "at": "jenis", "y": 1010}],
+               "note": {"t": "*Anggaran. Sahkan had tepat dengan ejen sebelum membeli.", "y": 1200, "at": "bergantung"}}},
+    {"id": "05", "text": "Panduan mudah. Berat lebih tujuh puluh kilo, pilih Firm. Sokongan lebih padu.",
+     "scene": {"head": {"k": "PANDUAN PILIH", "y": 170},
+               "items": [{"t": "Lebih 70 kg: pilih <b>Firm</b>", "icon": "F", "at": "Berat", "y": 520}],
+               "media": {"img": "assets/tilam/prime2/firm-soft-mattress-for-all-sleepers-coway-prime2-series.jpg", "box": [90, 760, 900, 506], "at": 0.6}}},
+    {"id": "06", "text": "Bawah tujuh puluh kilo, Soft atau Firm, ikut cara you tidur.",
+     "scene": {"cont": true, "items": [{"t": "Bawah 70 kg: <b>Soft</b> atau <b>Firm</b>", "icon": "S", "at": "Bawah", "y": 360}]}},
+    {"id": "07", "text": "Dan bila lapisan atas dah lama, topper boleh ditukar.",
+     "scene": {"head": {"t": "Topper<br><b>boleh ditukar</b>", "y": 180}, "media": {"clip": "topper", "box": [0, 610, 1080, 608]},
+               "chips": [{"t": "Ditukar 3 tahun sekali*", "at": "topper", "y": 1300}], "note": {"t": "*Topper percuma untuk pelanggan sewa.", "y": 1430, "at": "topper"}}},
+    {"id": "08", "text": "Tak pasti nak pilih yang mana? WhatsApp saya. Bagi tahu berat dan cara you tidur.",
+     "scene": {"cta": {"at": 0.1, "t": "Bagi tahu berat & cara tidur. Saya cadangkan."}}}
+  ]
+}

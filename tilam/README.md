@@ -1,6 +1,7 @@
 # Video Tilam Coway
 
 - **Draf plan v2 (berasaskan data pain 169 ayat):** [`plan_v2_draft.md`](plan_v2_draft.md)
+- **Siri B (7 video, badan & tahan lama):** [`b/README.md`](b/README.md)
 - Plan asal 30 video: [`plan_30_video.md`](plan_30_video.md)
 - Padanan pain × produk (data Lowyat): [`padanan_pain_coway.md`](padanan_pain_coway.md)
 - Data research: `research/`
@@ -40,8 +41,6 @@ python tilam/build_v16.py --stills 2,8,20  # pratonton PNG -> out/stills/
 VO baharu: skrip dalam `tilam/vo/lines_v16.json`. Jana keseluruhan skrip dalam **satu** permintaan Gemini TTS
 (kuota percuma ±10 permintaan/hari/model) ke `tilam/vo/v16_full.wav`, kemudian kemas kini anggaran masa setiap baris
 dalam `tilam/vo/v16_asr.json` (transkrip Gemini) dan jalankan `split.py`.
-Nota: `v16_vo.wav` semasa = `v16_full.wav` (baris 01–05, 08, 10) + `v16_patch.wav` (baris 06, 07, 09 baharu).
-Jalankan `split.py` sahaja akan kembalikan VO lama — ikut dengan `splice.py` seperti di atas.
 Atau rakam suara sendiri sebagai `tilam/vo/v16_full.wav` (baca baris ikut turutan dengan jeda ±0.5s).
 
 Nota: `v16_vo.wav` = `v16_full.wav` (baris 01–08, 10) + `v16_patch09.wav` (baris 09 baharu). Jalankan `split.py` dan kemudian `splice.py` seperti di atas.

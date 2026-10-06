@@ -1,0 +1,32 @@
+{
+  "id": "b2", "slug": "tilam-tenggelam-topper", "title": "B2 — Tilam tenggelam di tengah: topper atau tilam baru?",
+  "pain": ["#73", "#63", "#75"], "mood": "calm",
+  "clips": {
+    "layers5": {"src": "assets/tilam/prime2/video/prime2-panel5.mp4", "from": 0.5, "to": 8.5},
+    "topper":  {"from": 34.0, "to": 40.5}
+  },
+  "lines": [
+    {"id": "01", "text": "Tilam you dah ada lubang kat tengah? Tidur rasa macam dalam mangkuk?",
+     "scene": {"head": {"t": "Tilam dah <b>tenggelam</b><br>di tengah?", "y": 220}, "diagram": "sag",
+               "sag": {"topper": false, "at": 0.1, "sagAt": 0.4, "y": 720, "label": "Tidur macam dalam mangkuk"}}},
+    {"id": "02", "text": "Ramai terus beli topper, letak atas, harap settle.",
+     "scene": {"head": {"k": "PENYELESAIAN POPULAR", "t": "Letak <b>topper</b> je?", "y": 200}, "diagram": "sag",
+               "sag": {"topper": true, "at": 0.1, "sagAt": "03:ikut", "y": 720, "label": "Topper ikut bentuk tilam bawah"}}},
+    {"id": "03", "text": "Masalahnya, topper akan ikut bentuk tilam bawah dia. Kalau tilam dah tenggelam, topper pun ikut tenggelam.",
+     "scene": {"cont": true, "chips": [{"t": "Topper pun ikut tenggelam", "at": "topper pun", "y": 1360}]}},
+    {"id": "04", "text": "Jadi kalau struktur tilam dah mendap, yang kena diselesaikan ialah tilamnya.",
+     "scene": {"words": [{"t": "BUKAN TOPPER.", "at": 0.1, "size": 116, "y": 680},
+                         {"t": "STRUKTUR <b>TILAM</b>.", "at": "diselesaikan", "size": 116, "y": 870}]}},
+    {"id": "05", "text": "Coway Prime 2 dibina dengan pocket spring tujuh zon, dan sabut kelapa di bawah, untuk sokongan yang padu.",
+     "scene": {"head": {"k": "COWAY PRIME II", "t": "Struktur <b>padu</b><br>dari bawah", "y": 160},
+               "media": {"clip": "layers5", "box": [0, 610, 1080, 608], "bgc": "#cfd9ea"},
+               "chips": [{"t": "Pocket spring 7 zon", "at": "pocket", "y": 1260}, {"t": "Sabut kelapa", "at": "sabut", "y": 1365}]}},
+    {"id": "06", "text": "Dan di bahagian atas, ada topper yang boleh ditukar.",
+     "scene": {"head": {"t": "Topper<br><b>boleh ditukar</b>", "y": 180}, "media": {"clip": "topper", "box": [0, 610, 1080, 608]}}},
+    {"id": "07", "text": "Topper ni ditukar setiap tiga tahun. Jadi tilam kekal selesa, tanpa perlu buang tilam.",
+     "scene": {"cont": true, "chips": [{"t": "Ditukar 3 tahun sekali*", "at": "setiap", "y": 1260}, {"t": "Tak perlu buang tilam", "at": "tanpa", "y": 1365}],
+               "note": {"t": "*Topper percuma untuk pelanggan sewa.", "y": 1500, "at": "setiap"}}},
+    {"id": "08", "text": "Tilam dah mendap? WhatsApp saya, kita pilih yang sesuai dengan cara you tidur.",
+     "scene": {"cta": {"at": 0.1, "t": "Kita pilih ikut cara you tidur."}}}
+  ]
+}
