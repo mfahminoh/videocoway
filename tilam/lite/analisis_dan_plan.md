@@ -1,16 +1,16 @@
-# Coway Prime Lite — Analisa 5 video rujukan + draf 15 video
+# Coway Prime Lite — Analisa 8 video rujukan + draf 15 video
 
-**Status:** draf v1. Akan dikemas kini bila video rujukan tambahan diterima.
+**Status:** draf v2. Dikemas kini dengan video rujukan tambahan r6–r8. Fail ke-9 yang dihantar ialah salinan r5 dan diabaikan.
 
 **Sumber:**
-- 5 video TikTok ejen (`rujukan/r1–r5.mp4`, tidak di-commit). Transkrip ada dalam `transkrip/r1–r5.md`.
+- 8 video TikTok ejen (`rujukan/r1–r8.mp4`, tidak di-commit). Transkrip ada dalam `transkrip/r1–r8.md`.
 - Laman rasmi `coway.com.my/products/berex/primelite`, dibaca 6 Okt 2026.
 - Aset rasmi dalam `assets/tilam/primelite/`.
 - Data pain dalam `tilam/research/Pain_Tilam_Malaysia_v2.xlsx`.
 
 ---
 
-## 1. Ringkasan 5 video rujukan
+## 1. Ringkasan 8 video rujukan
 
 | # | Akaun | Produk | Panjang | Format | Hook (3 saat pertama) |
 |---|---|---|---|---|---|
@@ -19,8 +19,25 @@
 | r3 | @_syaifulaiman | Prime Lite | 44s | B-roll bilik + kapsyen besar + talking-head (mug Coway) | "**Patutlah lately ni ramai yang order** tilam Coway ni" |
 | r4 | @amirul_coway_ | Lite vs Prime II | 1:20 | Showroom, **balas komen "Part 2 please"**, prop sampel spring, ujian statik, pita ukur | "Part 2: **perbezaan** antara Prime Lite dengan Prime II" |
 | r5 | @amirul_coway_ | Prime Lite | 46s | Demo di showroom: melutut, buka zip topper | "Assalamualaikum, ini adalah tilam Prime Lite Coway" + pelekat RM49 |
+| r6 | @_syaifulaiman | Prime Lite | 51s | Talking-head + animasi 3D rasmi (cooling, 5 zon, servis, topper lama→baru) | "**Tilam tebal macam ni, RM49 je? Biar betul.**" (kejutan harga) |
+| r7 | @nashicoway | Prime II | 1:03 | Showroom, loghat utara, kad bahan rasmi, meme "Nice" | "**Inilah tilam yang paling ramai customer Coway pakai**" (bukti sosial) |
+| r8 | @amirul_coway_ | Prime II | 1:17 | Di bilik: tekan topper, buka zip, terang bahan | "Hai guys, ini adalah tilam Coway" (lemah) |
 
 ### Skrip yang digunakan (ringkas, lihat transkrip penuh)
+- **r6:**
+  - Kejutan harga → persona: "tengah survey tilam tebal, nak selesa macam **hotel 5 bintang**, tapi harga mampu milik".
+  - (1) **cooling fabric** (2) **5 zon** "tak rasa sakit badan bila bangun"
+  - (3) **pakej servis: technician cuci tilam setiap 4 bulan** (4) bayaran bulanan.
+  - Visual **topper lama → free changeable topper** (T&C). Penghantaran & pemasangan percuma.
+- **r7 (Prime II):**
+  - Bukti sosial → 7 zon "cover whole body" → kad bahan rasmi (fabrik anti-statik & sejuk, latex 5 zon, foam, sabut kelapa).
+  - Cooling fabric: "rumah panas pun, **berani guarantee confirm sejuk**".
+  - Hadiah **2 bantal memory foam ikut bentuk tengkuk + mattress protector**. Rangka **hitam atau biru**. "Serendah RM79".
+- **r8 (Prime II):**
+  - Topper anti-statik "serap ion dari handphone, bangun tak stress".
+  - **Topper zip**: "anak kencing, minum kopi… buka dan basuh dekat **dobi atau washing machine rumah**".
+  - Sabut kelapa, "memory foam", latex asli, 7 zon "kepala, badan, buntut, pinggul lain-lain berat".
+  - "**Pada bulan ni** 2 free gift: 2 memory pillow + 1 mattress protector".
 - **r1:**
   - "3 sebab" → (1) **5-zone pocket spring**: sokong ikut bentuk badan, "tak adalah rasa sakit belakang", kurang gangguan pasangan.
   - (2) **12 inci tebal**: "rasa macam dekat hotel".
@@ -51,14 +68,15 @@
 ### Pain point yang disentuh
 | Pain | Video | Bil. ayat dalam data pain kita (169) |
 |---|---|---|
-| Sakit belakang / badan | r1, r3, r4, r5 | 18 |
+| Sakit belakang / badan | r1, r3, r4, r5, r6, r8 | 18 |
 | Nak tilam **tebal / rasa hotel** | r1, r3, r5 | (berkait "keras/lembut", 19) |
-| Harga / bajet | r1, r3, r5 (RM49), r2 (RM70) | 19 |
-| **Anak kencing / tumpah kopi** | r4, r5 | 12 (kotor/kebersihan) |
+| Harga / bajet | r1, r3, r5, r6 (RM49), r2 (RM70), r7 (RM79) | 19 |
+| **Anak kencing / tumpah kopi** | r4, r5, r8 | 12 (kotor/kebersihan) |
 | Gangguan pasangan | r1, r3 | 4 |
-| Panas | r3, r5 | 4 |
+| Panas | r3, r5, r6, r7 | 4 |
 | Barang besar susah hantar | r3 | 9 |
 | Bingung pilih model | r4 | 15 (maklumat kurang / keliru) |
+| Tilam kotor, nak dijaga | r6 (servis 4 bulan), r2 | 12 |
 
 ### USP Prime Lite (disahkan dengan laman rasmi)
 | USP | Rasmi? | Nota |
@@ -79,7 +97,9 @@
 - **Listicle "3 sebab"** dan **bukti sosial** ("patutlah ramai order") sebagai hook.
 - **Demo fizikal:** tangan tekan tilam, ukur ketebalan, buka zip topper, time-lapse tukar topper. Ini yang paling meyakinkan.
 - **Balas komen ("Part 2 please")** untuk video perbandingan. Penonton sendiri minta beza Lite vs Prime II.
-- **Hadiah & percuma:** free 2 bantal, hantar & pasang percuma, "pendaftaran percuma".
+- **Hadiah & percuma:** free 2 bantal (Lite), 2 bantal memory foam + pelindung tilam (Prime II, "bulan ni"), hantar & pasang percuma, "pendaftaran percuma".
+- **Kejutan & persona:** "Tilam tebal macam ni… biar betul?" diikuti "untuk korang yang tengah survey tilam tebal…" (r6). Bukti sosial: "paling ramai customer pakai" (r7).
+- **Pola video Lite:** harga dan tebal di depan. **Pola video Prime II:** bahan premium dan hadiah di depan.
 - **Harga ansuran** di depan (RM49). *Kita tidak guna harga atau promo website, ikut arahan.*
 
 ### ⚠️ Dakwaan ejen yang TIDAK kita guna / perlu disahkan
@@ -88,10 +108,13 @@
 | Prime Lite ada "memory foam" (r4) | Laman rasmi: **ventilated foam**. Guna "foam berliang" |
 | Anti-statik: "ion dari main handphone buat kita stress" (r4) | Tiada sokongan rasmi, berbunyi dakwaan kesihatan. **Jangan guna** |
 | "Tak adalah rasa sakit belakang" (r1) | Janji perubatan. Guna "sokongan sekata / bantu kurangkan lenguh badan" (ayat rasmi: *helping to reduce body ache*) |
-| Topper "boleh basuh dekat dobi" (r5) | Laman rasmi hanya sebut boleh tanggal & tukar. **Sahkan cara cucian** |
+| Topper "boleh basuh dekat dobi" (r5) / "dobi atau washing machine rumah" (r8) | Laman rasmi hanya sebut boleh tanggal & tukar. **Sahkan cara cucian** (mesin basuh rumah? saiz Queen/King muat?) |
+| "Berani guarantee confirm sejuk" walaupun rumah panas (r7) | Dakwaan berlebihan. Guna "permukaan kekal sejuk / kurang bahang" |
+| Prime II ada "memory foam" (r4, r8) | Laman rasmi Prime II: foam berliang (tiada "memory foam"). Guna "foam berliang" |
 | Free 2 bantal (r1, r3) | Kemungkinan promo bulanan. **Sahkan** |
 | Topper lama boleh simpan selepas tukar (r2) | **Sahkan** |
-| Servis 4 bulan sekali (r2) | **Sahkan** kekerapan servis tilam |
+| Servis setiap 4 bulan (r2, r6, untuk pakej termasuk servis) | Disebut 2 ejen. **Sahkan** sebelum diletak dalam video |
+| Hadiah bantal / mattress protector (r1, r3, r7, r8) | Promo bulanan ("pada bulan ni"). Jangan masuk video evergreen |
 | Jadual tukar topper Prime Lite | Prime II = 3 tahun (dari you). **Sahkan sama untuk Lite** |
 
 ---
@@ -122,7 +145,7 @@ Legenda:
 
 | # | Tajuk | Jenis | Hook 3 saat | Isi ringkas | Aset | Buat |
 |---|---|---|---|---|---|---|
-| **L1** | 3 sebab Prime Lite jadi pilihan ramai | R (r1) | "3 sebab kenapa ramai pilih Coway Prime Lite." | (1) Spring 5 zon ikut bentuk badan + kurang gangguan pasangan (2) 12" tebal, rasa hotel (3) Topper zip boleh tanggal & tukar percuma | rajah 5 zon, lapisan, gambar zip | ✅ |
+| **L1** | 3 sebab Prime Lite jadi pilihan ramai | R (r1, r6) | "Tilam 12 inci macam ni, Coway pulak? Biar betul. 3 sebab ramai pilih." | (1) Spring 5 zon ikut bentuk badan + kurang gangguan pasangan (2) 12" tebal, rasa hotel (3) Topper zip boleh tanggal & tukar percuma | rajah 5 zon, lapisan, gambar zip | ✅ |
 | **L2** | Patutlah ramai order | R (r3) | "Patutlah lately ni ramai order tilam ni." | Senarai cepat: 12" · 5 zon · fabrik sejuk · topper zip · hantar & pasang percuma, Sabah & Sarawak termasuk | panel bilik, video produk rasmi | ✅ |
 | **L3** | Anak terkencing? Buka zip je | R (r5) / P | Komen sebenar: "anak terkencing atas tilam, cuci macam mana?" | Topper ber-zip, tanggal sepenuhnya → cuci topper, bukan tilam → fabrik rangka mudah dibersihkan | gambar zip rasmi, video produk | ✅ (*sahkan cara cuci*) |
 | **L4** | Prime Lite vs Prime II: beza 30 saat | B (r4) | Balas komen: "Part 2 please: beza Lite dengan Prime II?" | Jadual: zon spring, lapisan, kekerasan, tinggi, rangka. "Dua-dua bagus, beza ikut keperluan" | gambar kedua-dua tilam, rajah lapisan | ✅ |
@@ -136,7 +159,17 @@ Legenda:
 | **L12** | Bilik panas, kipas satu je | P (#160–#162) | Komen: "Malaysia ni hangat… grab semua yg ada perkataan cooling" | Cooling ticking + foam berliang. Jujur: "bukan aircond, tapi kurang bahang" | gambar cooling ticking rasmi | ✅ |
 | **L13** | Topper tukar percuma, tilam kekal segar | U | "Tilam lama-lama nipis? Yang ni, tukar topper je." | Topper ber-zip, tukar percuma untuk pelanggan sewa (T&C) → tak perlu buang tilam | gambar zip, ikon topper | ✅ (*sahkan jadual Lite*) |
 | **L14** | Rumah pertama, set katil biru lembut | U | "Rumah pertama, bilik masih kosong?" | Rekaan **biru muda minimalis**, padan dengan semua bilik. Pakej tilam + rangka. Hantar & pasang percuma | panel bilik rasmi, rangka biru | ✅ |
-| **L15** | Tilam "Lite", servis tetap penuh | U / P (#93) | "Lite tu maksudnya servis pun kurang?" | Tidak. Servis 7 langkah + fogging yang sama macam model premium | gambar langkah 1–7 rasmi | ✅ |
+| **L15** | Tilam "Lite", servis tetap penuh | U / P (#93), R (r6) | "Lite tu maksudnya servis pun kurang?" | Tidak. Servis 7 langkah + fogging yang sama macam model premium (+ "setiap 4 bulan" jika disahkan) | gambar langkah 1–7 rasmi | ✅ |
+
+### Bank hook dari 8 video rujukan (diubah suai, tanpa harga)
+| Hook asal | Versi kita |
+|---|---|
+| "3 sebab kenapa … jadi pilihan ramai" (r1) | "3 sebab ramai pilih Coway Prime Lite." |
+| "Patutlah lately ni ramai yang order…" (r3) | Kekal. Bukti sosial berfungsi |
+| "Tilam tebal macam ni, RM49 je? Biar betul." (r6) | "Tilam 12 inci, topper zip, servis Coway… biar betul?" |
+| "Inilah tilam yang paling ramai customer Coway pakai" (r7) | Guna untuk Prime II sahaja jika disahkan; untuk Lite: "Tilam Coway untuk keluarga muda." |
+| "Part 2 please" (balas komen, r4) | Format balas komen untuk L4 / L5 |
+| "Untuk korang yang tengah survey tilam tebal, selesa macam hotel 5 bintang…" (r6) | Ayat persona selepas hook (L1, L8) |
 
 ### Cadangan susunan ujian (minggu 1, 5 video)
 **L1** (listicle, hook terbukti) · **L4** (perbandingan, diminta penonton) · **L3** (anak kencing, sudut keluarga) · **L9** (robot vakum, belum digunakan pesaing) · **L7** (keliru soft/firm, pain terbesar).
@@ -149,8 +182,8 @@ Legenda:
 ---
 
 ## 5. Perlu disahkan dengan you / Coway
-1. Topper Prime Lite boleh dibasuh? Di dobi atau cara lain? (r5)
+1. Topper Prime Lite (dan Prime II) boleh dibasuh? Di dobi, atau mesin basuh rumah? (r5, r8)
 2. Jadual tukar topper Prime Lite: 3 tahun macam Prime II?
 3. Free 2 bantal: tawaran tetap atau promo bulan tertentu?
 4. Kekerasan Prime Lite cuma Medium Firm (rasmi). Ada pilihan lain di pasaran?
-5. Kekerapan servis tilam: setiap 4 bulan? (r2)
+5. Kekerapan servis tilam: setiap 4 bulan untuk pakej termasuk servis? (r2, r6)
