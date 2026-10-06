@@ -4,7 +4,7 @@
     {"id": "01", "text": "Segan nak bagi orang masuk bilik. Tilam kita pun dah berpeta.",
      "scene": {"comment": {"t": "Awal² kami ok je tp bila da lama kami rasa segan plak nk bgi org msuk pi servce tilam kita yg berpeta", "src": "Threads · 2026", "y": 560, "at": 0.1}}},
     {"id": "02", "text": "Jujur, ramai rasa macam ni. Dan itu normal.",
-     "scene": {"words": [{"t": "RAMAI RASA", "at": 0.05, "size": 110, "y": 640}, {"t": "MACAM NI. <b>NORMAL.</b>", "at": "normal", "size": 100, "y": 800}]}},
+     "scene": {"words": [{"t": "RAMAI RASA", "at": 0.05, "size": 110, "y": 640}, {"t": "MACAM NI. <b>NORMAL.</b>", "at": "normal", "size": 84, "y": 800}]}},
     {"id": "03", "text": "Tapi technician Coway memang dah biasa. Itu kerja harian diorang.",
      "scene": {"head": {"t": "Technician<br><b>dah biasa</b>", "y": 170}, "media": {"img": "assets/tilam/prime2/coway-7-step-mattress-care-service-prime2.png", "box": [90, 560, 900, 597]},
                "chips": [{"t": "Kerja harian diorang", "at": "kerja", "y": 1240}]}},
