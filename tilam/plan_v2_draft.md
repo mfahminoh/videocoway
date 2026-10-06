@@ -7,7 +7,7 @@
 
 **Produk:** Coway Prime II. Fakta dari laman rasmi dan aset dalam `assets/tilam/prime2/`.
 
-**Status:** Tiang A **ditolak**. Tiang B (7 video) **dibina** — lihat `tilam/b/README.md`. Tiang C (C2–C7) & D (D1–D5) **dibina**; D6 menunggu pengesahan.
+**Status:** Tiang A **ditolak**. Tiang B (7 video) **dibina** — lihat `tilam/b/README.md`. Tiang C (C2–C7) & D (D1–D6) **dibina**.
 
 ~~**Status:** draf untuk semakan.~~ Plan ini menggantikan susunan dalam `plan_30_video.md` selepas diluluskan.
 
@@ -98,7 +98,7 @@ Nada keseluruhan: **ejen yang jujur dan telus, bukan jurujual yang push.**
 | C6 | **Cara test tilam dalam 5 minit** | #59, #38 | "Jangan baring 30 saat terus beli." | Tips baring ikut posisi tidur, tengok tulang belakang, test pusing badan. Ajak cuba Prime II. | EJEN | T | ⚠️ Lokasi untuk cuba (jika ada) |
 | C7 | **"Dah cuba 3 tilam, baru faham…"** | #156, #158 | "Dah cuba 3 jenis tilam, baru faham kenapa jangan kedekut bab tidur." | Cerita pelanggan yang menyesal dengan tilam lama, kemudian pilih betul. | STORY / UGC | M | Pelanggan sebenar (atau cerita dengan izin) |
 
-### D. Realiti rumah Malaysia (6 video) — ✅ D1–D5 dibina, D6 menunggu
+### D. Realiti rumah Malaysia (6 video) — ✅ dibina (`tilam/b/`)
 | # | Tajuk | Pain (#) | Hook 3 saat | Isi / mesej | Format | Funnel | Perlu |
 |---|---|---|---|---|---|---|---|
 | D1 | **Anak terkencing atas tilam** | #85, #87, #91, #92 | "Anak terkencing atas tilam. Basuh macam mana?" | Servis penjagaan berkala + tips. Ringkasan research: pelanggan Coway puji "senang cuci untuk keluarga beranak kecil". | POV / TECH | T | ⚠️ Sahkan servis cover kesan air kencing |

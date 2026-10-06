@@ -28,9 +28,11 @@ Berdasarkan `tilam/plan_v2_draft.md` (Tiang B). Kategori A ditolak.
 | D4 | `out/tilam/d4_bilik-panas-tanpa-aircond.mp4` | Bilik panas tanpa aircond | #160 #161 #162 |
 | D5 | `out/tilam/d5_toddler-tidur-sekali-katil-goyang.mp4` | Toddler tidur sekali, katil bergoyang | #164 #165 #166 |
 
-D6 (penghantaran / pasang / Sabah-Sarawak / buang tilam lama) **belum dibuat**, menunggu pengesahan fakta.
+| D6 | `out/tilam/d6_hantar-pasang-percuma-sabah-sarawak.mp4` | Hantar & pasang percuma, Sabah & Sarawak termasuk (fakta dari ejen) | #133 #130 #136 #135 |
+
+D6 sengaja tidak sebut naik tangga atau tilam lama.
 Siri D guna tema teal; C5 guna tema hitam/kuning (kinetic). Tiada dakwaan servis selain yang tertulis di laman rasmi
-(7 langkah + fogging); D1 tidak mendakwa servis menghilangkan kesan air kencing — tips pembersihan am sahaja.
+(7 langkah + fogging); D1 tidak mendakwa servis menghilangkan kesan air kencing — tips am + topper boleh dibuka & mudah diangkat untuk dicuci sendiri.
 VO: model Gemini TTS bercampur kerana kuota harian (suara "Orus" sama) — lihat nota di bawah.
 
 **Fakta dari ejen (bukan laman rasmi) — sahkan sebelum iklan:** had berat ±160–200 kg gabungan (B4),
@@ -53,8 +55,11 @@ python tilam/vo/check_asr.py b1            # semak potongan VO ikut baris (Gemin
 ## Nota suara (VO)
 Semua guna suara Gemini "Orus". Model berbeza kerana had kuota harian:
 - `gemini-3.1-flash-tts-preview`: B1–B7, C2, C3, C5, D3
-- `gemini-3.8-flash-tts`: C4
-- `gemini-2.5-flash-preview-tts`: C6, C7, D1, D2, D4, D5
+- `gemini-3.8-flash-tts`: C4, D1 (versi baharu), D6
+- `gemini-2.5-flash-preview-tts`: C6, C7, D2, D4, D5 (model ini kini tidak digunakan lagi oleh `lib_vo.py`)
 
 Untuk suara seragam: padam `tilam/b/vo/<vid>_full.wav` bagi video tersebut dan jalankan semula `python tilam/build_b.py <vid>`
 selepas kuota model 3.1 reset (±10 permintaan/hari).
+
+Nota semakan: `check_asr.py` jatuh ke model Gemini "lite" bila kuota habis. Model lite sering salah dengar "Coway"
+(cth. "Koei", "Kuari") walaupun pada VO yang betul — jadi semakan sebutan jenama perlu didengar sendiri.

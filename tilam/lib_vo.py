@@ -3,7 +3,7 @@
 Penjajaran: calon sempadan = jeda dalam audio; pilih N-1 jeda dengan DP. Setiap baris dijangka panjangnya
 seimbang dengan bilangan hurufnya, dan jeda panjang (antara perenggan) lebih diutamakan daripada jeda koma.
 """
-import json, pathlib, subprocess, sys, wave
+import json, os, pathlib, subprocess, sys, time, wave
 import imageio_ffmpeg, numpy as np
 
 HERE = pathlib.Path(__file__).parent
@@ -14,15 +14,25 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 SR, TEMPO, GAP, LEAD = 44100, 1.12, 0.32, 0.25
 
 
+# 2.5-flash tidak digunakan: sebutan "Coway" tidak konsisten (kedengaran "Cuckoo"/"Kawi").
+TTS_MODELS = os.environ.get("TTS_MODELS", "gemini-3.1-flash-tts-preview,gemini-3.8-flash-tts").split(",")
+
+
 def tts_full(lines, path):
     text = "\n\n".join(l["text"] for l in lines)
-    for m in gemini_tts.MODELS:
-        try:
-            pcm = gemini_tts.tts(text, m); break
-        except Exception as e:
-            print("TTS", m, "gagal:", e)
-    else:
-        raise SystemExit("TTS gagal untuk semua model")
+    pcm = None
+    for m in TTS_MODELS:
+        for attempt in range(3):
+            try:
+                pcm = gemini_tts.tts(text, m); break
+            except Exception as e:
+                body = getattr(e, "read", lambda: b"")().decode(errors="ignore")
+                print("TTS", m, "gagal:", e, "(kuota harian)" if "PerDay" in body else "")
+                if "PerDay" in body or "429" not in str(e): break
+                time.sleep(65)                           # had per-minit
+        if pcm: break
+    if not pcm:
+        raise SystemExit("TTS gagal untuk semua model (" + ", ".join(TTS_MODELS) + ")")
     with wave.open(str(path), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
     print("TTS ok", m, f"{len(pcm) / 48000:.1f}s")
