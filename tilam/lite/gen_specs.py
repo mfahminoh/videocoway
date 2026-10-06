@@ -204,7 +204,7 @@ V["l13"] = ("Topper tukar percuma, tilam kekal segar", "topper-tukar-percuma", "
     L(2, "Dengan Prime Lite, tak perlu. Topper dia ber-zip, dan boleh ditanggal sepenuhnya.", head=H("Topper <b>ber-zip</b>", k="COWAY PRIME LITE"), media=M(clip="topper")),
     L(3, "Untuk pelanggan sewa, topper ditukar percuma, tiga tahun sekali.", cont=True,
       chips=chips(("Tukar percuma 3 tahun sekali*", "percuma"), y=1270), note={"t": TOPNOTE, "y": 1400, "at": "percuma"}),
-    L(4, "Jadi lapisan atas sentiasa segar, tanpa perlu buang tilam.", words=[W("LAPISAN ATAS <b>SEGAR.</b>", size=96, y=620), W("Tak perlu buang tilam.", at="tanpa", size=70, y=790, anim="up")]),
+    L(4, "Jadi lapisan atas sentiasa segar, tanpa perlu buang tilam.", words=[W("LAPISAN ATAS <b>SEGAR.</b>", size=84, y=620), W("Tak perlu buang tilam.", at="tanpa", size=70, y=790, anim="up")]),
     L(5, "Topper dia juga ada lapisan lembut, untuk tidur yang lebih selesa.", head=H("Lapisan <b>lembut</b>"), media=M("closeup")),
     L(6, "Nak tilam yang kekal segar? WhatsApp saya.", **cta("Tukar topper, bukan tilam.")),
 ])
