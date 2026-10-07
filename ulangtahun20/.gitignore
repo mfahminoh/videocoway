@@ -1,4 +1,9 @@
 sources/
 out/scan/C*.jpg
+out/scan/sec_*.jpg
 out/_*
+out/stills/
 __pycache__/
+audio/tts/
+audio/V*.wav
+audio/el/zain/

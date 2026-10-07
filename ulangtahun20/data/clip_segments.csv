@@ -1,0 +1,42 @@
+id,tag,start,end,neon,nota
+C03,talking_head,0.0,6.0,1,lelaki bercakap sebelah Neon Ciel Blue
+C03,produk_guna,6.0,10.0,1,close-up Neon Ciel Blue
+C13,talking_head,0.0,10.0,0,jurujual tanpa produk - babak tanpa harga sahaja
+C06,produk_guna,0.0,10.0,1,Neon Peach Pink - tekan panel / thumbs up
+C17,produk_guna,0.0,1.0,1,Neon putih - tekan panel
+C17,produk_guna,5.0,7.0,1,Neon putih - isi cawan
+C17,produk_guna,8.0,10.0,1,Neon putih - lap badan mesin
+C17,produk_guna,3.0,5.0,0,tuang air panas ke mi (tiada mesin)
+C20,produk_guna,0.0,10.0,1,Neon Peach Pink - isi gelas
+C21,produk_guna,0.0,10.0,1,Neon Peach Pink - tekan panel / air mengalir
+C24,susu_bayi,0.0,3.0,1,Neon Mint - tekan / isi botol
+C24,susu_bayi,5.0,7.0,1,Neon Mint - goncang botol depan mesin
+C24,susu_bayi,8.0,10.0,1,Neon Mint - botol siap
+C24,susu_bayi,3.0,5.0,0,sudu susu tepung (tiada mesin)
+C28,susu_bayi,0.0,1.0,1,Neon putih - tekan panel
+C28,susu_bayi,8.0,10.0,1,Neon putih - botol siap
+C28,susu_bayi,1.0,8.0,0,isi botol / sudu susu / bawa ke bilik
+C29,susu_bayi,0.0,3.0,1,Neon putih - tekan panel (hujung klip ada teks RM20 - jangan lepas 7.5s)
+C29,susu_bayi,3.0,7.5,0,sudu susu / botol
+C31,susu_bayi,0.0,10.0,1,Neon Mint - isi botol
+C32,susu_bayi,0.0,10.0,1,Neon Ciel Blue - isi botol
+C33,susu_bayi,0.0,5.0,1,Neon Ciel Blue - botol depan mesin
+C33,susu_bayi,5.0,10.0,0,bawa botol ke bilik bayi
+C34,susu_bayi,0.0,5.5,1,Neon Ciel Blue - botol depan mesin
+C34,susu_bayi,6.0,10.0,0,bawa botol ke bilik bayi
+C60,susu_bayi,0.0,11.0,1,Neon Ciel Blue - tekan / isi botol
+C60,susu_bayi,15.0,20.0,0,bawa botol ke bilik bayi
+C41,komersial,0.0,3.0,1,Neon Ciel Blue solo di showroom
+C41,komersial,3.0,10.0,0,showroom campur (Villaem/Ice + Neon)
+C45,komersial,0.0,4.0,1,Neon Ciel Blue solo - isi gelas di showroom
+C45,komersial,4.0,10.0,0,showroom mall campur
+C46,komersial,8.0,10.0,1,Neon Ciel Blue solo
+C46,komersial,3.0,8.0,0,Villaem / Ice hitam
+C39,komersial,0.0,3.0,0,showroom campur
+C39,komersial,6.0,10.0,0,showroom campur
+C42,komersial,0.0,8.0,0,showroom campur / Villaem hitam
+C36,model_lain,0.0,10.0,0,showroom Coway Ice hitam
+C40,model_lain,0.0,10.0,0,showroom Villaem/Ice hitam
+C43,model_lain,0.0,10.0,0,showroom Ice hitam
+C44,model_lain,0.0,10.0,0,Coway Ice hitam - ais
+C52,model_lain,0.0,10.0,0,Coway Ice hitam - ais / kopi ais

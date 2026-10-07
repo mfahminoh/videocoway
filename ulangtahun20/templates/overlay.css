@@ -1,0 +1,79 @@
+@font-face { font-family: "Noto Sans"; src: url("../assets/fonts/NotoSans-Variable-latin.woff2") format("woff2"); font-weight: 100 900; }
+
+:root {
+  --blue: #00A0E0; --charcoal: #231F20; --white: #FFFFFF; --ciel: #B2CDDB; --mint: #CBEED1;
+  --pink: #F99CD4; --pebble: #35383B; --lightgrey: #F8F8F8; --wa: #25D366;
+  --shadow: 0 4px 18px rgba(0,0,0,.45), 0 1px 3px rgba(0,0,0,.5);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+body { font-family: "Noto Sans", sans-serif; font-weight: 500; color: var(--white); position: relative; }
+.layer { position: absolute; inset: 0; }
+.abs { position: absolute; }
+.hide { display: none !important; }
+
+/* ---------- jenis teks ---------- */
+.hookText { position: absolute; left: 70px; right: 70px; top: 620px; text-align: center; font-weight: 800;
+  text-transform: uppercase; line-height: 1.04; letter-spacing: -1px; text-shadow: var(--shadow); }
+.price { display: inline-block; background: var(--blue); color: #fff; border-radius: .16em; padding: 0 .16em;
+  text-shadow: none; box-shadow: 0 8px 26px rgba(0,0,0,.28); }
+.thin { font-weight: 400; }
+.bold { font-weight: 800; }
+.date { color: var(--blue); font-weight: 800; }
+.onDark .date { color: var(--blue); }
+
+/* tawaran: dua berat — "Promo **RM20**" */
+.offer { position: absolute; left: 0; right: 0; top: 560px; text-align: center; text-shadow: var(--shadow); }
+.offer .big { display: inline-block; white-space: nowrap; font-weight: 800; font-size: 300px; line-height: .95; letter-spacing: -8px; }
+.offer .big .price { padding: 0 .1em; border-radius: .12em; }
+.offer .per { font-weight: 400; font-size: 92px; }
+.offer .line2 { margin-top: 26px; display: inline-block; font-weight: 800; font-size: 74px; text-transform: uppercase;
+  background: #fff; color: var(--charcoal); padding: 8px 30px; border-radius: 18px; text-shadow: none; }
+.offer .plain { font-weight: 800; font-size: 96px; line-height: 1.06; padding: 0 70px; }
+
+/* hadiah: cip */
+.chips { position: absolute; left: 0; right: 0; top: 640px; display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.chip { font-size: 70px; font-weight: 500; background: rgba(255,255,255,.96); color: var(--charcoal); padding: 16px 40px;
+  border-radius: 999px; box-shadow: 0 10px 30px rgba(0,0,0,.25); white-space: nowrap; }
+.chip b { font-weight: 800; }
+.chip .plus { color: var(--blue); font-weight: 800; margin-right: 10px; }
+
+/* urgency: jalur charcoal */
+.band { position: absolute; left: 0; right: 0; top: 700px; background: var(--charcoal); padding: 34px 60px 38px;
+  text-align: center; box-shadow: 0 14px 40px rgba(0,0,0,.35); }
+.band .l1 { font-size: 58px; font-weight: 500; color: #fff; }
+.band .l2 { font-size: 104px; font-weight: 800; color: #fff; line-height: 1.05; text-transform: uppercase; }
+.band .l2 .date { color: var(--blue); }
+
+/* chip peraturan 1 */
+.chip7 { position: absolute; left: 50%; transform: translateX(-50%); top: 1110px; font-size: 50px; font-weight: 800;
+  background: var(--blue); color: #fff; padding: 10px 30px; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+
+/* sarikata */
+.subs { position: absolute; left: 70px; right: 70px; top: 1300px; display: flex; justify-content: center; }
+.sub { font-size: 54px; font-weight: 500; line-height: 1.2; text-align: center; color: #fff; background: rgba(20,20,22,.72);
+  padding: 12px 28px 15px; border-radius: 22px; max-width: 940px; }
+.sub .price { font-weight: 800; box-shadow: none; }
+
+/* logo */
+.logo { position: absolute; left: 64px; top: 78px; width: 190px; filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.45)); }
+
+/* butang WhatsApp */
+.wa { display: inline-flex; align-items: center; gap: 22px; background: var(--wa); color: #fff; font-weight: 800; font-size: 72px;
+  padding: 26px 56px 30px 40px; border-radius: 999px; box-shadow: 0 16px 40px rgba(37,211,102,.45); white-space: nowrap; }
+.wa svg { width: 92px; height: 92px; }
+.ctaClip { position: absolute; left: 0; right: 0; top: 760px; display: flex; justify-content: center; }
+
+/* kad akhir */
+.endcard { position: absolute; inset: 0; background: #fff; color: var(--charcoal); }
+.endcard .elogo { position: absolute; left: 50%; top: 190px; width: 420px; transform: translateX(-50%); }
+.endcard .prod { position: absolute; left: 120px; top: 330px; width: 840px; height: 840px; object-fit: cover; border-radius: 44px; }
+.endcard .name { position: absolute; left: 0; right: 0; top: 1205px; text-align: center; font-size: 72px; font-weight: 400; }
+.endcard .name b { font-weight: 800; }
+.endcard .btn { position: absolute; left: 0; right: 0; top: 1330px; display: flex; justify-content: center; }
+
+.flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+
+/* lapisan gelap lembut supaya teks jelas atas klip */
+.scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,0) 14%, rgba(0,0,0,.12) 30%, rgba(0,0,0,.30) 50%, rgba(0,0,0,.18) 72%, rgba(0,0,0,0) 85%); }

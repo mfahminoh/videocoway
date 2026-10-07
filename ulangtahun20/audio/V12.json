@@ -1,0 +1,33 @@
+{
+ "id": "V12",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Kira dulu sebelum scroll.",
+   "start": 0.15,
+   "end": 2.205
+  },
+  {
+   "text": "7 bulan kali RM20, jadi RM140 je untuk 7 bulan pertama Coway Neon.",
+   "start": 2.646,
+   "end": 9.611
+  },
+  {
+   "text": "Pasang free, Freegift Premium Coway pun dapat.",
+   "start": 10.052,
+   "end": 13.259
+  },
+  {
+   "text": "Harga ni tamat 25 Oktober.",
+   "start": 13.7,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang, saya tunjuk kiraan penuh.",
+   "start": 16.25,
+   "end": 18.776
+  }
+ ]
+}

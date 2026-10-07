@@ -1,0 +1,43 @@
+{
+ "id": "V11",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "RM20 sebulan untuk 7 bulan.",
+   "start": 0.15,
+   "end": 3.148
+  },
+  {
+   "text": "Tambah Freegift Premium Coway.",
+   "start": 3.624,
+   "end": 5.914
+  },
+  {
+   "text": "Tambah pasang free.",
+   "start": 6.39,
+   "end": 7.687
+  },
+  {
+   "text": "Tiga-tiga dalam satu promo ulangtahun ke-20.",
+   "start": 8.163,
+   "end": 11.785
+  },
+  {
+   "text": "Tamat 25 Oktober.",
+   "start": 12.261,
+   "end": 14.172
+  },
+  {
+   "text": "Nak tunggu apa lagi?",
+   "start": 14.648,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.25,
+   "end": 17.435
+  }
+ ]
+}

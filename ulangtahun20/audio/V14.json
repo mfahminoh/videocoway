@@ -1,0 +1,38 @@
+{
+ "id": "V14",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Saya buka untuk 5 orang je.",
+   "start": 0.15,
+   "end": 2.415
+  },
+  {
+   "text": "Sebab satu: RM20 sebulan, 7 bulan pertama.",
+   "start": 2.749,
+   "end": 7.683
+  },
+  {
+   "text": "Dua: Freegift Premium Coway bagi yang pasang Coway Neon.",
+   "start": 8.018,
+   "end": 12.393
+  },
+  {
+   "text": "Tiga: pasang free.",
+   "start": 12.727,
+   "end": 13.735
+  },
+  {
+   "text": "Bila cukup 5, saya tutup.",
+   "start": 14.07,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.25,
+   "end": 17.186
+  }
+ ]
+}

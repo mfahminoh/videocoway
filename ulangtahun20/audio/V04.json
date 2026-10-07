@@ -1,0 +1,43 @@
+{
+ "id": "V04",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Harga ni takkan lama.",
+   "start": 0.15,
+   "end": 1.332
+  },
+  {
+   "text": "Coway Neon RM20 sebulan untuk 7 bulan pertama.",
+   "start": 1.452,
+   "end": 5.219
+  },
+  {
+   "text": "Pasang free.",
+   "start": 5.339,
+   "end": 6.386
+  },
+  {
+   "text": "Freegift Premium Coway.",
+   "start": 6.506,
+   "end": 8.382
+  },
+  {
+   "text": "Semua ni sempena Ulangtahun Coway ke-20, dan tamat 25 Oktober.",
+   "start": 8.502,
+   "end": 15.152
+  },
+  {
+   "text": "Nak kunci harga ni?",
+   "start": 15.272,
+   "end": 16.719
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.839,
+   "end": 18.049
+  }
+ ]
+}

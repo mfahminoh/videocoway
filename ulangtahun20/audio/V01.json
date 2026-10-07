@@ -1,0 +1,38 @@
+{
+ "id": "V01",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "RM20 sebulan.",
+   "start": 0.15,
+   "end": 2.011
+  },
+  {
+   "text": "Ya, RM20 dah boleh pasang Coway Neon.",
+   "start": 2.315,
+   "end": 5.179
+  },
+  {
+   "text": "Itu harga 7 bulan pertama, sempena Ulangtahun Coway ke-20.",
+   "start": 5.483,
+   "end": 9.878
+  },
+  {
+   "text": "Pasang free, plus Freegift Premium Coway.",
+   "start": 10.183,
+   "end": 13.091
+  },
+  {
+   "text": "Promo ni tamat 25 Oktober.",
+   "start": 13.396,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.25,
+   "end": 17.185
+  }
+ ]
+}
