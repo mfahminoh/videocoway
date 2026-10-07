@@ -1,0 +1,4 @@
+sources/
+out/scan/C*.jpg
+out/_*
+__pycache__/
