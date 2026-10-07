@@ -496,6 +496,69 @@ DM "NAK" sekarang.
 
 ---
 
+## POST TAMBAHAN: Jangan malas post walaupun content biasa
+
+Sesuai diselit antara Hari 1–6 (sokong anak tangga "prospek beli dengan ejen yang dia nampak"), atau guna sebagai post evergreen selepas kempen. Tiada harga.
+
+### Tambahan (thread 1/4)
+```
+Jangan malas post setiap hari. Walaupun awak rasa content tu biasa.
+
+Cuba fikir.
+
+Coway ada beribu ejen.
+Semua jual produk yang sama.
+Semua bagi promo yang sama.
+Semua bagi harga bulanan yang sama.
+
+Jadi bila prospek bandingkan ejen, apa beza awak dengan ejen lain?
+
+Dari segi produk, tak ada.
+Dari segi offer, pun tak ada.
+```
+
+### Tambahan (thread 2/4)
+```
+Bila produk sama dan offer sama, awak tak boleh menang dengan promo. Awak tak boleh kreatif dengan offer.
+
+Jadi yang tinggal untuk awak cuma tiga:
+
+1. Cerita awak sendiri
+2. Testimoni customer awak sendiri
+3. Kehadiran awak: berapa kerap prospek nampak awak
+
+Dua yang pertama ambil masa nak kumpul.
+Yang ketiga awak boleh mula hari ni.
+```
+
+### Tambahan (thread 3/4)
+```
+Awak tak tahu bila prospek akan buat keputusan nak beli.
+
+Mungkin minggu ni. Mungkin 3 bulan lagi.
+
+Tapi hari dia confirm nak beli, dia akan cari nama yang muncul dalam kepala dia.
+
+Nama tu milik ejen yang muncul dalam story dia semalam. Dan kelmarin. Dan minggu lepas.
+
+Content biasa yang muncul setiap hari, menang dengan content hebat yang muncul sekali-sekala.
+```
+
+### Tambahan (thread 4/4)
+```
+Muncul dengan follow up.
+Muncul dengan story.
+Muncul dengan post.
+
+Sebab bila produk sama dan offer sama, kehadiran awak je yang beza.
+
+Kalau story pun kosong, apa yang prospek nak ingat?
+
+Dan kalau dia tak ingat awak, macam mana nak dapat sale?
+```
+
+---
+
 ## Skrip video penerangan (Hari 9B) · ±40 saat, potret 9:16
 
 Gradualisation juga: mula dari fakta yang ejen setuju, naik satu langkah setiap babak.
