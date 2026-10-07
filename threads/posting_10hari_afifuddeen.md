@@ -1,14 +1,16 @@
-# Kempen Threads 10 Hari: Pakej Video Content Coway (gaya Thread Afifuddeen)
+# Kempen Threads 10 Hari: Pakej Video Content Coway (gaya Thread Afifuddeen, versi jualan)
 
-Poin, aliran hari dan tawaran sama dengan `posting_10hari.md`. Cuma gaya penulisan berbeza: "kau/aku", singkatan (yg, sbb, bleh, mmg), senarai bersimbol `+` / `-`, "(Save untuk reference nanti)", dan penutup motivasi "trust me..been there".
+Pakej dah launch. Setiap post ialah post jualan dua bahagian:
+- **1/2**: angkat isu / cerita (gaya Afifuddeen)
+- **2/2**: reply pada post sendiri, terus jual pakej + harga + CTA
 
-Satu kotak = satu post Threads (bawah 500 aksara). `1/2`, `2/3` = sambung sebagai reply pada post sendiri.
+Post yang dah memang menjual (7B, 9B, 10B) kekal satu bahagian. Semua kotak bawah 500 aksara.
 
 ---
 
-## HARI 1: Prospek beli dengan ejen yang dia nampak
+## HARI 1
 
-### 1A · Pagi
+### 1A · Pagi · Story kosong (thread 1/2)
 ```
 Kau nak prospek DM tanya pasal Coway, tapi still:
 + story kosong 2-3 hari
@@ -18,12 +20,25 @@ Kau nak prospek DM tanya pasal Coway, tapi still:
 
 Mmg sampai hujung bulan pun prospek tak ingat kau.
 
-Prospek beli dgn ejen yg dia nampak. Bukan ejen yg paling pandai.
-
-Kalau dia tak nampak kau hari ni, dia beli dgn ejen yg dia nampak hari ni. Simple.
+Prospek beli dgn ejen yg dia nampak. Kalau dia tak nampak kau hari ni, dia beli dgn ejen yg dia nampak hari ni.
 ```
 
-### 1B · Malam
+### 1A · Pagi · Story kosong (thread 2/2)
+```
+Sbb tu aku buat Pakej Video Content Coway. Supaya story kau tak pernah kosong lagi.
+
++ 30 video siap, sehari satu
++ setiap video terang satu fungsi produk
++ pagi download, terus post. 2 minit siap
+
+📦 WP (Neon, Neon Plus, Villaem 3): RM68
+📦 Tilam (Prime, Prime Light): RM68
+🔥 Combo: RM110
+
+Slot 30 org je. Komen "NAK" atau DM aku.
+```
+
+### 1B · Malam · Takde content bank (thread 1/2)
 ```
 Jujur, siapa yg rutin pagi dia mcm ni:
 
@@ -34,16 +49,28 @@ Jujur, siapa yg rutin pagi dia mcm ni:
 
 Kau tak keseorangan. Aku pun pernah lalu benda ni.
 
-Masalah dia bukan kau malas. Kau takde content bank. Takde plan.
+Masalah dia bukan kau malas. Kau takde content bank.
+```
 
-Komen "SAYA" kalau ni kau. Minggu ni aku share apa yg aku buat.
+### 1B · Malam · Takde content bank (thread 2/2)
+```
+So aku dah siapkan content bank tu untuk kau.
+
+Pakej Video Content Coway:
++ 30 video template ready-made
++ takyah fikir idea, takyah cari skrip, takyah edit
++ bangun pagi, pilih satu, post
+
+WP RM68 | Tilam RM68 | Combo RM110
+
+Esok pagi kau dah takyah tanya "nak post apa". DM aku "NAK".
 ```
 
 ---
 
-## HARI 2: Nampak saja tak cukup, prospek kena faham
+## HARI 2
 
-### 2A · Pagi (thread 1/2)
+### 2A · Pagi · Post bersepah, promo je (thread 1/2)
 ```
 Ni silap yg aku perasan ramai sgt ejen Coway buat:
 
@@ -52,25 +79,28 @@ Selasa → promote penapis udara
 Rabu → promote tilam
 Khamis → tak sempat post
 
-Nampak rajin kan? Tapi dari mata prospek, dia tak sempat faham satu produk pun.
+Dan setiap post cuma "Promo bulan ni! PM saya!"
+Takde penerangan. Takde fungsi. Takde sebab kenapa dia perlu.
 
-Sbb setiap post cuma "Promo bulan ni! PM saya!"
+Prospek tak sempat faham satu produk pun. Mcm mana nak yakin?
 ```
 
-### 2A · Pagi (thread 2/2)
+### 2A · Pagi · Post bersepah, promo je (thread 2/2)
 ```
-Takde:
-+ penerangan produk
-+ fungsi
-+ testimoni
-+ sebab kenapa dia perlu
+Video dalam pakej aku dibuat untuk selesaikan benda ni.
 
-Prospek bukan tak nak beli. Dia tak cukup faham untuk rasa yakin.
++ setiap video terang SATU benda: satu fungsi, satu kelebihan
++ kau post ikut produk, bukan ikut mood
++ prospek faham dulu, baru dia DM
 
-Post promo tak salah. Tapi kalau SEMUA post promo, org scroll je. Dia dah nampak 100 ejen lain post benda sama.
+📦 Pakej WP: Neon, Neon Plus, Villaem 3 (30 video) RM68
+📦 Pakej Tilam: Prime, Prime Light (30 video) RM68
+🔥 Combo: RM110
+
+DM "NAK" untuk ambil.
 ```
 
-### 2B · Malam
+### 2B · Malam · Prospek tak faham produk (thread 1/2)
 ```
 Cuba test ni sekarang.
 
@@ -80,21 +110,31 @@ Kalau prospek scroll story & wall kau, bleh tak dia jawab sendiri:
 + Tilam Prime sesuai untuk siapa?
 
 Kalau tak bleh, dia akan DM tanya soalan asas. Atau lagi teruk, dia tak tanya langsung.
+```
 
-Content kau patutnya dah jawab semua ni sebelum dia tanya.
+### 2B · Malam · Prospek tak faham produk (thread 2/2)
+```
+Soalan² ni semua dah dijawab dalam video pakej aku.
+
++ beza model, fungsi, siapa yg sesuai: satu video, satu jawapan
++ kau post, prospek tengok, dia faham sendiri
++ bila dia DM, dia dah tahu nak model apa
+
+WP RM68 | Tilam RM68 | Combo RM110
+30 video setiap pakej.
+
+Slot terhad 30 org. DM aku "NAK".
 ```
 
 ---
 
-## HARI 3: Faham perlukan struktur
+## HARI 3
 
-### 3A · Pagi (thread 1/2)
+### 3A · Pagi · Satu minggu, satu produk (thread 1/2)
 ```
-Sbb ramai tanya mcm mana nak post tersusun, ni strategi yg aku guna:
+Strategi yg aku guna: SATU MINGGU, SATU PRODUK.
 
-SATU MINGGU, SATU PRODUK.
-
-Minggu ni nak jual Neon? Seminggu post Neon je:
+Minggu ni jual Neon? Seminggu post Neon je:
 + Hari 1: masalah air paip
 + Hari 2: cara Neon tapis air
 + Hari 3: fungsi & ciri utama
@@ -103,62 +143,54 @@ Minggu ni nak jual Neon? Seminggu post Neon je:
 + Hari 6: soalan lazim
 + Hari 7: promo + CTA
 
+Hari ke-7 prospek dah faham. Promo jadi jemputan, bukan gangguan.
+
 (Save untuk reference nanti)
 ```
 
-### 3A · Pagi (thread 2/2)
+### 3A · Pagi · Satu minggu, satu produk (thread 2/2)
 ```
-Perasan tak promo cuma hari ke-7?
+Masalahnya, nak siapkan 7 video seminggu tu makan masa.
 
-Sbb bila sampai hari ke-7, prospek dah faham. Promo tu bukan lagi gangguan, tapi jemputan.
+So aku dah siapkan. Pakej Video Content Coway sesuai terus dgn strategi ni:
++ pilih produk minggu ni
++ ambil 7 video produk tu
++ schedule. Siap
 
-Minggu depan tukar → Villaem 3. Lepas tu → tilam.
+📦 WP (Neon, Neon Plus, Villaem 3): RM68
+📦 Tilam (Prime, Prime Light): RM68
+🔥 Combo 60 video: RM110
 
-Sebulan, followers kau dah "belajar" 4 produk dari kau.
-
-Dan bila dia ready nak beli, dia cari siapa? Org yg ajar dia la.
+DM "NAK".
 ```
 
-### 3T · Tengah hari (tambahan, thread 1/3)
+### 3T · Tengah hari · Konsisten muncul (thread 1/2)
 ```
 Jangan malas post setiap hari. Walaupun kau rasa content tu biasa je.
 
-Fikir balik:
 + Coway ada beribu ejen
 + semua jual produk yg sama
 + semua bagi promo yg sama
-+ semua bagi harga bulanan yg sama
 
-Maknanya kau takde advantage nak menang dgn promo. Takde ruang nak kreatif dgn offer. Kau terpaksa stick dgn benda yg sama.
+Kau takde advantage nak menang dgn promo. Yg tinggal cuma: story kau, testimoni kau, dan berapa kerap prospek nampak kau.
+
+Hari dia confirm nak beli, nama yg muncul dlm kepala dia = ejen yg dia selalu nampak.
 ```
 
-### 3T · Tengah hari (tambahan, thread 2/3)
+### 3T · Tengah hari · Konsisten muncul (thread 2/2)
 ```
-So apa yg tinggal untuk kau?
-
-+ story kau sendiri
-+ testimoni customer kau sendiri
-+ kehadiran kau: berapa kerap prospek nampak kau
-
-Point no 3 ni aku perasan ramai sgt yg pandang ringan.
-
-Kau tak tahu bila prospek nak beli. Mungkin minggu ni, mungkin 3 bulan lagi. Tapi hari dia confirm nak beli, nama yg muncul dlm kepala dia = ejen yg dia selalu nampak.
-```
-
-### 3T · Tengah hari (tambahan, thread 3/3)
-```
-So strategi dia satu je: konsisten muncul.
-
-+ muncul dgn follow up
-+ muncul dgn story
-+ muncul dgn post
-
 Content biasa yg muncul setiap hari menang dgn content hebat yg muncul sebulan sekali.
 
-Kalau story pun kosong, mcm mana nak dapat sale?
+Kalau kau takde masa nak buat content tiap hari, ambil je pakej aku:
++ 30 video siap, sehari satu
++ kau muncul tiap hari tanpa pening
+
+WP RM68 | Tilam RM68 | Combo RM110
+
+Kalau story pun kosong, mcm mana nak dapat sale? DM "NAK".
 ```
 
-### 3B · Malam
+### 3B · Malam · Struktur > kuantiti (thread 1/2)
 ```
 Post banyak ≠ jual banyak.
 
@@ -172,37 +204,59 @@ Post tersusun:
 + prospek yakin
 + prospek DM
 
-Struktur > kuantiti. Ingat tu.
+Struktur > kuantiti.
+```
+
+### 3B · Malam · Struktur > kuantiti (thread 2/2)
+```
+Nak post tersusun tapi takde masa susun sendiri?
+
+Pakej Video Content Coway:
++ 30 video ikut produk
++ satu video, satu fungsi
++ susun ikut minggu, terus jalan
+
+📦 WP: RM68
+📦 Tilam: RM68
+🔥 Combo: RM110
+
+Slot 30 org je. Komen "NAK".
 ```
 
 ---
 
-## HARI 4: Jangan anggap prospek tak ada duit
+## HARI 4
 
-### 4A · Pagi (thread 1/2)
+### 4A · Pagi · Jangan anggap prospek takde duit (thread 1/2)
 ```
 Satu pesan mentor aku yg aku pegang sampai sekarang:
 
 "Jangan anggap prospek kau takde duit."
 
-Dulu aku pun sama. Asyik promote model paling murah. Neon, Neon, Neon. Sbb dlm kepala aku: "org nak yg murah."
+Dulu aku pun asyik promote model paling murah. Neon, Neon, Neon.
 
-Hakikatnya customer tak cari yg murah. Dia cari yg SESUAI dgn keperluan dia.
+Hakikatnya customer tak cari yg murah. Dia cari yg SESUAI.
+
+Ada prospek yg mampu ambil Villaem 3, tapi dia tak tahu pun Villaem 3 wujud. Sbb feed kita penuh model entry je.
 ```
 
-### 4A · Pagi (thread 2/2)
+### 4A · Pagi · Jangan anggap prospek takde duit (thread 2/2)
 ```
-Rumah 2 org ≠ rumah 8 org.
-Rumah sewa ≠ rumah sendiri.
+Sbb tu pakej WP aku cover 3 model sekali:
++ Neon
++ Neon Plus
++ Villaem 3
 
-Ada prospek yg mampu ambil Villaem 3. Rumah ramai org, nak high spec, nak tahan lama. Tapi dia tak tahu pun Villaem 3 wujud. Sbb feed kita penuh model entry je.
+Prospek nampak semua pilihan, dia pilih ikut keperluan. Kau tak terlepas sale model high spec.
 
-Dia tak beli bukan sbb tak mampu. Dia tak beli sbb tak tahu.
+📦 Pakej WP (30 video): RM68
+📦 Pakej Tilam Prime & Prime Light (30 video): RM68
+🔥 Combo: RM110
 
-Terangkan semua produk elok². Biar dia pilih.
+DM aku "NAK".
 ```
 
-### 4B · Malam
+### 4B · Malam · Jadi konsultan (thread 1/2)
 ```
 Jadi konsultan, bukan sekadar penjual.
 
@@ -214,16 +268,27 @@ Konsultan tanya:
 + "selalu minum panas ke sejuk?"
 + "ruang dapur mcm mana?"
 
-Penjual kejar closing. Konsultan selesaikan masalah.
+Penjual kejar closing. Konsultan selesaikan masalah. Dan bila masalah selesai, closing datang sendiri..trust me.
+```
 
-Dan bila masalah selesai, closing datang sendiri..trust me.
+### 4B · Malam · Jadi konsultan (thread 2/2)
+```
+Tapi nak jadi konsultan, kena ada masa nak layan prospek. Bukan habis masa edit video.
+
+Pakej Video Content Coway settle bahagian content:
++ 30 video siap, sehari satu
++ kau fokus consult & closing
+
+WP RM68 | Tilam RM68 | Combo RM110
+
+DM "NAK" sekarang.
 ```
 
 ---
 
-## HARI 5: Prospek berkualiti
+## HARI 5
 
-### 5A · Pagi
+### 5A · Pagi · DM "berapa?" (thread 1/2)
 ```
 Pernah dapat DM mcm ni?
 
@@ -231,7 +296,7 @@ Pernah dapat DM mcm ni?
 
 Bagi harga. Bluetick. 🫠
 
-Sbb dia tak faham produk. Yg dia bleh banding cuma harga. Dan bila harga je ukuran, mana² ejen pun bleh menang.
+Sbb dia tak faham produk. Yg dia bleh banding cuma harga.
 
 Bandingkan dgn DM ni:
 "Saya dah tengok story awak pasal Villaem 3. Rumah saya 7 org, sesuai kan?"
@@ -239,7 +304,22 @@ Bandingkan dgn DM ni:
 Yg ni closing dia jauh lagi senang. Content kau dah buat kerja dulu.
 ```
 
-### 5B · Malam
+### 5A · Pagi · DM "berapa?" (thread 2/2)
+```
+Nak lebih banyak DM jenis kedua?
+
+Prospek kena tengok content yg terang produk, setiap hari. Tu yg pakej aku bagi:
++ 30 video, setiap satu terang satu fungsi / kelebihan
++ prospek faham sebelum dia DM
+
+📦 WP: RM68
+📦 Tilam: RM68
+🔥 Combo: RM110
+
+Slot 30 org je. DM "NAK".
+```
+
+### 5B · Malam · Staf jualan 24 jam (thread 1/2)
 ```
 Content yg bagus = staf jualan yg kerja 24 jam.
 
@@ -250,70 +330,74 @@ Content yg bagus = staf jualan yg kerja 24 jam.
 Tapi syarat dia satu je: content tu kena ADA. Setiap hari.
 ```
 
+### 5B · Malam · Staf jualan 24 jam (thread 2/2)
+```
+Nak "staf" ni kerja untuk kau mulai esok?
+
+Pakej Video Content Coway:
++ 30 video siap untuk sebulan
++ download, schedule, biar dia jalan
+
+Kos dia:
++ WP: RM68 (lebih kurang RM2.27 sevideo)
++ Tilam: RM68
++ Combo: RM110 (RM1.83 sevideo)
+
+Murah dari gaji staf sehari. DM "NAK".
+```
+
 ---
 
-## HARI 6: Kira masa
+## HARI 6
 
-### 6A · Pagi (thread 1/2)
+### 6A · Pagi · Kira masa (thread 1/2)
 ```
 Jom kira masa sekejap.
 
-Kalau buat content on the spot setiap pagi:
+Buat content on the spot setiap pagi:
 + fikir nak post apa: 30 minit
 + cari / tulis skrip: 30-60 minit
 + generate / edit video: 1-2 jam
 
 Total: 2-3 jam SEHARI. Untuk satu post.
 
-Nak siapkan 30 video sekali gus? Paling cepat pun 8-10 jam. Tu kalau semua lancar.
+Nak siapkan 30 video sekali gus? Paling cepat pun 8-10 jam.
+
+Padahal ejen dapat komisen bila closing. Bukan bila siap edit video.
 ```
 
-### 6A · Pagi (thread 2/2)
+### 6A · Pagi · Kira masa (thread 2/2)
 ```
-2-3 jam tu patutnya untuk apa?
+So kenapa tak beli balik masa tu?
 
-+ follow up prospek
-+ call customer lama
-+ buat live
-+ closing
+Pakej Video Content Coway: 30 video dah siap. 8-10 jam kerja tu aku dah buat untuk kau.
 
-Ejen dapat komisen bila closing. Bukan bila siap edit video.
+📦 WP (Neon, Neon Plus, Villaem 3): RM68
+📦 Tilam (Prime, Prime Light): RM68
+🔥 Combo 60 video: RM110
 
-Content penting. Tapi kerja utama kau: JUAL.
-```
+2-3 jam sehari balik pada kau. Guna untuk follow up & closing.
 
-### 6B · Malam (teaser)
-```
-Esok aku nak share benda yg aku dah siapkan khas untuk ejen Coway yg takde masa buat content.
-
-+ 30 video siap
-+ ikut struktur "satu minggu, satu produk"
-+ sehari satu video
-
-Follow dulu supaya tak terlepas 🔔
+DM "NAK".
 ```
 
----
-
-## HARI 7: LAUNCH
-
-### 7A · Pagi (thread 1/3)
+### 6B · Malam · Apa dalam pakej (thread 1/2)
 ```
-Okay ni dia. Sbb ramai yg request.
+Ramai tanya, apa sebenarnya dalam pakej video aku?
 
-PAKEJ VIDEO CONTENT COWAY: video template ready-made, siap untuk post.
++ video template ready-made untuk produk Coway
++ setiap video terang SATU perkara: satu fungsi, satu kelebihan
++ siap untuk post. Takyah edit, takyah cari skrip
++ sesuai untuk strategi "satu minggu, satu produk"
 
-Kau tak perlu:
-- fikir nak post apa
-- cari skrip
-- generate / edit video
-
-Download → post. Tu je.
+Pagi download satu, post. Tu je kerja kau.
 ```
 
-### 7A · Pagi (thread 2/3)
+### 6B · Malam · Apa dalam pakej (thread 2/2)
 ```
-📦 Pakej Penapis Air (WP)
+Pilih pakej:
+
+📦 Pakej WP
 30 video: Neon, Neon Plus & Villaem 3
 RM68
 
@@ -323,22 +407,42 @@ RM68
 
 🔥 COMBO dua² pakej
 60 video: RM110 je (jimat RM26)
+
+Komen "NAK" atau DM aku.
 ```
 
-### 7A · Pagi (thread 3/3)
-```
-Setiap video terangkan SATU benda. Satu fungsi, satu kelebihan, satu hari.
+---
 
-So kau dapat:
-+ story tak pernah kosong
+## HARI 7
+
+### 7A · Pagi · Sebulan dari sekarang (thread 1/2)
+```
+Bayangkan sebulan dari sekarang:
+
++ story kau tak pernah kosong
 + wall ada isi, bukan promo je
-+ prospek DM dgn faham
++ prospek DM dgn faham, bukan tanya "berapa?" je
 + 2-3 jam sehari balik pada kau
 
-Nak? Komen "NAK" atau DM aku.
+Bukan sbb kau tiba² rajin. Sbb content kau dah siap awal.
 ```
 
-### 7B · Malam
+### 7A · Pagi · Sebulan dari sekarang (thread 2/2)
+```
+Tu yg Pakej Video Content Coway bagi:
++ 30 video siap
++ satu hari, satu video
++ download → post
+
+📦 WP (Neon, Neon Plus, Villaem 3): RM68
+📦 Tilam (Prime, Prime Light): RM68
+🔥 Combo: RM110
+
+Slot terisi: __/30
+DM aku "NAK".
+```
+
+### 7B · Malam · Kira harga
 ```
 Jom kira.
 
@@ -350,13 +454,15 @@ Murah dari secawan teh tarik.
 Bandingkan dgn 8-10 jam masa kau untuk siapkan sendiri.
 
 Satu closing pun dah cover berkali ganda. Kira sendiri la berbaloi ke tak 😉
+
+DM "NAK" untuk ambil.
 ```
 
 ---
 
-## HARI 8: Cara guna
+## HARI 8
 
-### 8A · Pagi (thread 1/2)
+### 8A · Pagi · Cara guna (thread 1/2)
 ```
 Ramai tanya mcm mana nak guna pakej ni. Senang je:
 
@@ -373,20 +479,22 @@ Tak suka schedule? Pagi download satu, terus post. 2 minit siap.
 (Save untuk reference nanti)
 ```
 
-### 8A · Pagi (thread 2/2)
+### 8A · Pagi · Cara guna (thread 2/2)
 ```
-Lepas tu masa kau 100% untuk:
+15 minit seminggu untuk content. Selebihnya masa kau untuk:
 + reply DM
 + follow up
 + live
 + closing
 
-Content jalan sendiri. Kau fokus jual.
-
 Ni yg aku maksudkan "ejen yg ada sistem".
+
+WP RM68 | Tilam RM68 | Combo RM110
+
+Nak mula minggu ni? DM aku "NAK".
 ```
 
-### 8B · Malam
+### 8B · Malam · Plan sebulan combo (thread 1/2)
 ```
 Contoh plan sebulan kalau ambik combo:
 
@@ -397,16 +505,27 @@ Contoh plan sebulan kalau ambik combo:
 
 Sebulan, followers kau "belajar" 5 produk dari kau.
 
-Bila dia ready nak beli, ejen mana yg dia ingat?
+Bila dia ready nak beli, ejen mana yg dia ingat? Yg dah ajar dia la.
+```
 
-Yg dah ajar dia la.
+### 8B · Malam · Plan sebulan combo (thread 2/2)
+```
+Combo bagi kau 60 video: cukup untuk 2 bulan, sehari satu.
+
+🔥 Combo WP + Tilam: RM110 (jimat RM26)
+
+Atau ambil satu dulu:
+📦 WP: RM68
+📦 Tilam: RM68
+
+Slot terhad 30 org. DM "NAK".
 ```
 
 ---
 
-## HARI 9: Had 30 orang
+## HARI 9
 
-### 9A · Pagi (thread 1/2)
+### 9A · Pagi · Had 30 orang (thread 1/2)
 ```
 Satu benda penting: pakej ni aku buka untuk 30 ORANG JE.
 
@@ -416,59 +535,67 @@ Bukan gimik.
 + semua jual produk yg sama
 + semua target prospek yg sama
 
-Kalau aku jual dekat semua org, feed prospek penuh dgn video sama dari puluhan ejen. Bila jadi mcm tu, video ni hilang kesan.
+Kalau aku jual dekat semua org, feed prospek penuh dgn video sama dari puluhan ejen. Video ni hilang kesan.
 ```
 
-### 9A · Pagi (thread 2/2)
+### 9A · Pagi · Had 30 orang (thread 2/2)
 ```
 So aku hadkan. Nak jaga kualiti, dan nak jaga hasil org yg dah beli.
 
-30 slot. Bila penuh, aku tutup.
+📦 WP: RM68
+📦 Tilam: RM68
+🔥 Combo: RM110
 
 Slot terisi: __/30
+Bila penuh, aku tutup.
 
-Kalau kau serius nak content tersusun & story yg tak pernah kosong, DM aku sekarang.
+Kalau kau serius nak story yg tak pernah kosong, DM aku sekarang.
 ```
 
-### 9B · Malam (bersama video penerangan)
+### 9B · Malam · Video penerangan 30 slot
 ```
 Aku rakam video pendek ni untuk explain kenapa pakej video Coway ni aku hadkan 30 org je.
 
 Tengok sampai habis.
 
-Kalau rasa ni untuk kau, slot masih ada.
+WP RM68 | Tilam RM68 | Combo RM110
 Slot terisi: __/30
+
+Kalau rasa ni untuk kau, DM "NAK".
 ```
 
 ---
 
-## HARI 10: Sumber betul + last call
+## HARI 10
 
-### 10A · Pagi (thread 1/2)
+### 10A · Pagi · Takut rugi (thread 1/2)
 ```
 Ada yg tanya:
 "Kalau aku beli, tapi nanti org lain dapat video ni free entah dari mana, tak rugi ke aku?"
 
 Jawapan aku: jangan kira mcm tu.
 
-Kau dapat video ni dgn cara yg betul. Dari sumber yg betul. Bayar pada org yg buat.
+Kau dapat video ni dgn cara yg betul. Dari sumber yg betul. Bayar pada org yg buat. InsyaAllah rezeki kau berkat.
+
+Apa org lain buat dgn barang tak sah, tu urusan dia. Rezeki tak pernah tertukar.
 ```
 
-### 10A · Pagi (thread 2/2)
+### 10A · Pagi · Takut rugi (thread 2/2)
 ```
-Bila kita guna aset dari sumber yg betul, InsyaAllah rezeki kita berkat.
-
-Apa org lain buat dgn barang yg dia dapat secara tak sah, tu urusan dia.
-
 Fokus kita:
 + post konsisten
 + layan prospek elok²
 + closing
 
-Rezeki tak pernah tertukar.
+Ambil dari sumber yg betul:
+📦 WP (Neon, Neon Plus, Villaem 3): RM68
+📦 Tilam (Prime, Prime Light): RM68
+🔥 Combo: RM110
+
+DM aku "NAK".
 ```
 
-### 10B · Malam (last call)
+### 10B · Malam · Last call
 ```
 Buat kau yg tgh struggle jual Coway tapi hadap banyak cabaran (story kosong, takde idea, DM sunyi, prospek bluetick, takde masa, etc..)
 
