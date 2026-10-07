@@ -27,12 +27,13 @@ CLIPDIR = ROOT / "assets" / "clips" / "neon"
 CLIPS = ROOT / "assets" / "clips"          # klip Villaem (clip1..clip5) terus di sini
 
 PAGE = """<!DOCTYPE html>
-<html lang="ms"><head><meta charset="utf-8"><title>{id}</title><link rel="stylesheet" href="../lib/scenes.css"></head>
+<html lang="ms"><head><meta charset="utf-8"><title>{id}</title><link rel="stylesheet" href="../lib/{player}.css"></head>
 <body><div id="stage"></div>
 <script src="timing.js"></script><script src="spec.js"></script>
-<script src="../lib/engine.js"></script><script src="../lib/scenes.js"></script>
+<script src="../lib/engine.js"></script><script src="../lib/{player}.js"></script>
 </body></html>
 """
+PASS = ("theme", "brand", "tagline", "style", "cap")   # kunci spec.json yang diteruskan ke pemain
 
 
 def run(*cmd):
@@ -110,11 +111,13 @@ def prep(vid, align=True):
             for k, it in enumerate(e.get(key, [])):
                 it["t"] = R(it.get("at", e["t0"] + .15 * k))
                 sfx.append(["pop", it["t"], .24, 800 + 90 * k])
+                if it.get("hit"):
+                    sfx.append(["impact", it["t"], .32])
         for side in ("left", "right"):
             if t_ == "vs" and side in e:
                 e[side]["t"] = R(e[side].get("at", e["t0"]))
                 sfx.append(["pop", e[side]["t"], .25, 900])
-        for src, dst in (("answerAt", "answerT"), ("badgeAt", "badgeT"), ("strikeAt", "strikeT"), ("toAt", "toT"), ("btnAt", "btnT"), ("zin", "zt0"), ("zout", "zt1")):
+        for src, dst in (("answerAt", "answerT"), ("badgeAt", "badgeT"), ("strikeAt", "strikeT"), ("toAt", "toT"), ("btnAt", "btnT"), ("zin", "zt0"), ("zout", "zt1"), ("openAt", "openT")):
             if src in e:
                 e[dst] = R(e.pop(src))
         if "keys" in e:
@@ -140,16 +143,22 @@ def prep(vid, align=True):
             sfx += [["whoosh", e["t0"] + .4, .15], ["tick", e["t0"] + 2.0, .3]]
         elif t in ("title", "banner", "reason", "pill", "icon", "counter", "card", "photo"):
             sfx.append(["pop", e["t0"], .26 if t != "photo" else .15, f])
+        elif t == "gift":
+            sfx += [["tick", e["t0"] + .3, .2], ["impact", e["openT"], .4], ["shimmer", e["openT"], .14], ["chaching", e["openT"] + .1, .06]]
+        elif t in ("img", "burst", "tag", "ticker"):
+            sfx.append(["whoosh", e["t0"] - .05, .16] if t in ("img", "ticker") else ["pop", e["t0"], .3, f])
+        if e.get("hit"):
+            sfx.append(["impact", e["t0"], .35])
         els.append(e)
     sfx.sort(key=lambda x: x[1])
     if not any(s[0] == "impact" for s in sfx):
         sfx.insert(0, ["impact", segs[0]["b"], .3])
 
     caps = [[g["a"], g["b"], l.get("cap", l["text"])] for g, l in zip(segs, lines)]
-    V = {"off": OFF, "dur": dur, "lines": caps, "sfx": sfx}
+    V = {"off": OFF, "dur": dur, "lines": caps, "sfx": sfx, "bpm": spec.get("bpm", 100)}
     (d / "timing.js").write_text("window.V = " + json.dumps(V, ensure_ascii=False, indent=1) + ";\n")
-    (d / "spec.js").write_text("window.SPEC = " + json.dumps({"scenes": scenes, "els": els, "clips": clips, **{k: spec[k] for k in ("theme", "brand", "tagline") if k in spec}}, ensure_ascii=False, indent=1) + ";\n")
-    (d / "index.html").write_text(PAGE.format(id=vid))
+    (d / "spec.js").write_text("window.SPEC = " + json.dumps({"scenes": scenes, "els": els, "clips": clips, **{k: spec[k] for k in PASS if k in spec}}, ensure_ascii=False, indent=1) + ";\n")
+    (d / "index.html").write_text(PAGE.format(id=vid, player=spec.get("player", "scenes")))
     print(f"{vid}: {dur:.1f}s, {len(scenes)} babak, {len(els)} elemen, klip {list(clips)}")
     return spec
 
@@ -167,7 +176,7 @@ def main():
     d = ROOT / "videos" / a.vid
     spec = json.loads((d / "spec.json").read_text())
     if a.tts:
-        run(sys.executable, "voiceover/gemini_tts.py", d / "lines.json", d / "vo.wav", "--voice", spec["voice"], "--style", spec["style"])
+        run(sys.executable, "voiceover/gemini_tts.py", d / "lines.json", d / "vo.wav", "--voice", spec["voice"], "--style", spec.get("style_tts", spec["style"]))
     prep(a.vid, align=not a.no_align)
     if a.stills:
         run(sys.executable, "render.py", "--src", f"videos/{a.vid}/index.html", "--stills", a.stills)

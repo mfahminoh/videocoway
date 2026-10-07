@@ -126,9 +126,8 @@ def sfx_track(tr, events, off):
         tr.add(sig(), t, gain)
 
 
-# ---------- Muzik: 100 BPM, pop cerah I-V-vi-IV ----------
-def music(tr, dur, drop):
-    bpm = 100
+# ---------- Muzik: pop cerah I-V-vi-IV (100 BPM lalai; video "hype" 128) ----------
+def music(tr, dur, drop, bpm=100):
     beat = 60 / bpm
     bar = 4 * beat
     chords = [[50, 57, 62, 66, 69], [45, 57, 61, 64, 69], [47, 59, 62, 66, 71], [43, 55, 59, 62, 67]]  # D A Bm G
@@ -177,7 +176,7 @@ def main(folder, mux=None):
     drop = next((e[1] for e in V["sfx"] if e[0] == "impact"), 3.0) + off
 
     mus = Track(dur)
-    music(mus, dur, drop)
+    music(mus, dur, drop, V.get("bpm", 100))
     fx = Track(dur)
     sfx_track(fx, V["sfx"], off)
     t = np.arange(mus.n) / SR
