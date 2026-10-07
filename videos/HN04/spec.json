@@ -1,0 +1,323 @@
+{
+ "slug": "neon-glow-bukan-lampu",
+ "voice": "Zephyr",
+ "style_tts": "Say in Malaysian Malay, as a confident, trendy young woman hyping a product on TikTok, energetic, playful and quick",
+ "style": "glow",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "glow-wall"
+  },
+  {
+   "at": "@02",
+   "bg": "glow-dark"
+  },
+  {
+   "at": "@03",
+   "bg": "glow-wall"
+  },
+  {
+   "at": "@04",
+   "bg": "glow-dark"
+  },
+  {
+   "at": "@05",
+   "bg": "glow-wall"
+  },
+  {
+   "at": "@06",
+   "bg": "glow-dark"
+  },
+  {
+   "at": "@07",
+   "bg": "glow-wall"
+  },
+  {
+   "at": "@08",
+   "bg": "glow-dark"
+  },
+  {
+   "at": "@09",
+   "bg": "glow-wall"
+  },
+  {
+   "at": "@10",
+   "bg": "glow-dark"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 520,
+   "items": [
+    {
+     "txt": "Neon",
+     "at": "@01",
+     "g": "#ff4f8f",
+     "hit": true,
+     "size": 280
+    },
+    {
+     "txt": "bukan lampu!",
+     "at": "@01%45",
+     "g": "#04A4E4",
+     "size": 120
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 150,
+   "items": [
+    {
+     "txt": "Coway Neon",
+     "at": "@02",
+     "g": "#04A4E4",
+     "size": 140
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@02%25",
+   "out": "@03",
+   "src": "../../assets/img/hype/neon_pink.png",
+   "w": 400,
+   "top": 470,
+   "anim": "pop",
+   "g": "#04A4E4"
+  },
+  {
+   "type": "words",
+   "in": "@02%65",
+   "out": "@03",
+   "top": 1300,
+   "items": [
+    {
+     "txt": "tengah hot!",
+     "at": "@02%70",
+     "g": "#ff4f8f",
+     "size": 110
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 400,
+   "items": [
+    {
+     "txt": "PROMO",
+     "at": "@03",
+     "g": "#04A4E4",
+     "sans": true,
+     "size": 110
+    },
+    {
+     "txt": "RM20",
+     "at": "@03%20",
+     "g": "#ff4f8f",
+     "sans": true,
+     "hit": true,
+     "size": 330
+    },
+    {
+     "txt": "dah boleh pasang!",
+     "at": "@03%60",
+     "g": "#04A4E4",
+     "size": 110
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 560,
+   "items": [
+    {
+     "txt": "RM20 je,",
+     "at": "@04",
+     "g": "#04A4E4",
+     "size": 130
+    },
+    {
+     "txt": "dah menyala",
+     "at": "@04%45",
+     "g": "#ffd23f",
+     "hit": true,
+     "size": 150
+    },
+    {
+     "txt": "dapur awak!",
+     "at": "@04%70",
+     "g": "#04A4E4",
+     "size": 110
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 360,
+   "items": [
+    {
+     "txt": "Mampu Milik",
+     "at": "@05",
+     "g": "#04A4E4",
+     "size": 170
+    },
+    {
+     "txt": "gaya premium!",
+     "at": "@05%50",
+     "g": "#ff4f8f",
+     "hit": true,
+     "size": 130
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@05%30",
+   "out": "@06",
+   "src": "../../assets/img/hype/lineup_cut.png",
+   "w": 1000,
+   "top": 1060,
+   "anim": "rise",
+   "g": "#04A4E4"
+  },
+  {
+   "type": "temps",
+   "in": "@06",
+   "out": "@07",
+   "top": 380,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@06"
+    },
+    {
+     "k": "cold",
+     "at": "@06%22"
+    },
+    {
+     "k": "room",
+     "at": "@06%44"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06%70",
+   "out": "@07",
+   "top": 1150,
+   "items": [
+    {
+     "txt": "Lengkap!",
+     "at": "@06%75",
+     "g": "#20b58f",
+     "hit": true,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "type": "gift",
+   "in": "@07",
+   "out": "@08",
+   "openAt": "@07%35",
+   "top": 360,
+   "size": 600,
+   "rays": "rgba(4,164,228,.35)"
+  },
+  {
+   "type": "words",
+   "in": "@07%40",
+   "out": "@08",
+   "top": 1060,
+   "items": [
+    {
+     "txt": "Free Gift",
+     "at": "@07%45",
+     "g": "#ff4f8f",
+     "size": 130
+    },
+    {
+     "txt": "PREMIUM",
+     "at": "@07%60",
+     "g": "#04A4E4",
+     "sans": true,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": "@09",
+   "top": 560,
+   "items": [
+    {
+     "txt": "Lampu ON,",
+     "at": "@08",
+     "g": "#ffd23f",
+     "size": 150
+    },
+    {
+     "txt": "Promo ON!",
+     "at": "@08%50",
+     "g": "#ff4f8f",
+     "hit": true,
+     "size": 180
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@09",
+   "out": "@10",
+   "top": 640,
+   "items": [
+    {
+     "txt": "Jom!",
+     "at": "@09",
+     "g": "#04A4E4",
+     "hit": true,
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@10",
+   "out": null,
+   "top": 380,
+   "items": [
+    {
+     "txt": "WhatsApp",
+     "at": "@10",
+     "g": "#25D366",
+     "size": 150
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@10",
+   "top": 760,
+   "button": "WhatsApp saya",
+   "fine": "*Tertakluk pada terma &amp; syarat promosi semasa Coway.",
+   "btnAt": "@10%30"
+  }
+ ]
+}

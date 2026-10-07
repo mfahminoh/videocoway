@@ -42,7 +42,7 @@ SP.els.forEach((e, i) => {
   let h = '';
   switch (e.type) {
     case 'words': h = `<div class="el c words" style="${top}">${e.items.map((w, k) => `<div class="w${w.box ? ' box' : ''}${w.sans ? ' sans' : ''}${w.inline ? ' in' : ''}" id="${e.id}_${k}"
-        style="${w.bg ? `--wbg:${w.bg};` : ''}${w.g || e.g ? `--g:${w.g || e.g};` : ''}"><span style="font-size:${w.size || e.size || 150}px; color:${w.color || e.color || '#fff'}">${w.txt}</span></div>`).join('')}</div>`; break;
+        style="${w.bg ? `--wbg:${w.bg};` : ''}${w.g || e.g ? `--g:${w.g || e.g};` : ''}"><span style="font-size:${w.size || e.size || 150}px; color:${w.color || e.color || (w.box || w.bg || ST === 'paper' ? 'var(--ink)' : '#fff')}">${w.txt}</span></div>`).join('')}</div>`; break;
     case 'img': h = `<img class="el pic" src="${e.src}" style="${top} left:${e.left != null ? e.left : (1080 - e.w) / 2}px; width:${e.w}px; --g:${e.g || '#04A4E4'}">`; break;
     case 'temps': h = `<div class="el c" style="${top}">${e.items.map((it, k) => `<div class="tp" id="${e.id}_${k}" style="--tc:${TEMP[it.k][1]}">
         <i><svg width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${ICO[it.k]}</svg></i>
@@ -76,7 +76,7 @@ SP.els.forEach((e, i) => {
         <span id="${e.id}_in">${Array(8).fill(e.text).join('&nbsp;&nbsp;★&nbsp;&nbsp;')}&nbsp;&nbsp;★&nbsp;&nbsp;</span></div></div>`; break;
     case 'cta': h = `<div class="el c" style="${top}">
         <div id="${e.id}_btn"><span class="wa">${WA_SVG}${e.button || 'WhatsApp saya'}</span></div>
-        <div class="hand" id="${e.id}_hand" style="left:${e.handX || 760}px; top:120px">👆</div>
+        <div class="hand" id="${e.id}_hand" style="left:${e.handX || 850}px; top:90px">👆</div>
         <div class="fine" id="${e.id}_fine" style="color:${e.fineColor || 'rgba(255,255,255,.85)'}">${e.fine || '*Tertakluk pada terma &amp; syarat promosi semasa Coway.'}</div></div>`; break;
   }
   world.insertAdjacentHTML('beforeend', h.replace('class="el', `id="${e.id}" class="el`));
@@ -89,14 +89,16 @@ stage.insertAdjacentHTML('beforeend', '<div class="el c" id="cap"><div id="capTe
 
 /* ---------- latar kertas koyak (gaya paper) ---------- */
 let decoFor = -1;
+const PAPER = { 'paper-blue': ['#0390c9', '#CEF3FF'], 'paper-cream': ['#CEF3FF', '#04A4E4'], 'paper-pink': ['#f7c6d3', '#ffffff'], 'paper-sky': ['#ffffff', '#04A4E4'] };
 function paperDeco(idx) {
   if (decoFor === idx) return;
   decoFor = idx;
   const edge = (seed, y0, y1, step = 36) => Array.from({ length: Math.ceil(1080 / step) + 1 }, (_, k) => {
     const x = Math.min(1080, k * step); return `${x},${(mix(y0, y1, x / 1080) + (rnd(seed + k) - .5) * 34).toFixed(0)}`; }).join(' L');
   const a0 = 1250 + rnd(idx) * 250, a1 = 1450 + rnd(idx + 9) * 250, flip = idx % 2;
-  $('deco').innerHTML = `<svg width="1080" height="1920"><path d="M${edge(idx * 31, flip ? a1 : a0, flip ? a0 : a1)} L1080,1920 L0,1920 Z" style="fill:var(--pb)"/>
-    <path d="M${edge(idx * 17 + 5, 330 + 80 * rnd(idx + 3), 120)} L1080,0 L0,0 Z" style="fill:var(--pc); opacity:.55"/></svg>`;
+  const bg = SP.scenes[idx].bg, [pb, pc] = PAPER[bg] || PAPER['paper-cream'];
+  $('deco').innerHTML = `<svg width="1080" height="1920"><path d="M${edge(idx * 31, flip ? a1 : a0, flip ? a0 : a1)} L1080,1920 L0,1920 Z" fill="${pb}"/>
+    <path d="M${edge(idx * 17 + 5, 330 + 80 * rnd(idx + 3), 120)} L1080,0 L0,0 Z" fill="${pc}" opacity=".55"/></svg>`;
 }
 
 /* ---------- animasi ---------- */
@@ -155,8 +157,8 @@ function drawEl(e, T) {
       const op = e.openT, wig = t < op ? Math.sin((t - e.t0) * 32) * 7 * p(t, e.t0 + .3, op, E.in) : 0;
       $(e.id + '_body').setAttribute('transform', `rotate(${wig} 100 186)`);
       const d = t - op, k = p(t, op, op + .4, E.out);
-      $(e.id + '_lid').setAttribute('transform', d < 0 ? `rotate(${wig} 100 186)` : `translate(${18 * k} ${-130 * k}) rotate(${-28 * k} 100 86)`);
-      $(e.id + '_lid').setAttribute('opacity', 1 - p(t, op + .5, op + .8));
+      $(e.id + '_lid').setAttribute('transform', d < 0 ? `rotate(${wig} 100 186)` : `translate(${40 * k} ${-70 * k}) rotate(${-35 * k} 100 86)`);
+      $(e.id + '_lid').setAttribute('opacity', 1 - p(t, op + .25, op + .5));
       const rays = $(e.id + '_rays');
       rays.setAttribute('opacity', d < 0 ? 0 : p(t, op, op + .25));
       rays.setAttribute('transform', `rotate(${d < 0 ? 0 : d * 35} 100 110) translate(100 110) scale(${mix(.3, 1, k)}) translate(-100 -110)`);

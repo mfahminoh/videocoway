@@ -18,6 +18,8 @@ out/E04_final.mp4
 !out/V3[0-9][0-9]_*.mp4
 # versi brand Coway (tema warna rasmi)
 !out/coway/
+# 5 video Neon high energy
+!out/hype/
 # fail kerja render sentiasa diabaikan (mesti selepas senarai putih di atas)
 out/*_noaudio.mp4
 out/V3[0-9][0-9]_final.mp4

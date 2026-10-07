@@ -1,0 +1,349 @@
+{
+ "slug": "komik-3-kuasa-neon",
+ "voice": "Puck",
+ "style_tts": "Say in Malaysian Malay, like an energetic cartoon superhero announcer, dramatic, excited and fast",
+ "style": "comic",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "comic-pink"
+  },
+  {
+   "at": "@02",
+   "bg": "comic-sky"
+  },
+  {
+   "at": "@03",
+   "bg": "comic-blue"
+  },
+  {
+   "at": "@04",
+   "bg": "comic-white"
+  },
+  {
+   "at": "@05",
+   "bg": "comic-blue"
+  },
+  {
+   "at": "@06",
+   "bg": "comic-pink"
+  },
+  {
+   "at": "@07",
+   "bg": "comic-sky"
+  },
+  {
+   "at": "@08",
+   "bg": "comic-blue"
+  },
+  {
+   "at": "@09",
+   "bg": "comic-white"
+  }
+ ],
+ "els": [
+  {
+   "type": "burst",
+   "in": "@01",
+   "out": "@02",
+   "html": "ALAMAK!",
+   "top": 280,
+   "size": 660,
+   "x": 540,
+   "color": "#fff",
+   "textColor": "#ff8fb1",
+   "fs": 150,
+   "rot": -6,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@01%50",
+   "out": "@02",
+   "top": 1000,
+   "items": [
+    {
+     "txt": "BAJET",
+     "at": "@01%55",
+     "size": 150,
+     "color": "#fff"
+    },
+    {
+     "txt": "KETAT?!",
+     "at": "@01%75",
+     "hit": true,
+     "size": 200,
+     "color": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 480,
+   "items": [
+    {
+     "txt": "POKET",
+     "at": "@02",
+     "size": 170,
+     "color": "#04A4E4"
+    },
+    {
+     "txt": "NIPIS!",
+     "at": "@02%30",
+     "hit": true,
+     "size": 220,
+     "color": "#ff8fb1"
+    },
+    {
+     "txt": "FAMILI NAK",
+     "at": "@02%60",
+     "size": 120,
+     "color": "#fff"
+    },
+    {
+     "txt": "TERBAIK!",
+     "at": "@02%80",
+     "size": 170,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "items": [
+    {
+     "txt": "JANGAN RISAU!",
+     "at": "@03",
+     "size": 130,
+     "color": "#fff"
+    },
+    {
+     "txt": "COWAY",
+     "at": "@03%40",
+     "hit": true,
+     "size": 300,
+     "color": "#fff"
+    },
+    {
+     "txt": "DATANG!",
+     "at": "@03%65",
+     "size": 170,
+     "color": "#CEF3FF"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 170,
+   "items": [
+    {
+     "txt": "KUASA #1",
+     "at": "@04",
+     "size": 130,
+     "color": "#ff8fb1"
+    }
+   ]
+  },
+  {
+   "type": "burst",
+   "in": "@04%30",
+   "out": "@05",
+   "html": "RM20",
+   "top": 400,
+   "size": 660,
+   "x": 540,
+   "color": "#04A4E4",
+   "textColor": "#fff",
+   "fs": 220,
+   "rot": -6,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@04%60",
+   "out": "@05",
+   "top": 1110,
+   "items": [
+    {
+     "txt": "TERUS PASANG!",
+     "at": "@04%65",
+     "size": 130,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 150,
+   "items": [
+    {
+     "txt": "KUASA #2",
+     "at": "@05",
+     "size": 130,
+     "color": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@05%15",
+   "out": "@06",
+   "src": "../../assets/img/hype/neon_pink.png",
+   "w": 430,
+   "top": 400,
+   "anim": "spin",
+   "float": true
+  },
+  {
+   "type": "burst",
+   "in": "@05%55",
+   "out": "@06",
+   "html": "MAMPU<br>MILIK!",
+   "top": 1080,
+   "size": 400,
+   "x": 800,
+   "color": "#ffd23f",
+   "textColor": "#fff",
+   "fs": 76,
+   "rot": 12,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 160,
+   "items": [
+    {
+     "txt": "KUASA #3",
+     "at": "@06",
+     "size": 130,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "burst",
+   "in": "@06%30",
+   "out": "@07",
+   "html": "3 SUHU<br>1 MESIN",
+   "top": 520,
+   "size": 640,
+   "x": 540,
+   "color": "#fff",
+   "textColor": "#04A4E4",
+   "fs": 104,
+   "rot": -6,
+   "hit": true
+  },
+  {
+   "type": "temps",
+   "in": "@07",
+   "out": "@08",
+   "top": 330,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@07"
+    },
+    {
+     "k": "cold",
+     "at": "@07%22"
+    },
+    {
+     "k": "room",
+     "at": "@07%44"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@07%70",
+   "out": "@08",
+   "top": 1080,
+   "items": [
+    {
+     "txt": "SATU TEKAN!",
+     "at": "@07%75",
+     "hit": true,
+     "size": 150,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": "@09",
+   "top": 170,
+   "items": [
+    {
+     "txt": "KUASA RAHSIA!",
+     "at": "@08",
+     "size": 130,
+     "color": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "gift",
+   "in": "@08",
+   "out": "@09",
+   "openAt": "@08%40",
+   "top": 420,
+   "size": 600,
+   "rays": "rgba(255,255,255,.6)"
+  },
+  {
+   "type": "words",
+   "in": "@08%50",
+   "out": "@09",
+   "top": 1080,
+   "items": [
+    {
+     "txt": "FREE GIFT PREMIUM!",
+     "at": "@08%55",
+     "hit": true,
+     "size": 110,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@09",
+   "out": null,
+   "top": 380,
+   "items": [
+    {
+     "txt": "SERTAI MISI?",
+     "at": "@09",
+     "size": 150,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@09%60",
+   "top": 780,
+   "button": "WhatsApp saya",
+   "fine": "*Tertakluk pada terma &amp; syarat promosi semasa Coway.",
+   "fineColor": "#333",
+   "btnAt": "@10"
+  }
+ ]
+}

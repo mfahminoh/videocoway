@@ -1,0 +1,305 @@
+{
+ "slug": "pov-kawan-tanya-harga",
+ "voice": "Aoede",
+ "style_tts": "Say in Malaysian Malay, as a young woman telling a funny story to friends on TikTok, lively, expressive and quick",
+ "style": "ugc",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "presenter",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "ugc-white"
+  },
+  {
+   "at": "@04",
+   "bg": "ugc-blue"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "clip": "presenter",
+    "c0": 6.4,
+    "c1": 8.6
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "ugc-blue"
+  },
+  {
+   "at": "@08",
+   "bg": "ugc-white"
+  },
+  {
+   "at": "@09",
+   "bg": "ugc-blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 220,
+   "items": [
+    {
+     "txt": "POV:",
+     "at": "@01",
+     "box": true,
+     "size": 90
+    },
+    {
+     "txt": "Kawan tanya harga Coway 🤔",
+     "at": "@01%30",
+     "box": true,
+     "size": 62
+    }
+   ]
+  },
+  {
+   "type": "burst",
+   "in": "@02%15",
+   "out": "@03",
+   "html": "RM20<br>JE!",
+   "top": 360,
+   "size": 560,
+   "x": 540,
+   "color": "#04A4E4",
+   "textColor": "#fff",
+   "fs": 150,
+   "rot": -8,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@02%55",
+   "out": "@03",
+   "top": 1000,
+   "items": [
+    {
+     "txt": "DAH BOLEH PASANG!",
+     "at": "@02%55",
+     "size": 90,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 520,
+   "items": [
+    {
+     "txt": "😱",
+     "at": "@03",
+     "hit": true,
+     "size": 300
+    },
+    {
+     "txt": "SERIUS LAH?",
+     "at": "@03%40",
+     "size": 130,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 150,
+   "items": [
+    {
+     "txt": "SERIUS!",
+     "at": "@04",
+     "size": 130,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@04%20",
+   "out": "@05",
+   "src": "../../assets/img/hype/neon_pink.png",
+   "w": 430,
+   "top": 400,
+   "anim": "slam",
+   "hit": true
+  },
+  {
+   "type": "burst",
+   "in": "@04%55",
+   "out": "@05",
+   "html": "MAMPU<br>MILIK",
+   "top": 1100,
+   "size": 380,
+   "x": 800,
+   "color": "#ffd23f",
+   "textColor": "#111",
+   "fs": 70,
+   "rot": 10
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 200,
+   "items": [
+    {
+     "txt": "TEKAN JE 👆",
+     "at": "@05",
+     "box": true,
+     "size": 80
+    }
+   ]
+  },
+  {
+   "type": "temps",
+   "in": "@05",
+   "out": "@06",
+   "top": 420,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@05%20"
+    },
+    {
+     "k": "cold",
+     "at": "@05%45"
+    },
+    {
+     "k": "room",
+     "at": "@05%70"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 250,
+   "items": [
+    {
+     "txt": "SEMUA LENGKAP ✅",
+     "at": "@06",
+     "box": true,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 170,
+   "items": [
+    {
+     "txt": "SIAP ADA…",
+     "at": "@07",
+     "size": 90,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "gift",
+   "in": "@07",
+   "out": "@08",
+   "openAt": "@07%45",
+   "top": 420,
+   "size": 600,
+   "box": "#fff",
+   "ribbon": "#ff8fb1"
+  },
+  {
+   "type": "words",
+   "in": "@07%55",
+   "out": "@08",
+   "top": 1110,
+   "items": [
+    {
+     "txt": "FREE GIFT PREMIUM 🎁",
+     "at": "@07%60",
+     "box": true,
+     "size": 80
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": "@09",
+   "top": 500,
+   "items": [
+    {
+     "txt": "📱",
+     "at": "@08",
+     "size": 260
+    },
+    {
+     "txt": "TERUS MINTA",
+     "at": "@08%35",
+     "size": 100,
+     "color": "#04A4E4"
+    },
+    {
+     "txt": "NOMBOR 😂",
+     "at": "@08%60",
+     "hit": true,
+     "size": 120,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@09",
+   "out": null,
+   "top": 400,
+   "items": [
+    {
+     "txt": "NAK JUGA? 👇",
+     "at": "@09",
+     "size": 110,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 760,
+   "button": "WhatsApp saya",
+   "fine": "*Tertakluk pada terma &amp; syarat promosi semasa Coway.",
+   "btnAt": "@09%35"
+  }
+ ]
+}
