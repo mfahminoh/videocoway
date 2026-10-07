@@ -89,3 +89,27 @@ Analisa & sumber: `tilam/lite/analisis_dan_plan.md`.
 Fakta disahkan ejen (6 Okt): Medium Firm sahaja (all-rounder), topper cuci di rumah (bukan dobi), tukar topper 3 tahun sekali
 (pelanggan sewa), servis setiap 4 bulan (pakej termasuk servis), hantar & pasang percuma termasuk Sabah & Sarawak.
 VO: `gemini-3.1-flash-tts-preview` untuk L01–L08, `gemini-3.8-flash-tts` untuk L09–L15.
+
+## Variasi gaya editing (1 video = 1 gaya, digilir)
+Spesifikasi yang sama (`tilam/b/<vid>.json`, VO & masa sama) boleh dirender dalam 8 gaya. Gaya 1–7 dalam
+`src/tilam/b/styled.html`; gaya `coway` = `player.html` asal.
+
+| # | Gaya | Rupa |
+|---|---|---|
+| 1 | `kinetic` | Teks besar 1–3 perkataan ikut suara, kata kunci kuning, footage gelap |
+| 2 | `berita` | Bar "BERITA TILAM", LANGSUNG, lower-third, ticker fakta |
+| 3 | `whiteboard` | Kertas grid, tulisan marker, garis bawah merah, checklist, video dalam bulatan |
+| 4 | `sinematik` | Hitam, warna filem, "BAB n", sari kata serif emas, grain |
+| 5 | `majalah` | Krim, serif, nombor Roman, gambar berbingkai, petikan |
+| 6 | `chat` | Perbualan WhatsApp: soalan pelanggan → jawapan ejen |
+| 7 | `clean` | Footage penuh + kapsyen kecil (minimal) |
+| 8 | `coway` | Gaya asal siri B/C/D/L |
+
+```
+python tilam/build_b.py l01 l02 l03 l04 l05 l06 l07 l08 l09 l10 --rotate   # video 1 kinetic, 2 berita, 3 whiteboard, ...
+python tilam/build_b.py l01 l02 --rotate --offset 3                         # mula dari gaya ke-4 (sinematik)
+python tilam/build_b.py c4 --style chat                                     # satu gaya tertentu
+python tilam/build_b.py l07 --style berita --stills 2,8,20                  # pratonton
+```
+Output: `out/tilam/gaya/<vid>_<gaya>.mp4`. Muzik ikut gaya (kinetic/berita = laju, sinematik/majalah = hangat).
+VO tidak dijana semula jika `tilam/b/vo/<vid>_full.wav` sudah ada (tiada kuota TTS digunakan).

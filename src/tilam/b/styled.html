@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>Tilam Coway — gaya alternatif</title>
+<!-- Satu spesifikasi (tilam/b/<vid>.json), banyak gaya. ?v=l07&style=kinetic
+     Gaya: clean · kinetic · berita · majalah · whiteboard · sinematik · chat  (gaya asal "coway" = player.html) -->
+<style>
+@font-face { font-family: P; font-weight: 500; src: url(../../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../../assets/fonts/Poppins-ExtraBold.ttf); }
+@font-face { font-family: S; src: url(../../../assets/fonts/PlayfairDisplay.ttf); }
+@font-face { font-family: B; src: url(../../../assets/fonts/BebasNeue-Regular.ttf); }
+@font-face { font-family: A; src: url(../../../assets/fonts/Anton-Regular.ttf); }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1920px; overflow:hidden; font-family:P,sans-serif; }
+#stage { position:relative; width:1080px; height:1920px; overflow:hidden; }
+.abs { position:absolute; }
+.fill { position:absolute; inset:0; }
+.fill img, img.cov { width:100%; height:100%; object-fit:cover; display:block; }
+.layer { position:absolute; inset:0; }
+.wa { display:flex; align-items:center; justify-content:center; gap:22px; border-radius:90px; background:#25d366; font-weight:800; color:#fff; white-space:nowrap; }
+</style>
+<script>
+  const Q = new URLSearchParams(location.search), V = Q.get('v') || 'l01', STYLE = Q.get('style') || 'kinetic';
+  document.write('<script src="data/' + V + '.js"><\/script>');
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .09 0"/></filter>
+</svg>
+<div id="stage"></div>
+<script>
+const SP = window.SPEC, TM = SP.timing, ROOT = '../../../', FPS = 30;
+const stage = document.getElementById('stage');
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const outC = x => 1 - Math.pow(1 - x, 3), inOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const backOut = x => { const c1 = 1.6, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const P = (t, a, b, e = outC) => e(clamp((t - a) / (b - a)));
+const mix = (a, b, k) => a + (b - a) * k;
+const strip = h => String(h || '').replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const PRODUCT = (SP.product && strip(SP.product.name)) || 'COWAY PRIME II';
+const PRODUCT_SUB = (SP.product && SP.product.sub) || 'Soft &amp; Firm · Queen &amp; King';
+const LN = {}; TM.forEach(x => LN[x.id] = x);
+const DURATION = TM[TM.length - 1].end + (SP.hold || 2.8);
+const SFX = [], CLIPS = [], ITEMS = [], UPD = [];
+
+function when(lid, at, dflt) {
+  const L = LN[lid];
+  if (at === undefined || at === null) return L.start + dflt;
+  if (typeof at === 'number') return L.start + at;
+  let txt = L.text, l2 = lid; const m = String(at).match(/^(\d\d):(.*)$/);
+  if (m) { l2 = m[1]; txt = LN[l2].text; at = m[2]; }
+  const X = LN[l2], i = txt.toLowerCase().indexOf(String(at).toLowerCase());
+  return i < 0 ? X.start + dflt : X.start + (X.end - X.start) * i / txt.length - .12;
+}
+
+/* ---------- model "beat": kandungan setiap babak, bebas daripada gaya ---------- */
+const BEATS = []; let cur = null;
+SP.lines.forEach((ln, idx) => {
+  const sc = ln.scene || {}, L = LN[ln.id];
+  if (!sc.cont || !cur) { cur = { s: idx ? L.start - .22 : 0, lines: [], items: [], chips: [], words: [] }; BEATS.push(cur); }
+  cur.lines.push(ln.id);
+  if (sc.head) { cur.title = cur.title || strip(sc.head.t); cur.kick = cur.kick || strip(sc.head.k); cur.sub = cur.sub || strip(sc.head.s); cur.titleHtml = cur.titleHtml || sc.head.t; }
+  (sc.words || []).forEach(w => cur.words.push({ t: strip(w.t), html: w.t, T: when(ln.id, w.at, .1), strike: w.strike !== undefined ? when(ln.id, w.strike, 1) : null }));
+  (sc.items || []).forEach(it => cur.items.push({ t: strip(it.t), html: it.t, x: !!it.x, icon: it.icon, T: when(ln.id, it.at, .2) }));
+  (sc.chips || []).forEach(c => cur.chips.push({ t: strip(c.t), T: when(ln.id, c.at, .3) }));
+  if (sc.comment) { cur.comment = { t: sc.comment.t, src: sc.comment.src || '', T: when(ln.id, sc.comment.at, .1) }; cur.tag = cur.tag || sc.comment.tag; }
+  if (sc.note) cur.note = strip(sc.note.t);
+  const m = sc.media || (sc.bg && (sc.bg.img || sc.bg.clip) ? sc.bg : null);
+  if (m && !cur.media) cur.media = { img: m.img, clip: m.clip, T: when(ln.id, m.at, 0) };
+  if (sc.cta) cur.cta = { t: strip(sc.cta.t), img: sc.cta.img || (SP.product && SP.product.img) || 'assets/tilam/prime2/prime2-panel3-desktop.jpg', T: when(ln.id, sc.cta.at, .05) };
+  if (sc.diagram === 'sag') cur.sag = true;
+});
+BEATS.forEach((b, i) => { b.e = i < BEATS.length - 1 ? BEATS[i + 1].s : DURATION; b.text = b.lines.map(id => LN[id].text).join(' '); });
+// babak tanpa media: pinjam media terdekat (supaya gaya berasaskan footage sentiasa ada visual)
+BEATS.forEach((b, i) => { if (!b.media && !b.cta) { for (let d = 1; d < BEATS.length; d++) { const n = BEATS[i - d] || BEATS[i + d]; const o = BEATS[i + d] || BEATS[i - d];
+  const pick = (n && n.media) || (o && o.media); if (pick) { b.media = Object.assign({}, pick, { T: b.s }); b.borrowed = true; break; } } } });
+
+// spesifikasi tanpa media langsung: guna gambar produk
+BEATS.forEach(b => { if (!b.media && !b.cta) { b.media = { img: (SP.product && SP.product.img) || 'assets/tilam/prime2/prime2-panel3-desktop.jpg', T: b.s }; b.borrowed = true; } });
+
+/* kata demi kata (anggaran ikut kedudukan huruf dalam baris) */
+const WORDS = [];
+TM.forEach(L => { const toks = L.text.split(/\s+/); let pos = 0; toks.forEach(w => { const i = L.text.indexOf(w, pos); pos = i + w.length;
+  WORDS.push({ w: w.replace(/Prime 2/g, 'Prime II'), t: L.start + (L.end - L.start) * i / L.text.length, line: L.id }); }); });
+WORDS.forEach((w, i) => w.e = i < WORDS.length - 1 ? WORDS[i + 1].t : w.t + .6);
+// kata kunci: perkataan yang ditebalkan (<b>) dalam spesifikasi + nombor
+const KEY = new Set(); JSON.stringify(SP.lines).replace(/<b>(.*?)<\/b>/g, (_, x) => strip(x).toLowerCase().split(/\s+/).forEach(k => k.length > 2 && KEY.add(k.replace(/[^\p{L}\p{N}]/gu, ''))));
+const isKey = w => { const k = w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, ''); return KEY.has(k) || /\d/.test(k) || ['dua','tiga','empat','lima','tujuh','belas'].includes(k); };
+
+/* kapsyen ayat */
+const CAPS = [];
+TM.forEach(x => {
+  let parts = x.text.split(/(?<=[.?!])\s+/), merged = [];
+  parts.forEach(p => { if (merged.length && (merged[merged.length - 1].length < 16 || p.length < 12)) merged[merged.length - 1] += ' ' + p; else merged.push(p); });
+  merged = merged.flatMap(p => p.length > 60 ? p.split(/(?<=,)\s+/).reduce((a, q) => { if (a.length && (a[a.length - 1] + q).length < 56) a[a.length - 1] += ' ' + q; else a.push(q); return a; }, []) : [p]);
+  const n = merged.reduce((a, p) => a + p.length, 0); let t0 = x.start;
+  merged.forEach(p => { const d = (x.end - x.start) * p.length / n; CAPS.push({ s: t0, e: t0 + d, txt: p.replace(/Prime 2/g, 'Prime II') }); t0 += d; });
+});
+const capAt = t => CAPS.find(x => t >= x.s - .05 && t < x.e + .25);
+
+/* ---------- utiliti DOM & media ---------- */
+function el(html, parent = stage) { const d = document.createElement('div'); d.innerHTML = html.trim(); const e = d.firstChild; parent.appendChild(e); return e; }
+function anim(e, T, a = 'up', sfx) { ITEMS.push({ e, T, a }); if (sfx) SFX.push({ t: T, k: sfx }); return e; }
+function media(m, parent, opts = {}) {
+  const im = document.createElement('img'); im.className = 'cov'; if (opts.contain) im.style.objectFit = 'contain';
+  if (m.clip) {
+    const c = SP.clips[m.clip + '_card'] || SP.clips[m.clip + '_bg']; im.src = ROOT + c.dir + '/0001.jpg';
+    CLIPS.push({ im, c, last: 1, T: opts.T ?? m.T, span: opts.span });
+  } else im.src = ROOT + m.img;
+  parent.appendChild(im); return im;
+}
+function scene(b, bg) { const s = el(`<div class="layer" style="background:${bg || 'transparent'}"></div>`); b.el = s; return s; }
+const WA = s => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>`;
+BEATS.forEach((b, i) => { if (i) SFX.push({ t: b.s, k: 'whoosh' }); });
+
+/* ===================== GAYA ===================== */
+const S = {};
+
+/* 1. CLEAN — footage penuh, kapsyen kecil sahaja */
+S.clean = () => {
+  stage.style.background = '#000';
+  BEATS.forEach(b => {
+    const s = scene(b, '#000');
+    if (b.cta) return ctaBlock(s, b, { dark: true });
+    const blur = el('<div class="fill" style="filter:blur(40px) brightness(.55);transform:scale(1.2)"></div>', s); media(b.media, blur);
+    const f = el('<div class="abs" style="left:0;top:560px;width:1080px;height:800px"></div>', s); media(b.media, f, { contain: true });
+    b.kb = f;
+    if (b.comment) anim(el(`<div class="abs" style="left:80px;top:220px;width:920px;background:#fff;color:#111;border-radius:28px;padding:26px 32px;font:600 40px/1.3 P;box-shadow:0 20px 50px rgba(0,0,0,.4)"><div style="font-size:26px;color:#888;margin-bottom:8px">${b.comment.src}</div>${b.comment.t}</div>`, s), b.comment.T, 'pop', 'pop');
+  });
+  const cap = el('<div class="abs" style="left:70px;top:1470px;width:940px;text-align:center;font:600 46px/1.4 P;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.9),0 0 3px #000;z-index:50"></div>');
+  UPD.push(t => { const c = capAt(t); const h = c && t < CTA_T - .1 ? c.txt : ''; if (cap.textContent !== h) cap.textContent = h; });
+};
+
+/* 2. KINETIC — perkataan besar satu-satu, kata kunci berwarna */
+S.kinetic = () => {
+  stage.style.background = '#0b0b0d';
+  BEATS.forEach(b => {
+    const s = scene(b, '#0b0b0d');
+    if (b.cta) return ctaBlock(s, b, { dark: true, accent: '#ffd23f' });
+    const f = el('<div class="fill" style="filter:brightness(.38) saturate(.9)"></div>', s); media(b.media, f); b.kb = f;
+    if (b.kick || b.title) anim(el(`<div class="abs" style="left:60px;top:150px;font:400 54px B;letter-spacing:4px;color:#ffd23f">${(b.kick || b.title).toUpperCase()}</div>`, s), b.s + .2, 'left');
+  });
+  const box = el('<div class="abs" style="left:40px;top:760px;width:1000px;text-align:center;z-index:50"></div>');
+  // kumpul 1–3 perkataan
+  const groups = []; let g = null;
+  WORDS.forEach(w => { if (!g || g.ws.length >= 3 || g.line !== w.line || /[.,?!]$/.test(g.ws[g.ws.length - 1].w) || isKey(w.w)) { g = { ws: [], line: w.line, t: w.t }; groups.push(g); } g.ws.push(w); if (isKey(w.w)) g = null; });
+  groups.forEach((g, i) => { g.e = i < groups.length - 1 ? groups[i + 1].t : g.t + 1; SFX.push({ t: g.t, k: g.ws.some(w => isKey(w.w)) ? 'slam' : 'tick' }); });
+  let last = null;
+  UPD.push(t => {
+    const g = t < CTA_T - .1 ? groups.find(x => t >= x.t && t < x.e) : null;
+    if (g !== last) { last = g; box.innerHTML = g ? g.ws.map(w => `<span style="color:${isKey(w.w) ? '#ffd23f' : '#fff'}">${w.w.replace(/[,]$/, '')}</span>`).join(' ') : ''; }
+    if (g) { const k = clamp((t - g.t) / .18); box.style.cssText += `;font:400 ${g.ws.some(w => isKey(w.w)) ? 190 : 150}px/0.95 A;text-transform:uppercase;text-shadow:0 10px 40px rgba(0,0,0,.8);transform:scale(${mix(1.35, 1, outC(k)).toFixed(3)});opacity:${k.toFixed(2)}`; }
+  });
+};
+
+/* 3. BERITA — newsroom: label, lower-third, ticker */
+S.berita = () => {
+  stage.style.background = '#0d1b2e';
+  el(`<div class="layer" style="background:linear-gradient(180deg,#0d1b2e,#14294a 60%,#0d1b2e)"></div>`);
+  BEATS.forEach((b, i) => {
+    const s = scene(b);
+    if (b.cta) return ctaBlock(s, b, { dark: true, accent: '#e8322e' });
+    const f = el('<div class="abs" style="left:0;top:330px;width:1080px;height:608px;overflow:hidden;border-top:6px solid #e8322e;border-bottom:6px solid #e8322e"></div>', s); media(b.media, f); b.kb = f;
+    if (b.comment) anim(el(`<div class="abs" style="left:60px;top:980px;width:960px;background:#fff;color:#111;padding:24px 30px;font:600 40px/1.3 P;border-left:14px solid #e8322e"><div style="font:700 24px P;color:#e8322e;letter-spacing:3px;margin-bottom:6px">PETIKAN PEMBACA · ${b.comment.src}</div>${b.comment.t}</div>`, s), b.comment.T, 'left', 'pop');
+    const head = b.title || b.kick || (b.words[0] && b.words[0].t) || strip(LN[b.lines[0]].text).split(/[.?!]/)[0];
+    anim(el(`<div class="abs" style="left:0;top:${b.comment ? 1250 : 990}px;width:1080px"><div style="display:inline-block;background:#e8322e;color:#fff;font:800 30px P;letter-spacing:4px;padding:10px 26px">${['TERKINI', 'FAKTA', 'ANALISA', 'INFO'][i % 4]}</div>
+      <div style="background:#fff;color:#0d1b2e;font:800 60px/1.15 P;padding:18px 40px;text-transform:uppercase">${head}</div>
+      ${b.sub ? `<div style="background:#0d1b2e;color:#cfe0ff;font:600 34px P;padding:12px 40px">${b.sub}</div>` : ''}</div>`, s), b.s + .25, 'left');
+    b.items.concat(b.chips).forEach((it, j) => anim(el(`<div class="abs" style="left:60px;top:${(b.comment ? 1450 : b.sub ? 1270 : 1200) + j * 70}px;font:700 38px P;color:#fff">▸ ${it.t}</div>`, s), it.T, 'left', 'pop'));
+  });
+  // bar atas & ticker kekal
+  const hdr = el(`<div class="abs" style="left:0;top:0;width:1080px;height:300px;z-index:40"><div style="position:absolute;left:50px;top:150px;display:flex;align-items:center;gap:18px">
+     <div style="background:#e8322e;color:#fff;font:800 44px P;letter-spacing:4px;padding:10px 28px">BERITA TILAM</div>
+     <div style="display:flex;align-items:center;gap:10px;color:#fff;font:700 32px P"><i id="live" style="width:22px;height:22px;border-radius:50%;background:#e8322e;display:inline-block"></i>LANGSUNG</div></div>
+     <div style="position:absolute;left:52px;top:236px;color:#9fb6d9;font:600 30px P;letter-spacing:2px">${PRODUCT} · EDISI KHAS</div></div>`);
+  const facts = [...new Set(BEATS.flatMap(b => b.items.concat(b.chips).map(x => x.t)).concat(BEATS.map(b => b.title).filter(Boolean)))];
+  const tk = el(`<div class="abs" style="left:0;top:1800px;width:1080px;height:80px;background:#e8322e;overflow:hidden;z-index:40"><div style="position:absolute;left:0;top:0;height:80px;width:200px;background:#0d1b2e;color:#fff;font:800 32px/80px P;text-align:center;z-index:2">TERKINI</div>
+     <div id="tkt" style="position:absolute;left:220px;top:0;white-space:nowrap;color:#fff;font:700 34px/80px P">${(facts.join('  ◆  ') + '  ◆  ').repeat(4)}</div></div>`);
+  UPD.push(t => { const o = (1 - P(t, CTA_T - .3, CTA_T)).toFixed(3); hdr.style.opacity = o; tk.style.opacity = o; });
+  const tkt = tk.querySelector('#tkt'), live = document.getElementById('live');
+  const cap = el('<div class="abs" style="left:60px;top:1660px;width:960px;text-align:center;z-index:45"></div>');
+  UPD.push(t => { tkt.style.transform = `translateX(${-(t * 140) % 4000}px)`; live.style.opacity = (Math.sin(t * 6) > 0 ? 1 : .25);
+    const c = capAt(t), h = c && t < CTA_T - .1 ? `<span style="background:rgba(0,0,0,.75);color:#fff;font:600 40px/1.5 P;padding:4px 14px">${c.txt}</span>` : '';
+    if (cap.innerHTML !== h) cap.innerHTML = h; });
+};
+
+/* 4. MAJALAH — editorial: krim, serif, nombor Roman */
+S.majalah = () => {
+  const ROM = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+  stage.style.background = '#f3ede2';
+  el(`<div class="layer" style="background:#f3ede2"></div>`);
+  el(`<div class="abs" style="left:60px;top:110px;width:960px;border-bottom:3px solid #1c1c1c;padding-bottom:14px;display:flex;justify-content:space-between;align-items:flex-end;z-index:40">
+      <div style="font:700 64px S;color:#1c1c1c;letter-spacing:1px">Tilam<span style="color:#b5452f">.</span></div><div style="font:600 24px P;letter-spacing:4px;color:#555">EDISI ${PRODUCT} · NO. 01</div></div>`);
+  let n = 0;
+  BEATS.forEach(b => {
+    const s = scene(b);
+    if (b.cta) return ctaBlock(s, b, { cream: true });
+    const no = ROM[n++] || '';
+    anim(el(`<div class="abs" style="left:60px;top:260px;width:960px"><div style="font:400 40px S;color:#b5452f">${no}.</div>
+       <div style="font:700 ${(b.title || '').length > 22 ? 62 : 76}px/1.08 S;color:#1c1c1c;margin-top:6px">${b.title || b.kick || b.tag || (b.words[0] && b.words[0].t) || ''}</div>
+       ${b.sub ? `<div style="font:italic 400 36px/1.3 S;color:#555;margin-top:12px">${b.sub}</div>` : ''}</div>`, s), b.s + .2, 'up');
+    const f = el(`<div class="abs" style="left:60px;top:640px;width:960px;height:560px;overflow:hidden;border:2px solid #1c1c1c;background:#ddd"></div>`, s); media(b.media, f); b.kb = f;
+    anim(f, b.s + .35, 'fade');
+    anim(el(`<div class="abs" style="left:60px;top:1212px;width:960px;font:italic 400 26px P;color:#777">Gambar: ${PRODUCT.toLowerCase()} · rasmi</div>`, s), b.s + .5, 'fade');
+    const list = b.items.concat(b.chips);
+    if (b.comment) anim(el(`<div class="abs" style="left:60px;top:1290px;width:960px;font:italic 400 44px/1.3 S;color:#1c1c1c;border-left:6px solid #b5452f;padding-left:28px">“${b.comment.t}”<div style="font:600 24px P;color:#888;margin-top:10px;font-style:normal">— ${b.comment.src}</div></div>`, s), b.comment.T, 'up');
+    list.forEach((it, j) => anim(el(`<div class="abs" style="left:60px;top:${1290 + j * 74}px;width:960px;font:400 40px S;color:#1c1c1c"><span style="color:#b5452f">—</span> ${it.t}</div>`, s), it.T, 'up', 'pop'));
+  });
+  const q = el('<div class="abs" style="left:60px;top:1600px;width:960px;border-top:2px solid #1c1c1c;padding-top:22px;font:italic 400 42px/1.35 S;color:#1c1c1c;z-index:45"></div>');
+  UPD.push(t => { const c = capAt(t), h = c && t < CTA_T - .1 ? c.txt : ''; if (q.textContent !== h) q.textContent = h; });
+};
+
+/* 5. WHITEBOARD — papan putih, marker, rajah ringkas, video dalam bulatan */
+S.whiteboard = () => {
+  stage.style.background = '#fbfaf6';
+  el(`<div class="layer" style="background:#fbfaf6;background-image:linear-gradient(#eceae3 2px,transparent 2px),linear-gradient(90deg,#eceae3 2px,transparent 2px);background-size:60px 60px"></div>`);
+  const INK = '#1d2b4f', RED = '#d6453d', BLUE = '#2f6fd6';
+  BEATS.forEach(b => {
+    const s = scene(b);
+    if (b.cta) return ctaBlock(s, b, { cream: true });
+    const fromW = !b.title && !b.kick && !b.tag && b.words.length > 1, title = b.title || b.kick || b.tag || (fromW ? b.words[0].t : '');
+    const words = fromW ? b.words.slice(1) : b.words;
+    const tt = anim(el(`<div class="abs" style="left:70px;top:220px;width:940px;filter:url(#rough)"><div style="font:800 ${title.length > 24 ? 70 : 86}px/1.1 P;color:${INK};transform:rotate(-1.5deg)">${title}</div>
+       <svg width="700" height="40" style="display:${title ? 'block' : 'none'};margin-top:6px"><path class="ul" d="M10 25 Q200 8 400 22 T690 18" fill="none" stroke="${RED}" stroke-width="9" stroke-linecap="round" stroke-dasharray="720" stroke-dashoffset="720"/></svg></div>`, s), b.s + .15, 'fade');
+    UPD.push(t => tt.querySelector('.ul').setAttribute('stroke-dashoffset', (720 * (1 - P(t, b.s + .4, b.s + 1.1))).toFixed(0)));
+    let y = 560;
+    if (b.comment) { anim(el(`<div class="abs" style="left:70px;top:${y}px;width:900px;border:5px solid ${INK};border-radius:30px;padding:24px 30px;font:600 40px/1.3 P;color:${INK};filter:url(#rough);background:#fff">${b.comment.t}<div style="font:600 24px P;color:${BLUE};margin-top:8px">${b.comment.src}</div></div>`, s), b.comment.T, 'pop', 'pop'); y += 420; }
+    words.forEach(w => { anim(el(`<div class="abs" style="left:70px;top:${y}px;width:940px;font:800 76px/1.1 P;color:${INK};filter:url(#rough)">${w.t}${w.strike !== null ? `<svg class="abs" style="left:0;top:30px" width="940" height="40"><path class="st" d="M0 20 L900 14" stroke="${RED}" stroke-width="12" stroke-linecap="round" stroke-dasharray="900" stroke-dashoffset="900"/></svg>` : ''}</div>`, s), w.T, 'pop', 'slam');
+      if (w.strike !== null) { const st = s.lastChild.querySelector('.st'), T = w.strike; UPD.push(t => st.setAttribute('stroke-dashoffset', (900 * (1 - P(t, T, T + .35))).toFixed(0))); SFX.push({ t: w.strike, k: 'swipe' }); }
+      y += 130; });
+    b.items.concat(b.chips).forEach(it => { anim(el(`<div class="abs" style="left:70px;top:${y}px;width:720px;display:flex;gap:22px;align-items:flex-start;font:700 46px/1.25 P;color:${INK};filter:url(#rough)">
+        <svg width="56" height="56" style="flex:none;margin-top:4px"><rect x="4" y="4" width="48" height="48" fill="none" stroke="${INK}" stroke-width="5"/>${it.x ? `<path d="M12 12 L44 44 M44 12 L12 44" stroke="${RED}" stroke-width="7" stroke-linecap="round"/>` : `<path d="M10 30 L24 44 L50 10" fill="none" stroke="${BLUE}" stroke-width="7" stroke-linecap="round"/>`}</svg><span>${it.t}</span></div>`, s), it.T, 'up', 'pop'); y += 120; });
+    if (b.media) { const c = el(`<div class="abs" style="left:${b.items.length + b.chips.length + b.words.length > 2 || b.comment ? 640 : 260}px;top:${b.items.length + b.chips.length + b.words.length > 2 || b.comment ? 1170 : 760}px;width:${b.items.length + b.chips.length + b.words.length > 2 || b.comment ? 380 : 560}px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid ${INK};box-shadow:8px 10px 0 rgba(29,43,79,.15)"></div>`, s);
+      media(b.media, c); anim(c, b.s + .5, 'pop'); }
+    if (b.sag) anim(el(`<svg class="abs" style="left:70px;top:1420px" width="560" height="200" filter="url(#rough)"><path d="M10 60 Q280 170 550 60" fill="none" stroke="${INK}" stroke-width="10"/><path d="M10 60 L10 150 L550 150 L550 60" fill="none" stroke="${INK}" stroke-width="10"/><path d="M280 10 L280 80 M255 55 L280 85 L305 55" stroke="${RED}" stroke-width="9" fill="none" stroke-linecap="round"/></svg>`, s), b.s + .8, 'fade');
+  });
+  const cap = el(`<div class="abs" style="left:70px;top:1700px;width:940px;text-align:center;font:600 40px/1.35 P;color:${BLUE};z-index:45"></div>`);
+  UPD.push(t => { const c = capAt(t), h = c && t < CTA_T - .1 ? c.txt : ''; if (cap.textContent !== h) cap.textContent = h; });
+};
+
+/* 6. SINEMATIK — letterbox, warna filem, sari kata serif */
+S.sinematik = () => {
+  stage.style.background = '#000';
+  BEATS.forEach((b, i) => {
+    const s = scene(b, '#000');
+    if (b.cta) return ctaBlock(s, b, { dark: true, serif: true });
+    const f = el('<div class="abs" style="left:0;top:500px;width:1080px;height:920px;overflow:hidden;filter:contrast(1.08) saturate(.8) sepia(.18) brightness(.92)"></div>', s); media(b.media, f); b.kb = f;
+    const label = b.title || b.kick;
+    if (label) anim(el(`<div class="abs" style="left:0;top:330px;width:1080px;text-align:center;font:400 28px P;letter-spacing:14px;color:#c9b48a">BAB ${i + 1}</div>`, s), b.s + .3, 'fade'),
+      anim(el(`<div class="abs" style="left:60px;top:380px;width:960px;text-align:center;font:italic 400 50px S;color:#efe6d2">${label}</div>`, s), b.s + .5, 'fade');
+    if (b.comment) anim(el(`<div class="abs" style="left:100px;top:1460px;width:880px;text-align:center;font:italic 400 40px/1.35 S;color:#efe6d2">“${b.comment.t}”</div>`, s), b.comment.T, 'fade');    else b.items.concat(b.chips).slice(0, 3).forEach((it, j) => anim(el(`<div class="abs" style="left:60px;top:${1440 + j * 56}px;width:960px;text-align:center;font:italic 400 38px S;color:#efe6d2;text-shadow:0 2px 8px #000">— ${it.t} —</div>`, s), it.T, 'fade'));
+  });
+  el('<div class="layer" style="filter:url(#grain);z-index:30;pointer-events:none"><svg width="1080" height="1920"><rect width="1080" height="1920" filter="url(#grain)"/></svg></div>');
+  el('<div class="layer" style="z-index:31;background:radial-gradient(900px 1100px at 50% 50%, transparent 55%, rgba(0,0,0,.55))"></div>');
+  const cap = el('<div class="abs" style="left:80px;top:1610px;width:920px;text-align:center;font:400 46px/1.35 S;color:#f3d98a;text-shadow:0 2px 8px #000;z-index:45"></div>');
+  UPD.push(t => { const c = capAt(t), h = c && t < CTA_T - .1 ? c.txt : ''; if (cap.textContent !== h) cap.textContent = h; });
+};
+
+/* 7. CHAT — perbualan WhatsApp: soalan pelanggan → jawapan ejen */
+S.chat = () => {
+  stage.style.background = '#efe7de';
+  el(`<div class="layer" style="background:#efe7de;background-image:radial-gradient(rgba(0,0,0,.035) 2px,transparent 2px);background-size:34px 34px"></div>`);
+  el(`<div class="abs" style="left:0;top:0;width:1080px;height:230px;background:#075e54;z-index:40;display:flex;align-items:flex-end;padding:0 40px 30px;gap:26px">
+     <div style="width:110px;height:110px;border-radius:50%;background:#fff url(${ROOT + ((SP.product && SP.product.img) || 'assets/tilam/prime2/prime2-panel3-desktop.jpg')}) center/cover"></div>
+     <div style="color:#fff"><div style="font:700 46px P">Ejen Coway · Tilam</div><div id="stat" style="font:500 30px P;opacity:.85">dalam talian</div></div></div>`);
+  const feed = el('<div class="abs" style="left:0;top:250px;width:1080px;z-index:10"></div>');
+  const msgs = [];
+  const time = t => `9:${String(41 + Math.floor(t / 20)).padStart(2, '0')}`;
+  const bubble = (side, html, T, kind = 'pop') => { const e = el(`<div style="display:flex;justify-content:${side === 'r' ? 'flex-end' : 'flex-start'};padding:12px 40px"><div style="max-width:820px;background:${side === 'r' ? '#d9fdd3' : '#fff'};border-radius:26px;${side === 'r' ? 'border-top-right-radius:6px' : 'border-top-left-radius:6px'};padding:22px 28px 14px;box-shadow:0 2px 3px rgba(0,0,0,.12);font:500 40px/1.35 P;color:#111">${html}<div style="text-align:right;font:500 22px P;color:#7a8a80;margin-top:4px">${time(T)}${side === 'r' ? ' <span style="color:#34b7f1">✓✓</span>' : ''}</div></div></div>`, feed);
+    msgs.push({ e, T }); anim(e, T, kind, 'pop'); return e; };
+  BEATS.forEach(b => {
+    if (b.comment) bubble('l', b.comment.t, b.comment.T - .3);
+    else if (b === BEATS[0]) bubble('l', 'Salam, nak tanya pasal tilam ' + PRODUCT.replace('COWAY ', '').toLowerCase().replace(/(^|\s)\S/g, x => x.toUpperCase()) + ' 🙂'.replace('🙂', ''), .1);
+    b.lines.forEach(id => { const L = LN[id]; if (b.comment && id === b.lines[0] && L.text.length < 70 && /tanya|komen/i.test(L.text)) return;
+      bubble('r', L.text.replace(/Prime 2/g, 'Prime II'), L.start); });
+    if (b.media && !b.borrowed && !b.cta) { const e = bubble('r', '', b.media.T + .4); const box = e.firstChild; box.style.padding = '10px'; box.style.width = '640px';
+      const f = el('<div style="width:620px;height:420px;border-radius:18px;overflow:hidden"></div>', box); box.insertBefore(f, box.firstChild); media(b.media, f, { T: b.media.T + .4 }); }
+    if (b.cta) { const e = bubble('r', `<div class="wa" style="width:700px;height:120px;font-size:40px;margin:6px 0">${WA(60)} WHATSAPP SAYA</div><div style="font:600 32px P;color:#444">${PRODUCT} · ${strip(PRODUCT_SUB)}</div>`, b.cta.T + .3);
+      SFX.push({ t: b.cta.T + .3, k: 'ding' }); }
+  });
+  const stat = document.getElementById('stat');
+  UPD.push(t => {
+    // tatal supaya mesej terakhir yang kelihatan berada di atas kapsyen
+    // deterministik (bingkai dirender selari): setiap mesej menolak tatal secara licin selepas ia muncul
+    let bottom = 0; msgs.forEach(m => { if (t >= m.T) bottom = Math.max(bottom, m.e.offsetTop + m.e.offsetHeight * P(t, m.T, m.T + .35, outC)); });
+    feed.style.transform = `translateY(${-Math.max(0, bottom - 1560).toFixed(1)}px)`;
+    const typing = TM.some(L => t > L.start - .6 && t < L.start); stat.textContent = typing ? 'sedang menaip…' : 'dalam talian';
+  });
+};
+
+/* CTA bersama (semua gaya kecuali chat) */
+let CTA_T = 1e9;
+function ctaBlock(s, b, o = {}) {
+  CTA_T = Math.min(CTA_T, b.s + .3);
+  s.style.background = o.cream ? '#f3ede2' : '#0b0b0d';
+  const ink = o.cream ? '#1c1c1c' : '#fff';
+  const f = el(`<div class="abs" style="left:90px;top:230px;width:900px;height:620px;border-radius:${o.serif ? 0 : 28}px;overflow:hidden"></div>`, s);
+  const im = document.createElement('img'); im.className = 'cov'; im.src = ROOT + b.cta.img; f.appendChild(im); anim(f, b.cta.T, 'zoom');
+  anim(el(`<div class="abs" style="left:0;top:910px;width:1080px;text-align:center;font:${o.serif ? '700 82px S' : '800 84px P'};color:${ink};letter-spacing:2px">${PRODUCT}</div>`, s), b.cta.T + .3, 'up');
+  anim(el(`<div class="abs" style="left:0;top:1020px;width:1080px;text-align:center;font:500 40px P;color:${o.cream ? '#555' : '#cfd8e6'}">${PRODUCT_SUB}</div>`, s), b.cta.T + .45, 'up');
+  const btn = anim(el(`<div class="abs" style="left:100px;top:1150px"><div class="wa" style="width:880px;height:150px;font-size:48px;box-shadow:0 22px 60px rgba(37,211,102,.45)">${WA(74)} WHATSAPP SAYA SEKARANG</div></div>`, s), b.cta.T + .7, 'pop', 'ding');
+  ITEMS[ITEMS.length - 1].pulse = true;
+  anim(el(`<div class="abs" style="left:60px;top:1350px;width:960px;text-align:center;font:600 38px P;color:${o.accent || (o.cream ? '#b5452f' : '#9fd3f7')}">${b.cta.t}</div>`, s), b.cta.T + 1.1, 'fade');
+}
+
+(S[STYLE] || S.kinetic)();
+
+/* ---------- seek ---------- */
+function seek(t) {
+  const waits = [];
+  BEATS.forEach((b, i) => {
+    if (!b.el) return;
+    const last = i === BEATS.length - 1, vis = t >= b.s - .01 && (last || t < b.e + .3); b.el.style.display = vis ? '' : 'none'; if (!vis) return;
+    const fin = i ? P(t, b.s, b.s + .3) : 1, fout = last ? 1 : 1 - P(t, b.e, b.e + .3); b.el.style.opacity = (fin * fout).toFixed(3); b.el.style.zIndex = 5 + i;
+    if (b.kb) b.kb.firstChild && (b.kb.firstChild.style.transform = `scale(${mix(1.02, 1.12, clamp((t - b.s) / Math.max(2, b.e - b.s))).toFixed(4)})`);
+  });
+  ITEMS.forEach(it => {
+    const k = t - it.T, e = it.e;
+    if (k < 0) { e.style.visibility = 'hidden'; return; }
+    e.style.visibility = 'visible';
+    const fi = clamp(k / .22), q = P(k, 0, .5, it.a === 'pop' ? backOut : outC);
+    let tr = '', op = fi;
+    if (it.a === 'pop') tr = `scale(${mix(.6, 1, q).toFixed(3)})`;
+    else if (it.a === 'left') tr = `translateX(${mix(140, 0, q).toFixed(1)}px)`;
+    else if (it.a === 'zoom') tr = `scale(${mix(.9, 1, P(k, 0, .7)).toFixed(3)})`;
+    else if (it.a === 'fade') op = P(k, 0, .6, inOut);
+    else tr = `translateY(${mix(40, 0, q).toFixed(1)}px)`;
+    if (it.pulse && k > 1) tr += ` scale(${(1 + .035 * Math.sin((k - 1) * 6)).toFixed(4)})`;
+    e.style.opacity = op.toFixed(3); e.style.transform = tr;
+  });
+  CLIPS.forEach(r => {
+    const t0 = r.T ?? 0, n = r.c.n, span = Math.max(1, (r.span || n / FPS));
+    const f = 1 + clamp(Math.floor((t - t0) * FPS * Math.min(1, n / (Math.max(span, 4) * FPS))), 0, n - 1);
+    if (f !== r.last) { r.last = f; r.im.src = ROOT + r.c.dir + '/' + String(f).padStart(4, '0') + '.jpg'; waits.push(r.im.decode().catch(() => {})); }
+  });
+  UPD.forEach(u => u(t));
+  return Promise.all(waits);
+}
+window.DURATION = DURATION; window.seek = seek; window.SFX = SFX; seek(0);
+</script></body></html>
