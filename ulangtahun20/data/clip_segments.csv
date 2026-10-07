@@ -14,15 +14,15 @@ C24,susu_bayi,5.0,7.0,1,Neon Mint - goncang botol depan mesin
 C24,susu_bayi,8.0,10.0,1,Neon Mint - botol siap
 C24,susu_bayi,3.0,5.0,0,sudu susu tepung (tiada mesin)
 C28,susu_bayi,0.0,1.0,1,Neon putih - tekan panel
-C28,susu_bayi,8.0,10.0,1,Neon putih - botol siap
+C28,susu_bayi,8.4,10.0,1,Neon putih - botol siap
 C28,susu_bayi,1.0,8.0,0,isi botol / sudu susu / bawa ke bilik
 C29,susu_bayi,0.0,3.0,1,Neon putih - tekan panel (hujung klip ada teks RM20 - jangan lepas 7.5s)
 C29,susu_bayi,3.0,7.5,0,sudu susu / botol
 C31,susu_bayi,0.0,10.0,1,Neon Mint - isi botol
 C32,susu_bayi,0.0,10.0,1,Neon Ciel Blue - isi botol
-C33,susu_bayi,0.0,5.0,1,Neon Ciel Blue - botol depan mesin
+C33,susu_bayi,0.0,3.5,1,Neon Ciel Blue - botol depan mesin
 C33,susu_bayi,5.0,10.0,0,bawa botol ke bilik bayi
-C34,susu_bayi,0.0,5.5,1,Neon Ciel Blue - botol depan mesin
+C34,susu_bayi,0.0,3.5,1,Neon Ciel Blue - botol depan mesin
 C34,susu_bayi,6.0,10.0,0,bawa botol ke bilik bayi
 C60,susu_bayi,0.0,11.0,1,Neon Ciel Blue - tekan / isi botol
 C60,susu_bayi,15.0,20.0,0,bawa botol ke bilik bayi
