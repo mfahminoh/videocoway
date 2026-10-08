@@ -7,14 +7,26 @@
     "objektif_kempen_baru": "OUTCOME_ENGAGEMENT + CONVERSATIONS ke WHATSAPP",
     "struktur": "1-1-1",
     "kecuali_wilayah": [
-      {"key": "2551", "name": "Sabah", "country": "MY"},
-      {"key": "2546", "name": "Sarawak", "country": "MY"}
+      {
+        "key": "2551",
+        "name": "Sabah",
+        "country": "MY"
+      },
+      {
+        "key": "2546",
+        "name": "Sarawak",
+        "country": "MY"
+      }
     ],
     "label_ai": "OPT_IN"
   },
   "video": {
     "_sumber": "Senarai video ikut folder Google Drive '30 Video Coway - Batch 1 / 30 Video Coway / 01 Neon'. Fail yang dimuat naik ialah versi brand Coway yang sama di GitHub (url).",
-    "urutan_gantian": ["NE09", "NE05", "E04"],
+    "urutan_gantian": [
+      "NE09",
+      "NE05",
+      "E04"
+    ],
     "senarai": {
       "NE01": {
         "nama": "Neon 1 Bajet Kecil",
@@ -52,6 +64,31 @@
         "headline": "Kenapa ramai pasang Coway Neon?",
         "teks": "Kenapa ramai sangat pasang COWAY NEON sekarang? 3 sebab 👇\n\n1️⃣ Kompak, tak makan ruang dapur. Ada 5 warna: pink, mint, biru, kelabu & putih.\n2️⃣ Pakej ikut gaya hidup. Nak technician datang servis? Boleh. Selalu sibuk? Ambil self-service, filter baru dihantar setiap 8 bulan, PERCUMA.\n3️⃣ Harga. Panas, sejuk & suhu bilik semua ada. Harga asal RM104, promosi RM54 je!\n\n🎉 Tambah rebat ulang tahun Coway RM20 x 7 bulan.\n\nTekan WhatsApp sekarang. Penghantaran & pemasangan PERCUMA 👇"
       }
+    },
+    "ut20": {
+      "_sumber": "branch claude/determined-babbage-m4olbf commit bcc25468, ulangtahun20/out/S{n}-V{xx}-v1.mp4",
+      "digunakan": [
+        "V01",
+        "V02",
+        "V03",
+        "V05",
+        "V06",
+        "V07",
+        "V09",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V15"
+      ],
+      "belum_guna": [
+        "V04"
+      ],
+      "dikecualikan": {
+        "V08": "countdown [x] hari",
+        "V14": "dakwaan [5] orang"
+      },
+      "nota": "V05/V06/V07 ada overlay statik 'TAMAT 25 OKT · 18 HARI' (dirender 7 Okt)."
     }
   },
   "akaun": {
@@ -61,12 +98,82 @@
       "page_id": "161160071443859",
       "boleh_upload": true,
       "awalan_nama": "Engagement | Whatsapp",
-      "targeting": {"age_min": 23, "age_max": 44, "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "locales": [6, 24, 41], "targeting_automation": {"advantage_audience": 0}},
-      "video_id": {"NE01": "1971228176885448", "NE02": "1005015638808835", "NE03": "1740934048036099"},
+      "targeting": {
+        "age_min": 23,
+        "age_max": 44,
+        "geo_locations": {
+          "countries": [
+            "MY"
+          ],
+          "location_types": [
+            "home",
+            "recent"
+          ]
+        },
+        "locales": [
+          6,
+          24,
+          41
+        ],
+        "targeting_automation": {
+          "advantage_audience": 0
+        }
+      },
+      "video_id": {
+        "NE01": "1971228176885448",
+        "NE02": "1005015638808835",
+        "NE03": "1740934048036099"
+      },
       "kempen": [
-        {"video": "NE01", "campaign_id": "120249936693630149", "ad_id": "120249936698130149", "mula": "2026-10-05", "bajet": 20, "objektif": "LEADS", "status": "ACTIVE"},
-        {"video": "NE02", "campaign_id": "120249936897740149", "ad_id": "120249940628080149", "mula": "2026-10-05", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE03", "campaign_id": "120249936897790149", "ad_id": "120249940628140149", "mula": "2026-10-05", "bajet": 10, "status": "ACTIVE"}
+        {
+          "video": "NE01",
+          "campaign_id": "120249936693630149",
+          "ad_id": "120249936698130149",
+          "mula": "2026-10-05",
+          "bajet": 20,
+          "objektif": "LEADS",
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE02",
+          "campaign_id": "120249936897740149",
+          "ad_id": "120249940628080149",
+          "mula": "2026-10-05",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE03",
+          "campaign_id": "120249936897790149",
+          "ad_id": "120249940628140149",
+          "mula": "2026-10-05",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V03",
+          "campaign_id": "120249973668250149",
+          "ad_id": "120249973690370149",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V05",
+          "campaign_id": "120249973668310149",
+          "ad_id": "120249973690410149",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V02",
+          "campaign_id": "120249973668410149",
+          "ad_id": "120249973690730149",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        }
       ]
     },
     "1862577198038556": {
@@ -76,12 +183,95 @@
       "instagram_user_id": "17841446014131556",
       "boleh_upload": true,
       "awalan_nama": "Engagement | Whatsapp",
-      "targeting": {"age_min": 18, "age_max": 65, "age_range": [25, 40], "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "locales": [6, 24, 41], "flexible_spec": [{"family_statuses": [{"id": "6002714398372", "name": "Parents (All)"}]}], "targeting_automation": {"advantage_audience": 1}},
-      "video_id": {"NE01": "1433535408881662", "NE02": "2894799794240693", "NE03": "1748075203146411"},
+      "targeting": {
+        "age_min": 18,
+        "age_max": 65,
+        "age_range": [
+          25,
+          40
+        ],
+        "geo_locations": {
+          "countries": [
+            "MY"
+          ],
+          "location_types": [
+            "home",
+            "recent"
+          ]
+        },
+        "locales": [
+          6,
+          24,
+          41
+        ],
+        "flexible_spec": [
+          {
+            "family_statuses": [
+              {
+                "id": "6002714398372",
+                "name": "Parents (All)"
+              }
+            ]
+          }
+        ],
+        "targeting_automation": {
+          "advantage_audience": 1
+        }
+      },
+      "video_id": {
+        "NE01": "1433535408881662",
+        "NE02": "2894799794240693",
+        "NE03": "1748075203146411"
+      },
       "kempen": [
-        {"video": "NE01", "campaign_id": "120255442589100110", "ad_id": "120255446944540110", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE02", "campaign_id": "120255442589740110", "ad_id": "120255446944610110", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE03", "campaign_id": "120255442590180110", "ad_id": "120255446944710110", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"}
+        {
+          "video": "NE01",
+          "campaign_id": "120255442589100110",
+          "ad_id": "120255446944540110",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE02",
+          "campaign_id": "120255442589740110",
+          "ad_id": "120255446944610110",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE03",
+          "campaign_id": "120255442590180110",
+          "ad_id": "120255446944710110",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V11",
+          "campaign_id": "120255477906440110",
+          "ad_id": "120255477918200110",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V15",
+          "campaign_id": "120255477906480110",
+          "ad_id": "120255477918240110",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V07",
+          "campaign_id": "120255477906560110",
+          "ad_id": "120255477918330110",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        }
       ],
       "nota": "Sejak dipublish, 3 iklan ini ACTIVE tetapi 0 impression. Jangan anggap sebagai gagal; laporkan kepada user."
     },
@@ -92,12 +282,99 @@
       "boleh_upload": false,
       "nota_upload": "ads_creative_upload_media ditolak untuk akaun ini. Muat naik video ke akaun Zara/Atie dahulu, kemudian guna video_id itu dalam creative inline akaun ini (cara ini berjaya pada 5 Okt).",
       "awalan_nama": "Eng | Whatsapp",
-      "targeting": {"age_min": 24, "age_max": 65, "age_range": [24, 51], "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "locales": [6, 24, 41], "flexible_spec": [{"family_statuses": [{"id": "6002714398372", "name": "Parents (All)"}]}], "targeting_automation": {"advantage_audience": 1}},
+      "targeting": {
+        "age_min": 24,
+        "age_max": 65,
+        "age_range": [
+          24,
+          51
+        ],
+        "geo_locations": {
+          "countries": [
+            "MY"
+          ],
+          "location_types": [
+            "home",
+            "recent"
+          ]
+        },
+        "locales": [
+          6,
+          24,
+          41
+        ],
+        "flexible_spec": [
+          {
+            "family_statuses": [
+              {
+                "id": "6002714398372",
+                "name": "Parents (All)"
+              }
+            ]
+          }
+        ],
+        "targeting_automation": {
+          "advantage_audience": 1
+        }
+      },
       "kempen": [
-        {"video": "NE01", "campaign_id": "120248141526380489", "ad_id": "120248145312030489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE02", "campaign_id": "120248141527290489", "ad_id": "120248145312410489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE03", "campaign_id": "120248141527570489", "ad_id": "120248145312470489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"}
-      ]
+        {
+          "video": "NE01",
+          "campaign_id": "120248141526380489",
+          "ad_id": "120248145312030489",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE02",
+          "campaign_id": "120248141527290489",
+          "ad_id": "120248145312410489",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE03",
+          "campaign_id": "120248141527570489",
+          "ad_id": "120248145312470489",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V01",
+          "campaign_id": "120248177852290489",
+          "ad_id": null,
+          "mula": null,
+          "bajet": 10,
+          "status": "PAUSED",
+          "nota": "Ad set gagal: 'Advertiser is missing' (verified advertiser). Video sudah dimuat naik ke Zara."
+        },
+        {
+          "video": "UT20-V13",
+          "campaign_id": "120248177852470489",
+          "ad_id": null,
+          "mula": null,
+          "bajet": 10,
+          "status": "PAUSED",
+          "nota": "Ad set gagal: 'Advertiser is missing' (verified advertiser). Video sudah dimuat naik ke Zara."
+        },
+        {
+          "video": "UT20-V09",
+          "campaign_id": "120248177852860489",
+          "ad_id": null,
+          "mula": null,
+          "bajet": 10,
+          "status": "PAUSED",
+          "nota": "Ad set gagal: 'Advertiser is missing' (verified advertiser). Video sudah dimuat naik ke Zara."
+        }
+      ],
+      "video_id_ut20_dari_zara": {
+        "V01": "1424984416482384",
+        "V13": "1618138963310322",
+        "V09": "1736842760752091"
+      }
     },
     "941054315716379": {
       "nama": "Zara Coway",
@@ -105,14 +382,87 @@
       "page_id": "100241812556730",
       "boleh_upload": true,
       "awalan_nama": "Eng | Whatsapp",
-      "targeting": {"age_min": 18, "age_max": 65, "age_range": [24, 44], "geo_locations": {"countries": ["MY"], "location_types": ["home", "recent"]}, "targeting_automation": {"advantage_audience": 1}},
-      "video_id": {"NE01": "1456307243056364", "NE02": "1802720914251374", "NE03": "1430856793435012"},
+      "targeting": {
+        "age_min": 18,
+        "age_max": 65,
+        "age_range": [
+          24,
+          44
+        ],
+        "geo_locations": {
+          "countries": [
+            "MY"
+          ],
+          "location_types": [
+            "home",
+            "recent"
+          ]
+        },
+        "targeting_automation": {
+          "advantage_audience": 1
+        }
+      },
+      "video_id": {
+        "NE01": "1456307243056364",
+        "NE02": "1802720914251374",
+        "NE03": "1430856793435012"
+      },
       "kempen": [
-        {"video": "NE01", "campaign_id": "52532395943689", "ad_id": "52532396032289", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE02", "campaign_id": "52532395946089", "ad_id": "52532396041489", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"},
-        {"video": "NE03", "campaign_id": "52532395947889", "ad_id": "52532396043089", "mula": "2026-10-06", "bajet": 10, "status": "ACTIVE"}
+        {
+          "video": "NE01",
+          "campaign_id": "52532395943689",
+          "ad_id": "52532396032289",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE02",
+          "campaign_id": "52532395946089",
+          "ad_id": "52532396041489",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "NE03",
+          "campaign_id": "52532395947889",
+          "ad_id": "52532396043089",
+          "mula": "2026-10-06",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V06",
+          "campaign_id": "52532913902689",
+          "ad_id": "52532914208089",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V10",
+          "campaign_id": "52532913904689",
+          "ad_id": "52532914208689",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        },
+        {
+          "video": "UT20-V12",
+          "campaign_id": "52532913906489",
+          "ad_id": "52532914212089",
+          "mula": "2026-10-08",
+          "bajet": 10,
+          "status": "ACTIVE"
+        }
       ]
     }
   },
-  "log": []
+  "log": [
+    {
+      "tarikh": "2026-10-08",
+      "tindakan": "Publish 9 kempen UT20 (Aina, Atie, Zara). 3 kempen Temp 1 tersekat: verified advertiser."
+    }
+  ]
 }
