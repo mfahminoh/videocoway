@@ -341,39 +341,20 @@
           "mula": "2026-10-06",
           "bajet": 10,
           "status": "ACTIVE"
-        },
-        {
-          "video": "UT20-V01",
-          "campaign_id": "120248177852290489",
-          "ad_id": null,
-          "mula": null,
-          "bajet": 10,
-          "status": "PAUSED",
-          "nota": "Ad set gagal: 'Advertiser is missing' (verified advertiser). Video sudah dimuat naik ke Zara."
-        },
-        {
-          "video": "UT20-V13",
-          "campaign_id": "120248177852470489",
-          "ad_id": null,
-          "mula": null,
-          "bajet": 10,
-          "status": "PAUSED",
-          "nota": "Ad set gagal: 'Advertiser is missing' (verified advertiser). Video sudah dimuat naik ke Zara."
-        },
-        {
-          "video": "UT20-V09",
-          "campaign_id": "120248177852860489",
-          "ad_id": null,
-          "mula": null,
-          "bajet": 10,
-          "status": "PAUSED",
-          "nota": "Ad set gagal: 'Advertiser is missing' (verified advertiser). Video sudah dimuat naik ke Zara."
         }
       ],
       "video_id_ut20_dari_zara": {
         "V01": "1424984416482384",
         "V13": "1618138963310322",
         "V09": "1736842760752091"
+      },
+      "ut20_tertunggak": {
+        "video": [
+          "V01",
+          "V13",
+          "V09"
+        ],
+        "sebab": "Ad set baru ditolak: 'Advertiser is missing' (subcode 3858634), walaupun default advertiser/payer sudah diset dan dsa_beneficiary/dsa_payor dihantar. Kempen lama dan kempen baru ujian telah DELETED pada 2026-10-08."
       }
     },
     "941054315716379": {
@@ -463,6 +444,10 @@
     {
       "tarikh": "2026-10-08",
       "tindakan": "Publish 9 kempen UT20 (Aina, Atie, Zara). 3 kempen Temp 1 tersekat: verified advertiser."
+    },
+    {
+      "tarikh": "2026-10-08",
+      "tindakan": "Temp 1: padam 3 kempen UT20 PAUSED atas arahan user; cuba kempen baru, ad set masih ditolak (verified advertiser). Kempen ujian dipadam."
     }
   ]
 }
