@@ -113,3 +113,22 @@ python tilam/build_b.py l07 --style berita --stills 2,8,20                  # pr
 ```
 Output: `out/tilam/gaya/<vid>_<gaya>.mp4`. Muzik ikut gaya (kinetic/berita = laju, sinematik/majalah = hangat).
 VO tidak dijana semula jika `tilam/b/vo/<vid>_full.wav` sudah ada (tiada kuota TTS digunakan).
+
+## Babak hook/masalah: gambar jana (bukan gambar produk)
+Sebelum produk diperkenalkan, babak masalah guna gambar yang dijana (suasana rumah Malaysia, tiada teks/logo/jenama).
+Gambar produk/footage rasmi Coway hanya selepas produk disebut.
+
+- Simpan dalam `assets/tilam/jana/<nama>.png` (+ `<nama>.txt` = model & kos). Guna dalam spec: `"bg": {"img": "assets/tilam/jana/<nama>.png"}`.
+- Penjana: **GPT Image 2 melalui Fish Audio** (190 kredit/gambar, 9:16 2K low). **Tanya pemilik sebelum jana — setiap gambar guna kredit.**
+  Alternatif: `python tilam/gen_image.py <nama> "<prompt>"` (Gemini image, perlu billing Google AI Studio).
+- Gaya majalah melabel gambar jana sebagai "Gambar ilustrasi" (bukan "rasmi").
+
+| Gambar | Guna dalam |
+|---|---|
+| `hook_bangun_penat` — lelaki bangun pagi pegang pinggang | E02, E06 |
+| `hook_pasangan_terganggu` — isteri terjaga, suami pusing | E05 |
+| `hook_tilam_mendap` — tilam lama mendap & bertompok | E02, E05, E06 |
+
+## Siri E — Coway Elite + perbandingan (`tilam/elite/`)
+Plan: [`../elite/plan_elite_10_video.md`](../elite/plan_elite_10_video.md). Spec: `python tilam/elite/gen_specs.py`.
+Siap: `out/tilam/gaya/e02_kinetic.mp4`, `e05_berita.mp4`, `e06_majalah.mp4`. E01, E03, E04, E08–E10 menunggu pengesahan fakta Elite (plan §5). E07 (Prime II sahaja) belum dibuat.

@@ -204,7 +204,7 @@ S.majalah = () => {
        ${b.sub ? `<div style="font:italic 400 36px/1.3 S;color:#555;margin-top:12px">${b.sub}</div>` : ''}</div>`, s), b.s + .2, 'up');
     const f = el(`<div class="abs" style="left:60px;top:640px;width:960px;height:560px;overflow:hidden;border:2px solid #1c1c1c;background:#ddd"></div>`, s); media(b.media, f); b.kb = f;
     anim(f, b.s + .35, 'fade');
-    anim(el(`<div class="abs" style="left:60px;top:1212px;width:960px;font:italic 400 26px P;color:#777">Gambar: ${PRODUCT.toLowerCase()} · rasmi</div>`, s), b.s + .5, 'fade');
+    anim(el(`<div class="abs" style="left:60px;top:1212px;width:960px;font:italic 400 26px P;color:#777">${b.media && b.media.img && b.media.img.includes('/jana/') ? 'Gambar ilustrasi' : 'Gambar: ' + PRODUCT.toLowerCase() + ' · rasmi'}</div>`, s), b.s + .5, 'fade');
     const list = b.items.concat(b.chips);
     if (b.comment) anim(el(`<div class="abs" style="left:60px;top:1290px;width:960px;font:italic 400 44px/1.3 S;color:#1c1c1c;border-left:6px solid #b5452f;padding-left:28px">“${b.comment.t}”<div style="font:600 24px P;color:#888;margin-top:10px;font-style:normal">— ${b.comment.src}</div></div>`, s), b.comment.T, 'up');
     list.forEach((it, j) => anim(el(`<div class="abs" style="left:60px;top:${1290 + j * 74}px;width:960px;font:400 40px S;color:#1c1c1c"><span style="color:#b5452f">—</span> ${it.t}</div>`, s), it.T, 'up', 'pop'));

@@ -1,0 +1,184 @@
+{
+ "id": "e02",
+ "slug": "tidur-8-jam-bangun-penat-elite",
+ "title": "E02 — Tidur 8 jam, bangun masih penat?",
+ "mood": "calm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery1.png",
+  "ctaSize": 92
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Tidur lapan jam, tapi bangun masih rasa penat?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/hook_bangun_penat.png",
+     "dim": 1
+    },
+    "head": {
+     "t": "Tidur 8 jam…<br>bangun <b>masih penat?</b>",
+     "k": "POV",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Kajian kata, satu daripada tiga rakyat Malaysia bangun pagi rasa penat.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/hook_bangun_penat.png",
+     "dim": 0.6
+    },
+    "words": [
+     {
+      "t": "<b>32%</b>",
+      "at": "satu",
+      "size": 220,
+      "y": 560
+     },
+     {
+      "t": "rakyat Malaysia bangun penat",
+      "at": "rakyat",
+      "size": 64,
+      "y": 820,
+      "anim": "up"
+     }
+    ],
+    "note": {
+     "t": "Sumber: The Edge Malaysia",
+     "y": 1480,
+     "at": "rakyat"
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Kadang bukan sebab kurang tidur, tapi tilam tak sokong badan dengan betul.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/hook_tilam_mendap.png",
+     "dim": 1
+    },
+    "words": [
+     {
+      "t": "KURANG TIDUR?",
+      "at": 0.05,
+      "size": 100,
+      "y": 560,
+      "strike": "tapi"
+     },
+     {
+      "t": "TILAM TAK <b>SOKONG</b>.",
+      "at": "tilam",
+      "size": 110,
+      "y": 740
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Coway Elite ada sistem sokongan sembilan zon. Bahu, pinggang, pinggul, setiap bahagian dapat sokongan yang seimbang.",
+   "scene": {
+    "head": {
+     "t": "Sokongan <b>9 zon</b>",
+     "k": "COWAY ELITE",
+     "y": 170
+    },
+    "media": {
+     "clip": "orbs",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Bahu",
+      "at": "Bahu",
+      "y": 1260
+     },
+     {
+      "t": "Pinggang",
+      "at": "pinggang",
+      "y": 1365
+     },
+     {
+      "t": "Pinggul",
+      "at": "pinggul",
+      "y": 1470
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Bukan kira berapa jam tidur. Tapi jadikan setiap jam tu berkualiti.",
+   "scene": {
+    "bg": {
+     "clip": "hero",
+     "dim": 0.8
+    },
+    "words": [
+     {
+      "t": "BUKAN KIRA JAM.",
+      "at": 0.05,
+      "size": 100,
+      "y": 600
+     },
+     {
+      "t": "JADIKAN SETIAP JAM <b>BERKUALITI</b>.",
+      "at": "jadikan",
+      "size": 84,
+      "y": 780
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Nak rasa sendiri? WhatsApp saya, saya terangkan.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Tilam paling premium siri BEREX."
+    }
+   }
+  }
+ ]
+}
