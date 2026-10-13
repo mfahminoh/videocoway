@@ -61,4 +61,5 @@ This copy lives in the repo at `.claude/skills/seedream/`, so every cloud sessio
   - `ark.ap-southeast.bytepluses.com` under Allowed domains.
 
   A new session picks up a new environment variable.
-- Video scenes: problem/hook scenes use realistic generated images (Malaysian home, no text or logos). Official Coway visuals are used only after the product is introduced. Ask before any paid generation beyond the free quota.
+- Video scenes: problem/hook scenes use realistic generated images (Malaysian home, no text or logos).
+- Modest dress on every model (the user's rule): women wear a tudung sarung, a full long-sleeved pyjama set or long-sleeved clothes with full-length trousers, and socks, with no skin showing except face and hands; men always wear a shirt and long trousers. Say it explicitly in the prompt ("grey socks on both feet", "long-sleeved"), since "feet covered by blanket" is often ignored, and check every image for it. Official Coway visuals are used only after the product is introduced. Ask before any paid generation beyond the free quota.

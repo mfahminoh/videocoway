@@ -4,6 +4,7 @@ Rujukan utama: `Skrip_Video_Iklan_BEREX_Elite.docx`, salinan teks dalam `skrip_e
 
 Peraturan visual:
 - Babak masalah/penerangan guna gambar jana yang realistik: rumah Malaysia, tiada teks, tiada logo.
+- Pakaian model mesti sopan: wanita bertudung, baju tidur penuh (lengan sampai pergelangan, seluar panjang) dan berstokin, tiada kulit kelihatan selain muka dan tangan; lelaki mesti berbaju dan berseluar panjang.
 - Bahagian product reveal dan lapisan guna visual rasmi Coway, tapi gambar laman yang sama tidak diulang-ulang.
 
 Penjana:
@@ -24,7 +25,7 @@ Review: `review_gambar_seedream.jpg`. Prompt setiap gambar ada dalam fail `.txt`
 | 8 | `el_v3c_sentuh_fabrik` | V3: permukaan tilam yang kita sentuh | 🔍 review |
 | 9 | `el_v4a_katil_hotel` | V4 hook: katil hotel yang sedap | 🔍 review |
 | 10 | `el_v4b_balik_rumah` | V4: balik rumah, tilam biasa | 🔍 review |
-| 11 | `el_v5a_baring_mengiring` | V5: bahu & pinggul tekan tilam (+ `_alt`, pandangan sisi) | 🔍 review |
+| 11 | `el_v5a_baring_mengiring` | V5: bahu & pinggul tekan tilam | 🔍 review |
 | 12 | `el_v6a_ketul_foam` | V6: "bukan sekadar satu ketul foam" | 🔍 review |
 | 13 | `el_v7a_basuh_cadar` | V7 hook: basuh cadar | 🔍 review |
 | 14 | `el_v7b_habuk_tilam` | V7: tilam di bawah cadar | 🔍 review |
