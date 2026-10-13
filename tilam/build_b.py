@@ -95,7 +95,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("vid", nargs="+"); ap.add_argument("--stills"); ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--style", choices=ROTATION); ap.add_argument("--rotate", action="store_true"); ap.add_argument("--offset", type=int, default=0)
     a = ap.parse_args()
-    vids = sorted(p.stem for p in SPECS.glob("[bcdles][0-9]*.json")) if a.vid == ["all"] else a.vid
+    vids = sorted(p.stem for p in SPECS.glob("[bcdlesp][0-9]*.json")) if a.vid == ["all"] else a.vid
     for i, v in enumerate(vids):
         st = ROTATION[(i + a.offset) % len(ROTATION)] if a.rotate else a.style
         if a.rotate: print(f"[{i + 1}/{len(vids)}] {v} -> {st}")

@@ -18,24 +18,42 @@ SR, TEMPO, GAP, LEAD = 44100, 1.12, 0.32, 0.25
 TTS_MODELS = os.environ.get("TTS_MODELS", "gemini-3.1-flash-tts-preview,gemini-3.8-flash-tts").split(",")
 
 
-def tts_full(lines, path):
-    text = "\n\n".join(l["text"] for l in lines)
-    pcm = None
-    for m in TTS_MODELS:
+MAX_CHARS = 1150   # skrip lebih panjang kerap gagal (502) dalam satu permintaan -> pecah ikut baris
+
+
+def tts_text(text, models):
+    for m in models:
         for attempt in range(3):
             try:
-                pcm = gemini_tts.tts(text, m); break
+                return gemini_tts.tts(text, m), m
             except Exception as e:
                 body = getattr(e, "read", lambda: b"")().decode(errors="ignore")
                 print("TTS", m, "gagal:", e, "(kuota harian)" if "PerDay" in body else "")
                 if "PerDay" in body or "429" not in str(e): break
                 time.sleep(65)                           # had per-minit
-        if pcm: break
-    if not pcm:
-        raise SystemExit("TTS gagal untuk semua model (" + ", ".join(TTS_MODELS) + ")")
+    raise SystemExit("TTS gagal untuk semua model (" + ", ".join(models) + ")")
+
+
+def tts_full(lines, path):
+    chunks, cur = [], []
+    for l in lines:
+        if cur and sum(len(x["text"]) for x in cur + [l]) > MAX_CHARS: chunks.append(cur); cur = []
+        cur.append(l)
+    chunks.append(cur)
+    if len(chunks) > 1:                                  # seimbangkan saiz bahagian
+        n = len(chunks); tot = sum(len(l["text"]) for l in lines); chunks, cur, acc = [], [], 0
+        for l in lines:
+            cur.append(l); acc += len(l["text"])
+            if len(chunks) < n - 1 and acc >= tot * (len(chunks) + 1) / n: chunks.append(cur); cur = []
+        chunks.append(cur)
+    pcm, models = b"", list(TTS_MODELS)
+    for i, ch in enumerate(chunks):
+        part, m = tts_text("\n\n".join(l["text"] for l in ch), models)
+        models = [m] + [x for x in models if x != m]   # suara seragam: guna model sama untuk bahagian seterusnya
+        pcm += (b"\0" * 48000 if i else b"") + part   # jeda 1s antara bahagian (24 kHz s16)
     with wave.open(str(path), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
-    print("TTS ok", m, f"{len(pcm) / 48000:.1f}s")
+    print("TTS ok", m, f"{len(pcm) / 48000:.1f}s", f"({len(chunks)} bahagian)" if len(chunks) > 1 else "")
 
 
 def load(path, tempo=None):

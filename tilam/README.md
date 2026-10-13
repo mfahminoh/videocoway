@@ -1,6 +1,8 @@
 # Video Tilam Coway
 
 - **Draf plan v2 (berasaskan data pain 169 ayat):** [`plan_v2_draft.md`](plan_v2_draft.md)
+- **Siri H (baru): H01 emosi + explainer fabrik penyejuk & foam topper** — lihat [`b/README.md`](b/README.md#siri-h--emosi--explainer-fabrik--topper)
+- **Siri P (baru): P01 explainer spring berpoket** — lihat [`b/README.md`](b/README.md#siri-p--explainer-spring-berpoket)
 - **Siri B, C, D (19 video Prime II) + Siri L (15 video Prime Lite):** [`b/README.md`](b/README.md)
 - **Coway Elite (baru): draf 10 video:** [`elite/plan_elite_10_video.md`](elite/plan_elite_10_video.md)
 - **Prime Lite: analisa 5 video rujukan + draf 15 video:** [`lite/analisis_dan_plan.md`](lite/analisis_dan_plan.md)
