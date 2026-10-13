@@ -1,0 +1,185 @@
+{
+ "id": "s03",
+ "slug": "malam-panas-tilam",
+ "title": "S03 — Malam dah panas, tilam pun rasa tak selesa?",
+ "mood": "calm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Cuaca Malaysia ni kadang-kadang dah cukup panas. Bila nak tidur, mestilah kita nak rasa selesa, kan?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v3a_malam_panas.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Malam dah <b>panas…</b>",
+     "k": "CUACA MALAYSIA",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Bila pilih tilam, ramai orang akan tengok lembut ke keras, tebal ke nipis.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v1d_kedai_tilam.png",
+     "dim": 0.85
+    },
+    "chips": [
+     {
+      "t": "Lembut ke keras?",
+      "at": "lembut",
+      "y": 1300
+     },
+     {
+      "t": "Tebal ke nipis?",
+      "at": "tebal",
+      "y": 1405
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Tapi ada satu lagi benda yang boleh kita tengok, iaitu bahan yang digunakan pada permukaan tilam tu.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v3c_sentuh_fabrik.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Bahan <b>permukaan</b> tilam",
+     "k": "SATU LAGI",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "04",
+   "text": "Sebab permukaan tilam ni lah yang kita sentuh sepanjang kita tidur.",
+   "scene": {
+    "cont": true,
+    "words": [
+     {
+      "t": "KITA SENTUH",
+      "at": "sentuh",
+      "size": 96,
+      "y": 1150,
+      "anim": "up"
+     },
+     {
+      "t": "<b>SEPANJANG MALAM</b>",
+      "at": "sepanjang",
+      "size": 96,
+      "y": 1290
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Untuk Coway BEREX Elite, dia menggunakan fabrik penyejuk dan turut mempunyai ciri anti-statik.",
+   "scene": {
+    "media": {
+     "clip": "cool",
+     "box": [
+      90,
+      520,
+      900,
+      900
+     ],
+     "fit": "cover",
+     "kb": "none"
+    },
+    "head": {
+     "t": "Coway <b>BEREX Elite</b>",
+     "y": 150
+    },
+    "chips": [
+     {
+      "t": "Fabrik penyejuk",
+      "at": "penyejuk",
+      "y": 1470
+     },
+     {
+      "t": "Anti-statik",
+      "at": "anti",
+      "y": 1575
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Jadi, selain tengok rupa dan ketebalan, kita boleh ambil tahu juga tentang bahan yang digunakan.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/latest-galleryloop4.png",
+     "box": [
+      90,
+      560,
+      900,
+      900
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Tengok juga <b>bahannya</b>",
+     "y": 170
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Kalau tengah cari tilam baru, jangan lupa tengok bahagian ni juga. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya explain apa yang menarik."
+    }
+   }
+  }
+ ]
+}

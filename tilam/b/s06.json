@@ -1,0 +1,279 @@
+{
+ "id": "s06",
+ "slug": "tilam-36cm-dalamnya",
+ "title": "S06 — Tilam 36 cm, apa yang ada dalamnya?",
+ "mood": "warm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Kalau nampak tilam setebal tiga puluh enam sentimeter macam ni, mesti ada yang tertanya-tanya, apa sebenarnya yang ada dalam dia?",
+   "scene": {
+    "bg": {
+     "clip": "plush",
+     "dim": 0.55
+    },
+    "head": {
+     "t": "Tilam <b>36 cm</b>…<br>apa dalam dia?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Okay, jom kita tengok. Bahagian paling atas, BEREX Elite menggunakan fabrik penyejuk dengan perlindungan Sanitized.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/s3-img-new.png",
+     "box": [
+      60,
+      560,
+      960,
+      560
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Paling <b>atas</b>",
+     "k": "LAPISAN 1",
+     "y": 170
+    },
+    "chips": [
+     {
+      "t": "Fabrik penyejuk",
+      "at": "penyejuk",
+      "y": 1200
+     },
+     {
+      "t": "Perlindungan Sanitized®",
+      "at": "Sanitized",
+      "y": 1305
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Lepas tu ada lapisan PU foam sembilan zon, diikuti lateks asli sembilan zon.",
+   "scene": {
+    "head": {
+     "t": "Lapisan <b>tengah</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/elite/mattreslayer-img.png",
+     "box": [
+      0,
+      560,
+      1080,
+      540
+     ],
+     "fit": "contain",
+     "kb": "none"
+    },
+    "chips": [
+     {
+      "t": "PU foam 9 zon",
+      "at": "PU",
+      "y": 1180
+     },
+     {
+      "t": "Lateks asli 9 zon",
+      "at": "lateks",
+      "y": 1285
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Di bahagian bawah pula ada lagi lapisan PU foam, pocket spring sembilan zon dan lapisan sabut kelapa.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v2d_pocket_spring.jpg",
+     "dim": 0.8
+    },
+    "head": {
+     "t": "Bahagian <b>bawah</b>",
+     "y": 200
+    },
+    "chips": [
+     {
+      "t": "PU foam",
+      "at": "PU",
+      "y": 1180
+     },
+     {
+      "t": "Pocket spring 9 zon",
+      "at": "pocket",
+      "y": 1285
+     },
+     {
+      "t": "Sabut kelapa",
+      "at": "sabut",
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Jadi, tilam ni bukan sekadar satu ketul foam tebal. Dia sebenarnya terdiri daripada beberapa lapisan bahan yang berbeza.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v6a_ketul_foam.jpg",
+     "dim": 1
+    },
+    "words": [
+     {
+      "t": "BUKAN SATU",
+      "at": "bukan",
+      "size": 100,
+      "y": 560,
+      "anim": "up"
+     },
+     {
+      "t": "<b>KETUL FOAM</b>",
+      "at": "ketul",
+      "size": 120,
+      "y": 700
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Setiap bahan tu ada ciri tersendiri dan memainkan peranan dalam keseluruhan reka bentuk tilam.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/latest-galleryloop6.png",
+     "box": [
+      90,
+      560,
+      900,
+      900
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Setiap lapisan<br><b>ada peranan</b>",
+     "y": 150
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Kalau nak bandingkan dengan Prime II, ketebalan Elite ialah tiga puluh enam sentimeter, berbanding tiga puluh tiga sentimeter untuk Prime II.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/Asset_8.jpg",
+     "box": [
+      60,
+      520,
+      960,
+      600
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Elite vs <b>Prime II</b>",
+     "k": "PERBEZAAN",
+     "y": 150
+    },
+    "items": [
+     {
+      "t": "Elite: <b>36 cm</b>",
+      "at": "Elite",
+      "y": 1180,
+      "icon": "E"
+     },
+     {
+      "t": "Prime II: 33 cm",
+      "at": "tiga puluh tiga",
+      "y": 1330,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "08",
+   "text": "Elite juga menggunakan konfigurasi sembilan zon pada lapisan foam, lateks asli dan pocket spring.",
+   "scene": {
+    "head": {
+     "t": "<b>9 zon</b> pada 3 lapisan",
+     "y": 200
+    },
+    "items": [
+     {
+      "t": "PU foam",
+      "at": "foam",
+      "y": 640,
+      "icon": "9"
+     },
+     {
+      "t": "Lateks asli",
+      "at": "lateks",
+      "y": 790,
+      "icon": "9"
+     },
+     {
+      "t": "Pocket spring",
+      "at": "pocket",
+      "y": 940,
+      "icon": "9"
+     }
+    ]
+   }
+  },
+  {
+   "id": "09",
+   "text": "Bila dah tahu apa yang ada di dalamnya, barulah kita boleh buat perbandingan dengan lebih jelas. Nak kenali BEREX Elite dengan lebih dekat? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya terangkan setiap lapisan."
+    }
+   }
+  }
+ ]
+}
