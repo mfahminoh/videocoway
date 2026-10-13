@@ -36,3 +36,12 @@ html, body { width: 1080px; height: 1080px; overflow: hidden; font-family: P, sa
 .badge > div { transform: skewX(18deg); display: flex; align-items: center; gap: 16px; }
 .badge img { height: 36px; }
 .badge span { font-weight: 800; font-size: 21px; color: #0B2F6B; letter-spacing: 1px; border-left: 2px solid #CFD8E3; padding-left: 16px; }
+
+/* poster 3-7 */
+.photo { overflow: hidden; }
+.photo img { position: absolute; }
+.card { border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.5); border: 2px solid rgba(140,200,255,.25); }
+.card img { width: 100%; display: block; }
+.tag { position: absolute; left: 14px; bottom: 12px; background: rgba(3,12,30,.8); border-radius: 8px; padding: 4px 12px; font-size: 16px; font-weight: 600; }
+.was { font-size: 22px; color: #AFC4E0; margin-top: 18px; }
+.was s { color: #FF8A86; }
