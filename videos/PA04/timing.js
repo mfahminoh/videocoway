@@ -49,21 +49,21 @@ window.V = {
   ],
   [
    37.44,
-   41.34,
+   44.87,
    "Suhu fridge dan freezer *berasingan.* Drawer *kawalan kelembapan* untuk sayur dan buah."
   ],
   [
-   42.07,
-   46.09,
+   45.34,
+   50.51,
    "*Dual inverter. Silver ion.* Dan Cody datang jaga, *7 tahun.*"
   ],
   [
-   46.66,
-   52.47,
+   51.03,
+   54.49,
    "Dari *RM84 sebulan.* Kurang *RM3 sehari.*"
   ],
   [
-   53.1,
+   55.25,
    60.44,
    "Dia dah bagi yang terbaik untuk keluarga. *Dah tiba masa dia dapat yang terbaik.*"
   ],
@@ -126,84 +126,84 @@ window.V = {
   ],
   [
    "whoosh",
-   37.19,
+   39.42,
    0.07
   ],
   [
    "chime",
-   37.44,
+   39.669,
    0.1,
    1568
   ],
   [
    "chime",
-   39.39,
+   42.047,
    0.1,
    1764
   ],
   [
    "whoosh",
-   41.82,
+   45.09,
    0.07
   ],
   [
    "chime",
-   42.07,
+   45.34,
    0.1,
    1568
   ],
   [
    "chime",
-   43.075,
+   46.633,
    0.1,
    1764
   ],
   [
    "chime",
-   44.08,
+   47.925,
    0.1,
    1960
   ],
   [
    "whoosh",
-   46.41,
+   50.78,
    0.07
   ],
   [
    "shimmer",
-   46.66,
+   51.03,
    0.07
   ],
   [
    "shimmer",
-   46.66,
+   51.03,
    0.08
   ],
   [
    "chime",
-   46.809999999999995,
+   51.18,
    0.12,
    2093
   ],
   [
    "pop",
-   48.694,
+   52.241,
    0.12,
    900
   ],
   [
    "whoosh",
-   52.85,
+   55.0,
    0.07
   ],
   [
    "whoosh",
-   56.37,
+   57.49,
    0.07
   ],
   [
    "shimmer",
-   56.77,
+   57.845,
    0.07
   ],
   [

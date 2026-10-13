@@ -85,49 +85,49 @@ window.SPEC = {
    "kb": "in",
    "grade": "cool",
    "t0": 35.14,
-   "t1": 37.44
+   "t1": 39.669
   },
   {
    "img": "../../assets/img/coway_fridge/715_humidity.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 160,
-   "t0": 37.44,
-   "t1": 42.07
+   "t0": 39.669,
+   "t1": 45.34
   },
   {
    "img": "../../assets/img/coway_fridge/715_inverter.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 200,
-   "t0": 42.07,
-   "t1": 46.66
+   "t0": 45.34,
+   "t1": 51.03
   },
   {
    "color": "cw",
-   "t0": 46.66,
-   "t1": 53.1
+   "t0": 51.03,
+   "t1": 55.25
   },
   {
    "img": "../../assets/img/peti_ais/pa04_c.jpg",
    "kb": "in",
    "grade": "cool",
    "zx": 40,
-   "t0": 53.1,
-   "t1": 56.623
+   "t0": 55.25,
+   "t1": 57.741
   },
   {
    "img": "../../assets/img/coway_fridge/715_open.jpg",
    "kb": "in",
    "grade": "cool",
-   "t0": 56.623,
+   "t0": 57.741,
    "t1": 65.16
   }
  ],
  "els": [
   {
    "type": "big",
-   "top": 230,
+   "top": 560,
    "text": "65″",
    "sub": "TV BARU",
    "size": 190,
@@ -136,7 +136,7 @@ window.SPEC = {
   },
   {
    "type": "big",
-   "top": 230,
+   "top": 560,
    "text": "2 TAHUN",
    "sub": "TUKAR HANDPHONE",
    "size": 150,
@@ -180,8 +180,9 @@ window.SPEC = {
    "top": 190,
    "title": "Side-by-Side 715L",
    "sub": "715 liter · Dual inverter",
+   "size": 88,
    "t0": 35.14,
-   "t1": 37.18
+   "t1": 39.669
   },
   {
    "type": "feats",
@@ -190,17 +191,17 @@ window.SPEC = {
     {
      "icon": "temp",
      "title": "Suhu fridge &amp; freezer berasingan",
-     "t": 37.44
+     "t": 39.669
     },
     {
      "icon": "leaf",
      "title": "Drawer kawalan kelembapan",
      "sub": "Untuk sayur &amp; buah",
-     "t": 39.39
+     "t": 42.047
     }
    ],
-   "t0": 37.44,
-   "t1": 41.54
+   "t0": 39.669,
+   "t1": 45.07
   },
   {
    "type": "feats",
@@ -209,28 +210,28 @@ window.SPEC = {
     {
      "icon": "bolt",
      "title": "Dual inverter",
-     "t": 42.07
+     "t": 45.34
     },
     {
      "icon": "shield",
      "title": "Silver ion",
-     "t": 43.075
+     "t": 46.633
     },
     {
      "icon": "heart",
      "title": "Cody datang jaga",
      "sub": "Heart Service 7 tahun",
-     "t": 44.08
+     "t": 47.925
     }
    ],
-   "t0": 42.07,
-   "t1": 46.29
+   "t0": 45.34,
+   "t1": 50.71
   },
   {
    "type": "logo",
    "top": 120,
-   "t0": 46.66,
-   "t1": 52.47
+   "t0": 51.03,
+   "t1": 54.49
   },
   {
    "type": "price",
@@ -239,9 +240,9 @@ window.SPEC = {
    "amount": "84",
    "per": "sebulan",
    "note": "Kurang RM3 sehari",
-   "t0": 46.66,
-   "t1": 52.77,
-   "noteT": 49.855
+   "t0": 51.03,
+   "t1": 54.79,
+   "noteT": 52.933
   },
   {
    "type": "photo",
@@ -252,13 +253,13 @@ window.SPEC = {
    "src": "../../assets/img/coway_fridge/715_kitchen2.jpg",
    "pos": "50% 45%",
    "label": "Side-by-Side 715L",
-   "t0": 48.694,
-   "t1": 52.77
+   "t0": 52.241,
+   "t1": 54.79
   },
   {
    "type": "logo",
    "top": 110,
-   "t0": 56.77,
+   "t0": 57.845,
    "t1": null
   },
   {
@@ -266,7 +267,7 @@ window.SPEC = {
    "top": 820,
    "dim": 0.55,
    "tag": "Dah tiba masa<br>dia dapat yang terbaik.",
-   "t0": 56.77,
+   "t0": 57.845,
    "t1": null,
    "btnT": 61.07
   }

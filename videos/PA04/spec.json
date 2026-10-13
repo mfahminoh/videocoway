@@ -81,7 +81,7 @@
    "grade": "cool"
   },
   {
-   "at": "@10",
+   "at": "@10%30",
    "img": "coway_fridge/715_humidity.jpg",
    "fit": "contain",
    "kb": "in",
@@ -166,7 +166,7 @@
   {
    "type": "prod",
    "in": "@09",
-   "out": "@09e+0.3",
+   "out": "@10%30",
    "top": 190,
    "title": "Side-by-Side 715L",
    "sub": "715 liter · Dual inverter",
@@ -174,20 +174,20 @@
   },
   {
    "type": "feats",
-   "in": "@10",
+   "in": "@10%30",
    "out": "@10e+0.2",
    "top": 170,
    "items": [
     {
      "icon": "temp",
      "title": "Suhu fridge &amp; freezer berasingan",
-     "at": "@10"
+     "at": "@10%30"
     },
     {
      "icon": "leaf",
      "title": "Drawer kawalan kelembapan",
      "sub": "Untuk sayur &amp; buah",
-     "at": "@10%50"
+     "at": "@10%62"
     }
    ]
   },
