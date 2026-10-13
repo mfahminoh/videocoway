@@ -8,15 +8,15 @@ window.SPEC = {
    "zx": 50,
    "zy": 40,
    "t0": -0.4,
-   "t1": 3.56
+   "t1": 3.58
   },
   {
    "img": "../../assets/img/peti_ais/pa03_a.jpg",
    "kb": "right",
    "grade": "vintage",
    "cut": true,
-   "t0": 3.56,
-   "t1": 8.69
+   "t0": 3.58,
+   "t1": 9.06
   },
   {
    "img": "../../assets/img/peti_ais/pa03_b.jpg",
@@ -24,15 +24,15 @@ window.SPEC = {
    "grade": "vintage",
    "zx": 40,
    "zy": 40,
-   "t0": 8.69,
-   "t1": 12.05
+   "t0": 9.06,
+   "t1": 14.97
   },
   {
    "img": "../../assets/img/peti_ais/pa03_c.jpg",
    "kb": "out",
    "grade": "warm",
-   "t0": 12.05,
-   "t1": 13.68
+   "t0": 14.97,
+   "t1": 17.92
   },
   {
    "img": "../../assets/img/peti_ais/pa03_c.jpg",
@@ -41,23 +41,23 @@ window.SPEC = {
    "zx": 72,
    "zy": 55,
    "cut": true,
-   "t0": 13.68,
-   "t1": 16.69
+   "t0": 17.92,
+   "t1": 21.19
   },
   {
    "img": "../../assets/img/peti_ais/pa03_c.jpg",
    "kb": "up",
    "grade": "night",
    "zx": 70,
-   "t0": 16.69,
-   "t1": 21.29
+   "t0": 21.19,
+   "t1": 28.66
   },
   {
    "img": "../../assets/img/peti_ais/pa03_a.jpg",
    "kb": "still",
    "grade": "vintage",
-   "t0": 21.29,
-   "t1": 25.14
+   "t0": 28.66,
+   "t1": 34.6
   },
   {
    "img": "../../assets/img/peti_ais/pa03_d.jpg",
@@ -65,16 +65,16 @@ window.SPEC = {
    "grade": "warm",
    "zx": 60,
    "zy": 40,
-   "t0": 25.14,
-   "t1": 27.57
+   "t0": 34.6,
+   "t1": 38.46
   },
   {
    "img": "../../assets/img/peti_ais/pa03_d.jpg",
    "kb": "out",
    "grade": "warm",
    "cut": true,
-   "t0": 27.57,
-   "t1": 30.62
+   "t0": 38.46,
+   "t1": 43.15
   },
   {
    "clip": "551_bigspace",
@@ -82,16 +82,16 @@ window.SPEC = {
    "c0": 0.2,
    "c1": 4.6,
    "kb": "still",
-   "t0": 30.62,
-   "t1": 34.799
+   "t0": 43.15,
+   "t1": 46.727
   },
   {
    "img": "../../assets/img/coway_fridge/551_open_food.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 60,
-   "t0": 34.799,
-   "t1": 36.7
+   "t0": 46.727,
+   "t1": 48.7
   },
   {
    "clip": "551_convert",
@@ -100,21 +100,21 @@ window.SPEC = {
    "c1": 5.0,
    "kb": "still",
    "oy": 150,
-   "t0": 36.7,
-   "t1": 40.88
+   "t0": 48.7,
+   "t1": 54.54
   },
   {
    "img": "../../assets/img/coway_fridge/551_deo_cubes.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": -150,
-   "t0": 40.88,
-   "t1": 44.98
+   "t0": 54.54,
+   "t1": 59.21
   },
   {
    "color": "cw",
-   "t0": 44.98,
-   "t1": 54.05
+   "t0": 59.21,
+   "t1": 64.36
   },
   {
    "img": "../../assets/img/coway_fridge/551_glow.png",
@@ -122,8 +122,8 @@ window.SPEC = {
    "kb": "still",
    "sc": 0.62,
    "oy": -430,
-   "t0": 54.05,
-   "t1": 60.49
+   "t0": 64.36,
+   "t1": 70.15
   }
  ],
  "els": [
@@ -133,8 +133,8 @@ window.SPEC = {
    "from": 2014,
    "to": 2014,
    "label": "TAHUN KAMI KAHWIN",
-   "t0": 0.01,
-   "t1": 8.17
+   "t0": 0.1,
+   "t1": 8.66
   },
   {
    "type": "year",
@@ -144,8 +144,8 @@ window.SPEC = {
    "delay": 0,
    "dur": 1.6,
    "label": "SEKARANG",
-   "t0": 13.68,
-   "t1": 16.86
+   "t0": 17.92,
+   "t1": 21.39
   },
   {
    "type": "quote",
@@ -157,20 +157,20 @@ window.SPEC = {
     "*Dia dah tak larat.*"
    ],
    "lineAt": [
-    21.29,
-    23.516
+    28.66,
+    32.051
    ],
    "size": 84,
-   "t0": 21.29,
-   "t1": 25.48
+   "t0": 28.66,
+   "t1": 34.73
   },
   {
    "type": "prod",
    "top": 190,
    "title": "Multi-Door 551L",
    "sub": "4 pintu · 551 liter",
-   "t0": 34.799,
-   "t1": 36.79
+   "t0": 46.727,
+   "t1": 48.46
   },
   {
    "type": "feats",
@@ -180,11 +180,11 @@ window.SPEC = {
      "icon": "swap",
      "title": "Freezer boleh tukar jadi fridge",
      "sub": "Stok Raya &amp; kenduri ada tempat",
-     "t": 36.7
+     "t": 48.7
     }
    ],
-   "t0": 36.7,
-   "t1": 40.93
+   "t0": 48.7,
+   "t1": 54.27
   },
   {
    "type": "feats",
@@ -194,23 +194,23 @@ window.SPEC = {
      "icon": "shield",
      "title": "Silver ion",
      "sub": "99.99% E. coli &amp; S. aureus",
-     "t": 40.88
+     "t": 54.54
     },
     {
      "icon": "wind",
      "title": "Penapis bau",
      "sub": "Bau tak bercampur",
-     "t": 42.855
+     "t": 56.51
     }
    ],
-   "t0": 40.88,
-   "t1": 45.13
+   "t0": 54.54,
+   "t1": 58.78
   },
   {
    "type": "logo",
    "top": 120,
-   "t0": 44.98,
-   "t1": 53.95
+   "t0": 59.21,
+   "t1": 63.8
   },
   {
    "type": "price",
@@ -219,9 +219,9 @@ window.SPEC = {
    "amount": "99",
    "per": "sebulan",
    "note": "Cody datang jaga · 7 tahun",
-   "t0": 44.98,
-   "t1": 54.25,
-   "noteT": 49.017
+   "t0": 59.21,
+   "t1": 64.1,
+   "noteT": 61.276
   },
   {
    "type": "photo",
@@ -232,22 +232,22 @@ window.SPEC = {
    "src": "../../assets/img/peti_ais/pa03_d.jpg",
    "pos": "50% 35%",
    "label": "Untuk keluarga yang membesar",
-   "t0": 47.671,
-   "t1": 54.25
+   "t0": 60.587,
+   "t1": 64.1
   },
   {
    "type": "logo",
    "top": 110,
-   "t0": 53.85,
+   "t0": 64.16,
    "t1": null
   },
   {
    "type": "cta",
    "top": 930,
    "tag": "Keluarga dah membesar.<br>Dapur pun patut membesar.",
-   "t0": 53.85,
+   "t0": 64.16,
    "t1": null,
-   "btnT": 54.05
+   "btnT": 64.36
   }
  ],
  "clips": {
