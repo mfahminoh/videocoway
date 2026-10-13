@@ -1,0 +1,281 @@
+{
+ "slug": "siapa-nak-datang",
+ "voice": "Algieba",
+ "style_tts": "Say in Malaysian Malay, slowly and emotionally, like a heartfelt story in a touching TV commercial, with natural pauses between sentences, voice of a tired but sincere father in his late thirties",
+ "lift": "@10",
+ "shots": [
+  {
+   "at": 0,
+   "img": "peti_ais/pa02_a.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 62,
+   "zy": 38
+  },
+  {
+   "at": "@02",
+   "img": "peti_ais/pa02_b.jpg",
+   "kb": "in",
+   "grade": "night"
+  },
+  {
+   "at": "@03",
+   "img": "peti_ais/pa02_d.jpg",
+   "kb": "in",
+   "grade": "night",
+   "zx": 55,
+   "zy": 45
+  },
+  {
+   "at": "@04",
+   "img": "peti_ais/pa02_a.jpg",
+   "kb": "out",
+   "grade": "warm",
+   "zx": 40,
+   "zy": 30
+  },
+  {
+   "at": "@05",
+   "img": "peti_ais/pa02_b.jpg",
+   "kb": "out",
+   "grade": "night"
+  },
+  {
+   "at": "@07",
+   "img": "peti_ais/pa02_c.jpg",
+   "kb": "right",
+   "grade": "night"
+  },
+  {
+   "at": "@08",
+   "img": "peti_ais/pa02_d.jpg",
+   "kb": "still",
+   "grade": "night"
+  },
+  {
+   "at": "@09",
+   "img": "peti_ais/pa02_d.jpg",
+   "kb": "in",
+   "grade": "night",
+   "zx": 52,
+   "zy": 42,
+   "cut": true
+  },
+  {
+   "at": "@10",
+   "clip": "551_bigspace",
+   "fit": "contain",
+   "c0": 0.2,
+   "c1": 4.6,
+   "kb": "still"
+  },
+  {
+   "at": "@11",
+   "img": "coway_fridge/hs_step4.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 130
+  },
+  {
+   "at": "@11%55",
+   "img": "coway_fridge/hs_step2.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 130
+  },
+  {
+   "at": "@12",
+   "img": "coway_fridge/715_kitchen2.jpg",
+   "kb": "in",
+   "grade": "cool"
+  },
+  {
+   "at": "@13",
+   "color": "cw"
+  },
+  {
+   "at": "@14",
+   "img": "coway_fridge/715_kitchen1.jpg",
+   "kb": "in",
+   "grade": "cool"
+  }
+ ],
+ "els": [
+  {
+   "type": "stamp",
+   "in": "@01%45",
+   "out": "@01e+0.4",
+   "top": 1180,
+   "text": "DAH BAYAR",
+   "rot": -8
+  },
+  {
+   "type": "cal",
+   "in": "@03",
+   "out": "@04e",
+   "top": 200,
+   "month": "MINGGU LEPAS",
+   "items": [
+    {
+     "text": "ISNIN",
+     "at": "@03"
+    },
+    {
+     "text": "RABU",
+     "at": "@04"
+    }
+   ]
+  },
+  {
+   "type": "bubble",
+   "in": "@03%50",
+   "out": "@03e+0.3",
+   "top": 700,
+   "left": 110,
+   "who": "Kedai servis",
+   "text": "“Nanti kami check, encik.”"
+  },
+  {
+   "type": "stamp",
+   "in": "@04%62",
+   "out": "@04e+0.3",
+   "top": 1180,
+   "text": "KENA BAYAR",
+   "rot": -6
+  },
+  {
+   "type": "big",
+   "in": "@05%45",
+   "out": "@05e+0.2",
+   "top": 560,
+   "text": "2–3 BULAN",
+   "sub": "TUNGGU ALAT GANTI"
+  },
+  {
+   "type": "big",
+   "in": "@06",
+   "out": "@06e+0.4",
+   "top": 560,
+   "text": "3 JAM",
+   "color": "#FFD27A",
+   "sub": "LAUK TAK BOLEH TUNGGU"
+  },
+  {
+   "type": "quote",
+   "in": "@08",
+   "out": "@08e+0.5",
+   "top": 640,
+   "dim": 0.55,
+   "hideCap": true,
+   "lines": [
+    "Waranti ada…",
+    "*tapi siapa nak datang?*"
+   ],
+   "lineAt": [
+    "@08",
+    "@08%45"
+   ]
+  },
+  {
+   "type": "quote",
+   "in": "@09%40",
+   "out": "@09e+0.2",
+   "top": 640,
+   "dim": 0.6,
+   "size": 84,
+   "lines": [
+    "Masalah sebenar,",
+    "*tak ada orang yang jaga.*"
+   ],
+   "lineAt": [
+    "@09%40",
+    "@09%68"
+   ]
+  },
+  {
+   "type": "logo",
+   "in": "@10",
+   "out": "@10e",
+   "top": 150
+  },
+  {
+   "type": "kicker",
+   "in": "@10%45",
+   "out": "@10e",
+   "top": 260,
+   "text": "Ada orang yang datang"
+  },
+  {
+   "type": "kicker",
+   "in": "@11",
+   "out": "@11e+0.2",
+   "top": 150,
+   "text": "Heart Service · 7 tahun"
+  },
+  {
+   "type": "feats",
+   "in": "@11",
+   "out": "@11e+0.2",
+   "top": 250,
+   "items": [
+    {
+     "icon": "heart",
+     "title": "Cody datang servis berkala",
+     "at": "@11"
+    },
+    {
+     "icon": "wind",
+     "title": "Tukar penapis bau",
+     "at": "@11%50"
+    },
+    {
+     "icon": "doors",
+     "title": "Jaga getah pintu",
+     "at": "@11%68"
+    }
+   ]
+  },
+  {
+   "type": "logo",
+   "in": "@13",
+   "out": "@13e",
+   "top": 120
+  },
+  {
+   "type": "price",
+   "in": "@13",
+   "out": "@13e+0.3",
+   "top": 330,
+   "label": "DARI",
+   "amount": "84",
+   "per": "sebulan",
+   "note": "Heart Service · 7 tahun",
+   "noteAt": "@13%60"
+  },
+  {
+   "type": "photo",
+   "in": "@13%40",
+   "out": "@13e+0.3",
+   "top": 900,
+   "left": 140,
+   "w": 800,
+   "h": 470,
+   "src": "coway_fridge/715_kitchen1.jpg",
+   "pos": "50% 45%",
+   "label": "Side-by-Side 715L"
+  },
+  {
+   "type": "logo",
+   "in": "@14-0.2",
+   "top": 110
+  },
+  {
+   "type": "cta",
+   "in": "@14-0.2",
+   "top": 820,
+   "dim": 0.55,
+   "tag": "Peti ais yang<br>tak buat awak risau.",
+   "btnAt": "@14"
+  }
+ ]
+}

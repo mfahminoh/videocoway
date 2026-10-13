@@ -1,0 +1,72 @@
+[
+ {
+  "id": "01",
+  "text": "TV dah enam puluh lima inci. Sofa dah tukar baru.",
+  "cap": "TV dah *65 inci.* Sofa dah tukar baru."
+ },
+ {
+  "id": "02",
+  "text": "Handphone, tukar tiap dua tahun.",
+  "cap": "Handphone, tukar *tiap 2 tahun.*"
+ },
+ {
+  "id": "03",
+  "text": "Tapi peti ais... masih yang berpeluh tu.",
+  "cap": ""
+ },
+ {
+  "id": "04",
+  "text": "Masih kena tolak pintu kuat-kuat, baru rapat.",
+  "cap": "Masih kena *tolak pintu kuat-kuat,* baru rapat."
+ },
+ {
+  "id": "05",
+  "text": "Padahal, dapur tu tempat isteri saya masak untuk kami. Setiap hari.",
+  "cap": "Padahal, dapur tu tempat *isteri saya masak untuk kami.* Setiap hari."
+ },
+ {
+  "id": "06",
+  "text": "Dia yang bangun paling awal. Dia yang tidur paling lewat.",
+  "cap": "Dia yang *bangun paling awal.* Dia yang *tidur paling lewat.*"
+ },
+ {
+  "id": "07",
+  "text": "Rupanya, saya upgrade semua benda yang saya guna. Tapi bukan benda yang dia guna.",
+  "cap": "Rupanya, saya upgrade semua benda *yang saya guna.* Tapi bukan benda *yang dia guna.*"
+ },
+ {
+  "id": "08",
+  "text": "Jadi kali ni, giliran dapur dia.",
+  "cap": "Jadi kali ni, *giliran dapur dia.*"
+ },
+ {
+  "id": "09",
+  "text": "Peti ais side-by-side Coway. Tujuh ratus lima belas liter.",
+  "cap": "Peti ais *side-by-side Coway.* 715 liter."
+ },
+ {
+  "id": "10",
+  "text": "Suhu fridge dan freezer berasingan. Drawer kawalan kelembapan untuk sayur dan buah.",
+  "cap": "Suhu fridge dan freezer *berasingan.* Drawer *kawalan kelembapan* untuk sayur dan buah."
+ },
+ {
+  "id": "11",
+  "text": "Dual inverter. Silver ion. Dan Cody datang jaga, tujuh tahun.",
+  "cap": "*Dual inverter. Silver ion.* Dan Cody datang jaga, *7 tahun.*"
+ },
+ {
+  "id": "12",
+  "text": "Dari lapan puluh empat ringgit sebulan. Kurang tiga ringgit sehari.",
+  "cap": "Dari *RM84 sebulan.* Kurang *RM3 sehari.*"
+ },
+ {
+  "id": "13",
+  "text": "Dia dah bagi yang terbaik untuk keluarga. Dah tiba masa dia dapat yang terbaik.",
+  "cap": "Dia dah bagi yang terbaik untuk keluarga. *Dah tiba masa dia dapat yang terbaik.*"
+ },
+ {
+  "id": "14",
+  "text": "WhatsApp saya sekarang.",
+  "cap": "*WhatsApp saya sekarang.*"
+ }
+]

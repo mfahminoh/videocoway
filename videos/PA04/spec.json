@@ -1,0 +1,260 @@
+{
+ "slug": "tv-dah-65-inci",
+ "voice": "Achird",
+ "style_tts": "Say in Malaysian Malay, slowly and emotionally, like a heartfelt story in a touching TV commercial, with natural pauses between sentences, voice of a loving, reflective husband in his thirties",
+ "lift": "@09",
+ "shots": [
+  {
+   "at": 0,
+   "img": "peti_ais/pa04_a.jpg",
+   "kb": "in",
+   "grade": "cool",
+   "zx": 50,
+   "zy": 30
+  },
+  {
+   "at": "@02",
+   "img": "peti_ais/pa04_a.jpg",
+   "kb": "right",
+   "grade": "cool",
+   "zx": 40,
+   "zy": 60,
+   "cut": true
+  },
+  {
+   "at": "@03",
+   "img": "peti_ais/pa04_b.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 35,
+   "zy": 40
+  },
+  {
+   "at": "@04",
+   "img": "peti_ais/pa04_b.jpg",
+   "kb": "up",
+   "grade": "warm",
+   "zx": 40,
+   "zy": 50,
+   "cut": true
+  },
+  {
+   "at": "@05",
+   "img": "peti_ais/pa04_c.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 45,
+   "zy": 45
+  },
+  {
+   "at": "@06",
+   "img": "peti_ais/pa04_c.jpg",
+   "kb": "left",
+   "grade": "warm",
+   "cut": true
+  },
+  {
+   "at": "@07",
+   "img": "peti_ais/pa04_a.jpg",
+   "kb": "out",
+   "grade": "night"
+  },
+  {
+   "at": "@07%52",
+   "img": "peti_ais/pa04_c.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 88,
+   "zy": 35
+  },
+  {
+   "at": "@08",
+   "img": "peti_ais/pa04_c.jpg",
+   "kb": "still",
+   "grade": "warm",
+   "cut": true
+  },
+  {
+   "at": "@09",
+   "img": "coway_fridge/715_kitchen1.jpg",
+   "kb": "in",
+   "grade": "cool"
+  },
+  {
+   "at": "@10",
+   "img": "coway_fridge/715_humidity.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 160
+  },
+  {
+   "at": "@11",
+   "img": "coway_fridge/715_inverter.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 200
+  },
+  {
+   "at": "@12",
+   "color": "cw"
+  },
+  {
+   "at": "@13",
+   "img": "peti_ais/pa04_c.jpg",
+   "kb": "in",
+   "grade": "cool",
+   "zx": 40
+  },
+  {
+   "at": "@13%48",
+   "img": "coway_fridge/715_open.jpg",
+   "kb": "in",
+   "grade": "cool"
+  }
+ ],
+ "els": [
+  {
+   "type": "big",
+   "in": "@01",
+   "out": "@01e+0.2",
+   "top": 230,
+   "text": "65″",
+   "sub": "TV BARU",
+   "size": 190
+  },
+  {
+   "type": "big",
+   "in": "@02",
+   "out": "@02e+0.3",
+   "top": 230,
+   "text": "2 TAHUN",
+   "sub": "TUKAR HANDPHONE",
+   "size": 150
+  },
+  {
+   "type": "quote",
+   "in": "@03",
+   "out": "@03e+0.5",
+   "top": 250,
+   "dim": 0.35,
+   "hideCap": true,
+   "lines": [
+    "Tapi peti ais…",
+    "*masih yang berpeluh tu.*"
+   ],
+   "lineAt": [
+    "@03",
+    "@03%45"
+   ]
+  },
+  {
+   "type": "quote",
+   "in": "@08",
+   "out": "@08e+0.5",
+   "top": 640,
+   "dim": 0.55,
+   "hideCap": true,
+   "lines": [
+    "Jadi kali ni,",
+    "*giliran dapur dia.*"
+   ],
+   "lineAt": [
+    "@08",
+    "@08%40"
+   ]
+  },
+  {
+   "type": "prod",
+   "in": "@09",
+   "out": "@09e+0.3",
+   "top": 190,
+   "title": "Side-by-Side 715L",
+   "sub": "715 liter · Dual inverter"
+  },
+  {
+   "type": "feats",
+   "in": "@10",
+   "out": "@10e+0.2",
+   "top": 170,
+   "items": [
+    {
+     "icon": "temp",
+     "title": "Suhu fridge &amp; freezer berasingan",
+     "at": "@10"
+    },
+    {
+     "icon": "leaf",
+     "title": "Drawer kawalan kelembapan",
+     "sub": "Untuk sayur &amp; buah",
+     "at": "@10%50"
+    }
+   ]
+  },
+  {
+   "type": "feats",
+   "in": "@11",
+   "out": "@11e+0.2",
+   "top": 140,
+   "items": [
+    {
+     "icon": "bolt",
+     "title": "Dual inverter",
+     "at": "@11"
+    },
+    {
+     "icon": "shield",
+     "title": "Silver ion",
+     "at": "@11%25"
+    },
+    {
+     "icon": "heart",
+     "title": "Cody datang jaga",
+     "sub": "Heart Service 7 tahun",
+     "at": "@11%50"
+    }
+   ]
+  },
+  {
+   "type": "logo",
+   "in": "@12",
+   "out": "@12e",
+   "top": 120
+  },
+  {
+   "type": "price",
+   "in": "@12",
+   "out": "@12e+0.3",
+   "top": 330,
+   "label": "DARI",
+   "amount": "84",
+   "per": "sebulan",
+   "note": "Kurang RM3 sehari",
+   "noteAt": "@12%55"
+  },
+  {
+   "type": "photo",
+   "in": "@12%35",
+   "out": "@12e+0.3",
+   "top": 900,
+   "left": 140,
+   "w": 800,
+   "h": 470,
+   "src": "coway_fridge/715_kitchen2.jpg",
+   "pos": "50% 45%",
+   "label": "Side-by-Side 715L"
+  },
+  {
+   "type": "logo",
+   "in": "@13%50",
+   "top": 110
+  },
+  {
+   "type": "cta",
+   "in": "@13%50",
+   "top": 820,
+   "dim": 0.55,
+   "tag": "Dah tiba masa<br>dia dapat yang terbaik.",
+   "btnAt": "@14-0.3"
+  }
+ ]
+}

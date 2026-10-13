@@ -1,0 +1,239 @@
+{
+ "slug": "mak-kata-masih-okay",
+ "voice": "Aoede",
+ "style_tts": "Say in Malaysian Malay, slowly and emotionally, like a heartfelt story in a touching TV commercial, with natural pauses between sentences, voice of a caring adult daughter talking about her elderly mother",
+ "lift": "@08",
+ "shots": [
+  {
+   "at": 0,
+   "img": "peti_ais/pa05_a.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 60,
+   "zy": 35
+  },
+  {
+   "at": "@02",
+   "img": "peti_ais/pa05_a.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 40,
+   "zy": 50,
+   "sc": 1.15
+  },
+  {
+   "at": "@03",
+   "img": "peti_ais/pa05_b.jpg",
+   "kb": "out",
+   "grade": "night"
+  },
+  {
+   "at": "@04",
+   "img": "peti_ais/pa05_b.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 55,
+   "zy": 65,
+   "cut": true
+  },
+  {
+   "at": "@05",
+   "img": "peti_ais/pa05_a.jpg",
+   "kb": "still",
+   "grade": "night",
+   "zx": 62,
+   "zy": 28,
+   "sc": 1.25
+  },
+  {
+   "at": "@06",
+   "img": "peti_ais/pa05_c.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 50,
+   "zy": 35
+  },
+  {
+   "at": "@07",
+   "img": "peti_ais/pa05_c.jpg",
+   "kb": "still",
+   "grade": "warm",
+   "cut": true
+  },
+  {
+   "at": "@08",
+   "img": "coway_fridge/551_metal.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 60
+  },
+  {
+   "at": "@09",
+   "img": "coway_fridge/551_deo_cubes.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": -150
+  },
+  {
+   "at": "@10",
+   "img": "coway_fridge/hs_step4.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 130
+  },
+  {
+   "at": "@10%55",
+   "img": "coway_fridge/hs_step1.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 130
+  },
+  {
+   "at": "@11",
+   "color": "cw"
+  },
+  {
+   "at": "@12",
+   "img": "peti_ais/pa05_c.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 50,
+   "zy": 30
+  },
+  {
+   "at": "@13",
+   "img": "coway_fridge/551_glow.png",
+   "fit": "contain",
+   "kb": "still",
+   "sc": 0.62,
+   "oy": -430
+  }
+ ],
+ "els": [
+  {
+   "type": "bubble",
+   "in": "@01%55",
+   "out": "@01e+0.5",
+   "top": 260,
+   "left": 110,
+   "who": "Mak",
+   "text": "“Peti ais tu masih okay.”"
+  },
+  {
+   "type": "big",
+   "in": "@03%45",
+   "out": "@03%85",
+   "top": 330,
+   "text": "krrrr…",
+   "size": 140,
+   "sub": "SETIAP MALAM"
+  },
+  {
+   "type": "quote",
+   "in": "@07",
+   "out": "@07e+0.6",
+   "top": 620,
+   "dim": 0.55,
+   "hideCap": true,
+   "lines": [
+    "Jadi tahun ni,",
+    "*biar saya yang belikan.*"
+   ],
+   "lineAt": [
+    "@07",
+    "@07%40"
+   ]
+  },
+  {
+   "type": "prod",
+   "in": "@08",
+   "out": "@08e+0.2",
+   "top": 190,
+   "title": "Peti Ais Coway",
+   "small": "Multi-Door 551L",
+   "sub": "Metal cooling wall · sejuk lebih sekata"
+  },
+  {
+   "type": "feats",
+   "in": "@09",
+   "out": "@09e+0.3",
+   "top": 1040,
+   "items": [
+    {
+     "icon": "shield",
+     "title": "Silver ion",
+     "sub": "99.99% E. coli &amp; S. aureus",
+     "at": "@09"
+    },
+    {
+     "icon": "wind",
+     "title": "Penapis bau",
+     "sub": "Bau rendang tak bercampur kuih",
+     "at": "@09%45"
+    }
+   ]
+  },
+  {
+   "type": "kicker",
+   "in": "@10",
+   "out": "@10e+0.2",
+   "top": 150,
+   "text": "Heart Service · 7 tahun"
+  },
+  {
+   "type": "feats",
+   "in": "@10",
+   "out": "@10e+0.2",
+   "top": 250,
+   "items": [
+    {
+     "icon": "heart",
+     "title": "Cody datang servis berkala",
+     "sub": "Mak tak perlu call sesiapa",
+     "at": "@10"
+    }
+   ]
+  },
+  {
+   "type": "logo",
+   "in": "@11",
+   "out": "@11e",
+   "top": 120
+  },
+  {
+   "type": "price",
+   "in": "@11",
+   "out": "@11e+0.3",
+   "top": 330,
+   "label": "BAYAR BULANAN, DARI",
+   "amount": "99",
+   "per": "sebulan",
+   "note": "Cody datang jaga · 7 tahun",
+   "noteAt": "@11%50"
+  },
+  {
+   "type": "photo",
+   "in": "@11%30",
+   "out": "@11e+0.3",
+   "top": 900,
+   "left": 140,
+   "w": 800,
+   "h": 470,
+   "src": "peti_ais/pa05_c.jpg",
+   "pos": "50% 30%",
+   "label": "Hadiah untuk mak"
+  },
+  {
+   "type": "logo",
+   "in": "@13-0.2",
+   "top": 110
+  },
+  {
+   "type": "cta",
+   "in": "@13-0.2",
+   "top": 930,
+   "tag": "Kali ni, biar kami pula<br>yang jaga mak.",
+   "btnAt": "@13"
+  }
+ ]
+}
