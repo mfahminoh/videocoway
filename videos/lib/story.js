@@ -69,7 +69,7 @@ SP.els.forEach((e, i) => {
     case 'cal': h = `<div class="el c" style="${top}"><div class="cal"><b>${e.month || 'MINGGU INI'}</b><span id="${e.id}_d">${e.items[0].text}</span></div></div>`; break;
     case 'stamp': h = `<div class="el c" style="${top}"><span class="stamp" style="transform:rotate(${e.rot ?? -7}deg)">${e.text}</span></div>`; break;
     case 'year': h = `<div class="el c year" style="${top}${col}"><span id="${e.id}_n">${e.from}</span>${e.label ? `<small>${e.label}</small>` : ''}</div>`; break;
-    case 'prod': h = `<div class="el c prod" style="${top}${col}"><small>${e.small || 'Peti Ais Coway'}</small><h2>${e.title}</h2>${e.sub ? `<p>${e.sub}</p>` : ''}</div>`; break;
+    case 'prod': h = `<div class="el c prod" style="${top}${col}"><small>${e.small || 'Peti Ais Coway'}</small><h2${e.size ? ` style="font-size:${e.size}px"` : ''}>${e.title}</h2>${e.sub ? `<p>${e.sub}</p>` : ''}</div>`; break;
     case 'logo': h = `<div class="el c logo" style="${top}${col}">coway</div>`; break;
     case 'feats': h = `<div class="el c" style="${top}">${e.items.map((f, k) => `<div class="feat" id="${e.id}_${k}"><div class="ic">${icon(f.icon)}</div><div>${f.title}${f.sub ? `<small>${f.sub}</small>` : ''}</div></div>`).join('')}</div>`; break;
     case 'photo': h = `<div class="el" style="${top} left:${e.left ?? 140}px; width:${e.w ?? 800}px; height:${e.h ?? 800}px; border-radius:${e.radius ?? 40}px; overflow:hidden;
@@ -96,6 +96,7 @@ V.lines.forEach(([a, b, text]) => {
     if (cuts.length) {
       const mid = text.length / 2, k = cuts.reduce((x, y) => Math.abs(y - mid) < Math.abs(x - mid) ? y : x);
       parts = [text.slice(0, k).trim(), text.slice(k).trim()];
+      if ((parts[0].match(/\*/g) || []).length % 2) { parts[0] += '*'; parts[1] = '*' + parts[1]; }   // sorotan merentas pecahan
     }
   }
   const tot = parts.reduce((s, x) => s + x.length, 0);
@@ -197,7 +198,7 @@ function seek(T) {
   const hide = SP.els.some(e => e.hideCap && t >= e.t0 && (e.t1 == null || t < e.t1));
   if (!c || hide) set('cap', { o: 0 });
   else { $('capText').innerHTML = c.html; const a = p(t, c.t0, c.t0 + .25), b = p(t, c.hold - .2, c.hold); set('cap', { o: Math.min(a, 1 - b), y: (1 - a) * 14 }); }
-  const g = $('grain'); const f = Math.floor(T * 24);
+  const g = $('grain'); const f = Math.floor(T * 12);
   g.style.transform = `translate(${(f * 73) % 200 - 100}px,${(f * 131) % 200 - 100}px)`;
   set('flash', { o: SP.flashes ? Math.max(0, ...SP.flashes.map(x => t >= x && t < x + .35 ? (1 - (t - x) / .35) * .55 : 0)) : 0 });
   return pending;

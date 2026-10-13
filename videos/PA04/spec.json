@@ -117,7 +117,7 @@
    "type": "big",
    "in": "@01",
    "out": "@01e+0.2",
-   "top": 230,
+   "top": 560,
    "text": "65″",
    "sub": "TV BARU",
    "size": 190
@@ -126,7 +126,7 @@
    "type": "big",
    "in": "@02",
    "out": "@02e+0.3",
-   "top": 230,
+   "top": 560,
    "text": "2 TAHUN",
    "sub": "TUKAR HANDPHONE",
    "size": 150
@@ -169,7 +169,8 @@
    "out": "@09e+0.3",
    "top": 190,
    "title": "Side-by-Side 715L",
-   "sub": "715 liter · Dual inverter"
+   "sub": "715 liter · Dual inverter",
+   "size": 88
   },
   {
    "type": "feats",

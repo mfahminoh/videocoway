@@ -27,7 +27,7 @@ body { font-family: P, sans-serif; color: #fff; }
 #vig { background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,.55) 100%); }
 #shadeB { background: linear-gradient(180deg, rgba(0,0,0,.35) 0, transparent 18%, transparent 52%, rgba(0,0,0,.78) 100%); }
 #dim { background: #000; opacity: 0; }
-#grain { inset: -200px; background-image: url(grain.png); opacity: .09; mix-blend-mode: overlay; }
+#grain { inset: -200px; background-image: url(grain.png); opacity: .06; mix-blend-mode: overlay; }
 #flash { background: #fff; opacity: 0; }
 
 /* kapsyen: ayat penuh, gaya filem */

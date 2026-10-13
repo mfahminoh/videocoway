@@ -190,7 +190,8 @@
    "lineAt": [
     "@09%40",
     "@09%68"
-   ]
+   ],
+   "hideCap": true
   },
   {
    "type": "logo",

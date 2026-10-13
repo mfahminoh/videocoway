@@ -37,3 +37,19 @@ Warna: navy/biru Coway, aksen biru langit; merah/biru panas-sejuk ikut garis pad
 | `villaem3_v6_tradein.mp4` | Cerita testimoni, hijau & emas | Alah membeli, menang memakai (trade-in) | 44.0s |
 
 Bina semula: `python build_v5.py [--only v1_premium]`. Skrip VO badan: `voiceover/skrip_v5.md`.
+
+## 5 video peti ais Coway: emosi & desire (out/peti_ais/)
+Skrip dan sudut ada dalam `skrip/peti_ais.md` (berdasarkan `research/peti-ais-coway-headline-research.md`). Setiap video bawah 90 saat, portrait 1080×1920.
+
+| Fail | Sudut | Pencerita | Model / offer |
+|---|---|---|---|
+| `PA01_cium-dulu-baru-masak.mp4` | Lauk basi = duit dapur cair | Ibu muda | 551L, dari RM99/bln |
+| `PA02_siapa-nak-datang.mp4` | Mimpi ngeri repair → Heart Service | Ayah | dari RM84/bln |
+| `PA03_peti-ais-masa-kahwin.mp4` | Peti dari masa kahwin, keluarga dah membesar | Ibu | 551L, dari RM99/bln |
+| `PA04_tv-dah-65-inci.mp4` | Semua dah upgrade kecuali dapur isteri | Suami | 715L, dari RM84/bln |
+| `PA05_mak-kata-masih-okay.mp4` | Anak belikan peti ais untuk mak | Anak perempuan | 551L, dari RM99/bln |
+
+- Babak cerita: Seedream 4.5 (skill `.claude/skills/seedream`), prompt dalam `assets/img/peti_ais/prompts.json`. Untuk jana semula: `python3 videos/peti_ais_images.py [pa03_c]`.
+- Produk: gambar/klip rasmi coway.com.my dalam `assets/img/coway_fridge/` dan `assets/clips/fridge/`.
+- VO: Gemini TTS (`voiceover/gemini_tts.py`). Penyelarasan baris guna `voiceover/align.py`, disemak dengan `voiceover/transcribe_chunks.py` dan `voiceover/align_chunks.py`.
+- Bina: `python3 videos/peti_ais.py PA01 --render` (atau `all`). Edit babak/teks dalam `videos/PA0x/spec.json`, teks VO/kapsyen dalam `lines.json`.

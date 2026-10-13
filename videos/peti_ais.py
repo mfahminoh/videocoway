@@ -153,7 +153,9 @@ def build(vid, a):
         run(sys.executable, "videos/build_audio.py", f"videos/{vid}", "--mux", f"out/{vid}_noaudio.mp4")
         REVIEW.mkdir(parents=True, exist_ok=True)
         dst = REVIEW / f"{vid}_{spec['slug']}.mp4"
-        shutil.copy(ROOT / "out" / f"{vid}_final.mp4", dst)
+        # encode akhir: saiz munasabah untuk Meta/WhatsApp (grain filem mahal untuk encoder)
+        subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / "out" / f"{vid}_final.mp4"), "-c:v", "libx264", "-preset", "slow", "-crf", "22",
+                        "-maxrate", "6M", "-bufsize", "12M", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", str(dst)], check=True)
         (ROOT / "out" / f"{vid}_noaudio.mp4").unlink()
         print("siap:", dst)
 
