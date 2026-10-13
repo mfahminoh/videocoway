@@ -147,3 +147,25 @@ Animasi spring dilukis terus dalam `player.html` (SVG, tiada footage luar):
 Bilangan zon disahkan dari nota sedia ada (`elite/nota_usp_elite.md`, `lite/analisis_dan_plan.md`, laman rasmi Prime II).
 VO: `gemini-3.1-flash-tts-preview`. Semakan ASR (model lite) dengar baris 12 "Prime 2" sebagai "Prime Dual" dan
 baris 09 "Kedua" sebagai "Tidur" — kemungkinan salah dengar model lite; **dengar sendiri baris 09 & 12 sebelum iklan.**
+
+## Siri H — Emosi + explainer fabrik & topper
+| Video | Fail | Sudut | Pain (#) |
+|---|---|---|---|
+| H01 | `out/tilam/h01_topper-fabrik-sejuk-gebu-macam-hotel.mp4` (±102s) | Emosi: ibu penat seharian → malam panas tak lena → kenangan tilam hotel masa bercuti → "kenapa tilam hotel rasa lain?" → fabrik biasa vs fabrik penyejuk → foam topper nipis vs tebal → foam berliang → Coway: Prime Lite 30.5 cm, Prime II 33 cm, Elite 36 cm → topper ditukar tahun ke-3 → "malam you, macam bercuti" | #160 #161 #162 #73 |
+
+Gambar emosi (Seedream 4.5, kuota percuma): `assets/tilam/jana/ht_a_ibu_penat`, `ht_b_malam_panas`, `ht_c_kenangan_hotel`, `ht_d_lena_rumah`.
+Footage rasmi hanya selepas Coway disebut (`coolingloop` Elite, gambar Prime Lite/Prime II/Elite, topper zip Prime Lite).
+
+Rajah baharu dalam `player.html`:
+- `scene.heat`: `{y, h, mode: "biasa"|"sejuk"|"foam", label, coolAt, src, tags}`. Biasa: haba terkumpul & pantul balik ke badan.
+  Sejuk: benang penyejuk (biru) & karbon muncul pada `coolAt`, haba dibawa ke tepi. Foam: udara naik ikut saluran foam berliang.
+- `springs[].topper: {t (tebal px), k (daya serap 0–1), dim, dimCol}`: lapisan topper yang mampat; `body.hot: [{x, at}]` = titik tekanan merah.
+- `loads[].drop`: jarak blok jatuh (px). `lineup[]`: `big`, `unit`, `sub` untuk kad bukan zon (cth. ketebalan cm).
+
+Fakta (laman rasmi coway.com.my, semak 13 Okt 2026): ketebalan tilam Prime Lite 305 mm, Prime II 330 mm, Elite 360 mm (plush top premium).
+Fabrik: Prime Lite "cooling ticking"; Prime II fabrik dengan benang karbon & penyejuk (anti-statik & sejuk) + foam berliang;
+Elite sejuk + anti-statik + Sanitized®. **Ketebalan topper sahaja (cm) tidak dinyatakan di laman rasmi**, jadi video
+terangkan nipis vs tebal secara konsep dan guna ketebalan keseluruhan tilam. Topper ditukar tahun ke-3: pelanggan sewa (Elite rasmi; Lite & Prime II disahkan ejen).
+
+VO: `gemini-3.8-flash-tts` (suara "Orus"), dijana dalam 2 bahagian. `lib_vo.py` kini pecah skrip > 1150 aksara
+kepada beberapa permintaan (satu permintaan panjang gagal 502). **Dengar sendiri baris 13 ("Prime 2") sebelum iklan.**

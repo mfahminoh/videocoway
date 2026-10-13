@@ -194,6 +194,7 @@ function build(S, sc, lid) {
   }
   if (sc.diagram === 'sag') buildSag(S, lid, sc);
   (sc.springs || []).forEach(p => buildSprings(S, lid, p));
+  (sc.heat || []).forEach(f => buildHeat(S, lid, f));
   if (sc.lineup) buildLineup(S, lid, sc.lineup);
   if (sc.cta) {
     const c = sc.cta, T0 = when(lid, c.at, .05);
@@ -239,11 +240,23 @@ function buildSprings(S, lid, p) {
   const el = add(S, `<svg class="abs" style="left:40px;top:${p.y}px;overflow:visible" width="1000" height="${ph}" viewBox="0 0 1000 ${ph}"></svg>`, T, 'up');
   sv('rect', { x: 8, y: 0, width: 984, height: ph, rx: 32, fill: 'rgba(8,16,40,.6)', stroke: 'rgba(255,255,255,.14)', 'stroke-width': 2 }, el);
   const g = { el, p, n, base, H, sp, r, LT, pocket: p.mode === 'pocket', xs: [...Array(n)].map((_, i) => x0 + i * sp) };
+  g.TT = p.topper ? p.topper.t : 0; g.tk = p.topper ? (p.topper.k ?? .7) : 0;
   g.zoneBars = sv('g', { opacity: 0 }, el);
   g.gP = sv('g', {}, el); g.gW = sv('g', {}, el); g.gS = sv('g', {}, el);
   g.springs = g.xs.map(() => sv('path', { fill: 'none', stroke: '#dde5f2', 'stroke-width': 4.5, 'stroke-linejoin': 'round' }, g.gS));
   g.pockets = g.xs.map(() => sv('rect', { rx: 14, fill: 'rgba(255,255,255,.16)', stroke: 'rgba(255,255,255,.7)', 'stroke-width': 3 }, g.gP));
   g.wires = [sv('path', { fill: 'none', 'stroke-width': 6, 'stroke-linecap': 'round' }, g.gW), sv('path', { fill: 'none', 'stroke-width': 6, 'stroke-linecap': 'round' }, g.gW)];
+  if (g.TT) {
+    const id = 'pore' + Math.random().toString(36).slice(2, 8);
+    const pat = sv('pattern', { id, width: 26, height: 22, patternUnits: 'userSpaceOnUse' }, sv('defs', {}, el));
+    sv('circle', { cx: 7, cy: 7, r: 3.2, fill: 'rgba(150,120,70,.28)' }, pat); sv('circle', { cx: 20, cy: 17, r: 2.4, fill: 'rgba(150,120,70,.22)' }, pat);
+    g.topBand = [sv('path', { fill: p.topper.col || '#f3e6c8', stroke: '#fff', 'stroke-width': 3, 'stroke-linejoin': 'round' }, el), sv('path', { fill: `url(#${id})` }, el)];
+    if (p.topper.dim) {
+      g.dim = sv('g', {}, el);
+      const y0 = base - H - g.TT, y1 = base - H, c = p.topper.dimCol || 'var(--accent)';
+      sv('path', { d: `M24 ${y0} L24 ${y1} M14 ${y0} L34 ${y0} M14 ${y1} L34 ${y1}`, stroke: c, 'stroke-width': 5, 'stroke-linecap': 'round', fill: 'none' }, g.dim);
+    }
+  }
   g.layer = [sv('path', { fill: 'none', stroke: '#b9c4d8', 'stroke-width': LT + 8, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, el),
              sv('path', { fill: 'none', stroke: '#f3f6fb', 'stroke-width': LT, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, el)];
   g.pocketT = p.pocketAt !== undefined ? when(lid, p.pocketAt, 0) : (g.pocket ? -1 : 1e9);
@@ -253,6 +266,7 @@ function buildSprings(S, lid, p) {
     g.body = { T: when(lid, b.at, .1), spineT: b.spineAt !== undefined ? when(lid, b.spineAt, 0) : 1e9 };
     g.body.path = sv('path', { fill: 'rgba(110,170,255,.5)', stroke: '#a8d4ff', 'stroke-width': 4, 'stroke-linejoin': 'round' }, el);
     g.body.spine = sv('g', { opacity: 0 }, el);
+    g.body.hot = (b.hot || []).map(h => ({ x: h.x, T: when(lid, h.at, 1), c: sv('circle', { r: 46, fill: h.col || 'rgba(226,86,74,.55)', stroke: h.col ? '#fff' : '#ff8a7a', 'stroke-width': 4, opacity: 0 }, el) }));
     sv('line', { x1: 215, x2: 640, y1: 0, y2: 0, stroke: '#3ccf7a', 'stroke-width': 7, 'stroke-dasharray': '2 20', 'stroke-linecap': 'round' }, g.body.spine);
   }
   if (p.zones) {
@@ -294,7 +308,7 @@ function loadDepth(o, t) {
   return { D: 0, drop: 0, vis: true };
 }
 
-function bodyY(g, t) { return g.base - g.H - g.LT - 4 - 300 * (1 - P(t, g.body.T, g.body.T + 1.1, outC)); }
+function bodyY(g, t) { return g.base - g.H - g.TT - g.LT - 4 - 300 * (1 - P(t, g.body.T, g.body.T + 1.1, outC)); }
 
 /* lenturan permukaan tilam di x (px ke bawah) pada masa t */
 function sag(g, t, x) {
@@ -305,9 +319,11 @@ function sag(g, t, x) {
     const dist = Math.max(0, Math.abs(x - o.x) - o.w / 2);
     d += L.D * (g.pocket ? clamp(1 - dist / (g.sp * .55)) : Math.exp(-((dist / (p.spread || 300)) ** 2)));
   });
-  if (g.body) d = Math.max(d, bodyY(g, t) + curve(BODY_BOT, x) - (g.base - g.H - g.LT));
-  return clamp(d, 0, g.H * .55);
+  if (g.body) d = Math.max(d, bodyY(g, t) + curve(BODY_BOT, x) - (g.base - g.H - g.TT - g.LT));
+  return Math.max(0, d);
 }
+/* lenturan jumlah -> [spring, topper]: topper tebal serap sebahagian tekanan dulu */
+function split(g, d) { const ct = g.TT ? Math.min(d * g.tk, g.TT * .72) : 0; return [clamp(d - ct, 0, g.H * .55), ct]; }
 
 function coil(x, base, h, r) {
   let s = '';
@@ -319,7 +335,8 @@ function coil(x, base, h, r) {
 }
 
 function drawSprings(g, t) {
-  const { base, H, r, LT } = g, top = x => base - H + sag(g, t, x);
+  const { base, H, r, LT, TT } = g, top = x => base - H + split(g, sag(g, t, x))[0];
+  const ttop = x => { const [s, c] = split(g, sag(g, t, x)); return base - H + s - (TT - c); };
   const tops = g.xs.map(top);
   const pk = g.pocket ? (g.pocketT < 0 ? 1 : P(t, g.pocketT, g.pocketT + .7)) : 0;
   const zk = g.zoneT ? P(t, g.zoneT[0] - .2, g.zoneT[0] + .3) : 0;
@@ -342,9 +359,16 @@ function drawSprings(g, t) {
     g.wires.forEach(w => { w.setAttribute('stroke', col); w.setAttribute('stroke-width', (5 + 3 * wk * (1 + Math.sin(t * 8)) / 2).toFixed(2)); });
   }
   // lapisan atas tilam
-  const lp = `M${g.xs[0] - 40} ${(tops[0] - LT / 2 - 4).toFixed(1)} ` + g.xs.map((x, i) => `L${x} ${(tops[i] - LT / 2 - 4).toFixed(1)}`).join(' ') + ` L${g.xs[g.n - 1] + 40} ${(tops[g.n - 1] - LT / 2 - 4).toFixed(1)}`;
+  let lp;
+  if (TT) {
+    const xs = []; for (let x = g.xs[0] - 40; x <= g.xs[g.n - 1] + 40.1; x += 10) xs.push(x);
+    const band = 'M' + xs.map(x => `${x.toFixed(0)} ${ttop(x).toFixed(1)}`).join(' L') + ' L' + xs.slice().reverse().map(x => `${x.toFixed(0)} ${top(x).toFixed(1)}`).join(' L') + ' Z';
+    g.topBand.forEach(b => b.setAttribute('d', band));
+    lp = 'M' + xs.map(x => `${x.toFixed(0)} ${(ttop(x) - LT / 2 - 3).toFixed(1)}`).join(' L');
+  } else
+    lp = `M${g.xs[0] - 40} ${(tops[0] - LT / 2 - 4).toFixed(1)} ` + g.xs.map((x, i) => `L${x} ${(tops[i] - LT / 2 - 4).toFixed(1)}`).join(' ') + ` L${g.xs[g.n - 1] + 40} ${(tops[g.n - 1] - LT / 2 - 4).toFixed(1)}`;
   g.layer.forEach(l => l.setAttribute('d', lp));
-  const surf = x => top(x) - LT - 4;
+  const surf = x => (TT ? ttop(x) : top(x)) - LT - 4;
   g.loads.forEach(o => {
     if (o.k === 'glass') {
       const y = surf(o.x), sl = (surf(o.x + 30) - surf(o.x - 30)) / 60;
@@ -357,7 +381,7 @@ function drawSprings(g, t) {
     }
     const L = loadDepth(o, t);
     o.gr.setAttribute('opacity', L.vis ? (1 - L.drop * .4).toFixed(3) : 0);
-    o.gr.setAttribute('transform', `translate(${o.x} ${(surf(o.x) - L.drop * 320).toFixed(1)})`);
+    o.gr.setAttribute('transform', `translate(${o.x} ${(surf(o.x) - L.drop * (o.drop ?? 320)).toFixed(1)})`);
   });
   if (g.body) {
     const yb = bodyY(g, t), b = g.body;
@@ -366,16 +390,101 @@ function drawSprings(g, t) {
     b.path.setAttribute('d', d); b.path.setAttribute('opacity', P(t, b.T, b.T + .3).toFixed(3));
     b.spine.setAttribute('opacity', P(t, b.spineT, b.spineT + .5).toFixed(3));
     b.spine.setAttribute('transform', `translate(0 ${(yb - 36).toFixed(1)})`);
+    b.hot.forEach(h => {
+      const k = P(t, h.T, h.T + .4);
+      h.c.setAttribute('cx', h.x); h.c.setAttribute('cy', (yb + curve(BODY_BOT, h.x) - 6).toFixed(1));
+      h.c.setAttribute('opacity', (k * (.75 + .25 * Math.sin(t * 7))).toFixed(3));
+      h.c.setAttribute('r', (30 + 16 * k).toFixed(1));
+    });
   }
+}
+
+/* rajah haba (H01): fabrik biasa (haba terperangkap & pantul balik) vs fabrik penyejuk (haba disebar ikut benang),
+   atau foam berliang (udara naik ikut saluran) */
+const HOT = [255, 106, 74], COOL = [92, 192, 255];
+const rgb = (a, b, k) => `rgb(${a.map((v, i) => Math.round(mix(v, b[i], k))).join(',')})`;
+function buildHeat(S, lid, f) {
+  const h = f.h || 520, T = when(lid, f.at, .1);
+  const el = add(S, `<svg class="abs" style="left:40px;top:${f.y}px;overflow:visible" width="1000" height="${h}" viewBox="0 0 1000 ${h}"></svg>`, T, 'up');
+  sv('rect', { x: 8, y: 0, width: 984, height: h, rx: 32, fill: 'rgba(8,16,40,.6)', stroke: 'rgba(255,255,255,.14)', 'stroke-width': 2 }, el);
+  const o = { el, f, h, T, coolT: f.coolAt !== undefined ? when(lid, f.coolAt, 0) : (f.mode === 'sejuk' ? -1 : 1e9), parts: [] };
+  // sumber haba: badan di atas
+  sv('rect', { x: 90, y: 92, width: 820, height: 64, rx: 32, fill: 'rgba(255,120,80,.28)', stroke: 'rgba(255,150,110,.8)', 'stroke-width': 3 }, el);
+  const bt = sv('text', { x: 500, y: 136, 'text-anchor': 'middle', 'font-family': 'P', 'font-weight': 800, 'font-size': 30, 'letter-spacing': 4, fill: '#ffd2c2' }, el);
+  bt.textContent = f.src || 'HABA BADAN';
+  if (f.mode === 'foam') {
+    o.fy = 210; o.fb = h - 50;
+    sv('rect', { x: 60, y: o.fy, width: 880, height: o.fb - o.fy, rx: 22, fill: '#f3e6c8', stroke: '#fff', 'stroke-width': 3 }, el);
+    o.cols = [...Array(9)].map((_, i) => 120 + i * 95);
+    o.cols.forEach(x => sv('rect', { x: x - 15, y: o.fy + 18, width: 30, height: o.fb - o.fy - 36, rx: 15, fill: 'rgba(20,40,80,.55)' }, el));
+  } else {
+    o.fy = h - 200; o.fb = h - 60;
+    o.glow = sv('rect', { x: 40, y: o.fy - 30, width: 920, height: o.fb - o.fy + 50, rx: 26, fill: 'rgb(255,90,60)', opacity: 0 }, el);
+    for (let x = 60; x <= 940; x += 34) sv('line', { x1: x, x2: x, y1: o.fy, y2: o.fb, stroke: '#aeb5c2', 'stroke-width': 12, 'stroke-linecap': 'round' }, el);
+    o.rows = [...Array(5)].map((_, i) => {
+      const y = o.fy + 10 + i * (o.fb - o.fy - 20) / 4;
+      let d = ''; for (let x = 50; x <= 950; x += 10) d += (x > 50 ? 'L' : 'M') + x + ' ' + (y + 6 * Math.sin(x / 34 * Math.PI)).toFixed(1);
+      return { y, kind: f.mode === 'sejuk' ? ['', 'cool', '', 'carbon', ''][i] : '', el: sv('path', { d, fill: 'none', stroke: '#e4e8ef', 'stroke-width': 15, 'stroke-linecap': 'round' }, el) };
+    });
+  }
+  for (let i = 0; i < 16; i++) {
+    const c = sv('g', {}, el);
+    sv('circle', { r: 20, opacity: .25 }, c); sv('circle', { r: 10 }, c);
+    o.parts.push({ c, x: 90 + i * 55 + (i % 3) * 9, ph: (i * .37) % 1, dir: i % 2 ? 1 : -1 });
+  }
+  (S.heat = S.heat || []).push(o);
+  if (f.label) add(S, `<div class="abs" style="left:76px;top:${f.y + 24}px"><span class="kick" style="font-size:26px;letter-spacing:5px;padding:8px 22px">${f.label}</span></div>`, T, 'fade');
+  (f.tags || []).forEach(tg => {
+    const c = tg.bad ? 'var(--red)' : '#3ccf7a', pos = tg.x !== undefined ? `left:${tg.x + 40}px` : 'right:76px';
+    add(S, `<div class="abs" style="${pos};top:${f.y + (tg.y ?? 16)}px"><span class="chip" style="margin:0;font-size:34px;padding:12px 26px;border-color:${c}"><i style="color:${c}">${tg.bad ? '✕' : '✓'}</i>${tg.t}</span></div>`, when(lid, tg.at, 1), 'pop', 'pop');
+  });
+}
+function drawHeat(o, t) {
+  const f = o.f, ck = o.coolT < 0 ? 1 : P(t, o.coolT, o.coolT + .8), run = t - o.T;
+  if (o.rows) o.rows.forEach(r => r.el.setAttribute('stroke', r.kind === 'cool' ? rgb([228, 232, 239], COOL, ck) : r.kind === 'carbon' ? rgb([228, 232, 239], [70, 76, 90], ck) : '#e4e8ef'));
+  if (o.glow) {
+    const hotK = f.mode === 'biasa' ? .42 * P(t, o.T + .5, o.T + 4.5) : .22 * (1 - ck);
+    o.glow.setAttribute('fill', f.mode === 'biasa' ? 'rgb(255,90,60)' : rgb([255, 90, 60], COOL, ck));
+    o.glow.setAttribute('opacity', (f.mode === 'biasa' ? hotK : hotK + .2 * ck).toFixed(3));
+  }
+  const y0 = 160, cool = f.mode !== 'biasa';
+  o.parts.forEach((q, i) => {
+    if (run < 0) { q.c.setAttribute('opacity', 0); return; }
+    const ph = (run / 2.4 + q.ph) % 1;
+    let x = q.x + 10 * Math.sin(ph * 12 + i), y, col = HOT, op = 1;
+    if (f.mode === 'foam') {
+      // udara sejuk naik ikut saluran, bawa haba keluar ke atas & ke tepi
+      const cx = o.cols[i % o.cols.length], k = ph;
+      x = cx + 5 * Math.sin(k * 10 + i); y = mix(o.fb - 20, y0 - 40, k);
+      if (y < o.fy) { x += q.dir * (o.fy - y) * 2.2; }
+      col = rgb(COOL, COOL, 0); op = k < .1 ? k / .1 : k > .85 ? (1 - k) / .15 : 1;
+      if (i % 2) { col = rgb(COOL, HOT, clamp((o.fy - y) / 80)); }
+      q.c.setAttribute('fill', col); q.c.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)})`); q.c.setAttribute('opacity', op.toFixed(3));
+      return;
+    }
+    if (ph < .45) { y = mix(y0, o.fy - 8, ph / .45); }
+    else if (!cool || ck < .5) {           // fabrik biasa: haba terkumpul, kemudian pantul balik ke badan
+      const k = (ph - .45) / .55;
+      y = k < .4 ? o.fy - 8 + 4 * Math.sin(k * 40) : mix(o.fy - 8, y0, (k - .4) / .6);
+      op = .95;
+    } else {                               // fabrik penyejuk: haba dibawa ke tepi ikut benang & hilang
+      const k = (ph - .45) / .55, row = o.rows[1];
+      x = q.x + q.dir * k * 520; y = mix(o.fy - 8, row.y, clamp(k * 3));
+      col = rgb(HOT, COOL, clamp(k * 1.6)); op = 1 - clamp((k - .6) / .4);
+    }
+    if (typeof col !== 'string') col = rgb(col, col, 0);
+    q.c.setAttribute('fill', col); q.c.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+    q.c.setAttribute('opacity', (op * clamp(run / .4)).toFixed(3));
+  });
 }
 
 /* kad barisan tilam (P01): gambar + nama + bilangan zon */
 function buildLineup(S, lid, cards) {
   cards.forEach((c, i) => {
     const T = when(lid, c.at, .1 + i * .5), y = c.y ?? (480 + i * 345);
-    const seg = [...Array(c.zones)].map((_, j) => `<i style="background:${j % 2 ? '#a9c8ff' : '#5d8fe8'}"></i>`).join('');
+    const seg = c.zones ? [...Array(c.zones)].map((_, j) => `<i style="background:${j % 2 ? '#a9c8ff' : '#5d8fe8'}"></i>`).join('') : '';
     add(S, `<div class="abs lu" style="top:${y}px"><div class="lui"><img src="${ROOT + c.img}" style="object-position:${c.pos || '50% 50%'}"></div>
-      <div class="lut"><div class="lun">${c.name}</div><div class="luz"><b>${c.zones}</b> ZON</div><div class="lus">Pocket spring</div><div class="lub">${seg}</div></div></div>`, T, 'left', 'pop');
+      <div class="lut"><div class="lun">${c.name}</div><div class="luz"><b>${c.big ?? c.zones}</b> ${c.unit ?? 'ZON'}</div><div class="lus">${c.sub ?? 'Pocket spring'}</div>${seg ? `<div class="lub">${seg}</div>` : ''}</div></div>`, T, 'left', 'pop');
   });
 }
 
@@ -426,6 +535,7 @@ function seek(t) {
     });
     if (S.sag) drawSag(S, t);
     (S.springs || []).forEach(g => drawSprings(g, t));
+    (S.heat || []).forEach(f => drawHeat(f, t));
   });
   // klip video (urutan bingkai)
   CLIPS.forEach(r => {
