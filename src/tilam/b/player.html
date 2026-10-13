@@ -42,6 +42,16 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--bg);
 .note { position:absolute; left:60px; width:960px; text-align:center; font-size:30px; font-weight:500; color:rgba(255,255,255,.75); }
 .wa { display:flex; align-items:center; justify-content:center; gap:24px; width:880px; height:150px; border-radius:90px; background:#25d366;
   font-weight:800; font-size:48px; color:#fff; box-shadow:0 22px 60px rgba(37,211,102,.45); }
+.lu { left:60px; width:960px; height:300px; display:flex; border-radius:32px; overflow:hidden; background:rgba(8,16,40,.82); border:3px solid var(--accent); box-shadow:0 20px 50px rgba(0,0,0,.4); }
+.lui { flex:none; width:420px; height:100%; overflow:hidden; }
+.lui img { width:100%; height:100%; object-fit:cover; }
+.lut { flex:1; padding:26px 34px; }
+.lun { font-weight:800; font-size:48px; line-height:1.1; }
+.luz { font-weight:700; font-size:38px; color:var(--accent2); margin-top:6px; letter-spacing:3px; }
+.luz b { font-size:84px; font-weight:800; letter-spacing:0; }
+.lus { font-weight:500; font-size:28px; color:rgba(255,255,255,.75); }
+.lub { display:flex; gap:6px; margin-top:12px; height:22px; }
+.lub i { flex:1; border-radius:6px; }
 #cap { position:absolute; left:60px; width:960px; top:1650px; text-align:center; z-index:50; }
 #cap span { font-weight:600; font-size:44px; line-height:1.5; padding:6px 18px; border-radius:12px; background:rgba(4,10,26,.7);
   -webkit-box-decoration-break:clone; box-decoration-break:clone; }
@@ -63,6 +73,21 @@ const backOut = x => { const c1 = 1.6, c3 = c1 + 1; return 1 + c3 * Math.pow(x -
 const P = (t, a, b, e = outC) => e(clamp((t - a) / (b - a)));
 const mix = (a, b, k) => a + (b - a) * k;
 const esc = s => String(s);
+const NS = 'http://www.w3.org/2000/svg';
+function sv(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function curve(pts, x) {
+  if (x <= pts[0][0]) return pts[0][1];
+  for (let i = 1; i < pts.length; i++) if (x <= pts[i][0]) {
+    const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], k = (x - x0) / (x1 - x0);
+    return mix(y0, y1, (1 - Math.cos(Math.PI * k)) / 2);
+  }
+  return pts[pts.length - 1][1];
+}
+// badan baring mengiring (kepala kiri): kontur bawah & atas, relatif garis badan (positif = ke bawah)
+const BODY_BOT = [[70, -14], [135, 22], [205, -8], [300, 58], [440, 6], [590, 66], [700, 30], [830, 14], [935, 2]];
+const BODY_TOP = [[70, -14], [82, -72], [135, -112], [188, -80], [212, -62], [262, -120], [330, -128], [440, -94], [560, -118], [640, -110], [720, -62], [830, -44], [935, -22]];
+const ZONE_B = [40, 222, 380, 515, 690, 960];
+const ZONE_C = ['#5d8fe8', '#a9c8ff', '#5d8fe8', '#a9c8ff', '#5d8fe8'];
 Object.entries(SP.theme || {}).forEach(([k, v]) => document.documentElement.style.setProperty('--' + k, v));
 
 const LN = {}; TM.forEach(x => LN[x.id] = x);
@@ -168,6 +193,8 @@ function build(S, sc, lid) {
     add(S, `<div class="note" style="top:${sc.note.y ?? 1560}px">${sc.note.t}</div>`, T, 'fade');
   }
   if (sc.diagram === 'sag') buildSag(S, lid, sc);
+  (sc.springs || []).forEach(p => buildSprings(S, lid, p));
+  if (sc.lineup) buildLineup(S, lid, sc.lineup);
   if (sc.cta) {
     const c = sc.cta, T0 = when(lid, c.at, .05);
     const WA = '<svg width="74" height="74" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>';
@@ -201,6 +228,155 @@ function drawSag(S, t) {
   el.querySelector('.top').setAttribute('d', S.sag.topper ? `M40 ${ty} Q500 ${ty + d * 2} 960 ${ty} L960 ${y0} Q500 ${y0 + d * 2} 40 ${y0} Z` : '');
   el.querySelector('.arrow').setAttribute('opacity', (k * .95).toFixed(2));
   el.querySelector('.arrow').setAttribute('transform', `translate(0 ${(d * .9).toFixed(1)})`);
+}
+
+/* rajah: spring biasa (bersambung dawai) vs spring berpoket — tekan, pasangan + gelas air, badan & zon (P01) */
+
+function buildSprings(S, lid, p) {
+  const ph = p.h || 480, foot = p.zones ? 78 : 34, n = p.n || 13, base = ph - foot, H = p.H || Math.round(ph * .5);
+  const x0 = 70, x1 = 930, sp = (x1 - x0) / (n - 1), r = Math.min(30, sp * .34), LT = 14;
+  const T = when(lid, p.at, .1);
+  const el = add(S, `<svg class="abs" style="left:40px;top:${p.y}px;overflow:visible" width="1000" height="${ph}" viewBox="0 0 1000 ${ph}"></svg>`, T, 'up');
+  sv('rect', { x: 8, y: 0, width: 984, height: ph, rx: 32, fill: 'rgba(8,16,40,.6)', stroke: 'rgba(255,255,255,.14)', 'stroke-width': 2 }, el);
+  const g = { el, p, n, base, H, sp, r, LT, pocket: p.mode === 'pocket', xs: [...Array(n)].map((_, i) => x0 + i * sp) };
+  g.zoneBars = sv('g', { opacity: 0 }, el);
+  g.gP = sv('g', {}, el); g.gW = sv('g', {}, el); g.gS = sv('g', {}, el);
+  g.springs = g.xs.map(() => sv('path', { fill: 'none', stroke: '#dde5f2', 'stroke-width': 4.5, 'stroke-linejoin': 'round' }, g.gS));
+  g.pockets = g.xs.map(() => sv('rect', { rx: 14, fill: 'rgba(255,255,255,.16)', stroke: 'rgba(255,255,255,.7)', 'stroke-width': 3 }, g.gP));
+  g.wires = [sv('path', { fill: 'none', 'stroke-width': 6, 'stroke-linecap': 'round' }, g.gW), sv('path', { fill: 'none', 'stroke-width': 6, 'stroke-linecap': 'round' }, g.gW)];
+  g.layer = [sv('path', { fill: 'none', stroke: '#b9c4d8', 'stroke-width': LT + 8, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, el),
+             sv('path', { fill: 'none', stroke: '#f3f6fb', 'stroke-width': LT, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, el)];
+  g.pocketT = p.pocketAt !== undefined ? when(lid, p.pocketAt, 0) : (g.pocket ? -1 : 1e9);
+  g.wireT = p.wireAt !== undefined ? when(lid, p.wireAt, 0) : 1e9;
+  if (p.body) {
+    const b = p.body;
+    g.body = { T: when(lid, b.at, .1), spineT: b.spineAt !== undefined ? when(lid, b.spineAt, 0) : 1e9 };
+    g.body.path = sv('path', { fill: 'rgba(110,170,255,.5)', stroke: '#a8d4ff', 'stroke-width': 4, 'stroke-linejoin': 'round' }, el);
+    g.body.spine = sv('g', { opacity: 0 }, el);
+    sv('line', { x1: 215, x2: 640, y1: 0, y2: 0, stroke: '#3ccf7a', 'stroke-width': 7, 'stroke-dasharray': '2 20', 'stroke-linecap': 'round' }, g.body.spine);
+  }
+  if (p.zones) {
+    g.zoneT = p.zones.map(z => when(lid, z.at, 1));
+    ZONE_B.slice(0, -1).forEach((a, i) => {
+      sv('rect', { x: a + 4, y: base + 12, width: ZONE_B[i + 1] - a - 8, height: 12, rx: 6, fill: ZONE_C[i] }, g.zoneBars);
+      const tx = sv('text', { x: (a + ZONE_B[i + 1]) / 2, y: base + 62, 'text-anchor': 'middle', 'font-family': 'P', 'font-weight': 700, 'font-size': 30, fill: '#fff', opacity: 0 }, el);
+      tx.textContent = p.zones[i].t; (g.zoneTx = g.zoneTx || []).push(tx);
+    });
+  }
+  g.loads = (p.loads || []).map(ld => {
+    const o = Object.assign({ w: 190, d: 60 }, ld, { T: when(lid, ld.at, .2) });
+    o.gr = sv('g', {}, el);
+    if (o.k === 'glass') {
+      sv('path', { d: 'M-34 -100 L-26 0 L26 0 L34 -100', fill: 'rgba(255,255,255,.12)', stroke: '#fff', 'stroke-width': 5, 'stroke-linejoin': 'round' }, o.gr);
+      o.water = sv('path', { fill: 'rgba(90,170,255,.75)' }, o.gr);
+    } else {
+      sv('rect', { x: -o.w / 2, y: -74, width: o.w, height: 74, rx: 24, fill: o.col || 'var(--accent)' }, o.gr);
+      const tx = sv('text', { x: 0, y: -26, 'text-anchor': 'middle', 'font-family': 'P', 'font-weight': 800, 'font-size': 30, fill: o.ink || 'var(--ink)' }, o.gr);
+      tx.textContent = o.label || '';
+    }
+    return o;
+  });
+  if (p.label) add(S, `<div class="abs" style="left:76px;top:${p.y + 24}px"><span class="kick" style="font-size:26px;letter-spacing:5px;padding:8px 22px">${p.label}</span></div>`, T, 'fade');
+  (p.tags || []).forEach(tg => {
+    const c = tg.bad ? 'var(--red)' : '#3ccf7a', pos = tg.x !== undefined ? `left:${tg.x + 40}px` : 'right:76px';
+    add(S, `<div class="abs" style="${pos};top:${p.y + (tg.y ?? 16)}px"><span class="chip" style="margin:0;font-size:34px;padding:12px 26px;border-color:${c}"><i style="color:${c}">${tg.bad ? '✕' : '✓'}</i>${tg.t}</span></div>`, when(lid, tg.at, 1), 'pop', 'pop');
+  });
+  (S.springs = S.springs || []).push(g);
+}
+
+function loadDepth(o, t) {
+  if (o.k === 'rest') return { D: o.d, drop: 0, vis: true };
+  if (o.k === 'bounce') { const k = t - o.T; return { D: o.d * (k < 0 ? .6 : .6 + .4 * Math.sin(k * 5.5)), drop: 0, vis: true }; }
+  if (o.k === 'block') {
+    if (t < o.T) return { D: 0, drop: 1, vis: false };
+    return { D: o.d * P(t, o.T + .3, o.T + 1.1, inOut), drop: 1 - P(t, o.T, o.T + .45, x => x * x), vis: true };
+  }
+  return { D: 0, drop: 0, vis: true };
+}
+
+function bodyY(g, t) { return g.base - g.H - g.LT - 4 - 300 * (1 - P(t, g.body.T, g.body.T + 1.1, outC)); }
+
+/* lenturan permukaan tilam di x (px ke bawah) pada masa t */
+function sag(g, t, x) {
+  const p = g.p; let d = 0;
+  g.loads.forEach(o => {
+    if (o.k === 'glass') return;
+    const L = loadDepth(o, t); if (!L.vis) return;
+    const dist = Math.max(0, Math.abs(x - o.x) - o.w / 2);
+    d += L.D * (g.pocket ? clamp(1 - dist / (g.sp * .55)) : Math.exp(-((dist / (p.spread || 300)) ** 2)));
+  });
+  if (g.body) d = Math.max(d, bodyY(g, t) + curve(BODY_BOT, x) - (g.base - g.H - g.LT));
+  return clamp(d, 0, g.H * .55);
+}
+
+function coil(x, base, h, r) {
+  let s = '';
+  for (let k = 0; k <= 72; k++) {
+    const th = k / 72 * Math.PI * 10, e = k && k < 72 ? 5 * Math.cos(th) : 0;
+    s += (k ? 'L' : 'M') + (x + r * Math.sin(th)).toFixed(1) + ' ' + (base - h * k / 72 + e).toFixed(1);
+  }
+  return s;
+}
+
+function drawSprings(g, t) {
+  const { base, H, r, LT } = g, top = x => base - H + sag(g, t, x);
+  const tops = g.xs.map(top);
+  const pk = g.pocket ? (g.pocketT < 0 ? 1 : P(t, g.pocketT, g.pocketT + .7)) : 0;
+  const zk = g.zoneT ? P(t, g.zoneT[0] - .2, g.zoneT[0] + .3) : 0;
+  g.xs.forEach((x, i) => {
+    const h = base - tops[i];
+    g.springs[i].setAttribute('d', coil(x, base, h, r));
+    if (zk > 0) { const z = ZONE_B.findIndex((b, j) => x >= b && x < ZONE_B[j + 1]); g.springs[i].setAttribute('stroke', ZONE_C[Math.max(0, z)]); }
+    const pr = g.pockets[i];
+    pr.setAttribute('x', (x - r - 8).toFixed(1)); pr.setAttribute('width', 2 * r + 16);
+    pr.setAttribute('y', (tops[i] - 8).toFixed(1)); pr.setAttribute('height', (h + 14).toFixed(1));
+    pr.setAttribute('opacity', pk.toFixed(3));
+  });
+  g.zoneBars.setAttribute('opacity', zk.toFixed(3));
+  (g.zoneTx || []).forEach((tx, i) => tx.setAttribute('opacity', P(t, g.zoneT[i] - .1, g.zoneT[i] + .25).toFixed(3)));
+  // dawai penyambung (spring biasa)
+  if (!g.pocket) {
+    const wk = P(t, g.wireT, g.wireT + .5), col = wk > 0 ? 'var(--accent)' : 'rgba(221,229,242,.8)';
+    const pts = ys => g.xs.map((x, i) => `${i ? 'L' : 'M'}${(x - r).toFixed(1)} ${ys(i).toFixed(1)} L${(x + r).toFixed(1)} ${ys(i).toFixed(1)}`).join(' ');
+    g.wires[0].setAttribute('d', pts(i => tops[i])); g.wires[1].setAttribute('d', pts(() => base));
+    g.wires.forEach(w => { w.setAttribute('stroke', col); w.setAttribute('stroke-width', (5 + 3 * wk * (1 + Math.sin(t * 8)) / 2).toFixed(2)); });
+  }
+  // lapisan atas tilam
+  const lp = `M${g.xs[0] - 40} ${(tops[0] - LT / 2 - 4).toFixed(1)} ` + g.xs.map((x, i) => `L${x} ${(tops[i] - LT / 2 - 4).toFixed(1)}`).join(' ') + ` L${g.xs[g.n - 1] + 40} ${(tops[g.n - 1] - LT / 2 - 4).toFixed(1)}`;
+  g.layer.forEach(l => l.setAttribute('d', lp));
+  const surf = x => top(x) - LT - 4;
+  g.loads.forEach(o => {
+    if (o.k === 'glass') {
+      const y = surf(o.x), sl = (surf(o.x + 30) - surf(o.x - 30)) / 60;
+      const v = (sag(g, t, o.x) - sag(g, t - .05, o.x)) / .05;
+      const rot = Math.atan(sl) * 180 / Math.PI * 1.6 + clamp(v * .05, -8, 8);
+      const s = clamp(v * .12 - rot * .6, -14, 14);
+      o.gr.setAttribute('transform', `translate(${o.x} ${y.toFixed(1)}) rotate(${rot.toFixed(2)})`);
+      o.water.setAttribute('d', `M-24 -4 L24 -4 L${30} ${(-62 + s).toFixed(1)} L-30 ${(-62 - s).toFixed(1)} Z`);
+      return;
+    }
+    const L = loadDepth(o, t);
+    o.gr.setAttribute('opacity', L.vis ? (1 - L.drop * .4).toFixed(3) : 0);
+    o.gr.setAttribute('transform', `translate(${o.x} ${(surf(o.x) - L.drop * 320).toFixed(1)})`);
+  });
+  if (g.body) {
+    const yb = bodyY(g, t), b = g.body;
+    const xsB = []; for (let x = 70; x <= 935; x += 15) xsB.push(x);
+    const d = 'M' + xsB.map(x => `${x} ${(yb + curve(BODY_TOP, x)).toFixed(1)}`).join(' L') + ' L' + xsB.reverse().map(x => `${x} ${(yb + curve(BODY_BOT, x)).toFixed(1)}`).join(' L') + ' Z';
+    b.path.setAttribute('d', d); b.path.setAttribute('opacity', P(t, b.T, b.T + .3).toFixed(3));
+    b.spine.setAttribute('opacity', P(t, b.spineT, b.spineT + .5).toFixed(3));
+    b.spine.setAttribute('transform', `translate(0 ${(yb - 36).toFixed(1)})`);
+  }
+}
+
+/* kad barisan tilam (P01): gambar + nama + bilangan zon */
+function buildLineup(S, lid, cards) {
+  cards.forEach((c, i) => {
+    const T = when(lid, c.at, .1 + i * .5), y = c.y ?? (480 + i * 345);
+    const seg = [...Array(c.zones)].map((_, j) => `<i style="background:${j % 2 ? '#a9c8ff' : '#5d8fe8'}"></i>`).join('');
+    add(S, `<div class="abs lu" style="top:${y}px"><div class="lui"><img src="${ROOT + c.img}" style="object-position:${c.pos || '50% 50%'}"></div>
+      <div class="lut"><div class="lun">${c.name}</div><div class="luz"><b>${c.zones}</b> ZON</div><div class="lus">Pocket spring</div><div class="lub">${seg}</div></div></div>`, T, 'left', 'pop');
+  });
 }
 
 /* ---------- kapsyen ---------- */
@@ -249,6 +425,7 @@ function seek(t) {
       el.querySelectorAll && el.querySelectorAll('.bar').forEach(b => b.style.transform = `scaleX(${P(t, +b.dataset.at, +b.dataset.at + .3).toFixed(3)})`);
     });
     if (S.sag) drawSag(S, t);
+    (S.springs || []).forEach(g => drawSprings(g, t));
   });
   // klip video (urutan bingkai)
   CLIPS.forEach(r => {

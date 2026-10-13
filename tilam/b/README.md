@@ -132,3 +132,18 @@ Gambar produk/footage rasmi Coway hanya selepas produk disebut.
 ## Siri E — Coway Elite + perbandingan (`tilam/elite/`)
 Plan: [`../elite/plan_elite_10_video.md`](../elite/plan_elite_10_video.md). Spec: `python tilam/elite/gen_specs.py`.
 Siap: `out/tilam/gaya/e02_kinetic.mp4`, `e05_berita.mp4`, `e06_majalah.mp4`. E01, E03, E04, E08–E10 menunggu pengesahan fakta Elite (plan §5). E07 (Prime II sahaja) belum dibuat.
+
+## Siri P — Explainer spring berpoket
+| Video | Fail | Sudut | Pain (#) |
+|---|---|---|---|
+| P01 | `out/tilam/p01_cara-spring-berpoket-berfungsi.mp4` (73s) | Explainer: spring biasa (bersambung dawai) vs spring berpoket → 3 kelebihan (ikut bentuk badan, kurang gangguan pasangan, sokongan ikut zon) → semua tilam Coway guna spring berpoket: Prime Lite 5 zon, Prime II 7 zon, Elite 9 zon | #62 #66 #164 #166 |
+
+Animasi spring dilukis terus dalam `player.html` (SVG, tiada footage luar):
+- `scene.springs`: senarai panel `{y, h, H?, mode: "bonnell"|"pocket", n, label, wireAt, pocketAt, spread, loads, body, zones, tags}`.
+  `loads`: `block` (jatuh & tekan pada `at`), `rest` (YOU, diam), `bounce` (pasangan pusing mula `at`), `glass` (gelas air ikut permukaan).
+  `body: {at, spineAt}` = badan baring mengiring, spring berpoket ikut bentuk. `zones` = 5 label zon (Kepala, Bahu, Pinggang, Pinggul, Kaki).
+- `scene.lineup`: kad tilam `{name, zones, img, pos, at}`.
+
+Bilangan zon disahkan dari nota sedia ada (`elite/nota_usp_elite.md`, `lite/analisis_dan_plan.md`, laman rasmi Prime II).
+VO: `gemini-3.1-flash-tts-preview`. Semakan ASR (model lite) dengar baris 12 "Prime 2" sebagai "Prime Dual" dan
+baris 09 "Kedua" sebagai "Tidur" — kemungkinan salah dengar model lite; **dengar sendiri baris 09 & 12 sebelum iklan.**
