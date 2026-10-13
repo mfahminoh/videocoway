@@ -19,36 +19,36 @@ window.V = {
   ],
   [
    21.41,
-   25.97,
+   27.43,
    "Mak simpan lauk *untuk kami balik.* Rendang, ikan, kuih."
   ],
   [
-   26.68,
+   27.96,
    33.1,
    "Tapi separuh, *terpaksa dibuang.* Mak senyap je. Saya tahu, *dia sedih.*"
   ],
   [
    34.27,
-   39.51,
+   38.07,
    "Mak tak pernah minta apa-apa. Dia cuma nak lauk dia *sampai elok, ke mulut anak cucu.*"
   ],
   [
-   40.48,
-   42.88,
+   38.5,
+   41.45,
    ""
   ],
   [
-   43.74,
-   47.47,
+   41.93,
+   46.21,
    "Peti ais Coway. *Metal cooling wall,* sejuk lebih sekata."
   ],
   [
-   48.06,
-   51.83,
+   46.58,
+   49.94,
    "*Silver ion* dan *penapis bau.* Bau rendang tak bercampur dengan kuih."
   ],
   [
-   52.68,
+   50.31,
    58.18,
    "Yang paling saya tenang, *Cody datang servis berkala, 7 tahun.* Mak tak perlu call sesiapa."
   ],
@@ -92,7 +92,7 @@ window.V = {
   ],
   [
    "whoosh",
-   26.43,
+   27.71,
    0.07
   ],
   [
@@ -102,50 +102,50 @@ window.V = {
   ],
   [
    "boom",
-   40.48,
+   38.5,
    0.22
   ],
   [
    "whoosh",
-   43.49,
+   41.68,
    0.07
   ],
   [
    "shimmer",
-   43.74,
+   41.93,
    0.07
   ],
   [
    "whoosh",
-   47.81,
+   46.33,
    0.07
   ],
   [
    "chime",
-   48.06,
+   46.58,
    0.1,
    1568
   ],
   [
    "chime",
-   49.757,
+   48.092,
    0.1,
    1764
   ],
   [
    "whoosh",
-   52.43,
+   50.06,
    0.07
   ],
   [
    "chime",
-   52.68,
+   50.31,
    0.1,
    1568
   ],
   [
    "whoosh",
-   55.45,
+   54.39,
    0.07
   ],
   [
@@ -204,6 +204,6 @@ window.V = {
   ]
  ],
  "mood": "emotional",
- "lift": 43.74,
+ "lift": 41.93,
  "bpm": 70
 };

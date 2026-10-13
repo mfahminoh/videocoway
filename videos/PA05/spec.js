@@ -35,7 +35,7 @@ window.SPEC = {
    "zy": 65,
    "cut": true,
    "t0": 21.41,
-   "t1": 26.68
+   "t1": 27.96
   },
   {
    "img": "../../assets/img/peti_ais/pa05_a.jpg",
@@ -44,7 +44,7 @@ window.SPEC = {
    "zx": 62,
    "zy": 28,
    "sc": 1.25,
-   "t0": 26.68,
+   "t0": 27.96,
    "t1": 34.27
   },
   {
@@ -54,46 +54,46 @@ window.SPEC = {
    "zx": 50,
    "zy": 35,
    "t0": 34.27,
-   "t1": 40.48
+   "t1": 38.5
   },
   {
    "img": "../../assets/img/peti_ais/pa05_c.jpg",
    "kb": "still",
    "grade": "warm",
    "cut": true,
-   "t0": 40.48,
-   "t1": 43.74
+   "t0": 38.5,
+   "t1": 41.93
   },
   {
    "img": "../../assets/img/coway_fridge/551_metal.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 60,
-   "t0": 43.74,
-   "t1": 48.06
+   "t0": 41.93,
+   "t1": 46.58
   },
   {
    "img": "../../assets/img/coway_fridge/551_deo_cubes.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": -150,
-   "t0": 48.06,
-   "t1": 52.68
+   "t0": 46.58,
+   "t1": 50.31
   },
   {
    "img": "../../assets/img/coway_fridge/hs_step4.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 130,
-   "t0": 52.68,
-   "t1": 55.705
+   "t0": 50.31,
+   "t1": 54.639
   },
   {
    "img": "../../assets/img/coway_fridge/hs_step1.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 130,
-   "t0": 55.705,
+   "t0": 54.639,
    "t1": 59.05
   },
   {
@@ -149,11 +149,11 @@ window.SPEC = {
     "*biar saya yang belikan.*"
    ],
    "lineAt": [
-    40.48,
-    41.44
+    38.5,
+    39.68
    ],
-   "t0": 40.48,
-   "t1": 43.48
+   "t0": 38.5,
+   "t1": 42.05
   },
   {
    "type": "prod",
@@ -161,8 +161,8 @@ window.SPEC = {
    "title": "Peti Ais Coway",
    "small": "Multi-Door 551L",
    "sub": "Metal cooling wall · sejuk lebih sekata",
-   "t0": 43.74,
-   "t1": 47.67
+   "t0": 41.93,
+   "t1": 46.41
   },
   {
    "type": "feats",
@@ -172,23 +172,23 @@ window.SPEC = {
      "icon": "shield",
      "title": "Silver ion",
      "sub": "99.99% E. coli &amp; S. aureus",
-     "t": 48.06
+     "t": 46.58
     },
     {
      "icon": "wind",
      "title": "Penapis bau",
      "sub": "Bau rendang tak bercampur kuih",
-     "t": 49.757
+     "t": 48.092
     }
    ],
-   "t0": 48.06,
-   "t1": 52.13
+   "t0": 46.58,
+   "t1": 50.24
   },
   {
    "type": "kicker",
    "top": 150,
    "text": "Heart Service · 7 tahun",
-   "t0": 52.68,
+   "t0": 50.31,
    "t1": 58.38
   },
   {
@@ -199,10 +199,10 @@ window.SPEC = {
      "icon": "heart",
      "title": "Cody datang servis berkala",
      "sub": "Mak tak perlu call sesiapa",
-     "t": 52.68
+     "t": 50.31
     }
    ],
-   "t0": 52.68,
+   "t0": 50.31,
    "t1": 58.38
   },
   {
