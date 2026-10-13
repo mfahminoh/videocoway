@@ -169,3 +169,11 @@ terangkan nipis vs tebal secara konsep dan guna ketebalan keseluruhan tilam. Top
 
 VO: `gemini-3.8-flash-tts` (suara "Orus"), dijana dalam 2 bahagian. `lib_vo.py` kini pecah skrip > 1150 aksara
 kepada beberapa permintaan (satu permintaan panjang gagal 502). **Dengar sendiri baris 13 ("Prime 2") sebelum iklan.**
+
+## Poster Threads (1080×1350)
+| Poster | Video |
+|---|---|
+| `out/poster/h01_poster_threads.png` | H01: 6 frame penting + banner "Bonus · Video explainer · Kelebihan Tilam Coway" |
+| `out/poster/p01_poster_threads.png` | P01: 6 frame penting + banner "Bonus · Video explainer · Kelebihan Spring Berpoket" |
+
+Bina semula: `python tilam/poster.py h01 p01`. Masa frame dalam `VIDS` (`tilam/poster.py`), susun atur & teks dalam `src/poster/<vid>.html`.
