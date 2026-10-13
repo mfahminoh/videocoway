@@ -1,0 +1,223 @@
+{
+ "id": "s07",
+ "slug": "cadar-basuh-tilam-macam-mana",
+ "title": "S07 — Cadar kita basuh, tapi tilam macam mana?",
+ "mood": "calm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Cadar kita rajin basuh, kan?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v7a_basuh_cadar.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Cadar <b>rajin basuh</b>…",
+     "k": "KAN?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Tapi bila kali terakhir kita fikir tentang kebersihan tilam di bawah cadar tu?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v7b_habuk_tilam.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Tilam <b>bawah cadar</b><br>macam mana?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Bila bercakap tentang tilam, kita selalu fikir tentang lembut, keras, selesa atau tak.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v1b_tidur_malam.png",
+     "dim": 0.85
+    },
+    "chips": [
+     {
+      "t": "Lembut?",
+      "at": "lembut",
+      "y": 1180
+     },
+     {
+      "t": "Keras?",
+      "at": "keras",
+      "y": 1285
+     },
+     {
+      "t": "Selesa atau tak?",
+      "at": "selesa",
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Tapi aspek penjagaan pun boleh jadi salah satu benda yang kita pertimbangkan sebelum membeli.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v3c_sentuh_fabrik.jpg",
+     "dim": 0.8
+    },
+    "words": [
+     {
+      "t": "ASPEK",
+      "at": "aspek",
+      "size": 90,
+      "y": 640,
+      "anim": "up"
+     },
+     {
+      "t": "<b>PENJAGAAN</b>",
+      "at": "penjagaan",
+      "size": 130,
+      "y": 770
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "BEREX Elite dilengkapi perlindungan Sanitized, yang dikaitkan dengan ciri anti-bakteria, anti-kulat dan anti-hama habuk.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/s3-img-new.png",
+     "box": [
+      60,
+      560,
+      960,
+      560
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Perlindungan <b>Sanitized®</b>",
+     "k": "BEREX ELITE",
+     "y": 170
+    },
+    "chips": [
+     {
+      "t": "Anti-bakteria",
+      "at": "bakteria",
+      "y": 1200
+     },
+     {
+      "t": "Anti-kulat",
+      "at": "kulat",
+      "y": 1305
+     },
+     {
+      "t": "Anti-hama habuk",
+      "at": "hama",
+      "y": 1410
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Cuma, penjagaan tilam secara berkala tetap penting. Ciri pada fabrik bukan bermaksud tilam tak perlu dibersihkan langsung.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/latest-galleryloop4.png",
+     "box": [
+      90,
+      560,
+      900,
+      800
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Penjagaan berkala<br><b>tetap penting</b>",
+     "y": 150
+    },
+    "note": {
+     "t": "Ciri fabrik tak bermaksud tilam tak perlu dibersihkan.",
+     "at": "Ciri",
+     "y": 1420
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Selain tu, ada juga servis penjagaan tilam tujuh langkah oleh juruteknik Coway, tertakluk pada terma dan syarat yang ditetapkan.",
+   "scene": {
+    "bg": {
+     "clip": "uv",
+     "dim": 0.55
+    },
+    "head": {
+     "t": "Servis <b>7 langkah</b>",
+     "k": "NILAI TAMBAH",
+     "s": "Oleh juruteknik Coway",
+     "y": 200
+    },
+    "note": {
+     "t": "*Tertakluk pada terma &amp; syarat.",
+     "at": "tertakluk",
+     "y": 1330
+    }
+   }
+  },
+  {
+   "id": "08",
+   "text": "Jadi, masa survey tilam, tanya juga apa ciri perlindungan dan servis yang disertakan sekali. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya terangkan servisnya."
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "id": "s05",
+ "slug": "apa-itu-9-zon",
+ "title": "S05 — Apa benda 9 zon ni sebenarnya?",
+ "mood": "warm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Bila orang cakap tilam ni ada sembilan zon, pernah tertanya-tanya tak, apa maksud sembilan zon tu sebenarnya?",
+   "scene": {
+    "bg": {
+     "clip": "orbs",
+     "dim": 0.6
+    },
+    "head": {
+     "t": "Apa benda<br><b>9 zon</b> ni?",
+     "k": "PERNAH TERTANYA?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Okay, saya explain cara mudah. Bila kita tengok tilam, kita nampak macam satu permukaan je.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/elite/galleryloop2.jpg",
+     "dim": 0.85,
+     "pos": "50% 50%"
+    },
+    "words": [
+     {
+      "t": "SATU PERMUKAAN",
+      "at": "satu",
+      "size": 96,
+      "y": 640,
+      "anim": "up"
+     },
+     {
+      "t": "<b>JE?</b>",
+      "at": "je",
+      "size": 150,
+      "y": 780
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Tapi dalam tilam, ada lapisan-lapisan berbeza yang mempunyai fungsi masing-masing.",
+   "scene": {
+    "head": {
+     "t": "Ada <b>lapisan</b> berbeza",
+     "k": "DALAM TILAM",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/elite/mattreslayer-img.png",
+     "box": [
+      0,
+      560,
+      1080,
+      540
+     ],
+     "fit": "contain",
+     "kb": "none"
+    }
+   }
+  },
+  {
+   "id": "04",
+   "text": "Dalam BEREX Elite, ada tiga komponen utama yang menggunakan reka bentuk sembilan zon, iaitu PU foam, lateks asli dan pocket spring.",
+   "scene": {
+    "head": {
+     "t": "3 komponen <b>9 zon</b>",
+     "k": "BEREX ELITE",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "PU foam 9 zon",
+      "at": "PU",
+      "y": 640,
+      "icon": "1"
+     },
+     {
+      "t": "Lateks asli 9 zon",
+      "at": "lateks",
+      "y": 790,
+      "icon": "2"
+     },
+     {
+      "t": "Pocket spring 9 zon",
+      "at": "pocket",
+      "y": 940,
+      "icon": "3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Foam ni sebahagian daripada lapisan keselesaan tilam. Lateks asli pula ada ciri anjal, manakala pocket spring membantu memberi sokongan melalui spring individu.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v2d_pocket_spring.jpg",
+     "dim": 0.8
+    },
+    "chips": [
+     {
+      "t": "Foam: lapisan keselesaan",
+      "at": "Foam",
+      "y": 1180
+     },
+     {
+      "t": "Lateks asli: anjal",
+      "at": "anjal",
+      "y": 1285
+     },
+     {
+      "t": "Pocket spring: spring individu",
+      "at": "individu",
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Jadi, bila kita sebut sembilan zon, maksudnya reka bentuk sokongan tu dibahagikan ikut beberapa zon, bukan semuanya direka dengan cara yang sama.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v5a_baring_mengiring.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Sokongan <b>ikut zon</b>",
+     "y": 200
+    },
+    "note": {
+     "t": "Bukan semua bahagian tilam direka dengan cara yang sama.",
+     "at": "bukan",
+     "y": 1330
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Kalau dibandingkan dengan BEREX Prime II berdasarkan spesifikasi yang kita ada, pocket spring Elite naik daripada tujuh zon kepada sembilan zon. Lateks asli pula daripada lima zon kepada sembilan zon.",
+   "scene": {
+    "head": {
+     "t": "Elite vs <b>Prime II</b>",
+     "k": "PERBEZAAN",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "Pocket spring: 7 → <b>9 zon</b>",
+      "at": "pocket",
+      "y": 700,
+      "icon": "↑"
+     },
+     {
+      "t": "Lateks asli: 5 → <b>9 zon</b>",
+      "at": "Lateks",
+      "y": 850,
+      "icon": "↑"
+     }
+    ],
+    "note": {
+     "t": "Berdasarkan spesifikasi produk rasmi.",
+     "at": 0.5,
+     "y": 1100
+    }
+   }
+  },
+  {
+   "id": "08",
+   "text": "Jadi, sembilan zon tu bukan sekadar nombor pada nama produk. Nak tahu apa lagi yang membezakan Elite? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya tunjuk lapisan dia."
+    }
+   }
+  }
+ ]
+}

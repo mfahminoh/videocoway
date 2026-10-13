@@ -1,0 +1,270 @@
+{
+ "id": "s09",
+ "slug": "elite-vs-prime2",
+ "title": "S09 — Perbandingan Elite dengan Prime II",
+ "mood": "warm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Kalau korang dah kenal BEREX Prime II, sekarang Coway ada BEREX Elite. Jadi, apa sebenarnya yang berbeza?",
+   "scene": {
+    "bg": {
+     "clip": "hero",
+     "dim": 0.55
+    },
+    "head": {
+     "t": "Prime II vs <b>Elite</b>",
+     "k": "APA BEZA?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Okay, jom kita bandingkan tiga perkara.",
+   "scene": {
+    "cont": true,
+    "words": [
+     {
+      "t": "<b>3</b> PERKARA",
+      "at": 0.1,
+      "size": 140,
+      "y": 1250
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Pertama, pocket spring. Prime II menggunakan sistem tujuh zon, manakala Elite menggunakan sembilan zon.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v2d_pocket_spring.jpg",
+     "dim": 0.8
+    },
+    "head": {
+     "t": "1 · <b>Pocket spring</b>",
+     "y": 200
+    },
+    "items": [
+     {
+      "t": "Prime II: 7 zon",
+      "at": "Prime",
+      "y": 1150,
+      "icon": "II"
+     },
+     {
+      "t": "Elite: <b>9 zon</b>",
+      "at": "Elite",
+      "y": 1300,
+      "icon": "E"
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Kedua, lateks asli. Untuk Prime II, dia menggunakan reka bentuk lima zon. Elite pula menggunakan sembilan zon.",
+   "scene": {
+    "head": {
+     "t": "2 · <b>Lateks asli</b>",
+     "y": 200
+    },
+    "items": [
+     {
+      "t": "Prime II: 5 zon",
+      "at": "Prime",
+      "y": 700,
+      "icon": "II"
+     },
+     {
+      "t": "Elite: <b>9 zon</b>",
+      "at": "Elite",
+      "y": 850,
+      "icon": "E"
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Ketiga, ketebalan. Prime II ialah tiga puluh tiga sentimeter, manakala Elite ialah tiga puluh enam sentimeter.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/Asset_8.jpg",
+     "box": [
+      60,
+      520,
+      960,
+      600
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "3 · <b>Ketebalan</b>",
+     "y": 150
+    },
+    "items": [
+     {
+      "t": "Prime II: 33 cm",
+      "at": "Prime",
+      "y": 1180,
+      "icon": "II"
+     },
+     {
+      "t": "Elite: <b>36 cm</b>",
+      "at": "Elite",
+      "y": 1330,
+      "icon": "E"
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Selain tu, Elite turut menggunakan PU foam sembilan zon, bersama lateks asli dan pocket spring sembilan zon.",
+   "scene": {
+    "head": {
+     "t": "Elite: <b>9 zon</b> pada 3 lapisan",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/elite/mattreslayer-img.png",
+     "box": [
+      0,
+      560,
+      1080,
+      540
+     ],
+     "fit": "contain",
+     "kb": "none"
+    },
+    "chips": [
+     {
+      "t": "PU foam 9 zon",
+      "at": "PU",
+      "y": 1180
+     },
+     {
+      "t": "Lateks asli 9 zon",
+      "at": "lateks",
+      "y": 1285
+     },
+     {
+      "t": "Pocket spring 9 zon",
+      "at": "pocket",
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "07",
+   "text": "Tapi adakah model yang lebih baru semestinya sesuai untuk semua orang? Tak semestinya.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v9a_posisi_tidur.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Yang baru<br><b>semestinya</b> sesuai?",
+     "y": 200
+    },
+    "words": [
+     {
+      "t": "TAK SEMESTINYA",
+      "at": "Tak",
+      "size": 100,
+      "y": 1300
+     }
+    ]
+   }
+  },
+  {
+   "id": "08",
+   "text": "Sebab pilihan tilam tetap bergantung pada keselesaan masing-masing, posisi tidur, pilihan rasa lembut atau keras, dan juga bajet.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v5a_baring_mengiring.jpg",
+     "dim": 0.85
+    },
+    "head": {
+     "t": "Pilih ikut <b>diri sendiri</b>",
+     "y": 200
+    },
+    "chips": [
+     {
+      "t": "Keselesaan",
+      "at": "keselesaan",
+      "y": 1120
+     },
+     {
+      "t": "Posisi tidur",
+      "at": "posisi",
+      "y": 1225
+     },
+     {
+      "t": "Lembut atau keras",
+      "at": "lembut",
+      "y": 1330
+     },
+     {
+      "t": "Bajet",
+      "at": "bajet",
+      "y": 1435
+     }
+    ]
+   }
+  },
+  {
+   "id": "09",
+   "text": "Kalau tengah pilih antara Prime II dengan Elite, tanya saya tentang perbezaan kedua-dua model ni. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya bantu pilih yang sesuai."
+    }
+   }
+  }
+ ]
+}

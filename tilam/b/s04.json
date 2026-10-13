@@ -1,0 +1,221 @@
+{
+ "id": "s04",
+ "slug": "tilam-hotel-tilam-rumah",
+ "title": "S04 — Tilam dekat rumah, kita pilih betul-betul ke?",
+ "mood": "calm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Pernah tak pergi hotel, tidur atas katil dia, lepas tu rasa… eh, sedapnya tilam ni?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v4a_katil_hotel.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Eh… <b>sedapnya</b><br>tilam hotel ni!",
+     "k": "PERNAH TAK?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Kadang-kadang kita pergi hotel, benda yang kita ingat bukan bilik cantik je. Katil dia pun boleh jadi salah satu benda yang kita suka.",
+   "scene": {
+    "cont": true,
+    "words": [
+     {
+      "t": "BUKAN BILIK JE",
+      "at": "bukan",
+      "size": 90,
+      "y": 1250,
+      "anim": "up"
+     },
+     {
+      "t": "<b>KATIL DIA PUN</b>",
+      "at": "Katil",
+      "size": 96,
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Lepas balik rumah, baru terfikir, kenapa kat rumah sendiri kita tak ambil berat sangat tentang tilam?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v4b_balik_rumah.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Kat rumah…<br><b>kenapa tak?</b>",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "04",
+   "text": "Sedangkan tilam ni kita guna setiap hari.",
+   "scene": {
+    "cont": true,
+    "words": [
+     {
+      "t": "GUNA <b>SETIAP HARI</b>",
+      "at": "setiap",
+      "size": 100,
+      "y": 1300
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Sebab tu, kalau nak beli tilam, jangan tengok rupa luar je. Cuba ambil tahu juga apa yang ada dalamnya dan macam mana ia dibina.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/hook_tilam_mendap.png",
+     "dim": 0.85
+    },
+    "head": {
+     "t": "Jangan tengok<br><b>rupa luar</b> je",
+     "y": 200
+    },
+    "chips": [
+     {
+      "t": "Apa yang ada dalamnya",
+      "at": "dalamnya",
+      "y": 1300
+     },
+     {
+      "t": "Macam mana ia dibina",
+      "at": "dibina",
+      "y": 1405
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Contohnya Coway BEREX Elite. Ketebalan dia tiga puluh enam sentimeter, dengan reka bentuk plush top.",
+   "scene": {
+    "media": {
+     "img": "assets/tilam/elite/Asset_8.jpg",
+     "box": [
+      60,
+      560,
+      960,
+      700
+     ],
+     "fit": "cover"
+    },
+    "head": {
+     "t": "Coway <b>BEREX Elite</b>",
+     "k": "CONTOHNYA",
+     "y": 170
+    },
+    "chips": [
+     {
+      "t": "36 cm",
+      "at": "tiga",
+      "y": 1340
+     },
+     {
+      "t": "Plush top",
+      "at": "plush",
+      "y": 1445
+     }
+    ]
+   }
+  },
+  {
+   "id": "07",
+   "text": "Dan gabungan beberapa lapisan foam, lateks asli serta pocket spring.",
+   "scene": {
+    "head": {
+     "t": "Gabungan <b>lapisan</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/elite/mattreslayer-img.png",
+     "box": [
+      0,
+      560,
+      1080,
+      540
+     ],
+     "fit": "contain",
+     "kb": "none"
+    },
+    "chips": [
+     {
+      "t": "Foam",
+      "at": "foam",
+      "y": 1180
+     },
+     {
+      "t": "Lateks asli",
+      "at": "lateks",
+      "y": 1285
+     },
+     {
+      "t": "Pocket spring",
+      "at": "pocket",
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "08",
+   "text": "Kalau nak upgrade tilam dekat rumah, boleh mula dengan kenali dulu BEREX Elite. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya terangkan satu-satu."
+    }
+   }
+  }
+ ]
+}
