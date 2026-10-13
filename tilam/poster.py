@@ -2,9 +2,10 @@
 
     python tilam/poster.py h01
     python tilam/poster.py p01
+    python tilam/poster.py pakej    # mozek kulit semua video + teks pakej (src/poster/pakej.html)
 Frame diambil terus dari video siap. Susun atur & teks: src/poster/<vid>.html (imej: out/poster/_frames/<vid>_<masa>.png).
 """
-import pathlib, subprocess, sys
+import json, pathlib, subprocess, sys
 
 R = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(R))
@@ -20,11 +21,31 @@ VIDS = {
 OUT = R / "out/poster"
 
 
+def covers(fr):
+    """Kulit setiap video = frame hook pada 1.5s. Disusun bergilir ikut siri supaya mozek bercampur."""
+    vids = sorted((R / "out/tilam").glob("*.mp4")) + [R / "out/tilam/gaya/e02_kinetic.mp4", R / "out/tilam/gaya/e05_berita.mp4"]
+    names = []
+    for v in vids:
+        n = f"cover_{v.stem}.jpg"; names.append(n)
+        if not (fr / n).exists():
+            subprocess.run([render.FF, "-v", "error", "-y", "-ss", "1.5", "-i", str(v), "-frames:v", "1", "-vf", "scale=270:480", "-q:v", "3", str(fr / n)], check=True)
+    groups = {}
+    for n in names: groups.setdefault(n[6], []).append(n)       # huruf siri: b c d e h l p s v
+    mixed = []
+    while any(groups.values()):
+        for k in sorted(groups):
+            if groups[k]: mixed.append(groups[k].pop(0))
+    (fr / "covers.js").write_text("window.COVERS = " + json.dumps(mixed) + ";\n")
+
+
 def main(vid):
-    video, times = VIDS[vid]
     fr = OUT / "_frames"; fr.mkdir(parents=True, exist_ok=True)
-    for t in times:
-        subprocess.run([render.FF, "-v", "error", "-y", "-ss", t, "-i", str(R / video), "-frames:v", "1", str(fr / f"{vid}_{t}.png")], check=True)
+    if vid == "pakej":
+        covers(fr)
+    else:
+        video, times = VIDS[vid]
+        for t in times:
+            subprocess.run([render.FF, "-v", "error", "-y", "-ss", t, "-i", str(R / video), "-frames:v", "1", str(fr / f"{vid}_{t}.png")], check=True)
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path=render.CHROMIUM) if render.CHROMIUM else p.chromium.launch()
         page = b.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)
@@ -37,4 +58,4 @@ def main(vid):
 
 
 if __name__ == "__main__":
-    for v in sys.argv[1:] or VIDS: main(v)
+    for v in sys.argv[1:] or [*VIDS, "pakej"]: main(v)
