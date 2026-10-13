@@ -14,3 +14,5 @@ out/v5/old/
 !out/tilam/
 out/tilam/_*
 tilam/lite/rujukan/*.mp4
+!out/poster/
+out/poster/_*
