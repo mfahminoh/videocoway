@@ -49,8 +49,9 @@
    "text": "Kalau korang dah kenal BEREX Prime II, sekarang Coway ada BEREX Elite. Jadi, apa sebenarnya yang berbeza?",
    "scene": {
     "bg": {
-     "clip": "hero",
-     "dim": 0.55
+     "img": "assets/tilam/elite/galleryloop2.jpg",
+     "dim": 0.8,
+     "pos": "50% 50%"
     },
     "head": {
      "t": "Prime II vs <b>Elite</b>",

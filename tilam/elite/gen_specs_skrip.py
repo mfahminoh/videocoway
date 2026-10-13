@@ -100,8 +100,8 @@ V["s03"] = dict(title="Malam dah panas, tilam pun rasa tak selesa?", slug="malam
     L(4, "Sebab permukaan tilam ni lah yang kita sentuh sepanjang kita tidur.", cont=True,
       words=[W("KITA SENTUH", at="sentuh", size=96, y=1150, anim="up"), W("<b>SEPANJANG MALAM</b>", at="sepanjang", size=96, y=1290)]),
     L(5, "Untuk Coway BEREX Elite, dia menggunakan fabrik penyejuk dan turut mempunyai ciri anti-statik.",
-      media=M(clip="cool", box=(90, 520, 900, 900), kb="none"), head=H("Coway <b>BEREX Elite</b>", y=150),
-      chips=chips(("Fabrik penyejuk", "penyejuk"), ("Anti-statik", "anti"), y=1470)),
+      media=M(clip="cool", box=(165, 480, 750, 750), kb="none"), head=H("Coway <b>BEREX Elite</b>", y=150),
+      chips=chips(("Fabrik penyejuk", "penyejuk"), ("Anti-statik", "anti"), y=1270)),
     L(6, "Jadi, selain tengok rupa dan ketebalan, kita boleh ambil tahu juga tentang bahan yang digunakan.",
       media=M("permukaan", box=(90, 560, 900, 900)), head=H("Tengok juga <b>bahannya</b>", y=170)),
     L(7, "Kalau tengah cari tilam baru, jangan lupa tengok bahagian ni juga. WhatsApp saya.",
@@ -230,7 +230,7 @@ V["s08"] = dict(title="Lepas beli tilam, habis dekat situ je ke?", slug="lepas-b
 # Video 9 (MOFU) — Perbandingan Elite dengan Prime II
 V["s09"] = dict(title="Perbandingan Elite dengan Prime II", slug="elite-vs-prime2", mood="warm", lines=[
     L(1, "Kalau korang dah kenal BEREX Prime II, sekarang Coway ada BEREX Elite. Jadi, apa sebenarnya yang berbeza?",
-      bg=BG(clip="hero", dim=.55), head=H("Prime II vs <b>Elite</b>", k="APA BEZA?", y=200)),
+      bg=BG("bilik", dim=.8, pos="50% 50%"), head=H("Prime II vs <b>Elite</b>", k="APA BEZA?", y=200)),
     L(2, "Okay, jom kita bandingkan tiga perkara.", cont=True,
       words=[W("<b>3</b> PERKARA", at=0.1, size=140, y=1250)]),
     L(3, "Pertama, pocket spring. Prime II menggunakan sistem tujuh zon, manakala Elite menggunakan sembilan zon.",

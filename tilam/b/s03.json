@@ -125,10 +125,10 @@
     "media": {
      "clip": "cool",
      "box": [
-      90,
-      520,
-      900,
-      900
+      165,
+      480,
+      750,
+      750
      ],
      "fit": "cover",
      "kb": "none"
@@ -141,12 +141,12 @@
      {
       "t": "Fabrik penyejuk",
       "at": "penyejuk",
-      "y": 1470
+      "y": 1270
      },
      {
       "t": "Anti-statik",
       "at": "anti",
-      "y": 1575
+      "y": 1375
      }
     ]
    }
