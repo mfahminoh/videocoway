@@ -1,9 +1,10 @@
 """Jana gambar babak masalah/hook (sebelum produk diperkenalkan) dengan Gemini image.
+Guna env GEMINI_IMAGE_KEY (project Google berasingan, billing aktif) jika ada.
 
     python tilam/gen_image.py nama "prompt ..." [--ar 9:16] [--model gemini-3.1-flash-image]
 -> assets/tilam/jana/<nama>.png
 """
-import argparse, base64, json, pathlib, sys, urllib.request
+import argparse, base64, json, os, pathlib, sys, urllib.request
 
 R = pathlib.Path(__file__).resolve().parent.parent
 OUT = R / "assets/tilam/jana"
@@ -14,7 +15,10 @@ STYLE = ("Photorealistic, natural light, shot on a phone camera, candid lifestyl
 def gen(name, prompt, ar="9:16", model="gemini-3.1-flash-image"):
     body = {"contents": [{"parts": [{"text": STYLE + prompt}]}],
             "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": ar}}}
-    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+    # GEMINI_IMAGE_KEY = key project berasingan (billing aktif) khas untuk gambar; dihantar sebagai ?key=
+    # supaya tidak bertembung dengan key Gemini percuma yang disuntik proxy (untuk VO/ASR).
+    k = os.environ.get("GEMINI_IMAGE_KEY")
+    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent" + (f"?key={k}" if k else ""),
                                  data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
     d = json.load(urllib.request.urlopen(req, timeout=180))
     for p in d["candidates"][0]["content"]["parts"]:
