@@ -175,5 +175,6 @@ kepada beberapa permintaan (satu permintaan panjang gagal 502). **Dengar sendiri
 |---|---|
 | `out/poster/h01_poster_threads.png` | H01: 6 frame penting + banner "Bonus · Video explainer · Kelebihan Tilam Coway" |
 | `out/poster/p01_poster_threads.png` | P01: 6 frame penting + banner "Bonus · Video explainer · Kelebihan Spring Berpoket" |
+| `out/poster/pakej_poster_threads.png` | Pakej: mozek kulit semua video (frame 1.5s) + "Pakej 30 Video Tilam Coway · Prime Lite + Prime II · Bonus: 5 video Elite + video explainer" |
 
-Bina semula: `python tilam/poster.py h01 p01`. Masa frame dalam `VIDS` (`tilam/poster.py`), susun atur & teks dalam `src/poster/<vid>.html`.
+Bina semula: `python tilam/poster.py h01 p01 pakej`. Masa frame dalam `VIDS` (`tilam/poster.py`), susun atur & teks dalam `src/poster/<vid>.html`.
