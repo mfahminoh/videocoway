@@ -26,6 +26,7 @@ PRODUCTS = {
     "air-purifier": ["storm2", "noble2", "atrium", "lombok3", "studio", "suite"],
     "handsfree-bidet": ["flowlet", "flowletplus"],
     "outdoor": ["outdoorfilter"],
+    "refrigerator": ["multidoor551l", "sidebyside715l"],
 }
 
 BRAND_FILES = [  # logo & lencana untuk semua iklan

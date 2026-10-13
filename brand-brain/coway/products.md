@@ -31,6 +31,18 @@ Teks penuh setiap laman produk: `Other Brand Assets/<kategori>/<produk>/copy.md`
 | **Studio** (`studio`) | AP-1924A | 76 m² | Sand Beige, Porcelain White | RM54 (Self RM49) | RM2,400 | Paling murah, 360°, design seperti perabot |
 | **Suite** (`suite`) | AP-2524B | 92 m² | Sand Beige, Porcelain White | RM65 (Self RM60) | RM3,200 | 360°, sensor PM1.0/2.5/10 |
 
+## Peti ais (refrigerator)
+
+| Produk | Model | Kapasiti | Warna | Sewa dari | Tunai | Sudut iklan |
+|---|---|---|---|---|---|---|
+| **Side-by-Side 715L** (`sidebyside715l`) | CR715-SBS01 | 715L (2 pintu) | Black Inox | RM84 HEART / **RM79 Self-Service** (7+0) | RM5,899 | Ruang besar keluarga, Humidity Control (sayur segar lama), Double Inverter, Super Freezing -25°C, 4 mod (Smart/Eco/Power Cool/Super Freezing) |
+| **Multi-Door 551L** (`multidoor551l`) | CR551-MDR01 | 551L (4 pintu) | Black Inox | RM99 HEART / **RM94 Self-Service** (7+0) | RM6,799 | Convertible Zone (peti sejuk ↔ beku, 5°C hingga -20°C), Triple Inverter, Metal Cooling, built-in design (ruang 6 mm) |
+
+Kedua-dua: **Dual Hygiene**, iaitu Silver Ion di zon peti sejuk (hapus 99.99% E. coli & S. aureus, neutralkan sehingga 98.52% bau¹) dan penapis deodoriser di zon beku (neutralkan sehingga 98.4% Trimethylamine, iaitu bau ikan¹). HEART Service: CODY tukar penapis deodoriser secara berkala, servis percuma 7 tahun (pelan sewa). Self-Service: penghantaran penapis percuma 7 tahun.
+¹ Wajib letak sebagai nota kaki bila guna angka ini.
+
+Gambar terbaik: `deodoriser_filter_bg*.jpg` (makanan terapung dalam kiub, latar navy), `cooling_precision*.jpg` (551L terbuka + aliran sejuk biru), `spaces_for_everything_slide*.jpg`, `Coway_SBS715-Refrigerator_Card1/2_V2.jpg` (dapur), `Coway_SBS715-Refrigerator_Banner6b.jpg` (sayur sebelum/selepas Humidity Control), `step1-7.png` (CODY servis), `homebanner_fridge.png` (551L terbuka, latar lutsinar).
+
 ## Lain-lain
 
 | Produk | Model | Sewa dari | Tunai dari | Sudut iklan |
