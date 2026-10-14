@@ -438,6 +438,48 @@
           "status": "ACTIVE"
         }
       ]
+    },
+    "990723860427887": {
+      "nama": "Coway Azzuddin",
+      "mod": "draft",
+      "page_id": "1374545175738046",
+      "page_nama": "FZ Home & Living",
+      "boleh_upload": false,
+      "nota_upload": "upload_media ditolak; video dimuat naik ke Zara, guna video_id itu.",
+      "kempen_peti_ais": {
+        "campaign_id": "120249888848180480",
+        "adset_id": "120249888853010480",
+        "struktur": "1-1-5 (diminta user)",
+        "bajet": 5,
+        "status": "DRAFT (belum publish)",
+        "iklan": {
+          "PA01": {
+            "ad_id": "120249888886160480",
+            "video_id": "1666377914843957"
+          },
+          "PA02": {
+            "ad_id": "120249888886870480",
+            "video_id": "1580582356631604"
+          },
+          "PA03": {
+            "ad_id": "120249888888250480",
+            "video_id": "1660301365760234"
+          },
+          "PA04": {
+            "ad_id": "120249888889990480",
+            "video_id": "1789284185707378"
+          },
+          "PA05": {
+            "ad_id": "120249888890980480",
+            "video_id": "2902311160141636"
+          }
+        },
+        "audience": {
+          "Engagers_FZ_Page_90d": "120249888845030480",
+          "WA_Messaged_FZ_180d (exclude)": "120249888845440480"
+        },
+        "nota": "Audience video viewer gagal dicipta melalui API (error 2654); perlu cipta di Ads Manager."
+      }
     }
   },
   "log": [
@@ -448,6 +490,10 @@
     {
       "tarikh": "2026-10-08",
       "tindakan": "Temp 1: padam 3 kempen UT20 PAUSED atas arahan user; cuba kempen baru, ad set masih ditolak (verified advertiser). Kempen ujian dipadam."
+    },
+    {
+      "tarikh": "2026-10-14",
+      "tindakan": "Bina draf kempen peti ais 1-1-5 RM5/hari di Coway Azzuddin (Page FZ Home & Living) + 2 custom audience."
     }
   ]
 }
