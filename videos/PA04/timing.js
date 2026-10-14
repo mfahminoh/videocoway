@@ -1,225 +1,225 @@
 window.V = {
- "off": 0.4,
- "dur": 65.16,
+ "off": 0.3,
+ "dur": 48.78,
  "lines": [
   [
-   0.1,
-   4.85,
+   0.09,
+   3.98,
    "TV dah *65 inci.* Sofa dah tukar baru."
   ],
   [
-   5.35,
-   7.42,
+   4.24,
+   6.04,
    "Handphone, tukar *tiap 2 tahun.*"
   ],
   [
-   8.15,
-   11.26,
+   6.3,
+   9.01,
    ""
   ],
   [
-   11.9,
-   14.33,
+   9.27,
+   11.38,
    "Masih kena *tolak pintu kuat-kuat,* baru rapat."
   ],
   [
-   15.47,
-   19.98,
+   11.64,
+   15.5,
    "Padahal, dapur tu tempat *isteri saya masak untuk kami.* Setiap hari."
   ],
   [
-   20.87,
-   24.3,
+   15.77,
+   18.61,
    "Dia yang *bangun paling awal.* Dia yang *tidur paling lewat.*"
   ],
   [
-   25.34,
-   31.07,
+   18.87,
+   23.83,
    "Rupanya, saya upgrade semua benda *yang saya guna.* Tapi bukan benda *yang dia guna.*"
   ],
   [
-   32.07,
-   34.26,
+   24.09,
+   25.77,
    "Jadi kali ni, *giliran dapur dia.*"
   ],
   [
-   35.14,
-   36.88,
+   26.03,
+   27.54,
    "Peti ais *side-by-side Coway.* 715 liter."
   ],
   [
-   37.44,
-   44.87,
+   27.8,
+   33.88,
    "Suhu fridge dan freezer *berasingan.* Drawer *kawalan kelembapan* untuk sayur dan buah."
   ],
   [
-   45.34,
-   50.51,
+   34.14,
+   38.19,
    "*Dual inverter. Silver ion.* Dan Cody datang jaga, *7 tahun.*"
   ],
   [
-   51.03,
-   54.49,
+   38.45,
+   41.17,
    "Dari *RM84 sebulan.* Kurang *RM3 sehari.*"
   ],
   [
-   55.25,
-   60.44,
+   41.43,
+   45.13,
    "Dia dah bagi yang terbaik untuk keluarga. *Dah tiba masa dia dapat yang terbaik.*"
   ],
   [
-   61.37,
-   62.16,
+   45.39,
+   46.08,
    "*WhatsApp saya sekarang.*"
   ]
  ],
  "sfx": [
   [
    "thud",
-   0.1,
+   0.09,
    0.22
   ],
   [
    "thud",
-   5.35,
+   4.24,
    0.22
   ],
   [
    "whoosh",
-   7.9,
+   6.05,
    0.07
   ],
   [
    "boom",
-   8.15,
+   6.3,
    0.22
   ],
   [
    "whoosh",
-   15.22,
+   11.39,
    0.07
   ],
   [
    "whoosh",
-   25.09,
+   18.62,
    0.07
   ],
   [
    "whoosh",
-   28.07,
+   21.2,
    0.07
   ],
   [
    "boom",
-   32.07,
+   24.09,
    0.22
   ],
   [
    "whoosh",
-   34.89,
+   25.78,
    0.07
   ],
   [
    "shimmer",
-   35.14,
+   26.03,
    0.07
   ],
   [
    "whoosh",
-   39.42,
+   29.37,
    0.07
   ],
   [
    "chime",
-   39.669,
+   29.624,
    0.1,
    1568
   ],
   [
    "chime",
-   42.047,
+   31.57,
    0.1,
    1764
   ],
   [
    "whoosh",
-   45.09,
+   33.89,
    0.07
   ],
   [
    "chime",
-   45.34,
+   34.14,
    0.1,
    1568
   ],
   [
    "chime",
-   46.633,
+   35.153,
    0.1,
    1764
   ],
   [
    "chime",
-   47.925,
+   36.165,
    0.1,
    1960
   ],
   [
    "whoosh",
-   50.78,
+   38.2,
    0.07
   ],
   [
    "shimmer",
-   51.03,
+   38.45,
    0.07
   ],
   [
    "shimmer",
-   51.03,
+   38.45,
    0.08
   ],
   [
    "chime",
-   51.18,
+   38.6,
    0.12,
    2093
   ],
   [
    "pop",
-   52.241,
+   39.402,
    0.12,
    900
   ],
   [
    "whoosh",
-   55.0,
+   41.18,
    0.07
   ],
   [
    "whoosh",
-   57.49,
+   42.96,
    0.07
   ],
   [
    "shimmer",
-   57.845,
+   43.28,
    0.07
   ],
   [
    "chime",
-   61.07,
+   45.09,
    0.12,
    1760
   ],
   [
    "chime",
-   61.19,
+   45.21,
    0.1,
    2349
   ]
  ],
  "mood": "emotional",
- "lift": 35.14,
- "bpm": 70
+ "lift": 26.03,
+ "bpm": 90
 };

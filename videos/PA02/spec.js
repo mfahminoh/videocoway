@@ -7,15 +7,15 @@ window.SPEC = {
    "grade": "warm",
    "zx": 62,
    "zy": 38,
-   "t0": -0.4,
-   "t1": 4.83
+   "t0": -0.3,
+   "t1": 3.32
   },
   {
    "img": "../../assets/img/peti_ais/pa02_b.jpg",
    "kb": "in",
    "grade": "night",
-   "t0": 4.83,
-   "t1": 9.12
+   "t0": 3.32,
+   "t1": 6.27
   },
   {
    "img": "../../assets/img/peti_ais/pa02_d.jpg",
@@ -23,8 +23,8 @@ window.SPEC = {
    "grade": "night",
    "zx": 55,
    "zy": 45,
-   "t0": 9.12,
-   "t1": 13.62
+   "t0": 6.27,
+   "t1": 9.55
   },
   {
    "img": "../../assets/img/peti_ais/pa02_a.jpg",
@@ -32,29 +32,29 @@ window.SPEC = {
    "grade": "warm",
    "zx": 40,
    "zy": 30,
-   "t0": 13.62,
-   "t1": 17.87
+   "t0": 9.55,
+   "t1": 12.07
   },
   {
    "img": "../../assets/img/peti_ais/pa02_b.jpg",
    "kb": "out",
    "grade": "night",
-   "t0": 17.87,
-   "t1": 24.57
+   "t0": 12.07,
+   "t1": 15.88
   },
   {
    "img": "../../assets/img/peti_ais/pa02_c.jpg",
    "kb": "right",
    "grade": "night",
-   "t0": 24.57,
-   "t1": 29.9
+   "t0": 15.88,
+   "t1": 19.17
   },
   {
    "img": "../../assets/img/peti_ais/pa02_d.jpg",
    "kb": "still",
    "grade": "night",
-   "t0": 29.9,
-   "t1": 32.98
+   "t0": 19.17,
+   "t1": 21.01
   },
   {
    "img": "../../assets/img/peti_ais/pa02_d.jpg",
@@ -63,8 +63,8 @@ window.SPEC = {
    "zx": 52,
    "zy": 42,
    "cut": true,
-   "t0": 32.98,
-   "t1": 40.87
+   "t0": 21.01,
+   "t1": 25.85
   },
   {
    "clip": "551_bigspace",
@@ -72,43 +72,43 @@ window.SPEC = {
    "c0": 0.2,
    "c1": 4.6,
    "kb": "still",
-   "t0": 40.87,
-   "t1": 46.82
+   "t0": 25.85,
+   "t1": 29.82
   },
   {
    "img": "../../assets/img/coway_fridge/hs_step4.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 130,
-   "t0": 46.82,
-   "t1": 51.138
+   "t0": 29.82,
+   "t1": 32.906
   },
   {
    "img": "../../assets/img/coway_fridge/hs_step2.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 130,
-   "t0": 51.138,
-   "t1": 55.64
+   "t0": 32.906,
+   "t1": 35.7
   },
   {
    "img": "../../assets/img/coway_fridge/715_kitchen2.jpg",
    "kb": "in",
    "grade": "cool",
-   "t0": 55.64,
-   "t1": 60.5
+   "t0": 35.7,
+   "t1": 39.11
   },
   {
    "color": "cw",
-   "t0": 60.5,
-   "t1": 63.99
+   "t0": 39.11,
+   "t1": 41.37
   },
   {
    "img": "../../assets/img/coway_fridge/715_kitchen1.jpg",
    "kb": "in",
    "grade": "cool",
-   "t0": 63.99,
-   "t1": 70.53
+   "t0": 41.37,
+   "t1": 46.82
   }
  ],
  "els": [
@@ -117,8 +117,8 @@ window.SPEC = {
    "top": 1180,
    "text": "DAH BAYAR",
    "rot": -8,
-   "t0": 1.873,
-   "t1": 4.44
+   "t0": 1.427,
+   "t1": 3.46
   },
   {
    "type": "cal",
@@ -127,15 +127,15 @@ window.SPEC = {
    "items": [
     {
      "text": "ISNIN",
-     "t": 9.12
+     "t": 6.27
     },
     {
      "text": "RABU",
-     "t": 13.62
+     "t": 9.55
     }
    ],
-   "t0": 9.12,
-   "t1": 16.99
+   "t0": 6.27,
+   "t1": 11.81
   },
   {
    "type": "bubble",
@@ -143,24 +143,24 @@ window.SPEC = {
    "left": 110,
    "who": "Kedai servis",
    "text": "“Nanti kami check, encik.”",
-   "t0": 10.96,
-   "t1": 13.1
+   "t0": 7.78,
+   "t1": 9.59
   },
   {
    "type": "stamp",
    "top": 1180,
    "text": "KENA BAYAR",
    "rot": -6,
-   "t0": 15.709,
-   "t1": 17.29
+   "t0": 10.951,
+   "t1": 12.11
   },
   {
    "type": "big",
    "top": 560,
    "text": "2–3 BULAN",
    "sub": "TUNGGU ALAT GANTI",
-   "t0": 19.391,
-   "t1": 21.45
+   "t0": 12.988,
+   "t1": 14.31
   },
   {
    "type": "big",
@@ -168,8 +168,8 @@ window.SPEC = {
    "text": "3 JAM",
    "color": "#FFD27A",
    "sub": "LAUK TAK BOLEH TUNGGU",
-   "t0": 22.3,
-   "t1": 24.13
+   "t0": 14.37,
+   "t1": 16.02
   },
   {
    "type": "quote",
@@ -181,11 +181,11 @@ window.SPEC = {
     "*tapi siapa nak datang?*"
    ],
    "lineAt": [
-    29.9,
-    30.926
+    19.17,
+    19.881
    ],
-   "t0": 29.9,
-   "t1": 32.68
+   "t0": 19.17,
+   "t1": 21.25
   },
   {
    "type": "quote",
@@ -197,32 +197,32 @@ window.SPEC = {
     "*tak ada orang yang jaga.*"
    ],
    "lineAt": [
-    35.74,
-    37.672
+    22.842,
+    24.124
    ],
    "hideCap": true,
-   "t0": 35.74,
-   "t1": 40.08
+   "t0": 22.842,
+   "t1": 25.79
   },
   {
    "type": "logo",
    "top": 150,
-   "t0": 40.87,
-   "t1": 45.91
+   "t0": 25.85,
+   "t1": 29.56
   },
   {
    "type": "kicker",
    "top": 260,
    "text": "Ada orang yang datang",
-   "t0": 43.138,
-   "t1": 45.91
+   "t0": 27.52,
+   "t1": 29.56
   },
   {
    "type": "kicker",
    "top": 150,
    "text": "Heart Service · 7 tahun",
-   "t0": 46.82,
-   "t1": 54.87
+   "t0": 29.82,
+   "t1": 35.63
   },
   {
    "type": "feats",
@@ -231,27 +231,27 @@ window.SPEC = {
     {
      "icon": "heart",
      "title": "Cody datang servis berkala",
-     "t": 46.82
+     "t": 29.82
     },
     {
      "icon": "wind",
      "title": "Tukar penapis bau",
-     "t": 50.745
+     "t": 32.625
     },
     {
      "icon": "doors",
      "title": "Jaga getah pintu",
-     "t": 52.158
+     "t": 33.635
     }
    ],
-   "t0": 46.82,
-   "t1": 54.87
+   "t0": 29.82,
+   "t1": 35.63
   },
   {
    "type": "logo",
    "top": 120,
-   "t0": 60.5,
-   "t1": 63.14
+   "t0": 39.11,
+   "t1": 41.11
   },
   {
    "type": "price",
@@ -260,9 +260,9 @@ window.SPEC = {
    "amount": "84",
    "per": "sebulan",
    "note": "Heart Service · 7 tahun",
-   "t0": 60.5,
-   "t1": 63.44,
-   "noteT": 62.084
+   "t0": 39.11,
+   "t1": 41.41,
+   "noteT": 40.31
   },
   {
    "type": "photo",
@@ -273,13 +273,13 @@ window.SPEC = {
    "src": "../../assets/img/coway_fridge/715_kitchen1.jpg",
    "pos": "50% 45%",
    "label": "Side-by-Side 715L",
-   "t0": 61.556,
-   "t1": 63.44
+   "t0": 39.91,
+   "t1": 41.41
   },
   {
    "type": "logo",
    "top": 110,
-   "t0": 63.79,
+   "t0": 41.17,
    "t1": null
   },
   {
@@ -287,9 +287,9 @@ window.SPEC = {
    "top": 820,
    "dim": 0.55,
    "tag": "Peti ais yang<br>tak buat awak risau.",
-   "t0": 63.79,
+   "t0": 41.17,
    "t1": null,
-   "btnT": 63.99
+   "btnT": 41.37
   }
  ],
  "clips": {

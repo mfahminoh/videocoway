@@ -1,209 +1,209 @@
 window.V = {
- "off": 0.4,
- "dur": 75.49,
+ "off": 0.3,
+ "dur": 52.98,
  "lines": [
   [
-   0.09,
-   5.36,
+   0.08,
+   4.3,
    "Setiap kali balik kampung, mak cakap benda yang sama. *\"Peti ais tu masih okay.\"*"
   ],
   [
-   6.22,
-   13.06,
+   4.57,
+   9.63,
    "Tapi saya nampak. Freezer *penuh ais tebal.* Mak ketuk dengan pisau, *sorang-sorang.*"
   ],
   [
-   14.08,
-   20.22,
+   9.9,
+   14.39,
    "*Getah pintu dah koyak.* Malam-malam, bunyi dia, *krrrr.* Mak kata, dah biasa."
   ],
   [
-   21.41,
-   27.43,
+   14.65,
+   19.09,
    "Mak simpan lauk *untuk kami balik.* Rendang, ikan, kuih."
   ],
   [
-   27.96,
-   33.1,
+   19.35,
+   22.7,
    "Tapi separuh, *terpaksa dibuang.* Mak senyap je. Saya tahu, *dia sedih.*"
   ],
   [
-   34.27,
-   38.07,
+   22.97,
+   25.93,
    "Mak tak pernah minta apa-apa. Dia cuma nak lauk dia *sampai elok, ke mulut anak cucu.*"
   ],
   [
-   38.5,
-   41.45,
+   26.19,
+   28.17,
    ""
   ],
   [
-   41.93,
-   46.21,
+   28.43,
+   31.3,
    "Peti ais Coway. *Metal cooling wall,* sejuk lebih sekata."
   ],
   [
-   46.58,
-   49.94,
+   31.56,
+   34.23,
    "*Silver ion* dan *penapis bau.* Bau rendang tak bercampur dengan kuih."
   ],
   [
-   50.31,
-   58.18,
+   34.49,
+   40.53,
    "Yang paling saya tenang, *Cody datang servis berkala, 7 tahun.* Mak tak perlu call sesiapa."
   ],
   [
-   59.05,
-   63.26,
+   40.79,
+   44.11,
    "Saya bayar bulanan, dari *RM99.* Mak tak perlu tahu pun."
   ],
   [
-   64.19,
-   68.66,
+   44.37,
+   47.56,
    "Mak dah jaga kami seumur hidup. Kali ni, *biar kami pula yang jaga dia.*"
   ],
   [
-   69.55,
-   72.49,
+   47.82,
+   50.28,
    "*WhatsApp saya.* Saya bantu pilih yang sesuai untuk dapur mak awak."
   ]
  ],
  "sfx": [
   [
    "pop",
-   2.989,
+   2.401,
    0.12,
    900
   ],
   [
    "whoosh",
-   5.97,
+   4.32,
    0.07
   ],
   [
    "whoosh",
-   13.83,
+   9.65,
    0.07
   ],
   [
    "thud",
-   16.843,
+   11.921,
    0.22
   ],
   [
    "whoosh",
-   27.71,
+   19.1,
    0.07
   ],
   [
    "whoosh",
-   34.02,
+   22.72,
    0.07
   ],
   [
    "boom",
-   38.5,
+   26.19,
    0.22
   ],
   [
    "whoosh",
-   41.68,
+   28.18,
    0.07
   ],
   [
    "shimmer",
-   41.93,
+   28.43,
    0.07
   ],
   [
    "whoosh",
-   46.33,
+   31.31,
    0.07
   ],
   [
    "chime",
-   46.58,
+   31.56,
    0.1,
    1568
   ],
   [
    "chime",
-   48.092,
+   32.761,
    0.1,
    1764
   ],
   [
    "whoosh",
-   50.06,
+   34.24,
    0.07
   ],
   [
    "chime",
-   50.31,
+   34.49,
    0.1,
    1568
   ],
   [
    "whoosh",
-   54.39,
+   37.56,
    0.07
   ],
   [
    "whoosh",
-   58.8,
+   40.54,
    0.07
   ],
   [
    "shimmer",
-   59.05,
+   40.79,
    0.07
   ],
   [
    "shimmer",
-   59.05,
+   40.79,
    0.08
   ],
   [
    "chime",
-   59.199999999999996,
+   40.94,
    0.12,
    2093
   ],
   [
    "pop",
-   60.313,
+   41.786,
    0.12,
    900
   ],
   [
    "whoosh",
-   63.94,
+   44.12,
    0.07
   ],
   [
    "whoosh",
-   69.3,
+   47.57,
    0.07
   ],
   [
    "shimmer",
-   69.35,
+   47.62,
    0.07
   ],
   [
    "chime",
-   69.55,
+   47.82,
    0.12,
    1760
   ],
   [
    "chime",
-   69.67,
+   47.94,
    0.1,
    2349
   ]
  ],
  "mood": "emotional",
- "lift": 41.93,
- "bpm": 70
+ "lift": 28.43,
+ "bpm": 90
 };
