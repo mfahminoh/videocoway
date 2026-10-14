@@ -448,25 +448,25 @@
       "nota_upload": "upload_media ditolak; video dimuat naik ke Zara, guna video_id itu.",
       "kempen_peti_ais": {
         "campaign_id": "120249890330160480",
-        "adset_id": "120249890331900480",
+        "adset_id": "120249892715420480",
         "struktur": "1-1-5 (diminta user)",
         "bajet": 5,
-        "status": "DRAFT (belum publish)",
+        "status": "Kempen ACTIVE (bajet CBO RM5). Ad set + 4 iklan DRAFT - tersekat 'Advertiser is missing'; user perlu pilih advertiser verified dalam Ads Manager & publish",
         "iklan": {
           "PA02": {
-            "ad_id": "120249890337750480",
+            "ad_id": "120249892731370480",
             "video_id": "4989065818017273"
           },
           "PA03": {
-            "ad_id": "120249890337880480",
+            "ad_id": "120249892734350480",
             "video_id": "1802875260836857"
           },
           "PA04": {
-            "ad_id": "120249890338240480",
+            "ad_id": "120249892737490480",
             "video_id": "1815237172812971"
           },
           "PA05": {
-            "ad_id": "120249890338410480",
+            "ad_id": "120249892739380480",
             "video_id": "1882253879850053"
           },
           "PA01": "belum - video belum diupload ke akaun Azzuddin"
@@ -475,7 +475,7 @@
           "Engagers_FZ_Page_90d": "120249888845030480",
           "WA_Messaged_FZ_180d (exclude)": "120249888845440480"
         },
-        "nota": "Draf pertama (120249888848180480) hilang/dibuang. Dibina semula guna video milik akaun Azzuddin. Audience video viewer tak boleh dicipta melalui API (error 2654) walaupun video milik akaun sendiri; perlu cipta di Ads Manager. Ada kempen 'FIZAH | Sales | Whatsapp | Peti Ais | 14102026 2' ACTIVE dalam akaun (bukan dibina oleh sesi ini)."
+        "nota": "Draf pertama (120249888848180480) hilang/dibuang. Dibina semula guna video milik akaun Azzuddin. Audience video viewer tak boleh dicipta melalui API (error 2654) walaupun video milik akaun sendiri; perlu cipta di Ads Manager. Ada kempen 'FIZAH | Sales | Whatsapp | Peti Ais | 14102026 2' ACTIVE dalam akaun (bukan dibina oleh sesi ini). 14/10: draf ad set 120249890331900480 dibuang oleh user; dibina semula sebagai 120249892715420480 (dengan Engagers_FZ_Page_90d include). Default advertiser akaun dah diset tetapi tak terpakai pada objek yang dicipta melalui API."
       }
     }
   },
