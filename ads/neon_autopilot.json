@@ -451,7 +451,7 @@
         "adset_id": "120249892715420480",
         "struktur": "1-1-5 (diminta user)",
         "bajet": 5,
-        "status": "Kempen ACTIVE (bajet CBO RM5). Ad set + 4 iklan DRAFT - tersekat 'Advertiser is missing'; user perlu pilih advertiser verified dalam Ads Manager & publish",
+        "status": "DIGANTI - kempen API ini kosong (draf dibuang). Lihat kempen_peti_ais_live.",
         "iklan": {
           "PA02": {
             "ad_id": "120249892731370480",
@@ -476,6 +476,34 @@
           "WA_Messaged_FZ_180d (exclude)": "120249888845440480"
         },
         "nota": "Draf pertama (120249888848180480) hilang/dibuang. Dibina semula guna video milik akaun Azzuddin. Audience video viewer tak boleh dicipta melalui API (error 2654) walaupun video milik akaun sendiri; perlu cipta di Ads Manager. Ada kempen 'FIZAH | Sales | Whatsapp | Peti Ais | 14102026 2' ACTIVE dalam akaun (bukan dibina oleh sesi ini). 14/10: draf ad set 120249890331900480 dibuang oleh user; dibina semula sebagai 120249892715420480 (dengan Engagers_FZ_Page_90d include). Default advertiser akaun dah diset tetapi tak terpakai pada objek yang dicipta melalui API."
+      },
+      "kempen_peti_ais_live": {
+        "campaign_id": "120249892775490480",
+        "nama": "FIZAH | VIDEO VIEW | PETI AIS | 15062028",
+        "adset_id": "120249892775500480",
+        "optimization": "THRUPLAY",
+        "bajet_adset": 5,
+        "dibina": "Ad set + P01 oleh user dalam Ads Manager (advertiser verified); P03-P05 ditambah melalui API",
+        "iklan": {
+          "P01": {
+            "ad_id": "120249892775510480",
+            "video_id": "1411908741999594",
+            "nota": "copy PA02, headline 'Tengah cari peti ais?'"
+          },
+          "P03": {
+            "ad_id": "120249892833250480",
+            "video_id": "1802875260836857"
+          },
+          "P04": {
+            "ad_id": "120249892834320480",
+            "video_id": "1815237172812971"
+          },
+          "P05": {
+            "ad_id": "120249892835240480",
+            "video_id": "1882253879850053"
+          }
+        },
+        "nota": "Iklan di bawah ad set yang dibina dalam UI lulus tanpa ralat 'Advertiser is missing'. Cara ini boleh dipakai untuk akaun lain yang tersekat."
       }
     }
   },
