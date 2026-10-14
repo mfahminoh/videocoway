@@ -1,0 +1,235 @@
+{
+ "slug": "cium-dulu-baru-masak",
+ "voice": "Sulafat",
+ "style_tts": "Say in Malaysian Malay, slowly and emotionally, like a heartfelt story in a touching TV commercial, with natural pauses between sentences, voice of a warm young mother in her thirties",
+ "lift": "@08",
+ "shots": [
+  {
+   "at": 0,
+   "img": "peti_ais/pa01_a.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 60,
+   "zy": 38
+  },
+  {
+   "at": "@03",
+   "img": "peti_ais/pa01_b.jpg",
+   "kb": "left",
+   "grade": "none"
+  },
+  {
+   "at": "@04",
+   "img": "peti_ais/pa01_c.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zy": 55
+  },
+  {
+   "at": "@04%62",
+   "img": "peti_ais/pa01_a.jpg",
+   "kb": "out",
+   "grade": "night",
+   "zx": 62,
+   "zy": 36
+  },
+  {
+   "at": "@05",
+   "img": "peti_ais/pa01_d.jpg",
+   "kb": "in",
+   "grade": "night",
+   "zx": 50,
+   "zy": 72
+  },
+  {
+   "at": "@06",
+   "img": "peti_ais/pa01_b.jpg",
+   "kb": "out",
+   "grade": "night"
+  },
+  {
+   "at": "@07-0.3",
+   "img": "peti_ais/pa01_c.jpg",
+   "kb": "still",
+   "grade": "night"
+  },
+  {
+   "at": "@08",
+   "img": "coway_fridge/551_front.jpg",
+   "fit": "cover",
+   "kb": "in",
+   "grade": "cool"
+  },
+  {
+   "at": "@08%42",
+   "clip": "551_bigspace",
+   "fit": "contain",
+   "c0": 0.2,
+   "c1": 4.6,
+   "kb": "still"
+  },
+  {
+   "at": "@09",
+   "img": "coway_fridge/551_open_food.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 60
+  },
+  {
+   "at": "@10",
+   "img": "coway_fridge/551_drawers.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": -140
+  },
+  {
+   "at": "@11",
+   "img": "coway_fridge/551_deo_cubes.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": -150
+  },
+  {
+   "at": "@12",
+   "img": "peti_ais/pa01_b.jpg",
+   "kb": "in",
+   "grade": "cool",
+   "zx": 70,
+   "zy": 40
+  },
+  {
+   "at": "@13",
+   "color": "cw"
+  },
+  {
+   "at": "@14",
+   "img": "coway_fridge/551_glow.png",
+   "kb": "still",
+   "grade": "none",
+   "shade": 1,
+   "fit": "contain",
+   "oy": -430,
+   "sc": 0.62
+  }
+ ],
+ "els": [
+  {
+   "type": "cal",
+   "in": "@03",
+   "out": "@04e",
+   "top": 220,
+   "month": "MINGGU INI",
+   "items": [
+    {
+     "text": "AHAD",
+     "at": "@03"
+    },
+    {
+     "text": "RABU",
+     "at": "@04"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "in": "@07",
+   "out": "@07e+0.6",
+   "top": 640,
+   "dim": 0.55,
+   "hideCap": true,
+   "lines": [
+    "Ayam tu bukan basi.",
+    "*Duit saya yang cair.*"
+   ],
+   "lineAt": [
+    "@07",
+    "@07%48"
+   ]
+  },
+  {
+   "type": "prod",
+   "in": "@09",
+   "out": "@09e+0.2",
+   "top": 190,
+   "small": "Peti Ais Coway",
+   "title": "Multi-Door 551L",
+   "sub": "4 pintu · Triple inverter"
+  },
+  {
+   "type": "feats",
+   "in": "@10",
+   "out": "@10e+0.3",
+   "top": 1150,
+   "items": [
+    {
+     "icon": "temp",
+     "title": "Drawer 3 suhu",
+     "sub": "Termasuk soft-freeze −1.5°C",
+     "at": "@10"
+    }
+   ]
+  },
+  {
+   "type": "feats",
+   "in": "@11",
+   "out": "@11e+0.3",
+   "top": 1040,
+   "items": [
+    {
+     "icon": "shield",
+     "title": "Silver ion",
+     "sub": "99.99% E. coli &amp; S. aureus",
+     "at": "@11"
+    },
+    {
+     "icon": "wind",
+     "title": "Penapis bau",
+     "sub": "Neutralise ~98.5% bau",
+     "at": "@11%45"
+    }
+   ]
+  },
+  {
+   "type": "logo",
+   "in": "@13",
+   "out": "@13e",
+   "top": 120
+  },
+  {
+   "type": "price",
+   "in": "@13",
+   "out": "@13e+0.3",
+   "top": 330,
+   "label": "DARI",
+   "amount": "99",
+   "per": "sebulan",
+   "note": "Cody datang jaga · 7 tahun",
+   "noteAt": "@13%55"
+  },
+  {
+   "type": "photo",
+   "in": "@13%45",
+   "out": "@13e+0.3",
+   "top": 900,
+   "left": 140,
+   "w": 800,
+   "h": 470,
+   "src": "coway_fridge/hs_step1.jpg",
+   "pos": "60% 50%",
+   "label": "Heart Service: Cody datang servis berkala"
+  },
+  {
+   "type": "logo",
+   "in": "@14-0.2",
+   "top": 110
+  },
+  {
+   "type": "cta",
+   "in": "@14-0.2",
+   "top": 930,
+   "tag": "Borong seminggu sekali.<br>Simpan dengan tenang.",
+   "btnAt": "@14",
+   "button": "WhatsApp saya"
+  }
+ ]
+}
