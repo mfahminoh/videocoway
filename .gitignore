@@ -13,3 +13,4 @@ out/v5/old/
 !out/siap_dengan_vo/
 videos/*/vo_raw.wav
 !out/peti_ais/
+videos/*/vo_slow.wav

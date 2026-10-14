@@ -7,23 +7,23 @@ window.SPEC = {
    "grade": "warm",
    "zx": 60,
    "zy": 38,
-   "t0": -0.4,
-   "t1": 8.02
+   "t0": -0.3,
+   "t1": 6.08
   },
   {
    "img": "../../assets/img/peti_ais/pa01_b.jpg",
    "kb": "left",
    "grade": "none",
-   "t0": 8.02,
-   "t1": 16.03
+   "t0": 6.08,
+   "t1": 11.77
   },
   {
    "img": "../../assets/img/peti_ais/pa01_c.jpg",
    "kb": "in",
    "grade": "warm",
    "zy": 55,
-   "t0": 16.03,
-   "t1": 19.818
+   "t0": 11.77,
+   "t1": 14.529
   },
   {
    "img": "../../assets/img/peti_ais/pa01_a.jpg",
@@ -31,8 +31,8 @@ window.SPEC = {
    "grade": "night",
    "zx": 62,
    "zy": 36,
-   "t0": 19.818,
-   "t1": 23.03
+   "t0": 14.529,
+   "t1": 16.48
   },
   {
    "img": "../../assets/img/peti_ais/pa01_d.jpg",
@@ -40,30 +40,30 @@ window.SPEC = {
    "grade": "night",
    "zx": 50,
    "zy": 72,
-   "t0": 23.03,
-   "t1": 26.1
+   "t0": 16.48,
+   "t1": 18.51
   },
   {
    "img": "../../assets/img/peti_ais/pa01_b.jpg",
    "kb": "out",
    "grade": "night",
-   "t0": 26.1,
-   "t1": 32.4
+   "t0": 18.51,
+   "t1": 22.93
   },
   {
    "img": "../../assets/img/peti_ais/pa01_c.jpg",
    "kb": "still",
    "grade": "night",
-   "t0": 32.4,
-   "t1": 37.0
+   "t0": 22.93,
+   "t1": 26.21
   },
   {
    "img": "../../assets/img/coway_fridge/551_front.jpg",
    "fit": "cover",
    "kb": "in",
    "grade": "cool",
-   "t0": 37.0,
-   "t1": 39.465
+   "t0": 26.21,
+   "t1": 28.108
   },
   {
    "clip": "551_bigspace",
@@ -71,32 +71,32 @@ window.SPEC = {
    "c0": 0.2,
    "c1": 4.6,
    "kb": "still",
-   "t0": 39.465,
-   "t1": 43.71
+   "t0": 28.108,
+   "t1": 30.99
   },
   {
    "img": "../../assets/img/coway_fridge/551_open_food.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": 60,
-   "t0": 43.71,
-   "t1": 48.36
+   "t0": 30.99,
+   "t1": 34.74
   },
   {
    "img": "../../assets/img/coway_fridge/551_drawers.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": -140,
-   "t0": 48.36,
-   "t1": 52.51
+   "t0": 34.74,
+   "t1": 38.03
   },
   {
    "img": "../../assets/img/coway_fridge/551_deo_cubes.jpg",
    "fit": "contain",
    "kb": "in",
    "oy": -150,
-   "t0": 52.51,
-   "t1": 57.31
+   "t0": 38.03,
+   "t1": 41.66
   },
   {
    "img": "../../assets/img/peti_ais/pa01_b.jpg",
@@ -104,13 +104,13 @@ window.SPEC = {
    "grade": "cool",
    "zx": 70,
    "zy": 40,
-   "t0": 57.31,
-   "t1": 62.77
+   "t0": 41.66,
+   "t1": 45.85
   },
   {
    "color": "cw",
-   "t0": 62.77,
-   "t1": 67.7
+   "t0": 45.85,
+   "t1": 49.76
   },
   {
    "img": "../../assets/img/coway_fridge/551_glow.png",
@@ -120,8 +120,8 @@ window.SPEC = {
    "fit": "contain",
    "oy": -430,
    "sc": 0.62,
-   "t0": 67.7,
-   "t1": 73.82
+   "t0": 49.76,
+   "t1": 55.06
   }
  ],
  "els": [
@@ -132,15 +132,15 @@ window.SPEC = {
    "items": [
     {
      "text": "AHAD",
-     "t": 8.02
+     "t": 6.08
     },
     {
      "text": "RABU",
-     "t": 16.03
+     "t": 11.77
     }
    ],
-   "t0": 8.02,
-   "t1": 22.14
+   "t0": 6.08,
+   "t1": 16.22
   },
   {
    "type": "quote",
@@ -152,11 +152,11 @@ window.SPEC = {
     "*Duit saya yang cair.*"
    ],
    "lineAt": [
-    32.7,
-    34.39
+    23.23,
+    24.536
    ],
-   "t0": 32.7,
-   "t1": 36.82
+   "t0": 23.23,
+   "t1": 26.55
   },
   {
    "type": "prod",
@@ -164,8 +164,8 @@ window.SPEC = {
    "small": "Peti Ais Coway",
    "title": "Multi-Door 551L",
    "sub": "4 pintu · Triple inverter",
-   "t0": 43.71,
-   "t1": 48.2
+   "t0": 30.99,
+   "t1": 34.68
   },
   {
    "type": "feats",
@@ -175,11 +175,11 @@ window.SPEC = {
      "icon": "temp",
      "title": "Drawer 3 suhu",
      "sub": "Termasuk soft-freeze −1.5°C",
-     "t": 48.36
+     "t": 34.74
     }
    ],
-   "t0": 48.36,
-   "t1": 52.18
+   "t0": 34.74,
+   "t1": 38.07
   },
   {
    "type": "feats",
@@ -189,23 +189,23 @@ window.SPEC = {
      "icon": "shield",
      "title": "Silver ion",
      "sub": "99.99% E. coli &amp; S. aureus",
-     "t": 52.51
+     "t": 38.03
     },
     {
      "icon": "wind",
      "title": "Penapis bau",
      "sub": "Neutralise ~98.5% bau",
-     "t": 54.288
+     "t": 39.547
     }
    ],
-   "t0": 52.51,
-   "t1": 56.76
+   "t0": 38.03,
+   "t1": 41.7
   },
   {
    "type": "logo",
    "top": 120,
-   "t0": 62.77,
-   "t1": 67.1
+   "t0": 45.85,
+   "t1": 49.5
   },
   {
    "type": "price",
@@ -214,9 +214,9 @@ window.SPEC = {
    "amount": "99",
    "per": "sebulan",
    "note": "Cody datang jaga · 7 tahun",
-   "t0": 62.77,
-   "t1": 67.4,
-   "noteT": 65.151
+   "t0": 45.85,
+   "t1": 49.8,
+   "noteT": 47.858
   },
   {
    "type": "photo",
@@ -227,13 +227,13 @@ window.SPEC = {
    "src": "../../assets/img/coway_fridge/hs_step1.jpg",
    "pos": "60% 50%",
    "label": "Heart Service: Cody datang servis berkala",
-   "t0": 64.719,
-   "t1": 67.4
+   "t0": 47.492,
+   "t1": 49.8
   },
   {
    "type": "logo",
    "top": 110,
-   "t0": 67.5,
+   "t0": 49.56,
    "t1": null
   },
   {
@@ -241,9 +241,9 @@ window.SPEC = {
    "top": 930,
    "tag": "Borong seminggu sekali.<br>Simpan dengan tenang.",
    "button": "WhatsApp saya",
-   "t0": 67.5,
+   "t0": 49.56,
    "t1": null,
-   "btnT": 67.7
+   "btnT": 49.76
   }
  ],
  "clips": {

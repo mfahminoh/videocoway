@@ -1,228 +1,228 @@
 window.V = {
- "off": 0.4,
- "dur": 73.82,
+ "off": 0.3,
+ "dur": 55.06,
  "lines": [
   [
-   0.1,
-   4.1,
+   0.09,
+   3.57,
    "Kalau awak kena *cium lauk dulu*, baru berani masak..."
   ],
   [
-   4.8,
-   7.09,
+   3.83,
+   5.82,
    "masalahnya, *bukan lauk tu.*"
   ],
   [
-   8.02,
-   15.09,
+   6.08,
+   11.51,
    "Hari Ahad, saya borong. Ayam, ikan, sayur. *Cukup seminggu,* kononnya."
   ],
   [
-   16.03,
-   22.14,
+   11.77,
+   16.22,
    "Hari Rabu, *sayur dah layu.* Ayam tu, saya cium... saya ragu."
   ],
   [
-   23.03,
-   25.14,
+   16.48,
+   18.25,
    "Akhirnya, *masuk tong sampah* juga."
   ],
   [
-   26.1,
-   31.85,
+   18.51,
+   22.97,
    "Yang saya buang tu bukan lauk. Itu *duit dapur,* yang saya kira satu-satu."
   ],
   [
-   32.7,
-   36.22,
+   23.23,
+   25.95,
    ""
   ],
   [
-   37.0,
-   42.87,
+   26.21,
+   30.73,
    "Saya cuma nak satu. Buka peti ais, *semua masih segar.* Tak payah fikir dua kali."
   ],
   [
-   43.71,
-   48.0,
+   30.99,
+   34.48,
    "Peti ais *multi-door Coway.* 551 liter."
   ],
   [
-   48.36,
-   51.88,
+   34.74,
+   37.77,
    "Drawer *3 suhu,* ada *soft-freeze* untuk ayam dan ikan."
   ],
   [
-   52.51,
-   56.46,
+   38.03,
+   41.4,
    "*Silver ion* dan *penapis bau.* Bau ikan tak masuk dalam kek anak."
   ],
   [
-   57.31,
-   62.08,
+   41.66,
+   45.59,
    "Bayangkan, *borong seminggu sekali...* dan tak ada lagi yang masuk tong sampah."
   ],
   [
-   62.77,
-   67.1,
+   45.85,
+   49.5,
    "Dari *RM99 sebulan.* Cody datang jaga, *7 tahun.*"
   ],
   [
-   67.7,
-   70.82,
+   49.76,
+   52.36,
    "*WhatsApp saya.* Saya bantu pilih model yang muat dapur awak."
   ]
  ],
  "sfx": [
   [
    "whoosh",
-   7.77,
+   5.83,
    0.07
   ],
   [
    "tick",
-   8.02,
+   6.08,
    0.25
   ],
   [
    "whoosh",
-   15.78,
+   11.52,
    0.07
   ],
   [
    "tick",
-   16.03,
+   11.77,
    0.25
   ],
   [
    "whoosh",
-   19.57,
+   14.28,
    0.07
   ],
   [
    "whoosh",
-   22.78,
+   16.23,
    0.07
   ],
   [
    "whoosh",
-   25.85,
+   18.26,
    0.07
   ],
   [
    "whoosh",
-   32.15,
+   22.68,
    0.07
   ],
   [
    "boom",
-   32.7,
+   23.23,
    0.22
   ],
   [
    "whoosh",
-   36.75,
+   25.96,
    0.07
   ],
   [
    "whoosh",
-   39.22,
+   27.86,
    0.07
   ],
   [
    "whoosh",
-   43.46,
+   30.74,
    0.07
   ],
   [
    "shimmer",
-   43.71,
+   30.99,
    0.07
   ],
   [
    "whoosh",
-   48.11,
+   34.49,
    0.07
   ],
   [
    "chime",
-   48.36,
+   34.74,
    0.1,
    1568
   ],
   [
    "whoosh",
-   52.26,
+   37.78,
    0.07
   ],
   [
    "chime",
-   52.51,
+   38.03,
    0.1,
    1568
   ],
   [
    "chime",
-   54.288,
+   39.547,
    0.1,
    1764
   ],
   [
    "whoosh",
-   57.06,
+   41.41,
    0.07
   ],
   [
    "whoosh",
-   62.52,
+   45.6,
    0.07
   ],
   [
    "shimmer",
-   62.77,
+   45.85,
    0.07
   ],
   [
    "shimmer",
-   62.77,
+   45.85,
    0.08
   ],
   [
    "chime",
-   62.92,
+   46.0,
    0.12,
    2093
   ],
   [
    "pop",
-   64.719,
+   47.492,
    0.12,
    900
   ],
   [
    "whoosh",
-   67.45,
+   49.51,
    0.07
   ],
   [
    "shimmer",
-   67.5,
+   49.56,
    0.07
   ],
   [
    "chime",
-   67.7,
+   49.76,
    0.12,
    1760
   ],
   [
    "chime",
-   67.82000000000001,
+   49.879999999999995,
    0.1,
    2349
   ]
  ],
  "mood": "emotional",
- "lift": 37.0,
- "bpm": 70
+ "lift": 26.21,
+ "bpm": 90
 };

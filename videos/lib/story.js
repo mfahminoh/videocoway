@@ -26,10 +26,10 @@ const GRADE = {
   none: '',
 };
 const KB = {   // [skala mula, skala akhir, x mula, x akhir, y mula, y akhir]
-  in: [1.0, 1.12, 0, 0, 0, 0], out: [1.13, 1.0, 0, 0, 0, 0], still: [1.03, 1.05, 0, 0, 0, 0],
+  in: [1.0, 1.16, 0, 0, 0, 0], out: [1.17, 1.0, 0, 0, 0, 0], still: [1.03, 1.05, 0, 0, 0, 0],
   up: [1.12, 1.12, 0, 0, 50, -50], down: [1.12, 1.12, 0, 0, -50, 50], left: [1.12, 1.12, 40, -40, 0, 0], right: [1.12, 1.12, -40, 40, 0, 0],
 };
-const XF = 0.6;
+const XF = 0.35;
 
 const SP = window.SPEC;
 window.DURATION = V.dur;

@@ -25,7 +25,7 @@ sys.path.insert(0, str(ROOT / "videos"))
 from build_video import Resolver  # noqa: E402
 
 FF = imageio_ffmpeg.get_ffmpeg_exe()
-OFF, TAIL, MAXDUR = 0.4, 2.6, 90.0
+OFF, TAIL, MAXDUR = 0.3, 2.4, 90.0
 CLIPS = ROOT / "assets" / "clips" / "fridge"
 REVIEW = ROOT / "out" / "peti_ais"
 IDS = ["PA01", "PA02", "PA03", "PA04", "PA05"]
@@ -129,7 +129,7 @@ def prep(vid, align=True):
 
     caps = [[g["a"], g["b"], l.get("cap", l["text"])] for g, l in zip(segs, lines)]
     lift = R(spec["lift"])
-    V = {"off": OFF, "dur": dur, "lines": caps, "sfx": sfx, "mood": "emotional", "lift": lift, "bpm": spec.get("bpm", 70)}
+    V = {"off": OFF, "dur": dur, "lines": caps, "sfx": sfx, "mood": "emotional", "lift": lift, "bpm": spec.get("bpm", 90)}
     (d / "timing.js").write_text("window.V = " + json.dumps(V, ensure_ascii=False, indent=1) + ";\n")
     SP = {"shots": shots, "els": els, "clips": clips, "flashes": [R(x) for x in spec.get("flashes", [])]}
     (d / "spec.js").write_text("window.SPEC = " + json.dumps(SP, ensure_ascii=False, indent=1) + ";\n")
