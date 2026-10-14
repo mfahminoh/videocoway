@@ -447,38 +447,35 @@
       "boleh_upload": false,
       "nota_upload": "upload_media ditolak; video dimuat naik ke Zara, guna video_id itu.",
       "kempen_peti_ais": {
-        "campaign_id": "120249888848180480",
-        "adset_id": "120249888853010480",
+        "campaign_id": "120249890330160480",
+        "adset_id": "120249890331900480",
         "struktur": "1-1-5 (diminta user)",
         "bajet": 5,
         "status": "DRAFT (belum publish)",
         "iklan": {
-          "PA01": {
-            "ad_id": "120249888886160480",
-            "video_id": "1666377914843957"
-          },
           "PA02": {
-            "ad_id": "120249888886870480",
-            "video_id": "1580582356631604"
+            "ad_id": "120249890337750480",
+            "video_id": "4989065818017273"
           },
           "PA03": {
-            "ad_id": "120249888888250480",
-            "video_id": "1660301365760234"
+            "ad_id": "120249890337880480",
+            "video_id": "1802875260836857"
           },
           "PA04": {
-            "ad_id": "120249888889990480",
-            "video_id": "1789284185707378"
+            "ad_id": "120249890338240480",
+            "video_id": "1815237172812971"
           },
           "PA05": {
-            "ad_id": "120249888890980480",
-            "video_id": "2902311160141636"
-          }
+            "ad_id": "120249890338410480",
+            "video_id": "1882253879850053"
+          },
+          "PA01": "belum - video belum diupload ke akaun Azzuddin"
         },
         "audience": {
           "Engagers_FZ_Page_90d": "120249888845030480",
           "WA_Messaged_FZ_180d (exclude)": "120249888845440480"
         },
-        "nota": "Audience video viewer gagal dicipta melalui API (error 2654); perlu cipta di Ads Manager."
+        "nota": "Draf pertama (120249888848180480) hilang/dibuang. Dibina semula guna video milik akaun Azzuddin. Audience video viewer tak boleh dicipta melalui API (error 2654) walaupun video milik akaun sendiri; perlu cipta di Ads Manager. Ada kempen 'FIZAH | Sales | Whatsapp | Peti Ais | 14102026 2' ACTIVE dalam akaun (bukan dibina oleh sesi ini)."
       }
     }
   },
@@ -494,6 +491,10 @@
     {
       "tarikh": "2026-10-14",
       "tindakan": "Bina draf kempen peti ais 1-1-5 RM5/hari di Coway Azzuddin (Page FZ Home & Living) + 2 custom audience."
+    },
+    {
+      "tarikh": "2026-10-14",
+      "tindakan": "Bina semula draf kempen peti ais Azzuddin (4 iklan PA02-PA05, video milik Azzuddin)."
     }
   ]
 }
