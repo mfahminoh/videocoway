@@ -1,0 +1,47 @@
+[
+ {
+  "id": "01",
+  "text": "Dapur kecil, atau duduk rumah sewa?",
+  "cap": "Dapur *kecil*? Rumah *sewa*?"
+ },
+ {
+  "id": "02",
+  "text": "Tiga sebab Coway Neon tetap muat.",
+  "cap": "*3 sebab* Coway Neon tetap muat."
+ },
+ {
+  "id": "03",
+  "text": "Satu, saiz kompak, tak makan ruang kaunter.",
+  "cap": "*1.* Saiz *kompak*, tak makan ruang kaunter."
+ },
+ {
+  "id": "04",
+  "text": "Dua, paip boleh dipanjangkan, dulang boleh tanggal.",
+  "cap": "*2.* Paip *boleh dipanjangkan*, dulang *boleh tanggal*."
+ },
+ {
+  "id": "05",
+  "text": "Isi jag tinggi pun tak tumpah.",
+  "cap": "Isi *jag tinggi* pun tak tumpah."
+ },
+ {
+  "id": "06",
+  "text": "Tiga, bayar bulanan je, tak payah keluar duit besar sekali gus.",
+  "cap": "*3.* Bayar *bulanan*, tak keluar duit besar sekali gus."
+ },
+ {
+  "id": "07",
+  "text": "Harga asal seratus empat ringgit, sekarang lima puluh empat ringgit sebulan.",
+  "cap": "Asal *RM104*, sekarang *RM54* sebulan."
+ },
+ {
+  "id": "08",
+  "text": "Tambah rebat dua puluh ringgit, selama tujuh bulan.",
+  "cap": "+ rebat *RM20* × *7 bulan*."
+ },
+ {
+  "id": "09",
+  "text": "Nak semak promo untuk rumah awak? WhatsApp saya.",
+  "cap": "Nak semak promo? *WhatsApp saya.*"
+ }
+]

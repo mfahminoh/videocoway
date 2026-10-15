@@ -1,0 +1,183 @@
+{
+ "slug": "ada-anak-kecil-3-sebab-neon",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "voice": "Aoede",
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably.",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "bottle_to_baby",
+    "c0": 7.0,
+    "c1": 8.6
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "bottles_busy",
+    "c0": 0.0,
+    "c1": 2.6
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "navy"
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "ADA <em>ANAK KECIL</em><br>KAT RUMAH?"
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "<em>3 SEBAB</em> NEON<br>SESUAI UNTUK KORANG"
+  },
+  {
+   "type": "reason",
+   "in": "@03",
+   "out": "@04",
+   "top": 300,
+   "num": "1",
+   "title": "KUNCI<br>KESELAMATAN",
+   "sub": "untuk air panas"
+  },
+  {
+   "type": "icon",
+   "in": "@03%30",
+   "out": "@04",
+   "top": 880,
+   "icon": "lock",
+   "size": 260,
+   "color": "#0B2F6B",
+   "hit": true
+  },
+  {
+   "type": "reason",
+   "in": "@04",
+   "out": "@05",
+   "top": 250,
+   "num": "2",
+   "title": "BANCUH SUSU",
+   "sub": "satu tekan je"
+  },
+  {
+   "type": "reason",
+   "in": "@05",
+   "out": "@06",
+   "top": 250,
+   "num": "3",
+   "title": "FILTER BARU<br>SETIAP <span style='color:var(--yellow)'>8 BULAN</span>"
+  },
+  {
+   "type": "delivery",
+   "in": "@05",
+   "out": "@06",
+   "top": 720
+  },
+  {
+   "type": "stamp",
+   "in": "@05%75",
+   "out": "@06",
+   "top": 1300,
+   "html": "PERCUMA"
+  },
+  {
+   "type": "card",
+   "in": "@06",
+   "out": "@07",
+   "top": 760,
+   "icon": "tech",
+   "title": "PILIH TECHNICIAN",
+   "sub": "Datang servis ke rumah"
+  },
+  {
+   "type": "stamp",
+   "in": "@06%60",
+   "out": "@07",
+   "top": 1080,
+   "html": "BOLEH ✓",
+   "color": "#1faa59",
+   "rot": -8
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@09",
+   "top": 160,
+   "left": 360,
+   "w": 360,
+   "h": 360,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "price",
+   "in": "@07",
+   "out": "@09",
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM104",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@08",
+   "strikeAt": "@07%35",
+   "to": "RM54",
+   "toAt": "@07%62"
+  },
+  {
+   "type": "photo",
+   "in": "@09",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/mint.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 720,
+   "ticks": [
+    "PROMOSI RM54 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "btnAt": "@09%40"
+  }
+ ]
+}
