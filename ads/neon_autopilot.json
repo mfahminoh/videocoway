@@ -527,6 +527,10 @@
     {
       "tarikh": "2026-10-15",
       "tindakan": "Laporan pagi: semua kempen Neon RM0 belanja (Aina/Atie/Zara PAUSED, Temp 1 ACTIVE 0 impression). Tiada cadangan; user balas 'ok' - tiada tindakan diambil."
+    },
+    {
+      "tarikh": "2026-10-16",
+      "tindakan": "Laporan pagi harian (trig_01DaiPtS8GiCuRjBdA6ohNzf) dihentikan atas permintaan user. Tugasan dinyahaktif, bukan dipadam."
     }
   ]
 }
