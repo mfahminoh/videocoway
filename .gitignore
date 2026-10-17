@@ -17,3 +17,4 @@ out/jerebu/_*
 out/stills/*
 !out/stills/jerebu/
 voiceover/jerebu/*/[0-9][0-9].wav
+!out/model/
