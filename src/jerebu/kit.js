@@ -91,30 +91,55 @@
   /* ---------- CTA ---------- */
   const WA = '<svg width="60" height="60" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>';
   K.WA = WA;
+  /* Kad CTA + promosi semua penapis udara: RM20/bulan untuk 7 bulan pertama. Masa elemen ikut VO babak (%). */
   K.cta = function (o = {}) {
     const imgs = o.imgs || ['storm2.png'];
-    const w = imgs.length === 1 ? 420 : 300, gap = imgs.length === 1 ? 0 : 20;
+    const w = imgs.length === 1 ? 360 : 260, gap = imgs.length === 1 ? 0 : 20;
     const x0 = (1080 - (imgs.length * w + (imgs.length - 1) * gap)) / 2;
-    const prods = imgs.map((f, i) => `<img class="el" src="../../assets/img/air/${f}" style="top:${o.imgTop || 250}px; left:${x0 + i * (w + gap)}px; width:${w}px; height:${w * 740 / 450}px; filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))" data-in="${.1 + i * .12}" data-a="zoom">`).join('');
+    const prods = imgs.map((f, i) => `<img class="el" src="../../assets/img/air/${f}" style="top:${o.imgTop || 150}px; left:${x0 + i * (w + gap)}px; width:${w}px; height:${w * 740 / 450}px; filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))" data-in="${.1 + i * .12}" data-a="zoom">`).join('');
+    const y = (imgs.length === 1 ? 150 + 360 * 740 / 450 : 150 + 260 * 740 / 450) + 40;
     return `<div class="scene cta" style="color:var(--cta-text, #fff)">
       ${prods}
-      <div class="el c fit" style="top:${o.top || 990}px; font-size:84px; font-weight:800; line-height:1.1; white-space:nowrap" data-in=".3" data-a="slam">${o.h1 || 'Udara bersih untuk keluarga.'}</div>
-      ${o.h2 ? `<div class="el c fit" style="top:${(o.top || 990) + 100}px; font-size:56px; font-weight:700; color:var(--accent); white-space:nowrap" data-in=".6" data-a="up">${o.h2}</div>` : ''}
-      <div class="el c" style="top:${(o.top || 990) + 190}px" data-in=".9" data-a="pop"><span class="fit" style="display:inline-block; white-space:nowrap; background:var(--cta-pill, rgba(255,255,255,.14)); padding:14px 40px; border-radius:60px; font-size:40px; font-weight:600">${o.price || 'Sewa dari <b style="color:var(--accent)">RM55/bulan*</b> · penapis ganti termasuk'}</span></div>
-      <div class="el" id="ctaBtn" style="top:${(o.top || 990) + 310}px; left:110px; width:860px; height:140px; border-radius:80px; background:#25D366; display:flex !important; align-items:center; justify-content:center; gap:22px; font-size:46px; font-weight:800; color:#fff; white-space:nowrap; box-shadow:0 20px 50px rgba(37,211,102,.45)" data-in="1.3" data-a="pop">${WA} ${o.btn || 'WHATSAPP SAYA SEKARANG'}</div>
-      <div class="el c" style="top:${(o.top || 990) + 480}px; font-size:26px; opacity:.6; line-height:1.4" data-in="1.8" data-a="fade">${o.fine || '*Harga Coway Malaysia (Storm II, pelan Self-Service 7 tahun), Okt 2026. Tertakluk terma &amp; syarat.'}</div>
+      <div class="el c" style="top:${y}px" data-in="0%" data-a="pop"><span style="display:inline-block; background:#E5322D; color:#fff; font-weight:800; letter-spacing:3px; font-size:36px; padding:12px 36px; border-radius:50px">PROMOSI SEMUA AIR PURIFIER</span></div>
+      <div class="el c" style="top:${y + 80}px; white-space:nowrap; line-height:1" data-in="12%" data-a="slam"><span style="font-family:Anton; font-size:230px; color:var(--accent)">RM20</span><span style="font-size:64px; font-weight:800">/bulan</span></div>
+      <div class="el c" style="top:${y + 320}px; font-size:50px; font-weight:700" data-in="22%" data-a="up">untuk <span style="color:var(--accent)">7 bulan pertama</span></div>
+      <div class="el c" style="top:${y + 410}px" data-in="${o.stampAt || '45%'}" data-a="stamp"><span style="display:inline-block; background:#FFD23F; color:#111; font-weight:800; font-size:54px; padding:12px 40px; border-radius:18px; transform:rotate(-3deg)">RM20 dah boleh pasang!</span></div>
+      <div class="el c fit" style="top:${y + 540}px; font-size:52px; font-weight:800; white-space:nowrap" data-in="62%" data-a="up">${o.h1 || 'Udara bersih untuk keluarga.'}</div>
+      <div class="el" id="ctaBtn" style="top:${y + 630}px; left:110px; width:860px; height:130px; border-radius:80px; background:#25D366; display:flex !important; align-items:center; justify-content:center; gap:22px; font-size:46px; font-weight:800; color:#fff; white-space:nowrap; box-shadow:0 20px 50px rgba(37,211,102,.45)" data-in="${o.btnAt || '75%'}" data-a="pop">${WA} ${o.btn || 'WHATSAPP SAYA SEKARANG'}</div>
+      <div class="el c" style="top:${y + 790}px; font-size:24px; opacity:.65; line-height:1.4; padding:0 70px" data-in="30%" data-a="fade">*Promosi semua penapis udara Coway: RM20/bulan untuk 7 bulan pertama, kemudian harga sewa biasa (dari RM49/bulan, pelan 7 tahun; penapis ganti termasuk). Tertakluk terma &amp; syarat.</div>
     </div>`;
+  };
+
+  /* Foto realistik penuh skrin (Seedream) dengan zum perlahan (Ken Burns) dan bayang untuk teks. */
+  const SHADE = 'linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.18) 32%, rgba(0,0,0,.22) 58%, rgba(0,0,0,.78) 100%)';
+  K.photo = function (file, o = {}) {
+    return `<div class="el photo" style="left:0; top:0; width:1080px; height:1920px; overflow:hidden; z-index:-1" data-in="${o.in || 0}" data-a="${o.a || 'fade'}" ${o.id ? `id="${o.id}"` : ''}>
+      <img class="kb" src="../../assets/generated/${file}" style="width:100%; height:100%; object-fit:cover; object-position:${o.pos || '50% 50%'}" data-kb="${o.kb || 'in'}">
+      <div style="position:absolute; inset:0; background:${o.shade || SHADE}"></div></div>`;
+  };
+  /* Foto dalam kad bersudut bulat (untuk tema cerah) */
+  K.card = function (file, x, y, w, h, o = {}) {
+    return `<div class="el" style="left:${x}px; top:${y}px; width:${w}px; height:${h}px; border-radius:36px; overflow:hidden; box-shadow:0 24px 50px rgba(0,0,0,.18)" data-in="${o.in || 0}" data-a="${o.a || 'zoom'}">
+      <img class="kb" src="../../assets/generated/${file}" style="width:100%; height:100%; object-fit:cover; object-position:${o.pos || '50% 50%'}" data-kb="in"></div>`;
+  };
+  K.kenBurns = function (t) {
+    document.querySelectorAll('img.kb').forEach(im => {
+      const sc = im.closest('.scene'); if (!sc || sc.style.display === 'none') return;
+      const k = Engine.clamp((t - +sc.dataset.s) / Math.max(1, Math.min(9999, +sc.dataset.e) - +sc.dataset.s));
+      const z = im.dataset.kb === 'out' ? 1.12 - .08 * k : 1.04 + .08 * k;
+      im.style.transform = `scale(${z})`;
+    });
   };
   K.ctaPulse = function (t) {
     const b = document.getElementById('ctaBtn'); if (!b) return;
     const s = T.scenes[T.scenes.length - 1][0];
-    if (t > s + 2.2) b.style.transform += ` scale(${1 + .045 * Math.max(0, Math.sin((t - s - 2.2) * 5))})`;
+    const t0 = +b.dataset.in + s + .6; if (t > t0) b.style.transform += ` scale(${1 + .045 * Math.max(0, Math.sin((t - t0) * 5))})`;
   };
 
   /* Panggil selepas HTML siap: susun masa + mula enjin */
   K.start = function (hooks, extra = {}) {
     K.applyTiming();
-    Engine.init(Object.assign({ duration: T.duration, hooks: t => { hooks && hooks(t); K.ctaPulse(t); } }, extra));
+    Engine.init(Object.assign({ duration: T.duration, hooks: t => { hooks && hooks(t); K.kenBurns(t); K.ctaPulse(t); } }, extra));
   };
   window.K = K;
 })();

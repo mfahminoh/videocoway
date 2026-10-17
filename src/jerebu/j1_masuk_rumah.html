@@ -18,40 +18,26 @@
 </style></head>
 <body><div id="stage">
   <div class="layer" id="bg"><div id="sun"></div></div>
-  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
 
   <!-- 0: hook -->
   <div class="scene">
-    <div class="el c lead" style="top:250px" data-in="0" data-a="up">Ramai ingat…</div>
-    <div class="el house" style="top:520px; left:190px" data-in="0" data-a="zoom">
-      <svg width="700" height="560" viewBox="0 0 700 560">
-        <path d="M70 250 L350 60 L630 250 V540 H70 Z" fill="#F4EBDD"/><path d="M40 262 L350 45 L660 262" fill="none" stroke="#5b4636" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
-        <rect x="290" y="370" width="120" height="170" rx="10" fill="#6b4f3a"/>
-        <rect x="120" y="320" width="130" height="120" rx="8" fill="#a9c9d8" stroke="#5b4636" stroke-width="10"/><line x1="185" y1="320" x2="185" y2="440" stroke="#5b4636" stroke-width="8"/>
-        <rect x="450" y="320" width="130" height="120" rx="8" fill="#a9c9d8" stroke="#5b4636" stroke-width="10"/><line x1="515" y1="320" x2="515" y2="440" stroke="#5b4636" stroke-width="8"/>
-      </svg></div>
-    <div class="el c" style="top:1150px; font-size:68px; font-weight:700" data-in="25%" data-a="up">Duduk dalam rumah.</div>
-    <div class="el c" style="top:1240px; font-size:68px; font-weight:700" data-in="45%" data-a="up">Tutup tingkap.</div>
-    <div class="el c" style="top:1360px; font-size:120px; font-weight:800" data-in="70%" data-a="slam">Dah <span class="hl">selamat?</span></div>
+    <div class="el c lead" style="top:200px" data-in="0" data-a="up">Ramai ingat…</div>
+    <script>document.write(K.photo('R01.jpg', { pos: '50% 60%' }))</script>
+    <div class="el c" style="top:1330px; font-size:68px; font-weight:700" data-in="25%" data-a="up">Duduk dalam rumah.</div>
+    <div class="el c" style="top:1420px; font-size:68px; font-weight:700" data-in="45%" data-a="up">Tutup tingkap.</div>
+    <div class="el c" style="top:1540px; font-size:120px; font-weight:800" data-in="70%" data-a="slam">Dah <span class="hl">selamat?</span></div>
   </div>
 
   <!-- 1: celah -->
   <div class="scene">
-    <div class="el c" style="top:200px; font-size:76px; font-weight:800; line-height:1.1" data-in="0" data-a="up">Rumah kita<br><span style="color:#ff6b5e">TAK KEDAP</span> udara.</div>
-    <div class="el" style="top:560px; left:90px" data-in="0" data-a="fade">
-      <svg width="900" height="760" viewBox="0 0 900 760">
-        <rect x="40" y="40" width="820" height="680" rx="20" fill="#F4EBDD" stroke="#5b4636" stroke-width="18"/>
-        <rect x="80" y="430" width="150" height="290" rx="6" fill="#6b4f3a"/>
-        <rect x="560" y="170" width="250" height="200" rx="6" fill="#a9c9d8" stroke="#5b4636" stroke-width="12"/><line x1="685" y1="170" x2="685" y2="370" stroke="#5b4636" stroke-width="10"/>
-        <rect x="300" y="90" width="230" height="70" rx="14" fill="#fff" stroke="#9a8f86" stroke-width="6"/><rect x="320" y="135" width="190" height="10" rx="5" fill="#cfc6bd"/>
-        <circle cx="140" cy="140" r="52" fill="#fff" stroke="#9a8f86" stroke-width="6"/><path d="M140 140 l0 -40 M140 140 l35 20 M140 140 l-35 20" stroke="#9a8f86" stroke-width="10" stroke-linecap="round"/>
-        <rect x="80" y="530" width="10" height="190" fill="#3b2a1e"/>
-      </svg></div>
-    <div class="el" style="top:1010px; left:110px" data-in="22%" data-a="pop"><span class="lab">Celah pintu</span></div>
-    <div class="el" style="top:960px; left:640px" data-in="38%" data-a="pop"><span class="lab">Celah tingkap</span></div>
-    <div class="el" style="top:600px; left:90px" data-in="58%" data-a="pop"><span class="lab">Lubang kipas</span></div>
-    <div class="el" style="top:600px; left:640px" data-in="70%" data-a="pop"><span class="lab">Aircon</span></div>
-    <div class="el c" style="top:1420px; font-size:74px; font-weight:800" data-in="82%" data-a="slam">Jerebu tetap <span style="color:#ff6b5e">MASUK.</span></div>
+    
+    <script>document.write(K.photo('R02.jpg', { shade: 'linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.8) 100%)' }))</script>
+    <div class="el" style="top:230px; left:170px" data-in="15%" data-a="pop"><span class="lab">Lubang kipas</span></div>
+    <div class="el" style="top:420px; left:660px" data-in="30%" data-a="pop"><span class="lab">Aircon</span></div>
+    <div class="el" style="top:1010px; left:560px" data-in="45%" data-a="pop"><span class="lab">Celah tingkap</span></div>
+    <div class="el" style="top:1240px; left:640px" data-in="60%" data-a="pop"><span class="lab">Celah pintu</span></div>
+    <div class="el c" style="top:1440px; font-size:72px; font-weight:800; line-height:1.1" data-in="0" data-a="up">Rumah kita <span style="color:#ff6b5e">TAK KEDAP</span> udara.</div>
+    <div class="el c" style="top:1580px; font-size:80px; font-weight:800" data-in="82%" data-a="slam">Jerebu tetap <span style="color:#ff6b5e">MASUK.</span></div>
   </div>
 
   <!-- 2: kajian -->
@@ -85,22 +71,22 @@
 
   <!-- 4: siapa paling lama di rumah -->
   <div class="scene">
-    <div class="el c" style="top:260px; font-size:70px; font-weight:800; line-height:1.15" data-in="0" data-a="up">Siapa paling lama<br><span class="hl">dalam rumah?</span></div>
-    <div class="el who" style="top:640px; left:60px" data-in="32%" data-a="pop"><div class="em">👶</div><div class="t">Anak kecil</div></div>
-    <div class="el who" style="top:640px; left:395px" data-in="46%" data-a="pop"><div class="em">🤰</div><div class="t">Ibu mengandung</div></div>
-    <div class="el who" style="top:640px; left:730px" data-in="62%" data-a="pop"><div class="em">👵</div><div class="t">Warga emas</div></div>
-    <div class="el c" style="top:1180px; font-size:58px; font-weight:700; line-height:1.25" data-in="75%" data-a="up">Golongan yang paling<br><span style="color:#ff6b5e">mudah terkesan.</span></div>
+    <div class="el c" style="top:170px; font-size:70px; font-weight:800; line-height:1.15" data-in="0" data-a="up">Siapa paling lama<br><span class="hl">dalam rumah?</span></div>
+    <script>document.write(K.photo('R03.jpg', { pos: '50% 40%' }))</script>
+    <div class="el" style="top:1330px; left:0; width:1080px; display:flex !important; justify-content:center; gap:18px" data-in="32%" data-a="pop"><span class="lab">Anak kecil</span><span class="lab">Ibu mengandung</span><span class="lab">Warga emas</span></div>
+    <div class="el c" style="top:1460px; font-size:58px; font-weight:700; line-height:1.25" data-in="75%" data-a="up">Golongan yang paling<br><span style="color:#ff6b5e">mudah terkesan.</span></div>
   </div>
 
   <!-- 5: penapis HEPA -->
   <div class="scene">
-    <div class="el c" style="top:170px; font-size:62px; font-weight:800; line-height:1.15" data-in="0" data-a="up">Air purifier <span class="hl">HEPA</span><br>bukan lagi barang mewah.</div>
-    <script>document.write(K.storm('s1', 290, 470, 500, 'data-in="0" data-a="zoom"'))</script>
-    <div class="el c" style="top:1340px; font-size:52px; font-weight:700; line-height:1.25" data-in="55%" data-a="up">Tapis zarah halus yang<br><span class="hl">tingkap tak mampu halang.</span></div>
-    <div class="el c" id="ringTag" style="top:1520px" data-in="20%" data-a="pop"><span class="lab" id="ringTxt" style="border-color:#fff">MERAH · KOTOR</span></div>
+    <div class="el c" style="top:150px; font-size:62px; font-weight:800; line-height:1.15" data-in="0" data-a="up">Air purifier <span class="hl">HEPA</span><br>bukan lagi barang mewah.</div>
+    <script>document.write(K.photo('R05.jpg') + K.photo('R06.jpg', { id: 'ph6', a: 'cut' }))</script>
+    <div class="el c" style="top:1600px; font-size:52px; font-weight:700; line-height:1.25" data-in="55%" data-a="up">Tapis zarah halus yang<br><span class="hl">tingkap tak mampu halang.</span></div>
+    <div class="el c" id="ringTag" style="top:350px" data-in="20%" data-a="pop"><span class="lab" id="ringTxt" style="border-color:#fff">MERAH · KOTOR</span></div>
   </div>
 
-  <script>document.write(K.cta({ h1: 'Udara rumah pun perlu ditapis.', h2: 'Saya bantu pilih model yang sesuai.' }))</script>
+  <script>document.write(K.cta({ h1: 'Saya bantu pilih model yang sesuai.' }))</script>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
 </div>
 <script>
   const ctx = document.getElementById('fx').getContext('2d');
@@ -109,11 +95,11 @@
     K.clear(ctx);
     const s1 = sc(1), s5 = sc(5), cta = sc(6);
     // jerebu ambien (berkurang semasa babak penapis & CTA)
-    const amb = t < s5.s ? 1 : t < cta.s ? 1 - Engine.p(t, s5.s, s5.e - 1) * .85 : .1;
-    K.haze(ctx, t, { n: 260, density: amb, color: '90,70,50', alpha: .45, size: 4, speed: 24 });
+    const amb = t < s5.s ? .8 : t < cta.s ? .8 - Engine.p(t, s5.s, s5.e - 1) * .75 : .05;
+    K.haze(ctx, t, { n: 220, density: amb, color: '150,125,100', alpha: .35, size: 3.5, speed: 24 });
     // babak 1: jerebu menyusup melalui celah
     if (t >= s1.s - .2 && t < s1.e + .4) {
-      const leaks = [[230, 1100, .2, .22], [700, 950, 3.4, .38], [230, 700, .5, .58], [700, 710, 2.6, .70]];
+      const leaks = [[320, 170, 1.4, .15], [840, 370, 2.2, .30], [800, 920, 3.0, .45], [880, 1260, 3.3, .60]];
       for (const [x, y, ang, f] of leaks) {
         const k = Engine.p(t, K.at(1, f), K.at(1, f) + .8);
         if (k > 0) K.haze(ctx, t, { mode: 'leak', x, y, angle: ang, cone: 1.4, reach: 380, n: 70, density: k, color: '80,60,45', alpha: .75, size: 5, period: 2.2 });
@@ -125,9 +111,9 @@
       document.getElementById('pctIn').style.top = (700 - 700 * .65 * k - 75) + 'px'; }
     // babak 5: purifier sedut jerebu, cincin merah -> biru
     if (t >= s5.s - .2 && t < cta.s + .4) {
-      K.haze(ctx, t, { mode: 'suck', x: 545, y: 645, box: [0, 300, 1080, 1300], spread: 80, n: 200, density: 1 - Engine.p(t, s5.s + 2, s5.e), color: '90,70,50', alpha: .8, size: 5, period: 1.8 });
+      K.haze(ctx, t, { mode: 'suck', x: 380, y: 1010, box: [0, 300, 1080, 1300], spread: 60, n: 160, density: 1 - Engine.p(t, s5.s + 1, K.at(5, .6)), color: '150,120,100', alpha: .6, size: 4, period: 1.8 });
       const lv = 3 * Engine.p(t, K.at(5, .25), s5.e - .2, Engine.E.inOut);
-      K.setStorm('s1', lv);
+      document.getElementById('ph6').style.opacity = Engine.p(t, K.at(5, .45), K.at(5, .75), Engine.E.inOut);
       const tx = document.getElementById('ringTxt'); tx.textContent = K.ringName(lv); tx.style.borderColor = K.ring(lv);
     }
   });

@@ -26,7 +26,7 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 FPS, W, H, SR = 30, 1080, 1920, 44100
 CHROMIUM = next((str(x) for x in [pathlib.Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")] if x.exists()), None)
 SRC, VO, OUT = ROOT / "src" / "jerebu", ROOT / "voiceover" / "jerebu", ROOT / "out" / "jerebu"
-LEAD, TAIL, END_HOLD = .35, .45, 3.2
+LEAD, TAIL, END_HOLD = .25, .3, 2.8
 
 # muzik latar setiap video: tempo, mod (minor -> major pada 'lift' = indeks babak), dram mula babak ke-
 MUSIC = {

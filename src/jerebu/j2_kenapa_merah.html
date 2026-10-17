@@ -21,10 +21,11 @@
   .red { color:#E5322D; }
   .tag { display:inline-block; background:#111; color:#fff; font-size:38px; font-weight:700; padding:12px 30px; border-radius:40px; }
   .chk i { color:#fff; }
+  .onph { color:#fff; } .onph .red { color:#ff6b5e; }
+  .lab { display:inline-block; background:rgba(0,0,0,.6); color:#fff; font-size:40px; font-weight:800; padding:10px 28px; border-radius:40px; border:3px solid #fff; }
 </style></head>
 <body><div id="stage">
   <div class="layer" id="bg"></div>
-  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
 
   <!-- 0: feed -->
   <div class="scene">
@@ -42,9 +43,9 @@
   </div>
 
   <!-- 1: semua merah -->
-  <div class="scene">
-    <script>document.write(K.storm('s1', 240, 330, 600, 'data-in="0" data-a="zoom"'))</script>
-    <div class="el c" style="top:1360px" data-in="35%" data-a="stamp">
+  <div class="scene onph">
+    <script>document.write(K.photo('R05.jpg', { a: 'zoom' }))</script>
+    <div class="el c" style="top:300px" data-in="35%" data-a="stamp">
       <span style="display:inline-block; background:#E5322D; color:#fff; font-family:Anton; font-size:150px; padding:0 50px; border-radius:24px; transform:rotate(-4deg)">SEMUA MERAH!</span></div>
   </div>
 
@@ -60,38 +61,33 @@
   </div>
 
   <!-- 3: udara yang anda sedut -->
-  <div class="scene">
+  <div class="scene onph">
+    <script>document.write(K.photo('R02.jpg'))</script>
     <div class="el c" style="top:220px" data-in="0" data-a="pop"><span class="tag" style="background:#E5322D">MERAH =</span></div>
     <div class="el c" style="top:340px; font-size:66px; font-weight:800; line-height:1.2" data-in="8%" data-a="up">sensor kesan <span class="red">BANYAK</span><br>habuk halus</div>
-    <div class="el c" style="top:600px; font-size:190px; letter-spacing:-10px" data-in="50%" data-a="pop">👨👩👧👦</div>
-    <div class="el c" style="top:960px; font-size:58px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">Udara yang keluarga anda<br>tengah sedut…</div>
-    <div class="el c" style="top:1150px; font-size:120px; font-weight:800; color:#E5322D" data-in="88%" data-a="slam">SEKARANG.</div>
+    <div class="el c" style="top:1440px; font-size:58px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">Udara yang keluarga anda<br>tengah sedut…</div>
+    <div class="el c" style="top:1620px; font-size:120px; font-weight:800; color:#ff6b5e" data-in="88%" data-a="slam">SEKARANG.</div>
   </div>
 
   <!-- 4: merah -> biru -->
-  <div class="scene">
-    <div class="el c" style="top:170px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Biar dia bekerja…</div>
-    <script>document.write(K.storm('s4', 290, 330, 500, 'data-in="0" data-a="cut"'))</script>
-    <div class="el c" style="top:1180px; font-size:44px; font-weight:600; color:#444" data-in="10%" data-a="up">sedut udara kotor → tapis dengan <b style="color:#111">HEPA</b></div>
-    <div class="el c" style="top:1290px" data-in="45%" data-a="pop"><span class="tag" id="lvTag">MERAH · KOTOR</span></div>
-    <div class="el" style="top:1420px; left:140px; width:800px; height:26px; border-radius:13px; background:linear-gradient(90deg,#E5322D,#f5be1e,#3cbe5a,#2896ff)" data-in="45%" data-a="fade"></div>
-    <div class="el" id="lvDot" style="top:1404px; left:120px; width:58px; height:58px; border-radius:50%; background:#fff; border:8px solid #111" data-in="45%" data-a="fade"></div>
+  <div class="scene onph">
+    <script>document.write(K.photo('R05.jpg') + K.photo('R06.jpg', { id: 'ph6', a: 'cut' }))</script>
+    <div class="el c" style="top:150px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Biar dia bekerja…</div>
+    <div class="el c" style="top:270px" data-in="45%" data-a="pop"><span class="tag" id="lvTag">MERAH · KOTOR</span></div>
+    <div class="el" style="top:400px; left:140px; width:800px; height:26px; border-radius:13px; background:linear-gradient(90deg,#E5322D,#f5be1e,#3cbe5a,#2896ff)" data-in="45%" data-a="fade"></div>
+    <div class="el" id="lvDot" style="top:384px; left:120px; width:58px; height:58px; border-radius:50%; background:#fff; border:8px solid #111" data-in="45%" data-a="fade"></div>
+    <div class="el c" style="top:1720px; font-size:46px; font-weight:700" data-in="10%" data-a="up">sedut udara kotor → tapis dengan <b>HEPA</b></div>
   </div>
 
   <!-- 5: penapis -->
-  <div class="scene">
-    <div class="el c" style="top:170px; font-size:66px; font-weight:800" data-in="0" data-a="up">Bukti paling jelas?</div>
-    <div class="el" style="top:360px; left:100px; text-align:center" data-in="12%" data-a="left">
-      <svg width="400" height="600" viewBox="0 0 400 600"><rect x="10" y="10" width="380" height="580" rx="20" fill="#e9e9ee" stroke="#bbb" stroke-width="8"/>
-        <g id="pleatA"></g></svg>
-      <div style="font-size:46px; font-weight:800; margin-top:16px">BARU</div></div>
-    <div class="el" style="top:360px; left:580px; text-align:center" data-in="25%" data-a="right">
-      <svg width="400" height="600" viewBox="0 0 400 600"><rect x="10" y="10" width="380" height="580" rx="20" fill="#e9e9ee" stroke="#bbb" stroke-width="8"/>
-        <g id="pleatB"></g></svg>
-      <div style="font-size:46px; font-weight:800; margin-top:16px" class="red">LEPAS JEREBU</div></div>
-    <div class="el c" style="top:1150px; font-size:56px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">Habuk kelabu kehitaman tu…</div>
-    <div class="el c" style="top:1250px; font-size:62px; font-weight:800; line-height:1.2" data-in="75%" data-a="slam"><span class="red">tak masuk</span> paru-paru anda.</div>
-    <div class="el c src" style="top:1800px; color:#666" data-in="20%" data-a="fade">Ilustrasi. Tunjukkan gambar penapis sebenar pelanggan anda semasa servis.</div>
+  <div class="scene onph">
+    <script>document.write(K.photo('R07.jpg'))</script>
+    <div class="el c" style="top:150px; font-size:66px; font-weight:800" data-in="0" data-a="up">Bukti paling jelas?</div>
+    <div class="el" style="top:1120px; left:80px" data-in="25%" data-a="pop"><span class="lab" style="border-color:#ff6b5e">LEPAS JEREBU</span></div>
+    <div class="el" style="top:1460px; left:640px" data-in="35%" data-a="pop"><span class="lab">BARU</span></div>
+    <div class="el c" style="top:1600px; font-size:56px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">Habuk kelabu kehitaman tu…</div>
+    <div class="el c" style="top:1700px; font-size:62px; font-weight:800; line-height:1.2" data-in="75%" data-a="slam"><span class="red">tak masuk</span> paru-paru anda.</div>
+    
   </div>
 
   <!-- 6: checklist -->
@@ -103,36 +99,22 @@
     <div class="el chk" style="top:980px; left:150px" data-in="82%" data-a="left"><i style="background:#2b9a54">✓</i>Biar dia bekerja</div>
   </div>
 
-  <script>document.write(K.cta({ h1: 'Belum ada air purifier?', h2: 'Saya tunjukkan model yang sesuai.' }))</script>
+  <script>document.write(K.cta({ h1: 'Belum ada air purifier? WhatsApp saya.' }))</script>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
 </div>
 <script>
-  // lipatan penapis (A bersih, B kotor)
-  for (const [id, base, dirt] of [['pleatA', '#f7f7f4', 0], ['pleatB', '#f7f7f4', 1]]) {
-    const g = document.getElementById(id); let h = '';
-    for (let i = 0; i < 18; i++) {
-      const x = 22 + i * 20.3;
-      h += `<rect x="${x}" y="22" width="11" height="556" fill="${base}"/><rect x="${x + 11}" y="22" width="9" height="556" fill="#d6d6d0"/>`;
-    }
-    if (dirt) h += `<rect class="dirt" x="22" y="22" width="356" height="556" fill="url(#dg)" opacity="0"/>`;
-    g.innerHTML = h;
-  }
-  document.querySelector('#pleatB').closest('svg').insertAdjacentHTML('afterbegin',
-    '<defs><radialGradient id="dg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#3b332c" stop-opacity=".92"/><stop offset=".7" stop-color="#5a5048" stop-opacity=".78"/><stop offset="1" stop-color="#7d746a" stop-opacity=".55"/></radialGradient></defs>');
   const ctx = document.getElementById('fx').getContext('2d');
   K.start(t => {
     K.clear(ctx);
-    const s1 = K.scene(1), s4 = K.scene(4), s5 = K.scene(5);
-    K.setStorm('s1', 0);
-    if (t >= s1.s && t < s1.e + .4) K.haze(ctx, t, { n: 160, color: '120,95,70', alpha: .35, size: 5, speed: 30 });
+    const s1 = K.scene(1), s4 = K.scene(4);
+    if (t >= s1.s && t < s1.e + .4) K.haze(ctx, t, { n: 160, color: '170,150,130', alpha: .3, size: 4, speed: 30 });
     if (t >= s4.s - .2 && t < s4.e + .4) {
       const lv = 3 * Engine.p(t, K.at(4, .45), K.at(4, 1) + .2, Engine.E.inOut);
-      K.setStorm('s4', lv);
-      K.haze(ctx, t, { mode: 'suck', x: 545, y: 455, box: [0, 250, 1080, 1000], spread: 70, n: 180, density: 1 - lv / 3.3, color: '110,90,70', alpha: .7, size: 5, period: 1.7 });
+      K.haze(ctx, t, { mode: 'suck', x: 380, y: 1010, box: [0, 500, 1080, 1000], spread: 60, n: 150, density: 1 - lv / 2, color: '170,150,130', alpha: .6, size: 4, period: 1.7 });
+      document.getElementById('ph6').style.opacity = Engine.p(lv, 1.2, 2.4, Engine.E.inOut);
       const tag = document.getElementById('lvTag'); tag.textContent = K.ringName(lv); tag.style.background = K.ring(lv);
       document.getElementById('lvDot').style.left = (120 + 760 * lv / 3) + 'px';
     }
-    const d = document.querySelector('#pleatB .dirt');
-    if (d) d.setAttribute('opacity', Engine.p(t, K.at(5, .3), K.at(5, .6)));
   });
 </script>
 </body></html>

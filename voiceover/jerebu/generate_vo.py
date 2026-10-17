@@ -28,6 +28,7 @@ import numpy as np
 HERE = pathlib.Path(__file__).parent
 MODEL = os.environ.get("JEREBU_TTS_MODEL", "gemini-3.8-flash-tts")
 SR = 24000
+SPEED = float(os.environ.get("JEREBU_VO_SPEED", "1.2"))   # klien minta VO 1.2x lebih laju
 
 
 def tts(text, style, voice):
@@ -37,7 +38,7 @@ def tts(text, style, voice):
     for attempt in range(3):
         try:
             r = client.models.generate_content(
-                model=MODEL, contents=f"{style}\n\n#### TRANSKRIP\n{text}",
+                model=MODEL, contents=text if os.environ.get("JEREBU_PLAIN") else f"{style}\n\n#### TRANSKRIP\n{text}",
                 config=types.GenerateContentConfig(
                     response_modalities=["AUDIO"],
                     speech_config=types.SpeechConfig(voice_config=types.VoiceConfig(
@@ -79,6 +80,16 @@ def align(path, scenes):
 def load(path):
     raw = subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-v", "error", "-i", str(path), "-f", "s16le", "-ac", "1",
                           "-ar", str(SR), "-"], capture_output=True, check=True).stdout
+    return np.frombuffer(raw, "<i2").astype(float)
+
+
+def faster(x, speed):
+    """Percepat tanpa ubah pic (ffmpeg atempo)."""
+    if abs(speed - 1) < 1e-3:
+        return x
+    raw = subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-v", "error", "-f", "s16le", "-ac", "1", "-ar", str(SR), "-i", "-",
+                          "-filter:a", f"atempo={speed}", "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
+                         input=np.clip(x, -32768, 32767).astype("<i2").tobytes(), capture_output=True, check=True).stdout
     return np.frombuffer(raw, "<i2").astype(float)
 
 
@@ -158,6 +169,7 @@ def build(name, spec, voice, split_only=False, check=False, do_align=False):
     clips, gaps = split(x, [len(t) for t in scenes], hints)
     durs = []
     for i, c in enumerate(clips):
+        c = faster(c, SPEED)
         save(d / f"{i + 1:02d}.wav", c); durs.append(round(len(c) / SR, 3))
     (d / "durations.json").write_text(json.dumps(durs))
     rate = [dd / len(t) for dd, t in zip(durs, scenes)]     # saat per aksara patut lebih kurang sama

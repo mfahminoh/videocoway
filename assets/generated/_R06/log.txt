@@ -1,0 +1,2 @@
+/home/user/videocoway/assets/generated/_R06/20261017-125532-the-white-air-purifier-from-the-referenc-1.jpg
+model: seedream-4-5-251128  usage: {"generated_images": 1, "output_tokens": 14400, "total_tokens": 14400}

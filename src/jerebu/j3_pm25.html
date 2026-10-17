@@ -18,10 +18,10 @@
 </style></head>
 <body><div id="stage">
   <div class="layer" id="bg"><div class="scan"></div></div>
-  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
 
   <!-- 0: musuh tak nampak -->
   <div class="scene">
+    <script>document.write(K.photo('R01.jpg'))</script>
     <div class="el c" style="top:330px; font-size:66px; font-weight:700; line-height:1.2" data-in="0" data-a="up">Jerebu bukan<br>sekadar kabus.</div>
     <div class="el c" style="top:620px; font-size:46px; font-weight:500; opacity:.85" data-in="30%" data-a="up">Ada musuh yang mata kita tak nampak…</div>
     <div class="el c mono acc" style="top:760px; font-size:330px; line-height:1; text-shadow:0 0 40px rgba(92,225,230,.6)" data-in="82%" data-a="slam">PM2.5</div>
@@ -30,14 +30,9 @@
   <!-- 1: saiz vs rambut -->
   <div class="scene">
     <div class="el c" style="top:190px; font-size:56px; font-weight:700" data-in="0" data-a="up">Zarah <span class="acc">≤ 2.5 mikrometer</span></div>
-    <div class="el" style="top:420px; left:90px; width:900px; height:900px" data-in="25%" data-a="fade">
-      <svg width="900" height="900" viewBox="0 0 900 900">
-        <circle cx="450" cy="450" r="420" fill="#3a2a20" stroke="#8a6a50" stroke-width="10"/>
-        <circle cx="450" cy="450" r="380" fill="none" stroke="#5a4232" stroke-width="3" stroke-dasharray="10 14"/>
-        <text x="450" y="170" text-anchor="middle" fill="#e8d2bd" font-size="48" font-weight="700" font-family="P">Sehelai rambut · ±70 µm</text>
-        <circle cx="450" cy="470" r="14" fill="#5CE1E6"/><circle cx="450" cy="470" r="34" fill="none" stroke="#5CE1E6" stroke-width="4" opacity=".6"/>
-      </svg></div>
-    <div class="el" style="top:830px; left:520px; font-size:42px; font-weight:800; color:#5CE1E6" data-in="45%" data-a="left">← PM2.5</div>
+    <script>document.write(K.photo('R08.jpg', { shade: 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 65%, rgba(0,0,0,.8) 100%)' }))</script>
+    <div class="el" style="top:560px; left:520px" data-in="25%" data-a="pop"><span class="hud" style="display:inline-block; font-size:36px; font-weight:700; background:rgba(0,0,0,.55)">Sehelai rambut · ±70 µm</span></div>
+    <div class="el" style="top:1160px; left:60px" data-in="45%" data-a="pop"><span class="hud" style="display:inline-block; font-size:36px; font-weight:700; background:rgba(0,0,0,.55)">Zarah PM2.5 · ≤ 2.5 µm</span></div>
     <div class="el c" style="top:1370px; font-size:120px; font-weight:800; line-height:1; white-space:nowrap" data-in="75%" data-a="slam"><span class="acc">30×</span> lebih halus</div>
     <div class="el c" style="top:1520px; font-size:46px; opacity:.85" data-in="82%" data-a="up">daripada sehelai rambut</div>
   </div>
@@ -67,6 +62,7 @@
 
   <!-- 4: simptom & golongan berisiko -->
   <div class="scene">
+    <script>document.write(K.photo('R03.jpg', { shade: 'rgba(5,15,20,.68)' }))</script>
     <div class="el c" style="top:170px; font-size:54px; font-weight:800" data-in="0" data-a="up">Kesan jangka pendek</div>
     <div class="el sym" style="top:310px; left:120px" data-in="8%" data-a="left"><em>👁️</em>Mata pedih</div>
     <div class="el sym" style="top:310px; left:580px" data-in="15%" data-a="left"><em>😣</em>Tekak gatal</div>
@@ -90,15 +86,16 @@
 
   <!-- 6: HEPA -->
   <div class="scene">
-    <div class="el c" style="top:170px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Penapis <span class="acc">HEPA</span><br>tangkap zarah ultra halus</div>
-    <script>document.write(K.storm('s6', 310, 430, 460, 'data-in="0" data-a="zoom"'))</script>
-    <div class="el c" style="top:1240px; font-size:48px; font-weight:700" data-in="45%" data-a="up">Coway Storm II · Copper HEPA H13</div>
-    <div class="el c acc" style="top:1320px; font-size:170px; font-weight:800; line-height:1" data-in="60%" data-a="slam">99.999%</div>
-    <div class="el c" style="top:1500px; font-size:44px; opacity:.9" data-in="80%" data-a="up">habuk ultra halus ditapis*</div>
+    <script>document.write(K.photo('R06.jpg', { shade: 'linear-gradient(180deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.6) 36%, rgba(0,0,0,.08) 58%, rgba(0,0,0,.55) 100%)' }))</script>
+    <div class="el c" style="top:140px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Penapis <span class="acc">HEPA</span><br>tangkap zarah ultra halus</div>
+    <div class="el c" style="top:330px; font-size:44px; font-weight:700" data-in="45%" data-a="up">Coway Storm II · Copper HEPA H13</div>
+    <div class="el c acc" style="top:400px; font-size:170px; font-weight:800; line-height:1; text-shadow:0 0 30px rgba(0,0,0,.6)" data-in="60%" data-a="slam">99.999%</div>
+    <div class="el c" style="top:580px; font-size:44px" data-in="80%" data-a="up">habuk ultra halus ditapis*</div>
     <div class="el c src" style="top:1760px" data-in="30%" data-a="fade">*Dakwaan pengeluar, coway.com.my (Storm II AP-1523D)</div>
   </div>
 
-  <script>document.write(K.cta({ h1: 'Lindungi paru-paru keluarga.', h2: 'WhatsApp saya untuk info lanjut.' }))</script>
+  <script>document.write(K.cta({ h1: 'Lindungi paru-paru keluarga.' }))</script>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
 </div>
 <script>
   const ctx = document.getElementById('fx').getContext('2d');
@@ -112,8 +109,7 @@
       K.haze(ctx, t, { mode: 'leak', x: 540, y: 330, angle: Math.PI / 2, cone: .5, reach: 820, n: 90, density: k, color: '92,225,230', alpha: .9, size: 4, period: 2.0 });
     }
     if (t >= s6.s - .2 && t < cta.s + .4) {
-      K.haze(ctx, t, { mode: 'suck', x: 545, y: 590, box: [0, 350, 1080, 1100], spread: 70, n: 180, density: 1 - Engine.p(t, s6.s + 2, s6.e), color: '160,140,120', alpha: .7, size: 4, period: 1.8 });
-      K.setStorm('s6', 3 * Engine.p(t, s6.s + .5, s6.e - .5, Engine.E.inOut));
+      K.haze(ctx, t, { mode: 'suck', x: 580, y: 1240, box: [0, 700, 1080, 1100], spread: 60, n: 150, density: 1 - Engine.p(t, s6.s + 1, s6.e - 1), color: '180,165,150', alpha: .6, size: 4, period: 1.8 });
     }
   });
 </script>

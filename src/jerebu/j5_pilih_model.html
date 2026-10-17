@@ -6,7 +6,7 @@
 <script src="timing/j5_pilih_model.js"></script>
 <script src="kit.js"></script>
 <style>
-  :root { --accent:#C9A46A; --cta-text:#2a241d; --cta-pill:rgba(201,164,106,.18); }
+  :root { --accent:#9C6F2A; --cta-text:#2a241d; --cta-pill:rgba(201,164,106,.18); }
   body { color:#2a241d; }
   #bg { background: radial-gradient(ellipse at 50% 30%, #fbf7f0 0, #efe6d8 70%, #e4d6c1 100%); }
   .who { display:inline-block; background:#2a241d; color:#f5ead8; font-size:40px; font-weight:700; padding:14px 34px; border-radius:50px; }
@@ -50,12 +50,13 @@
       <img class="el prod" src="../../assets/img/air/${img}.png" style="top:300px; left:40px; width:470px" data-in="0" data-a="right">
       <div class="el" style="top:420px; left:540px; width:520px" data-in="8%" data-a="left"><div class="code">COWAY · ${code}</div><div class="nm fit2">${nm}</div></div>
       ${sp.map((s, k) => `<div class="el sp" style="top:${700 + k * 95}px; left:540px; width:520px" data-in="${30 + k * 15}%" data-a="left"><b></b>${s}</div>`).join('')}
-      <div class="el c pr" style="top:1260px" data-in="82%" data-a="slam">dari <span>RM${pr}</span>/bulan*</div>
-      <div class="el c src" style="top:1800px; color:#6b5d4b" data-in="30%" data-a="fade">*Sewa terendah (pelan 7 tahun), coway.com.my, Okt 2026. Tertakluk T&amp;C.</div>
+      <div class="el c pr" style="top:1240px" data-in="78%" data-a="slam">harga biasa dari <span>RM${pr}</span>/bulan*</div>
+      <div class="el c" style="top:1440px" data-in="88%" data-a="stamp"><span style="display:inline-block; background:#E5322D; color:#fff; font-weight:800; font-size:46px; padding:14px 40px; border-radius:50px; transform:rotate(-2deg)">PROMO: RM20/bulan · 7 bulan pertama</span></div>
+      <div class="el c src" style="top:1800px; color:#6b5d4b" data-in="30%" data-a="fade">*Sewa terendah (pelan 7 tahun), coway.com.my, Okt 2026. Promosi RM20/bulan untuk 7 bulan pertama, kemudian harga biasa. Tertakluk T&amp;C.</div>
     </div>`));
   </script>
 
-  <script>document.write(K.cta({ imgs: ['studio.png', 'storm2.png', 'suite.png'], h1: 'Masih tak pasti?', h2: 'Hantar saiz bilik, saya cadangkan.', price: 'Sewa dari <b style="color:#8a6a35">RM49/bulan*</b> · penapis ganti termasuk', fine: '*Harga sewa terendah Coway Malaysia (Studio, Self-Service 7 tahun), Okt 2026. Tertakluk T&amp;C.', top: 1010, imgTop: 280 }))</script>
+  <script>document.write(K.cta({ imgs: ['studio.png', 'storm2.png', 'suite.png'], h1: 'Hantar saiz bilik, saya cadangkan.', stampAt: '55%' }))</script>
 </div>
 <script>K.start(null);</script>
 </body></html>

@@ -1,18 +1,19 @@
 # Pakej Video Jerebu — Penapis Udara Coway (Okt 2026)
 
-6 video portrait 1080×1920 bersuara (VO Gemini, lelaki), untuk semua tahap awareness: daripada orang yang
+6 video portrait 1080×1920 bersuara (VO Gemini, lelaki, 1.2× laju), dengan gambar realistik Seedream dan promosi
+**RM20/bulan untuk 7 bulan pertama (semua penapis udara) — "RM20 dah boleh pasang!"** dalam setiap CTA. Untuk semua tahap awareness: daripada orang yang
 rasa "tak perlu pun air purifier" sampai orang yang dah nak beli tapi ragu-ragu pasal bayar bulanan.
 
 **Video siap:** `out/jerebu/coway_jerebu_<nama>.mp4`
 
 | # | Fail | Tahap awareness | Sudut / hook | Gaya | Panjang |
 |---|---|---|---|---|---|
-| J1 | `j1_masuk_rumah` | Tak sedar (unaware) | "Tutup tingkap dah selamat?" — jerebu tetap masuk rumah | Ilustrasi rumah, langit jerebu oren | 55s |
-| J2 | `j2_kenapa_merah` | Tak sedar → sedar masalah | "Kenapa semua air purifier jadi MERAH?" — posting netizen, maksud warna lampu | Gaya feed media sosial, putih | 63s |
-| J3 | `j3_pm25` | Sedar masalah | PM2.5: 30× lebih halus dari rambut, masuk paru-paru & darah | Dokumentari sains, gelap/cyan | 81s |
-| J4 | `j4_tips` | Sedar penyelesaian (dah ada / nak guna) | 6 tips guna air purifier masa jerebu (letak mana, mod Haze) | Kad bernombor, mint/teal | 66s |
-| J5 | `j5_pilih_model` | Sedar produk | Pilih model Coway ikut ruang rumah (6 model + harga) | Katalog premium, krim | 77s |
-| J6 | `j6_lepas_jerebu` | Paling sedar (bantahan) | "Jerebu sekejap je, buat apa bayar bulan-bulan?" — 3 tempat tetap perlu | Kinetic hitam/kuning | 73s |
+| J1 | `j1_masuk_rumah` | Tak sedar (unaware) | "Tutup tingkap dah selamat?" — jerebu tetap masuk rumah | Ilustrasi rumah, langit jerebu oren | 59s |
+| J2 | `j2_kenapa_merah` | Tak sedar → sedar masalah | "Kenapa semua air purifier jadi MERAH?" — posting netizen, maksud warna lampu | Gaya feed media sosial, putih | 60s |
+| J3 | `j3_pm25` | Sedar masalah | PM2.5: 30× lebih halus dari rambut, masuk paru-paru & darah | Dokumentari sains, gelap/cyan | 79s |
+| J4 | `j4_tips` | Sedar penyelesaian (dah ada / nak guna) | 6 tips guna air purifier masa jerebu (letak mana, mod Haze) | Kad bernombor, mint/teal | 60s |
+| J5 | `j5_pilih_model` | Sedar produk | Pilih model Coway ikut ruang rumah (6 model + harga) | Katalog premium, krim | 60s |
+| J6 | `j6_lepas_jerebu` | Paling sedar (bantahan) | "Jerebu sekejap je, buat apa bayar bulan-bulan?" — 3 tempat tetap perlu | Kinetic hitam/kuning | 61s |
 
 Susunan cadangan untuk iklan: **J1/J2 (cold, luas)** → retarget penonton 50% dengan **J3/J4** → retarget
 engagement dengan **J5/J6** (WhatsApp). J2 dan J6 paling kuat sebagai hook TikTok/Reels.
@@ -54,6 +55,8 @@ buka sendiri:
 
 ## 3. Produk penapis udara Coway (coway.com.my, Okt 2026)
 
+**Promosi semasa (semua penapis udara):** RM20/bulan untuk 7 bulan pertama, kemudian harga sewa biasa di bawah.
+
 | Model | Kod | Sesuai untuk | Liputan | Ciri utama | Sewa dari* | Tunai |
 |---|---|---|---|---|---|---|
 | **Storm II** | AP-1523D | Musim jerebu, rumah/apartmen | 50 m² | **Mod Haze**, Copper HEPA H13, 42W, 4 tahap | **RM55** (Heart RM60) | RM2,890 |
@@ -91,8 +94,8 @@ sebelum guna perkataan "best seller" dalam iklan.
 
 **"Jerebu sekejap je, tak berbaloi bayar bulan-bulan."**
 > Betul, jerebu bukan sepanjang tahun 😊 Tapi air purifier ni kerja hari-hari: habuk & hama dalam bilik tidur
-> (pencetus asma/resdung), bulu & bau kucing, bau masakan & habuk jalan. Storm II dari RM55/bulan — kurang RM2
-> sehari, dan penapis ganti dah termasuk sepanjang tempoh. Jerebu datang balik hampir setiap tahun (2015, 2019,
+> (pencetus asma/resdung), bulu & bau kucing, bau masakan & habuk jalan. Sekarang promosi RM20/bulan untuk 7 bulan
+> pertama, lepas tu dari RM49/bulan — kurang RM2 sehari, dan penapis ganti dah termasuk sepanjang tempoh. Jerebu datang balik hampir setiap tahun (2015, 2019,
 > 2023, 2026), bila dia datang rumah dah sedia.
 
 **"Beli murah kat online lagi jimat."**
@@ -110,6 +113,8 @@ sebelum guna perkataan "best seller" dalam iklan.
 > Ada pelan 3+2: komitmen minimum 3 tahun, 2 tahun lagi boleh pulangkan tanpa penalti. (Harga bulanan lebih tinggi.)
 
 ## 6. Copy iklan (Meta / TikTok)
+
+Tambah di hujung setiap teks: *"Promosi sekarang: RM20/bulan untuk 7 bulan pertama. RM20 dah boleh pasang!"*
 
 **J1 — Jerebu masuk rumah**
 - Teks: "Ramai ingat tutup tingkap dah selamat dari jerebu 😷 Hakikatnya PM2.5 dalam rumah masih 60–70% bacaan luar. Minggu ni je 34 kawasan IPU tidak sihat. Anak kecil, ibu mengandung & warga emas paling lama dalam rumah. WhatsApp saya, saya bantu pilih air purifier ikut saiz rumah 👇"
@@ -163,4 +168,5 @@ python build_jerebu.py [--only j6_lepas_jerebu]  # render -> out/jerebu/
 - Rakam suara sendiri: simpan `voiceover/jerebu/<video>/full.wav` (jeda ±1 saat antara babak) →
   `generate_vo.py --only <video> --split-only` → `build_jerebu.py --timing` → render. Animasi ikut masa suara anda.
 - Teks/harga: edit terus dalam `src/jerebu/<video>.html`; CTA & penunjuk warna dalam `src/jerebu/kit.js`.
-- VO: J1, J3, J4, J6 guna `gemini-3.8-flash-tts`; J2, J5 guna `gemini-3.1-flash-tts-preview` (kuota harian habis) — suara sama (Charon), nada sedikit berbeza.
+- VO: J1–J5 guna `gemini-3.1-flash-tts-preview`, J6 guna `gemini-3.8-flash-lite-tts` (mod transkrip sahaja, `JEREBU_PLAIN=1`) kerana kuota harian habis — suara sama (Charon). Klip dipercepat 1.2× (`JEREBU_VO_SPEED`).
+- Gambar realistik: `assets/generated/R01–R12.jpg` (Seedream 4.5, produk dengan foto rujukan Storm II, saiz sebenar 41.2×23.2×75.3 cm). Diletak dengan `K.photo()` / `K.card()` dalam `src/jerebu/kit.js`.
