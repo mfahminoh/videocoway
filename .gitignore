@@ -19,3 +19,4 @@ out/stills/*
 voiceover/jerebu/*/[0-9][0-9].wav
 !out/model/
 !out/pendek/
+assets/generated/v3/
