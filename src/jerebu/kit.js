@@ -100,13 +100,14 @@
     const y = (imgs.length === 1 ? 150 + 360 * 740 / 450 : 150 + 260 * 740 / 450) + 40;
     return `<div class="scene cta" style="color:var(--cta-text, #fff)">
       ${prods}
+      ${o.extra || ''}
       <div class="el c" style="top:${y}px" data-in="0%" data-a="pop"><span style="display:inline-block; background:#E5322D; color:#fff; font-weight:800; letter-spacing:3px; font-size:36px; padding:12px 36px; border-radius:50px">PROMOSI SEMUA AIR PURIFIER</span></div>
       <div class="el c" style="top:${y + 80}px; white-space:nowrap; line-height:1" data-in="12%" data-a="slam"><span style="font-family:Anton; font-size:230px; color:var(--accent)">RM20</span><span style="font-size:64px; font-weight:800">/bulan</span></div>
       <div class="el c" style="top:${y + 320}px; font-size:50px; font-weight:700" data-in="22%" data-a="up">untuk <span style="color:var(--accent)">7 bulan pertama</span></div>
       <div class="el c" style="top:${y + 410}px" data-in="${o.stampAt || '45%'}" data-a="stamp"><span style="display:inline-block; background:#FFD23F; color:#111; font-weight:800; font-size:54px; padding:12px 40px; border-radius:18px; transform:rotate(-3deg)">RM20 dah boleh pasang!</span></div>
       <div class="el c fit" style="top:${y + 540}px; font-size:52px; font-weight:800; white-space:nowrap" data-in="62%" data-a="up">${o.h1 || 'Udara bersih untuk keluarga.'}</div>
       <div class="el" id="ctaBtn" style="top:${y + 630}px; left:110px; width:860px; height:130px; border-radius:80px; background:#25D366; display:flex !important; align-items:center; justify-content:center; gap:22px; font-size:46px; font-weight:800; color:#fff; white-space:nowrap; box-shadow:0 20px 50px rgba(37,211,102,.45)" data-in="${o.btnAt || '75%'}" data-a="pop">${WA} ${o.btn || 'WHATSAPP SAYA SEKARANG'}</div>
-      <div class="el c" style="top:${y + 790}px; font-size:24px; opacity:.65; line-height:1.4; padding:0 70px" data-in="30%" data-a="fade">*Promosi semua penapis udara Coway: RM20/bulan untuk 7 bulan pertama, kemudian harga sewa biasa (dari RM49/bulan, pelan 7 tahun; penapis ganti termasuk). Tertakluk terma &amp; syarat.</div>
+      <div class="el c" style="top:${y + 790}px; font-size:24px; opacity:.65; line-height:1.4; padding:0 70px" data-in="30%" data-a="fade">${o.fine || '*Promosi semua penapis udara Coway: RM20/bulan untuk 7 bulan pertama, kemudian harga sewa biasa (dari RM49/bulan, pelan 7 tahun; penapis ganti termasuk). Tertakluk terma &amp; syarat.'}</div>
     </div>`;
   };
 
