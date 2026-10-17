@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>J6 Lepas Jerebu</title>
+<link rel="stylesheet" href="../v5/base.css">
+<link rel="stylesheet" href="jerebu.css">
+<script src="../v5/engine.js"></script>
+<script src="timing/j6_lepas_jerebu.js"></script>
+<script src="kit.js"></script>
+<style>
+  :root { --accent:#FFD23F; --cta-text:#fff; }
+  #bg { background:#111; }
+  #sky { position:absolute; inset:0; background:linear-gradient(180deg,#4fa8e8,#9fd3f5); opacity:0; }
+  .y { color:#FFD23F; }
+  .big { font-family:Anton; line-height:1; text-transform:uppercase; }
+  .chipY { display:inline-block; background:#FFD23F; color:#111; font-size:46px; font-weight:800; padding:12px 34px; border-radius:50px; }
+  .chipW { display:inline-block; border:4px solid #fff; font-size:42px; font-weight:700; padding:10px 30px; border-radius:50px; }
+  .no3 { font-family:Anton; font-size:220px; line-height:1; color:#FFD23F; }
+  .yr { position:absolute; width:200px; text-align:center; }
+  .yr b { display:block; font-family:Anton; font-size:84px; }
+  .yr i { display:block; margin:14px auto 0; width:34px; height:34px; border-radius:50%; background:#ff6b5e; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"><div id="sky"></div></div>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
+
+  <!-- 0: bantahan -->
+  <div class="scene">
+    <div class="el c" style="top:300px; font-size:200px" data-in="0" data-a="pop">🤔</div>
+    <div class="el c big" style="top:620px; font-size:150px" data-in="5%" data-a="slam">"Jerebu ni<br><span class="y">sekejap je.</span>"</div>
+    <div class="el c" style="top:1020px; font-size:62px; font-weight:700; line-height:1.2" data-in="50%" data-a="up">Buat apa nak bayar<br><span style="color:#ff6b5e; text-decoration:underline; text-decoration-thickness:8px">bulan-bulan?</span></div>
+  </div>
+
+  <!-- 1: 3 tempat -->
+  <div class="scene">
+    <div class="el c" style="top:260px; font-size:56px; font-weight:700" data-in="0" data-a="up">Soalan yang adil.</div>
+    <div class="el c" style="top:360px; font-size:46px; font-weight:500; opacity:.85" data-in="20%" data-a="up">Tapi jerebu cuma <b>satu</b> sebab.</div>
+    <div class="el c big y" style="top:560px; font-size:270px; white-space:nowrap" data-in="45%" data-a="slam">3 TEMPAT</div>
+    <div class="el c" style="top:920px; font-size:52px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">dalam rumah yang perlukan<br>air purifier…</div>
+    <div class="el c" style="top:1110px" data-in="80%" data-a="pop"><span class="chipY">walaupun langit dah biru ☀️</span></div>
+  </div>
+
+  <!-- 2: bilik anak -->
+  <div class="scene">
+    <div class="el no3" style="top:200px; left:90px" data-in="0" data-a="slam">1</div>
+    <div class="el" style="top:240px; left:300px; font-size:66px; font-weight:800; line-height:1.15" data-in="5%" data-a="left">Bilik anak<br><span class="y">asma / resdung</span></div>
+    <div class="el c" style="top:560px; font-size:260px" data-in="12%" data-a="pop">🧒💤</div>
+    <div class="el c" style="top:920px; font-size:44px; font-weight:600; opacity:.85" data-in="35%" data-a="up">Antara pencetus serangan:</div>
+    <div class="el" style="top:1010px; left:0; width:1080px; display:flex !important; justify-content:center; gap:22px" data-in="42%" data-a="pop"><span class="chipW">Habuk</span><span class="chipW">Hama</span><span class="chipW">Kulat</span></div>
+    <div class="el c" style="top:1200px" data-in="75%" data-a="stamp"><span class="chipY" style="font-size:54px">🌙 Udara bersih 8 jam setiap malam</span></div>
+  </div>
+
+  <!-- 3: bilik kucing -->
+  <div class="scene">
+    <div class="el no3" style="top:200px; left:90px" data-in="0" data-a="slam">2</div>
+    <div class="el" style="top:280px; left:300px; font-size:76px; font-weight:800" data-in="5%" data-a="left">Bilik <span class="y">kucing</span></div>
+    <div class="el c" style="top:520px; font-size:280px" data-in="10%" data-a="pop">🐈</div>
+    <div class="el" style="top:900px; left:0; width:1080px; display:flex !important; justify-content:center; gap:22px" data-in="25%" data-a="pop"><span class="chipW">Bulu</span><span class="chipW">Kelemumur</span><span class="chipW">Bau</span></div>
+    <div class="el chk" style="top:1080px; left:110px; font-size:44px" data-in="62%" data-a="left"><i style="background:#FFD23F; color:#111">✓</i>Pra-penapis tangkap bulu</div>
+    <div class="el chk" style="top:1200px; left:110px; font-size:44px" data-in="80%" data-a="left"><i style="background:#FFD23F; color:#111">✓</i>Penapis bau hilangkan bau</div>
+    <div class="el c" style="top:1360px; font-size:34px; opacity:.7" data-in="85%" data-a="fade">Noble 2 siap ada <b>Pet Mode</b></div>
+  </div>
+
+  <!-- 4: ruang tamu & dapur -->
+  <div class="scene">
+    <div class="el no3" style="top:200px; left:90px" data-in="0" data-a="slam">3</div>
+    <div class="el" style="top:240px; left:300px; font-size:66px; font-weight:800; line-height:1.15" data-in="5%" data-a="left">Ruang tamu<br>&amp; <span class="y">dapur</span></div>
+    <div class="el c" style="top:560px; font-size:240px" data-in="12%" data-a="pop">🛋️🍳</div>
+    <div class="el" style="top:900px; left:0; width:1080px; display:flex !important; justify-content:center; gap:18px; flex-wrap:wrap" data-in="25%" data-a="pop"><span class="chipW">Bau masakan</span><span class="chipW">Asap</span><span class="chipW">Habuk jalan raya</span></div>
+    <div class="el c" style="top:1150px; font-size:52px; font-weight:700; line-height:1.3" data-in="65%" data-a="up">Paling ramai berkumpul,<br><span class="y">udara paling cepat kotor.</span></div>
+  </div>
+
+  <!-- 5: harga -->
+  <div class="scene">
+    <div class="el c" style="top:220px; font-size:52px; font-weight:700" data-in="0" data-a="up">Pasal bayar bulanan…</div>
+    <div class="el c" style="top:330px; font-size:46px; opacity:.85" data-in="12%" data-a="up">dari</div>
+    <div class="el c big" style="top:400px; font-size:230px" data-in="15%" data-a="slam">RM55<span style="font-size:90px">/bulan</span></div>
+    <div class="el c" style="top:680px; font-size:60px; font-weight:800" data-in="45%" data-a="up">=</div>
+    <div class="el c big y" style="top:770px; font-size:250px" data-in="50%" data-a="slam">&lt; RM2<span style="font-size:90px"> sehari</span></div>
+    <div class="el c" style="top:1110px" data-in="75%" data-a="pop"><span class="chipY">✓ Penapis ganti termasuk sepanjang tempoh</span></div>
+    <div class="el c src" style="top:1760px" data-in="30%" data-a="fade">Storm II, pelan Self-Service 7 tahun (penapis dihantar). Heart Service dari RM60/bulan. coway.com.my, Okt 2026.</div>
+  </div>
+
+  <!-- 6: jerebu datang balik -->
+  <div class="scene">
+    <div class="el c" style="top:220px; font-size:60px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Dan jerebu?<br><span class="y">Datang balik hampir setiap tahun.</span></div>
+    <div class="el" style="top:640px; left:90px; width:900px; height:8px; background:rgba(255,255,255,.25); transform-origin:0 50%" data-grow="0.5,2.0"></div>
+    <div class="el yr" style="top:560px; left:20px" data-in="34%" data-a="pop"><b>2015</b><i></i></div>
+    <div class="el yr" style="top:560px; left:280px" data-in="44%" data-a="pop"><b>2019</b><i></i></div>
+    <div class="el yr" style="top:560px; left:540px" data-in="56%" data-a="pop"><b>2023</b><i></i></div>
+    <div class="el yr" style="top:560px; left:820px; color:#ff6b5e" data-in="64%" data-a="pop"><b>2026</b><i></i><div style="font-size:34px; font-weight:800">SEKARANG</div></div>
+    <div class="el c" style="top:1000px; font-size:62px; font-weight:800; line-height:1.2" data-in="78%" data-a="slam">Bila datang lagi,<br><span class="y">rumah anda dah sedia.</span></div>
+  </div>
+
+  <script>document.write(K.cta({ h1: 'Udara bersih bukan ikut musim.', h2: 'Ia keperluan.' }))</script>
+</div>
+<script>
+  const ctx = document.getElementById('fx').getContext('2d');
+  K.start(t => {
+    K.clear(ctx);
+    const s1 = K.scene(1);
+    // langit jerebu -> biru pada babak 1
+    document.getElementById('sky').style.opacity = t < s1.s ? 0 : t < s1.e ? .7 * Engine.p(t, K.at(1, .75), K.at(1, 1)) : 0;
+    if (t < s1.e) K.haze(ctx, t, { n: 200, density: 1 - Engine.p(t, K.at(1, .7), K.at(1, 1)), color: '200,170,130', alpha: .3, size: 4, speed: 20 });
+    const s3 = K.scene(3);   // bulu kucing terapung
+    if (t >= s3.s && t < s3.e + .3) K.haze(ctx, t, { n: 60, color: '240,230,215', alpha: .5, size: 7, speed: 12 });
+  });
+</script>
+</body></html>

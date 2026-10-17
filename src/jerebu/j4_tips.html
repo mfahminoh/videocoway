@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>J4 Tips Guna</title>
+<link rel="stylesheet" href="../v5/base.css">
+<link rel="stylesheet" href="jerebu.css">
+<script src="../v5/engine.js"></script>
+<script src="timing/j4_tips.js"></script>
+<script src="kit.js"></script>
+<style>
+  :root { --accent:#0E8C83; --cta-text:#0d2b2a; --cta-pill:rgba(14,140,131,.1); }
+  body { color:#0d2b2a; }
+  #bg { background: linear-gradient(180deg, #F2FBF8 0%, #DDF3EE 100%); }
+  .n { font-family:Anton; font-size:300px; line-height:1; color:#0E8C83; }
+  .tip { font-size:76px; font-weight:800; line-height:1.12; }
+  .sub { font-size:46px; font-weight:500; line-height:1.3; color:#2f5553; }
+  .chip { display:inline-block; background:#fff; border:4px solid #0E8C83; border-radius:60px; padding:14px 36px; font-size:44px; font-weight:700; }
+  .no { color:#E5322D; } .yes { color:#0E8C83; }
+  .card2 { background:#fff; border-radius:36px; box-shadow:0 20px 50px rgba(14,80,75,.12); }
+  .pg { position:absolute; top:90px; left:0; width:1080px; display:flex; justify-content:center; gap:16px; }
+  .pg i { width:70px; height:12px; border-radius:6px; background:rgba(14,140,131,.2); }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"></div>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
+  <div class="pg" id="pg"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <!-- 0: intro -->
+  <div class="scene">
+    <script>document.write(K.storm('s0', 340, 260, 400, 'data-in="0" data-a="zoom"'))</script>
+    <div class="el c" style="top:980px; font-size:58px; font-weight:700; line-height:1.2" data-in="10%" data-a="up">Dah ada air purifier,<br>tapi lampu masih <span class="no">merah?</span></div>
+    <div class="el c" style="top:1200px; font-size:46px; font-weight:500; color:#2f5553" data-in="40%" data-a="up">Mungkin cara guna tak betul.</div>
+    <div class="el c" style="top:1310px" data-in="62%" data-a="stamp"><span style="display:inline-block; background:#0E8C83; color:#fff; font-family:Anton; font-size:120px; padding:0 50px; border-radius:24px; transform:rotate(-3deg)">6 TIPS MASA JEREBU</span></div>
+  </div>
+
+  <!-- 1 -->
+  <div class="scene">
+    <div class="el c n" style="top:200px" data-in="0" data-a="slam">01</div>
+    <div class="el c tip" style="top:540px" data-in="10%" data-a="up">Tutup tingkap<br>&amp; pintu</div>
+    <div class="el" style="top:800px; left:290px" data-in="20%" data-a="pop">
+      <svg width="500" height="440" viewBox="0 0 500 440"><rect x="10" y="10" width="480" height="420" rx="20" fill="#cfe9f5" stroke="#0d2b2a" stroke-width="16"/>
+        <rect id="paneL" x="26" y="26" width="224" height="388" fill="rgba(255,255,255,.55)" stroke="#0d2b2a" stroke-width="10"/>
+        <rect id="paneR" x="250" y="26" width="224" height="388" fill="rgba(255,255,255,.55)" stroke="#0d2b2a" stroke-width="10"/></svg></div>
+    <div class="el c sub" style="top:1330px" data-in="50%" data-a="up">Air purifier bukan untuk tapis<br>udara <b>satu taman</b> 🏘️</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="scene">
+    <div class="el c n" style="top:200px" data-in="0" data-a="slam">02</div>
+    <div class="el c tip" style="top:540px" data-in="8%" data-a="up">Letak di bilik paling<br>lama anda duduk</div>
+    <div class="el card2" style="top:820px; left:110px; width:400px; height:340px; text-align:center; padding-top:30px" data-in="35%" data-a="pop"><div style="font-size:170px">🛏️</div><div style="font-size:44px; font-weight:700">Bilik tidur</div></div>
+    <div class="el card2" style="top:820px; left:570px; width:400px; height:340px; text-align:center; padding-top:30px" data-in="45%" data-a="pop"><div style="font-size:170px">🛋️</div><div style="font-size:44px; font-weight:700">Ruang tamu</div></div>
+    <div class="el c" style="top:1240px" data-in="75%" data-a="stamp"><span class="chip" style="background:#0E8C83; color:#fff; font-size:56px">👶 Bilik anak, UTAMAKAN</span></div>
+  </div>
+
+  <!-- 3 -->
+  <div class="scene">
+    <div class="el c n" style="top:200px" data-in="0" data-a="slam">03</div>
+    <div class="el c tip" style="top:540px" data-in="8%" data-a="up">Jangan sorok di sudut</div>
+    <div class="el card2" style="top:720px; left:90px; width:420px; height:600px; overflow:hidden" data-in="25%" data-a="left">
+      <div style="position:absolute; left:0; top:0; width:60px; height:600px; background:#c9b9a6"></div>
+      <img src="../../assets/img/air/storm2.png" style="position:absolute; left:40px; top:120px; width:240px">
+      <div style="position:absolute; left:170px; top:0; width:250px; height:600px; background:repeating-linear-gradient(90deg,#e7a8a0 0 30px,#d9928a 30px 60px); opacity:.95"></div>
+      <div style="position:absolute; right:20px; top:16px; font-size:90px" class="no">✕</div></div>
+    <div class="el card2" style="top:720px; left:570px; width:420px; height:600px; overflow:hidden" data-in="45%" data-a="right">
+      <img src="../../assets/img/air/storm2.png" style="position:absolute; left:90px; top:120px; width:240px">
+      <div style="position:absolute; right:20px; top:16px; font-size:90px" class="yes">✓</div></div>
+    <div class="el c sub" style="top:1380px" data-in="60%" data-a="up">Jauh dari dinding &amp; langsir,<br>supaya udara <b>disedut lancar</b>.</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="scene">
+    <div class="el c n" style="top:200px" data-in="0" data-a="slam">04</div>
+    <div class="el c tip" style="top:540px" data-in="6%" data-a="up">Guna mod yang betul</div>
+    <script>document.write(K.storm('s4', 120, 720, 300, 'data-in="10%" data-a="zoom"'))</script>
+    <svg class="el" id="arrows" style="top:640px; left:60px" width="440" height="340" viewBox="0 0 440 340" data-in="35%" data-a="fade">
+      <g stroke="#0E8C83" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M220 170 V30 M190 60 L220 30 L250 60"/><path d="M150 200 L30 120 M40 160 L30 120 L70 112"/><path d="M290 200 L410 120 M400 160 L410 120 L370 112"/></g></svg>
+    <div class="el" style="top:760px; left:470px; width:560px" data-in="28%" data-a="left">
+      <div style="font-size:40px; font-weight:600; color:#2f5553">Storm II</div>
+      <div style="font-family:Anton; font-size:120px; line-height:1; color:#0E8C83">MOD HAZE</div>
+      <div style="font-size:40px; font-weight:600; margin-top:10px">udara 3 arah:<br>lebar · depan · atas</div></div>
+    <div class="el card2" style="top:1300px; left:110px; width:860px; padding:30px 40px" data-in="72%" data-a="up">
+      <div style="font-size:40px; font-weight:600; color:#2f5553">Model lain</div>
+      <div style="font-size:60px; font-weight:800">TURBO <span class="yes">→</span> AUTO</div></div>
+  </div>
+
+  <!-- 5 -->
+  <div class="scene">
+    <div class="el c n" style="top:200px" data-in="0" data-a="slam">05</div>
+    <div class="el c" style="top:520px; font-family:Anton; font-size:280px; line-height:1; color:#0d2b2a" data-in="8%" data-a="slam"><span data-count="0,24,.4,1.6">0</span> JAM</div>
+    <div class="el c sub" style="top:860px" data-in="25%" data-a="up">sepanjang musim jerebu</div>
+    <div class="el card2" style="top:1020px; left:110px; width:860px; padding:34px 40px; text-align:center" data-in="55%" data-a="pop">
+      <div style="font-size:52px; font-weight:800">Lampu dah <span style="color:#2896ff">biru</span>?</div>
+      <div style="font-size:52px; font-weight:800" class="no">Jangan tutup.</div>
+      <div style="font-size:40px; color:#2f5553; margin-top:10px">Nanti jerebu masuk balik.</div></div>
+  </div>
+
+  <!-- 6 -->
+  <div class="scene">
+    <div class="el c n" style="top:200px" data-in="0" data-a="slam">06</div>
+    <div class="el c tip" style="top:540px" data-in="6%" data-a="up">Saiz ikut bilik,<br>jaga penapis</div>
+    <div class="el chk" style="top:820px; left:120px" data-in="25%" data-a="left"><i style="background:#0E8C83; color:#fff">📐</i>Liputan ≥ keluasan bilik</div>
+    <div class="el chk" style="top:960px; left:120px" data-in="55%" data-a="left"><i style="background:#0E8C83; color:#fff">🚿</i>Pra-penapis: cuci</div>
+    <div class="el chk" style="top:1100px; left:120px" data-in="75%" data-a="left"><i style="background:#0E8C83; color:#fff">🔁</i>HEPA: tukar ikut jadual</div>
+  </div>
+
+  <script>document.write(K.cta({ h1: 'Heart Service Coway', h2: 'Teknisyen datang servis &amp; tukar penapis', btn: 'WHATSAPP SAYA', price: 'Sewa dari <b style="color:var(--accent)">RM55/bulan*</b> · penapis ganti termasuk', fine: '*Harga Coway Malaysia (Storm II, Self-Service 7 tahun); Heart Service dari RM60/bulan. Okt 2026. Tertakluk T&amp;C.' }))</script>
+</div>
+<script>
+  const ctx = document.getElementById('fx').getContext('2d');
+  K.start(t => {
+    K.clear(ctx);
+    const s0 = K.scene(0), s1 = K.scene(1), s4 = K.scene(4);
+    K.setStorm('s0', 0); K.setStorm('s4', 1.5 + 1.5 * Engine.p(t, K.at(4, .3), s4.e));
+    if (t < s0.e + .3) K.haze(ctx, t, { n: 140, color: '130,110,90', alpha: .35, size: 5, speed: 20 });
+    // tingkap tertutup
+    const k = Engine.p(t, K.at(1, .2), K.at(1, .45), Engine.E.inOut);
+    const L = document.getElementById('paneL'), R = document.getElementById('paneR');
+    L.setAttribute('x', 26 - 200 * (1 - k)); R.setAttribute('x', 250 + 200 * (1 - k));
+    if (t >= s1.s && t < s1.e) K.haze(ctx, t, { mode: 'leak', x: 540, y: 1020, angle: Math.PI / 2, cone: 2.4, reach: 300, n: 80, density: 1 - k, color: '130,110,90', alpha: .6, size: 5 });
+    // penunjuk halaman tips
+    const pg = [...document.querySelectorAll('#pg i')];
+    pg.forEach((d, i) => { const sc = K.scene(i + 1); d.style.background = t >= sc.s ? '#0E8C83' : 'rgba(14,140,131,.2)'; });
+    document.getElementById('pg').style.opacity = t >= K.scene(1).s - .2 && t < K.scene(7).s ? 1 : 0;
+  });
+</script>
+</body></html>

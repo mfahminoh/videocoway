@@ -1,0 +1,9 @@
+/* Gaya dikongsi pakej Jerebu (atas ../v5/base.css) */
+.lead { font-size: 54px; font-weight: 500; opacity: .92; }
+.src { font-size: 24px; font-weight: 400; opacity: .6; padding: 0 60px; line-height: 1.35; }
+.card { background: rgba(20, 14, 10, .55); border-radius: 30px; padding: 30px 46px; backdrop-filter: blur(4px); }
+.ipu { display: flex; justify-content: space-between; align-items: center; font-size: 62px; font-weight: 700; }
+.ipu b { font-size: 120px; font-weight: 800; color: #ff6b5e; }
+.chk { display: flex !important; align-items: center; gap: 24px; font-size: 50px; font-weight: 700; }
+.chk i { font-style: normal; width: 74px; height: 74px; border-radius: 50%; display: grid; place-items: center; font-size: 44px; font-weight: 800; flex: none; }
+.num { font-family: Anton; }

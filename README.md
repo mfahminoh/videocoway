@@ -37,3 +37,8 @@ Warna: navy/biru Coway, aksen biru langit; merah/biru panas-sejuk ikut garis pad
 | `villaem3_v6_tradein.mp4` | Cerita testimoni, hijau & emas | Alah membeli, menang memakai (trade-in) | 44.0s |
 
 Bina semula: `python build_v5.py [--only v1_premium]`. Skrip VO badan: `voiceover/skrip_v5.md`.
+
+## Pakej Jerebu — penapis udara (out/jerebu/)
+6 video bersuara tentang jerebu, PM2.5 dan penapis udara Coway (J1 jerebu masuk rumah · J2 kenapa lampu merah ·
+J3 PM2.5 · J4 6 tips guna · J5 pilih model · J6 lepas jerebu masih berbaloi?). Fakta & sumber, posting media sosial,
+jadual produk, jawapan bantahan dan copy iklan: lihat `JEREBU_PACKAGE.md`. Bina semula: `python build_jerebu.py`.

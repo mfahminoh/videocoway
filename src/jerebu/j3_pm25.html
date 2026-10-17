@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>J3 PM2.5</title>
+<link rel="stylesheet" href="../v5/base.css">
+<link rel="stylesheet" href="jerebu.css">
+<script src="../v5/engine.js"></script>
+<script src="timing/j3_pm25.js"></script>
+<script src="kit.js"></script>
+<style>
+  :root { --accent:#5CE1E6; --cta-text:#fff; }
+  #bg { background: radial-gradient(ellipse at 50% 35%, #15303a 0, #0a1418 60%, #05090b 100%); }
+  .mono { font-family: Bebas; letter-spacing: 4px; }
+  .acc { color: var(--accent); }
+  .warn { color: #ff6b5e; }
+  .scan { position:absolute; inset:0; background:repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 2px, transparent 2px 6px); }
+  .hud { border:3px solid rgba(92,225,230,.5); border-radius:24px; padding:22px 34px; background:rgba(92,225,230,.06); }
+  .sym { display:flex !important; align-items:center; gap:26px; font-size:52px; font-weight:700; }
+  .sym em { font-style:normal; font-size:80px; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"><div class="scan"></div></div>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
+
+  <!-- 0: musuh tak nampak -->
+  <div class="scene">
+    <div class="el c" style="top:330px; font-size:66px; font-weight:700; line-height:1.2" data-in="0" data-a="up">Jerebu bukan<br>sekadar kabus.</div>
+    <div class="el c" style="top:620px; font-size:46px; font-weight:500; opacity:.85" data-in="30%" data-a="up">Ada musuh yang mata kita tak nampak…</div>
+    <div class="el c mono acc" style="top:760px; font-size:330px; line-height:1; text-shadow:0 0 40px rgba(92,225,230,.6)" data-in="82%" data-a="slam">PM2.5</div>
+  </div>
+
+  <!-- 1: saiz vs rambut -->
+  <div class="scene">
+    <div class="el c" style="top:190px; font-size:56px; font-weight:700" data-in="0" data-a="up">Zarah <span class="acc">≤ 2.5 mikrometer</span></div>
+    <div class="el" style="top:420px; left:90px; width:900px; height:900px" data-in="25%" data-a="fade">
+      <svg width="900" height="900" viewBox="0 0 900 900">
+        <circle cx="450" cy="450" r="420" fill="#3a2a20" stroke="#8a6a50" stroke-width="10"/>
+        <circle cx="450" cy="450" r="380" fill="none" stroke="#5a4232" stroke-width="3" stroke-dasharray="10 14"/>
+        <text x="450" y="170" text-anchor="middle" fill="#e8d2bd" font-size="48" font-weight="700" font-family="P">Sehelai rambut · ±70 µm</text>
+        <circle cx="450" cy="470" r="14" fill="#5CE1E6"/><circle cx="450" cy="470" r="34" fill="none" stroke="#5CE1E6" stroke-width="4" opacity=".6"/>
+      </svg></div>
+    <div class="el" style="top:830px; left:520px; font-size:42px; font-weight:800; color:#5CE1E6" data-in="45%" data-a="left">← PM2.5</div>
+    <div class="el c" style="top:1370px; font-size:120px; font-weight:800; line-height:1; white-space:nowrap" data-in="75%" data-a="slam"><span class="acc">30×</span> lebih halus</div>
+    <div class="el c" style="top:1520px; font-size:46px; opacity:.85" data-in="82%" data-a="up">daripada sehelai rambut</div>
+  </div>
+
+  <!-- 2: masuk paru-paru -->
+  <div class="scene">
+    <div class="el" style="top:250px; left:220px" data-in="0" data-a="fade">
+      <svg width="640" height="1100" viewBox="0 0 640 1100">
+        <path d="M320 40 C 250 40 220 110 230 170 C 240 220 260 250 320 260 C 380 250 400 220 410 170 C 420 110 390 40 320 40 Z" fill="none" stroke="#7fb7c0" stroke-width="8"/>
+        <path d="M300 255 V 520 M340 255 V 520" stroke="#7fb7c0" stroke-width="8"/>
+        <path d="M300 510 C 200 520 90 620 90 820 C 90 960 160 1020 250 1000 C 300 990 300 900 300 820 Z" fill="rgba(255,120,110,.18)" stroke="#ff8f84" stroke-width="8"/>
+        <path d="M340 510 C 440 520 550 620 550 820 C 550 960 480 1020 390 1000 C 340 990 340 900 340 820 Z" fill="rgba(255,120,110,.18)" stroke="#ff8f84" stroke-width="8"/>
+      </svg></div>
+    <div class="el" style="top:330px; left:640px" data-in="5%" data-a="right"><span class="hud" style="display:inline-block; font-size:36px; font-weight:700">Hidung &amp; tekak<br><span style="font-weight:500; font-size:30px">tapis habuk kasar</span></span></div>
+    <div class="el" style="top:880px; left:40px" data-in="55%" data-a="left"><span class="hud" style="display:inline-block; font-size:36px; font-weight:700; border-color:#ff6b5e; background:rgba(255,107,94,.08)">PM2.5 lepas terus</span></div>
+    <div class="el c" style="top:1430px; font-size:66px; font-weight:800; line-height:1.15" data-in="72%" data-a="slam">Masuk <span class="warn">jauh</span> ke dalam<br>paru-paru.</div>
+  </div>
+
+  <!-- 3: darah, jantung, otak -->
+  <div class="scene">
+    <div class="el c" style="top:260px" data-in="0" data-a="pop"><span class="hud" style="display:inline-block; font-size:36px; font-weight:700">KEMENTERIAN KESIHATAN</span></div>
+    <div class="el c" style="top:400px; font-size:60px; font-weight:700; line-height:1.2" data-in="15%" data-a="up">PM2.5 boleh masuk ke<br><span class="warn">saluran darah</span></div>
+    <div class="el" style="top:720px; left:150px; width:330px; text-align:center" data-in="62%" data-a="pop"><div style="font-size:200px">🫀</div><div style="font-size:50px; font-weight:800">JANTUNG</div></div>
+    <div class="el" style="top:720px; left:600px; width:330px; text-align:center" data-in="78%" data-a="pop"><div style="font-size:200px">🧠</div><div style="font-size:50px; font-weight:800">OTAK</div></div>
+    <div class="el c src" style="top:1760px" data-in="30%" data-a="fade">Sumber: nasihat KKM semasa jerebu 2026 (dilaporkan NST/Malay Mail)</div>
+  </div>
+
+  <!-- 4: simptom & golongan berisiko -->
+  <div class="scene">
+    <div class="el c" style="top:170px; font-size:54px; font-weight:800" data-in="0" data-a="up">Kesan jangka pendek</div>
+    <div class="el sym" style="top:310px; left:120px" data-in="8%" data-a="left"><em>👁️</em>Mata pedih</div>
+    <div class="el sym" style="top:310px; left:580px" data-in="15%" data-a="left"><em>😣</em>Tekak gatal</div>
+    <div class="el sym" style="top:460px; left:120px" data-in="22%" data-a="left"><em>😷</em>Batuk</div>
+    <div class="el sym" style="top:460px; left:580px" data-in="30%" data-a="left"><em>🫁</em>Sesak nafas</div>
+    <div class="el c" style="top:700px; font-size:54px; font-weight:800" data-in="45%" data-a="up">Paling terkesan</div>
+    <div class="el" style="top:820px; left:60px; width:960px; display:flex !important; justify-content:space-around; text-align:center; font-size:40px; font-weight:700" data-in="55%" data-a="pop">
+      <div><div style="font-size:150px">🧒</div>Kanak-kanak</div><div><div style="font-size:150px">👴</div>Warga emas</div>
+      <div><div style="font-size:150px">🤰</div>Ibu<br>mengandung</div><div><div style="font-size:150px">🫁</div>Pesakit<br>asma</div></div>
+  </div>
+
+  <!-- 5: WHO vs bacaan -->
+  <div class="scene">
+    <div class="el c" style="top:200px" data-in="0" data-a="pop"><span class="hud" style="display:inline-block; font-size:36px; font-weight:700">GARIS PANDUAN WHO · purata 24 jam</span></div>
+    <div class="el c" style="top:330px; font-size:220px; font-weight:800; line-height:1" data-in="10%" data-a="slam"><span class="acc">15</span><span style="font-size:60px"> µg/m³</span></div>
+    <div class="el c" style="top:620px; font-size:46px; opacity:.85" data-in="55%" data-a="up">Masa jerebu, bacaan <b>dalam rumah</b> dikongsi netizen:</div>
+    <div class="el c" style="top:720px; font-size:300px; font-weight:800; line-height:1; color:#ff6b5e; text-shadow:0 0 50px rgba(255,107,94,.5)" data-in="75%" data-a="slam"><span data-count="15,119,0,1.2">15</span></div>
+    <div class="el c" style="top:1040px; font-size:64px; font-weight:800" data-in="85%" data-a="up">µg/m³ · <span class="warn">±8× ganda</span></div>
+    <div class="el c src" style="top:1760px" data-in="30%" data-a="fade">WHO AQG 2021 (PM2.5 24 jam: 15 µg/m³). Bacaan 119: posting awam Threads, 2026.</div>
+  </div>
+
+  <!-- 6: HEPA -->
+  <div class="scene">
+    <div class="el c" style="top:170px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Penapis <span class="acc">HEPA</span><br>tangkap zarah ultra halus</div>
+    <script>document.write(K.storm('s6', 310, 430, 460, 'data-in="0" data-a="zoom"'))</script>
+    <div class="el c" style="top:1240px; font-size:48px; font-weight:700" data-in="45%" data-a="up">Coway Storm II · Copper HEPA H13</div>
+    <div class="el c acc" style="top:1320px; font-size:170px; font-weight:800; line-height:1" data-in="60%" data-a="slam">99.999%</div>
+    <div class="el c" style="top:1500px; font-size:44px; opacity:.9" data-in="80%" data-a="up">habuk ultra halus ditapis*</div>
+    <div class="el c src" style="top:1760px" data-in="30%" data-a="fade">*Dakwaan pengeluar, coway.com.my (Storm II AP-1523D)</div>
+  </div>
+
+  <script>document.write(K.cta({ h1: 'Lindungi paru-paru keluarga.', h2: 'WhatsApp saya untuk info lanjut.' }))</script>
+</div>
+<script>
+  const ctx = document.getElementById('fx').getContext('2d');
+  K.start(t => {
+    K.clear(ctx);
+    const s2 = K.scene(2), s6 = K.scene(6), cta = K.scene(7);
+    const amb = t < s6.s ? .9 : t < cta.s ? .9 - .8 * Engine.p(t, s6.s, s6.e) : .1;
+    K.haze(ctx, t, { n: 220, density: amb, color: '160,140,120', alpha: .35, size: 3, speed: 14 });
+    if (t >= s2.s - .2 && t < s2.e + .4) {   // zarah mengalir hidung -> paru-paru
+      const k = Engine.p(t, K.at(2, .35), K.at(2, .55));
+      K.haze(ctx, t, { mode: 'leak', x: 540, y: 330, angle: Math.PI / 2, cone: .5, reach: 820, n: 90, density: k, color: '92,225,230', alpha: .9, size: 4, period: 2.0 });
+    }
+    if (t >= s6.s - .2 && t < cta.s + .4) {
+      K.haze(ctx, t, { mode: 'suck', x: 545, y: 590, box: [0, 350, 1080, 1100], spread: 70, n: 180, density: 1 - Engine.p(t, s6.s + 2, s6.e), color: '160,140,120', alpha: .7, size: 4, period: 1.8 });
+      K.setStorm('s6', 3 * Engine.p(t, s6.s + .5, s6.e - .5, Engine.E.inOut));
+    }
+  });
+</script>
+</body></html>
