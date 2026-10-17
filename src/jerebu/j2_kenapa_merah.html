@@ -71,7 +71,7 @@
 
   <!-- 4: merah -> biru -->
   <div class="scene onph">
-    <script>document.write(K.photo('R05.jpg') + K.photo('R06.jpg', { id: 'ph6', a: 'cut' }))</script>
+    <script>document.write(K.photo('R16.jpg') + K.photo('R17.jpg', { id: 'ph6', a: 'cut' }))</script>
     <div class="el c" style="top:150px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Biar dia bekerja…</div>
     <div class="el c" style="top:270px" data-in="45%" data-a="pop"><span class="tag" id="lvTag">MERAH · KOTOR</span></div>
     <div class="el" style="top:400px; left:140px; width:800px; height:26px; border-radius:13px; background:linear-gradient(90deg,#E5322D,#f5be1e,#3cbe5a,#2896ff)" data-in="45%" data-a="fade"></div>
@@ -110,7 +110,7 @@
     if (t >= s1.s && t < s1.e + .4) K.haze(ctx, t, { n: 160, color: '170,150,130', alpha: .3, size: 4, speed: 30 });
     if (t >= s4.s - .2 && t < s4.e + .4) {
       const lv = 3 * Engine.p(t, K.at(4, .45), K.at(4, 1) + .2, Engine.E.inOut);
-      K.haze(ctx, t, { mode: 'suck', x: 380, y: 1010, box: [0, 500, 1080, 1000], spread: 60, n: 150, density: 1 - lv / 2, color: '170,150,130', alpha: .6, size: 4, period: 1.7 });
+      K.haze(ctx, t, { mode: 'suck', x: 540, y: 1170, box: [0, 500, 1080, 1100], spread: 60, n: 150, density: 1 - lv / 2, color: '170,150,130', alpha: .6, size: 4, period: 1.7 });
       document.getElementById('ph6').style.opacity = Engine.p(lv, 1.2, 2.4, Engine.E.inOut);
       const tag = document.getElementById('lvTag'); tag.textContent = K.ringName(lv); tag.style.background = K.ring(lv);
       document.getElementById('lvDot').style.left = (120 + 760 * lv / 3) + 'px';
