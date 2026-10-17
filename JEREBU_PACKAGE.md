@@ -170,3 +170,34 @@ python build_jerebu.py [--only j6_lepas_jerebu]  # render -> out/jerebu/
 - Teks/harga: edit terus dalam `src/jerebu/<video>.html`; CTA & penunjuk warna dalam `src/jerebu/kit.js`.
 - VO: J1–J5 guna `gemini-3.1-flash-tts-preview`, J6 guna `gemini-3.8-flash-lite-tts` (mod transkrip sahaja, `JEREBU_PLAIN=1`) kerana kuota harian habis — suara sama (Charon). Klip dipercepat 1.2× (`JEREBU_VO_SPEED`).
 - Gambar realistik: `assets/generated/R01–R12.jpg` (Seedream 4.5, produk dengan foto rujukan Storm II, saiz sebenar 41.2×23.2×75.3 cm). Diletak dengan `K.photo()` / `K.card()` dalam `src/jerebu/kit.js`.
+
+---
+
+# Siri Model — pecahan spek (out/model/)
+
+Satu video setiap model, gaya jenama Coway (biru `#00A4E4`, kelabu `#464646`; fon Nunito Sans + Noto Sans sebagai
+ganti Avenir yang berlesen; logo dari coway.com.my). Struktur: cerita kesesuaian (B-roll) → pengenalan → pecahan
+penapis → kelebihan → spek → sesuai untuk → promosi RM20 × 7 bulan.
+
+| Fail | Model | Sudut cerita | Panjang |
+|---|---|---|---|
+| `coway_model_m1_storm2.mp4` | Storm II AP-1523D | Kawasan kerap jerebu, mod Haze | 60s |
+| `coway_model_m2_lombok3.mp4` | Lombok III AP-1520C | Anak sensitif habuk / resdung / alahan | 49s |
+| `coway_model_m3_studio.mp4` | Studio AP-1924A | Bilik anak: kecil, ringan, senyap | 49s |
+| `coway_model_m4_suite.mp4` | Suite AP-2524B | Ruang tamu keluarga, paparan PM2.5 | 51s |
+| `coway_model_m5_noble2.mp4` | Noble 2 AP-2023K | Bela kucing, Pet Mode + UVC | 50s |
+| `coway_model_m6_atrium.mp4` | Atrium AP-3525I | Rumah besar / ruang terbuka | 48s |
+
+Nota: model kecil untuk bilik anak ialah **Studio** (7.8 kg, 21.6 dB); **Atrium** ialah model paling besar (116 m², 23 kg).
+
+**Gambar pengguna sebenar:** Instagram, Facebook, Threads, TikTok, Shopee dan Lazada disekat daripada persekitaran
+ini, jadi B-roll dijana dengan Seedream (`assets/generated/model/*.jpg`, produk dirujuk daripada foto rasmi dengan
+saiz sebenar). Untuk guna gambar pelanggan sebenar dalam iklan, dapatkan izin pemilik posting, kemudian ganti fail
+dalam `assets/generated/model/` dengan nama yang sama dan render semula (`python build_jerebu.py --series m`).
+Sumber ulasan untuk dicari: [cowaymalaysiamall.com Lombok 3](https://cowaymalaysiamall.com/penapis-udara-noble/lombok-3/)
+(testimoni anak asma), [TechNave Storm II](https://technave.com/gadget/Coway-STORM-II-first-looks-A-new-look-better-air-circulation-and-lots-of-upgrades-35554.html),
+[priceshop: Studio/Suite/Atrium](https://my.priceshop.com/en/news/coway-studio-suite-and-atrium-new-air-purifier-lineup-designed-for-every-room-size/),
+dan carian `#cowaystorm2`, `#cowaylombok3`, `#cowaynoble2` di Instagram/TikTok.
+
+Ubah data model (penapis, spek, chip, foto) terus dalam JSON `window.M` di `src/jerebu/m*.html`.
+VO siri model: `gemini-3.8-flash-lite-tts` (transkrip sahaja), 1.2× laju; potongan manual `cuts.json` untuk m2 & m6.
