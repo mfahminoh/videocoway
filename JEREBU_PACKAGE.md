@@ -201,3 +201,11 @@ dan carian `#cowaystorm2`, `#cowaylombok3`, `#cowaynoble2` di Instagram/TikTok.
 
 Ubah data model (penapis, spek, chip, foto) terus dalam JSON `window.M` di `src/jerebu/m*.html`.
 VO siri model: `gemini-3.8-flash-lite-tts` (transkrip sahaja), 1.2× laju; potongan manual `cuts.json` untuk m2 & m6.
+
+---
+
+# Versi pendek ±30s untuk iklan (out/pendek/)
+
+`python build_short.py` memotong babak terpilih dari render penuh (hook → isi → CTA promosi RM20); senarai babak
+dalam `PICK` di `build_short.py`. 12 fail `coway_<nama>_30s.mp4`, 25–31s:
+J1 25s · J2 29s · J3 28s · J4 31s · J5 30s · J6 30s · M1 29s · M2 27s · M3 28s · M4 31s · M5 28s · M6 29s.
