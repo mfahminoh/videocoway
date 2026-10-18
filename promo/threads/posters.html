@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>AP vs Jerebu — Poster Threads</title>
+<style>
+@font-face { font-family: P; font-weight: 400; src: url(../../assets/fonts/Poppins-Regular.ttf); }
+@font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+@font-face { font-family: Anton; src: url(../../assets/fonts/Anton-Regular.ttf); }
+:root { --blue:#00A4E4; --orange:#F28C28; --yellow:#FFD23F; --red:#E5322D; --haze:#1c130d; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:#555; font-family:P, 'Noto Color Emoji', sans-serif; color:#fff; }
+.poster { position:relative; width:1080px; height:1350px; overflow:hidden; margin:0 0 40px; background:var(--haze); }
+.a { position:absolute; }
+.c { left:0; width:100%; text-align:center; }
+.ant { font-family:Anton; text-transform:uppercase; line-height:1; letter-spacing:.5px; }
+.y { color:var(--yellow); } .b { color:var(--blue); } .o { color:var(--orange); } .r { color:var(--red); }
+.chip { display:inline-block; padding:12px 30px; border-radius:60px; font-weight:800; font-size:28px; letter-spacing:2px; }
+.ph { position:absolute; border-radius:30px; overflow:hidden; border:7px solid #0b0b0b; background:#000; box-shadow:0 30px 60px rgba(0,0,0,.55); }
+.ph img { width:100%; height:100%; object-fit:cover; display:block; }
+.num { position:absolute; top:10px; left:10px; width:46px; height:46px; border-radius:50%; background:var(--yellow); color:#111; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center; }
+.vs { display:inline-flex; align-items:center; justify-content:center; width:120px; height:120px; border-radius:50%; background:var(--yellow); color:#111; font-family:Anton; font-size:62px; transform:rotate(-8deg); box-shadow:0 10px 30px rgba(0,0,0,.4); }
+.logo { display:flex; align-items:center; gap:22px; justify-content:center; }
+.logo .ap { font-family:Anton; font-size:200px; line-height:1; color:var(--blue); text-shadow:0 0 50px rgba(0,164,228,.5); }
+.logo .jb { font-family:Anton; font-size:200px; line-height:1; color:var(--orange); text-shadow:0 0 50px rgba(242,140,40,.45); }
+.cta { font-weight:800; font-size:34px; }
+.foot { position:absolute; left:0; bottom:0; width:100%; height:110px; display:flex; align-items:center; justify-content:center; gap:26px; background:#0b0b0b; font-weight:700; font-size:30px; }
+.foot .pr { font-family:Anton; font-size:64px; color:var(--yellow); }
+.foot .sl { background:var(--red); padding:8px 22px; border-radius:40px; font-weight:800; font-size:26px; }
+.row { display:flex; align-items:center; gap:22px; }
+.tick { flex:none; width:52px; height:52px; border-radius:50%; background:var(--blue); color:#fff; font-weight:800; font-size:30px; display:flex; align-items:center; justify-content:center; }
+.cross { background:var(--red); }
+</style></head>
+<body>
+<script>
+const IMG = 'img/', BR = '../../assets/generated/';
+const CTA = 'Komen “JEREBU” atau DM saya';
+const ph = (src, x, y, w, rot = 0, extra = '') => `<div class="ph" style="left:${x}px; top:${y}px; width:${w}px; height:${Math.round(w * 16 / 9)}px; transform:rotate(${rot}deg); ${w < 220 ? 'border-width:5px; border-radius:20px' : ''}">${extra}<img src="${IMG}${src}.jpg"></div>`;
+const foot = (t = 'Pakej AP vs JEREBU') => `<div class="foot"><span>${t}</span><span class="pr">RM30</span><span class="sl">TERHAD 25 ORANG</span></div>`;
+const hazeBg = (img, top = .25, bot = .97) => `<div class="a" style="inset:0; background:url(${BR}${img}) center 30%/cover"></div>
+  <div class="a" style="inset:0; background:linear-gradient(180deg, rgba(28,19,13,${top}) 0%, rgba(28,19,13,.75) 40%, rgba(28,19,13,${bot}) 75%)"></div>`;
+
+const VIDS = [
+  ['ISU & KESEDARAN JEREBU', '#F28C28', [
+    ['j1_0', 'Tutup tingkap, dah selamat? Jerebu tetap masuk rumah'],
+    ['j2_1', 'Kenapa air purifier semua bertukar MERAH?'],
+    ['j3_0', 'PM2.5: musuh halus yang mata tak nampak'],
+    ['j4_0', '6 tips guna air purifier masa jerebu'],
+    ['j5_0', 'Pening pilih model? Panduan ikut ruang rumah']]],
+  ['HANDLING REJECTION', '#E5322D', [
+    ['j6_0', '“Jerebu sekejap je, buat apa bayar bulan-bulan?”']]],
+  ['PECAHAN SPEK SETIAP MODEL', '#00A4E4', [
+    ['m1_0', 'Storm II: kawasan jerebu, mod Haze'],
+    ['m2_0', 'Lombok III: anak asma & resdung'],
+    ['m3_0', 'Studio: bilik tidur & bilik anak'],
+    ['m4_0', 'Suite: ruang tamu keluarga'],
+    ['m5_0', 'Noble 2: rumah bela kucing'],
+    ['m6_0', 'Atrium: rumah besar, siling tinggi']]],
+  ['IKLAN 30 SAAT SIAP RUN', '#FFD23F', [
+    ['j2_3', 'Iklan 30s: “Semua merah!”'],
+    ['j6_1', 'Iklan 30s: “Jerebu sekejap je?”'],
+    ['j1_4', 'Iklan 30s: “Rumah tak kedap”']]],
+];
+const ALL = VIDS.flatMap(g => g[2]);
+
+const P = {};
+
+/* 01 — pelancaran */
+P.p01 = () => `${hazeBg('R01.jpg', .15, .98)}
+  <div class="a c" style="top:60px"><span class="chip" style="background:rgba(255,255,255,.14); border:2px solid rgba(255,255,255,.35)">PAKEJ VIDEO · EJEN PENAPIS UDARA</span></div>
+  <div class="a c" style="top:150px"><div class="logo"><span class="ap">AP</span><span class="vs">VS</span><span class="jb">JEREBU</span></div></div>
+  <div class="a c" style="top:385px; font-size:56px; font-weight:800; line-height:1.15">15 Video untuk Promote<br>Penapis Udara</div>
+  <div class="a c" style="top:535px; font-size:29px; font-weight:600" ><span class="y">Isu jerebu</span> · <span class="y">Kenapa wajib ada AP di rumah</span> · <span class="y">Handling rejection</span></div>
+  ${ph('m1_0', 70, 650, 200, -12)}${ph('j6_0', 810, 650, 200, 12)}${ph('j1_0', 225, 620, 220, -6)}${ph('j3_0', 635, 620, 220, 6)}${ph('j2_1', 420, 600, 240, 0)}
+  <div class="a" style="left:0; top:1065px; width:100%; height:285px; background:#0b0b0b"></div>
+  <div class="a" style="left:70px; top:1085px"><div style="font-size:30px; font-weight:700; opacity:.8">Sekali bayar</div><div class="ant y" style="font-size:170px">RM30</div></div>
+  <div class="a" style="left:470px; top:1110px; width:560px">
+    <span class="chip" style="background:var(--red); font-size:30px">TERHAD 25 ORANG SAHAJA</span>
+    <div style="margin-top:26px; font-size:30px; font-weight:600; line-height:1.35">RM2 sevideo. Download &amp; terus post.</div>
+    <div class="cta y" style="margin-top:14px; font-size:31px; white-space:nowrap">${CTA} 👇</div></div>`;
+
+/* 02 — senarai video */
+P.p02 = () => {
+  let n = 0, y = 250;
+  const rows = VIDS.map(([g, col, it]) => {
+    const h = `<div class="a" style="left:70px; top:${y}px; font-weight:800; font-size:24px; letter-spacing:3px; color:${col}">${g}</div>`;
+    y += 44;
+    return h + it.map(([, t]) => { n++; const r = `<div class="a row" style="left:70px; top:${y}px; width:950px"><div style="flex:none; width:50px; height:40px; border-radius:10px; background:${col}; color:${col === '#FFD23F' ? '#111' : '#fff'}; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center">${String(n).padStart(2, '0')}</div><div style="font-size:28px; font-weight:600; white-space:nowrap">${t}</div></div>`; y += 49; return r; }).join('') + (y += 18, '');
+  }).join('');
+  return `<div class="a" style="inset:0; background:radial-gradient(circle at 80% 0%, #4a2c16 0%, #1c130d 55%)"></div>
+  <div class="a" style="left:70px; top:60px; font-size:30px; font-weight:700; opacity:.8">Apa ada dalam pakej</div>
+  <div class="a" style="left:70px; top:105px; font-family:Anton; font-size:96px; line-height:1"><span class="b">AP</span> <span class="y" style="font-size:60px">VS</span> <span class="o">JEREBU</span></div>
+  ${rows}${foot('15 video · 9:16 · BM')}`;
+};
+
+/* 03 — handling rejection */
+P.p03 = () => {
+  const R = [
+    ['R09.jpg', 'Bilik anak asma / resdung', 'Habuk, hama & kulat ialah antara pencetus. Anak tidur 8 jam di situ.'],
+    ['R10.jpg', 'Rumah bela kucing', 'Bulu, kelemumur & bau. Ada setiap hari, bukan ikut musim.'],
+    ['R11.jpg', 'Ruang tamu & dapur', 'Asap & bau masakan, habuk jalan raya. Tempat paling ramai berkumpul.'],
+    ['🎨', 'Rumah baru / baru renovate', 'Bau cat, gam & perabot baru.'],
+    ['🌫️', 'Jerebu datang balik', '2015 · 2019 · 2023 · 2026. Bila datang lagi, rumah dah sedia.'],
+    ['🛠️', 'Bukan sekadar sewa mesin', 'Servis & penapis ganti termasuk. Dari < RM2 sehari.'],
+  ];
+  return `<div class="a" style="inset:0; background:#F4EFE9"></div>
+  <div class="a" style="left:70px; top:60px; color:#111; font-size:30px; font-weight:700">Customer cakap:</div>
+  <div class="a" style="left:70px; top:105px; width:940px; color:#111; font-family:Anton; font-size:84px; line-height:1.05">“JEREBU DAH HABIS. BUAT APA BAYAR <span class="r">BULAN-BULAN?</span>”</div>
+  <div class="a" style="left:70px; top:310px; color:#111; font-size:32px; font-weight:800">6 jawapan kenapa AP wajib ada walaupun langit dah biru ☀️</div>
+  ${R.map(([im, t, d], i) => { const x = 70 + (i % 2) * 480, yy = 380 + Math.floor(i / 2) * 270;
+    return `<div class="a" style="left:${x}px; top:${yy}px; width:460px; height:250px; border-radius:26px; background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.08); display:flex; overflow:hidden">
+      <div style="flex:none; width:150px; height:100%; ${im.endsWith('.jpg') ? `background:url(${BR}${im}) center/cover` : 'background:#FFE9C7; display:flex; align-items:center; justify-content:center; font-size:76px'}">${im.endsWith('.jpg') ? '' : im}</div>
+      <div style="padding:20px 20px 0 22px; color:#111"><div style="display:flex; gap:10px; align-items:center"><span style="flex:none; width:40px; height:40px; border-radius:50%; background:var(--red); color:#fff; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center">${i + 1}</span><span style="font-size:27px; font-weight:800; line-height:1.1">${t}</span></div>
+      <div style="margin-top:12px; font-size:22px; font-weight:500; line-height:1.35; color:#444">${d}</div></div></div>`; }).join('')}
+  <div class="a c" style="top:1200px; color:#111; font-size:28px; font-weight:700">Video 06 dalam pakej jawab objection ni untuk anda, siap VO.</div>
+  ${foot()}`;
+};
+
+/* 04 — kenapa merah */
+P.p04 = () => `<div class="a" style="inset:0; background:radial-gradient(circle at 50% 35%, #3b0f0c 0%, #120807 70%)"></div>
+  <div class="a c" style="top:60px; font-size:32px; font-weight:700; opacity:.85">Soalan no.1 customer minggu ni:</div>
+  <div class="a c ant" style="top:115px; font-size:96px; line-height:1.05">Kenapa air purifier<br><span class="r" style="text-shadow:0 0 40px rgba(229,50,45,.6)">semua merah?</span></div>
+  ${ph('j2_0', 70, 380, 290, -4)}${ph('j2_1', 395, 360, 290, 0)}${ph('j2_2', 720, 380, 290, 4)}
+  <div class="a c" style="top:1035px; font-size:32px; font-weight:600; line-height:1.4">Rosak ke? <b class="y">Tak.</b> Sensor tengah kesan udara kotor.<br>Jawapan penuh dah siap dalam <b class="y">Video 02</b>.</div>
+  ${foot()}`;
+
+/* 05 — grid 15 thumbnail */
+P.p05 = () => `<div class="a" style="inset:0; background:#0f0c0a"></div>
+  <div class="a" style="left:42px; top:40px; font-family:Anton; font-size:92px; line-height:1">15 VIDEO. <span class="y">SIAP POST.</span></div>
+  <div class="a" style="left:42px; top:145px; font-size:28px; font-weight:600; opacity:.85">Isu jerebu · handling rejection · spek 6 model · iklan 30s</div>
+  ${ALL.map(([s], i) => ph(s, 42 + (i % 5) * 202, 205 + Math.floor(i / 5) * 345, 188, 0, `<div class="num" style="width:38px; height:38px; font-size:18px; top:8px; left:8px">${i + 1}</div>`)).join('')}
+  ${foot()}`;
+
+/* 06 — masalah ejen */
+P.p06 = () => `${hazeBg('R05.jpg', .35, .97)}
+  <div class="a" style="left:70px; top:80px; width:940px; font-family:Anton; font-size:100px; line-height:1.05">MUSIM JEREBU =<br><span class="o">MUSIM ORANG CARI<br>AIR PURIFIER.</span></div>
+  <div class="a" style="left:70px; top:470px; font-size:36px; font-weight:700">Tapi bila nak post…</div>
+  ${['Tak tahu nak cakap apa', 'Tak sempat edit video', 'Customer tanya “buat apa bayar bulan-bulan?”,<br>jawab pun tersangkut'].map((t, i) =>
+    `<div class="a row" style="left:70px; top:${550 + i * 100}px; width:940px"><div class="tick cross">✕</div><div style="font-size:34px; font-weight:600; line-height:1.2">${t}</div></div>`).join('')}
+  <div class="a" style="left:70px; top:900px; width:940px; padding:34px 40px; border-radius:30px; background:rgba(0,164,228,.92)">
+    <div style="font-size:30px; font-weight:700">Saya dah siapkan untuk anda:</div>
+    <div style="font-family:Anton; font-size:78px; line-height:1.05; margin-top:6px">15 VIDEO. TINGGAL POST.</div></div>
+  ${foot()}`;
+
+/* 07 — spek model */
+P.p07 = () => {
+  const M = [['m1_1', 'Storm II', 'Mod Haze'], ['m2_1', 'Lombok III', 'Asma & resdung'], ['m3_1', 'Studio', 'Bilik anak'],
+             ['m4_1', 'Suite', 'Ruang tamu'], ['m5_1', 'Noble 2', 'Bela kucing'], ['m6_1', 'Atrium', 'Rumah besar']];
+  return `<div class="a" style="inset:0; background:#F5F7F9"></div>
+  <div class="a c" style="top:50px; color:#464646; font-size:32px; font-weight:700">Customer tanya:</div>
+  <div class="a c" style="top:95px; color:#111; font-family:Anton; font-size:78px; line-height:1.05">“MODEL MANA SESUAI<br>UNTUK <span class="b">RUMAH SAYA?</span>”</div>
+  ${M.map(([s, n, t], i) => { const x = 135 + (i % 3) * 300, y = 280 + Math.floor(i / 3) * 440;
+    return ph(s, x, y, 190) + `<div class="a" style="left:${x - 50}px; top:${y + 352}px; width:290px; text-align:center; color:#111"><div style="font-weight:800; font-size:30px; line-height:1.1">${n}</div><div style="display:inline-block; margin-top:4px; background:var(--blue); color:#fff; font-weight:700; font-size:22px; padding:4px 16px; border-radius:30px">${t}</div></div>`; }).join('')}
+  <div class="a c" style="top:1180px; color:#111; font-size:30px; font-weight:700">6 video pecahan spek. Hantar terus pada customer.</div>
+  ${foot()}`;
+};
+
+/* 08 — RM2 sevideo */
+P.p08 = () => `<div class="a" style="inset:0; background:var(--yellow)"></div>
+  <div class="a c" style="top:70px; color:#111; font-family:Anton; font-size:110px">RM30 ÷ 15 VIDEO</div>
+  <div class="a c" style="top:195px; color:#111; font-family:Anton; font-size:290px; line-height:1">= RM2</div>
+  <div class="a c" style="top:530px; color:#111; font-size:44px; font-weight:800">sevideo.</div>
+  <div class="a" style="left:110px; top:640px; width:860px; padding:40px 44px; border-radius:30px; background:#111">
+    ${['Idea & skrip', 'Voiceover Bahasa Melayu', 'Gambar realistik + muzik', 'Edit 9:16: Reels, TikTok, Threads', 'Promo RM20 × 7 bulan dalam video'].map(t =>
+      `<div class="row" style="margin-bottom:22px"><div class="tick" style="width:46px; height:46px; font-size:26px">✓</div><div style="font-size:34px; font-weight:700">${t}</div><div style="margin-left:auto; color:var(--yellow); font-weight:800; font-size:28px">SIAP</div></div>`).join('')}
+    <div style="margin-top:8px; font-size:30px; font-weight:600; opacity:.85">Anda tinggal: download → post → tunggu WhatsApp masuk.</div></div>
+  ${foot()}`;
+
+/* 09 — apa anda dapat */
+P.p09 = () => `<div class="a" style="inset:0; background:linear-gradient(160deg,#0d2533,#071219)"></div>
+  <div class="a" style="left:70px; top:60px; font-family:Anton; font-size:96px; line-height:1">APA ANDA <span class="b">DAPAT</span></div>
+  ${[['15 video MP4, 9:16', 'Reels, TikTok, Threads, Status WA'],
+     ['Voiceover BM + muzik', 'Nada santai, laju, mesra Malaysia'],
+     ['Teks besar atas skrin', 'Tengok tanpa bunyi pun faham'],
+     ['Promo RM20 × 7 bulan', 'Dah masuk dalam babak penutup'],
+     ['Butang “WhatsApp saya”', 'Letak nombor anda dalam caption'],
+     ['Bonus: skrip VO & caption', 'Copy iklan siap tampal'],
+     ['Link Google Drive', 'Download terus selepas bayar']].map(([t, d], i) =>
+    `<div class="a row" style="left:70px; top:${200 + i * 128}px; width:600px; align-items:flex-start"><div class="tick">✓</div><div><div style="font-size:33px; font-weight:800; line-height:1.15">${t}</div><div style="font-size:24px; opacity:.75; margin-top:4px">${d}</div></div></div>`).join('')}
+  ${ph('j6_7', 700, 190, 330, 3)}
+  ${foot()}`;
+
+/* 10 — panggilan terakhir (N slot) */
+P.p10 = n => `<div class="a" style="inset:0; background:radial-gradient(circle at 50% 30%, #ff4a3d 0%, #b3161a 75%)"></div>
+  <div class="a c" style="top:60px"><span class="chip" style="background:#111">PANGGILAN TERAKHIR</span></div>
+  <div class="a c ant" style="top:150px; font-size:130px">TINGGAL</div>
+  <div class="a c ant" style="top:270px; font-size:420px; color:var(--yellow); text-shadow:0 20px 60px rgba(0,0,0,.35)">${n}</div>
+  <div class="a c ant" style="top:690px; font-size:130px">SLOT</div>
+  <div class="a c" style="top:830px; font-size:34px; font-weight:700">daripada 25. Bila penuh, saya tutup.</div>
+  ${ph('j1_0', 120, 905, 150, -8)}${ph('j2_1', 300, 890, 150, -3)}${ph('j6_0', 480, 885, 150, 0)}${ph('m1_0', 660, 890, 150, 3)}${ph('j3_0', 840, 905, 150, 8)}
+  <div class="a c" style="top:1180px; font-size:32px; font-weight:800">${CTA} 👇</div>
+  ${foot()}`;
+
+const out = [];
+for (const k of Object.keys(P)) {
+  if (k === 'p10') for (const n of [10, 5, 3]) out.push(`<div class="poster" id="p10_${n}">${P.p10(n)}</div>`);
+  else out.push(`<div class="poster" id="${k}">${P[k]()}</div>`);
+}
+document.write(out.join(''));
+</script>
+</body></html>
