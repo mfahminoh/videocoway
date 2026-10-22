@@ -43,6 +43,8 @@ MUSIC = {
     "m4_suite":   dict(bpm=100, lift=1, drums=1, gain=.8),
     "m5_noble2":  dict(bpm=108, lift=1, drums=1, gain=.8),
     "m6_atrium":  dict(bpm=96, lift=1, drums=1, gain=.8),
+    # siri kesedaran pelanggan (amaran tawaran "free bulanan")
+    "w1_free_bulan": dict(bpm=100, lift=5, drums=1, gain=.85),
 }
 NAMES = list(MUSIC)
 
@@ -190,7 +192,9 @@ def build(name, jobs):
     silent = OUT / f"_{name}.mp4"
     subprocess.run([FF, "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(silent)], check=True)
     wav = OUT / f"_{name}.wav"; build_audio(name, T, wav)
-    final = OUT / f"coway_jerebu_{name}.mp4" if name.startswith("j") else ROOT / "out" / "model" / f"coway_model_{name}.mp4"
+    final = {"j": OUT / f"coway_jerebu_{name}.mp4", "m": ROOT / "out" / "model" / f"coway_model_{name}.mp4",
+             "w": ROOT / "out" / "kesedaran" / f"coway_kesedaran_{name}.mp4"}[name[0]]
+    final.parent.mkdir(parents=True, exist_ok=True)
     final.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run([FF, "-y", "-v", "error", "-i", str(silent), "-i", str(wav), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-shortest", "-movflags", "+faststart", str(final)], check=True)
@@ -225,7 +229,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--only"); ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--timing", action="store_true"); ap.add_argument("--stills", action="store_true")
-    ap.add_argument("--series", choices=["j", "m"], help="j = pakej jerebu, m = siri model")
+    ap.add_argument("--series", choices=["j", "m", "w"], help="j = pakej jerebu, m = siri model, w = kesedaran pelanggan")
     a = ap.parse_args()
     names = [a.only] if a.only else [n for n in NAMES if not a.series or n.startswith(a.series)]
     if a.timing:
