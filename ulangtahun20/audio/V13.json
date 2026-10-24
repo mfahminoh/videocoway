@@ -1,0 +1,38 @@
+{
+ "id": "V13",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "3 sebab ambil Coway Neon bulan ni.",
+   "start": 0.15,
+   "end": 2.36
+  },
+  {
+   "text": "Satu: RM20 sebulan untuk 7 bulan pertama.",
+   "start": 3.077,
+   "end": 8.076
+  },
+  {
+   "text": "Dua: Freegift Premium Coway.",
+   "start": 8.793,
+   "end": 10.644
+  },
+  {
+   "text": "Tiga: pasang free.",
+   "start": 11.362,
+   "end": 12.893
+  },
+  {
+   "text": "Semua tamat 25 Oktober.",
+   "start": 13.611,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.25,
+   "end": 17.191
+  }
+ ]
+}

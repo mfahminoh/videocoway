@@ -1,0 +1,21 @@
+{
+  "source": "coway.com.my/products/water-purifier/neon: video produk Neon + CSS halaman (disemak 7 Okt 2026)",
+  "font": {"family": "Noto Sans", "headline_weight": 800, "body_weight": 500, "case": "UPPERCASE untuk hook dan harga"},
+  "colors": {
+    "coway_blue": "#00A0E0",
+    "text_on_dark": "#FFFFFF",
+    "text_on_light": "#231F20",
+    "ciel_blue": "#B2CDDB",
+    "mint_green": "#CBEED1",
+    "pink_backdrop": "#F99CD4",
+    "pebble_grey": "#35383B",
+    "light_grey_bg": "#F8F8F8"
+  },
+  "usage": {
+    "hook_text": "Putih #FFFFFF, Noto Sans 800, huruf besar, bayang lembut di atas klip",
+    "price_badge": "Latar Coway Blue #00A0E0, teks putih",
+    "urgency_band": "Latar charcoal #231F20, teks putih; tarikh dalam Coway Blue",
+    "pastel_cards": "Ciel Blue / Mint / Pink untuk kad soalan (S5) dan nombor (S4), teks charcoal",
+    "end_card": "Latar putih, logo/teks Coway Blue, CTA charcoal"
+  }
+}

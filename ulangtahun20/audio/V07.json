@@ -1,0 +1,38 @@
+{
+ "id": "V07",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Kalau awak tengok video ni sebelum 25 Oktober, awak masih sempat.",
+   "start": 0.15,
+   "end": 5.298
+  },
+  {
+   "text": "Coway Neon RM20 sebulan untuk 7 bulan pertama.",
+   "start": 5.647,
+   "end": 9.213
+  },
+  {
+   "text": "Pasang free, Freegift Premium Coway.",
+   "start": 9.562,
+   "end": 12.261
+  },
+  {
+   "text": "Lepas tu, promo ni tutup.",
+   "start": 12.609,
+   "end": 14.639
+  },
+  {
+   "text": "Jangan tunggu esok.",
+   "start": 14.987,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.25,
+   "end": 17.156
+  }
+ ]
+}

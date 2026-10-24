@@ -1,0 +1,5 @@
+Cara mula:
+1. Muat turun folder Google Drive "Video Coway - Google Flow" (klik kanan > Download).
+   Unzip, dan letak semua fail .mp4 terus dalam folder sources/ di sini.
+2. Buka Claude Code dalam folder ini (VideoCoway-Ulangtahun20).
+3. Tampal: Baca CLAUDE.md dan mulakan langkah 1.

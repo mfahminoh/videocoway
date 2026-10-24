@@ -1,0 +1,33 @@
+{
+ "id": "V06",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Last call.",
+   "start": 0.15,
+   "end": 0.993
+  },
+  {
+   "text": "RM20 sebulan, 7 bulan pertama, sampai 25 Oktober je.",
+   "start": 1.604,
+   "end": 7.366
+  },
+  {
+   "text": "Coway Neon, pasang free, plus Freegift Premium Coway.",
+   "start": 7.976,
+   "end": 12.197
+  },
+  {
+   "text": "Lepas tarikh tu, promo ulangtahun ni tutup.",
+   "start": 12.807,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 16.25,
+   "end": 17.196
+  }
+ ]
+}

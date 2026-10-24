@@ -1,0 +1,38 @@
+{
+ "id": "V08",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Tinggal 18 hari je lagi.",
+   "start": 0.15,
+   "end": 2.485
+  },
+  {
+   "text": "Lepas 25 Oktober, harga RM20 ni hilang.",
+   "start": 2.605,
+   "end": 6.98
+  },
+  {
+   "text": "Sekarang?",
+   "start": 7.1,
+   "end": 7.658
+  },
+  {
+   "text": "RM20 sebulan untuk 7 bulan pertama, pasang free, plus Freegift Premium Coway.",
+   "start": 7.778,
+   "end": 15.202
+  },
+  {
+   "text": "Kira hari, bukan minggu.",
+   "start": 15.322,
+   "end": 17.262
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 17.382,
+   "end": 18.543
+  }
+ ]
+}

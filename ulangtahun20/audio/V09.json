@@ -1,0 +1,38 @@
+{
+ "id": "V09",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "Bawah 70 sen sehari untuk air bersih satu rumah.",
+   "start": 0.15,
+   "end": 3.936
+  },
+  {
+   "text": "RM20 sebulan, bahagi 30 hari.",
+   "start": 4.151,
+   "end": 7.568
+  },
+  {
+   "text": "Itu harga Coway Neon untuk 7 bulan pertama.",
+   "start": 7.783,
+   "end": 10.986
+  },
+  {
+   "text": "Plus Freegift Premium Coway, pasang free.",
+   "start": 11.201,
+   "end": 14.144
+  },
+  {
+   "text": "Tamat 25 Oktober.",
+   "start": 14.359,
+   "end": 16.05
+  },
+  {
+   "text": "WhatsApp sekarang, saya kira untuk rumah awak.",
+   "start": 16.25,
+   "end": 19.441
+  }
+ ]
+}

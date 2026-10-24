@@ -1,0 +1,33 @@
+{
+ "id": "V15",
+ "model": "elevenlabs:eleven_multilingual_v2",
+ "voice": "Aisyah – Patient Malay School Tutor (JOCyls6Fdo4qfmTUnFrJ)",
+ "tempo": 1.0,
+ "cues": [
+  {
+   "text": "3 sebab jangan tunggu bulan depan.",
+   "start": 0.15,
+   "end": 2.515
+  },
+  {
+   "text": "Satu: RM20 sebulan untuk 7 bulan pertama ni harga ulangtahun ke-20 je.",
+   "start": 2.635,
+   "end": 8.277
+  },
+  {
+   "text": "Dua: Freegift Premium Coway hanya selagi promo berjalan.",
+   "start": 8.397,
+   "end": 12.737
+  },
+  {
+   "text": "Tiga: lepas 25 Oktober, harga RM20 ni tutup.",
+   "start": 12.857,
+   "end": 17.646
+  },
+  {
+   "text": "WhatsApp sekarang.",
+   "start": 17.766,
+   "end": 18.712
+  }
+ ]
+}
