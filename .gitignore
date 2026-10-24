@@ -1,61 +1,76 @@
-voiceover/clips/
 __pycache__/
-out/*
-!out/villaem3_final.mp4
+
+# ---------- fail kerja (sumber besar / jana semula) ----------
+voiceover/clips/
 voiceover/clips_long/
-!out/villaem3_long_final.mp4
-!out/villaem3_long_tanpa_vo.mp4
-out/clipads/_*
-!out/clipads/
-!out/v5/
-out/v5/_*
-out/v5/old/
-!out/siap_dengan_vo/
-!out/tilam/
-out/tilam/_*
-tilam/lite/rujukan/*.mp4
-!out/poster/
-out/poster/_*
-!out/static/
-!out/jerebu/
-out/jerebu/_*
-!out/stills/
-out/stills/*
-!out/stills/jerebu/
+voiceover/best3/clips/
 voiceover/jerebu/*/[0-9][0-9].wav
-!out/model/
-!out/pendek/
-!out/kesedaran/
-out/kesedaran/_*
-assets/generated/v3/
 videos/*/vo_raw.wav
-!out/peti_ais/
 videos/*/vo_slow.wav
 reference/raw/*.mp3
 reference/*.mp4
+tilam/lite/rujukan/*.mp4
+assets/generated/v3/
+
+# ---------- out/: abaikan semua, kecuali video siap di bawah ----------
+out/*
+
+# Villaem 3
+!out/villaem3_final.mp4
+!out/villaem3_long_final.mp4
+!out/villaem3_long_tanpa_vo.mp4
+!out/README_villaem3.md
 !out/V05_final.mp4
-# video Neon siap (nama deskriptif), bukan fail kerja render
+!out/V3[0-9][0-9]_*.mp4
+!out/clipads/
+!out/v5/
+!out/siap_dengan_vo/
+!out/best3_final.mp4
+
+# Neon / Neo Plus / papercut
+!out/neo_papercut_final.mp4
+!out/neo_papercut_sample_final.mp4
+!out/neoplus_final.mp4
+!out/neoplus_full_final.mp4
 !out/NE[0-9][0-9]_*.mp4
 !out/E04_*.mp4
 !out/README_neon.md
-out/NE[0-9][0-9]_final.mp4
-out/E04_final.mp4
-!out/V3[0-9][0-9]_*.mp4
-# versi brand Coway (tema warna rasmi)
-!out/coway/
-# 5 video Neon high energy
 !out/hype/
-# fail kerja render sentiasa diabaikan (mesti selepas senarai putih di atas)
-out/*_noaudio.mp4
-out/V3[0-9][0-9]_final.mp4
-!out/README_villaem3.md
-# 3 video listicle Neon (Template A "3 Sebab")
 !out/listicle/
-!out/neoplus_final.mp4
-!out/neoplus_full_final.mp4
+!out/coway/
+
+# Penapis air lain
 !out/airbotol_final.mp4
 !out/pakej30_v1.mp4
 !out/pakej30_v2.mp4
 !out/pakej30_v3.mp4
-voiceover/best3/clips/
-!out/best3_final.mp4
+
+# Tilam, poster, static
+!out/tilam/
+!out/poster/
+!out/static/
+
+# Penapis udara (jerebu)
+!out/jerebu/
+!out/model/
+!out/pendek/
+!out/kesedaran/
+!out/stills/
+out/stills/*
+!out/stills/jerebu/
+
+# Peti ais
+!out/peti_ais/
+
+# ---------- fail kerja render dalam out/ (mesti selepas senarai putih di atas) ----------
+out/*_noaudio.mp4
+out/NE[0-9][0-9]_final.mp4
+out/E04_final.mp4
+out/V3[0-9][0-9]_final.mp4
+out/clipads/_*
+out/v5/_*
+out/v5/old/
+out/tilam/_*
+out/poster/_*
+out/jerebu/_*
+out/kesedaran/_*

@@ -1,10 +1,31 @@
 # Video Iklan Coway (Meta, Portrait 1080×1920)
 
-| Projek | Fail | Video siap |
+Semua kerja ada dalam satu branch ini (digabung daripada 17 branch pada 24 Okt 2026).
+Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
+
+## Peta repo
+
+| Produk / projek | Fail kerja | Video / bahan siap |
 |---|---|---|
-| Villaem 3 (±29s, suara lelaki) | `src/`, `voiceover/` | `out/villaem3_final.mp4` |
-| Neo Plus — untuk mak ayah (60s, suara Gemini perempuan) | `neoplus/` — lihat [neoplus/README.md](neoplus/README.md) | `out/neoplus_final.mp4` |
-| Neo Plus — versi penuh, semua poin skrip (±2:51, suara Gemini) | `neoplus_full/` — lihat [neoplus_full/README.md](neoplus_full/README.md) | `out/neoplus_full_final.mp4` |
+| **Villaem 3** — 30s, versi panjang, 5 gaya, V3xx | `src/`, `voiceover/`, `build_v5.py`, `build_clipads.py`, `videos/V3xx` | `out/villaem3_*.mp4`, `out/v5/`, `out/siap_dengan_vo/`, `out/V3*.mp4`, `out/V05_final.mp4` |
+| **3 model paling laris** (Neon, Villaem 3, Ais) | `src/best3.html`, `voiceover/best3/` | `out/best3_final.mp4` |
+| **Neon** — NE01–NE10, E04, hype HN01–HN05, listicle, versi warna Coway | `videos/`, `skrip/` | `out/NE*.mp4`, `out/E04_*.mp4`, `out/hype/`, `out/listicle/`, `out/coway/` |
+| **Neo Plus / papercut** | `neoplus/`, `neoplus_full/`, `src/papercut/` | `out/neoplus_*.mp4`, `out/neo_papercut_*.mp4` |
+| **Penapis air lain** — Air Botol, pakej 30 video | `airbotol/`, `pakej30/`, `PLAN_40_VIDEO.md` | `out/airbotol_final.mp4`, `out/pakej30_v*.mp4` |
+| **Coway Ice** | `coway-ice/` | `coway-ice/out/` |
+| **Ulangtahun 20** — V01–V15 | `ulangtahun20/` | `ulangtahun20/out/` |
+| **Tilam** — BEREX Elite, copy gradualization, poster | `tilam/`, `copy/` | `out/tilam/`, `out/poster/`, `posters/P3*` |
+| **Penapis udara (jerebu)** | `build_jerebu.py`, `build_short.py`, `JEREBU_PACKAGE.md` | `out/jerebu/`, `out/pendek/`, `out/model/`, `out/kesedaran/` |
+| **Peti ais** — 5 video emosi, poster static | `videos/PA0x`, `campaigns/coway-peti-ais/`, `research/`, `static/` | `out/peti_ais/`, `out/static/` |
+| **Peti ais & aircond** — plan content | `plan/` | — |
+| **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
+| **Threads / posting** | `threads/`, `promo/threads/` | — |
+| **Poster iklan Meta** | `posters/` | `posters/*.jpg` |
+| Rujukan & iklan | `reference/`, `ads/`, `iklan_meta_whatsapp.md` | — |
+
+Skrip kongsi: `render.py`, `audio.py`, `mix.py`, `voiceover/`. Projek lama yang perlukan versi skrip
+berbeza guna salinannya sendiri: `render_neoplus.py` / `mix_neoplus.py` / `voiceover/generate_vo_neoplus.py`
+(Neo Plus, Air Botol) dan `render_best3.py` / `mix_best3.py` / `voiceover/generate_vo*_best3.py` (3 model).
 
 ---
 
