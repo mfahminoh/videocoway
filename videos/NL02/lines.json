@@ -1,0 +1,47 @@
+[
+ {
+  "id": "01",
+  "text": "Ada anak kecil kat rumah?",
+  "cap": "Ada *anak kecil* kat rumah?"
+ },
+ {
+  "id": "02",
+  "text": "Ni tiga sebab Coway Neon sesuai untuk korang.",
+  "cap": "*3 sebab* Coway Neon sesuai untuk korang."
+ },
+ {
+  "id": "03",
+  "text": "Satu, air panas ada kunci keselamatan kanak-kanak.",
+  "cap": "*1.* Air panas ada *kunci keselamatan kanak-kanak*."
+ },
+ {
+  "id": "04",
+  "text": "Dua, bancuh susu tengah malam? Air panas dan suhu bilik, satu tekan je.",
+  "cap": "*2.* Bancuh susu tengah malam? *Satu tekan* je."
+ },
+ {
+  "id": "05",
+  "text": "Tiga, filter baru dihantar setiap lapan bulan, percuma.",
+  "cap": "*3.* Filter baru *setiap 8 bulan*, percuma."
+ },
+ {
+  "id": "06",
+  "text": "Atau pilih technician datang ke rumah.",
+  "cap": "Atau *technician* datang ke rumah."
+ },
+ {
+  "id": "07",
+  "text": "Harga asal seratus empat ringgit, sekarang lima puluh empat ringgit sebulan.",
+  "cap": "Asal *RM104*, sekarang *RM54* sebulan."
+ },
+ {
+  "id": "08",
+  "text": "Tambah rebat dua puluh ringgit, selama tujuh bulan.",
+  "cap": "+ rebat *RM20* × *7 bulan*."
+ },
+ {
+  "id": "09",
+  "text": "WhatsApp saya untuk semak promo bulan ni.",
+  "cap": "*WhatsApp saya* untuk semak promo."
+ }
+]

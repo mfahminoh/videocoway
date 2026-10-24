@@ -1,0 +1,386 @@
+{
+ "slug": "kinetic-stop-scroll-rm20",
+ "voice": "Fenrir",
+ "style_tts": "Say in Malaysian Malay, as a hyped, high-energy young man in a fast TikTok ad, punchy, excited and very quick",
+ "style": "kinetic",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": false,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "k-blue"
+  },
+  {
+   "at": "@02",
+   "bg": "k-ink"
+  },
+  {
+   "at": "@03",
+   "bg": "k-white"
+  },
+  {
+   "at": "@04",
+   "bg": "k-blue"
+  },
+  {
+   "at": "@05",
+   "bg": "k-sky"
+  },
+  {
+   "at": "@06",
+   "bg": "k-ink"
+  },
+  {
+   "at": "@07",
+   "bg": "k-white"
+  },
+  {
+   "at": "@10",
+   "bg": "k-blue"
+  },
+  {
+   "at": "@11",
+   "bg": "k-pink"
+  },
+  {
+   "at": "@13",
+   "bg": "k-blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 560,
+   "items": [
+    {
+     "txt": "STOP!",
+     "at": "@01",
+     "hit": true,
+     "size": 330,
+     "color": "#fff"
+    },
+    {
+     "txt": "JANGAN SCROLL",
+     "at": "@01%45",
+     "box": true,
+     "bg": "#111",
+     "size": 100,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 500,
+   "items": [
+    {
+     "txt": "PROMO",
+     "at": "@02",
+     "size": 200,
+     "color": "#fff"
+    },
+    {
+     "txt": "COWAY",
+     "at": "@02%30",
+     "size": 200,
+     "color": "#04A4E4"
+    },
+    {
+     "txt": "PADU!",
+     "at": "@02%65",
+     "hit": true,
+     "size": 280,
+     "color": "#ff8fb1"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 460,
+   "items": [
+    {
+     "txt": "RM20",
+     "at": "@03%10",
+     "hit": true,
+     "size": 430,
+     "color": "#04A4E4"
+    },
+    {
+     "txt": "DAH BOLEH PASANG!",
+     "at": "@03%55",
+     "box": true,
+     "bg": "#04A4E4",
+     "size": 100,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "ticker",
+   "in": "@03",
+   "out": "@05",
+   "top": 1330,
+   "text": "PROMO RM20 DAH BOLEH PASANG",
+   "rot": -5,
+   "bg": "#111",
+   "color": "#fff"
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 520,
+   "items": [
+    {
+     "txt": "YA, BETUL.",
+     "at": "@04",
+     "size": 140,
+     "color": "#fff"
+    },
+    {
+     "txt": "RM20",
+     "at": "@04%35",
+     "hit": true,
+     "size": 380,
+     "color": "#fff"
+    },
+    {
+     "txt": "TAK TIPU!",
+     "at": "@04%70",
+     "box": true,
+     "bg": "#111",
+     "size": 120,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@05",
+   "out": "@07",
+   "src": "../../assets/img/hype/neon_pink.png",
+   "w": 430,
+   "top": 330,
+   "anim": "rise",
+   "zoom": 1.05
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 140,
+   "items": [
+    {
+     "txt": "COWAY NEON",
+     "at": "@05",
+     "size": 150,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05%50",
+   "out": "@06",
+   "top": 1260,
+   "items": [
+    {
+     "txt": "MAMPU MILIK!",
+     "at": "@05%55",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true,
+     "size": 150,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 1260,
+   "items": [
+    {
+     "txt": "HARGA MESRA,",
+     "at": "@06",
+     "size": 110,
+     "color": "#fff"
+    },
+    {
+     "txt": "TAPI LENGKAP!",
+     "at": "@06%45",
+     "hit": true,
+     "size": 150,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 170,
+   "items": [
+    {
+     "txt": "BANCUH MINUMAN?",
+     "at": "@07",
+     "size": 130,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": "@09",
+   "top": 170,
+   "items": [
+    {
+     "txt": "HILANG DAHAGA?",
+     "at": "@08",
+     "size": 130,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@09",
+   "out": "@10",
+   "top": 170,
+   "items": [
+    {
+     "txt": "MINUM BIASA?",
+     "at": "@09",
+     "size": 130,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "temps",
+   "in": "@07",
+   "out": "@10",
+   "top": 560,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@07%45"
+    },
+    {
+     "k": "cold",
+     "at": "@08%45"
+    },
+    {
+     "k": "room",
+     "at": "@09%45"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@10",
+   "out": "@11",
+   "top": 560,
+   "items": [
+    {
+     "txt": "SATU MESIN,",
+     "at": "@10",
+     "size": 160,
+     "color": "#fff"
+    },
+    {
+     "txt": "SEMUA ADA!",
+     "at": "@10%40",
+     "hit": true,
+     "size": 230,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "gift",
+   "in": "@11",
+   "out": "@13",
+   "openAt": "@11%50",
+   "top": 500,
+   "size": 620,
+   "rays": "rgba(255,255,255,.85)"
+  },
+  {
+   "type": "words",
+   "in": "@11",
+   "out": "@13",
+   "top": 170,
+   "items": [
+    {
+     "txt": "BONUS!",
+     "at": "@11",
+     "hit": true,
+     "size": 220,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@12",
+   "out": "@13",
+   "top": 1150,
+   "items": [
+    {
+     "txt": "FREE GIFT PREMIUM",
+     "at": "@12",
+     "box": true,
+     "bg": "#04A4E4",
+     "size": 110,
+     "color": "#fff"
+    },
+    {
+     "txt": "PERCUMA!",
+     "at": "@12%55",
+     "size": 170,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@13",
+   "out": null,
+   "top": 330,
+   "items": [
+    {
+     "txt": "NAK DETAILS?",
+     "at": "@13",
+     "size": 150,
+     "color": "#fff"
+    },
+    {
+     "txt": "SEKARANG!",
+     "at": "@13%55",
+     "hit": true,
+     "size": 220,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@13",
+   "top": 900,
+   "button": "WhatsApp saya",
+   "fine": "*Tertakluk pada terma &amp; syarat promosi semasa Coway.",
+   "btnAt": "@13%40"
+  }
+ ]
+}

@@ -1,0 +1,306 @@
+{
+ "slug": "papercut-modal-kecil-rm20",
+ "voice": "Laomedeia",
+ "style_tts": "Say in Malaysian Malay, as a bubbly, excited young woman in a fast, playful TikTok ad, bright and quick",
+ "style": "paper",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "paper-cream"
+  },
+  {
+   "at": "@02",
+   "bg": "paper-blue"
+  },
+  {
+   "at": "@04",
+   "bg": "paper-sky"
+  },
+  {
+   "at": "@05",
+   "bg": "paper-pink"
+  },
+  {
+   "at": "@06",
+   "bg": "paper-cream"
+  },
+  {
+   "at": "@07",
+   "bg": "paper-sky"
+  },
+  {
+   "at": "@08",
+   "bg": "paper-pink"
+  },
+  {
+   "at": "@09",
+   "bg": "paper-cream"
+  },
+  {
+   "at": "@10",
+   "bg": "paper-blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 360,
+   "items": [
+    {
+     "txt": "Pasang Coway",
+     "at": "@01",
+     "size": 120
+    },
+    {
+     "txt": "kena modal",
+     "at": "@01%35",
+     "size": 120
+    },
+    {
+     "txt": "BESAR?",
+     "at": "@01%65",
+     "bg": "#04A4E4",
+     "hit": true,
+     "size": 170,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@04",
+   "top": 220,
+   "items": [
+    {
+     "txt": "SALAH!",
+     "at": "@02",
+     "bg": "#ff5a3c",
+     "rot": -6,
+     "hit": true,
+     "size": 150,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "tag",
+   "in": "@02%35",
+   "out": "@04",
+   "top": 760,
+   "pre": "PROMO",
+   "big": "RM20",
+   "sub": "DAH BOLEH PASANG!",
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 1260,
+   "items": [
+    {
+     "txt": "JE TAU!",
+     "at": "@03",
+     "rot": 4,
+     "size": 110
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 200,
+   "items": [
+    {
+     "txt": "Kenalkan,",
+     "at": "@04",
+     "size": 100
+    },
+    {
+     "txt": "Coway Neon!",
+     "at": "@04%30",
+     "bg": "#04A4E4",
+     "size": 130,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@04%30",
+   "out": "@05",
+   "src": "../../assets/img/hype/neon_pink.png",
+   "w": 400,
+   "top": 580,
+   "anim": "drop",
+   "rot": -3,
+   "float": true
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 200,
+   "items": [
+    {
+     "txt": "MAMPU MILIK",
+     "at": "@05",
+     "bg": "#04A4E4",
+     "hit": true,
+     "size": 130,
+     "color": "#fff"
+    },
+    {
+     "txt": "rupa pun cantik!",
+     "at": "@05%40",
+     "size": 100
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@05%40",
+   "out": "@06",
+   "src": "../../assets/img/hype/lineup_cut.png",
+   "w": 1000,
+   "top": 760,
+   "anim": "rise"
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 640,
+   "items": [
+    {
+     "txt": "Fungsi?",
+     "at": "@06",
+     "size": 130
+    },
+    {
+     "txt": "LENGKAP!",
+     "at": "@06%45",
+     "bg": "#04A4E4",
+     "hit": true,
+     "size": 200,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 200,
+   "items": [
+    {
+     "txt": "3 SUHU",
+     "at": "@07",
+     "bg": "#04A4E4",
+     "size": 130,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "temps",
+   "in": "@07",
+   "out": "@08",
+   "top": 470,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@07%5"
+    },
+    {
+     "k": "cold",
+     "at": "@07%35"
+    },
+    {
+     "k": "room",
+     "at": "@07%65"
+    }
+   ]
+  },
+  {
+   "type": "gift",
+   "in": "@08",
+   "out": "@09",
+   "openAt": "@08%40",
+   "top": 330,
+   "size": 620,
+   "rays": "rgba(255,255,255,.85)"
+  },
+  {
+   "type": "words",
+   "in": "@08%40",
+   "out": "@09",
+   "top": 1080,
+   "items": [
+    {
+     "txt": "FREE GIFT",
+     "at": "@08%45",
+     "bg": "#04A4E4",
+     "size": 120,
+     "color": "#fff"
+    },
+    {
+     "txt": "PREMIUM",
+     "at": "@08%60",
+     "rot": 3,
+     "size": 120
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@09",
+   "out": "@10",
+   "top": 620,
+   "items": [
+    {
+     "txt": "Jangan tunggu",
+     "at": "@09",
+     "size": 110
+    },
+    {
+     "txt": "LAMA-LAMA!",
+     "at": "@09%50",
+     "bg": "#ff8fb1",
+     "hit": true,
+     "size": 150,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@10",
+   "out": null,
+   "top": 360,
+   "items": [
+    {
+     "txt": "Details lanjut?",
+     "at": "@10",
+     "size": 110
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@10",
+   "top": 760,
+   "button": "WhatsApp saya",
+   "fine": "*Tertakluk pada terma &amp; syarat promosi semasa Coway.",
+   "btnAt": "@10%30"
+  }
+ ]
+}

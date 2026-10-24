@@ -7,6 +7,7 @@ Usage:
   python render.py --src long.html --warp out/warp_long.json --out out/villaem3_long_video_noaudio.mp4 --jobs 4
                                                     # retimed to a real voiceover
   python render.py --src videos/PA01/index.html --out out/PA01_noaudio.mp4 --jobs 4
+  python render.py --src videos/V05/index.html --out out/V05_noaudio.mp4 --jobs 4
                                                     # a page outside src/ (path relative to the repo root)
 """
 import argparse

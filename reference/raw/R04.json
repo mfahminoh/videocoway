@@ -1,0 +1,60 @@
+{
+ "ringkasan": "Video mempromosikan penapis air Coway Neo dengan reka bentuk cantik, tiga fungsi suhu, harga diskaun, dan tawaran pemasangan serta penghantaran percuma.",
+ "penutur": "Lelaki, presenter atas kamera, gaya bersahaja, memujuk, dan mesra.",
+ "segmen": [
+  {
+   "mula": 0.0,
+   "tamat": 2.2,
+   "skrip": "Siapa cakap harga murah tak boleh dapat penapis air cantik.",
+   "nada": "meyakinkan"
+  },
+  {
+   "mula": 2.2,
+   "tamat": 6.1,
+   "skrip": "Model Neo ni korang bayar sehari tak sampai RM2 pun, dah boleh pasang dekat rumah tau.",
+   "nada": "teruja"
+  },
+  {
+   "mula": 6.1,
+   "tamat": 11.1,
+   "skrip": "Design pun cantik, nampak estetik, si ada lima pilihan warna yang korang boleh match dengan design dapur korang.",
+   "nada": "tertarik"
+  },
+  {
+   "mula": 11.1,
+   "tamat": 15.6,
+   "skrip": "Coway Neo ni ada komplit tiga suhu, panas, sejuk, suhu bilik, dan memang senang sangat nak guna tau.",
+   "nada": "memberitahu"
+  },
+  {
+   "mula": 15.6,
+   "tamat": 20.3,
+   "skrip": "Siapa yang order Neo ni sekarang, lagi untung sebab ada diskaun sebanyak 50% selama 6 bulan.",
+   "nada": "menarik"
+  },
+  {
+   "mula": 20.3,
+   "tamat": 23.3,
+   "skrip": "Jadi harga akan jadi serendah RM27 sahaja.",
+   "nada": "bersemangat"
+  },
+  {
+   "mula": 23.3,
+   "tamat": 29.3,
+   "skrip": "Kalau korang nak percuma penghantaran dan pemasangan ke seluruh Malaysia, korang boleh isi baby dekat bawah ni ataupun tekan link dekat bio saya.",
+   "nada": "meminta"
+  },
+  {
+   "mula": 29.3,
+   "tamat": 31.8,
+   "skrip": "Untuk saya bantu uruskan order sampai siap pasang kat rumah korang.",
+   "nada": "meyakinkan"
+  }
+ ],
+ "muzik_sfx": "Muzik latar ceria dan rancak.",
+ "produk": [
+  "Coway Neo"
+ ],
+ "harga_promo": "RM2 sehari, diskaun 50% selama 6 bulan, harga serendah RM27",
+ "_model": "gemini-3.5-flash-lite"
+}

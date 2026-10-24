@@ -1,0 +1,175 @@
+{
+ "slug": "mitos-bil-elektrik-tinggi",
+ "voice": "Kore",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "dark"
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "clip": "clip3",
+    "c0": 0.0,
+    "c1": 1.4
+   }
+  },
+  {
+   "at": "@03%45",
+   "bg": {
+    "clip": "clip4",
+    "c0": 6.0,
+    "c1": 8.0
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "dark"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "clip3",
+    "c0": 3.9,
+    "c1": 5.6
+   }
+  },
+  {
+   "at": "@05%45",
+   "bg": {
+    "clip": "clip4",
+    "c0": 8.0,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "clip": "clip5",
+    "c0": 4.5,
+    "c1": 6.2
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "icon",
+   "in": "@01",
+   "out": "@02",
+   "top": 420,
+   "icon": "money",
+   "size": 260,
+   "color": "#ffd23f"
+  },
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 760,
+   "size": 120,
+   "html": "BIL ELEKTRIK<br><span style='color:var(--yellow)'>NAIK?</span>"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@03",
+   "top": 560,
+   "size": 96,
+   "html": "TANGKI BESAR =<br>MAKAN ELEKTRIK?"
+  },
+  {
+   "type": "stamp",
+   "in": "@02%40",
+   "out": "@03",
+   "top": 900,
+   "html": "MITOS ✕"
+  },
+  {
+   "type": "stamp",
+   "in": "@03",
+   "out": "@04",
+   "top": 1180,
+   "html": "FAKTA: ECO MODE",
+   "color": "#1faa59"
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 560,
+   "size": 96,
+   "html": "AIR PANAS<br>BAHAYA UNTUK BUDAK?"
+  },
+  {
+   "type": "stamp",
+   "in": "@04%40",
+   "out": "@05",
+   "top": 900,
+   "html": "MITOS ✕"
+  },
+  {
+   "type": "stamp",
+   "in": "@05",
+   "out": "@06",
+   "top": 1180,
+   "html": "FAKTA: KUNCI 3 SAAT",
+   "color": "#1faa59"
+  },
+  {
+   "type": "pill",
+   "in": "@06",
+   "out": "@07",
+   "top": 270,
+   "html": "BESAR · BIJAK · SELAMAT",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "price",
+   "in": "@07",
+   "out": "@08",
+   "top": 520,
+   "label": "HARGA ASAL",
+   "from": "RM120",
+   "strikeAt": "@07%10",
+   "to": "RM74",
+   "toAt": "@07%25",
+   "badge": "+ REBAT ULANG TAHUN RM20 × 7 BULAN",
+   "badgeAt": "@07%55"
+  },
+  {
+   "type": "photo",
+   "in": "@08",
+   "out": null,
+   "top": 150,
+   "left": 310,
+   "w": 460,
+   "h": 460,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "PROMOSI RM74 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

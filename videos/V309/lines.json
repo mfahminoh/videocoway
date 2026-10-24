@@ -1,0 +1,47 @@
+[
+ {
+  "id": "01",
+  "text": "Tiga tahun saya jual Coway, ada satu jenis customer yang saya paling suka.",
+  "cap": "*3 tahun* jual Coway, ada satu jenis customer..."
+ },
+ {
+  "id": "02",
+  "text": "Diorang tak beli barang murah berulang kali.",
+  "cap": "Diorang tak beli barang murah *berulang kali*."
+ },
+ {
+  "id": "03",
+  "text": "Diorang beli sekali, yang terbaik, dan pakai lama.",
+  "cap": "Beli sekali, *yang terbaik*, pakai *lama*."
+ },
+ {
+  "id": "04",
+  "text": "Bila pilih penapis air, kebanyakan diorang pilih Vila-em Tiga.",
+  "cap": "Kebanyakan diorang pilih *Villaem 3*."
+ },
+ {
+  "id": "05",
+  "text": "Spec tinggi, tangki paling besar, lapan suhu.",
+  "cap": "*Spec tinggi*, tangki *paling besar*, *8 suhu*."
+ },
+ {
+  "id": "06",
+  "text": "Dan tahan lasak. Technician kami pun jarang dapat repair.",
+  "cap": "*Tahan lasak.* Technician pun *jarang repair*."
+ },
+ {
+  "id": "07",
+  "text": "Harga asal seratus dua puluh ringgit, sekarang promosi tujuh puluh empat ringgit sebulan.",
+  "cap": "Asal *RM120*, promosi *RM74* sebulan."
+ },
+ {
+  "id": "08",
+  "text": "Tambah rebat ulang tahun Coway, dua puluh ringgit selama tujuh bulan.",
+  "cap": "+ Rebat ulang tahun *RM20 × 7 bulan*."
+ },
+ {
+  "id": "09",
+  "text": "Kalau you pun jenis beli sekali pakai lama, WhatsApp saya.",
+  "cap": "Beli sekali, pakai lama? *WhatsApp* saya."
+ }
+]

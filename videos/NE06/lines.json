@@ -1,0 +1,47 @@
+[
+ {
+  "id": "01",
+  "text": "Ramai tanya, Coway semua RO ke?",
+  "cap": "Ramai tanya, Coway *semua RO* ke?"
+ },
+ {
+  "id": "02",
+  "text": "Sebenarnya, tak. Coway ada dua jenis.",
+  "cap": "Tak. Coway ada *2 jenis*."
+ },
+ {
+  "id": "03",
+  "text": "RO, macam Vila-em Tiga dan Neo Plus.",
+  "cap": "*RO*: Villaem 3, Neo Plus."
+ },
+ {
+  "id": "04",
+  "text": "Dan Nanotrap, bukan RO, macam Coway Neon.",
+  "cap": "*Nanotrap*, bukan RO: *Coway Neon*."
+ },
+ {
+  "id": "05",
+  "text": "Air rumah keruh, berkarat, atau berkeladak? Pilih RO.",
+  "cap": "Air *keruh* atau *berkarat*? Pilih *RO*."
+ },
+ {
+  "id": "06",
+  "text": "Air paip rumah dah jernih? Neon boleh jadi pilihan.",
+  "cap": "Air *jernih*? *Neon* boleh jadi pilihan."
+ },
+ {
+  "id": "07",
+  "text": "Nanotrap bantu tapis bakteria, virus, dan logam berat.",
+  "cap": "Tapis *bakteria*, *virus*, *logam berat*."
+ },
+ {
+  "id": "08",
+  "text": "Pilih ikut air rumah, bukan ikut siapa paling kuat jual.",
+  "cap": "Pilih ikut *air rumah*."
+ },
+ {
+  "id": "09",
+  "text": "Tak pasti? Hantar gambar air paip rumah ke WhatsApp saya.",
+  "cap": "Tak pasti? Hantar *gambar air paip* ke WhatsApp."
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Ramai takut ambil penapis air besar. Katanya bil elektrik naik.",
+  "cap": "Penapis besar, *bil elektrik naik?*"
+ },
+ {
+  "id": "02",
+  "text": "Mitos: tangki besar, mesti makan elektrik banyak.",
+  "cap": "*Mitos:* tangki besar, makan elektrik."
+ },
+ {
+  "id": "03",
+  "text": "Fakta: Vila-em Tiga ada Eco Mode, jimatkan penggunaan tenaga.",
+  "cap": "*Fakta:* ada *Eco Mode*, jimat tenaga."
+ },
+ {
+  "id": "04",
+  "text": "Satu lagi mitos: air panas bahaya untuk budak.",
+  "cap": "*Mitos:* air panas bahaya untuk budak."
+ },
+ {
+  "id": "05",
+  "text": "Fakta: ada Dual Lock, dan kunci air panas, tekan tiga saat.",
+  "cap": "*Fakta:* *Dual Lock*, kunci *3 saat*."
+ },
+ {
+  "id": "06",
+  "text": "Jadi, besar, tapi bijak dan selamat.",
+  "cap": "Besar, tapi *bijak* & *selamat*."
+ },
+ {
+  "id": "07",
+  "text": "Promosi tujuh puluh empat ringgit sebulan, tambah rebat dua puluh ringgit selama tujuh bulan.",
+  "cap": "Promosi *RM74*, + rebat *RM20 × 7 bulan*."
+ },
+ {
+  "id": "08",
+  "text": "Ada soalan lain? WhatsApp saya, saya jawab jujur.",
+  "cap": "Ada soalan? *WhatsApp* saya."
+ }
+]

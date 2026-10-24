@@ -1,0 +1,205 @@
+{
+ "slug": "3-sebab-pasang-sekarang",
+ "voice": "Puck",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@02",
+   "bg": "blue"
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "clip5",
+    "c0": 0.3,
+    "c1": 4.2
+   }
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "clip": "clip4",
+    "c0": 6.0,
+    "c1": 10.0
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "dark"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 500,
+   "size": 190,
+   "html": "<span style='color:var(--yellow)'>3 SEBAB</span>"
+  },
+  {
+   "type": "banner",
+   "in": "@01%35",
+   "out": "@02",
+   "top": 780,
+   "html": "PASANG <em>VILLAEM 3</em><br>SEKARANG"
+  },
+  {
+   "type": "reason",
+   "in": "@02",
+   "out": "@03",
+   "top": 200,
+   "num": "1",
+   "title": "HARGA PROMOSI"
+  },
+  {
+   "type": "price",
+   "in": "@02",
+   "out": "@03",
+   "top": 500,
+   "label": "HARGA ASAL",
+   "from": "RM120",
+   "strikeAt": "@02%45",
+   "to": "RM74",
+   "toAt": "@02%60"
+  },
+  {
+   "type": "reason",
+   "in": "@03",
+   "out": "@04",
+   "top": 200,
+   "num": "2",
+   "title": "DOUBLE PROMO"
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@04",
+   "top": 620,
+   "size": 110,
+   "html": "REBAT<br><span style='color:var(--yellow)'>RM20 × 7 BULAN</span>"
+  },
+  {
+   "type": "reason",
+   "in": "@04",
+   "out": "@05",
+   "top": 250,
+   "num": "3",
+   "title": "PEMASANGAN<br>PERCUMA"
+  },
+  {
+   "type": "card",
+   "in": "@04%30",
+   "out": "@05",
+   "top": 760,
+   "icon": "tech",
+   "title": "SERVIS BERKALA",
+   "sub": "Oleh technician Coway"
+  },
+  {
+   "type": "chips",
+   "in": "@05",
+   "out": "@06",
+   "top": 280,
+   "items": [
+    {
+     "text": "11.4L",
+     "color": "#fff",
+     "at": "@05"
+    },
+    {
+     "text": "8 SUHU",
+     "color": "#fff",
+     "at": "@05%35"
+    },
+    {
+     "text": "UV",
+     "color": "#fff",
+     "at": "@05%65"
+    }
+   ]
+  },
+  {
+   "type": "chips",
+   "in": "@06",
+   "out": "@07",
+   "top": 280,
+   "items": [
+    {
+     "text": "BERSIH",
+     "color": "#fff",
+     "at": "@06%20"
+    },
+    {
+     "text": "PANAS",
+     "color": "#ff7a6b",
+     "at": "@06%45"
+    },
+    {
+     "text": "SEJUK",
+     "color": "#6cc2ff",
+     "at": "@06%65"
+    }
+   ]
+  },
+  {
+   "type": "icon",
+   "in": "@07",
+   "out": "@08",
+   "top": 440,
+   "icon": "clock",
+   "size": 260,
+   "color": "#ffd23f"
+  },
+  {
+   "type": "title",
+   "in": "@07",
+   "out": "@08",
+   "top": 800,
+   "size": 130,
+   "html": "PROMO<br>TAK LAMA!"
+  },
+  {
+   "type": "photo",
+   "in": "@08",
+   "out": null,
+   "top": 150,
+   "left": 310,
+   "w": 460,
+   "h": 460,
+   "src": "../../assets/img/villaem3-front.png",
+   "fit": "contain",
+   "shadow": false,
+   "radius": 0
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "PROMOSI RM74 SEBULAN*",
+    "+ REBAT RM20 × 7 BULAN*",
+    "PEMASANGAN PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "fine": "*Harga asal RM120/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan. Tertakluk pada terma &amp; promosi semasa Coway.",
+   "btnAt": "@08%30"
+  }
+ ]
+}
