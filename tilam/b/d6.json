@@ -1,0 +1,194 @@
+{
+ "id": "d6",
+ "slug": "hantar-pasang-percuma-sabah-sarawak",
+ "title": "D6 — Hantar & pasang percuma, Sabah & Sarawak termasuk",
+ "pain": [
+  "#133",
+  "#130",
+  "#136",
+  "#135"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0b2427",
+  "bg2": "#1d5157",
+  "accent": "#7fe0c8",
+  "accent2": "#b8f2e2",
+  "ink": "#0b2427"
+ },
+ "clips": {
+  "topview": {
+   "from": 11.2,
+   "to": 14.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Ada yang komen, Coway hantar je, tak tolong pasang.",
+   "scene": {
+    "head": {
+     "k": "BALAS KOMEN",
+     "y": 300,
+     "at": 0.05
+    },
+    "comment": {
+     "t": "diorang hantar je tak tolong pasang",
+     "src": "TikTok · 2026",
+     "y": 560,
+     "at": 0.3
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Saya jawab terus. Untuk tilam Coway Prime 2, penghantaran dan pemasangan adalah percuma.",
+   "scene": {
+    "words": [
+     {
+      "t": "JAWAPAN <b>TERUS:</b>",
+      "at": 0.05,
+      "size": 92,
+      "y": 470
+     },
+     {
+      "t": "HANTAR &amp; PASANG",
+      "at": "jawab",
+      "size": 104,
+      "y": 640
+     },
+     {
+      "t": "<b>PERCUMA.</b>",
+      "at": "penghantaran",
+      "size": 160,
+      "y": 800
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Team Coway hantar sampai ke rumah, dan pasang sampai siap.",
+   "scene": {
+    "head": {
+     "t": "Hantar &amp;<br><b>pasang sampai siap</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/prime2/prime2-panel3-desktop.jpg",
+     "box": [
+      0,
+      560,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Hantar ke rumah",
+      "at": "hantar",
+      "y": 1240
+     },
+     {
+      "t": "Pasang sampai siap",
+      "at": "pasang",
+      "y": 1345
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Orang Sabah dan Sarawak pun sama. Tak perlu risau kos pos perabot.",
+   "scene": {
+    "comment": {
+     "t": "Kita kan yang Sabahan ni, kalau bab beli online kena fikir 2-3 kali, dia punya fee tu boleh tahan.",
+     "src": "Threads · 2026",
+     "y": 330,
+     "at": 0.05,
+     "tag": "KOMEN SEBENAR"
+    },
+    "words": [
+     {
+      "t": "SABAH &amp; SARAWAK",
+      "at": "Sabah",
+      "size": 100,
+      "y": 900
+     },
+     {
+      "t": "<b>TERMASUK.</b>",
+      "at": "sama",
+      "size": 130,
+      "y": 1060
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Prosesnya senang. WhatsApp saya, pilih saiz dan jenis, dan kami aturkan penghantaran.",
+   "scene": {
+    "head": {
+     "k": "3 LANGKAH",
+     "t": "Proses <b>senang</b>",
+     "y": 180
+    },
+    "items": [
+     {
+      "t": "<b>WhatsApp</b> saya",
+      "icon": "1",
+      "at": "WhatsApp",
+      "y": 560
+     },
+     {
+      "t": "Pilih <b>saiz</b> &amp; <b>Soft / Firm</b>",
+      "icon": "2",
+      "at": "pilih",
+      "y": 710
+     },
+     {
+      "t": "Hantar &amp; pasang <b>percuma</b>",
+      "icon": "3",
+      "at": "aturkan",
+      "y": 860
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Lepas tu, you cuma perlu tidur.",
+   "scene": {
+    "bg": {
+     "clip": "topview",
+     "dim": 1
+    },
+    "words": [
+     {
+      "t": "Lepas tu?",
+      "at": 0.05,
+      "size": 90,
+      "y": 560,
+      "anim": "up"
+     },
+     {
+      "t": "<b>TIDUR JE.</b>",
+      "at": "tidur",
+      "size": 150,
+      "y": 720
+     }
+    ]
+   }
+  },
+  {
+   "id": "07",
+   "text": "Nak tahu tarikh penghantaran ke kawasan you? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Hantar &amp; pasang percuma · Sabah &amp; Sarawak termasuk"
+    }
+   }
+  }
+ ]
+}

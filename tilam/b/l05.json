@@ -1,0 +1,204 @@
+{
+ "id": "l05",
+ "slug": "lite-atau-prime2-pilih",
+ "title": "L05 — Lite atau Prime II? Pilih dalam 10 saat",
+ "pain": [
+  "#57",
+  "#70"
+ ],
+ "mood": "drive",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Tengah survey tilam Coway? Jawab tiga soalan ni.",
+   "scene": {
+    "words": [
+     {
+      "t": "SURVEY TILAM COWAY?",
+      "at": 0.05,
+      "size": 80,
+      "y": 600
+     },
+     {
+      "t": "JAWAB <b>3 SOALAN.</b>",
+      "at": "Jawab",
+      "size": 110,
+      "y": 760
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Satu. Nak latex asli dan spring tujuh zon? Kalau ya, pilih Prime 2.",
+   "scene": {
+    "head": {
+     "t": "Nak latex asli<br>&amp; <b>7 zon</b>?",
+     "k": "SOALAN 1",
+     "y": 220
+    },
+    "items": [
+     {
+      "t": "Ya: pilih <b>Prime II</b>",
+      "at": "Kalau",
+      "y": 760,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Dua. Nak pilih sendiri, lebih lembut atau lebih keras? Prime 2 ada Soft dan Firm.",
+   "scene": {
+    "head": {
+     "t": "Nak pilih sendiri<br><b>soft atau firm</b>?",
+     "k": "SOALAN 2",
+     "y": 220
+    },
+    "items": [
+     {
+      "t": "Ya: pilih <b>Prime II</b>",
+      "at": "Prime 2",
+      "y": 760,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Tiga. Kongsi tilam dengan pasangan yang cara tidurnya lain? Prime Lite medium firm, all-rounder.",
+   "scene": {
+    "head": {
+     "t": "Cara tidur<br><b>lain-lain</b>?",
+     "k": "SOALAN 3",
+     "y": 220
+    },
+    "items": [
+     {
+      "t": "Ya: pilih <b>Prime Lite</b>",
+      "at": "Prime Lite",
+      "y": 760,
+      "icon": "L"
+     }
+    ],
+    "media": {
+     "clip": "positions",
+     "box": [
+      90,
+      940,
+      900,
+      506
+     ]
+    }
+   }
+  },
+  {
+   "id": "05",
+   "text": "Dua-dua ada topper boleh tukar, servis setiap empat bulan, dan hantar pasang percuma.",
+   "scene": {
+    "words": [
+     {
+      "t": "DUA-DUA <b>ADA:</b>",
+      "at": 0.05,
+      "size": 96,
+      "y": 480
+     }
+    ],
+    "chips": [
+     {
+      "t": "Topper boleh ditukar",
+      "at": "topper",
+      "y": 700
+     },
+     {
+      "t": "Servis setiap 4 bulan*",
+      "at": "servis",
+      "y": 805
+     },
+     {
+      "t": "Hantar &amp; pasang percuma",
+      "at": "hantar",
+      "y": 910
+     }
+    ],
+    "note": {
+     "t": "*Untuk pakej termasuk servis.",
+     "y": 1080,
+     "at": "servis"
+    }
+   }
+  },
+  {
+   "id": "06",
+   "text": "Masih tak pasti? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Jawab 3 soalan, saya cadangkan."
+    }
+   }
+  }
+ ]
+}

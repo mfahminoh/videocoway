@@ -1,0 +1,259 @@
+{
+ "id": "l04",
+ "slug": "lite-vs-prime2-30-saat",
+ "title": "L04 — Prime Lite vs Prime II: beza 30 saat",
+ "pain": [
+  "r4"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Prime Lite atau Prime 2? Ni beza dia dalam tiga puluh saat.",
+   "scene": {
+    "words": [
+     {
+      "t": "PRIME <b>LITE</b>",
+      "at": 0.05,
+      "size": 130,
+      "y": 520
+     },
+     {
+      "t": "atau",
+      "at": "atau",
+      "size": 70,
+      "y": 690,
+      "anim": "up"
+     },
+     {
+      "t": "PRIME <b>II</b>?",
+      "at": "Prime 2",
+      "size": 130,
+      "y": 790
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Spring. Prime Lite lima zon. Prime 2 tujuh zon.",
+   "scene": {
+    "head": {
+     "t": "Spring",
+     "k": "1",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "Prime Lite: <b>5 zon</b>",
+      "at": "Lite",
+      "y": 560,
+      "icon": "L"
+     },
+     {
+      "t": "Prime II: <b>7 zon</b>",
+      "at": "Prime 2",
+      "y": 710,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Lapisan. Prime Lite ada fabrik penyejuk, foam berliang dan felt. Prime 2 tambah latex asli dan sabut kelapa.",
+   "scene": {
+    "head": {
+     "t": "Lapisan",
+     "k": "2",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "Lite: fabrik sejuk, foam berliang, felt",
+      "at": "Lite",
+      "y": 560,
+      "icon": "L"
+     },
+     {
+      "t": "II: tambah <b>latex asli</b> &amp; <b>sabut kelapa</b>",
+      "at": "Prime 2",
+      "y": 710,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Kekerasan. Prime Lite medium firm, sesuai untuk banyak cara tidur. Prime 2, pilih soft atau firm.",
+   "scene": {
+    "head": {
+     "t": "Kekerasan",
+     "k": "3",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "Lite: <b>Medium Firm</b> all-rounder",
+      "at": "Lite",
+      "y": 560,
+      "icon": "L"
+     },
+     {
+      "t": "II: pilih <b>Soft</b> atau <b>Firm</b>",
+      "at": "Prime 2",
+      "y": 710,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Ketebalan. Prime Lite dua belas inci. Prime 2 tiga belas inci.",
+   "scene": {
+    "head": {
+     "t": "Ketebalan",
+     "k": "4",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "Lite: <b>12 inci</b>",
+      "at": "Lite",
+      "y": 560,
+      "icon": "L"
+     },
+     {
+      "t": "II: <b>13 inci</b>",
+      "at": "Prime 2",
+      "y": 710,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Rangka. Prime Lite fabrik biru muda. Prime 2 velvet biru gelap, atau kulit PU kelabu gelap.",
+   "scene": {
+    "head": {
+     "t": "Rangka",
+     "k": "5",
+     "y": 170
+    },
+    "items": [
+     {
+      "t": "Lite: fabrik <b>biru muda</b>",
+      "at": "Lite",
+      "y": 560,
+      "icon": "L"
+     },
+     {
+      "t": "II: velvet biru gelap / PU kelabu",
+      "at": "Prime 2",
+      "y": 710,
+      "icon": "II"
+     }
+    ]
+   }
+  },
+  {
+   "id": "07",
+   "text": "Dua-dua dapat topper boleh tukar, dan servis penjagaan tilam tujuh langkah.",
+   "scene": {
+    "words": [
+     {
+      "t": "DUA-DUA <b>DAPAT:</b>",
+      "at": 0.05,
+      "size": 96,
+      "y": 520
+     }
+    ],
+    "chips": [
+     {
+      "t": "Topper boleh ditukar",
+      "at": "topper",
+      "y": 760
+     },
+     {
+      "t": "Servis 7 langkah",
+      "at": "servis",
+      "y": 865
+     }
+    ]
+   }
+  },
+  {
+   "id": "08",
+   "text": "Tak pasti yang mana sesuai? WhatsApp saya, kita pilih sama-sama.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Kita pilih sama-sama."
+    }
+   }
+  }
+ ]
+}

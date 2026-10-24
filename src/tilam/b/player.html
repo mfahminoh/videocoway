@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>Tilam Coway — siri B</title>
+<style>
+@font-face { font-family: P; font-weight: 500; src: url(../../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../../assets/fonts/Poppins-ExtraBold.ttf); }
+:root { --bg:#0a1530; --bg2:#1d3570; --accent:#e2bd72; --accent2:#f6dca0; --ink:#0a1530; --red:#e2564a; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:var(--bg); font-family:P,sans-serif; color:#fff; }
+#stage { position:relative; width:1080px; height:1920px; overflow:hidden; background:var(--bg); }
+.scene { position:absolute; inset:0; overflow:hidden; }
+.abs { position:absolute; }
+.bgw { position:absolute; inset:0; overflow:hidden; }
+.bgw img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform-origin:50% 50%; }
+.grad { position:absolute; inset:0; background:radial-gradient(1100px 900px at 50% 58%, var(--bg2) 0%, var(--bg) 100%); }
+.shade { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(5,10,25,.88) 0%, rgba(5,10,25,.35) 34%, rgba(5,10,25,.15) 55%, rgba(5,10,25,.75) 100%); }
+.media { position:absolute; overflow:hidden; border-radius:30px; box-shadow:0 26px 70px rgba(0,0,0,.5); background:#fff; }
+.media img { position:absolute; inset:0; width:100%; height:100%; transform-origin:50% 50%; }
+.head { position:absolute; left:60px; width:960px; text-align:center; }
+.kick { display:inline-block; font-weight:700; font-size:32px; letter-spacing:8px; color:var(--ink); background:var(--accent); padding:10px 30px; border-radius:40px; }
+.title { font-weight:800; font-size:84px; line-height:1.06; margin-top:22px; text-shadow:0 8px 30px rgba(0,0,0,.55); }
+.title b, .word b, .item b { color:var(--accent2); font-weight:800; }
+.sub { font-weight:500; font-size:42px; margin-top:18px; color:rgba(255,255,255,.9); text-shadow:0 4px 16px rgba(0,0,0,.6); }
+.item { position:absolute; left:70px; width:940px; min-height:116px; display:flex; align-items:center; gap:28px; padding:18px 30px;
+  border-radius:28px; background:rgba(8,16,40,.78); border:3px solid rgba(226,189,114,.55); font-weight:700; font-size:44px; line-height:1.2;
+  box-shadow:0 14px 40px rgba(0,0,0,.35); }
+.item .ic { flex:none; width:76px; height:76px; border-radius:50%; background:var(--accent); color:var(--ink); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:40px; }
+.item.x .ic { background:var(--red); color:#fff; }
+.word { position:absolute; left:0; width:1080px; text-align:center; font-weight:800; line-height:1.05; text-shadow:0 10px 34px rgba(0,0,0,.6); white-space:nowrap; }
+.word span.st { position:relative; display:inline-block; }
+.word i.bar { position:absolute; left:-12px; right:-12px; top:52%; height:16px; background:var(--red); border-radius:8px; transform-origin:0 50%; }
+.cmt { position:absolute; left:60px; width:960px; background:#fff; color:#111; border-radius:34px; padding:30px 36px 28px; box-shadow:0 26px 70px rgba(0,0,0,.5); }
+.cmt .top { display:flex; align-items:center; gap:18px; font-size:30px; color:#777; font-weight:600; }
+.cmt .av { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#cfd6e4,#9aa6bd); }
+.cmt .tx { font-size:46px; font-weight:600; line-height:1.3; margin-top:18px; }
+.cmt .ft { margin-top:16px; font-size:28px; color:#999; font-weight:600; }
+.cmt .tag { position:absolute; top:-26px; right:36px; background:var(--accent); color:var(--ink); font-weight:800; font-size:26px; letter-spacing:4px; padding:8px 22px; border-radius:30px; }
+.chip { display:inline-flex; align-items:center; gap:12px; white-space:nowrap; font-weight:700; font-size:38px; padding:16px 30px; border-radius:60px;
+  background:rgba(8,16,40,.8); border:3px solid var(--accent); margin:8px; box-shadow:0 12px 30px rgba(0,0,0,.35); }
+.chip i { font-style:normal; color:var(--accent2); }
+.note { position:absolute; left:60px; width:960px; text-align:center; font-size:30px; font-weight:500; color:rgba(255,255,255,.75); }
+.wa { display:flex; align-items:center; justify-content:center; gap:24px; width:880px; height:150px; border-radius:90px; background:#25d366;
+  font-weight:800; font-size:48px; color:#fff; box-shadow:0 22px 60px rgba(37,211,102,.45); }
+.lu { left:60px; width:960px; height:300px; display:flex; border-radius:32px; overflow:hidden; background:rgba(8,16,40,.82); border:3px solid var(--accent); box-shadow:0 20px 50px rgba(0,0,0,.4); }
+.lui { flex:none; width:420px; height:100%; overflow:hidden; }
+.lui img { width:100%; height:100%; object-fit:cover; }
+.lut { flex:1; padding:26px 34px; }
+.lun { font-weight:800; font-size:48px; line-height:1.1; }
+.luz { font-weight:700; font-size:38px; color:var(--accent2); margin-top:6px; letter-spacing:3px; }
+.luz b { font-size:84px; font-weight:800; letter-spacing:0; }
+.lus { font-weight:500; font-size:28px; color:rgba(255,255,255,.75); }
+.lub { display:flex; gap:6px; margin-top:12px; height:22px; }
+.lub i { flex:1; border-radius:6px; }
+#cap { position:absolute; left:60px; width:960px; top:1650px; text-align:center; z-index:50; }
+#cap span { font-weight:600; font-size:44px; line-height:1.5; padding:6px 18px; border-radius:12px; background:rgba(4,10,26,.7);
+  -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+</style>
+<script>
+  const V = (location.search.match(/[?&]v=([\w-]+)/) || [, 'b1'])[1];
+  document.write('<script src="data/' + V + '.js"><\/script>');
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<div id="cap"></div>
+<script>
+const SP = window.SPEC, TM = SP.timing, ROOT = '../../../', FPS = 30;
+const stage = document.getElementById('stage'), cap = document.getElementById('cap');
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const outC = x => 1 - Math.pow(1 - x, 3), inOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const backOut = x => { const c1 = 1.6, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const P = (t, a, b, e = outC) => e(clamp((t - a) / (b - a)));
+const mix = (a, b, k) => a + (b - a) * k;
+const esc = s => String(s);
+const NS = 'http://www.w3.org/2000/svg';
+function sv(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function curve(pts, x) {
+  if (x <= pts[0][0]) return pts[0][1];
+  for (let i = 1; i < pts.length; i++) if (x <= pts[i][0]) {
+    const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], k = (x - x0) / (x1 - x0);
+    return mix(y0, y1, (1 - Math.cos(Math.PI * k)) / 2);
+  }
+  return pts[pts.length - 1][1];
+}
+// badan baring mengiring (kepala kiri): kontur bawah & atas, relatif garis badan (positif = ke bawah)
+const BODY_BOT = [[70, -14], [135, 22], [205, -8], [300, 58], [440, 6], [590, 66], [700, 30], [830, 14], [935, 2]];
+const BODY_TOP = [[70, -14], [82, -72], [135, -112], [188, -80], [212, -62], [262, -120], [330, -128], [440, -94], [560, -118], [640, -110], [720, -62], [830, -44], [935, -22]];
+const ZONE_B = [40, 222, 380, 515, 690, 960];
+const ZONE_C = ['#5d8fe8', '#a9c8ff', '#5d8fe8', '#a9c8ff', '#5d8fe8'];
+Object.entries(SP.theme || {}).forEach(([k, v]) => document.documentElement.style.setProperty('--' + k, v));
+
+const LN = {}; TM.forEach(x => LN[x.id] = x);
+const DURATION = TM[TM.length - 1].end + (SP.hold || 2.8);
+
+/* masa: nombor = saat dari mula baris; teks = anggaran masa perkataan itu disebut dalam baris */
+function when(lineId, at, dflt) {
+  const L = LN[lineId];
+  if (at === undefined || at === null) return L.start + dflt;
+  if (typeof at === 'number') return L.start + at;
+  let txt = L.text, lid = lineId;
+  const m = String(at).match(/^(\d\d):(.*)$/);           // "03:kata" -> perkataan dalam baris lain
+  if (m) { lid = m[1]; txt = LN[lid].text; at = m[2]; }
+  const L2 = LN[lid], i = txt.toLowerCase().indexOf(String(at).toLowerCase());
+  if (i < 0) return L2.start + dflt;
+  return L2.start + (L2.end - L2.start) * i / txt.length - .12;
+}
+
+/* ---------- bina babak ---------- */
+const SC = [], SFX = [], CLIPS = [];
+let cur = null;
+SP.lines.forEach((ln, idx) => {
+  const sc = ln.scene || {}, L = LN[ln.id];
+  if (!sc.cont || !cur) {
+    const el = document.createElement('div'); el.className = 'scene'; stage.appendChild(el);
+    cur = { el, s: idx ? L.start - .22 : 0, items: [], kb: null, bgImg: null, line: ln.id };
+    SC.push(cur);
+    if (idx) SFX.push({ t: cur.s, k: 'whoosh' });
+    buildBg(cur, sc.bg || { grad: true });
+  }
+  build(cur, sc, ln.id);
+});
+SC.forEach((s, i) => s.e = i < SC.length - 1 ? SC[i + 1].s : DURATION);
+
+function imgEl(spec, cls) {
+  if (spec.clip) {
+    const c = SP.clips[spec.clip + '_' + cls];
+    const im = document.createElement('img');
+    im.src = ROOT + c.dir + '/0001.jpg';
+    const rec = { im, c, spec, last: 1 }; CLIPS.push(rec);
+    return [im, rec];
+  }
+  const im = document.createElement('img'); im.src = ROOT + spec.img;
+  if (spec.pos) im.style.objectPosition = spec.pos;
+  return [im, null];
+}
+
+function buildBg(S, bg) {
+  const w = document.createElement('div'); w.className = 'bgw'; S.el.appendChild(w);
+  if (bg.grad || (!bg.img && !bg.clip)) { w.innerHTML = '<div class="grad"></div>'; return; }
+  const [im, rec] = imgEl(bg, 'bg'); w.appendChild(im);
+  if (rec) rec.scene = S;
+  S.kb = { el: im, mode: bg.kb || 'in' };
+  const sh = document.createElement('div'); sh.className = 'shade'; sh.style.opacity = bg.dim ?? 1; w.appendChild(sh);
+}
+
+function add(S, html, T, anim, sfx) {
+  const d = document.createElement('div'); d.innerHTML = html.trim(); const el = d.firstChild;
+  S.el.appendChild(el); S.items.push({ el, T, anim: anim || 'up' });
+  if (sfx) SFX.push({ t: T, k: sfx });
+  return el;
+}
+
+function build(S, sc, lid) {
+  let n = 0; const dt = () => .1 + (n++) * .18;
+  if (sc.media) {
+    const m = sc.media, [x, y, w, h] = m.box || [60, 600, 960, 540];
+    const T = when(lid, m.at, dt());
+    const box = add(S, `<div class="media" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:${m.bgc || '#fff'}"></div>`, T, m.anim || 'zoom', 'pop');
+    const [im, rec] = imgEl(m, 'card'); im.style.objectFit = m.fit || 'cover'; box.appendChild(im);
+    if (rec) rec.scene = S, rec.T = T;
+    if (m.kb !== 'none') S.items[S.items.length - 1].kbImg = im;
+  }
+  if (sc.head) {
+    const h = sc.head, T = when(lid, h.at, dt());
+    add(S, `<div class="head" style="top:${h.y ?? 150}px">${h.k ? `<div class="kick">${h.k}</div>` : ''}${h.t ? `<div class="title" style="${h.size ? `font-size:${h.size}px` : ''}">${h.t}</div>` : ''}${h.s ? `<div class="sub">${h.s}</div>` : ''}</div>`, T, h.anim || 'up');
+  }
+  (sc.words || []).forEach((w, i) => {
+    const T = when(lid, w.at, dt());
+    const y = w.y ?? ((sc.wordsY ?? 640) + i * (w.gap ?? 170));
+    const inner = w.strike ? `<span class="st">${w.t}<i class="bar" data-at="${when(lid, w.strike, 1)}"></i></span>` : w.t;
+    add(S, `<div class="word" style="top:${y}px;font-size:${w.size || 120}px;${w.color ? `color:${w.color}` : ''}">${inner}</div>`, T, w.anim || 'slam', 'slam');
+    if (w.strike) SFX.push({ t: when(lid, w.strike, 1), k: 'swipe' });
+  });
+  (sc.items || []).forEach((it, i) => {
+    const T = when(lid, it.at, dt());
+    const y = it.y ?? ((sc.itemsY ?? 640) + i * 150);
+    add(S, `<div class="item ${it.x ? 'x' : ''}" style="top:${y}px"><div class="ic">${it.icon ?? (it.x ? '✕' : '✓')}</div><div>${it.t}</div></div>`, T, 'left', 'pop');
+  });
+  if (sc.comment) {
+    const c = sc.comment, T = when(lid, c.at, dt());
+    add(S, `<div class="cmt" style="top:${c.y ?? 560}px"><div class="tag">${c.tag || 'KOMEN SEBENAR'}</div><div class="top"><div class="av"></div>${c.src || 'Pengguna media sosial'}</div><div class="tx">${c.t}</div>${c.ft ? `<div class="ft">${c.ft}</div>` : ''}</div>`, T, 'pop', 'pop');
+  }
+  if (sc.chips) {
+    (sc.chips).forEach((c, i) => {
+      const T = when(lid, c.at, dt());
+      const y = c.y ?? (sc.chipsY ?? 1420), x = c.x;
+      add(S, `<div class="abs" style="top:${y}px;${x !== undefined ? `left:${x}px` : 'left:0;width:1080px;text-align:center'}"><span class="chip"><i>✓</i>${c.t}</span></div>`, T, 'pop', 'pop');
+    });
+  }
+  if (sc.note) {
+    const T = when(lid, sc.note.at, dt());
+    add(S, `<div class="note" style="top:${sc.note.y ?? 1560}px">${sc.note.t}</div>`, T, 'fade');
+  }
+  if (sc.diagram === 'sag') buildSag(S, lid, sc);
+  (sc.springs || []).forEach(p => buildSprings(S, lid, p));
+  (sc.heat || []).forEach(f => buildHeat(S, lid, f));
+  if (sc.lineup) buildLineup(S, lid, sc.lineup);
+  if (sc.cta) {
+    const c = sc.cta, T0 = when(lid, c.at, .05);
+    const WA = '<svg width="74" height="74" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>';
+    const box = add(S, `<div class="media" style="left:90px;top:200px;width:900px;height:620px"></div>`, T0, 'zoom');
+    const im = document.createElement('img'); im.src = ROOT + (c.img || (SP.product && SP.product.img) || 'assets/tilam/prime2/prime2-panel3-desktop.jpg'); im.style.objectFit = 'cover'; box.appendChild(im);
+    S.items[S.items.length - 1].kbImg = im;
+    add(S, `<div class="head" style="top:880px"><div class="title" style="font-size:${(SP.product && SP.product.ctaSize) || 96}px;letter-spacing:4px;white-space:nowrap">${(SP.product && SP.product.name) || 'COWAY <b>PRIME II</b>'}</div><div class="sub">${c.s || (SP.product && SP.product.sub) || 'Soft &amp; Firm · Queen &amp; King'}</div></div>`, T0 + .3, 'up');
+    const b = add(S, `<div class="abs" style="left:100px;top:1170px"><div class="wa">${WA} ${c.btn || 'WHATSAPP SAYA SEKARANG'}</div></div>`, T0 + .7, 'pop', 'ding');
+    S.items[S.items.length - 1].pulse = true;
+    add(S, `<div class="note" style="top:1370px;font-size:36px;color:var(--accent2);font-weight:600">${c.t || 'Tanya dulu. Tak ada paksa.'}</div>`, T0 + 1.1, 'fade');
+  }
+}
+
+/* rajah: topper ikut bentuk tilam yang dah tenggelam (B2) */
+function buildSag(S, lid, sc) {
+  const g = sc.sag || {}, T = when(lid, g.at, .2), T2 = when(lid, g.sagAt, 1.2);
+  const el = add(S, `<svg class="abs" style="left:40px;top:${g.y ?? 700}px" width="1000" height="560" viewBox="0 0 1000 560">
+      <defs><linearGradient id="gm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef1f7"/><stop offset="1" stop-color="#b9c3d6"/></linearGradient></defs>
+      <path class="base" fill="url(#gm)" stroke="#fff" stroke-width="4"/>
+      <path class="top" fill="${g.topCol || '#f6dca0'}" stroke="#fff" stroke-width="4"/>
+      <text x="500" y="540" text-anchor="middle" font-family="P" font-weight="700" font-size="34" fill="rgba(255,255,255,.8)">${g.label || ''}</text>
+      <g class="arrow" opacity="0"><path d="M500 60 L500 170" stroke="#e2564a" stroke-width="10" stroke-linecap="round"/><path d="M470 140 L500 180 L530 140" fill="none" stroke="#e2564a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+    </svg>`, T, 'up');
+  S.sag = { el, T2, topper: g.topper !== false };
+}
+function drawSag(S, t) {
+  const k = P(t, S.sag.T2, S.sag.T2 + 1.4, inOut), d = 110 * k, el = S.sag.el;
+  const y0 = 260, h = 200;
+  el.querySelector('.base').setAttribute('d', `M40 ${y0} Q500 ${y0 + d * 2} 960 ${y0} L960 ${y0 + h} L40 ${y0 + h} Z`);
+  const ty = y0 - 64;
+  el.querySelector('.top').setAttribute('d', S.sag.topper ? `M40 ${ty} Q500 ${ty + d * 2} 960 ${ty} L960 ${y0} Q500 ${y0 + d * 2} 40 ${y0} Z` : '');
+  el.querySelector('.arrow').setAttribute('opacity', (k * .95).toFixed(2));
+  el.querySelector('.arrow').setAttribute('transform', `translate(0 ${(d * .9).toFixed(1)})`);
+}
+
+/* rajah: spring biasa (bersambung dawai) vs spring berpoket — tekan, pasangan + gelas air, badan & zon (P01) */
+
+function buildSprings(S, lid, p) {
+  const ph = p.h || 480, foot = p.zones ? 78 : 34, n = p.n || 13, base = ph - foot, H = p.H || Math.round(ph * .5);
+  const x0 = 70, x1 = 930, sp = (x1 - x0) / (n - 1), r = Math.min(30, sp * .34), LT = 14;
+  const T = when(lid, p.at, .1);
+  const el = add(S, `<svg class="abs" style="left:40px;top:${p.y}px;overflow:visible" width="1000" height="${ph}" viewBox="0 0 1000 ${ph}"></svg>`, T, 'up');
+  sv('rect', { x: 8, y: 0, width: 984, height: ph, rx: 32, fill: 'rgba(8,16,40,.6)', stroke: 'rgba(255,255,255,.14)', 'stroke-width': 2 }, el);
+  const g = { el, p, n, base, H, sp, r, LT, pocket: p.mode === 'pocket', xs: [...Array(n)].map((_, i) => x0 + i * sp) };
+  g.TT = p.topper ? p.topper.t : 0; g.tk = p.topper ? (p.topper.k ?? .7) : 0;
+  g.zoneBars = sv('g', { opacity: 0 }, el);
+  g.gP = sv('g', {}, el); g.gW = sv('g', {}, el); g.gS = sv('g', {}, el);
+  g.springs = g.xs.map(() => sv('path', { fill: 'none', stroke: '#dde5f2', 'stroke-width': 4.5, 'stroke-linejoin': 'round' }, g.gS));
+  g.pockets = g.xs.map(() => sv('rect', { rx: 14, fill: 'rgba(255,255,255,.16)', stroke: 'rgba(255,255,255,.7)', 'stroke-width': 3 }, g.gP));
+  g.wires = [sv('path', { fill: 'none', 'stroke-width': 6, 'stroke-linecap': 'round' }, g.gW), sv('path', { fill: 'none', 'stroke-width': 6, 'stroke-linecap': 'round' }, g.gW)];
+  if (g.TT) {
+    const id = 'pore' + Math.random().toString(36).slice(2, 8);
+    const pat = sv('pattern', { id, width: 26, height: 22, patternUnits: 'userSpaceOnUse' }, sv('defs', {}, el));
+    sv('circle', { cx: 7, cy: 7, r: 3.2, fill: 'rgba(150,120,70,.28)' }, pat); sv('circle', { cx: 20, cy: 17, r: 2.4, fill: 'rgba(150,120,70,.22)' }, pat);
+    g.topBand = [sv('path', { fill: p.topper.col || '#f3e6c8', stroke: '#fff', 'stroke-width': 3, 'stroke-linejoin': 'round' }, el), sv('path', { fill: `url(#${id})` }, el)];
+    if (p.topper.dim) {
+      g.dim = sv('g', {}, el);
+      const y0 = base - H - g.TT, y1 = base - H, c = p.topper.dimCol || 'var(--accent)';
+      sv('path', { d: `M24 ${y0} L24 ${y1} M14 ${y0} L34 ${y0} M14 ${y1} L34 ${y1}`, stroke: c, 'stroke-width': 5, 'stroke-linecap': 'round', fill: 'none' }, g.dim);
+    }
+  }
+  g.layer = [sv('path', { fill: 'none', stroke: '#b9c4d8', 'stroke-width': LT + 8, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, el),
+             sv('path', { fill: 'none', stroke: '#f3f6fb', 'stroke-width': LT, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, el)];
+  g.pocketT = p.pocketAt !== undefined ? when(lid, p.pocketAt, 0) : (g.pocket ? -1 : 1e9);
+  g.wireT = p.wireAt !== undefined ? when(lid, p.wireAt, 0) : 1e9;
+  if (p.body) {
+    const b = p.body;
+    g.body = { T: when(lid, b.at, .1), spineT: b.spineAt !== undefined ? when(lid, b.spineAt, 0) : 1e9 };
+    g.body.path = sv('path', { fill: 'rgba(110,170,255,.5)', stroke: '#a8d4ff', 'stroke-width': 4, 'stroke-linejoin': 'round' }, el);
+    g.body.spine = sv('g', { opacity: 0 }, el);
+    g.body.hot = (b.hot || []).map(h => ({ x: h.x, T: when(lid, h.at, 1), c: sv('circle', { r: 46, fill: h.col || 'rgba(226,86,74,.55)', stroke: h.col ? '#fff' : '#ff8a7a', 'stroke-width': 4, opacity: 0 }, el) }));
+    sv('line', { x1: 215, x2: 640, y1: 0, y2: 0, stroke: '#3ccf7a', 'stroke-width': 7, 'stroke-dasharray': '2 20', 'stroke-linecap': 'round' }, g.body.spine);
+  }
+  if (p.zones) {
+    g.zoneT = p.zones.map(z => when(lid, z.at, 1));
+    ZONE_B.slice(0, -1).forEach((a, i) => {
+      sv('rect', { x: a + 4, y: base + 12, width: ZONE_B[i + 1] - a - 8, height: 12, rx: 6, fill: ZONE_C[i] }, g.zoneBars);
+      const tx = sv('text', { x: (a + ZONE_B[i + 1]) / 2, y: base + 62, 'text-anchor': 'middle', 'font-family': 'P', 'font-weight': 700, 'font-size': 30, fill: '#fff', opacity: 0 }, el);
+      tx.textContent = p.zones[i].t; (g.zoneTx = g.zoneTx || []).push(tx);
+    });
+  }
+  g.loads = (p.loads || []).map(ld => {
+    const o = Object.assign({ w: 190, d: 60 }, ld, { T: when(lid, ld.at, .2) });
+    o.gr = sv('g', {}, el);
+    if (o.k === 'glass') {
+      sv('path', { d: 'M-34 -100 L-26 0 L26 0 L34 -100', fill: 'rgba(255,255,255,.12)', stroke: '#fff', 'stroke-width': 5, 'stroke-linejoin': 'round' }, o.gr);
+      o.water = sv('path', { fill: 'rgba(90,170,255,.75)' }, o.gr);
+    } else {
+      sv('rect', { x: -o.w / 2, y: -74, width: o.w, height: 74, rx: 24, fill: o.col || 'var(--accent)' }, o.gr);
+      const tx = sv('text', { x: 0, y: -26, 'text-anchor': 'middle', 'font-family': 'P', 'font-weight': 800, 'font-size': 30, fill: o.ink || 'var(--ink)' }, o.gr);
+      tx.textContent = o.label || '';
+    }
+    return o;
+  });
+  if (p.label) add(S, `<div class="abs" style="left:76px;top:${p.y + 24}px"><span class="kick" style="font-size:26px;letter-spacing:5px;padding:8px 22px">${p.label}</span></div>`, T, 'fade');
+  (p.tags || []).forEach(tg => {
+    const c = tg.bad ? 'var(--red)' : '#3ccf7a', pos = tg.x !== undefined ? `left:${tg.x + 40}px` : 'right:76px';
+    add(S, `<div class="abs" style="${pos};top:${p.y + (tg.y ?? 16)}px"><span class="chip" style="margin:0;font-size:34px;padding:12px 26px;border-color:${c}"><i style="color:${c}">${tg.bad ? '✕' : '✓'}</i>${tg.t}</span></div>`, when(lid, tg.at, 1), 'pop', 'pop');
+  });
+  (S.springs = S.springs || []).push(g);
+}
+
+function loadDepth(o, t) {
+  if (o.k === 'rest') return { D: o.d, drop: 0, vis: true };
+  if (o.k === 'bounce') { const k = t - o.T; return { D: o.d * (k < 0 ? .6 : .6 + .4 * Math.sin(k * 5.5)), drop: 0, vis: true }; }
+  if (o.k === 'block') {
+    if (t < o.T) return { D: 0, drop: 1, vis: false };
+    return { D: o.d * P(t, o.T + .3, o.T + 1.1, inOut), drop: 1 - P(t, o.T, o.T + .45, x => x * x), vis: true };
+  }
+  return { D: 0, drop: 0, vis: true };
+}
+
+function bodyY(g, t) { return g.base - g.H - g.TT - g.LT - 4 - 300 * (1 - P(t, g.body.T, g.body.T + 1.1, outC)); }
+
+/* lenturan permukaan tilam di x (px ke bawah) pada masa t */
+function sag(g, t, x) {
+  const p = g.p; let d = 0;
+  g.loads.forEach(o => {
+    if (o.k === 'glass') return;
+    const L = loadDepth(o, t); if (!L.vis) return;
+    const dist = Math.max(0, Math.abs(x - o.x) - o.w / 2);
+    d += L.D * (g.pocket ? clamp(1 - dist / (g.sp * .55)) : Math.exp(-((dist / (p.spread || 300)) ** 2)));
+  });
+  if (g.body) d = Math.max(d, bodyY(g, t) + curve(BODY_BOT, x) - (g.base - g.H - g.TT - g.LT));
+  return Math.max(0, d);
+}
+/* lenturan jumlah -> [spring, topper]: topper tebal serap sebahagian tekanan dulu */
+function split(g, d) { const ct = g.TT ? Math.min(d * g.tk, g.TT * .72) : 0; return [clamp(d - ct, 0, g.H * .55), ct]; }
+
+function coil(x, base, h, r) {
+  let s = '';
+  for (let k = 0; k <= 72; k++) {
+    const th = k / 72 * Math.PI * 10, e = k && k < 72 ? 5 * Math.cos(th) : 0;
+    s += (k ? 'L' : 'M') + (x + r * Math.sin(th)).toFixed(1) + ' ' + (base - h * k / 72 + e).toFixed(1);
+  }
+  return s;
+}
+
+function drawSprings(g, t) {
+  const { base, H, r, LT, TT } = g, top = x => base - H + split(g, sag(g, t, x))[0];
+  const ttop = x => { const [s, c] = split(g, sag(g, t, x)); return base - H + s - (TT - c); };
+  const tops = g.xs.map(top);
+  const pk = g.pocket ? (g.pocketT < 0 ? 1 : P(t, g.pocketT, g.pocketT + .7)) : 0;
+  const zk = g.zoneT ? P(t, g.zoneT[0] - .2, g.zoneT[0] + .3) : 0;
+  g.xs.forEach((x, i) => {
+    const h = base - tops[i];
+    g.springs[i].setAttribute('d', coil(x, base, h, r));
+    if (zk > 0) { const z = ZONE_B.findIndex((b, j) => x >= b && x < ZONE_B[j + 1]); g.springs[i].setAttribute('stroke', ZONE_C[Math.max(0, z)]); }
+    const pr = g.pockets[i];
+    pr.setAttribute('x', (x - r - 8).toFixed(1)); pr.setAttribute('width', 2 * r + 16);
+    pr.setAttribute('y', (tops[i] - 8).toFixed(1)); pr.setAttribute('height', (h + 14).toFixed(1));
+    pr.setAttribute('opacity', pk.toFixed(3));
+  });
+  g.zoneBars.setAttribute('opacity', zk.toFixed(3));
+  (g.zoneTx || []).forEach((tx, i) => tx.setAttribute('opacity', P(t, g.zoneT[i] - .1, g.zoneT[i] + .25).toFixed(3)));
+  // dawai penyambung (spring biasa)
+  if (!g.pocket) {
+    const wk = P(t, g.wireT, g.wireT + .5), col = wk > 0 ? 'var(--accent)' : 'rgba(221,229,242,.8)';
+    const pts = ys => g.xs.map((x, i) => `${i ? 'L' : 'M'}${(x - r).toFixed(1)} ${ys(i).toFixed(1)} L${(x + r).toFixed(1)} ${ys(i).toFixed(1)}`).join(' ');
+    g.wires[0].setAttribute('d', pts(i => tops[i])); g.wires[1].setAttribute('d', pts(() => base));
+    g.wires.forEach(w => { w.setAttribute('stroke', col); w.setAttribute('stroke-width', (5 + 3 * wk * (1 + Math.sin(t * 8)) / 2).toFixed(2)); });
+  }
+  // lapisan atas tilam
+  let lp;
+  if (TT) {
+    const xs = []; for (let x = g.xs[0] - 40; x <= g.xs[g.n - 1] + 40.1; x += 10) xs.push(x);
+    const band = 'M' + xs.map(x => `${x.toFixed(0)} ${ttop(x).toFixed(1)}`).join(' L') + ' L' + xs.slice().reverse().map(x => `${x.toFixed(0)} ${top(x).toFixed(1)}`).join(' L') + ' Z';
+    g.topBand.forEach(b => b.setAttribute('d', band));
+    lp = 'M' + xs.map(x => `${x.toFixed(0)} ${(ttop(x) - LT / 2 - 3).toFixed(1)}`).join(' L');
+  } else
+    lp = `M${g.xs[0] - 40} ${(tops[0] - LT / 2 - 4).toFixed(1)} ` + g.xs.map((x, i) => `L${x} ${(tops[i] - LT / 2 - 4).toFixed(1)}`).join(' ') + ` L${g.xs[g.n - 1] + 40} ${(tops[g.n - 1] - LT / 2 - 4).toFixed(1)}`;
+  g.layer.forEach(l => l.setAttribute('d', lp));
+  const surf = x => (TT ? ttop(x) : top(x)) - LT - 4;
+  g.loads.forEach(o => {
+    if (o.k === 'glass') {
+      const y = surf(o.x), sl = (surf(o.x + 30) - surf(o.x - 30)) / 60;
+      const v = (sag(g, t, o.x) - sag(g, t - .05, o.x)) / .05;
+      const rot = Math.atan(sl) * 180 / Math.PI * 1.6 + clamp(v * .05, -8, 8);
+      const s = clamp(v * .12 - rot * .6, -14, 14);
+      o.gr.setAttribute('transform', `translate(${o.x} ${y.toFixed(1)}) rotate(${rot.toFixed(2)})`);
+      o.water.setAttribute('d', `M-24 -4 L24 -4 L${30} ${(-62 + s).toFixed(1)} L-30 ${(-62 - s).toFixed(1)} Z`);
+      return;
+    }
+    const L = loadDepth(o, t);
+    o.gr.setAttribute('opacity', L.vis ? (1 - L.drop * .4).toFixed(3) : 0);
+    o.gr.setAttribute('transform', `translate(${o.x} ${(surf(o.x) - L.drop * (o.drop ?? 320)).toFixed(1)})`);
+  });
+  if (g.body) {
+    const yb = bodyY(g, t), b = g.body;
+    const xsB = []; for (let x = 70; x <= 935; x += 15) xsB.push(x);
+    const d = 'M' + xsB.map(x => `${x} ${(yb + curve(BODY_TOP, x)).toFixed(1)}`).join(' L') + ' L' + xsB.reverse().map(x => `${x} ${(yb + curve(BODY_BOT, x)).toFixed(1)}`).join(' L') + ' Z';
+    b.path.setAttribute('d', d); b.path.setAttribute('opacity', P(t, b.T, b.T + .3).toFixed(3));
+    b.spine.setAttribute('opacity', P(t, b.spineT, b.spineT + .5).toFixed(3));
+    b.spine.setAttribute('transform', `translate(0 ${(yb - 36).toFixed(1)})`);
+    b.hot.forEach(h => {
+      const k = P(t, h.T, h.T + .4);
+      h.c.setAttribute('cx', h.x); h.c.setAttribute('cy', (yb + curve(BODY_BOT, h.x) - 6).toFixed(1));
+      h.c.setAttribute('opacity', (k * (.75 + .25 * Math.sin(t * 7))).toFixed(3));
+      h.c.setAttribute('r', (30 + 16 * k).toFixed(1));
+    });
+  }
+}
+
+/* rajah haba (H01): fabrik biasa (haba terperangkap & pantul balik) vs fabrik penyejuk (haba disebar ikut benang),
+   atau foam berliang (udara naik ikut saluran) */
+const HOT = [255, 106, 74], COOL = [92, 192, 255];
+const rgb = (a, b, k) => `rgb(${a.map((v, i) => Math.round(mix(v, b[i], k))).join(',')})`;
+function buildHeat(S, lid, f) {
+  const h = f.h || 520, T = when(lid, f.at, .1);
+  const el = add(S, `<svg class="abs" style="left:40px;top:${f.y}px;overflow:visible" width="1000" height="${h}" viewBox="0 0 1000 ${h}"></svg>`, T, 'up');
+  sv('rect', { x: 8, y: 0, width: 984, height: h, rx: 32, fill: 'rgba(8,16,40,.6)', stroke: 'rgba(255,255,255,.14)', 'stroke-width': 2 }, el);
+  const o = { el, f, h, T, coolT: f.coolAt !== undefined ? when(lid, f.coolAt, 0) : (f.mode === 'sejuk' ? -1 : 1e9), parts: [] };
+  // sumber haba: badan di atas
+  sv('rect', { x: 90, y: 92, width: 820, height: 64, rx: 32, fill: 'rgba(255,120,80,.28)', stroke: 'rgba(255,150,110,.8)', 'stroke-width': 3 }, el);
+  const bt = sv('text', { x: 500, y: 136, 'text-anchor': 'middle', 'font-family': 'P', 'font-weight': 800, 'font-size': 30, 'letter-spacing': 4, fill: '#ffd2c2' }, el);
+  bt.textContent = f.src || 'HABA BADAN';
+  if (f.mode === 'foam') {
+    o.fy = 210; o.fb = h - 50;
+    sv('rect', { x: 60, y: o.fy, width: 880, height: o.fb - o.fy, rx: 22, fill: '#f3e6c8', stroke: '#fff', 'stroke-width': 3 }, el);
+    o.cols = [...Array(9)].map((_, i) => 120 + i * 95);
+    o.cols.forEach(x => sv('rect', { x: x - 15, y: o.fy + 18, width: 30, height: o.fb - o.fy - 36, rx: 15, fill: 'rgba(20,40,80,.55)' }, el));
+  } else {
+    o.fy = h - 200; o.fb = h - 60;
+    o.glow = sv('rect', { x: 40, y: o.fy - 30, width: 920, height: o.fb - o.fy + 50, rx: 26, fill: 'rgb(255,90,60)', opacity: 0 }, el);
+    for (let x = 60; x <= 940; x += 34) sv('line', { x1: x, x2: x, y1: o.fy, y2: o.fb, stroke: '#aeb5c2', 'stroke-width': 12, 'stroke-linecap': 'round' }, el);
+    o.rows = [...Array(5)].map((_, i) => {
+      const y = o.fy + 10 + i * (o.fb - o.fy - 20) / 4;
+      let d = ''; for (let x = 50; x <= 950; x += 10) d += (x > 50 ? 'L' : 'M') + x + ' ' + (y + 6 * Math.sin(x / 34 * Math.PI)).toFixed(1);
+      return { y, kind: f.mode === 'sejuk' ? ['', 'cool', '', 'carbon', ''][i] : '', el: sv('path', { d, fill: 'none', stroke: '#e4e8ef', 'stroke-width': 15, 'stroke-linecap': 'round' }, el) };
+    });
+  }
+  for (let i = 0; i < 16; i++) {
+    const c = sv('g', {}, el);
+    sv('circle', { r: 20, opacity: .25 }, c); sv('circle', { r: 10 }, c);
+    o.parts.push({ c, x: 90 + i * 55 + (i % 3) * 9, ph: (i * .37) % 1, dir: i % 2 ? 1 : -1 });
+  }
+  (S.heat = S.heat || []).push(o);
+  if (f.label) add(S, `<div class="abs" style="left:76px;top:${f.y + 24}px"><span class="kick" style="font-size:26px;letter-spacing:5px;padding:8px 22px">${f.label}</span></div>`, T, 'fade');
+  (f.tags || []).forEach(tg => {
+    const c = tg.bad ? 'var(--red)' : '#3ccf7a', pos = tg.x !== undefined ? `left:${tg.x + 40}px` : 'right:76px';
+    add(S, `<div class="abs" style="${pos};top:${f.y + (tg.y ?? 16)}px"><span class="chip" style="margin:0;font-size:34px;padding:12px 26px;border-color:${c}"><i style="color:${c}">${tg.bad ? '✕' : '✓'}</i>${tg.t}</span></div>`, when(lid, tg.at, 1), 'pop', 'pop');
+  });
+}
+function drawHeat(o, t) {
+  const f = o.f, ck = o.coolT < 0 ? 1 : P(t, o.coolT, o.coolT + .8), run = t - o.T;
+  if (o.rows) o.rows.forEach(r => r.el.setAttribute('stroke', r.kind === 'cool' ? rgb([228, 232, 239], COOL, ck) : r.kind === 'carbon' ? rgb([228, 232, 239], [70, 76, 90], ck) : '#e4e8ef'));
+  if (o.glow) {
+    const hotK = f.mode === 'biasa' ? .42 * P(t, o.T + .5, o.T + 4.5) : .22 * (1 - ck);
+    o.glow.setAttribute('fill', f.mode === 'biasa' ? 'rgb(255,90,60)' : rgb([255, 90, 60], COOL, ck));
+    o.glow.setAttribute('opacity', (f.mode === 'biasa' ? hotK : hotK + .2 * ck).toFixed(3));
+  }
+  const y0 = 160, cool = f.mode !== 'biasa';
+  o.parts.forEach((q, i) => {
+    if (run < 0) { q.c.setAttribute('opacity', 0); return; }
+    const ph = (run / 2.4 + q.ph) % 1;
+    let x = q.x + 10 * Math.sin(ph * 12 + i), y, col = HOT, op = 1;
+    if (f.mode === 'foam') {
+      // udara sejuk naik ikut saluran, bawa haba keluar ke atas & ke tepi
+      const cx = o.cols[i % o.cols.length], k = ph;
+      x = cx + 5 * Math.sin(k * 10 + i); y = mix(o.fb - 20, y0 - 40, k);
+      if (y < o.fy) { x += q.dir * (o.fy - y) * 2.2; }
+      col = rgb(COOL, COOL, 0); op = k < .1 ? k / .1 : k > .85 ? (1 - k) / .15 : 1;
+      if (i % 2) { col = rgb(COOL, HOT, clamp((o.fy - y) / 80)); }
+      q.c.setAttribute('fill', col); q.c.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)})`); q.c.setAttribute('opacity', op.toFixed(3));
+      return;
+    }
+    if (ph < .45) { y = mix(y0, o.fy - 8, ph / .45); }
+    else if (!cool || ck < .5) {           // fabrik biasa: haba terkumpul, kemudian pantul balik ke badan
+      const k = (ph - .45) / .55;
+      y = k < .4 ? o.fy - 8 + 4 * Math.sin(k * 40) : mix(o.fy - 8, y0, (k - .4) / .6);
+      op = .95;
+    } else {                               // fabrik penyejuk: haba dibawa ke tepi ikut benang & hilang
+      const k = (ph - .45) / .55, row = o.rows[1];
+      x = q.x + q.dir * k * 520; y = mix(o.fy - 8, row.y, clamp(k * 3));
+      col = rgb(HOT, COOL, clamp(k * 1.6)); op = 1 - clamp((k - .6) / .4);
+    }
+    if (typeof col !== 'string') col = rgb(col, col, 0);
+    q.c.setAttribute('fill', col); q.c.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+    q.c.setAttribute('opacity', (op * clamp(run / .4)).toFixed(3));
+  });
+}
+
+/* kad barisan tilam (P01): gambar + nama + bilangan zon */
+function buildLineup(S, lid, cards) {
+  cards.forEach((c, i) => {
+    const T = when(lid, c.at, .1 + i * .5), y = c.y ?? (480 + i * 345);
+    const seg = c.zones ? [...Array(c.zones)].map((_, j) => `<i style="background:${j % 2 ? '#a9c8ff' : '#5d8fe8'}"></i>`).join('') : '';
+    add(S, `<div class="abs lu" style="top:${y}px"><div class="lui"><img src="${ROOT + c.img}" style="object-position:${c.pos || '50% 50%'}"></div>
+      <div class="lut"><div class="lun">${c.name}</div><div class="luz"><b>${c.big ?? c.zones}</b> ${c.unit ?? 'ZON'}</div><div class="lus">${c.sub ?? 'Pocket spring'}</div>${seg ? `<div class="lub">${seg}</div>` : ''}</div></div>`, T, 'left', 'pop');
+  });
+}
+
+/* ---------- kapsyen ---------- */
+const CAPS = [];
+TM.forEach(x => {
+  let parts = x.text.split(/(?<=[.?!])\s+/), merged = [];
+  parts.forEach(p => { if (merged.length && (merged[merged.length - 1].length < 16 || p.length < 12)) merged[merged.length - 1] += ' ' + p; else merged.push(p); });
+  merged = merged.flatMap(p => p.length > 60 ? p.split(/(?<=,)\s+/).reduce((a, q) => { if (a.length && (a[a.length - 1] + q).length < 56) a[a.length - 1] += ' ' + q; else a.push(q); return a; }, []) : [p]);
+  const n = merged.reduce((a, p) => a + p.length, 0); let t0 = x.start;
+  merged.forEach(p => { const d = (x.end - x.start) * p.length / n; CAPS.push({ s: t0, e: t0 + d, txt: p.replace(/Prime 2/g, 'Prime II') }); t0 += d; });
+});
+
+/* ---------- seek ---------- */
+function seek(t) {
+  const waits = [];
+  SC.forEach((S, i) => {
+    const vis = t >= S.s - .01 && t < S.e + .45;
+    S.el.style.display = vis ? '' : 'none';
+    if (!vis) return;
+    const fin = i ? P(t, S.s, S.s + .4) : 1;
+    S.el.style.opacity = fin.toFixed(3);
+    S.el.style.zIndex = i + 1;
+    S.el.style.transform = i ? `scale(${mix(1.04, 1, fin).toFixed(4)})` : '';
+    const life = clamp((t - S.s) / Math.max(1, S.e - S.s + .45));
+    if (S.kb) {
+      const s = S.kb.mode === 'out' ? mix(1.14, 1.02, life) : S.kb.mode === 'none' ? 1 : mix(1.02, 1.14, life);
+      S.kb.el.style.transform = `scale(${s.toFixed(4)})`;
+    }
+    S.items.forEach(it => {
+      const k = t - it.T, el = it.el;
+      if (k < 0) { el.style.visibility = 'hidden'; return; }
+      el.style.visibility = 'visible';
+      const fi = clamp(k / .22), q = P(k, 0, .5, it.anim === 'pop' ? backOut : outC);
+      let tr = '', op = fi, bl = 0;
+      switch (it.anim) {
+        case 'pop': tr = `scale(${mix(.55, 1, q).toFixed(3)})`; break;
+        case 'slam': tr = `scale(${mix(1.7, 1, P(k, 0, .35)).toFixed(3)})`; bl = (1 - clamp(k / .25)) * 10; break;
+        case 'left': tr = `translateX(${mix(160, 0, q).toFixed(1)}px)`; bl = (1 - clamp(k / .3)) * 6; break;
+        case 'zoom': tr = `scale(${mix(.88, 1, P(k, 0, .7)).toFixed(3)})`; break;
+        case 'fade': op = P(k, 0, .6, inOut); break;
+        default: tr = `translateY(${mix(50, 0, q).toFixed(1)}px)`; bl = (1 - clamp(k / .3)) * 8;
+      }
+      if (it.pulse && k > 1) tr += ` scale(${(1 + .035 * Math.sin((k - 1) * 6)).toFixed(4)})`;
+      el.style.opacity = op.toFixed(3); el.style.transform = tr; el.style.filter = bl > .05 ? `blur(${bl.toFixed(1)}px)` : '';
+      if (it.kbImg) it.kbImg.style.transform = `scale(${mix(1.0, 1.1, clamp(k / Math.max(2, S.e - it.T))).toFixed(4)})`;
+      el.querySelectorAll && el.querySelectorAll('.bar').forEach(b => b.style.transform = `scaleX(${P(t, +b.dataset.at, +b.dataset.at + .3).toFixed(3)})`);
+    });
+    if (S.sag) drawSag(S, t);
+    (S.springs || []).forEach(g => drawSprings(g, t));
+    (S.heat || []).forEach(f => drawHeat(f, t));
+  });
+  // klip video (urutan bingkai)
+  CLIPS.forEach(r => {
+    const S = r.scene; if (!S || S.el.style.display === 'none') return;
+    const t0 = r.T ?? S.s, span = Math.max(.5, S.e + .45 - t0), n = r.c.n;
+    const rate = r.spec.fit === false ? 1 : Math.min(1, n / (span * FPS));
+    const f = 1 + clamp(Math.floor((t - t0) * FPS * rate), 0, n - 1);
+    if (f !== r.last) {
+      r.last = f; r.im.src = ROOT + r.c.dir + '/' + String(f).padStart(4, '0') + '.jpg';
+      waits.push(r.im.decode().catch(() => {}));
+    }
+  });
+  const cc = CAPS.find(x => t >= x.s - .05 && t < x.e + .25);
+  const html = cc && !(SP.noCapAfter && t > LN[SP.noCapAfter].start - .1) ? `<span>${cc.txt}</span>` : '';
+  if (cap.innerHTML !== html) cap.innerHTML = html;
+  return Promise.all(waits);
+}
+window.DURATION = DURATION; window.seek = seek; window.SFX = SFX; seek(0);
+</script></body></html>

@@ -1,0 +1,184 @@
+{
+ "id": "l14",
+ "slug": "rumah-pertama-set-biru",
+ "title": "L14 — Rumah pertama, set biru lembut",
+ "pain": [
+  "#2",
+  "#57"
+ ],
+ "mood": "warm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Rumah pertama. Bilik masih kosong.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/primelite/blue-bedframe-against-the-wall-with-two-pillows-against-it-and-a-lamp-on-the-side.jpg",
+     "dim": 1
+    },
+    "head": {
+     "t": "Rumah <b>pertama?</b>",
+     "y": 700
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Prime Lite datang dengan rekaan biru muda yang minimalis, padan dengan mana-mana bilik.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+     "pos": "60% 50%",
+     "dim": 1
+    },
+    "head": {
+     "t": "Biru muda,<br><b>minimalis</b>",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Boleh ambil tilam sahaja, atau set dengan rangka katil.",
+   "scene": {
+    "head": {
+     "t": "Tilam atau <b>set lengkap</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/wake-up-effortlessly-with-coway-prime-lite.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Tilam sahaja",
+      "at": "tilam sahaja",
+      "y": 1260
+     },
+     {
+      "t": "Tilam + rangka katil",
+      "at": "rangka",
+      "y": 1365
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Ada saiz Queen dan King.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Queen &amp; King",
+      "at": "Queen",
+      "y": 1470
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Penghantaran dan pemasangan percuma, termasuk Sabah dan Sarawak.",
+   "scene": {
+    "words": [
+     {
+      "t": "HANTAR &amp; PASANG",
+      "at": 0.05,
+      "size": 100,
+      "y": 600
+     },
+     {
+      "t": "<b>PERCUMA.</b>",
+      "at": "percuma",
+      "size": 150,
+      "y": 760
+     },
+     {
+      "t": "Sabah &amp; Sarawak termasuk",
+      "at": "Sabah",
+      "size": 62,
+      "y": 960,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Mula rumah baru dengan tidur yang betul. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Mula rumah baru dengan tidur yang betul.",
+     "img": "assets/tilam/primelite/blue-bedframe-against-the-wall-with-two-pillows-against-it-and-a-lamp-on-the-side.jpg"
+    }
+   }
+  }
+ ]
+}

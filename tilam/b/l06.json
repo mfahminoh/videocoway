@@ -1,0 +1,204 @@
+{
+ "id": "l06",
+ "slug": "5-zon-vs-7-zon",
+ "title": "L06 — 5 zon vs 7 zon",
+ "pain": [
+  "#62",
+  "#66"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Lima zon, tujuh zon. Ni bukan nombor kosong.",
+   "scene": {
+    "words": [
+     {
+      "t": "5 ZON? 7 ZON?",
+      "at": 0.05,
+      "size": 130,
+      "y": 600
+     },
+     {
+      "t": "Bukan nombor kosong.",
+      "at": "Ni",
+      "size": 70,
+      "y": 790,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Zon maksudnya, spring dibahagi ikut bahagian badan. Ada yang lebih lembut, ada yang lebih padu.",
+   "scene": {
+    "head": {
+     "t": "Apa itu <b>zon</b>?",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/an-image-showing-a-side-sleeper-and-a-back-sleeper-on-the-coway-prime-lite-series-mattress-with-5-zones-separated.png",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ],
+     "bgc": "#000"
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Prime Lite ada lima zon. Kepala, bahu, pinggang, pinggul, dan kaki.",
+   "scene": {
+    "head": {
+     "t": "Prime Lite: <b>5 zon</b>",
+     "y": 170
+    },
+    "media": {
+     "clip": "zone5",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Kepala · Bahu · Pinggang · Pinggul · Kaki",
+      "at": "Kepala",
+      "y": 1260
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Prime 2 ada tujuh zon. Bahagian kaki dipecahkan lagi, kepada lutut, betis, dan buku lali.",
+   "scene": {
+    "head": {
+     "t": "Prime II: <b>7 zon</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/prime2/coway-prime2-7-zone-pocket-spring.png",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ],
+     "bgc": "#cfd9ea",
+     "kb": "none"
+    },
+    "chips": [
+     {
+      "t": "Kaki dipecah: lutut · betis · buku lali",
+      "at": "kaki",
+      "y": 1260
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Dua-dua guna pocket spring, jadi kurang gangguan bila pasangan bergerak.",
+   "scene": {
+    "words": [
+     {
+      "t": "DUA-DUA",
+      "at": 0.05,
+      "size": 110,
+      "y": 600
+     },
+     {
+      "t": "<b>POCKET SPRING.</b>",
+      "at": "pocket",
+      "size": 110,
+      "y": 760
+     }
+    ],
+    "chips": [
+     {
+      "t": "Kurang gangguan pasangan",
+      "at": "kurang",
+      "y": 980
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Nak tahu yang mana sesuai dengan badan you? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Tanya yang sesuai dengan badan you."
+    }
+   }
+  }
+ ]
+}

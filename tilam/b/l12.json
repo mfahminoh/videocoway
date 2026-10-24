@@ -1,0 +1,196 @@
+{
+ "id": "l12",
+ "slug": "bilik-panas-cooling",
+ "title": "L12 — Bilik panas, kipas satu je",
+ "pain": [
+  "#160",
+  "#161",
+  "#162"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Malaysia ni panas. Bilik tak ada aircond, kipas satu je.",
+   "scene": {
+    "comment": {
+     "t": "Malaysia ni hangatt benor, maaf cakap, memang I akan grab semua yg ada perkataan \"cooling\"",
+     "src": "Threads · 2026",
+     "y": 600,
+     "at": 0.1
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Tilam pun boleh jadi punca bahang.",
+   "scene": {
+    "words": [
+     {
+      "t": "TILAM PUN",
+      "at": 0.05,
+      "size": 120,
+      "y": 640
+     },
+     {
+      "t": "<b>BAHANG?</b>",
+      "at": "bahang",
+      "size": 160,
+      "y": 800
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Prime Lite guna cooling ticking, fabrik dengan benang penyejuk, supaya permukaan tilam kekal sejuk.",
+   "scene": {
+    "head": {
+     "t": "<b>Cooling ticking</b>",
+     "k": "COWAY PRIME LITE",
+     "y": 170
+    },
+    "media": {
+     "clip": "cooling",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Permukaan kekal sejuk",
+      "at": "kekal",
+      "y": 1260
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Di bawahnya, foam berliang untuk aliran udara antara lapisan.",
+   "scene": {
+    "head": {
+     "t": "Foam <b>berliang</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/an-image-of-layers-for-the-coway-prime-lite-series-mattress-with-descriptions.png",
+     "box": [
+      0,
+      560,
+      1080,
+      694
+     ],
+     "bgc": "#000"
+    },
+    "chips": [
+     {
+      "t": "Udara mengalir",
+      "at": "aliran",
+      "y": 1300
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Jujurnya, tilam bukan aircond. Tapi ia bantu kurangkan rasa bahang.",
+   "scene": {
+    "words": [
+     {
+      "t": "JUJURNYA:",
+      "at": 0.05,
+      "size": 90,
+      "y": 560
+     },
+     {
+      "t": "TILAM ≠ AIRCOND.",
+      "at": "bukan",
+      "size": 104,
+      "y": 710
+     },
+     {
+      "t": "Tapi <b>kurang bahang.</b>",
+      "at": "Tapi",
+      "size": 90,
+      "y": 880,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Nak tidur lebih selesa malam ni? WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Tidur lebih selesa."
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+# Siri B, C, D (Prime II) & L (Prime Lite) — Video tilam Coway
+
+Berdasarkan `tilam/plan_v2_draft.md` (Tiang B). Kategori A ditolak.
+
+| Video | Fail | Sudut | Pain (#, `research/Pain_Tilam_Malaysia_v2.xlsx`) |
+|---|---|---|---|
+| B1 | `out/tilam/b1_sakit-pinggang-bangun-pagi.mp4` | 3 tanda tilam tak menyokong → spring 7 zon + latex 5 zon → Soft/Firm | #45 #49 #39 |
+| B2 | `out/tilam/b2_tilam-tenggelam-topper.mp4` | Topper atas tilam mendap ikut tenggelam → struktur Prime II + topper boleh tukar (3 tahun) | #73 #63 #75 |
+| B3 | `out/tilam/b3_tilam-murah-4-bulan-melendut.mp4` | Kinetic: komen sebenar "4 bulan dah melendut" → hybrid 4 lapisan | #74 #72 #79 |
+| B4 | `out/tilam/b4_badan-besar-tilam-tahan.mp4` | Balas komen: badan besar → spring 7 zon, had ±160–200 kg gabungan, Firm >70 kg | #80 #64 #76 |
+| B5 | `out/tilam/b5_tilam-untuk-mak-ayah.mp4` | Emosi: hadiah untuk mak ayah → Soft/Firm + servis berkala | #43 #46 #42 |
+| B6 | `out/tilam/b6_topper-3-tahun-jawapan-jujur.mp4` | Balas komen jujur: topper ditukar 3 tahun sekali, kenapa, apa nak buat | #117 |
+| B7 | `out/tilam/b7_kualiti-dari-dekat.mp4` | Close-up kualiti: fabrik, jahitan, latex, spring berpoket, sabut kelapa, rangka | #123–#126 |
+
+## Siri C — Pilih betul (C1 = video 16, `out/tilam/v16_prime2_final.mp4`)  ·  Siri D — Realiti rumah Malaysia
+
+| Video | Fail | Sudut | Pain (#) |
+|---|---|---|---|
+| C2 | `out/tilam/c2_prime2-lembut-ke-keras.mp4` | Prime II lembut ke keras? | #24 #23 #26 |
+| C3 | `out/tilam/c3_malam-pertama-sakit-badan.mp4` | Malam pertama sakit badan? Mungkin salah kekerasan | #26 #29 #22 |
+| C4 | `out/tilam/c4_jenis-spring-beza-30-saat.mp4` | Pocket spring vs spring biasa vs foam: beza 30 saat | #62 #66 #61 |
+| C5 | `out/tilam/c5_topper-atas-tilam-lama.mp4` | Topper atas tilam lama: berbaloi? | #58 #63 #73 |
+| C6 | `out/tilam/c6_cara-test-tilam-5-minit.mp4` | Cara test tilam dalam 5 minit | #59 #38 |
+| C7 | `out/tilam/c7_dah-cuba-3-tilam.mp4` | Dah cuba 3 tilam, baru faham | #156 #158 |
+| D1 | `out/tilam/d1_anak-terkencing-atas-tilam.mp4` | Anak terkencing atas tilam | #85 #87 #91 #92 |
+| D2 | `out/tilam/d2_tilam-gatal-servis-7-langkah.mp4` | Tilam baru, kaki gatal tiap malam | #93 #89 #94 |
+| D3 | `out/tilam/d3_segan-technician-masuk-bilik.mp4` | Segan technician masuk bilik? | #114 |
+| D4 | `out/tilam/d4_bilik-panas-tanpa-aircond.mp4` | Bilik panas tanpa aircond | #160 #161 #162 |
+| D5 | `out/tilam/d5_toddler-tidur-sekali-katil-goyang.mp4` | Toddler tidur sekali, katil bergoyang | #164 #165 #166 |
+
+| D6 | `out/tilam/d6_hantar-pasang-percuma-sabah-sarawak.mp4` | Hantar & pasang percuma, Sabah & Sarawak termasuk (fakta dari ejen) | #133 #130 #136 #135 |
+
+D6 sengaja tidak sebut naik tangga atau tilam lama.
+Siri D guna tema teal; C5 guna tema hitam/kuning (kinetic). Tiada dakwaan servis selain yang tertulis di laman rasmi
+(7 langkah + fogging); D1 tidak mendakwa servis menghilangkan kesan air kencing — tips am + topper boleh dibuka & mudah diangkat untuk dicuci sendiri.
+VO: model Gemini TTS bercampur kerana kuota harian (suara "Orus" sama) — lihat nota di bawah.
+
+**Fakta dari ejen (bukan laman rasmi) — sahkan sebelum iklan:** had berat ±160–200 kg gabungan (B4),
+Firm untuk >70 kg (B4, B6), topper ditukar 3 tahun sekali untuk pelanggan sewa (B2, B4, B6).
+Tiada harga dalam mana-mana video. Tiada dakwaan perubatan (B1 ada nota "rujuk doktor").
+Footage & gambar: rasmi Coway (`assets/tilam/prime2/`).
+
+## Bina semula
+```
+python tilam/build_b.py b1                 # satu video (VO Gemini dijana sekali, disimpan di tilam/b/vo/)
+python tilam/build_b.py all
+python tilam/build_b.py b1 --stills 2,8,16 # pratonton
+python tilam/vo/check_asr.py b1            # semak potongan VO ikut baris (Gemini)
+```
+- Skrip & babak: `tilam/b/<vid>.json` — baris VO (`text`) + `scene` (bg, media, head, words, items, comment, chips, note, cta, diagram).
+  `at` = saat dari mula baris, atau perkataan dalam baris (masa dianggar ikut kedudukan huruf).
+- Enjin: `src/tilam/b/player.html`. VO & penjajaran: `tilam/lib_vo.py`. Muzik/SFX: `tilam/lib_audio.py`.
+- Tukar skrip VO → padam `tilam/b/vo/<vid>_full.wav` supaya dijana semula (kuota Gemini TTS ±10/hari/model).
+
+## Nota suara (VO)
+Semua guna suara Gemini "Orus". Model berbeza kerana had kuota harian:
+- `gemini-3.1-flash-tts-preview`: B1–B7, C2, C3, C5, D3
+- `gemini-3.8-flash-tts`: C4, D1 (versi baharu), D6
+- `gemini-2.5-flash-preview-tts`: C6, C7, D2, D4, D5 (model ini kini tidak digunakan lagi oleh `lib_vo.py`)
+
+Untuk suara seragam: padam `tilam/b/vo/<vid>_full.wav` bagi video tersebut dan jalankan semula `python tilam/build_b.py <vid>`
+selepas kuota model 3.1 reset (±10 permintaan/hari).
+
+Nota semakan: `check_asr.py` jatuh ke model Gemini "lite" bila kuota habis. Model lite sering salah dengar "Coway"
+(cth. "Koei", "Kuari") walaupun pada VO yang betul — jadi semakan sebutan jenama perlu didengar sendiri.
+
+## Siri L — Coway Prime Lite (15 video)
+Spesifikasi dijana oleh `tilam/lite/gen_specs.py` (tema biru muda, footage & gambar rasmi `assets/tilam/primelite/`).
+Analisa & sumber: `tilam/lite/analisis_dan_plan.md`.
+
+| Video | Fail | Sudut | Rujukan |
+|---|---|---|---|
+| L01 | `out/tilam/l01_3-sebab-ramai-pilih-prime-lite.mp4` | 3 sebab ramai pilih Prime Lite | r1 r6 |
+| L02 | `out/tilam/l02_patutlah-ramai-order.mp4` | Patutlah ramai order | r3 |
+| L03 | `out/tilam/l03_anak-terkencing-buka-zip.mp4` | Anak terkencing? Buka zip je | #87 r5 |
+| L04 | `out/tilam/l04_lite-vs-prime2-30-saat.mp4` | Prime Lite vs Prime II: beza 30 saat | r4 |
+| L05 | `out/tilam/l05_lite-atau-prime2-pilih.mp4` | Lite atau Prime II? Pilih dalam 10 saat | #57 #70 |
+| L06 | `out/tilam/l06_5-zon-vs-7-zon.mp4` | 5 zon vs 7 zon | #62 #66 |
+| L07 | `out/tilam/l07_suami-mengiring-isteri-terlentang.mp4` | Suami mengiring, isteri terlentang | #23 #164 |
+| L08 | `out/tilam/l08_12-inci-rasa-hotel.mp4` | 12 inci: tidur rasa hotel | r1 r5 |
+| L09 | `out/tilam/l09_robot-vakum-bawah-katil.mp4` | Robot vakum masuk bawah katil | #93 #89 |
+| L10 | `out/tilam/l10_anak-lasak-bucu-lembut.mp4` | Anak lasak? Bucu lembut | #164 #165 |
+| L11 | `out/tilam/l11_pasangan-pusing-terjaga.mp4` | Pasangan pusing, you terjaga? | #164 #166 |
+| L12 | `out/tilam/l12_bilik-panas-cooling.mp4` | Bilik panas, kipas satu je | #160 #161 #162 |
+| L13 | `out/tilam/l13_topper-tukar-percuma.mp4` | Topper tukar percuma, tilam kekal segar | #73 #117 |
+| L14 | `out/tilam/l14_rumah-pertama-set-biru.mp4` | Rumah pertama, set biru lembut | #2 #57 |
+| L15 | `out/tilam/l15_lite-servis-tetap-penuh.mp4` | Tilam Lite, servis tetap penuh | #93 #114 |
+
+Fakta disahkan ejen (6 Okt): Medium Firm sahaja (all-rounder), topper cuci di rumah (bukan dobi), tukar topper 3 tahun sekali
+(pelanggan sewa), servis setiap 4 bulan (pakej termasuk servis), hantar & pasang percuma termasuk Sabah & Sarawak.
+VO: `gemini-3.1-flash-tts-preview` untuk L01–L08, `gemini-3.8-flash-tts` untuk L09–L15.
+
+## Variasi gaya editing (1 video = 1 gaya, digilir)
+Spesifikasi yang sama (`tilam/b/<vid>.json`, VO & masa sama) boleh dirender dalam 8 gaya. Gaya 1–7 dalam
+`src/tilam/b/styled.html`; gaya `coway` = `player.html` asal.
+
+| # | Gaya | Rupa |
+|---|---|---|
+| 1 | `kinetic` | Teks besar 1–3 perkataan ikut suara, kata kunci kuning, footage gelap |
+| 2 | `berita` | Bar "BERITA TILAM", LANGSUNG, lower-third, ticker fakta |
+| 3 | `whiteboard` | Kertas grid, tulisan marker, garis bawah merah, checklist, video dalam bulatan |
+| 4 | `sinematik` | Hitam, warna filem, "BAB n", sari kata serif emas, grain |
+| 5 | `majalah` | Krim, serif, nombor Roman, gambar berbingkai, petikan |
+| 6 | `chat` | Perbualan WhatsApp: soalan pelanggan → jawapan ejen |
+| 7 | `clean` | Footage penuh + kapsyen kecil (minimal) |
+| 8 | `coway` | Gaya asal siri B/C/D/L |
+
+```
+python tilam/build_b.py l01 l02 l03 l04 l05 l06 l07 l08 l09 l10 --rotate   # video 1 kinetic, 2 berita, 3 whiteboard, ...
+python tilam/build_b.py l01 l02 --rotate --offset 3                         # mula dari gaya ke-4 (sinematik)
+python tilam/build_b.py c4 --style chat                                     # satu gaya tertentu
+python tilam/build_b.py l07 --style berita --stills 2,8,20                  # pratonton
+```
+Output: `out/tilam/gaya/<vid>_<gaya>.mp4`. Muzik ikut gaya (kinetic/berita = laju, sinematik/majalah = hangat).
+VO tidak dijana semula jika `tilam/b/vo/<vid>_full.wav` sudah ada (tiada kuota TTS digunakan).
+
+## Babak hook/masalah: gambar jana (bukan gambar produk)
+Sebelum produk diperkenalkan, babak masalah guna gambar yang dijana (suasana rumah Malaysia, tiada teks/logo/jenama).
+Gambar produk/footage rasmi Coway hanya selepas produk disebut.
+
+- Simpan dalam `assets/tilam/jana/<nama>.png` (+ `<nama>.txt` = model & kos). Guna dalam spec: `"bg": {"img": "assets/tilam/jana/<nama>.png"}`.
+- Penjana: **GPT Image 2 melalui Fish Audio** (190 kredit/gambar, 9:16 2K low). **Tanya pemilik sebelum jana — setiap gambar guna kredit.**
+  Alternatif: `python tilam/gen_image.py <nama> "<prompt>"` (Gemini image, perlu billing Google AI Studio).
+- Gaya majalah melabel gambar jana sebagai "Gambar ilustrasi" (bukan "rasmi").
+
+| Gambar | Guna dalam |
+|---|---|
+| `hook_bangun_penat` — lelaki bangun pagi pegang pinggang | E02, E06 |
+| `hook_pasangan_terganggu` — isteri terjaga, suami pusing | E05 |
+| `hook_tilam_mendap` — tilam lama mendap & bertompok | E02, E05, E06 |
+
+## Siri E — Coway Elite + perbandingan (`tilam/elite/`)
+Plan: [`../elite/plan_elite_10_video.md`](../elite/plan_elite_10_video.md). Spec: `python tilam/elite/gen_specs.py`.
+Siap: `out/tilam/gaya/e02_kinetic.mp4`, `e05_berita.mp4`, `e06_majalah.mp4`. E01, E03, E04, E08–E10 menunggu pengesahan fakta Elite (plan §5). E07 (Prime II sahaja) belum dibuat.
+
+## Siri P — Explainer spring berpoket
+| Video | Fail | Sudut | Pain (#) |
+|---|---|---|---|
+| P01 | `out/tilam/p01_cara-spring-berpoket-berfungsi.mp4` (73s) | Explainer: spring biasa (bersambung dawai) vs spring berpoket → 3 kelebihan (ikut bentuk badan, kurang gangguan pasangan, sokongan ikut zon) → semua tilam Coway guna spring berpoket: Prime Lite 5 zon, Prime II 7 zon, Elite 9 zon | #62 #66 #164 #166 |
+
+Animasi spring dilukis terus dalam `player.html` (SVG, tiada footage luar):
+- `scene.springs`: senarai panel `{y, h, H?, mode: "bonnell"|"pocket", n, label, wireAt, pocketAt, spread, loads, body, zones, tags}`.
+  `loads`: `block` (jatuh & tekan pada `at`), `rest` (YOU, diam), `bounce` (pasangan pusing mula `at`), `glass` (gelas air ikut permukaan).
+  `body: {at, spineAt}` = badan baring mengiring, spring berpoket ikut bentuk. `zones` = 5 label zon (Kepala, Bahu, Pinggang, Pinggul, Kaki).
+- `scene.lineup`: kad tilam `{name, zones, img, pos, at}`.
+
+Bilangan zon disahkan dari nota sedia ada (`elite/nota_usp_elite.md`, `lite/analisis_dan_plan.md`, laman rasmi Prime II).
+VO: `gemini-3.1-flash-tts-preview`. Semakan ASR (model lite) dengar baris 12 "Prime 2" sebagai "Prime Dual" dan
+baris 09 "Kedua" sebagai "Tidur" — kemungkinan salah dengar model lite; **dengar sendiri baris 09 & 12 sebelum iklan.**
+
+## Siri H — Emosi + explainer fabrik & topper
+| Video | Fail | Sudut | Pain (#) |
+|---|---|---|---|
+| H01 | `out/tilam/h01_topper-fabrik-sejuk-gebu-macam-hotel.mp4` (±102s) | Emosi: ibu penat seharian → malam panas tak lena → kenangan tilam hotel masa bercuti → "kenapa tilam hotel rasa lain?" → fabrik biasa vs fabrik penyejuk → foam topper nipis vs tebal → foam berliang → Coway: Prime Lite 30.5 cm, Prime II 33 cm, Elite 36 cm → topper ditukar tahun ke-3 → "malam you, macam bercuti" | #160 #161 #162 #73 |
+
+Gambar emosi (Seedream 4.5, kuota percuma): `assets/tilam/jana/ht_a_ibu_penat`, `ht_b_malam_panas`, `ht_c_kenangan_hotel`, `ht_d_lena_rumah`.
+Footage rasmi hanya selepas Coway disebut (`coolingloop` Elite, gambar Prime Lite/Prime II/Elite, topper zip Prime Lite).
+
+Rajah baharu dalam `player.html`:
+- `scene.heat`: `{y, h, mode: "biasa"|"sejuk"|"foam", label, coolAt, src, tags}`. Biasa: haba terkumpul & pantul balik ke badan.
+  Sejuk: benang penyejuk (biru) & karbon muncul pada `coolAt`, haba dibawa ke tepi. Foam: udara naik ikut saluran foam berliang.
+- `springs[].topper: {t (tebal px), k (daya serap 0–1), dim, dimCol}`: lapisan topper yang mampat; `body.hot: [{x, at}]` = titik tekanan merah.
+- `loads[].drop`: jarak blok jatuh (px). `lineup[]`: `big`, `unit`, `sub` untuk kad bukan zon (cth. ketebalan cm).
+
+Fakta (laman rasmi coway.com.my, semak 13 Okt 2026): ketebalan tilam Prime Lite 305 mm, Prime II 330 mm, Elite 360 mm (plush top premium).
+Fabrik: Prime Lite "cooling ticking"; Prime II fabrik dengan benang karbon & penyejuk (anti-statik & sejuk) + foam berliang;
+Elite sejuk + anti-statik + Sanitized®. **Ketebalan topper sahaja (cm) tidak dinyatakan di laman rasmi**, jadi video
+terangkan nipis vs tebal secara konsep dan guna ketebalan keseluruhan tilam. Topper ditukar tahun ke-3: pelanggan sewa (Elite rasmi; Lite & Prime II disahkan ejen).
+
+VO: `gemini-3.8-flash-tts` (suara "Orus"), dijana dalam 2 bahagian. `lib_vo.py` kini pecah skrip > 1150 aksara
+kepada beberapa permintaan (satu permintaan panjang gagal 502). **Dengar sendiri baris 13 ("Prime 2") sebelum iklan.**
+
+## Poster Threads (1080×1350)
+| Poster | Video |
+|---|---|
+| `out/poster/h01_poster_threads.png` | H01: 6 frame penting + banner "Bonus · Video explainer · Kelebihan Tilam Coway" |
+| `out/poster/p01_poster_threads.png` | P01: 6 frame penting + banner "Bonus · Video explainer · Kelebihan Spring Berpoket" |
+| `out/poster/pakej_poster_threads.png` | Pakej: mozek kulit semua video (frame 1.5s) + "Pakej 30 Video Tilam Coway · Prime Lite + Prime II · Bonus: 5 video Elite + video explainer" |
+
+Bina semula: `python tilam/poster.py h01 p01 pakej`. Masa frame dalam `VIDS` (`tilam/poster.py`), susun atur & teks dalam `src/poster/<vid>.html`.

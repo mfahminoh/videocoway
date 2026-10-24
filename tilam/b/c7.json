@@ -1,0 +1,26 @@
+{
+  "id": "c7", "slug": "dah-cuba-3-tilam", "title": "C7 — Dah cuba 3 tilam, baru faham",
+  "pain": ["#156", "#158"], "mood": "warm",
+  "clips": {"support": {"from": 30.0, "to": 34.0}},
+  "lines": [
+    {"id": "01", "text": "Dah cuba tiga jenis tilam, baru faham kenapa orang kata, jangan kedekut bab tidur.",
+     "scene": {"comment": {"t": "Dah cuba 3 jenis tilam, baru faham kenapa orang kata jangan kedekut bab tidur", "src": "Threads · 2026", "y": 600, "at": 0.1}}},
+    {"id": "02", "text": "Ramai lalu jalan yang sama. Beli, tak sesuai, beli lagi.",
+     "scene": {"words": [{"t": "BELI.", "at": "Beli", "size": 130, "y": 520}, {"t": "TAK SESUAI.", "at": "tak sesuai", "size": 120, "y": 700, "color": "#ff7b6e"},
+                         {"t": "BELI LAGI.", "at": "beli lagi", "size": 130, "y": 880}]}},
+    {"id": "03", "text": "Duit habis, badan pun penat.",
+     "scene": {"cont": true, "words": [{"t": "<b>Duit habis. Badan penat.</b>", "at": 0.05, "size": 70, "y": 1100, "anim": "up"}]}},
+    {"id": "04", "text": "Kita tidur hampir satu pertiga hidup. Tilam tu kita guna setiap malam.",
+     "scene": {"words": [{"t": "<b>1/3</b>", "at": "satu", "size": 240, "y": 520}, {"t": "HIDUP KITA", "at": "hidup", "size": 100, "y": 800},
+                         {"t": "atas tilam.", "at": "Tilam", "size": 80, "y": 940, "anim": "up"}]}},
+    {"id": "05", "text": "Jadi pilih betul dari awal. Ikut cara tidur, berat badan, dan berapa lama nak pakai.",
+     "scene": {"head": {"k": "PILIH BETUL DARI AWAL", "y": 260, "at": 0.05},
+               "items": [{"t": "Cara <b>tidur</b>", "icon": "1", "at": "cara", "y": 520}, {"t": "Berat <b>badan</b>", "icon": "2", "at": "berat", "y": 670},
+                         {"t": "Berapa lama nak <b>pakai</b>", "icon": "3", "at": "berapa", "y": 820}]}},
+    {"id": "06", "text": "Prime 2 ada Soft dan Firm, pocket spring tujuh zon, dan topper yang boleh ditukar.",
+     "scene": {"head": {"k": "COWAY PRIME II", "t": "Pilih <b>sekali</b>", "y": 170}, "media": {"clip": "support", "box": [0, 560, 1080, 608]},
+               "chips": [{"t": "Soft & Firm", "at": "Soft", "y": 1210}, {"t": "Pocket spring 7 zon", "at": "pocket", "y": 1310}, {"t": "Topper boleh ditukar", "at": "topper", "y": 1410}]}},
+    {"id": "07", "text": "Tak nak cuba tilam keempat? WhatsApp saya, kita pilih sekali jalan.",
+     "scene": {"cta": {"at": 0.1, "t": "Pilih sekali, pilih betul."}}}
+  ]
+}

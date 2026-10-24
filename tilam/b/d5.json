@@ -1,0 +1,22 @@
+{
+  "id": "d5", "slug": "toddler-tidur-sekali-katil-goyang", "title": "D5 — Toddler tidur sekali, katil bergoyang", "pain": ["#164", "#165", "#166"], "mood": "warm", "theme": {"bg": "#0b2427", "bg2": "#1d5157", "accent": "#7fe0c8", "accent2": "#b8f2e2", "ink": "#0b2427"},
+  "clips": {"spring7": {"src": "assets/tilam/prime2/coway-prime2-series-mattress-7-zone-pocket-spring.mp4", "from": 0, "to": 5.0},
+            "support": {"from": 30.0, "to": 34.0}},
+  "lines": [
+    {"id": "01", "text": "Satu bergerak, semua terjaga. Lagi-lagi bila anak kecil tidur sekali.",
+     "scene": {"comment": {"t": "Boleh suggest tak tilam yang sesuai untuk orang yang senang sakit belakang + katil tak bergoyang bila kita bergerak (ada toddler tidur sekali)?", "src": "Threads · 2026", "y": 520, "at": 0.1}}},
+    {"id": "02", "text": "Tilam spring biasa, springnya bersambung. Bila seorang bergerak, gegaran merebak.",
+     "scene": {"head": {"t": "Spring biasa:<br><b>bersambung</b>", "y": 200},
+               "items": [{"t": "Seorang bergerak, <b>gegaran merebak</b>", "x": true, "at": "Bila", "y": 640}]}},
+    {"id": "03", "text": "Pocket spring lain. Setiap spring dalam poket sendiri, bergerak sendiri-sendiri.",
+     "scene": {"head": {"t": "Pocket spring:<br><b>bergerak sendiri</b>", "y": 170}, "media": {"clip": "spring7", "box": [0, 620, 1080, 608], "bgc": "#cfd9ea"}}},
+    {"id": "04", "text": "Coway Prime 2 guna pocket spring tujuh zon, untuk kurangkan gangguan gerakan pasangan.",
+     "scene": {"head": {"k": "COWAY PRIME II", "t": "Kurang <b>gangguan gerakan</b>", "y": 170}, "media": {"clip": "support", "box": [0, 600, 1080, 608]}}},
+    {"id": "05", "text": "Jadi bila you pusing, anak dan pasangan kurang terasa.",
+     "scene": {"cont": true, "chips": [{"t": "Anak & pasangan kurang terasa", "at": "anak", "y": 1260}]}},
+    {"id": "06", "text": "Dan pilih Soft atau Firm, ikut cara tidur masing-masing.",
+     "scene": {"head": {"t": "<b>Soft</b> atau <b>Firm</b>", "s": "Ikut cara tidur", "y": 170}, "media": {"img": "assets/tilam/prime2/firm-soft-mattress-for-all-sleepers-coway-prime2-series.jpg", "box": [0, 520, 1080, 608]}}},
+    {"id": "07", "text": "Nak tidur lena satu keluarga? WhatsApp saya.",
+     "scene": {"cta": {"at": 0.1, "t": "Tidur lena satu keluarga."}}}
+  ]
+}

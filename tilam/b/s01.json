@@ -1,0 +1,212 @@
+{
+ "id": "s01",
+ "slug": "tidur-cukup-masih-penat",
+ "title": "S01 — Tidur dah cukup, tapi kenapa masih penat?",
+ "mood": "calm",
+ "theme": {
+  "bg": "#1a1712",
+  "bg2": "#4a3f2e",
+  "accent": "#e8c98a",
+  "accent2": "#f5e6c4",
+  "ink": "#1a1712"
+ },
+ "product": {
+  "name": "COWAY <b>BEREX ELITE</b>",
+  "sub": "Soft &amp; Firm · Queen &amp; King",
+  "img": "assets/tilam/elite/latest-gallery2.png",
+  "ctaSize": 76
+ },
+ "clips": {
+  "orbs": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_02_HIRES.mp4",
+   "from": 5.0,
+   "to": 10.0
+  },
+  "hero": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_01_HIRES.mp4",
+   "from": 12.0,
+   "to": 16.0
+  },
+  "plush": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_03_HIRES.mp4",
+   "from": 2.0,
+   "to": 8.0
+  },
+  "uv": {
+   "src": "assets/tilam/elite/video/16x9_CUTDOWN_04_HIRES.mp4",
+   "from": 8.2,
+   "to": 10.6
+  },
+  "cool": {
+   "src": "assets/tilam/elite/video/coolingloop.mp4",
+   "from": 0.0,
+   "to": 5.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Pernah tak, tidur malam rasa macam dah cukup. Tapi bila bangun pagi, badan masih rasa penat?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v1a_bangun_penat.png",
+     "dim": 1
+    },
+    "head": {
+     "t": "Tidur dah cukup…<br>tapi <b>masih penat?</b>",
+     "k": "PERNAH TAK?",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "02",
+   "text": "Kadang-kadang kita ingat, asalkan tidur tujuh ke lapan jam, mesti bangun segar, kan?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v1b_tidur_malam.png",
+     "dim": 1
+    },
+    "words": [
+     {
+      "t": "<b>7–8 JAM</b>",
+      "at": "tujuh",
+      "size": 170,
+      "y": 600
+     },
+     {
+      "t": "= bangun segar?",
+      "at": "segar",
+      "size": 80,
+      "y": 800,
+      "anim": "up"
+     }
+    ]
+   }
+  },
+  {
+   "id": "03",
+   "text": "Tapi sebenarnya, banyak benda boleh pengaruhi keselesaan tidur. Salah satunya, tilam yang kita guna setiap malam.",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/hook_tilam_mendap.png",
+     "dim": 0.85
+    },
+    "words": [
+     {
+      "t": "SALAH SATUNYA:",
+      "at": "Salah",
+      "size": 70,
+      "y": 600,
+      "anim": "up"
+     },
+     {
+      "t": "<b>TILAM</b> KITA.",
+      "at": "tilam",
+      "size": 140,
+      "y": 720
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Kita tidur atas tilam yang sama setiap hari. Tapi pernah tak, kita betul-betul ambil tahu apa yang ada dalam tilam tu?",
+   "scene": {
+    "bg": {
+     "img": "assets/tilam/jana/el_v1d_kedai_tilam.png",
+     "dim": 1
+    },
+    "head": {
+     "t": "Apa yang ada<br><b>dalam tilam</b> kita?",
+     "y": 200,
+     "at": "pernah"
+    }
+   }
+  },
+  {
+   "id": "05",
+   "text": "Sebab tu, kalau nak pilih tilam, jangan tengok harga dengan rupa luaran je.",
+   "scene": {
+    "cont": true,
+    "chips": [
+     {
+      "t": "Bukan harga je",
+      "at": "harga",
+      "y": 1300
+     },
+     {
+      "t": "Bukan rupa luar je",
+      "at": "rupa",
+      "y": 1405
+     }
+    ]
+   }
+  },
+  {
+   "id": "06",
+   "text": "Ini yang menarik tentang Coway BEREX Elite. Model tilam premium baharu daripada Coway.",
+   "scene": {
+    "bg": {
+     "clip": "hero",
+     "dim": 0.55
+    },
+    "head": {
+     "t": "Coway <b>BEREX Elite</b>",
+     "k": "BAHARU",
+     "s": "Model tilam premium",
+     "y": 200
+    }
+   }
+  },
+  {
+   "id": "07",
+   "text": "Dia gabungkan foam, lateks asli dan pocket spring, dengan sistem sokongan sembilan zon.",
+   "scene": {
+    "head": {
+     "t": "Sokongan <b>9 zon</b>",
+     "k": "DALAM ELITE",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/elite/mattreslayer-img.png",
+     "box": [
+      0,
+      560,
+      1080,
+      540
+     ],
+     "fit": "contain",
+     "kb": "none"
+    },
+    "chips": [
+     {
+      "t": "Foam",
+      "at": "foam",
+      "y": 1180
+     },
+     {
+      "t": "Lateks asli",
+      "at": "lateks",
+      "y": 1285
+     },
+     {
+      "t": "Pocket spring",
+      "at": "pocket",
+      "y": 1390
+     }
+    ]
+   }
+  },
+  {
+   "id": "08",
+   "text": "Kalau tengah survey tilam baru, jom kenali dulu BEREX Elite. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Saya terangkan satu-satu."
+    }
+   }
+  }
+ ]
+}

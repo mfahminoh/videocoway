@@ -1,0 +1,215 @@
+{
+ "id": "l15",
+ "slug": "lite-servis-tetap-penuh",
+ "title": "L15 — Tilam Lite, servis tetap penuh",
+ "pain": [
+  "#93",
+  "#114"
+ ],
+ "mood": "calm",
+ "theme": {
+  "bg": "#0e2238",
+  "bg2": "#2d5a86",
+  "accent": "#9fd3f7",
+  "accent2": "#d3ecff",
+  "ink": "#0e2238"
+ },
+ "product": {
+  "name": "COWAY <b>PRIME LITE</b>",
+  "sub": "Medium Firm · Queen &amp; King",
+  "img": "assets/tilam/primelite/prime-lite-panel1-desktop.jpg",
+  "ctaSize": 80
+ },
+ "clips": {
+  "sheets": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 30.0,
+   "to": 33.6
+  },
+  "cooling": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 34.0,
+   "to": 37.6
+  },
+  "zone5": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 38.0,
+   "to": 45.8
+  },
+  "topper": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 51.0,
+   "to": 56.6
+  },
+  "wake": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 10.0,
+   "to": 13.0
+  },
+  "room": {
+   "src": "assets/tilam/primelite/video/coway-prime-lite-product-video3.mp4",
+   "from": 59.0,
+   "to": 61.8
+  },
+  "positions": {
+   "src": "assets/tilam/primelite/prime-lite-video2.mp4",
+   "from": 0,
+   "to": 5.0
+  },
+  "press": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 0,
+   "to": 3.6
+  },
+  "kid": {
+   "src": "assets/tilam/primelite/prime-lite-video3.mp4",
+   "from": 4.0,
+   "to": 9.0
+  }
+ },
+ "lines": [
+  {
+   "id": "01",
+   "text": "Prime Lite. Lite tu maksudnya servis pun lite?",
+   "scene": {
+    "words": [
+     {
+      "t": "PRIME <b>LITE</b>…",
+      "at": 0.05,
+      "size": 120,
+      "y": 600
+     },
+     {
+      "t": "SERVIS PUN LITE?",
+      "at": "servis",
+      "size": 110,
+      "y": 770,
+      "strike": 1.9
+     }
+    ]
+   }
+  },
+  {
+   "id": "02",
+   "text": "Tak. Prime Lite dapat servis penjagaan tilam tujuh langkah, sama macam model lain.",
+   "scene": {
+    "head": {
+     "t": "Servis <b>7 langkah</b>",
+     "k": "SAMA MACAM MODEL LAIN",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/coway-mattress-care-service-for-prime-lite.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    }
+   }
+  },
+  {
+   "id": "03",
+   "text": "Ukur tahap habuk, bersihkan rangka, dan bersihkan tilam.",
+   "scene": {
+    "head": {
+     "t": "Habuk, rangka<br>&amp; <b>tilam</b>",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/first-step-of-coway-seven-step-mattress-care-service-dust-level-measuring.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Ukur tahap habuk",
+      "at": "Ukur",
+      "y": 1260
+     },
+     {
+      "t": "Bersihkan rangka &amp; tilam",
+      "at": "rangka",
+      "y": 1365
+     }
+    ]
+   }
+  },
+  {
+   "id": "04",
+   "text": "Penghalau hama, sterilisasi UV, dan nyahkuman fogging.",
+   "scene": {
+    "head": {
+     "t": "Hama, <b>UV</b><br>&amp; fogging",
+     "y": 170
+    },
+    "media": {
+     "img": "assets/tilam/primelite/seventh-step-of-coway-seven-step-mattress-care-service-ultraviolet-sterilisation.jpg",
+     "box": [
+      0,
+      600,
+      1080,
+      608
+     ]
+    },
+    "chips": [
+     {
+      "t": "Penghalau hama",
+      "at": "Penghalau",
+      "y": 1260
+     },
+     {
+      "t": "Sterilisasi UV",
+      "at": "UV",
+      "y": 1365
+     },
+     {
+      "t": "Nyahkuman fogging",
+      "at": "fogging",
+      "y": 1470
+     }
+    ]
+   }
+  },
+  {
+   "id": "05",
+   "text": "Setiap empat bulan, untuk pakej termasuk servis.",
+   "scene": {
+    "words": [
+     {
+      "t": "SETIAP",
+      "at": 0.05,
+      "size": 110,
+      "y": 620
+     },
+     {
+      "t": "<b>4 BULAN.</b>",
+      "at": "empat",
+      "size": 160,
+      "y": 780
+     }
+    ],
+    "note": {
+     "t": "*Untuk pakej termasuk servis.",
+     "y": 1020,
+     "at": "pakej"
+    }
+   }
+  },
+  {
+   "id": "06",
+   "text": "Tilam Lite, servis tetap penuh. WhatsApp saya.",
+   "scene": {
+    "cta": {
+     "at": 0.1,
+     "t": "Tilam Lite, servis tetap penuh."
+    }
+   }
+  }
+ ]
+}

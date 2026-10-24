@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>Poster Pakej 30 Video</title>
+<style>
+@font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+:root { --bg:#0a1530; --gold:#e2bd72; --gold2:#f6dca0; --ink:#0a1530; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1350px; overflow:hidden; font-family:P,sans-serif; color:#fff; background:var(--bg); }
+/* mozek kulit video, condong sedikit */
+#wall { position:absolute; left:50%; top:50%; width:1500px; display:grid; grid-template-columns:repeat(9, 1fr); gap:10px;
+  transform:translate(-50%, -50%) rotate(-8deg); }
+#wall img { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:12px; display:block; }
+.shade { position:absolute; inset:0;
+  background:radial-gradient(560px 520px at 50% 45%, rgba(8,14,34,.92) 0%, rgba(8,14,34,.8) 50%, rgba(8,14,34,.3) 100%),
+             linear-gradient(to bottom, rgba(8,14,34,.55), rgba(8,14,34,0) 25%, rgba(8,14,34,0) 70%, rgba(8,14,34,.8)); }
+.main { position:absolute; left:0; right:0; top:150px; text-align:center; }
+.kick { display:inline-block; font-weight:800; font-size:34px; letter-spacing:14px; color:var(--ink); background:var(--gold);
+  padding:10px 30px 10px 44px; border-radius:50px; }
+.n30 { font-weight:800; font-size:220px; line-height:.95; margin-top:20px; letter-spacing:-4px; text-shadow:0 14px 50px rgba(0,0,0,.7); }
+.n30 b { color:var(--gold2); }
+.t2 { font-weight:800; font-size:92px; line-height:1; letter-spacing:2px; text-shadow:0 10px 40px rgba(0,0,0,.7); }
+.t2 b { color:var(--gold2); }
+.prod { display:inline-flex; gap:18px; align-items:center; margin-top:28px; font-weight:800; font-size:46px; padding:12px 40px;
+  border-radius:60px; border:4px solid var(--gold); background:rgba(8,16,40,.85); }
+.prod i { font-style:normal; color:var(--gold2); }
+.bonus { position:absolute; left:60px; right:60px; top:880px; }
+.bh { text-align:center; font-weight:800; font-size:40px; letter-spacing:12px; color:var(--gold2); }
+.bh:before, .bh:after { content:''; display:inline-block; width:150px; height:3px; background:var(--gold); vertical-align:12px; margin:0 24px; }
+.cards { display:flex; gap:24px; margin-top:22px; }
+.card { flex:1; display:flex; gap:20px; align-items:center; padding:18px; border-radius:30px; background:rgba(8,16,40,.92);
+  border:3px solid var(--gold); box-shadow:0 20px 50px rgba(0,0,0,.5); }
+.th { flex:none; display:flex; gap:8px; }
+.th img { width:92px; height:164px; object-fit:cover; border-radius:12px; border:2px solid rgba(255,255,255,.3); }
+.ct .k { display:inline-block; font-weight:800; font-size:20px; letter-spacing:4px; color:var(--ink); background:var(--gold); padding:4px 14px; border-radius:20px; }
+.ct .h { font-weight:800; font-size:38px; line-height:1.08; margin-top:10px; }
+.ct .h b { color:var(--gold2); font-size:64px; }
+.ct .s { font-weight:600; font-size:23px; line-height:1.3; margin-top:8px; color:rgba(255,255,255,.88); }
+</style></head>
+<body>
+<div id="wall"></div>
+<div class="shade"></div>
+<div class="main">
+  <div class="kick">PAKEJ</div>
+  <div class="n30"><b>30</b> VIDEO</div>
+  <div class="t2">TILAM <b>COWAY</b></div>
+  <div class="prod">Prime Lite <i>+</i> Prime II</div>
+</div>
+<div class="bonus">
+  <div class="bh">BONUS</div>
+  <div class="cards">
+    <div class="card">
+      <div class="th"><img src="../../out/poster/_frames/cover_s04_tilam-hotel-tilam-rumah.jpg"><img src="../../out/poster/_frames/cover_s05_apa-itu-9-zon.jpg"></div>
+      <div class="ct"><div class="k">ELITE</div><div class="h"><b>5</b> Video<br>Coway Elite</div></div>
+    </div>
+    <div class="card">
+      <div class="th"><img src="../../out/poster/_frames/cover_p01_cara-spring-berpoket-berfungsi.jpg"><img src="../../out/poster/_frames/cover_h01_topper-fabrik-sejuk-gebu-macam-hotel.jpg"></div>
+      <div class="ct"><div class="k">EXPLAINER</div><div class="h" style="font-size:34px">Video Explainer</div>
+        <div class="s">Bagaimana pocket spring &amp; foam beri keselesaan tidur</div></div>
+    </div>
+  </div>
+</div>
+<script src="../../out/poster/_frames/covers.js"></script>
+<script>
+const wall = document.getElementById('wall');
+// ulang senarai supaya grid penuh (9 lajur x 7 baris)
+for (let i = 0; i < 63; i++) { const im = document.createElement('img'); im.src = '../../out/poster/_frames/' + COVERS[i % COVERS.length]; wall.appendChild(im); }
+</script>
+</body></html>

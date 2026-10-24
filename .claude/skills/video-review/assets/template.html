@@ -1,0 +1,181 @@
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: header ringkasan + grid kad video 9:16, setiap kad ada keputusan dan feedback */
+:root {
+  --bg: #f3f1ee; --surface: #ffffff; --ink: #231d17; --muted: #6f655b; --line: #e2ddd6;
+  --accent: #8a6232; --accent-ink: #ffffff;
+  --ok: #1f7a4d; --ok-bg: #e3f3ea; --warn: #a3471c; --warn-bg: #fbe9df; --idle: #6f655b; --idle-bg: #ece8e3;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Manrope", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #17130f; --surface: #221c17; --ink: #f2ebe2; --muted: #a99c8e; --line: #3a3129;
+  --accent: #d6a868; --accent-ink: #1b140c;
+  --ok: #6fd3a0; --ok-bg: #173527; --warn: #f2a07a; --warn-bg: #3d2318; --idle: #a99c8e; --idle-bg: #2c251f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #17130f; --surface: #221c17; --ink: #f2ebe2; --muted: #a99c8e; --line: #3a3129;
+  --accent: #d6a868; --accent-ink: #1b140c;
+  --ok: #6fd3a0; --ok-bg: #173527; --warn: #f2a07a; --warn-bg: #3d2318; --idle: #a99c8e; --idle-bg: #2c251f; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5 }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px 32px; margin-bottom: 26px }
+.eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700 }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; margin: 6px 0 6px; text-wrap: balance }
+.lede { color: var(--muted); margin: 0; max-width: 60ch }
+.tally { display: flex; gap: 10px; flex-wrap: wrap }
+.tally div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; min-width: 96px }
+.tally b { display: block; font-family: var(--display); font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums }
+.tally span { font-size: 12px; color: var(--muted); font-weight: 600 }
+.tally .t-ok b { color: var(--ok) } .tally .t-warn b { color: var(--warn) }
+.notice { background: var(--warn-bg); color: var(--warn); border-radius: 10px; padding: 10px 14px; margin-bottom: 18px; font-weight: 600 }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; min-width: 0 }
+.card[data-status="approved"] { border-color: color-mix(in srgb, var(--ok) 45%, var(--line)) }
+.card[data-status="changes"] { border-color: color-mix(in srgb, var(--warn) 45%, var(--line)) }
+video { display: block; width: 100%; max-width: 100%; aspect-ratio: 9 / 16; background: #000; object-fit: contain }
+.meta { padding: 14px 16px 0; display: flex; flex-direction: column; gap: 6px }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 8px }
+.tag { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--muted) }
+.pill { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 10px; white-space: nowrap }
+.pill.approved { background: var(--ok-bg); color: var(--ok) }
+.pill.changes { background: var(--warn-bg); color: var(--warn) }
+.pill.pending { background: var(--idle-bg); color: var(--idle) }
+h2 { font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.2; margin: 0; text-wrap: balance }
+.sub { color: var(--muted); font-size: 13px; margin: 0 }
+.act { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; margin-top: auto }
+.btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px }
+button { font: inherit; font-weight: 700; font-size: 14px; border-radius: 10px; padding: 9px 10px; cursor: pointer; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink) }
+button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+button:disabled { opacity: .5; cursor: not-allowed }
+.b-ok[aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: var(--surface) }
+.b-warn[aria-pressed="true"] { background: var(--warn); border-color: var(--warn); color: var(--surface) }
+.b-ok:hover:not(:disabled) { border-color: var(--ok) } .b-warn:hover:not(:disabled) { border-color: var(--warn) }
+label { font-size: 12px; font-weight: 700; color: var(--muted) }
+textarea { width: 100%; min-height: 78px; resize: vertical; font: inherit; font-size: 14px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px }
+.save { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
+.status { font-size: 12px; color: var(--muted); min-height: 18px }
+footer { margin-top: 30px; color: var(--muted); font-size: 13px }
+@media (prefers-reduced-motion: no-preference) { button { transition: background .15s, border-color .15s } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">{{EYEBROW}}</div>
+      <h1>{{H1}}</h1>
+      <p class="lede">Tonton setiap video, pilih <b>Lulus</b> atau <b>Perlu ubah</b>, dan tulis apa yang perlu dibetulkan. Keputusan disimpan terus, dan Claude boleh baca untuk buat pembetulan.</p>
+    </div>
+    <div class="tally" aria-live="polite">
+      <div class="t-ok"><b id="n-ok">0</b><span>Lulus</span></div>
+      <div class="t-warn"><b id="n-warn">0</b><span>Perlu ubah</span></div>
+      <div><b id="n-idle">{{COUNT}}</b><span>Belum semak</span></div>
+    </div>
+  </header>
+  <div id="notice" class="notice" hidden></div>
+  <main class="grid" id="grid"></main>
+  <footer>{{FOOTER}}</footer>
+</div>
+
+<script>
+const VIDEOS = {{VIDEOS_JSON}};
+const LABEL = { approved: "Lulus", changes: "Perlu ubah", pending: "Belum semak" };
+const state = {};   // id -> { status, feedback, updatedAt }
+let db = null, me = null;
+const grid = document.getElementById("grid");
+
+function card(v) {
+  const el = document.createElement("article");
+  el.className = "card"; el.dataset.status = "pending"; el.id = "c-" + v.id;
+  el.innerHTML = `
+    <video controls playsinline preload="metadata" src="v/${v.file}#t=0.8"></video>
+    <div class="meta">
+      <div class="row"><span class="tag">${v.tag}</span><span class="pill pending">${LABEL.pending}</span></div>
+      <h2></h2>
+    </div>
+    <div class="act">
+      <div class="btns" role="group" aria-label="Keputusan">
+        <button type="button" class="b-ok" aria-pressed="false" disabled>✓ Lulus</button>
+        <button type="button" class="b-warn" aria-pressed="false" disabled>Perlu ubah</button>
+      </div>
+      <label for="fb-${v.id}">Feedback</label>
+      <textarea id="fb-${v.id}" placeholder="Contoh: babak 3 terlalu gelap, tukar ayat CTA…" disabled></textarea>
+      <button type="button" class="save" disabled>Simpan feedback</button>
+      <div class="status" aria-live="polite"></div>
+    </div>`;
+  el.querySelector("h2").textContent = v.title;
+  const [ok, warn] = el.querySelectorAll(".btns button");
+  ok.onclick = () => save(v.id, { status: "approved" });
+  warn.onclick = () => save(v.id, { status: "changes" });
+  el.querySelector(".save").onclick = () => save(v.id, {});
+  return el;
+}
+VIDEOS.forEach(v => grid.appendChild(card(v)));
+
+function paint(id) {
+  const s = state[id] || {}, st = s.status || "pending", el = document.getElementById("c-" + id);
+  el.dataset.status = st;
+  const pill = el.querySelector(".pill"); pill.className = "pill " + st; pill.textContent = LABEL[st];
+  const [ok, warn] = el.querySelectorAll(".btns button");
+  ok.setAttribute("aria-pressed", st === "approved"); warn.setAttribute("aria-pressed", st === "changes");
+  const ta = el.querySelector("textarea");
+  if (document.activeElement !== ta && !ta.dataset.dirty) ta.value = s.feedback || "";
+  if (s.updatedAt) el.querySelector(".status").textContent = "Dikemas kini " + new Date(s.updatedAt).toLocaleString("ms-MY", { dateStyle: "medium", timeStyle: "short" });
+}
+function tally() {
+  const c = { approved: 0, changes: 0 };
+  VIDEOS.forEach(v => { const st = state[v.id]?.status; if (c[st] !== undefined) c[st]++; });
+  document.getElementById("n-ok").textContent = c.approved;
+  document.getElementById("n-warn").textContent = c.changes;
+  document.getElementById("n-idle").textContent = VIDEOS.length - c.approved - c.changes;
+}
+
+async function save(id, patch) {
+  const el = document.getElementById("c-" + id), ta = el.querySelector("textarea"), msg = el.querySelector(".status");
+  if (!db) return;
+  const body = {
+    status: patch.status || state[id]?.status || "pending",
+    feedback: ta.value.trim(),
+    video: VIDEOS.find(v => v.id === id).title,
+    updatedAt: new Date().toISOString(),
+    by: me || null,
+  };
+  el.querySelectorAll("button").forEach(b => b.disabled = true);
+  msg.textContent = "Menyimpan…";
+  try {
+    await db.doc("reviews/" + id).set(body);
+    delete ta.dataset.dirty;
+    state[id] = body; paint(id); tally();
+    msg.textContent = "Disimpan.";
+  } catch (e) {
+    msg.textContent = "Tak dapat simpan (" + (e?.code || "ralat") + "). Cuba lagi sekejap.";
+  } finally {
+    el.querySelectorAll("button").forEach(b => b.disabled = false);
+  }
+}
+grid.addEventListener("input", e => { if (e.target.tagName === "TEXTAREA") e.target.dataset.dirty = "1"; });
+
+(async () => {
+  const notice = document.getElementById("notice");
+  try {
+    db = await window.claude?.use("db");
+    const user = await window.claude?.use("user");
+    if (user) { try { me = await user.id(); } catch (_) {} }
+  } catch (_) { db = null; }
+  if (!db) {
+    notice.hidden = false;
+    notice.textContent = "Simpanan tak tersedia di paparan ini. Buka halaman ini semasa log masuk ke claude.ai untuk beri keputusan.";
+    return;
+  }
+  document.querySelectorAll(".card button, .card textarea").forEach(x => x.disabled = false);
+  db.collection("reviews").onSnapshot(snap => {
+    snap.docs.forEach(d => { if (d.exists) state[d.id] = d.data(); });
+    VIDEOS.forEach(v => paint(v.id)); tally();
+  }, err => {
+    notice.hidden = false;
+    notice.textContent = "Sambungan simpanan terputus (" + (err?.code || "ralat") + "). Muat semula halaman.";
+  });
+})();
+</script>
