@@ -7,12 +7,15 @@ Tarikh: 23 Okt 2026.
 
 ## 0. Perkara yang perlu anda sahkan dulu
 
-1. **Coway brand brain tidak dijumpai.** Saya dah cari di Google Drive, artifact, Design System, Higgsfield dan ElevenLabs. Hantar link/fail dia, dan saya akan selaraskan bahagian 4 (gaya & identiti visual) ikut brand brain. Buat sementara, draf ini guna identiti yang dah dipakai dalam repo: navy/biru Coway, aksen biru langit, font Poppins, nada ejen yang jujur.
-2. **Promo semasa** (rebat, diskaun, hadiah) untuk peti ais dan aircond bulan ni.
-3. **Harga P-Series** (1.5HP/2.0HP). Hanya dijumpai di laman reseller, belum disahkan.
-4. **Terma yang selalu ditanya:** pindah alamat, pemasangan aircond (paip tambahan, bracket), dan apa waranti sebenar.
-5. **Jawapan rasmi untuk "aircond Coway rebadge"**: siapa pengeluar, dan apa yang Coway tambah.
-6. **Footage sebenar:** ada tak video unit peti ais/aircond di rumah customer, dan footage servis Cody? Beberapa video (ditanda 🎥) perlukan footage sebenar.
+Brand brain dah digabung (bahagian 1B). Aircond belum ada dalam brand brain, jadi aset aircond perlu ditarik dulu dari coway.com.my.
+
+1. **Promo video peti ais:** "Bermula RM20/bulan" atau "Serendah RM79 + rebat RM20 × 7 bulan"? Brand brain: jangan jalankan dua harga serentak.
+2. **Promo semasa aircond.**
+3. **Harga P-Series** (1.5HP/2.0HP). Hanya dijumpai di laman reseller.
+4. **Terma:** pindah alamat, pemasangan aircond (paip tambahan, bracket), waranti.
+5. **Jawapan rasmi untuk "aircond Coway rebadge".**
+6. **Footage sebenar** unit aircond di rumah customer dan bil customer sebenar (AC02, AC07, AC15, PA23).
+7. **Nama/ID ejen** untuk label "Ejen Sah Coway".
 
 ---
 
@@ -45,6 +48,24 @@ Heart Service: Cody datang, 7 langkah (semak suhu, persiapan, **steaming**, tuka
 Ciri: penapisan 5 langkah (silver ion + HEPA), **self-clean pensterilan haba** (98.7% bakteria, kajian KTR), **Gentle Wind**, 4-way auto swing, R32.
 Servis: tahun 1 pada bulan ke-2, 6, 12; tahun 2–7 setiap 6 bulan (jumlah ±15 lawatan), tukar filter setiap 6 bulan.
 P-Series (1.5HP/2.0HP): perlu sahkan harga.
+
+## 1B. Brand brain (ringkasan peraturan)
+
+Sumber: `brand-brain/coway/brand-guide.md` dan `products.md` (branch `claude/determined-tesla-n0i9gk`).
+
+- Bercakap sebagai **ejen sah Coway** ("saya", "customer saya"). Label "Ejen Sah Coway" + nama/ID ejen. Jangan guna nama page "Coway Malaysia", Careline 1800-888-111 atau WhatsApp rasmi Coway.
+- CTA: **"WHATSAPP SAYA SEKARANG"** (butang `#25D366`).
+- Logo: `coway-logo-blue.png` (latar cerah), `coway-logo-white.png` (latar gelap); logo HEART Service bila sebut servis.
+- Angka Dual Hygiene (99.99%, 98.52%, 98.4%) wajib nota kaki "Ujian makmal dalam persekitaran terkawal". Promo: "*Tertakluk terma & syarat", sahkan dengan HQ.
+- Zon selamat 9:16: teks penting 120 px dari tepi atas/bawah.
+- Warna: Coway Blue `#01A7E1`, Navy `#0B2F6B`, Blue `#0B4DA2`, Sky `#2EA7E0`, Hot `#E5322D`, Yellow `#FFD23F`, Charcoal `#464646`, Cream/Warm `#FBF3E6`/`#C0602A`, Champagne `#C29E74`.
+- Fon: Poppins (tajuk ExtraBold/Bold, badan Regular/Medium); Anton/Bebas Neue untuk kinetic; Playfair Display untuk premium. Maksimum 2 fon.
+- Nada: Melayu santai, ayat pendek, sikit English. Ayat terbukti: "Kalau beli, biar puas hati. Jangan alang-alang.", "Sekali beli. Puas hati.", "Alah membeli, menang memakai."
+
+**Aset rasmi peti ais sedia ada:** `deodoriser_filter_bg*.jpg` (PA11), `cooling_precision*.jpg` (PA12), `spaces_for_everything_slide*.jpg` + `Coway_SBS715-Refrigerator_Card1/2_V2.jpg` (PA16, PA22, PA23), `Coway_SBS715-Refrigerator_Banner6b.jpg` (PA15, PA20), `step1-7.png` CODY servis (PA17, PA24), `homebanner_fridge.png` (kad produk).
+Aircond: tiada aset lagi; tambah F-Series & P-Series dalam `PRODUCTS` di `brand-brain/fetch_assets.py`.
+
+**Hubungan dengan iklan static:** set static "Peti Ais Besar" (15 poster, sudut saiz 715L) sedang diuji. Video plan ini sengaja ambil sudut lain (repair, bau, servis, kos, keluarga) supaya tak bertindih; sudut static yang menang akan dijadikan video tambahan.
 
 ---
 
@@ -124,25 +145,26 @@ Had: Reddit/Facebook group/TikTok tidak dapat dicapai terus; Lowyat tidak dapat 
 - **Jujur tentang angka.** Pengira teliti akan jumpa sendiri bahawa sewa > tunai. Kita sebut dulu, dan terangkan apa yang dibayar (servis, filter, lawatan).
 - **Tiada testimoni rekaan.** Cerita watak = dilabel lakonan/ilustrasi; testimoni hanya dari customer sebenar dengan izin.
 - **Tiada dakwaan kesihatan berlebihan** (HEPA ≠ "ubat asma"). Guna angka ujian rasmi sahaja, dengan sumber.
+- **Ejen sah bercakap sebagai "saya"**, CTA "WHATSAPP SAYA SEKARANG", nota kaki untuk setiap angka ujian (ikut brand brain).
 
 ---
 
 ## 4. Gaya video (10 gaya untuk variasi)
 
-Identiti visual sementara (tunggu brand brain): navy/biru Coway, aksen biru langit, Poppins, potret 1080×1920, CTA WhatsApp.
+Warna dan fon ikut brand brain (1B). Semua potret 1080×1920, CTA WhatsApp.
 
-| Kod | Gaya | Rujukan dalam repo | Panjang | Keperluan |
-|---|---|---|---|---|
-| G1 | **Cerita emosi** (gambar Seedream + VO) | PA01–PA05 | 45–60s | Seedream, Gemini TTS |
-| G2 | **POV / UGC teks** (gaya TikTok) | V2 upgrade | 20–30s | Klip/gambar, teks |
-| G3 | **Kinetic typography** | V4 kinetic | 15–25s | Teks + muzik sahaja |
-| G4 | **Listicle "5 sebab/5 tanda"** | Framework Listicle Neon | 30–40s | Gambar produk |
-| G5 | **Ejen jujur** (talking head/VO pandang kamera) | — | 30–45s | Rakaman ejen 🎥 atau VO + B-roll |
-| G6 | **Papercut / motion graphic** | Neo papercut | 15s | Foto produk |
-| G7 | **Kalkulator kos** (angka bergerak atas skrin) | — | 25–35s | Motion graphic |
-| G8 | **Demo / ASMR produk** | klip Villaem | 15–30s | Footage unit sebenar 🎥 |
-| G9 | **Mitos vs Fakta** | — | 25–30s | Teks + B-roll |
-| G10 | **Soalan WhatsApp** (format chat bubble) | — | 20–25s | Motion graphic |
+| Kod | Gaya | Rujukan | Panjang | Warna | Fon | Keperluan |
+|---|---|---|---|---|---|---|
+| G1 | Cerita emosi (Seedream + VO) | PA01–PA05 | 45–60s | Cream/Warm + Navy | Poppins | Seedream, Gemini TTS |
+| G2 | POV / UGC teks | V2 upgrade | 20–30s | Putih + Coway Blue | Poppins | Klip/gambar, teks |
+| G3 | Kinetic typography | V4 kinetic | 15–25s | Navy + Yellow + Hot | Anton/Bebas + Poppins | Teks + muzik |
+| G4 | Listicle "5 sebab/5 tanda" | Framework Listicle Neon | 30–40s | Putih + Coway Blue, nombor Navy | Poppins | Gambar produk |
+| G5 | Ejen jujur | — | 30–45s | Putih/Mist Blue, label ejen | Poppins | Rakaman ejen 🎥 atau VO + B-roll |
+| G6 | Papercut / motion graphic | Neo papercut | 15s | Cream + Coway Blue | Poppins | Foto produk |
+| G7 | Kalkulator kos | — | 25–35s | Navy + angka Yellow | Poppins | Motion graphic |
+| G8 | Demo / ASMR produk | klip Villaem | 15–30s | Gelap Black Inox + Champagne | Playfair + Poppins | Aset rasmi atau footage 🎥 |
+| G9 | Mitos vs Fakta | — | 25–30s | Mitos Hot, fakta Coway Blue | Poppins | Teks + B-roll |
+| G10 | Soalan WhatsApp | — | 20–25s | Putih + hijau WhatsApp | Poppins | Motion graphic |
 
 ---
 
@@ -157,13 +179,13 @@ PA01–PA05 dah siap; sudut mereka tidak diulang. Funnel: **T** = TOFU (tarik pe
 | PA08 | Tunggu Compressor | Trauma repair | Waranti pun lambat | "Isnin call. Ahad baru datang. Tunggu order compressor." | G3 | 20s | T |
 | PA09 | Kira Jujur: Sewa vs Tunai | Pengira | Sewa > tunai | "715L tunai RM5,899. Sewa RM7,056. Jadi kenapa orang sewa?" | G7 | 35s | B |
 | PA10 | 551L atau 715L? Ukur Dapur Dulu | Pindah/renovate | Muat ke? | "Sebelum pilih peti ais, ambil pita ukur. Dua nombor je." | G5 | 40s | M |
-| PA11 | Ikan, Kek & Susu Anak, Satu Peti | Keluarga | Bau bercampur | "Kek hari jadi anak… bau ikan." | G8 🎥 | 20s | T |
+| PA11 | Ikan, Kek & Susu Anak, Satu Peti | Keluarga | Bau bercampur | "Kek hari jadi anak… bau ikan." | G8 (aset rasmi) | 20s | T |
 | PA12 | Satu Pintu, 4 Fungsi | Keluarga/Raya | Ruang ikut musim | "Raya: freezer. Lepas Raya: fridge. Pintu yang sama." | G4 | 30s | M |
 | PA13 | Mitos: "Coway Mana Reti Buat Peti Ais" | Pengira | Jenama baharu | "'Coway kan jual penapis air?' Betul. Ini bezanya." | G9 | 30s | M |
 | PA14 | WhatsApp: "Kalau Saya Pindah?" | Pindah | Takut kontrak | Bubble chat: "Kalau 2 tahun lagi saya pindah rumah?" | G10 | 25s | B |
 | PA15 | Borong Sebulan Sekali | Ibu bekerja | Masa & duit dapur | "Saya ke pasar raya sebulan sekali je sekarang." | G1 | 45s | T |
 | PA16 | Dapur Baru, Peti Lama? | Pindah/renovate | Dapur tak lengkap | "Kabinet baru. Jubin baru. Peti ais… dari rumah sewa." | G6 | 15s | T |
-| PA17 | Apa Cody Buat Dalam Peti Ais Awak | Anak untuk mak | "Siapa jaga?" | "Peti ais pun boleh di-steam?" | G8 🎥 | 30s | M |
+| PA17 | Apa Cody Buat Dalam Peti Ais Awak | Anak untuk mak | "Siapa jaga?" | "Peti ais pun boleh di-steam?" | G8 (aset rasmi step1-7) | 30s | M |
 | PA18 | −25°C untuk Kaki Pancing | Hobi/stok ikan | Simpan lama | "Hasil pancing 3 hari. Nak simpan sampai bila?" | G2 | 25s | T |
 | PA19 | Bila Saya *Tak* Sarankan Sewa | Pengira | Nasihat jujur | "Saya ejen Coway. Tapi kalau awak ada tunai, dengar dulu." | G5 | 40s | M |
 | PA20 | 5 Tanda Peti Ais Dah Nazak | Peti lama | Getah koyak, bunga ais, bunyi | "Kalau peti ais awak buat no. 3, bil awak dah bocor." | G4 | 30s | T |
@@ -230,7 +252,7 @@ Video 15–25s: buang langkah 2–3.
 | 1 | PA06, PA08, PA16, PA20, PA09 | AC01, AC03, AC06, AC12, AC16 | Hook TOFU berbeza untuk uji sudut, tiada footage diperlukan |
 | 2 | PA07, PA10, PA12, PA13, PA19 | AC04, AC05, AC08, AC10, AC11 | Yakinkan + jawab bantahan |
 | 3 | PA14, PA15, PA18, PA22, PA24 | AC09, AC13, AC14, AC17, AC18 | Segmen tambahan + BOFU |
-| 4 | PA11, PA17, PA21, PA23, PA25 | AC02, AC07, AC15, AC19, AC20 | Perlu footage 🎥 / musim / promo |
+| 4 | PA11, PA17, PA21, PA23, PA25 | AC02, AC07, AC15, AC19, AC20 | Footage aircond / musim / promo; PA11 & PA17 boleh naik awal (aset rasmi ada) |
 
 **Ujian**: satu ad set setiap sudut, hook berbeza sahaja. Ukur kos per mesej dan kadar mesej yang jadi perbualan, bukan CTR. Baca 20–30 mesej WhatsApp pertama setiap hook, dan suap balik ke VoC.
 
