@@ -1,0 +1,89 @@
+/* Pemain "story": iklan emosi sinematik (videos/PA01..PA05). Dibina oleh videos/peti_ais.py. */
+@font-face { font-family: P; font-weight: 400; src: url(../../assets/fonts/Poppins-Regular.ttf); }
+@font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+@font-face { font-family: S; src: url(../../assets/fonts/PlayfairDisplay.ttf); }
+:root { --gold: #FFD27A; --cw: #04A4E4; --sky: #7FD6FF; --ink: #101418; --wa: #25D366; --cream: #FFF6E8; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+body { font-family: P, sans-serif; color: #fff; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+.layer, .el { position: absolute; }
+.layer { inset: 0; overflow: hidden; }
+.el { will-change: transform, opacity; transform-origin: 50% 50%; }
+.c { left: 0; width: 1080px; text-align: center; }
+
+/* syot: gambar penuh (cover) atau gambar segi empat atas latar kabur (contain) */
+.shot img { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; transform-origin: 50% 50%; }
+.shot img.blur { filter: blur(46px) brightness(.45) saturate(1.1); transform: scale(1.25); }
+.shot img.fg { object-fit: contain; }
+.col-ink { background: radial-gradient(ellipse at 50% 40%, #232a33 0, #0d1014 60%, #050608 100%); }
+.col-warm { background: radial-gradient(ellipse at 50% 35%, #4a3322 0, #22160e 55%, #0c0805 100%); }
+.col-cw { background: radial-gradient(circle at 80% 10%, #3ec0f2 0, transparent 45%), linear-gradient(165deg, #04A4E4 0, #0391cc 60%, #026a99 100%); }
+.col-white { background: radial-gradient(circle at 85% 8%, #CEF3FF 0, transparent 40%), linear-gradient(180deg, #ffffff 0, #eef9ff 100%); }
+
+#vig { background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,.55) 100%); }
+#shadeB { background: linear-gradient(180deg, rgba(0,0,0,.35) 0, transparent 18%, transparent 52%, rgba(0,0,0,.78) 100%); }
+#dim { background: #000; opacity: 0; }
+#grain { inset: -200px; background-image: url(grain.png); opacity: .06; mix-blend-mode: overlay; }
+#flash { background: #fff; opacity: 0; }
+
+/* kapsyen: ayat penuh, gaya filem */
+#cap { top: 1468px; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 0 74px; }
+#capText { font-size: 52px; font-weight: 600; line-height: 1.28; text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,.9), 0 6px 26px rgba(0,0,0,.75); }
+#capText b { color: var(--gold); font-weight: 700; }
+.light #capText { color: #1c2329; text-shadow: none; }
+.light #capText b { color: var(--cw); }
+
+/* elemen */
+.quote { font-family: S, serif; font-style: italic; font-size: 92px; line-height: 1.16; padding: 0 80px;
+  text-shadow: 0 6px 30px rgba(0,0,0,.6); }
+.quote em { color: var(--gold); font-style: italic; }
+.quote .w { display: inline-block; white-space: pre; }
+.kicker { display: inline-flex; align-items: center; gap: 26px; font-size: 38px; font-weight: 700; letter-spacing: 12px; text-transform: uppercase; }
+.kicker i { width: 90px; height: 3px; background: currentColor; opacity: .7; }
+.big { font-size: 150px; font-weight: 800; line-height: 1; letter-spacing: -2px; text-shadow: 0 10px 40px rgba(0,0,0,.5); }
+.big span { position: relative; display: inline-block; }
+.big .strike { position: absolute; left: -12px; right: -12px; top: 50%; height: 16px; margin-top: -8px; border-radius: 8px; background: #ff4a3d; transform-origin: 0 50%; }
+.big small { display: block; font-size: 46px; font-weight: 600; letter-spacing: 6px; margin-top: 14px; opacity: .9; }
+.bubble { display: inline-block; max-width: 860px; padding: 34px 46px; border-radius: 46px 46px 46px 12px; background: rgba(255,255,255,.95); color: #1d2329;
+  font-size: 54px; font-weight: 600; line-height: 1.2; box-shadow: 0 24px 60px rgba(0,0,0,.45); text-align: left; }
+.bubble small { display: block; font-size: 30px; font-weight: 700; letter-spacing: 3px; color: #7a838c; margin-bottom: 8px; text-transform: uppercase; }
+.cal { display: inline-block; width: 380px; border-radius: 36px; overflow: hidden; background: #fff; color: #1d2329; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+.cal b { display: block; background: #e2483d; color: #fff; font-size: 40px; font-weight: 800; letter-spacing: 8px; padding: 18px 0; }
+.cal span { display: block; font-size: 104px; font-weight: 800; padding: 34px 0 40px; }
+.stamp { display: inline-block; border: 10px solid #ff4a3d; color: #ff4a3d; font-size: 84px; font-weight: 800; padding: 6px 40px; border-radius: 22px;
+  letter-spacing: 6px; background: rgba(255,255,255,.95); }
+.prod small { display: block; font-size: 36px; font-weight: 700; letter-spacing: 10px; text-transform: uppercase; opacity: .85; }
+.prod h2 { font-size: 104px; font-weight: 800; line-height: 1.02; margin-top: 10px; text-shadow: 0 8px 34px rgba(0,0,0,.5); }
+.prod p { font-size: 40px; font-weight: 500; margin-top: 16px; opacity: .92; }
+.logo { font-size: 64px; font-weight: 800; letter-spacing: 1px; text-transform: lowercase; text-shadow: 0 4px 18px rgba(0,0,0,.4); }
+.feat { display: flex; align-items: center; gap: 28px; width: 880px; margin: 0 auto 24px; padding: 26px 34px; border-radius: 34px; text-align: left;
+  background: rgba(10,16,24,.62); border: 2px solid rgba(255,255,255,.18); backdrop-filter: blur(6px); font-size: 44px; font-weight: 700; line-height: 1.15; }
+.feat .ic { width: 96px; height: 96px; flex: none; border-radius: 28px; display: grid; place-items: center; background: var(--cw); }
+.feat small { display: block; font-size: 32px; font-weight: 500; opacity: .85; margin-top: 4px; }
+.price { display: inline-block; width: 860px; padding: 46px 40px 50px; border-radius: 48px; background: rgba(255,255,255,.97); color: #1d2329;
+  box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+.price .lab { font-size: 38px; font-weight: 700; letter-spacing: 10px; color: #6b7680; }
+.price .amt { font-size: 230px; font-weight: 800; line-height: 1; color: var(--cw); letter-spacing: -6px; }
+.price .amt sup { font-size: 80px; vertical-align: top; position: relative; top: 34px; letter-spacing: 0; margin-right: 8px; }
+.price .per { font-size: 50px; font-weight: 700; margin-top: -4px; }
+.price .note { margin-top: 26px; display: inline-block; padding: 14px 34px; border-radius: 40px; background: #e8f7fe; color: #0379ad; font-size: 36px; font-weight: 700; }
+.price .note2 { margin-top: 14px; font-size: 34px; font-weight: 600; color: #4b5560; }
+.wa { display: inline-flex; align-items: center; gap: 26px; padding: 32px 70px; border-radius: 80px; background: var(--wa);
+  font-size: 62px; font-weight: 800; color: #fff; box-shadow: 0 18px 50px rgba(37,211,102,.45); }
+.fine { font-size: 28px; color: rgba(255,255,255,.8); padding: 0 90px; margin-top: 34px; line-height: 1.35; }
+.tag { font-family: S, serif; font-style: italic; font-size: 60px; line-height: 1.2; padding: 0 90px; margin-bottom: 46px; text-shadow: 0 4px 24px rgba(0,0,0,.5); }
+.year { font-size: 210px; font-weight: 800; letter-spacing: -4px; line-height: 1; text-shadow: 0 10px 40px rgba(0,0,0,.5); }
+.year small { display: block; font-size: 44px; font-weight: 600; letter-spacing: 8px; margin-top: 10px; }
+
+/* susunan lapisan: syot (z 1-2) < vignette < elemen < kapsyen < grain < flash */
+#vig, #shadeB { z-index: 3; }
+#dim { z-index: 4; }
+.el { z-index: 5; }
+#cap { z-index: 6; }
+#grain { z-index: 7; }
+#flash { z-index: 8; }

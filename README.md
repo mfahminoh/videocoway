@@ -42,3 +42,19 @@ Bina semula: `python build_v5.py [--only v1_premium]`. Skrip VO badan: `voiceove
 6 video bersuara tentang jerebu, PM2.5 dan penapis udara Coway (J1 jerebu masuk rumah · J2 kenapa lampu merah ·
 J3 PM2.5 · J4 6 tips guna · J5 pilih model · J6 lepas jerebu masih berbaloi?). Fakta & sumber, posting media sosial,
 jadual produk, jawapan bantahan dan copy iklan: lihat `JEREBU_PACKAGE.md`. Bina semula: `python build_jerebu.py`.
+
+## 5 video peti ais Coway: emosi & desire (out/peti_ais/)
+Skrip dan sudut ada dalam `skrip/peti_ais.md` (berdasarkan `research/peti-ais-coway-headline-research.md`). Setiap video bawah 90 saat, portrait 1080×1920.
+
+| Fail | Sudut | Pencerita | Model / offer |
+|---|---|---|---|
+| `PA01_cium-dulu-baru-masak.mp4` | Lauk basi = duit dapur cair | Ibu muda | 551L, dari RM99/bln |
+| `PA02_siapa-nak-datang.mp4` | Mimpi ngeri repair → Heart Service | Ayah | dari RM84/bln |
+| `PA03_peti-ais-masa-kahwin.mp4` | Peti dari masa kahwin, keluarga dah membesar | Ibu | 551L, dari RM99/bln |
+| `PA04_tv-dah-65-inci.mp4` | Semua dah upgrade kecuali dapur isteri | Suami | 715L, dari RM84/bln |
+| `PA05_mak-kata-masih-okay.mp4` | Anak belikan peti ais untuk mak | Anak perempuan | 551L, dari RM99/bln |
+
+- Babak cerita: Seedream 4.5 (skill `.claude/skills/seedream`), prompt dalam `assets/img/peti_ais/prompts.json`. Untuk jana semula: `python3 videos/peti_ais_images.py [pa03_c]`.
+- Produk: gambar/klip rasmi coway.com.my dalam `assets/img/coway_fridge/` dan `assets/clips/fridge/`.
+- VO: Gemini TTS (`voiceover/gemini_tts.py`). Penyelarasan baris guna `voiceover/align.py`, disemak dengan `voiceover/transcribe_chunks.py` dan `voiceover/align_chunks.py`.
+- Bina: `python3 videos/peti_ais.py PA01 --render` (atau `all`). Edit babak/teks dalam `videos/PA0x/spec.json`, teks VO/kapsyen dalam `lines.json`.

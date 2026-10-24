@@ -28,3 +28,6 @@ voiceover/jerebu/*/[0-9][0-9].wav
 !out/kesedaran/
 out/kesedaran/_*
 assets/generated/v3/
+videos/*/vo_raw.wav
+!out/peti_ais/
+videos/*/vo_slow.wav

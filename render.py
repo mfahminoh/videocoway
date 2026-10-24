@@ -6,6 +6,8 @@ Usage:
   python render.py --src long.html --stills 1,5.5,10  # PNG previews -> out/stills/
   python render.py --src long.html --warp out/warp_long.json --out out/villaem3_long_video_noaudio.mp4 --jobs 4
                                                     # retimed to a real voiceover
+  python render.py --src videos/PA01/index.html --out out/PA01_noaudio.mp4 --jobs 4
+                                                    # a page outside src/ (path relative to the repo root)
 """
 import argparse
 import json
@@ -26,9 +28,12 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 def open_page(p, src):
     browser = p.chromium.launch(executable_path=CHROMIUM) if CHROMIUM else p.chromium.launch()
     page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
-    page.goto((ROOT / "src" / src.split("?")[0]).as_uri() + ("?" + src.split("?")[1] if "?" in src else ""))
+    path, q = src.split("?")[0], ("?" + src.split("?")[1] if "?" in src else "")
+    path = ROOT / path if (ROOT / path).is_file() else ROOT / "src" / path   # videos/PA01/index.html atau src/index.html
+    page.goto(path.as_uri() + q)
     page.evaluate("document.fonts.ready")
-    page.wait_for_function("[...document.images].every(i => i.complete)")
+    page.evaluate("window.READY || true")                                    # imej/bingkai klip yang dipramuat
+    page.wait_for_function("[...document.images].every(i => i.complete && i.naturalWidth > 0)")
     return browser, page
 
 
@@ -106,6 +111,6 @@ if __name__ == "__main__":
     ap.add_argument("--warp", help="JSON time map from voiceover/retime_long.py")
     a = ap.parse_args()
     if a.stills:
-        stills(a.src, [float(x) for x in a.stills.split(",")], prefix=pathlib.Path(a.src).stem + "_")
+        stills(a.src, [float(x) for x in a.stills.split(",")], prefix=pathlib.Path(a.src.split("?")[0]).parent.name + "_" + pathlib.Path(a.src.split("?")[0]).stem + "_")
     else:
         video(a.src, a.out, a.jobs, json.loads(pathlib.Path(a.warp).read_text()) if a.warp else None)

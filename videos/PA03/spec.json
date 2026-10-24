@@ -1,0 +1,239 @@
+{
+ "slug": "peti-ais-masa-kahwin",
+ "voice": "Vindemiatrix",
+ "style_tts": "Say in Malaysian Malay, slowly and emotionally, like a heartfelt story in a touching TV commercial, with natural pauses between sentences, voice of a gentle, nostalgic mother remembering her family",
+ "lift": "@10",
+ "shots": [
+  {
+   "at": 0,
+   "img": "peti_ais/pa03_a.jpg",
+   "kb": "in",
+   "grade": "vintage",
+   "zx": 50,
+   "zy": 40
+  },
+  {
+   "at": "@02",
+   "img": "peti_ais/pa03_a.jpg",
+   "kb": "right",
+   "grade": "vintage",
+   "cut": true
+  },
+  {
+   "at": "@03",
+   "img": "peti_ais/pa03_b.jpg",
+   "kb": "in",
+   "grade": "vintage",
+   "zx": 40,
+   "zy": 40
+  },
+  {
+   "at": "@04",
+   "img": "peti_ais/pa03_c.jpg",
+   "kb": "out",
+   "grade": "warm"
+  },
+  {
+   "at": "@05",
+   "img": "peti_ais/pa03_c.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 72,
+   "zy": 55,
+   "cut": true
+  },
+  {
+   "at": "@06",
+   "img": "peti_ais/pa03_c.jpg",
+   "kb": "up",
+   "grade": "night",
+   "zx": 70
+  },
+  {
+   "at": "@07",
+   "img": "peti_ais/pa03_a.jpg",
+   "kb": "still",
+   "grade": "vintage"
+  },
+  {
+   "at": "@08",
+   "img": "peti_ais/pa03_d.jpg",
+   "kb": "in",
+   "grade": "warm",
+   "zx": 60,
+   "zy": 40
+  },
+  {
+   "at": "@09",
+   "img": "peti_ais/pa03_d.jpg",
+   "kb": "out",
+   "grade": "warm",
+   "cut": true
+  },
+  {
+   "at": "@10",
+   "clip": "551_bigspace",
+   "fit": "contain",
+   "c0": 0.2,
+   "c1": 4.6,
+   "kb": "still"
+  },
+  {
+   "at": "@10%70",
+   "img": "coway_fridge/551_open_food.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": 60
+  },
+  {
+   "at": "@11",
+   "clip": "551_convert",
+   "fit": "contain",
+   "c0": 0.0,
+   "c1": 5.0,
+   "kb": "still",
+   "oy": 150
+  },
+  {
+   "at": "@12",
+   "img": "coway_fridge/551_deo_cubes.jpg",
+   "fit": "contain",
+   "kb": "in",
+   "oy": -150
+  },
+  {
+   "at": "@13",
+   "color": "cw"
+  },
+  {
+   "at": "@14",
+   "img": "coway_fridge/551_glow.png",
+   "fit": "contain",
+   "kb": "still",
+   "sc": 0.62,
+   "oy": -430
+  }
+ ],
+ "els": [
+  {
+   "type": "year",
+   "in": "@01",
+   "out": "@02e",
+   "top": 220,
+   "from": 2014,
+   "to": 2014,
+   "label": "TAHUN KAMI KAHWIN"
+  },
+  {
+   "type": "year",
+   "in": "@05",
+   "out": "@05e+0.3",
+   "top": 220,
+   "from": 2014,
+   "to": 2026,
+   "delay": 0,
+   "dur": 1.6,
+   "label": "SEKARANG"
+  },
+  {
+   "type": "quote",
+   "in": "@07",
+   "out": "@07e+0.6",
+   "top": 620,
+   "dim": 0.55,
+   "hideCap": true,
+   "lines": [
+    "Dua belas tahun dia jaga keluarga kami.",
+    "*Dia dah tak larat.*"
+   ],
+   "lineAt": [
+    "@07",
+    "@07%62"
+   ],
+   "size": 84
+  },
+  {
+   "type": "prod",
+   "in": "@10%70",
+   "out": "@10e+0.2",
+   "top": 190,
+   "title": "Multi-Door 551L",
+   "sub": "4 pintu · 551 liter"
+  },
+  {
+   "type": "feats",
+   "in": "@11",
+   "out": "@11e+0.2",
+   "top": 190,
+   "items": [
+    {
+     "icon": "swap",
+     "title": "Freezer boleh tukar jadi fridge",
+     "sub": "Stok Raya &amp; kenduri ada tempat",
+     "at": "@11"
+    }
+   ]
+  },
+  {
+   "type": "feats",
+   "in": "@12",
+   "out": "@12e+0.3",
+   "top": 1040,
+   "items": [
+    {
+     "icon": "shield",
+     "title": "Silver ion",
+     "sub": "99.99% E. coli &amp; S. aureus",
+     "at": "@12"
+    },
+    {
+     "icon": "wind",
+     "title": "Penapis bau",
+     "sub": "Bau tak bercampur",
+     "at": "@12%50"
+    }
+   ]
+  },
+  {
+   "type": "logo",
+   "in": "@13",
+   "out": "@13e",
+   "top": 120
+  },
+  {
+   "type": "price",
+   "in": "@13",
+   "out": "@13e+0.3",
+   "top": 330,
+   "label": "DARI",
+   "amount": "99",
+   "per": "sebulan",
+   "note": "Cody datang jaga · 7 tahun",
+   "noteAt": "@13%45"
+  },
+  {
+   "type": "photo",
+   "in": "@13%30",
+   "out": "@13e+0.3",
+   "top": 900,
+   "left": 140,
+   "w": 800,
+   "h": 470,
+   "src": "peti_ais/pa03_d.jpg",
+   "pos": "50% 35%",
+   "label": "Untuk keluarga yang membesar"
+  },
+  {
+   "type": "logo",
+   "in": "@14-0.2",
+   "top": 110
+  },
+  {
+   "type": "cta",
+   "in": "@14-0.2",
+   "top": 930,
+   "tag": "Keluarga dah membesar.<br>Dapur pun patut membesar.",
+   "btnAt": "@14"
+  }
+ ]
+}

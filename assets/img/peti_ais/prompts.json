@@ -1,0 +1,96 @@
+{
+ "_nota": "Dijana dengan skill seedream (.claude/skills/seedream, Seedream 4.5, 1440x2560). Jika 'ref' ada, gambar itu dihantar sebagai rujukan supaya watak & dapur sama. Jana yang belum ada: python3 videos/peti_ais_images.py",
+ "style": "Photorealistic cinematic film still, 35mm, shallow depth of field, authentic Malaysian Malay household, candid emotional moment. Modest dress: every woman wears a tudung covering her hair and neck and loose long-sleeved clothing down to the ankles; every woman wears socks on both feet; every man wears a shirt and long trousers. No text, no logos, no brand names, no watermark.",
+ "images": [
+  {
+   "file": "pa01_a.jpg",
+   "ref": null,
+   "prompt": "A Malay mother in her early 30s wearing a grey tudung sarung and a long-sleeved baju kurung, in a modest Malaysian terrace-house kitchen at night, holding an open plastic container of chicken curry close to her nose, sniffing it hesitantly with a doubtful, worried face. An old yellowed two-door refrigerator stands open behind her, cluttered. Warm tungsten light, slightly gloomy."
+  },
+  {
+   "file": "pa01_b.jpg",
+   "ref": "pa01_a.jpg",
+   "prompt": "Same woman, same kitchen, Sunday morning. She happily unpacks groceries from the wet market onto the kitchen counter: whole chicken, fish, prawns, fresh green vegetables in plastic bags. Bright soft morning light from the window, hopeful mood."
+  },
+  {
+   "file": "pa01_c.jpg",
+   "ref": "pa01_a.jpg",
+   "prompt": "Close-up inside the same old yellowed refrigerator: wilted leafy vegetables, plastic food containers with condensation, crowded messy shelves, a dim yellow interior bulb. No people. Sad, stale mood."
+  },
+  {
+   "file": "pa01_d.jpg",
+   "ref": "pa01_a.jpg",
+   "prompt": "Same woman at night scraping leftover chicken curry from a plastic container into the kitchen trash bin, guilty sad expression, eyes down, dim warm light, shallow focus on her hands and the bin."
+  },
+  {
+   "file": "pa02_a.jpg",
+   "ref": null,
+   "prompt": "A Malay father in his late 30s with a short beard and a plain t-shirt standing in his kitchen holding a small handwritten repair receipt, frustrated and angry expression. In the blurred background a technician walks out the door carrying a toolbox. An old refrigerator stands open and dark. Afternoon light."
+  },
+  {
+   "file": "pa02_b.jpg",
+   "ref": "pa02_a.jpg",
+   "prompt": "Inside the same broken refrigerator with the interior light off: thawed frozen chicken and fish in plastic bags, melted ice, water puddles on the shelves, spoiled food. No people. Dark, gloomy."
+  },
+  {
+   "file": "pa02_c.jpg",
+   "ref": "pa02_a.jpg",
+   "prompt": "Same father at the dining table at night with his wife in hijab and two young children, eating takeaway nasi bungkus from paper and plastic packets, tired and quiet faces, dim light."
+  },
+  {
+   "file": "pa02_d.jpg",
+   "ref": "pa02_a.jpg",
+   "prompt": "Same father sitting alone at the kitchen table late at night, phone pressed to his ear on hold, other hand on his forehead, exhausted and helpless. Single overhead light, dark kitchen."
+  },
+  {
+   "file": "pa03_a.jpg",
+   "ref": null,
+   "prompt": "Vintage 2014 film photograph look with warm faded colours and grain: a young newlywed Malay couple, the wife in a pastel hijab and the husband in a baju melayu shirt, standing proudly and smiling beside a brand-new small white two-door refrigerator in a tiny apartment kitchen."
+  },
+  {
+   "file": "pa03_b.jpg",
+   "ref": "pa03_a.jpg",
+   "prompt": "Same woman a few years later, a young mother holding a baby on her hip, taking a baby milk bottle from the same white two-door refrigerator, soft morning light, tender mood, slightly faded film look."
+  },
+  {
+   "file": "pa03_c.jpg",
+   "ref": "pa03_a.jpg",
+   "prompt": "Present day: the same woman now in her mid 30s, the same refrigerator now old and yellowed, door open and overflowing with containers, a few items falling out, three children of different ages crowding around her in a busy small kitchen. Realistic modern colours."
+  },
+  {
+   "file": "pa03_d.jpg",
+   "ref": "pa03_a.jpg",
+   "prompt": "Hari Raya eve: the same woman in a baju kurung holding a big pot of beef rendang, looking at the packed old refrigerator with a tired, worried smile. Ketupat decorations hanging in the kitchen, warm evening light."
+  },
+  {
+   "file": "pa04_a.jpg",
+   "ref": null,
+   "prompt": "A modern Malaysian living room: a large wall-mounted TV, a new grey fabric sofa, a Malay family with a husband, wife in hijab and two kids relaxing and watching together. Bright, clean, aspirational mood."
+  },
+  {
+   "file": "pa04_b.jpg",
+   "ref": null,
+   "prompt": "The kitchen of the same modern house: an old beige refrigerator with water droplets of condensation on its door, looking out of place. A Malay woman in her 30s wearing a hijab pushes the door shut hard with her hip and hand, tired expression."
+  },
+  {
+   "file": "pa04_c.jpg",
+   "ref": "pa04_b.jpg",
+   "prompt": "Same woman, same kitchen, at dawn, cooking at the stove for her family, steam rising from the pot, soft golden light from the window. Only one other person: her husband stands in the kitchen doorway in a long-sleeved shirt, watching her with a tender, grateful expression. No other people."
+  },
+  {
+   "file": "pa05_a.jpg",
+   "ref": null,
+   "prompt": "An elderly Malay mother in her 60s wearing a tudung and baju kurung, alone in a wooden kampung house kitchen, chipping thick built-up ice inside the small freezer compartment of an old refrigerator with a butter knife. Afternoon light through wooden windows, quiet and lonely mood."
+  },
+  {
+   "file": "pa05_b.jpg",
+   "ref": "pa05_a.jpg",
+   "prompt": "Same elderly woman at night carefully packing beef rendang, fried fish and kuih into plastic containers on the kitchen table, preparing food for her children who are coming home. Warm dim light, loving expression."
+  },
+  {
+   "file": "pa05_c.jpg",
+   "ref": "pa05_a.jpg",
+   "prompt": "An adult Malay daughter in her 30s wearing a hijab hugs the same elderly mother tightly in the kampung kitchen. The mother has her eyes closed and smiles gently, the daughter is teary. Warm emotional light."
+  }
+ ]
+}
