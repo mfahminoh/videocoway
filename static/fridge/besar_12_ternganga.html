@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.hd { font-weight:800; font-style:italic; text-transform:uppercase; -webkit-text-stroke:10px #1E73D8; paint-order:stroke fill;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.55)); line-height:.95; letter-spacing:-1px; white-space:nowrap; display:inline-block; }
+.pricebox { background:linear-gradient(135deg,#0B4DA2,#0B2F6B); border:2px solid rgba(140,200,255,.35); border-radius:22px;
+  padding:14px 30px 16px; box-shadow:0 16px 40px rgba(0,0,0,.5); display:inline-block; }
+.pricebox .lbl { font-weight:700; font-size:22px; letter-spacing:5px; }
+.pricebox .amt { font-weight:800; font-size:96px; line-height:.95; color:#FFD23F; letter-spacing:-2px; }
+.pricebox .amt small { font-size:30px; color:#fff; font-weight:600; letter-spacing:0; }
+.subt { font-weight:500; font-size:28px; color:#fff; margin-top:14px; text-shadow:0 2px 12px rgba(0,0,0,.8); }
+
+body{background:#141414}
+.bg{inset:0;background:radial-gradient(ellipse 70% 70% at 70% 55%,#4a4a4a 0%,#262626 50%,#0d0d0d 100%)}
+.glow{right:-80px;top:240px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(46,167,224,.35),transparent 65%)}
+.num{left:30px;top:120px;font-weight:800;font-size:350px;line-height:.8;letter-spacing:-14px;
+  background:linear-gradient(180deg,#fff 30%,#9CC9F0);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
+.fr{left:470px;top:225px;width:620px;-webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent);filter:drop-shadow(-20px 20px 40px rgba(0,0,0,.6))}
+.chip{display:inline-block;border:2px solid rgba(255,255,255,.35);border-radius:40px;padding:6px 18px;font-weight:600;font-size:22px;margin-right:10px;background:rgba(0,0,0,.45)}
+.subt{font-size:24px;color:#ddd;max-width:560px}
+</style><script>
+function fit(id, maxW, maxH, start){ const el=document.getElementById(id); let s=start;
+  el.style.fontSize=s+'px'; while((el.scrollWidth>maxW||el.offsetHeight>maxH)&&s>40){ s-=2; el.style.fontSize=s+'px'; } }
+</script></head>
+<body><div class="stage">
+<div class="abs bg"></div><div class="abs glow"></div>
+<div class="abs num">715</div>
+<img class="abs fr" src="img/sbs715_open_cutout.png">
+<div class="abs" style="left:40px;top:410px;width:640px">
+  <div id="h" class="hd">Besar sampai<br>ternganga.</div>
+  <div style="margin-top:18px"><span class="chip">715 Liter</span><span class="chip">Tinggi 1.9 m</span><span class="chip">Lebar 91 cm</span></div>
+  <div class="subt">Coway Side-by-Side 715L.</div>
+  <div style="margin-top:18px"><div class="pricebox"><div class="lbl">BERMULA</div><div class="amt">RM20<small>/bulan*</small></div></div></div>
+</div>
+<script>fit('h', 640, 230, 88)</script>
+
+<img class="abs logo" src="../../brand-brain/coway/Other Brand Assets/_brand/coway-logo-white.png">
+<div class="abs foot" style="width:420px">*Tertakluk terma &amp; syarat.</div>
+<div class="abs badge"><div><img src="../../brand-brain/coway/Other Brand Assets/_brand/coway-logo-blue.png"><span>EJEN SAH COWAY</span></div></div>
+</div></body></html>

@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.hd { font-weight:800; font-style:italic; text-transform:uppercase; -webkit-text-stroke:10px #1E73D8; paint-order:stroke fill;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.55)); line-height:.95; letter-spacing:-1px; white-space:nowrap; display:inline-block; }
+.pricebox { background:linear-gradient(135deg,#0B4DA2,#0B2F6B); border:2px solid rgba(140,200,255,.35); border-radius:22px;
+  padding:14px 30px 16px; box-shadow:0 16px 40px rgba(0,0,0,.5); display:inline-block; }
+.pricebox .lbl { font-weight:700; font-size:22px; letter-spacing:5px; }
+.pricebox .amt { font-weight:800; font-size:96px; line-height:.95; color:#FFD23F; letter-spacing:-2px; }
+.pricebox .amt small { font-size:30px; color:#fff; font-weight:600; letter-spacing:0; }
+.subt { font-weight:500; font-size:28px; color:#fff; margin-top:14px; text-shadow:0 2px 12px rgba(0,0,0,.8); }
+
+body{background:#041029}
+.photo{left:150px;top:300px;width:840px;height:790px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 10%);-webkit-mask-composite:source-in}
+.photo img{position:absolute;left:-10px;top:-8px;width:820px}
+.bot{left:0;bottom:0;width:1080px;height:330px;background:linear-gradient(to top,rgba(4,16,41,.96) 30%,transparent)}
+.seal{left:40px;top:400px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2EA7E0,#0B2F6B);
+  border:5px solid #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(0,0,0,.5);transform:rotate(-8deg)}
+.seal b{font-weight:800;font-size:84px;line-height:.9}.seal span{font-weight:700;font-size:26px;letter-spacing:3px}
+</style><script>
+function fit(id, maxW, maxH, start){ const el=document.getElementById(id); let s=start;
+  el.style.fontSize=s+'px'; while((el.scrollWidth>maxW||el.offsetHeight>maxH)&&s>40){ s-=2; el.style.fontSize=s+'px'; } }
+</script></head>
+<body><div class="stage">
+<div class="abs photo"><img src="../../brand-brain/coway/Other Brand Assets/refrigerator/sidebyside715l/Coway_SBS715-Refrigerator_Card3_V2.jpg"></div>
+<div class="abs bot"></div>
+<div class="abs" style="left:52px;top:46px;width:780px"><div id="h" class="hd">Baru buka pintu,<br>terus nampak<br>besarnya.</div><div class="subt">715L. Peti ais paling besar dalam barisan Coway.</div></div>
+<div class="abs seal"><b>715</b><span>LITER</span></div>
+<div class="abs" style="left:40px;bottom:96px"><div class="pricebox"><div class="lbl">BERMULA</div><div class="amt">RM20<small>/bulan*</small></div></div></div>
+<script>fit('h', 740, 196, 118)</script>
+
+<img class="abs logo" src="../../brand-brain/coway/Other Brand Assets/_brand/coway-logo-white.png">
+<div class="abs foot" style="width:420px">*Tertakluk terma &amp; syarat.</div>
+<div class="abs badge"><div><img src="../../brand-brain/coway/Other Brand Assets/_brand/coway-logo-blue.png"><span>EJEN SAH COWAY</span></div></div>
+</div></body></html>

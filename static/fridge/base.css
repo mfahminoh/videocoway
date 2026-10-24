@@ -1,0 +1,47 @@
+@font-face { font-family: P; font-weight: 400; src: url(../../assets/fonts/Poppins-Regular.ttf); }
+@font-face { font-family: P; font-weight: 500; src: url(../../assets/fonts/Poppins-Medium.ttf); }
+@font-face { font-family: P; font-weight: 600; src: url(../../assets/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: P; font-weight: 700; src: url(../../assets/fonts/Poppins-Bold.ttf); }
+@font-face { font-family: P; font-weight: 800; src: url(../../assets/fonts/Poppins-ExtraBold.ttf); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; font-family: P, sans-serif; color: #fff; }
+.stage { position: relative; width: 1080px; height: 1080px; overflow: hidden; }
+.abs { position: absolute; }
+
+.logo { top: 46px; right: 52px; width: 190px; }
+.headline { top: 40px; left: 56px; font-weight: 800; font-style: italic; font-size: 92px; line-height: 0.98;
+  letter-spacing: -1px; text-transform: uppercase;
+  -webkit-text-stroke: 9px #1E73D8; paint-order: stroke fill;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.55)); }
+.sub { left: 60px; font-weight: 500; font-size: 26px; color: #CFE6FF; }
+
+.mist { border-radius: 50%; background: rgba(210,230,255,.16); filter: blur(60px); }
+
+.col { left: 676px; width: 370px; }
+.model-top { font-weight: 600; font-size: 22px; color: #6CC8F5; letter-spacing: .5px; }
+.model { font-weight: 800; font-size: 46px; line-height: 1.05; margin-bottom: 18px; }
+.spec { font-size: 20px; line-height: 1.5; color: #E8F1FF; }
+.spec b { font-weight: 600; color: #fff; }
+.price-label { margin-top: 26px; font-weight: 700; font-size: 22px; letter-spacing: 4px; color: #fff; }
+.price { font-weight: 800; font-size: 104px; line-height: .95; color: #FFD23F; letter-spacing: -2px;
+  text-shadow: 0 6px 24px rgba(0,0,0,.5); }
+.price small { font-size: 28px; font-weight: 600; color: #fff; letter-spacing: 0; margin-left: 4px; }
+.pill { display: inline-block; margin-top: 14px; background: #E5322D; color: #fff; font-weight: 800; font-size: 22px;
+  padding: 9px 20px; border-radius: 40px; letter-spacing: .5px; box-shadow: 0 6px 18px rgba(229,50,45,.4); }
+.note { margin-top: 12px; font-size: 17px; color: #CFE6FF; }
+
+.foot { left: 40px; bottom: 30px; width: 560px; font-size: 13px; line-height: 1.35; color: rgba(255,255,255,.75); }
+.badge { right: -20px; bottom: 34px; height: 74px; padding: 0 64px 0 50px; background: #fff;
+  transform: skewX(-18deg); display: flex; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+.badge > div { transform: skewX(18deg); display: flex; align-items: center; gap: 16px; }
+.badge img { height: 36px; }
+.badge span { font-weight: 800; font-size: 21px; color: #0B2F6B; letter-spacing: 1px; border-left: 2px solid #CFD8E3; padding-left: 16px; }
+
+/* poster 3-7 */
+.photo { overflow: hidden; }
+.photo img { position: absolute; }
+.card { border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.5); border: 2px solid rgba(140,200,255,.25); }
+.card img { width: 100%; display: block; }
+.tag { position: absolute; left: 14px; bottom: 12px; background: rgba(3,12,30,.8); border-radius: 8px; padding: 4px 12px; font-size: 16px; font-weight: 600; }
+.was { font-size: 22px; color: #AFC4E0; margin-top: 18px; }
+.was s { color: #FF8A86; }

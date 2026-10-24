@@ -16,3 +16,4 @@ out/tilam/_*
 tilam/lite/rujukan/*.mp4
 !out/poster/
 out/poster/_*
+!out/static/
