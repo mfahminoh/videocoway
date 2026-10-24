@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Coway Ice – Reel 2 Ais Bungkus</title>
+<link rel="stylesheet" href="lib.css">
+<style>
+  #bgGrey { background: radial-gradient(circle at 50% 25%, #ffffff 0, #EEF1F4 45%, #D9DEE4 100%); }
+  .bag { position: absolute; width: 230px; height: 330px; }
+  .stat { left: 90px; width: 900px; height: 470px; border-radius: 44px; background: rgba(255,255,255,.08);
+          border: 3px solid rgba(255,255,255,.18); }
+  .stat .big { position: absolute; left: 420px; top: 90px; font-size: 170px; white-space: nowrap; font-weight: 800; line-height: 1; }
+  .stat .lab { position: absolute; left: 424px; top: 285px; font-size: 48px; font-weight: 600; color: #A9DDF7; line-height: 1.2; }
+  .btnwa { left: 90px; width: 900px; height: 150px; border-radius: 80px; background: var(--wa);
+       display: flex; align-items: center; justify-content: center; gap: 22px; font-size: 48px; font-weight: 800; color: #fff; white-space: nowrap;
+       box-shadow: 0 20px 50px rgba(37,211,102,.5); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="layer" id="bgGrey"></div>
+  <div class="layer" id="bgNavy"></div>
+  <div class="layer" id="bgPromo"></div>
+
+  <!-- ===== 1a · BELI AIS BUNGKUS ===== -->
+  <div class="el c h" id="a1" style="top:230px; font-size:120px; color:var(--navy)">HARI-HARI</div>
+  <div class="el c h" id="a2" style="top:360px; font-size:96px; color:var(--red)">BELI AIS BUNGKUS? <span class="emo" style="font-size:84px">😩</span></div>
+  <div id="bags"></div>
+
+  <!-- ===== 1b · BEKAS AIS KOSONG ===== -->
+  <div class="el c h" id="b1" style="top:230px; font-size:120px; color:var(--navy)">BEKAS AIS</div>
+  <div class="el c h" id="b2" style="top:360px; font-size:96px; color:var(--red)">KOSONG LAGI? <span class="emo" style="font-size:84px">🙄</span></div>
+  <svg class="el" id="tray" style="top:760px; left:115px" width="850" height="420" viewBox="0 0 850 420">
+    <rect x="10" y="30" width="830" height="360" rx="50" fill="#fff" stroke="#C6D3E0" stroke-width="10"/>
+    <g fill="#E8EEF4" stroke="#C6D3E0" stroke-width="6">
+      <rect x="60" y="80" width="110" height="115" rx="22"/><rect x="190" y="80" width="110" height="115" rx="22"/><rect x="320" y="80" width="110" height="115" rx="22"/>
+      <rect x="450" y="80" width="110" height="115" rx="22"/><rect x="580" y="80" width="110" height="115" rx="22"/><rect x="710" y="80" width="80" height="115" rx="22"/>
+      <rect x="60" y="225" width="110" height="115" rx="22"/><rect x="190" y="225" width="110" height="115" rx="22"/><rect x="320" y="225" width="110" height="115" rx="22"/>
+      <rect x="450" y="225" width="110" height="115" rx="22"/><rect x="580" y="225" width="110" height="115" rx="22"/><rect x="710" y="225" width="80" height="115" rx="22"/>
+    </g>
+    <g fill="#9FD8F5" opacity=".6"><circle cx="245" cy="300" r="10"/><circle cx="520" cy="150" r="7"/></g>
+  </svg>
+  <svg class="el" id="xmark" style="top:720px; left:340px" width="400" height="400" viewBox="0 0 400 400">
+    <circle cx="200" cy="200" r="180" fill="rgba(229,50,45,.12)" stroke="#E5322D" stroke-width="24"/>
+    <path d="M120 120 L280 280 M280 120 L120 280" stroke="#E5322D" stroke-width="36" stroke-linecap="round"/>
+  </svg>
+
+  <!-- ===== 2 · AIS DAH READY ===== -->
+  <div class="el c h" id="r1" style="top:190px; font-size:84px; color:#A9DDF7">DENGAN COWAY ICE,</div>
+  <div class="el c h" id="r2" style="top:300px; font-size:112px">AIS DAH READY <span class="emo" style="font-size:96px">✅</span></div>
+  <div class="el clipcard" id="rcard" style="top:520px"><img id="imgDrop" alt=""></div>
+
+  <!-- ===== 3 · 15 MINIT + 700g ===== -->
+  <div class="el c h" id="s0" style="top:170px; font-size:84px">SENTIASA ADA AIS <span class="emo" style="font-size:72px">🧊</span></div>
+  <div class="el stat" id="st1" style="top:330px">
+    <svg style="position:absolute; left:40px; top:45px" width="380" height="380" viewBox="0 0 500 500">
+      <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="34"/>
+      <circle id="sarc" cx="250" cy="250" r="200" fill="none" stroke="#2EA7E0" stroke-width="34" stroke-linecap="round"
+              transform="rotate(-90 250 250)" stroke-dasharray="1256.6" stroke-dashoffset="0"/>
+      <text id="stxt" x="250" y="292" text-anchor="middle" font-family="P" font-weight="800" font-size="120" fill="#fff">15:00</text>
+    </svg>
+    <div class="big" style="color:var(--yellow); font-size:150px; top:100px">15 min</div>
+    <div class="lab">Ais baru dihasilkan<br>setiap 15 minit</div>
+  </div>
+  <div class="el stat" id="st2" style="top:870px">
+    <svg id="sbin" style="position:absolute; left:20px; top:40px" width="400" height="380" viewBox="0 0 800 760"></svg>
+    <div class="big" style="background:linear-gradient(180deg,#fff 30%,#A9DDF7); -webkit-background-clip:text; color:transparent">700g</div>
+    <div class="lab">Ruang simpanan<br>ais, sentiasa ready</div>
+  </div>
+
+  <!-- ===== 4 · TAWARAN ===== -->
+  <div class="el c" id="o1" style="top:210px"><span class="pill" style="background:var(--red); font-size:64px; padding:16px 48px;
+        box-shadow:0 14px 40px rgba(229,50,45,.5)"><span class="emo">🔥</span> PROMOSI</span></div>
+  <div class="el c h" id="o2" style="top:350px; font-size:280px; color:var(--yellow); line-height:1">RM20</div>
+  <div class="el c h" id="o3" style="top:625px; font-size:100px">/ BULAN</div>
+  <div class="el c" id="o4" style="top:770px"><span class="pill" style="background:#fff; color:var(--navy); font-size:64px">SELAMA 7 BULAN</span></div>
+  <div class="el" id="oglow" style="top:880px; left:240px; width:600px; height:600px; border-radius:50%;
+       background: radial-gradient(circle, rgba(169,221,247,.45) 0, transparent 68%)"></div>
+  <img class="el" id="oprod" src="../assets/img/ice-front.png" style="top:920px; left:392px; width:296px; height:560px">
+
+  <!-- ===== 5 · CTA ===== -->
+  <div class="el c h" id="e1" style="top:230px; font-size:110px">PASANG</div>
+  <div class="el c h" id="e2" style="top:355px; font-size:140px; color:var(--yellow)">PERCUMA <span class="emo" style="font-size:110px">🇲🇾</span></div>
+  <div class="el" id="eglow" style="top:500px; left:190px; width:700px; height:700px; border-radius:50%;
+       background: radial-gradient(circle, rgba(169,221,247,.5) 0, rgba(46,167,224,.15) 40%, transparent 70%)"></div>
+  <img class="el" id="eprod" src="../assets/img/ice-front.png" style="top:540px; left:376px; width:328px; height:620px">
+  <div class="el btnwa" id="btn" style="top:1230px">
+    <svg width="66" height="66" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>
+    WHATSAPP SEKARANG</div>
+  <div class="el emo" id="hand" style="top:1320px; left:760px; font-size:120px">👆</div>
+  <div class="el c" id="tnc" style="top:1470px; font-size:28px; opacity:.7">RM20/bulan × 7 bulan · Coway Ice · *Tertakluk kepada terma &amp; syarat</div>
+
+  <div class="layer" id="flash" style="background:#fff; opacity:0"></div>
+</div>
+
+<script src="reel2.timeline.js"></script>
+<script src="lib.js"></script>
+<script>
+const T = window.T;
+window.DURATION = T.end;
+buildBin($('sbin'), 's');
+
+// beg ais bungkus (plastik lutsinar, diikat di atas)
+const BAGS = [[130, 760, -8], [425, 720, 5], [720, 770, 10], [270, 1080, -4], [580, 1100, 7]];
+$('bags').innerHTML = BAGS.map((_, i) => `<svg class="el bag" id="bag${i}" viewBox="0 0 230 330">
+  <path d="M100 40 Q115 10 130 40 L120 60 L110 60 Z" fill="rgba(255,255,255,.9)" stroke="#9FB6CC" stroke-width="4"/>
+  <path d="M95 58 Q30 90 25 190 Q20 300 115 310 Q210 300 205 190 Q200 90 135 58 Z" fill="rgba(223,243,255,.75)" stroke="#9FB6CC" stroke-width="5"/>
+  <g fill="rgba(255,255,255,.95)" stroke="#A9DDF7" stroke-width="3">
+    <rect x="55" y="170" width="52" height="52" rx="12" transform="rotate(-12 81 196)"/><rect x="118" y="160" width="52" height="52" rx="12" transform="rotate(15 144 186)"/>
+    <rect x="75" y="228" width="52" height="52" rx="12" transform="rotate(8 101 254)"/><rect x="132" y="224" width="48" height="48" rx="12" transform="rotate(-18 156 248)"/>
+    <rect x="95" y="110" width="46" height="46" rx="12" transform="rotate(20 118 133)"/></g>
+  <path d="M60 110 Q50 170 62 240" stroke="rgba(255,255,255,.9)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <g transform="translate(150 250) rotate(-10)"><rect x="0" y="0" width="70" height="38" rx="8" fill="#FFD23F"/><text x="35" y="27" text-anchor="middle" font-family="P" font-weight="800" font-size="22" fill="#0B2F6B">RM</text></g>
+</svg>`).join('');
+
+function seek(t) {
+  set('bgGrey', { o: t < T.ready ? 1 : 0 });
+  set('bgNavy', { o: (t >= T.ready - .05 && t < T.offer + .3) || t >= T.cta - .05 ? 1 : 0 });
+  set('bgPromo', { o: t >= T.offer - .05 && t < T.cta + .3 ? 1 : 0 });
+  flashAt(t, [T.ready, T.stats, T.offer, T.cta]);
+
+  /* 1a · beli ais bungkus */
+  const aout = T.empty - .1;
+  inout('a1', t, .05, aout, { dy: -40 });
+  inout('a2', t, .25, aout, { pop: true, sFrom: .5, dy: 0 });
+  BAGS.forEach(([x, y, r], i) => {
+    const t0 = .3 + i * .16, a = clamp((t - t0) / .45), b = p(t, aout, aout + .25, E.in);
+    set(`bag${i}`, { o: t >= t0 ? 1 - b : 0, x, y: mix(-600, y, E.bounce(a)) + b * 200, r: mix(r - 40, r, E.out(a)), s: 1.35 - b * .2 });
+  });
+
+  /* 1b · bekas ais kosong */
+  const bout = T.ready - .12;
+  inout('b1', t, T.empty + .02, bout, { dy: -40 });
+  inout('b2', t, T.empty + .2, bout, { pop: true, sFrom: .5, dy: 0 });
+  {
+    const a = p(t, T.empty + .05, T.empty + .45, E.back), b = p(t, bout, bout + .25, E.in);
+    const shake = t > T.empty + .3 && t < T.empty + .9 ? Math.sin(t * 60) * 6 : 0;
+    set('tray', { o: Math.min(clamp(a * 2), 1 - b), s: mix(.6, 1, a), x: shake, y: -b * 60 });
+    const x = p(t, T.empty + .55, T.empty + .8, E.back);
+    set('xmark', { o: Math.min(clamp(x * 2), 1 - b), s: mix(2.2, 1, x), r: mix(-25, 0, x) });
+  }
+
+  /* 2 · ais dah ready */
+  const rout = T.stats - .12;
+  inout('r1', t, T.ready + .05, rout, { dy: -40 });
+  inout('r2', t, T.ready + .3, rout, { pop: true, sFrom: .5, dy: 0 });
+  {
+    const a = p(t, T.ready + .05, T.ready + .5, E.out), b = p(t, rout, rout + .25, E.in);
+    set('rcard', { o: Math.min(clamp(a * 1.5), 1 - b), y: mix(260, 0, a) - b * 80, r: mix(-4, 0, a) });
+    if (t >= T.ready - .1 && t < rout + .3) clipFrame('drop', 'imgDrop', t, T.ready, T.stats - T.ready);
+  }
+
+  /* 3 · 15 minit + 700g */
+  const sout = T.offer - .12;
+  inout('s0', t, T.stats + .05, sout, { dy: -30 });
+  inout('st1', t, T.stats + .15, sout, { dx: -200, dy: 0 });
+  inout('st2', t, T.stats + .9, sout, { dx: 200, dy: 0 });
+  {
+    const secs = Math.round(mix(900, 0, p(t, T.stats + .4, T.stats + 1.6, E.inOut)));
+    $('stxt').textContent = `${String(Math.floor(secs / 60)).padStart(2, '0')}:${String(secs % 60).padStart(2, '0')}`;
+    $('sarc').setAttribute('stroke-dashoffset', 1256.6 * (1 - secs / 900));
+    $('sarc').setAttribute('stroke', secs === 0 ? '#FFD23F' : '#2EA7E0'); $('stxt').setAttribute('fill', secs === 0 ? '#FFD23F' : '#fff');
+    if (t >= T.stats && t < sout + .3) drawBin('s', t, i => T.stats + 1.0 + i * .03);
+  }
+
+  /* 4 · tawaran */
+  const oout = T.cta - .12;
+  inout('o1', t, T.offer + .05, oout, { pop: true, sFrom: .3, dy: 0 });
+  $('o1').style.transform += ` rotate(${Math.sin(t * 14) * 3 * clamp((t - T.offer - .4) * 2) * (t < oout ? 1 : 0)}deg)`;
+  {
+    const a = p(t, T.offer + .2, T.offer + .7, E.back), b = p(t, oout, oout + .25, E.in);
+    const beat = 1 + .05 * Math.max(0, Math.sin((t - T.offer - .9) * 7)) * (t > T.offer + .9 ? 1 : 0);
+    set('o2', { o: Math.min(clamp(a * 2), 1 - b), s: mix(.3, 1, a) * beat, y: -b * 60, blur: (1 - clamp(a * 1.5)) * 10 });
+    const q = p(t, T.offer + .3, T.offer + 1.0, E.out);
+    set('oprod', { o: Math.min(q, 1 - b), y: mix(200, 0, q) + Math.sin(t * 2.2) * 6 - b * 60 });
+    set('oglow', { o: Math.min(q, 1 - b) * (.8 + Math.sin(t * 3) * .2), s: mix(.5, 1, q) });
+  }
+  inout('o3', t, T.offer + .5, oout, { dx: 120, dy: 0 });
+  inout('o4', t, T.offer + 1.3, oout, { pop: true, sFrom: .5, dy: 0 });
+
+  /* 5 · CTA */
+  inout('e1', t, T.cta + .05, null, { dy: -40 });
+  inout('e2', t, T.cta + .2, null, { pop: true, sFrom: .5, dy: 0 });
+  {
+    const a = p(t, T.cta + .1, T.cta + .7, E.out);
+    set('eprod', { o: a, y: mix(160, 0, a) + Math.sin(t * 2.2) * 6, s: mix(.85, 1, a) });
+    set('eglow', { o: a * (.85 + Math.sin(t * 3) * .15), s: mix(.5, 1, a) });
+    const bt = p(t, T.cta + .8, T.cta + 1.2, E.back);
+    const pulse = 1 + .045 * Math.max(0, Math.sin((t - T.cta - 1.2) * 6)) * (t > T.cta + 1.2 ? 1 : 0);
+    set('btn', { o: clamp(bt * 2), s: mix(.5, 1, bt) * pulse, y: mix(80, 0, bt) });
+    const h = p(t, T.cta + 1.2, T.cta + 1.5, E.out), tap = Math.max(0, Math.sin((t - T.cta - 1.5) * 6)) * (t > T.cta + 1.5 ? 1 : 0);
+    set('hand', { o: h, x: mix(200, 0, h), y: mix(200, 0, h) - tap * 26, s: 1 - tap * .06 });
+  }
+  inout('tnc', t, T.cta + 1.1, null, { dy: 10 });
+}
+boot(seek);
+</script>
+</body>
+</html>

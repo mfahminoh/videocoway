@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Coway Ice – Reel 1 Kaki Ais</title>
+<style>
+</style>
+<link rel="stylesheet" href="lib.css">
+<style>
+  .drop { position: absolute; width: 90px; height: 90px; }
+  .btnwa { left: 90px; width: 900px; height: 150px; border-radius: 80px; background: var(--wa);
+       display: flex; align-items: center; justify-content: center; gap: 22px; font-size: 48px; font-weight: 800; color: #fff; white-space: nowrap;
+       box-shadow: 0 20px 50px rgba(37,211,102,.5); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="layer" id="bgIce"></div>
+  <div class="layer" id="bgNavy"></div>
+  <div class="layer" id="bgPromo"></div>
+
+  <!-- ===== 1 · HOOK ===== -->
+  <div id="rain"></div>
+  <div class="el c h" id="h1" style="top:250px; font-size:150px; color:var(--navy)">FAMILY</div>
+  <div class="el c h" id="h2" style="top:410px; font-size:140px; color:var(--sky)">KAKI AIS? <span class="emo" style="font-size:112px">🧊</span></div>
+  <div class="el" id="hglow" style="top:640px; left:140px; width:800px; height:800px; border-radius:50%;
+       background: radial-gradient(circle, rgba(46,167,224,.35) 0, transparent 68%)"></div>
+  <img class="el" id="hprod" src="../assets/img/ice-front.png" style="top:640px; left:328px; width:424px; height:800px">
+  <div class="el c" id="hpill" style="top:1460px"><span class="pill h" style="font-size:64px; background:var(--navy); color:#fff">COWAY ICE <span class="emo">❄️</span></span></div>
+
+  <!-- ===== 2 · AIS BARU 15 MINIT ===== -->
+  <div class="el c h" id="f1" style="top:200px; font-size:112px">AIS BARU</div>
+  <div class="el c h" id="f2" style="top:320px; font-size:112px; color:var(--yellow)">SETIAP 15 MINIT</div>
+  <div class="el clipcard" id="fcard" style="top:520px"><img id="imgDisp" alt=""></div>
+  <svg class="el" id="fclock" style="top:440px; left:730px" width="280" height="280" viewBox="0 0 500 500">
+    <circle cx="250" cy="250" r="235" fill="#0B2F6B"/>
+    <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="30"/>
+    <circle id="farc" cx="250" cy="250" r="200" fill="none" stroke="#2EA7E0" stroke-width="30" stroke-linecap="round"
+            transform="rotate(-90 250 250)" stroke-dasharray="1256.6" stroke-dashoffset="0"/>
+    <text id="ftxt" x="250" y="290" text-anchor="middle" font-family="P" font-weight="800" font-size="118" fill="#fff">15:00</text>
+  </svg>
+
+  <!-- ===== 3 · 700g ===== -->
+  <div class="el c h" id="v1" style="top:200px; font-size:84px; color:#A9DDF7; letter-spacing:6px">SEHINGGA</div>
+  <div class="el c h" id="v2" style="top:290px; font-size:250px; line-height:1;
+       background:linear-gradient(180deg,#ffffff 30%,#A9DDF7); -webkit-background-clip:text; color:transparent">700g</div>
+  <div class="el c h" id="v3" style="top:545px; font-size:110px">AIS</div>
+  <svg class="el" id="bin" style="top:720px; left:140px" width="800" height="760" viewBox="0 0 800 760"></svg>
+
+  <!-- ===== 4 · TAWARAN ===== -->
+  <div class="el c" id="o1" style="top:210px"><span class="pill" style="background:var(--red); font-size:64px; padding:16px 48px;
+        box-shadow:0 14px 40px rgba(229,50,45,.5)"><span class="emo">🔥</span> PROMOSI</span></div>
+  <div class="el c h" id="o2" style="top:350px; font-size:280px; color:var(--yellow); line-height:1">RM20</div>
+  <div class="el c h" id="o3" style="top:625px; font-size:100px">/ BULAN</div>
+  <div class="el c" id="o4" style="top:770px"><span class="pill" style="background:#fff; color:var(--navy); font-size:64px">SELAMA 7 BULAN</span></div>
+  <div class="el" id="oglow" style="top:880px; left:240px; width:600px; height:600px; border-radius:50%;
+       background: radial-gradient(circle, rgba(169,221,247,.45) 0, transparent 68%)"></div>
+  <img class="el" id="oprod" src="../assets/img/ice-front.png" style="top:920px; left:392px; width:296px; height:560px">
+
+  <!-- ===== 5 · CTA ===== -->
+  <div class="el c h" id="e1" style="top:230px; font-size:96px">HANTAR &amp; PASANG</div>
+  <div class="el c h" id="e2" style="top:345px; font-size:140px; color:var(--yellow)">PERCUMA <span class="emo" style="font-size:110px">🇲🇾</span></div>
+  <div class="el" id="eglow" style="top:500px; left:190px; width:700px; height:700px; border-radius:50%;
+       background: radial-gradient(circle, rgba(169,221,247,.5) 0, rgba(46,167,224,.15) 40%, transparent 70%)"></div>
+  <img class="el" id="eprod" src="../assets/img/ice-front.png" style="top:540px; left:376px; width:328px; height:620px">
+  <div class="el btnwa" id="btn" style="top:1230px">
+    <svg width="66" height="66" viewBox="0 0 24 24" style="flex:none"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>
+    KLIK WHATSAPP SEKARANG</div>
+  <div class="el emo" id="hand" style="top:1320px; left:760px; font-size:120px">👆</div>
+  <div class="el c" id="tnc" style="top:1470px; font-size:28px; opacity:.7">RM20/bulan × 7 bulan · *Tertakluk kepada terma &amp; syarat</div>
+
+  <div class="layer" id="flash" style="background:#fff; opacity:0"></div>
+</div>
+
+<script src="reel1.timeline.js"></script>
+<script src="lib.js"></script>
+<script>
+const T = window.T;
+window.DURATION = T.end;
+buildBin($('bin'), 'b');
+
+// hujan kiub ais (babak hook)
+const RAIN = 18;
+$('rain').innerHTML = Array.from({ length: RAIN }, (_, i) =>
+  `<svg class="el drop" id="d${i}" viewBox="-40 -40 80 80"><rect x="-34" y="-34" width="68" height="68" rx="16" fill="rgba(255,255,255,.9)" stroke="#A9DDF7" stroke-width="4"/>
+   <rect x="-22" y="-24" width="20" height="10" rx="5" fill="#DFF3FF"/></svg>`).join('');
+
+function seek(t) {
+  set('bgIce', { o: t < T.fresh ? 1 : 0 });
+  set('bgNavy', { o: (t >= T.fresh - .05 && t < T.offer + .3) || t >= T.cta - .05 ? 1 : 0 });
+  set('bgPromo', { o: t >= T.offer - .05 && t < T.cta + .3 ? 1 : 0 });
+  flashAt(t, [1.35, T.fresh, T.cap, T.offer, T.cta]);
+
+  /* 1 · hook */
+  const hout = T.fresh - .12;
+  for (let i = 0; i < RAIN; i++) {
+    const t0 = rnd(i) * 1.6, x = 40 + rnd(i + 50) * 960, sp = 900 + rnd(i + 90) * 700;
+    const y = -120 + (t - t0) * sp, b = p(t, hout, hout + .25, E.in);
+    set(`d${i}`, { o: t >= t0 && y < 2000 ? (1 - b) * .9 : 0, x, y, r: (t - t0) * (rnd(i + 7) - .5) * 400, s: .6 + rnd(i + 3) * .7 });
+  }
+  inout('h1', t, .05, hout, { pop: true, sFrom: .5, dy: 0 });
+  inout('h2', t, .35, hout, { pop: true, sFrom: .5, dy: 0 });
+  {
+    const a = p(t, 1.1, 1.45, E.out), b = p(t, hout, hout + .25, E.in);
+    const shake = t > 1.45 && t < 1.75 ? Math.sin(t * 90) * 10 * (1.75 - t) / .3 : 0;
+    set('hprod', { o: Math.min(clamp(a * 2), 1 - b), y: mix(900, 0, a) + shake, s: 1 - b * .1 });
+    set('hglow', { o: Math.min(a, 1 - b), s: mix(.3, 1, p(t, 1.35, 1.9, E.out)) });
+  }
+  inout('hpill', t, 1.55, hout, { pop: true, sFrom: .4, dy: 0 });
+
+  /* 2 · ais baru 15 minit */
+  const fout = T.cap - .12;
+  inout('f1', t, T.fresh + .05, fout, { dy: -40 });
+  inout('f2', t, T.fresh + .2, fout, { pop: true, sFrom: .5, dy: 0 });
+  {
+    const a = p(t, T.fresh + .05, T.fresh + .5, E.out), b = p(t, fout, fout + .25, E.in);
+    set('fcard', { o: Math.min(clamp(a * 1.5), 1 - b), y: mix(260, 0, a) - b * 80, r: mix(4, 0, a) });
+    if (t >= T.fresh - .1 && t < fout + .3) clipFrame('dispense', 'imgDisp', t, T.fresh, T.cap - T.fresh);
+    const c = p(t, T.fresh + .3, T.fresh + .75, E.back);
+    set('fclock', { o: Math.min(clamp(c * 2), 1 - b), s: mix(.3, 1, c) * (t > T.fresh + 2.2 ? 1 + .07 * Math.sin(clamp((t - T.fresh - 2.2) * 4) * Math.PI) : 1), r: mix(-30, 0, c) });
+    const secs = Math.round(mix(900, 0, p(t, T.fresh + .7, T.fresh + 2.2, E.inOut)));
+    $('ftxt').textContent = `${String(Math.floor(secs / 60)).padStart(2, '0')}:${String(secs % 60).padStart(2, '0')}`;
+    $('farc').setAttribute('stroke-dashoffset', 1256.6 * (1 - secs / 900));
+    const done = secs === 0;
+    $('farc').setAttribute('stroke', done ? '#FFD23F' : '#2EA7E0'); $('ftxt').setAttribute('fill', done ? '#FFD23F' : '#fff');
+  }
+
+  /* 3 · 700g */
+  const cout = T.offer - .12;
+  inout('v1', t, T.cap + .05, cout, { dy: -30 });
+  {
+    const a = p(t, T.cap + .1, T.cap + .55, E.back), b = p(t, cout, cout + .25, E.in);
+    set('v2', { o: Math.min(clamp(a * 2), 1 - b), s: mix(.4, 1, a) * (t > T.cap + 2.1 ? 1 + .05 * Math.sin(clamp((t - T.cap - 2.1) * 3) * Math.PI) : 1), y: -b * 60 });
+  }
+  inout('v3', t, T.cap + .3, cout, { pop: true, dy: 0 });
+  inout('bin', t, T.cap + .05, cout, { dy: 120 });
+  if (t >= T.cap - .1 && t < cout + .3) {
+    drawBin('b', t, i => T.cap + .3 + i * .036);
+    $('bshine').setAttribute('x', mix(-300, 1000, p(t, T.cap + 2.2, T.cap + 2.6, E.inOut)));
+  }
+
+  /* 4 · tawaran */
+  const oout = T.cta - .12;
+  inout('o1', t, T.offer + .05, oout, { pop: true, sFrom: .3, dy: 0 });
+  $('o1').style.transform += ` rotate(${Math.sin(t * 14) * 3 * clamp((t - T.offer - .4) * 2) * (t < oout ? 1 : 0)}deg)`;
+  {
+    const a = p(t, T.offer + .2, T.offer + .7, E.back), b = p(t, oout, oout + .25, E.in);
+    const beat = 1 + .05 * Math.max(0, Math.sin((t - T.offer - .9) * 7)) * (t > T.offer + .9 ? 1 : 0);
+    set('o2', { o: Math.min(clamp(a * 2), 1 - b), s: mix(.3, 1, a) * beat, y: -b * 60, blur: (1 - clamp(a * 1.5)) * 10 });
+    const q = p(t, T.offer + .3, T.offer + 1.0, E.out);
+    set('oprod', { o: Math.min(q, 1 - b), y: mix(200, 0, q) + Math.sin(t * 2.2) * 6 - b * 60 });
+    set('oglow', { o: Math.min(q, 1 - b) * (.8 + Math.sin(t * 3) * .2), s: mix(.5, 1, q) });
+  }
+  inout('o3', t, T.offer + .5, oout, { dx: 120, dy: 0 });
+  inout('o4', t, T.offer + 1.3, oout, { pop: true, sFrom: .5, dy: 0 });
+
+  /* 5 · CTA */
+  inout('e1', t, T.cta + .05, null, { dy: -40 });
+  inout('e2', t, T.cta + .25, null, { pop: true, sFrom: .5, dy: 0 });
+  {
+    const a = p(t, T.cta + .1, T.cta + .8, E.out);
+    set('eprod', { o: a, y: mix(160, 0, a) + Math.sin(t * 2.2) * 6, s: mix(.85, 1, a) });
+    set('eglow', { o: a * (.85 + Math.sin(t * 3) * .15), s: mix(.5, 1, a) });
+    const bt = p(t, T.cta + 1.2, T.cta + 1.65, E.back);
+    const pulse = 1 + .045 * Math.max(0, Math.sin((t - T.cta - 1.65) * 6)) * (t > T.cta + 1.65 ? 1 : 0);
+    set('btn', { o: clamp(bt * 2), s: mix(.5, 1, bt) * pulse, y: mix(80, 0, bt) });
+    const h = p(t, T.cta + 1.7, T.cta + 2.05, E.out), tap = Math.max(0, Math.sin((t - T.cta - 2.05) * 6)) * (t > T.cta + 2.05 ? 1 : 0);
+    set('hand', { o: h, x: mix(200, 0, h), y: mix(200, 0, h) - tap * 26, s: 1 - tap * .06 });
+  }
+  inout('tnc', t, T.cta + 1.5, null, { dy: 10 });
+}
+boot(seek);
+</script>
+</body>
+</html>
