@@ -1,0 +1,97 @@
+"""Salinan mix.py untuk iklan 3 model (--ad best3).
+
+Mux the rendered video with music/SFX and (if present) the voiceover clips.
+
+    python mix.py
+      -> out/villaem3_final.mp4   (music + SFX, + VO when voiceover/clips/*.mp3 exist)
+    python mix_best3.py --ad best3
+      -> out/best3_final.mp4      (VO from voiceover/best3/clips/*.mp3)
+
+Voiceover clips are placed at the start times in voiceover/lines.json, and the music bed
+is ducked (~-9 dB) underneath the voice.
+"""
+import argparse
+import json
+import pathlib
+import subprocess
+import wave
+
+import imageio_ffmpeg
+import numpy as np
+
+ROOT = pathlib.Path(__file__).parent
+FF = imageio_ffmpeg.get_ffmpeg_exe()
+SR = 44100
+# ad -> (silent video, music+SFX bed, voiceover folder, final output)
+ADS = {
+    "villaem3": ("villaem3_video_noaudio.mp4", "music_sfx.wav", "voiceover", "villaem3_final.mp4"),
+    "best3": ("best3_video_noaudio.mp4", "best3_music_sfx.wav", "voiceover/best3", "best3_final.mp4"),
+}
+
+
+def read_wav(path):
+    with wave.open(str(path)) as w:
+        x = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(float) / 32768
+        return x.reshape(-1, w.getnchannels())
+
+
+def decode(path):
+    raw = subprocess.run([FF, "-v", "error", "-i", str(path), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(raw, "<i2").astype(float) / 32768
+
+
+def smooth(x, sec):
+    n = max(1, int(sec * SR))
+    k = np.ones(n) / n
+    return np.convolve(x, k, mode="same")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ad", choices=ADS, default="villaem3")
+    video, bed_wav, vo_dir, final = ADS[ap.parse_args().ad]
+    vo_dir = ROOT / vo_dir
+    bed = read_wav(ROOT / "out" / bed_wav)
+    N = len(bed)
+    vo = np.zeros(N)
+    lines = json.loads((vo_dir / "lines.json").read_text())
+    used = 0
+    for ln in lines:
+        clip = vo_dir / "clips" / f"{ln['id']}.mp3"
+        if not clip.exists():
+            clip = clip.with_suffix(".wav")
+        if not clip.exists():
+            continue
+        x = decode(clip)
+        i = int(ln["start"] * SR)
+        x = x[: N - i]
+        vo[i:i + len(x)] += x
+        used += 1
+
+    if used:
+        vo = vo / (np.abs(vo).max() + 1e-9) * 0.9
+        active = smooth((np.abs(vo) > 0.02).astype(float), 0.25)
+        duck = 1 - 0.65 * np.clip(active * 3, 0, 1)             # ~ -9 dB bila ada suara
+        mix = bed * 0.75 * duck[:, None] + vo[:, None]
+    else:
+        mix = bed
+    mix = mix / max(1.0, np.abs(mix).max() / 0.95)
+
+    tmp = ROOT / "out" / "_mix.wav"
+    with wave.open(str(tmp), "wb") as w:
+        w.setnchannels(2)
+        w.setsampwidth(2)
+        w.setframerate(SR)
+        w.writeframes((mix * 32767).astype("<i2").tobytes())
+
+    out = ROOT / "out" / final
+    subprocess.run([FF, "-y", "-v", "error", "-i", str(ROOT / "out" / video), "-i", str(tmp),
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out)],
+                   check=True)
+    tmp.unlink()
+    print(f"wrote {out}  (voiceover clips used: {used}/{len(lines)})")
+
+
+if __name__ == "__main__":
+    main()
