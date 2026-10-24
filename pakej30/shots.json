@@ -1,0 +1,237 @@
+{
+ "v1": {
+  "cut": 1.0,
+  "shots": [
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 1.83
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 30.22
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 30.22
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 16.0
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 61.06
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 59.21
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 133.03
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 91.35
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 12.9
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 67.35
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 104.19
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 22.6
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 40.26
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 3.06
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 167.81
+   }
+  ]
+ },
+ "v2": {
+  "cut": 0.5,
+  "shots": [
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 9.26
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 17.2
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 34.79
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 45.68
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 50.39
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 54.88
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 67.36
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 78.45
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 17.67
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 22.62
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 37.27
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 43.86
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 49.76
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 54.21
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 63.35
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 74.16
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 81.96
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 92.82
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 117.09
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 126.71
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 143.11
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 149.72
+   },
+   {
+    "video": "out/neoplus_video_noaudio.mp4",
+    "t": 1.95
+   },
+   {
+    "video": "out/neoplus_video_noaudio.mp4",
+    "t": 13.43
+   },
+   {
+    "video": "out/neoplus_video_noaudio.mp4",
+    "t": 23.28
+   },
+   {
+    "video": "out/neoplus_video_noaudio.mp4",
+    "t": 27.02
+   },
+   {
+    "video": "out/neoplus_video_noaudio.mp4",
+    "t": 37.34
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 2.5
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 10.4
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 19.0
+   }
+  ]
+ },
+ "v3": {
+  "cut": 1.5,
+  "shots": [
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 14.04
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 25.15
+   },
+   {
+    "video": "out/airbotol_video_noaudio.mp4",
+    "t": 94.72
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 88.6
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 120.58
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 154.09
+   },
+   {
+    "video": "out/neoplus_full_video_noaudio.mp4",
+    "t": 159.14
+   },
+   {
+    "video": "out/neoplus_video_noaudio.mp4",
+    "t": 56.7
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 24.8
+   },
+   {
+    "video": "out/villaem3_final.mp4",
+    "t": 28.0
+   }
+  ]
+ }
+}

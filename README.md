@@ -1,4 +1,14 @@
-# Coway Villaem 3 — Video Iklan Meta (Portrait 1080×1920, ±29s)
+# Video Iklan Coway (Meta, Portrait 1080×1920)
+
+| Projek | Fail | Video siap |
+|---|---|---|
+| Villaem 3 (±29s, suara lelaki) | `src/`, `voiceover/` | `out/villaem3_final.mp4` |
+| Neo Plus — untuk mak ayah (60s, suara Gemini perempuan) | `neoplus/` — lihat [neoplus/README.md](neoplus/README.md) | `out/neoplus_final.mp4` |
+| Neo Plus — versi penuh, semua poin skrip (±2:51, suara Gemini) | `neoplus_full/` — lihat [neoplus_full/README.md](neoplus_full/README.md) | `out/neoplus_full_final.mp4` |
+
+---
+
+## Coway Villaem 3 (±29s)
 
 Motion graphic bercerita: *"3 tahun jual Coway… ada satu jenis customer yang nak beli sekali, puas hati"* → Villaem 3 → ciri → promo → CTA WhatsApp.
 
