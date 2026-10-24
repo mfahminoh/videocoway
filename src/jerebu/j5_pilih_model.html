@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>J5 Pilih Model</title>
+<link rel="stylesheet" href="../v5/base.css">
+<link rel="stylesheet" href="jerebu.css">
+<script src="../v5/engine.js"></script>
+<script src="timing/j5_pilih_model.js"></script>
+<script src="kit.js"></script>
+<style>
+  :root { --accent:#9C6F2A; --cta-text:#2a241d; --cta-pill:rgba(201,164,106,.18); }
+  body { color:#2a241d; }
+  #bg { background: radial-gradient(ellipse at 50% 30%, #fbf7f0 0, #efe6d8 70%, #e4d6c1 100%); }
+  .who { display:inline-block; background:#2a241d; color:#f5ead8; font-size:40px; font-weight:700; padding:14px 34px; border-radius:50px; }
+  .nm { font-family:Serif; font-weight:800; font-size:96px; line-height:1; white-space:nowrap; }
+  .code { font-size:30px; font-weight:600; letter-spacing:3px; opacity:.55; }
+  .sp { display:flex !important; align-items:center; gap:20px; font-size:38px; font-weight:600; white-space:nowrap; }
+  .sp b { width:16px; height:16px; border-radius:50%; background:var(--accent); flex:none; }
+  .pr { font-size:34px; font-weight:600; opacity:.7; }
+  .pr span { font-family:Serif; font-size:110px; font-weight:800; color:#8a6a35; opacity:1; }
+  .prod { filter: drop-shadow(0 40px 40px rgba(60,40,20,.25)); }
+  .grid img { position:absolute; width:250px; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"></div>
+
+  <!-- 0: intro grid -->
+  <div class="scene">
+    <div class="el c" style="top:180px; font-size:60px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Pening nak pilih<br>air purifier?</div>
+    <div class="el grid" style="top:430px; left:0; width:1080px; height:1000px" data-in="20%" data-a="fade">
+      <img src="../../assets/img/air/storm2.png" style="left:60px; top:0">
+      <img src="../../assets/img/air/lombok3.png" style="left:415px; top:0">
+      <img src="../../assets/img/air/studio.png" style="left:770px; top:0">
+      <img src="../../assets/img/air/suite.png" style="left:60px; top:440px">
+      <img src="../../assets/img/air/noble2.png" style="left:415px; top:440px">
+      <img src="../../assets/img/air/atrium.png" style="left:770px; top:440px"></div>
+    <div class="el c" style="top:1500px" data-in="60%" data-a="stamp"><span class="who" style="font-size:52px">Panduan ikut ruang rumah anda</span></div>
+  </div>
+
+  <script>
+    const P = [
+      ['storm2', 'PALING POPULAR MUSIM JEREBU', 'Storm II', 'AP-1523D', ['Mod <b style="background:none;width:auto;height:auto;color:#8a6a35">HAZE</b> khas', 'Copper HEPA H13', 'Liputan 50 m²'], 55],
+      ['lombok3', 'ADA RESDUNG / ALAHAN', 'Lombok III', 'AP-1520C', ['6 tahap penapisan', 'Double HEPA', 'Plasma &amp; ioniser'], 65],
+      ['studio', 'BILIK TIDUR / BILIK ANAK', 'Studio', 'AP-1924A', ['Senyap · 21.6 dB', 'Liputan 76 m²', 'Mod Sleep'], 49],
+      ['suite', 'RUANG TAMU KELUARGA', 'Suite', 'AP-2524B', ['Paparan PM2.5 langsung', 'Liputan 92 m²', 'Roda tersembunyi'], 60],
+      ['noble2', 'BELA KUCING', 'Noble 2', 'AP-2023K', ['Pet Mode', '6 tahap + UVC', 'Liputan 67 m²'], 95],
+      ['atrium', 'RUMAH BESAR / RUANG TERBUKA', 'Atrium', 'AP-3525I', ['2 motor · sedut 2 sisi', 'Liputan 116 m²', 'Sensor PM1.0/2.5/10'], 89],
+    ];
+    P.forEach(([img, who, nm, code, sp, pr], i) => document.write(`
+    <div class="scene">
+      <div class="el c" style="top:170px" data-in="0" data-a="pop"><span class="who">${who}</span></div>
+      <img class="el prod" src="../../assets/img/air/${img}.png" style="top:300px; left:40px; width:470px" data-in="0" data-a="right">
+      <div class="el" style="top:420px; left:540px; width:520px" data-in="8%" data-a="left"><div class="code">COWAY · ${code}</div><div class="nm fit2">${nm}</div></div>
+      ${sp.map((s, k) => `<div class="el sp" style="top:${700 + k * 95}px; left:540px; width:520px" data-in="${30 + k * 15}%" data-a="left"><b></b>${s}</div>`).join('')}
+      <div class="el c pr" style="top:1240px" data-in="78%" data-a="slam">harga biasa dari <span>RM${pr}</span>/bulan*</div>
+      <div class="el c" style="top:1440px" data-in="88%" data-a="stamp"><span style="display:inline-block; background:#E5322D; color:#fff; font-weight:800; font-size:46px; padding:14px 40px; border-radius:50px; transform:rotate(-2deg)">PROMO: RM20/bulan · 7 bulan pertama</span></div>
+      <div class="el c src" style="top:1800px; color:#6b5d4b" data-in="30%" data-a="fade">*Sewa terendah (pelan 7 tahun), coway.com.my, Okt 2026. Promosi RM20/bulan untuk 7 bulan pertama, kemudian harga biasa. Tertakluk T&amp;C.</div>
+    </div>`));
+  </script>
+
+  <script>document.write(K.cta({ imgs: ['studio.png', 'storm2.png', 'suite.png'], h1: 'Hantar saiz bilik, saya cadangkan.', stampAt: '55%' }))</script>
+</div>
+<script>K.start(null);</script>
+</body></html>

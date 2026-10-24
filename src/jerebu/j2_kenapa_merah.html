@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>J2 Kenapa Merah</title>
+<link rel="stylesheet" href="../v5/base.css">
+<link rel="stylesheet" href="jerebu.css">
+<script src="../v5/engine.js"></script>
+<script src="timing/j2_kenapa_merah.js"></script>
+<script src="kit.js"></script>
+<style>
+  :root { --accent:#E5322D; --cta-text:#111; --cta-pill:rgba(0,0,0,.06); }
+  body { color:#111; }
+  #bg { background:#F2F2F5; }
+  .post { width:900px; background:#fff; border-radius:34px; padding:34px 40px; box-shadow:0 18px 40px rgba(0,0,0,.08); }
+  .post .hd { display:flex; align-items:center; gap:20px; font-size:34px; font-weight:700; color:#222; }
+  .post .av { width:70px; height:70px; border-radius:50%; filter:blur(.5px); }
+  .post .hd small { font-weight:500; color:#999; font-size:28px; margin-left:auto; }
+  .post .tx { font-size:44px; font-weight:500; line-height:1.3; margin-top:18px; }
+  .post .ft { display:flex; gap:40px; margin-top:20px; font-size:30px; color:#888; }
+  .leg { display:flex !important; align-items:center; gap:34px; font-size:64px; font-weight:800; }
+  .leg i { width:110px; height:110px; border-radius:50%; border:16px solid; box-sizing:border-box; flex:none; }
+  .leg span { font-weight:500; font-size:50px; color:#555; }
+  .red { color:#E5322D; }
+  .tag { display:inline-block; background:#111; color:#fff; font-size:38px; font-weight:700; padding:12px 30px; border-radius:40px; }
+  .chk i { color:#fff; }
+  .onph { color:#fff; } .onph .red { color:#ff6b5e; }
+  .lab { display:inline-block; background:rgba(0,0,0,.6); color:#fff; font-size:40px; font-weight:800; padding:10px 28px; border-radius:40px; border:3px solid #fff; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"></div>
+
+  <!-- 0: feed -->
+  <div class="scene">
+    <div class="el c" style="top:170px; font-size:56px; font-weight:800" data-in="0" data-a="up">Feed media sosial minggu ni 📱</div>
+    <div class="el post" style="top:330px; left:90px" data-in="10%" data-a="left">
+      <div class="hd"><span class="av" style="background:#c7a6ff"></span>w*****35<small>Threads · jerebu</small></div>
+      <div class="tx">Baru ON air purifier malam ni, terus bacaan PM2.5 cecah <b class="red">119</b>. Dalam rumah pun tinggi! 😷</div></div>
+    <div class="el post" style="top:720px; left:90px" data-in="40%" data-a="left">
+      <div class="hd"><span class="av" style="background:#ffc58f"></span>n*****ah<small>Threads · jerebu</small></div>
+      <div class="tx">Baru pasang air purifier, lampu terus <b class="red">MERAH</b>. Sehari suntuk baru jadi hijau 😮‍💨</div></div>
+    <div class="el post" style="top:1080px; left:90px" data-in="70%" data-a="left">
+      <div class="hd"><span class="av" style="background:#9fe0c4"></span>q*****mn<small>Threads · jerebu</small></div>
+      <div class="tx">Mahal jugak air purifier ni… tapi main dengan jerebu, berasa nak beli membuak-buak 😅</div></div>
+    <div class="el c src" style="top:1800px; color:#666" data-in="20%" data-a="fade">Diringkaskan daripada posting awam Threads, 2026 · nama disembunyikan</div>
+  </div>
+
+  <!-- 1: semua merah -->
+  <div class="scene onph">
+    <script>document.write(K.photo('R05.jpg', { a: 'zoom' }))</script>
+    <div class="el c" style="top:300px" data-in="35%" data-a="stamp">
+      <span style="display:inline-block; background:#E5322D; color:#fff; font-family:Anton; font-size:150px; padding:0 50px; border-radius:24px; transform:rotate(-4deg)">SEMUA MERAH!</span></div>
+  </div>
+
+  <!-- 2: legenda -->
+  <div class="scene">
+    <div class="el c" style="top:200px; font-size:80px; font-weight:800" data-in="0" data-a="up">Rosak ke? <span style="color:#2b9a54">TAK.</span></div>
+    <div class="el c" style="top:330px; font-size:50px; font-weight:600; color:#444" data-in="12%" data-a="up">Lampu tu = <b style="color:#111">sensor kualiti udara</b></div>
+    <div class="el leg" style="top:560px; left:180px" data-in="38%" data-a="left"><i style="border-color:#2896ff"></i>BIRU <span>bersih</span></div>
+    <div class="el leg" style="top:740px; left:180px" data-in="52%" data-a="left"><i style="border-color:#3cbe5a"></i>HIJAU <span>baik</span></div>
+    <div class="el leg" style="top:920px; left:180px" data-in="64%" data-a="left"><i style="border-color:#f5be1e"></i>KUNING <span>sederhana</span></div>
+    <div class="el leg" style="top:1100px; left:180px" data-in="82%" data-a="left"><i style="border-color:#E5322D"></i><b class="red">MERAH</b> <span><b class="red">kotor</b></span></div>
+    <div class="el c src" style="top:1800px; color:#666" data-in="30%" data-a="fade">Warna penunjuk ikut model (cth. Storm II: biru, hijau, kuning, merah)</div>
+  </div>
+
+  <!-- 3: udara yang anda sedut -->
+  <div class="scene onph">
+    <script>document.write(K.photo('R02.jpg'))</script>
+    <div class="el c" style="top:220px" data-in="0" data-a="pop"><span class="tag" style="background:#E5322D">MERAH =</span></div>
+    <div class="el c" style="top:340px; font-size:66px; font-weight:800; line-height:1.2" data-in="8%" data-a="up">sensor kesan <span class="red">BANYAK</span><br>habuk halus</div>
+    <div class="el c" style="top:1440px; font-size:58px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">Udara yang keluarga anda<br>tengah sedut…</div>
+    <div class="el c" style="top:1620px; font-size:120px; font-weight:800; color:#ff6b5e" data-in="88%" data-a="slam">SEKARANG.</div>
+  </div>
+
+  <!-- 4: merah -> biru -->
+  <div class="scene onph">
+    <script>document.write(K.photo('R16.jpg') + K.photo('R17.jpg', { id: 'ph6', a: 'cut' }))</script>
+    <div class="el c" style="top:150px; font-size:58px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Biar dia bekerja…</div>
+    <div class="el c" style="top:270px" data-in="45%" data-a="pop"><span class="tag" id="lvTag">MERAH · KOTOR</span></div>
+    <div class="el" style="top:400px; left:140px; width:800px; height:26px; border-radius:13px; background:linear-gradient(90deg,#E5322D,#f5be1e,#3cbe5a,#2896ff)" data-in="45%" data-a="fade"></div>
+    <div class="el" id="lvDot" style="top:384px; left:120px; width:58px; height:58px; border-radius:50%; background:#fff; border:8px solid #111" data-in="45%" data-a="fade"></div>
+    <div class="el c" style="top:1720px; font-size:46px; font-weight:700" data-in="10%" data-a="up">sedut udara kotor → tapis dengan <b>HEPA</b></div>
+  </div>
+
+  <!-- 5: penapis -->
+  <div class="scene onph">
+    <script>document.write(K.photo('R07.jpg'))</script>
+    <div class="el c" style="top:150px; font-size:66px; font-weight:800" data-in="0" data-a="up">Bukti paling jelas?</div>
+    <div class="el" style="top:1120px; left:80px" data-in="25%" data-a="pop"><span class="lab" style="border-color:#ff6b5e">LEPAS JEREBU</span></div>
+    <div class="el" style="top:1460px; left:640px" data-in="35%" data-a="pop"><span class="lab">BARU</span></div>
+    <div class="el c" style="top:1600px; font-size:56px; font-weight:700; line-height:1.25" data-in="60%" data-a="up">Habuk kelabu kehitaman tu…</div>
+    <div class="el c" style="top:1700px; font-size:62px; font-weight:800; line-height:1.2" data-in="75%" data-a="slam"><span class="red">tak masuk</span> paru-paru anda.</div>
+    
+  </div>
+
+  <!-- 6: checklist -->
+  <div class="scene">
+    <div class="el c" style="top:220px; font-size:66px; font-weight:800; line-height:1.2" data-in="0" data-a="up">Kalau lampu <span class="red">merah</span>:</div>
+    <div class="el chk" style="top:470px; left:150px" data-in="12%" data-a="left"><i style="background:#E5322D">✕</i>Jangan matikan</div>
+    <div class="el chk" style="top:640px; left:150px" data-in="38%" data-a="left"><i style="background:#2b9a54">✓</i>Tutup tingkap</div>
+    <div class="el chk" style="top:810px; left:150px" data-in="58%" data-a="left"><i style="background:#2b9a54">✓</i>Mod <b>&nbsp;HAZE&nbsp;</b> / Turbo</div>
+    <div class="el chk" style="top:980px; left:150px" data-in="82%" data-a="left"><i style="background:#2b9a54">✓</i>Biar dia bekerja</div>
+  </div>
+
+  <script>document.write(K.cta({ h1: 'Belum ada air purifier? WhatsApp saya.' }))</script>
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
+</div>
+<script>
+  const ctx = document.getElementById('fx').getContext('2d');
+  K.start(t => {
+    K.clear(ctx);
+    const s1 = K.scene(1), s4 = K.scene(4);
+    if (t >= s1.s && t < s1.e + .4) K.haze(ctx, t, { n: 160, color: '170,150,130', alpha: .3, size: 4, speed: 30 });
+    if (t >= s4.s - .2 && t < s4.e + .4) {
+      const lv = 3 * Engine.p(t, K.at(4, .45), K.at(4, 1) + .2, Engine.E.inOut);
+      K.haze(ctx, t, { mode: 'suck', x: 540, y: 1170, box: [0, 500, 1080, 1100], spread: 60, n: 150, density: 1 - lv / 2, color: '170,150,130', alpha: .6, size: 4, period: 1.7 });
+      document.getElementById('ph6').style.opacity = Engine.p(lv, 1.2, 2.4, Engine.E.inOut);
+      const tag = document.getElementById('lvTag'); tag.textContent = K.ringName(lv); tag.style.background = K.ring(lv);
+      document.getElementById('lvDot').style.left = (120 + 760 * lv / 3) + 'px';
+    }
+  });
+</script>
+</body></html>

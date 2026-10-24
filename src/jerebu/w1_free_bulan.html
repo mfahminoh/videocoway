@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>W1 Free Bulan</title>
+<link rel="stylesheet" href="../v5/base.css">
+<link rel="stylesheet" href="jerebu.css">
+<link rel="stylesheet" href="model.css">
+<script src="../v5/engine.js"></script>
+<script src="timing/w1_free_bulan.js"></script>
+<script src="kit.js"></script>
+<style>
+  /* Gaya jenama Coway (model.css): Nunito Sans + Noto Sans, biru #00A4E4, latar cerah. Merah hanya untuk amaran. */
+  :root { --red:#E5322D; }
+  .b { color:var(--blue); } .r { color:var(--red); }
+  .onph .b { color:#7fd3f5; }
+  .nb { width:150px; height:150px; border-radius:50%; background:var(--blue); color:#fff; font-family:CW; font-weight:900; font-size:96px; display:grid; place-items:center; box-shadow:0 14px 30px rgba(0,164,228,.35); }
+  .hd { font-family:CW; font-weight:900; font-size:72px; line-height:1.1; letter-spacing:-1px; }
+  .bub { width:860px; background:#fff; color:var(--dark); border-radius:40px 40px 40px 10px; padding:30px 40px; box-shadow:0 24px 60px rgba(0,0,0,.35); }
+  .bub .who { display:flex; align-items:center; gap:18px; font-family:CW; font-size:30px; font-weight:700; color:#888; }
+  .bub .who i { width:58px; height:58px; border-radius:50%; background:#cfe3ee; }
+  .bub .tx { font-size:48px; font-weight:500; line-height:1.3; margin-top:12px; }
+  .pill { display:inline-block; font-family:CW; font-weight:900; color:#fff; border-radius:60px; }
+  .pcard { width:900px; background:#fff; border-radius:36px; padding:36px 50px; box-shadow:0 16px 36px rgba(20,40,60,.1); }
+  .pr { display:flex; align-items:center; gap:26px; }
+  .pr .v { font-family:CW; font-weight:900; font-size:150px; line-height:1; color:var(--blue); letter-spacing:-3px; }
+  .pr .l { font-family:CW; font-size:44px; font-weight:800; line-height:1.2; color:var(--dark); }
+  .pr .l span { font-weight:600; color:var(--ink); }
+  .mo { width:190px; height:160px; border-radius:30px; background:var(--blue); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 12px 26px rgba(0,164,228,.3); }
+  .mo b { font-family:CW; font-weight:900; font-size:70px; line-height:1; } .mo span { font-family:CW; font-weight:700; font-size:24px; margin-top:4px; }
+  .mo.q { background:#dfe5ea; color:#8a959e; box-shadow:none; }
+  .acc { width:900px; background:#fff; color:var(--dark); border-radius:34px; padding:30px 46px; box-shadow:0 24px 60px rgba(0,0,0,.35); }
+  .acc .ln { display:flex; justify-content:space-between; align-items:center; font-size:40px; font-weight:500; padding:16px 0; border-bottom:2px solid #eef1f3; }
+  .acc .ln b { font-family:CW; font-weight:800; }
+  .acc .ln:last-child { border-bottom:0; }
+  .half { position:absolute; left:0; width:1080px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+  .ic { width:130px; height:130px; border-radius:50%; display:grid; place-items:center; color:#fff; font-family:CW; font-weight:900; font-size:76px; }
+</style></head>
+<body><div id="stage">
+  <div class="layer" id="bg"></div>
+
+  <!-- 0: hook -->
+  <div class="scene onph">
+    <script>document.write(K.photo('Wa.jpg', { pos: '45% 50%', shade: 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.1) 40%, rgba(0,0,0,.25) 65%, rgba(0,0,0,.85) 100%)' }))</script>
+    <div class="el bub" style="top:170px; left:110px" data-in="0" data-a="left">
+      <div class="who"><i></i>Ejen ****<span style="margin-left:auto; font-weight:600; font-size:26px">baru tadi</span></div>
+      <div class="tx">Sis, saya bagi <b class="r">FREE 8 BULAN</b> tak payah bayar! 😍 Sign hari ni je ya</div></div>
+    <div class="el c" style="top:1200px" data-in="62%" data-a="stamp">
+      <span class="pill" style="background:var(--red); font-size:110px; padding:14px 56px 20px; transform:rotate(-3deg); box-shadow:0 20px 50px rgba(229,50,45,.45)">Lari jauh-jauh!</span></div>
+    <div class="el c" style="top:1560px" data-in="90%" data-a="pop"><span class="pill" style="background:var(--blue); font-size:96px; padding:10px 60px 16px">Kenapa?</span></div>
+  </div>
+
+  <!-- 1: bukan promosi rasmi -->
+  <div class="scene">
+    <div class="el nb" style="top:170px; left:80px" data-in="0" data-a="pop">1</div>
+    <div class="el hd" style="top:185px; left:270px" data-in="3%" data-a="left">Itu bukan<br><span class="b">promosi rasmi.</span></div>
+    <div class="el c" style="top:470px" data-in="8%" data-a="pop"><span style="font-family:CW; font-weight:900; font-size:110px; color:#9aa5ae; text-decoration:line-through; text-decoration-color:var(--red); text-decoration-thickness:12px">FREE 6–8 BULAN</span></div>
+    <div class="el pcard" style="top:680px; left:90px" data-in="25%" data-a="up">
+      <span class="kick">PROMOSI SEKARANG*</span>
+      <div class="pr" style="margin-top:26px"><span class="v">RM20</span><span class="l">/bulan<br><span>7 bulan pertama</span></span></div>
+      <div style="height:2px; background:#eef1f3; margin:24px 0"></div>
+      <div class="pr"><span class="v">RM18</span><span class="l">/bulan<br><span>untuk trade-in</span></span></div>
+    </div>
+    <div class="el c" style="top:1440px" data-in="86%" data-a="stamp"><span class="chipb" style="font-size:72px; padding:14px 50px; border-width:5px; transform:rotate(-2deg)">Bukan percuma</span></div>
+    <div class="el c src" style="top:1790px; color:var(--ink)" data-in="30%" data-a="fade">*Promosi semasa Coway, Oktober 2026. Tertakluk terma &amp; syarat, boleh berubah ikut bulan.</div>
+  </div>
+
+  <!-- 2: siapa yang bayar -->
+  <div class="scene">
+    <div class="el nb" style="top:170px; left:80px" data-in="0" data-a="pop">2</div>
+    <div class="el hd" style="top:185px; left:270px" data-in="3%" data-a="left">Siapa yang bayar<br><span class="b">bulan-bulan tu?</span></div>
+    <div class="el c" style="top:520px; font-family:CW; font-size:54px; font-weight:800" data-in="30%" data-a="up">Selalunya… <span class="b">ejen sendiri</span> 💸</div>
+    <div class="el" style="top:660px; left:150px; width:780px; display:flex !important; flex-wrap:wrap; gap:30px 105px" data-in="35%" data-a="fade">
+      <div class="mo"><b>1</b><span>ejen bayar</span></div><div class="mo"><b>2</b><span>ejen bayar</span></div><div class="mo"><b>3</b><span>ejen bayar</span></div>
+      <div class="mo q"><b>4</b><span>?</span></div><div class="mo q"><b>5</b><span>?</span></div><div class="mo q"><b>6</b><span>?</span></div>
+    </div>
+    <div class="el c" style="top:1110px" data-in="60%" data-a="pop"><span class="chipb" style="font-size:48px">💰 Komisen masuk</span></div>
+    <div class="el c" style="top:1300px; font-family:CW; font-weight:900; font-size:190px; line-height:1; color:var(--red); letter-spacing:-4px" data-in="80%" data-a="slam">📵 Senyap.</div>
+  </div>
+
+  <!-- 3: atas nama anda -->
+  <div class="scene onph">
+    <script>document.write(K.photo('Wb.jpg', { pos: '50% 40%', shade: 'linear-gradient(180deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.35) 30%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.85) 100%)' }))</script>
+    <div class="el nb" style="top:170px; left:80px" data-in="0" data-a="pop">3</div>
+    <div class="el hd" style="top:185px; left:270px" data-in="3%" data-a="left">Akaun tu<br>atas nama <span class="b">ANDA.</span></div>
+    <div class="el acc" style="top:1080px; left:90px" data-in="20%" data-a="up">
+      <div class="ln">Pemegang akaun <b class="b" style="color:var(--blue)">ANDA</b></div>
+      <div class="ln">Ejen <b class="r">hilang ✕</b></div>
+      <div class="ln">Bil bulanan <b class="r">tetap datang</b></div>
+      <div class="ln">Servis <b class="r">tiada siapa jaga ✕</b></div>
+    </div>
+    <div class="el c hd" style="top:1650px; font-size:66px" data-in="84%" data-a="slam">Yang kena bayar? <span class="b">ANDA.</span></div>
+  </div>
+
+  <!-- 4: janji manis -->
+  <div class="scene onph">
+    <script>document.write(K.photo('Wc.jpg', { pos: '55% 40%', shade: 'linear-gradient(180deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.3) 30%, rgba(0,0,0,.25) 60%, rgba(0,0,0,.85) 100%)' }))</script>
+    <div class="el nb" style="top:170px; left:80px" data-in="0" data-a="pop">4</div>
+    <div class="el hd" style="top:185px; left:270px" data-in="3%" data-a="left">Janji<br><span class="b">terlalu manis</span> 🍬</div>
+    <div class="el" style="top:1180px; left:110px" data-in="15%" data-a="pop"><span class="chipb" style="font-size:46px; transform:rotate(-4deg); box-shadow:0 14px 30px rgba(0,0,0,.35)">FREE 8 bulan!</span></div>
+    <div class="el" style="top:1300px; left:420px" data-in="25%" data-a="pop"><span class="chipb" style="font-size:46px; transform:rotate(3deg); box-shadow:0 14px 30px rgba(0,0,0,.35)">Saya bayarkan dulu</span></div>
+    <div class="el" style="top:1420px; left:160px" data-in="35%" data-a="pop"><span class="chipb" style="font-size:46px; transform:rotate(-2deg); box-shadow:0 14px 30px rgba(0,0,0,.35)">Sign hari ni je</span></div>
+    <div class="el c hd" style="top:1600px; font-size:60px" data-in="55%" data-a="up">= ejen <span class="b">terdesak nak sale.</span></div>
+  </div>
+
+  <!-- 5: free gift vs free bulanan -->
+  <div class="scene">
+    <div class="half" style="top:0; height:960px; background:#ffffff" data-in="0" data-a="fade">
+      <div class="ic" style="background:var(--blue)">✓</div>
+      <div class="hd" style="font-size:110px; margin-top:30px">Free gift</div>
+      <div style="font-family:CW; font-size:60px; font-weight:800; color:var(--blue); margin-top:10px">Okey 👍</div></div>
+    <div class="half" style="top:960px; height:960px; background:#e9eef2" data-in="35%" data-a="fade">
+      <div class="ic" style="background:var(--red)">✕</div>
+      <div class="hd" style="font-size:96px; margin-top:30px">Free bulanan panjang</div>
+      <div style="font-family:CW; font-size:60px; font-weight:800; color:var(--red); margin-top:10px">Fikir dua kali 🚩</div></div>
+  </div>
+
+  <!-- 6: CTA -->
+  <div class="scene cta">
+    <script>document.write(K.photo('Wd.jpg', { pos: '60% 50%', shade: 'linear-gradient(180deg, rgba(245,247,249,0) 0%, rgba(245,247,249,0) 38%, rgba(245,247,249,.95) 54%, #F5F7F9 64%)' }))</script>
+    <div class="el c hd" style="top:1060px; font-size:84px" data-in="0" data-a="up">Pilih ejen yang <span class="b">jujur.</span></div>
+    <div class="el c" style="top:1175px; font-size:50px; font-weight:500; color:var(--ink)" data-in="20%" data-a="up">Yang masih ada lepas pasang.</div>
+    <div class="el c" style="top:1320px; font-family:CW; font-size:54px; font-weight:800" data-in="55%" data-a="up">Nak tahu promosi <span class="b">sebenar?</span></div>
+    <script>document.write(`<div class="el" id="ctaBtn" style="top:1430px; left:110px; width:860px; height:130px; border-radius:80px; background:#25D366; display:flex !important; align-items:center; justify-content:center; gap:22px; font-family:CW; font-size:46px; font-weight:900; color:#fff; white-space:nowrap; box-shadow:0 20px 50px rgba(37,211,102,.45)" data-in="70%" data-a="pop">${K.WA} WHATSAPP SAYA SEKARANG</div>`)</script>
+    <div class="el c src" style="top:1640px; color:var(--ink)" data-in="30%" data-a="fade">Video kesedaran pengguna. Promosi rasmi tertakluk terma &amp; syarat Coway dan boleh berubah ikut bulan.</div>
+  </div>
+
+  <canvas class="layer" id="fx" width="1080" height="1920"></canvas>
+</div>
+<script>
+  K.start(() => {});
+</script>
+</body></html>

@@ -17,3 +17,14 @@ tilam/lite/rujukan/*.mp4
 !out/poster/
 out/poster/_*
 !out/static/
+!out/jerebu/
+out/jerebu/_*
+!out/stills/
+out/stills/*
+!out/stills/jerebu/
+voiceover/jerebu/*/[0-9][0-9].wav
+!out/model/
+!out/pendek/
+!out/kesedaran/
+out/kesedaran/_*
+assets/generated/v3/
