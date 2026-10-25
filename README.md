@@ -23,7 +23,7 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Poster iklan Meta** | `posters/` | `posters/*.jpg` |
 | Rujukan & iklan | `reference/`, `ads/`, `iklan_meta_whatsapp.md` | — |
 
-**Video baru:** ikut skill `coway-video` (`.claude/skills/coway-video/SKILL.md`) — brief → skrip → VO dulu → render → review → `main`.
+**Projek baru:** ikut aliran skill dalam [`projek/README.md`](projek/README.md): `coway-riset` → `coway-persona-produk` → `coway-skrip` → `coway-video` → `coway-poster` → `coway-threads` → `coway-iklan`. Persona induk: [`research/persona.md`](research/persona.md).
 
 Skrip kongsi: `render.py`, `audio.py`, `mix.py`, `voiceover/`. Projek lama yang perlukan versi skrip
 berbeza guna salinannya sendiri: `render_neoplus.py` / `mix_neoplus.py` / `voiceover/generate_vo_neoplus.py`
