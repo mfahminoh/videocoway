@@ -6,10 +6,10 @@ Asal: video TikTok kreator lain (penyampai + footage Core Plus, 66 s), diberi us
 |---|---|---|---|
 | Skrip | ✅ | skrip.md | diluluskan 25/10 |
 | Storyboard + gambar | ✅ | storyboard.json, assets/img/coreplus-remake-01/ | 9 gambar Seedream (14 dijana, 5 ditolak) |
-| Video CP01 glow | ⏳ review | out/coreplus-remake-01/CP01_tangki-paling-besar-glow.mp4 | 57.4 s |
-| Video CP02 papercut | ⏳ review | out/coreplus-remake-01/CP02_tangki-paling-besar-paper.mp4 | 57.4 s |
-| Video CP03 mg 08-morph | ⏳ review | out/coreplus-remake-01/CP03_tangki-paling-besar-morph.mp4 | 57.4 s, `videos/CP03/index.html` ditulis tangan |
-| Review | ⏳ | https://claude.ai/artifact/Wnp8sPfHCpuQFUQ3Lyasjb | 3 video |
+| Video CP01 glow | ✅ | out/coreplus-remake-01/CP01_tangki-paling-besar-glow.mp4 | 57.4 s |
+| Video CP02 papercut | ✅ | out/coreplus-remake-01/CP02_tangki-paling-besar-paper.mp4 | 57.4 s |
+| Video CP03 mg 08-morph | ✅ | out/coreplus-remake-01/CP03_tangki-paling-besar-morph.mp4 | 57.4 s, `videos/CP03/index.html` ditulis tangan |
+| Review | ✅ | https://claude.ai/artifact/Wnp8sPfHCpuQFUQ3Lyasjb | 3 video diluluskan 25/10 |
 | Iklan | — | | CTA WhatsApp ejen |
 
 ## Keputusan
@@ -17,6 +17,8 @@ Asal: video TikTok kreator lain (penyampai + footage Core Plus, 66 s), diberi us
 - 25/10: gaya rawak `pilih_gaya.py`: glow, paper, mg:08-morph (kinetic/comic/coway dielak, dipakai neon-p1-01). (Claude)
 
 - 25/10: Gemini habis kuota harian audio (tier percuma) → skrip dari kapsyen; VO dijajar ikut jeda (`coway-remake/scripts/jajar_jeda.py`), semua build guna `--no-align`. (Claude)
+
+- 25/10: CP01–CP03 diluluskan. (user)
 
 ## Terbuka
 - [ ] User dengar VO: sebutan "Coway" / "Core Plus", dan masa kapsyen baris 01 (hook) & 07 (touch panel) yang ditanda ragu oleh penjajaran.
