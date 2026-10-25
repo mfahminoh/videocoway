@@ -9,7 +9,7 @@ Asal: video TikTok kreator lain (penyampai + footage Core Plus, 66 s), diberi us
 | Video CP01 glow | ⏳ review | out/coreplus-remake-01/CP01_tangki-paling-besar-glow.mp4 | 57.4 s |
 | Video CP02 papercut | ⏳ review | out/coreplus-remake-01/CP02_tangki-paling-besar-paper.mp4 | 57.4 s |
 | Video CP03 mg 08-morph | ⏳ review | out/coreplus-remake-01/CP03_tangki-paling-besar-morph.mp4 | 57.4 s, `videos/CP03/index.html` ditulis tangan |
-| Review | — | | |
+| Review | ⏳ | https://claude.ai/artifact/Wnp8sPfHCpuQFUQ3Lyasjb | 3 video |
 | Iklan | — | | CTA WhatsApp ejen |
 
 ## Keputusan
