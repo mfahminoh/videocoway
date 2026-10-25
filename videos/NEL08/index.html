@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>NEL08 · Liquid</title>
+<!-- Gaya mg 07-liquid (mg-styles-15): metaball smooth-min dengan cahaya 3D palsu (normal dari kecerunan medan, specular,
+     fresnel), titis yang memanjang → leher putus → jatuh → squash + titis sekunder 2–3 bingkai lewat, peralihan gelombang
+     dengan 3 bonjolan beza fasa, cecair bercantum menjadi perkataan (SDF teks), ease 'dilempar' cubic-bezier(.22,1,.36,1). -->
+<style>
+@font-face { font-family: Lilita; src: url(../../assets/fonts/LilitaOne-Regular.ttf); }
+@font-face { font-family: Nunito; font-weight: 600; src: url(../../assets/fonts/NunitoSans-600.ttf); }
+@font-face { font-family: Nunito; font-weight: 800; src: url(../../assets/fonts/NunitoSans-800.ttf); }
+@font-face { font-family: Nunito; font-weight: 900; src: url(../../assets/fonts/NunitoSans-900.ttf); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #04152A; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+canvas, svg { display: block; position: absolute; left: 0; top: 0; }
+.el { position: absolute; will-change: transform, opacity; transform-origin: 50% 50%; }
+#brand { left: 60px; top: 70px; font: 900 46px Nunito; letter-spacing: 1px; color: #FFF6E9; }
+#cap { left: 0; width: 1080px; top: 1520px; height: 170px; display: flex; align-items: center; justify-content: center; padding: 0 60px; }
+#capText { display: inline-block; background: #fff; color: #0B2A4A; font: 900 58px/1.12 Nunito; text-transform: uppercase; text-align: center;
+  padding: 14px 34px; border-radius: 40px; box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+#capText b { color: #0389C0; font-weight: 900; }
+</style></head>
+<body><div id="stage">
+<canvas id="gl" width="1080" height="1920"></canvas>
+<svg id="S" xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<div class="el" id="brand">coway</div>
+<div class="el" id="cap"><div id="capText"></div></div>
+</div>
+<script src="timing.js"></script>
+<script src="../lib/engine.js"></script>
+<script src="../lib/mg.js"></script>
+<script id="fs" type="x-shader/x-fragment">#version 300 es
+precision highp float;
+uniform vec2 uRes;
+uniform vec4 uL[48]; uniform int uNL;                     // bola cecair: x y r mat
+uniform vec4 uC[16]; uniform vec4 uCR[16]; uniform int uNC; // kapsul cecair: ax ay bx by | ra rb mat 0
+uniform vec4 uS[72]; uniform int uNS;                      // bola pepejal (logam, bakteria): x y r mat
+uniform vec4 uW[2]; uniform int uNW;                       // gelombang: front, arah (+1 naik dari bawah, -1 turun dari atas), amp, fasa
+uniform float uWM[2];
+uniform vec3 uD[12]; uniform vec3 uLi[12];                 // warna bahan: dalam (gelap) / cerah
+uniform vec3 uBg0; uniform vec3 uBg1;
+uniform sampler2D uTex; uniform vec4 uTxt;                 // campur A->B, grow, on, mat
+uniform float uKL; uniform float uKS;
+out vec4 o;
+
+void smin(inout float d, inout vec2 g, inout vec3 cd, inout vec3 cl, float d2, vec2 g2, int m, float k) {
+  float h = clamp(0.5 + 0.5 * (d2 - d) / k, 0.0, 1.0);
+  d = mix(d2, d, h) - k * h * (1.0 - h);
+  g = mix(g2, g, h); cd = mix(uD[m], cd, h); cl = mix(uLi[m], cl, h);
+}
+vec3 shade(float d, vec2 g, vec3 cd, vec3 cl, float B) {
+  float x = clamp(-d / B, 0.0, 1.0);
+  float s = min((1.0 - x) / sqrt(max(1e-4, 1.0 - (1.0 - x) * (1.0 - x))), 6.0);
+  vec3 n = normalize(vec3(normalize(g + 1e-6) * s, 1.0));
+  vec3 L = normalize(vec3(-0.45, -0.75, 0.8));
+  float dif = clamp(dot(n, L), 0.0, 1.0);
+  vec3 col = mix(cd, cl, 0.12 + 0.78 * dif);
+  float sp = pow(max(dot(n, normalize(L + vec3(0.0, 0.0, 1.0))), 0.0), 80.0) * 1.15;
+  float sp2 = pow(max(dot(n, normalize(normalize(vec3(0.7, 0.55, 0.5)) + vec3(0.0, 0.0, 1.0))), 0.0), 26.0) * 0.22;
+  float fr = pow(1.0 - n.z, 2.4) * 0.5;
+  return col + vec3(sp + sp2) + cl * fr;
+}
+float ta(vec2 p) { vec4 t = texture(uTex, p / uRes); return mix(t.r, t.g, uTxt.x); }
+float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+
+void main() {
+  vec2 p = vec2(gl_FragCoord.x, uRes.y - gl_FragCoord.y);
+  float r = length((p - vec2(540.0, 760.0)) / vec2(820.0, 1250.0));
+  vec3 col = mix(uBg0, uBg1, smoothstep(0.0, 1.15, r));
+
+  // ---- kumpulan cecair (bola + kapsul + teks), bercantum dengan smooth-min ----
+  float d = 1e5; vec2 g = vec2(0.0, -1.0); vec3 cd = vec3(0.0), cl = vec3(0.0);
+  for (int i = 0; i < 48; i++) { if (i >= uNL) break;
+    vec2 q = p - uL[i].xy; float l = max(length(q), 1e-3);
+    smin(d, g, cd, cl, l - uL[i].z, q / l, int(uL[i].w), uKL); }
+  for (int i = 0; i < 16; i++) { if (i >= uNC) break;
+    vec2 a = uC[i].xy, ba = uC[i].zw - a, pa = p - a;
+    float h = clamp(dot(pa, ba) / max(dot(ba, ba), 1e-3), 0.0, 1.0);
+    vec2 q = pa - ba * h; float l = max(length(q), 1e-3);
+    smin(d, g, cd, cl, l - mix(uCR[i].x, uCR[i].y, h), q / l, int(uCR[i].z), uKL); }
+  if (uTxt.z > 0.5) {
+    float a0 = ta(p);
+    float dt = (0.5 - a0) * 36.0 - uTxt.y;
+    vec2 gt = -vec2(ta(p + vec2(2.0, 0.0)) - ta(p - vec2(2.0, 0.0)), ta(p + vec2(0.0, 2.0)) - ta(p - vec2(0.0, 2.0)));
+    smin(d, g, cd, cl, dt, gt, int(uTxt.w), uKL);
+  }
+  // ---- kumpulan pepejal (logam, bakteria, virus) ----
+  float ds = 1e5; vec2 gs = vec2(0.0, -1.0); vec3 sd = vec3(0.0), sl = vec3(0.0);
+  for (int i = 0; i < 72; i++) { if (i >= uNS) break;
+    vec2 q = p - uS[i].xy; float l = max(length(q), 1e-3);
+    smin(ds, gs, sd, sl, l - uS[i].z, q / l, int(uS[i].w), uKS); }
+
+  float dm = min(d, ds);
+  col *= 1.0 - 0.32 * (1.0 - smoothstep(0.0, 70.0, dm));            // bayang lembut di sekeliling
+  col = mix(col, shade(d, g, cd, cl, 46.0), clamp(0.5 - d, 0.0, 1.0));
+  col = mix(col, shade(ds, gs, sd, sl, 30.0), clamp(0.5 - ds, 0.0, 1.0));
+
+  // ---- gelombang: hadapan beralun dengan 3 bonjolan beza fasa ----
+  for (int i = 0; i < 2; i++) { if (i >= uNW) break;
+    vec4 w = uW[i]; float x = p.x;
+    float f = w.x + w.z * (0.6 * sin(x * 0.0062 + w.w) + 0.3 * sin(x * 0.0131 + w.w * 1.7 + 1.3) + 0.16 * sin(x * 0.0213 + w.w * 2.3 + 2.1));
+    float fp = w.z * (0.6 * 0.0062 * cos(x * 0.0062 + w.w) + 0.3 * 0.0131 * cos(x * 0.0131 + w.w * 1.7 + 1.3) + 0.16 * 0.0213 * cos(x * 0.0213 + w.w * 2.3 + 2.1));
+    float k = sqrt(1.0 + fp * fp);
+    float dw = (f - p.y) * w.y / k;
+    vec2 gw = vec2(fp, -1.0) * w.y / k;
+    int m = int(uWM[i]);
+    col *= 1.0 - 0.35 * (1.0 - smoothstep(0.0, 60.0, dw));
+    col = mix(col, shade(dw, gw, uD[m], uLi[m], 90.0), clamp(0.5 - dw, 0.0, 1.0));
+  }
+  col += (hash(p) - 0.5) / 255.0;
+  o = vec4(col, 1.0);
+}
+</script>
+<script>
+window.READY = Promise.all([
+  document.fonts.load('400 100px Lilita'), document.fonts.load('900 60px Nunito'), document.fonts.load('800 40px Nunito'), document.fonts.load('600 26px Nunito'),
+  ...['../../assets/img/neon/lineup5.png', '../../assets/img/neon/nanotrap.png'].map(src => { const i = new Image(); i.src = src; return i.decode(); }),
+]).then(() => {
+const { svg, tf, inv, hump, squash } = MG;
+const Q = MG.cue;
+const W = 1080, H = 1920, G = 4200;                 // graviti px/s²
+const fling = MG.bezier(.22, 1, .36, 1);            // cecair dilempar, tak pernah seragam
+const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16) / 255);
+// bahan: [gelap, cerah]
+const MAT = [
+  ['#5A2508', '#E2893A'],  // 0 air karat
+  ['#0272B8', '#8FE3FF'],  // 1 air bersih (cerulean Coway)
+  ['#4E5560', '#F4F7FA'],  // 2 merkuri
+  ['#23272E', '#7E8796'],  // 3 plumbum
+  ['#4E1A0C', '#C65A2E'],  // 4 besi
+  ['#6F7A88', '#E3E9F0'],  // 5 aluminium
+  ['#1F6B1A', '#9BE36B'],  // 6 bakteria
+  ['#4F2380', '#C79BF2'],  // 7 virus
+  ['#031A33', '#0E5C9C'],  // 8 air dalam (gelombang)
+  ['#0B7A3A', '#5CF097'],  // 9 WhatsApp
+  ['#3A1606', '#A4521C'],  // 10 karat dalam (gelombang)
+  ['#01406F', '#1E9BE0'],  // 11 cerulean dalam (gelombang CTA)
+].map(([a, b]) => [hex(a), hex(b)]);
+const interior = m => MAT[m][0].map((v, i) => mix(v, MAT[m][1][i], .654));   // warna rata di tengah cecair (n = 0,0,1)
+const C = { CR: '#FFF6E9', BL: '#04A4E4', SKY: '#8FE3FF', AMB: '#FFB070', NAVY: '#0B2A4A', CO: '#FF5A4E', WA: '#25D366' };
+
+/* ================= WebGL ================= */
+const cvs = document.getElementById('gl');
+const gl = cvs.getContext('webgl2', { preserveDrawingBuffer: true, antialias: false });
+const prog = (() => {
+  const vs = gl.createShader(gl.VERTEX_SHADER);
+  gl.shaderSource(vs, '#version 300 es\nin vec2 a; void main(){ gl_Position = vec4(a, 0.0, 1.0); }'); gl.compileShader(vs);
+  const fs = gl.createShader(gl.FRAGMENT_SHADER);
+  gl.shaderSource(fs, document.getElementById('fs').textContent); gl.compileShader(fs);
+  if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(fs));
+  const pr = gl.createProgram(); gl.attachShader(pr, vs); gl.attachShader(pr, fs); gl.linkProgram(pr); gl.useProgram(pr); return pr;
+})();
+gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+const U = n => gl.getUniformLocation(prog, n);
+gl.uniform2f(U('uRes'), W, H);
+gl.uniform3fv(U('uD'), MAT.flatMap(m => m[0])); gl.uniform3fv(U('uLi'), MAT.flatMap(m => m[1]));
+gl.uniform1f(U('uKL'), 30); gl.uniform1f(U('uKS'), 16);
+// teks cecair: R = BERSIH, G = RM54 (alfa kabur → SDF anggaran)
+const TXT = { a: { s: 'BERSIH', y: 820, size: 250 }, b: { s: 'RM54', y: 860, size: 330 } };
+{
+  const draw = ({ s, y, size }) => { const c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d');
+    x.fillStyle = '#000'; x.fillRect(0, 0, W, H); x.filter = 'blur(13px)'; x.fillStyle = '#fff'; x.font = `400 ${size}px Lilita`;
+    x.textAlign = 'center'; x.textBaseline = 'alphabetic'; x.fillText(s, 540, y + size * .35); return x.getImageData(0, 0, W, H).data; };
+  const A = draw(TXT.a), B = draw(TXT.b), px = new Uint8Array(W * H * 4);
+  for (let i = 0; i < W * H; i++) { px[i * 4] = A[i * 4]; px[i * 4 + 1] = B[i * 4]; px[i * 4 + 3] = 255; }
+  gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, W, H, 0, gl.RGBA, gl.UNSIGNED_BYTE, px);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.uniform1i(U('uTex'), 0);
+}
+function renderGL(F) {
+  const pack = (arr, n, w) => { const a = new Float32Array(n * 4); arr.slice(0, n).forEach((v, i) => a.set(v.slice(0, 4), i * 4)); return a; };
+  gl.uniform4fv(U('uL'), pack(F.L, 48)); gl.uniform1i(U('uNL'), Math.min(F.L.length, 48));
+  gl.uniform4fv(U('uC'), pack(F.C, 16)); gl.uniform4fv(U('uCR'), pack(F.C.map(c => [c[4], c[5], c[6], 0]), 16)); gl.uniform1i(U('uNC'), Math.min(F.C.length, 16));
+  gl.uniform4fv(U('uS'), pack(F.S, 72)); gl.uniform1i(U('uNS'), Math.min(F.S.length, 72));
+  gl.uniform4fv(U('uW'), pack(F.W, 2)); gl.uniform1fv(U('uWM'), new Float32Array([F.W[0]?.[4] || 0, F.W[1]?.[4] || 0])); gl.uniform1i(U('uNW'), F.W.length);
+  gl.uniform3fv(U('uBg0'), F.bg[0]); gl.uniform3fv(U('uBg1'), F.bg[1]);
+  gl.uniform4fv(U('uTxt'), F.txt || [0, 0, 0, 1]);
+  gl.viewport(0, 0, W, H); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+}
+
+/* ================= fizik cecair ================= */
+/* titis dari mulut M: terbentuk (tF→tS), leher memanjang lalu putus pada tS, jatuh, squash + percikan di landY */
+function drip(F, M, tF, tS, landY, R, mat, t, { splash = true } = {}) {
+  const yS = M.y + R + 26, tL = tS + Math.sqrt(2 * (landY - yS) / G);
+  if (t < tF) return tL;
+  if (t < tS) {
+    const u = inv(tF, tS, t), r = mix(5, R, E.outQt(u)), cy = M.y + mix(6, R + 26, E.inOut(u));
+    F.C.push([M.x, M.y, M.x, cy, 13 + 4 * u, r, mat]); return tL;
+  }
+  const dt = t - tS, k = inv(tS, tS + .2, t);
+  if (k < 1) F.C.push([M.x, M.y, M.x, M.y + (yS - M.y) * .7 * (1 - E.outQt(k)), 12, 4 + 5 * (1 - k), mat]);   // leher putus & mengecut
+  F.L.push([M.x, M.y + 5 + 7 * Math.exp(-7 * dt) * Math.sin(dt * 34), 14, mat]);                              // manik di mulut melantun
+  if (t < tL) {
+    const y = yS + .5 * G * dt * dt, tail = Math.min(G * dt * .028, 80);
+    F.C.push([M.x, y - tail, M.x, y, R * .5, R, mat]);
+    const d2 = dt - .09; if (d2 > 0) F.L.push([M.x, yS + .5 * G * d2 * d2 - R * 1.3, R * .26, mat]);        // titis sekunder lewat 3 bingkai
+    return tL;
+  }
+  const ds = t - tL;
+  if (ds < .32) { const q = E.outQt(ds / .32); F.C.push([M.x - R * mix(1.5, 2.6, q), landY, M.x + R * mix(1.5, 2.6, q), landY, R * mix(.62, .06, q), R * mix(.62, .06, q), mat]); }
+  if (splash) [[-260, -950, 11], [230, -1050, 13], [-470, -640, 9], [420, -720, 10]].forEach(([vx, vy, r], i) => {
+    const s = ds - i * .03; if (s <= 0) return; const y = landY - 12 + vy * s + .5 * G * s * s;
+    if (y < landY + 12) F.L.push([M.x + vx * s, y, r, mat]);
+  });
+  return tL;
+}
+const WD = 1.05;
+const waveAt = (t, t0, dir, amp = 46) => {   // [front, amp, fasa] atau null
+  const u = inv(t0, t0 + WD, t); if (u <= 0 || u >= 1) return null;
+  const k = E.inOut(u) * .35 + fling(u) * .65;
+  return [dir > 0 ? mix(H + 160, -260, k) : mix(-160, H + 260, k), amp * (1 - .4 * u), t * 3.1 + t0];
+};
+const waveY = ([f, a, ph], x) => f + a * (.6 * Math.sin(x * .0062 + ph) + .3 * Math.sin(x * .0131 + ph * 1.7 + 1.3) + .16 * Math.sin(x * .0213 + ph * 2.3 + 2.1));
+const wave = (F, t, t0, dir, mat) => { const w = waveAt(t, t0, dir); if (w) F.W.push([w[0], dir, w[1], w[2], mat]); };
+/* klip babak SVG mengikut hadapan gelombang: rising (dir>0) = nampak di atas hadapan, falling = nampak di bawah */
+const defs = svg('defs', {}, document.getElementById('S'));
+let clipN = 0;
+function waveClip(g) { const id = 'wc' + clipN++; const path = svg('path', {}, svg('clipPath', { id }, defs)); g.setAttribute('clip-path', `url(#${id})`); return path; }
+function setClip(path, t, t0, dir) {
+  const w = waveAt(t, t0, dir);
+  if (!w) { path.setAttribute('d', t < t0 ? 'M0 0H1080V1920H0Z' : 'M0 0Z'); return; }
+  let d = dir > 0 ? 'M0 -10' : 'M0 1930';
+  for (let x = 0; x <= 1080; x += 30) d += ` L${x} ${waveY(w, x).toFixed(1)}`;
+  d += dir > 0 ? ' L1080 -10Z' : ' L1080 1930Z';
+  path.setAttribute('d', d);
+}
+const rng = MG.rng(8);
+const SEEDS = Array.from({ length: 16 }, () => ({ x: 90 + rng() * 900, y: 360 + rng() * 1050, r: 9 + rng() * 14, m: 2 + Math.floor(rng() * 4), ph: rng() * 6.28, sp: 14 + rng() * 22 }));
+
+/* ================= lapisan SVG ================= */
+const S = document.getElementById('S');
+const Gp = (p, a) => svg('g', a || {}, p);
+const vis = (e, v) => { e.style.display = v ? '' : 'none'; };
+const cv = document.createElement('canvas').getContext('2d');
+const width = (font, s) => { cv.font = font; return cv.measureText(s).width; };
+function letters(parent, str, x, y, size, fill, family = 'Lilita', weight = 400, track = 0, anchor = 'middle') {
+  const font = `${weight} ${size}px ${family}`, total = width(font, str) + track * (str.length - 1);
+  let cx = anchor === 'start' ? x : x - total / 2; const out = [];
+  for (const ch of str) { const w = width(font, ch), g = Gp(parent);
+    if (ch !== ' ') svg('text', { x: 0, y: size * .36, 'text-anchor': 'middle', fill, style: `font:${font}` }, g).textContent = ch;
+    out.push({ g, x: cx + w / 2, y: y - size * .36 }); cx += w + track; }
+  return out;
+}
+const text = (parent, str, x, y, size, fill, { family = 'Nunito', weight = 900, anchor = 'middle', track = 0, op = 1 } = {}) => {
+  const e = svg('text', { x, y, 'text-anchor': anchor, fill, 'fill-opacity': op, 'letter-spacing': track, style: `font:${weight} ${size}px ${family}` }, parent);
+  e.textContent = str; return e;
+};
+function popAt(g, t, t0, x, y, { amt = .14, s0 = 1 } = {}) {
+  if (t < t0) { tf(g, x, y, 0); return 0; }
+  const [s, k] = squash(t, t0, { amt }); tf(g, x, y, s0 * s * (1 - k * .6), s0 * s * (1 + k)); return s;
+}
+const rise = (e, t, t0, dy = 36, d = .4) => { const a = fling(inv(t0, t0 + d, t)); e.setAttribute('opacity', a); e.setAttribute('transform', `translate(0 ${mix(dy, 0, a)})`); return a; };
+const fadeOut = (e, t, t0, d = .25) => { const k = inv(t0, t0 + d, t); if (k > 0) e.setAttribute('opacity', +(e.getAttribute('opacity') ?? 1) * (1 - k)); };
+
+/* ---- babak 1: paip lama ---- */
+const B1 = Gp(S), MOUTH = { x: 900, y: 490 };
+const pipe = Gp(B1);
+svg('path', { d: 'M-60 330 H860 Q900 330 900 370 V470', fill: 'none', stroke: '#5F666F', 'stroke-width': 96, 'stroke-linejoin': 'round' }, pipe);
+svg('path', { d: 'M-60 312 H850', fill: 'none', stroke: '#8E97A1', 'stroke-width': 18, 'stroke-linecap': 'round', 'stroke-opacity': .7 }, pipe);
+[[120, 304, 36, 22], [420, 350, 28, 16], [700, 318, 44, 20], [890, 410, 20, 30]].forEach(([x, y, rx, ry]) => svg('ellipse', { cx: x, cy: y, rx, ry, fill: '#8B3A12', 'fill-opacity': .85 }, pipe));
+[240, 600].forEach(x => svg('rect', { x: x - 22, y: 270, width: 44, height: 120, rx: 8, fill: '#4B5159' }, pipe));
+svg('rect', { x: 836, y: 452, width: 128, height: 40, rx: 10, fill: '#4B5159' }, pipe);
+const t1a = text(B1, 'RUMAH LAMA,', 80, 700, 62, C.CR, { anchor: 'start', track: 3 });
+const t1b = letters(B1, 'PAIP LAMA?', 80, 860, 132, C.CR, 'Lilita', 400, 2, 'start');
+const t1c = text(B1, 'RAMAI TAK TAHU PASAL NI.', 80, 960, 44, C.AMB, { anchor: 'start', weight: 800, track: 2 });
+
+/* ---- babak 2: dalam air karat ---- */
+const B2 = Gp(S);
+const bubbles = Array.from({ length: 14 }, (_, i) => ({ e: svg('circle', { r: 6 + (i * 7) % 14, fill: 'none', stroke: C.CR, 'stroke-width': 3, 'stroke-opacity': .35 }, B2), x: 60 + (i * 137) % 960, sp: 90 + (i * 53) % 120, ph: i * 1.7 }));
+const t2a = text(B2, 'AIR BOLEH BAWA', 540, 520, 58, C.CR, { track: 4 });
+const t2b = letters(B2, 'LOGAM BERAT', 540, 680, 150, '#FFC48A');
+const t2c = text(B2, 'DARI PAIP & TANGKI', 540, 790, 48, C.CR, { weight: 800, track: 3 });
+const ELS = [
+  { k: 'hg', sym: 'Hg', name: 'MERKURI', m: 2, x: 300, y: 690, ink: '#1E2530', src: 3 },
+  { k: 'pb', sym: 'Pb', name: 'PLUMBUM', m: 3, x: 780, y: 690, ink: C.CR, src: 7 },
+  { k: 'fe', sym: 'Fe', name: 'BESI', m: 4, x: 300, y: 1110, ink: C.CR, src: 11 },
+  { k: 'al', sym: 'Al', name: 'ALUMINIUM', m: 5, x: 780, y: 1110, ink: '#1E2530', src: 14 },
+].map(e => ({ ...e, sg: (() => { const g = Gp(B2); text(g, e.sym, 0, 40, 118, e.ink, { family: 'Lilita', weight: 400 }); return g; })(),
+  ng: (() => { const g = Gp(B2); text(g, e.name, 0, 0, 42, C.CR, { track: 3 }); return g; })() }));
+
+/* ---- babak 3: Neon + Nanotrap ---- */
+const B3 = Gp(S);
+const prod = Gp(B3); svg('image', { href: '../../assets/img/neon/lineup5.png', x: -500, y: -650, width: 1000, height: 1000 }, prod);
+const t3a = letters(B3, 'COWAY NEON', 540, 990, 120, C.CR);
+const t3b = text(B3, 'GUNA PENAPIS', 90, 1120, 52, C.CR, { anchor: 'start', track: 3 });
+const t3c = letters(B3, 'NANOTRAP', 90, 1262, 138, C.SKY, 'Lilita', 400, 2, 'start');
+const filt = Gp(B3); svg('image', { href: '../../assets/img/neon/nanotrap.png', x: -100, y: -190, width: 200, height: 378 }, filt);
+
+/* ---- babak 4: penapisan ---- */
+const B4 = Gp(S), MEM = 930;
+const mem = Gp(B4);
+svg('rect', { x: 60, y: MEM, width: 960, height: 60, rx: 30, fill: '#FFFFFF', 'fill-opacity': .1, stroke: C.SKY, 'stroke-width': 4 }, mem);
+for (let i = 0; i < 46; i++) for (let j = 0; j < 2; j++) svg('circle', { cx: 86 + i * 20.4 + j * 10, cy: MEM + 20 + j * 20, r: 4.2, fill: C.SKY, 'fill-opacity': .55 }, mem);
+const memLab = text(B4, 'NANOTRAP', 1000, MEM + 100, 34, C.SKY, { anchor: 'end', track: 4 });
+const t4h = text(B4, 'DITAPIS:', 60, 360, 50, C.CR, { anchor: 'start', track: 4 });
+const CHIPS = [['LOGAM BERAT', 'catch1'], ['BAKTERIA', 'catch2'], ['VIRUS', 'catch3']].map(([s, k], i) => {
+  const g = Gp(B4), w = width('900 40px Nunito', s) + 110;
+  svg('rect', { x: 0, y: -36, width: w, height: 72, rx: 36, fill: C.CR }, g);
+  svg('circle', { cx: 38, cy: 0, r: 20, fill: C.CO }, g);
+  svg('path', { d: 'M30 -8 L46 8 M46 -8 L30 8', stroke: '#fff', 'stroke-width': 6, 'stroke-linecap': 'round' }, g);
+  text(g, s, 72, 14, 40, C.NAVY, { anchor: 'start' }); return { g, k, y: 440 + i * 92 };
+});
+const DROPX = [480, 640, 800, 560, 720, 880, 520, 680, 840, 600, 760, 500, 820];
+const KIND = [3, 4, 5, 2, 4, 3, 5, 6, 6, 7, 7, 7, 7];
+const REST = DROPX.map((_, k) => 150 + k * 64);
+
+/* ---- babak 5–6: BERSIH → RM54 ---- */
+const B5 = Gp(S);
+const t5a = text(B5, 'AIR', 540, 600, 70, C.CR, { track: 8 });
+const t5b = text(B5, 'TERUS DARI DAPUR', 540, 1040, 54, C.CR, { track: 4 });
+const B6 = Gp(S);
+const was = Gp(B6); text(was, 'HARGA ASAL', 0, -120, 50, C.CR, { track: 4, op: .75 }); text(was, 'RM104', 0, 20, 140, C.CR, { family: 'Lilita', weight: 400 });
+const strike = svg('rect', { x: 0, y: -11, width: 0, height: 22, rx: 11, fill: C.CO }, Gp(B6));
+const t6now = text(B6, 'PROMOSI', 540, 640, 50, C.SKY, { track: 6 });
+const t6mo = text(B6, 'SEBULAN', 540, 1040, 60, C.CR, { track: 6 });
+const pill = Gp(B6); svg('rect', { x: -340, y: -54, width: 680, height: 108, rx: 54, fill: C.CR }, pill);
+text(pill, '+ REBAT RM20 × 7 BULAN', 0, 21, 56, C.NAVY, { family: 'Lilita', weight: 400 });
+const SLOT = Array.from({ length: 7 }, (_, i) => ({ x: 150 + i * 130, y: 1310 }));
+const slots = SLOT.map((s, i) => { const g = Gp(B6, { transform: `translate(${s.x} ${s.y})` });
+  svg('circle', { cx: 0, cy: 0, r: 46, fill: 'none', stroke: C.SKY, 'stroke-width': 4, 'stroke-opacity': .5, 'stroke-dasharray': '8 8' }, g);
+  const n = text(g, String(i + 1), 0, 16, 46, C.NAVY, { family: 'Lilita', weight: 400 }); return n; });
+
+/* ---- babak 7: CTA ---- */
+const B7 = Gp(S);
+const card = Gp(B7);
+svg('rect', { x: -450, y: -280, width: 900, height: 560, rx: 48, fill: '#FFFFFF' }, card);
+const cclip = svg('clipPath', { id: 'cc' }, svg('defs', {}, S)); svg('rect', { x: -450, y: -280, width: 900, height: 560, rx: 48 }, cclip);
+svg('image', { href: '../../assets/img/neon/lineup5.png', x: -470, y: -490, width: 940, height: 940 }, Gp(card, { 'clip-path': 'url(#cc)' }));
+const t7 = letters(B7, 'COWAY NEON', 540, 990, 122, C.CR);
+const TICKS = ['PROMOSI RM54 SEBULAN*', '+ REBAT RM20 × 7 BULAN*', 'PEMASANGAN PERCUMA'];
+const ticks = TICKS.map(s => { const g = Gp(B7), w = width('800 42px Nunito', s);
+  svg('circle', { cx: -w / 2 - 34, cy: -14, r: 20, fill: C.CR }, g);
+  svg('path', { d: `M${-w / 2 - 44} -14 l7 8 l14 -15`, fill: 'none', stroke: '#0389C0', 'stroke-width': 6, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
+  text(g, s, 18, 0, 42, C.CR, { weight: 800 }); return g; });
+const BTN = { x0: 330, x1: 750, y: 1300, r: 64 };
+const btnT = Gp(B7);
+svg('circle', { cx: -212, cy: 0, r: 28, fill: 'none', stroke: '#fff', 'stroke-width': 7 }, btnT);
+svg('path', { d: 'M-234 24 L-229 9 L-219 18 Z', fill: '#fff' }, btnT);
+text(btnT, 'WhatsApp saya', 52, 21, 58, '#fff', { family: 'Lilita', weight: 400 });
+const ripple = svg('ellipse', { cx: 540, cy: 1478, rx: 0, ry: 0, fill: 'none', stroke: C.CR, 'stroke-width': 4 }, B7);
+const fine = Gp(B7);
+text(fine, '*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan.', 540, 1745, 26, C.CR, { weight: 600, op: .9 });
+text(fine, 'Tertakluk pada terma & promosi semasa Coway.', 540, 1780, 26, C.CR, { weight: 600, op: .9 });
+
+const clip1 = waveClip(B1), clip2 = waveClip(B2), clip6 = waveClip(B6), clip5 = waveClip(B5);
+/* ================= masa babak ================= */
+const T = {
+  w1: Q('wave1'), w2: Q('wave2'), w3: Q('wave3'), WD,
+};
+const BG = [[0.06, 0.2, 0.34], [0.016, 0.07, 0.14]];         // biru gelap
+const bgOf = m => { const c = interior(m); return [c.map(v => v * 1.12), c.map(v => v * .5)]; };
+const BG_RUST = bgOf(10), BG_DEEP = bgOf(8), BG_CTA = bgOf(11);
+function background(t) {
+  // selepas gelombang lengkap, latar = warna dalam gelombang itu, lalu lembut ke kecerunan
+  const steps = [[T.w1, 10, BG_RUST], [T.w2, 8, BG_DEEP], [T.w3, 11, BG_CTA]];
+  let bg = BG;
+  for (const [t0, m, target] of steps) {
+    const e = t0 + T.WD; if (t < e) break;
+    const flat = interior(m), k = E.inOut(inv(e, e + .5, t));
+    bg = [flat.map((v, i) => mix(v, target[0][i], k)), flat.map((v, i) => mix(v, target[1][i], k))];
+  }
+  return bg;
+}
+
+function frame(t) {
+  const F = { L: [], C: [], S: [], W: [], bg: background(t), txt: null };
+  const on = (a, b) => t >= a && t < b;
+
+  /* ---- 1: paip, dua titis, lopak ---- */
+  const s1 = on(-9, T.w1 + T.WD);
+  vis(B1, s1);
+  if (s1) {
+    const pin = fling(inv(Q('pipe'), Q('pipe') + .5, t));
+    pipe.setAttribute('transform', `translate(${mix(-1000, 0, pin)} 0)`);
+    const POOL = 1330;
+    const l1 = drip(F, MOUTH, Q('form1'), Q('snap1'), POOL, 46, 0, t);
+    const l2 = drip(F, MOUTH, Q('form2'), Q('snap2'), POOL, 40, 0, t);
+    const lvl = .55 * E.outQt(inv(l1, l1 + .5, t)) + .45 * E.outQt(inv(l2, l2 + .5, t));
+    for (let i = 0; i < 13; i++) { const x = 900 + (i - 6) * 40, rr = (10 + 44 * lvl) * (1 - Math.abs(i - 6) / 8.5);
+      if (lvl > 0) F.L.push([x, POOL + 40 - 5 * Math.sin(t * 4 + i), rr + 3 * Math.sin(t * 3 + i * 1.3) * lvl, 0]); }
+    t1b.forEach((l, i) => popAt(l.g, t, Q('title') + i * .03, l.x, l.y, { amt: .2 }));
+    rise(t1a, t, Q('title') - .15); rise(t1c, t, Q('sub'));
+    setClip(clip1, t, T.w1, 1);
+    wave(F, t, T.w1, 1, 10);
+  }
+
+  /* ---- 2: zarah logam dalam air karat + 4 unsur ---- */
+  const s2 = on(T.w1 + .25, T.w2 + T.WD);
+  vis(B2, s2);
+  if (s2) {
+    const fade = 1 - inv(Q('hg') - .3, Q('hg') + .2, t);   // zarah kecil mengecut bila unsur besar masuk
+    SEEDS.forEach((s, i) => { if (ELS.some(e => e.src === i)) return;
+      const y = s.y - s.sp * (t - T.w1) + 10 * Math.sin(t * 1.3 + s.ph);
+      const r = s.r * fling(inv(T.w1 + .25 + i * .03, T.w1 + .7 + i * .03, t)) * (.35 + .65 * fade);
+      if (r > .5) F.S.push([s.x + 14 * Math.sin(t * .9 + s.ph), y, r, s.m]); });
+    ELS.forEach((e, i) => {
+      const s = SEEDS[e.src], t0 = Q(e.k), u = inv(t0, t0 + .5, t), k = fling(u);
+      const x0 = s.x + 14 * Math.sin(t0 * .9 + s.ph), y0 = s.y - s.sp * (t0 - T.w1);
+      const pre = s.r * fling(inv(T.w1 + .25, T.w1 + .7, t));
+      if (t < t0) { tf(e.sg, 0, 0, 0); e.ng.setAttribute('opacity', 0); F.S.push([s.x + 14 * Math.sin(t * .9 + s.ph), s.y - s.sp * (t - T.w1) + 10 * Math.sin(t * 1.3 + s.ph), pre, e.m]); return; }
+      const x = mix(x0, e.x, k), y = mix(y0, e.y, k) + 6 * Math.sin(t * 2 + i);
+      const wob = 1 + .1 * Math.exp(-5 * (t - t0 - .5)) * Math.sin((t - t0 - .5) * 22) * (u >= 1);
+      const r = mix(pre, 150, E.outQt(u)) * wob;
+      F.S.push([x, y, r, e.m]);
+      [.08, .15].forEach((lag, j) => { const k2 = fling(inv(t0 + lag, t0 + .5 + lag, t)); if (k2 < 1) F.S.push([mix(x0, e.x, k2), mix(y0, e.y, k2), (26 - j * 9) * (1 - k2 * .6), e.m]); });
+      popAt(e.sg, t, t0 + .2, x, y, { amt: .12 });
+      const a = rise(e.ng, t, t0 + .3); e.ng.setAttribute('transform', `translate(${e.x} ${e.y + 196 - (1 - a) * -20})`);
+    });
+    bubbles.forEach(b => { const y = 1500 - ((t - T.w1) * b.sp + b.ph * 90) % 1300; b.e.setAttribute('cx', b.x + 12 * Math.sin(t * 2 + b.ph)); b.e.setAttribute('cy', y); });
+    rise(t2a, t, Q('air')); rise(t2c, t, Q('paip'));
+    t2b.forEach((l, i) => popAt(l.g, t, Q('logam') + i * .03, l.x, l.y, { amt: .2 }));
+    // tajuk naik ke atas bila unsur masuk
+    const up = fling(inv(Q('hg') - .35, Q('hg') + .1, t));
+    t2a.setAttribute('opacity', 1 - up); t2c.setAttribute('opacity', +(t2c.getAttribute('opacity')) * (1 - up));
+    t2b.forEach(l => { const g = l.g, tr = g.getAttribute('transform'); if (tr) g.setAttribute('transform', `translate(0 ${-330 * up}) ` + tr); });
+    setClip(clip2, t, T.w2, -1);
+    wave(F, t, T.w2, -1, 8);
+  }
+
+  /* ---- 3: Neon + Nanotrap ---- */
+  const s3 = on(T.w2 + .3, Q('filter') + .1);
+  vis(B3, s3);
+  if (s3) {
+    const n0 = Q('neon'), ex = Q('filter') - .35, o = fling(inv(ex, ex + .35, t));
+    popAt(prod, t, n0, 540, 770 - 900 * o, { amt: .1 });
+    for (let i = 0; i < 9; i++) { const dx = (i - 4) * 95, t0 = n0 + Math.abs(i - 4) * .04, u = fling(inv(t0, t0 + .45, t));
+      if (u > 0) F.L.push([540 + dx, 800 + 30 * Math.abs(i - 4) ** .5 - 900 * o, (66 - Math.abs(i - 4) * 9) * u * (1 + .08 * Math.sin(t * 3 + i)), 1]); }
+    [[-1, -620], [1, -700], [-.5, -820], [.6, -560]].forEach(([vx, vy], i) => { const s = t - n0 - .1 - i * .04; if (s <= 0) return;
+      const y = 770 + vy * s + .5 * G * s * s; if (y < 800) F.L.push([540 + vx * 380 * s, y, 12 - i * 2, 1]); });
+    t3a.forEach((l, i) => popAt(l.g, t, n0 + .2 + i * .03, l.x, l.y - 900 * o, { amt: .2 }));
+    rise(t3b, t, Q('nano') - .25); t3c.forEach((l, i) => popAt(l.g, t, Q('nano') + i * .03, l.x, l.y, { amt: .2 }));
+    popAt(filt, t, Q('nano') + .1, 905, 1230, { amt: .12 });
+    B3.setAttribute('opacity', 1 - inv(ex, ex + .3, t));
+  }
+
+  /* ---- 4: membran Nanotrap ---- */
+  const f0 = Q('filter'), s4 = on(f0 - .9, Q('bersih') + .5);
+  vis(B4, s4);
+  let clean = 0;
+  if (s4) {
+    const memIn = fling(inv(f0, f0 + .45, t)), out4 = inv(Q('bersih') - .35, Q('bersih') + .1, t);
+    mem.setAttribute('transform', `translate(540 0) scale(${memIn * (1 - out4)} 1) translate(-540 0)`);
+    memLab.setAttribute('opacity', memIn * (1 - out4)); rise(t4h, t, f0 + .2); fadeOut(t4h, t, Q('bersih') - .35);
+    CHIPS.forEach(c => { const a = fling(inv(Q(c.k), Q(c.k) + .4, t)); c.g.setAttribute('transform', `translate(${mix(-500, 60, a)} ${c.y})`); c.g.setAttribute('opacity', 1 - out4); });
+    const POOL2 = 1400, FALL = Math.sqrt(2 * (MEM - 10 + 80) / G);
+    DROPX.forEach((x, k) => {
+      const te = f0 - .55 + k * .26, dt = t - te; if (dt < 0) return;
+      const y = -80 + .5 * G * dt * dt, v = G * dt, tail = Math.min(v * .028, 70), kind = KIND[k];
+      const tHit = te + FALL, restX = REST[k];
+      // zarah: tersangkut di atas membran
+      const pr = kind >= 6 ? 17 : 19;
+      let py = Math.min(y, MEM - pr - 4);
+      if (t > tHit) py = MEM - pr - 4 - 16 * Math.exp(-6 * (t - tHit)) * Math.abs(Math.sin((t - tHit) * 14));
+      const sh = 1 - out4;
+      if (sh > 0) {
+        const px = t > tHit ? mix(x, restX, fling(inv(tHit, tHit + .3, t))) : x, pdrop = out4 * 400;
+        F.S.push([px, py + pdrop, pr * sh, kind]);
+        if (kind === 6) for (let j = 0; j < 3; j++) { const a = t * 1.5 + j * 2.1 + k; F.S.push([px + 14 * Math.cos(a), py + pdrop + 14 * Math.sin(a), 9 * sh, 6]); }
+        if (kind === 7) for (let j = 0; j < 6; j++) { const a = j * 1.047 + t * .8; F.S.push([px + 24 * Math.cos(a), py + pdrop + 24 * Math.sin(a), 6 * sh, 7]); }
+      }
+      // cecair: karat di atas, terhimpit melalui membran, keluar bersih di bawah
+      if (y < POOL2) {
+        const through = y > MEM + 30, squeeze = y > MEM - 20 && y < MEM + 80 ? .55 : 1;
+        if (y < POOL2 - 10) F.C.push([x, y - tail, x, y, 24 * squeeze, 44 * squeeze, through ? 1 : 0]);
+      }
+      if (t > te + Math.sqrt(2 * (POOL2 + 80) / G)) clean += 1;
+    });
+    // kolam bersih di bawah membran
+    const lv = Math.min(clean / 13, 1) * (1 - fling(inv(Q('bersih') - .1, Q('bersih') + .45, t)));
+    for (let i = 0; i < 11; i++) { const x = 400 + i * 52, rr = (10 + 44 * lv) * (1 - Math.abs(i - 5) / 8);
+      const up = fling(inv(Q('bersih') - .1, Q('bersih') + .5, t));
+      if (lv > .01 || up > 0) F.L.push([mix(x, 540 + (x - 540) * .3, up), mix(1440 - 6 * Math.sin(t * 4 + i), 860, up), rr * (1 - up * .7), 1]); }
+  }
+
+  /* ---- 5–6: teks cecair BERSIH → RM54 ---- */
+  const b0 = Q('bersih'), s5 = on(b0 - .15, T.w3 + T.WD);
+  vis(B5, on(b0 - .1, Q('was'))); vis(B6, on(Q('was') - .1, T.w3 + T.WD));
+  if (s5) {
+    const g = fling(inv(b0 - .1, b0 + .6, t)), m = E.inOut(inv(Q('now'), Q('now') + .6, t));
+    F.txt = [m, mix(-70, 0, g) + 26 * Math.sin(Math.PI * m) + 3 * Math.sin(t * 2.4), 1, 1];   // menebal di tengah morph supaya jisim kekal
+    rise(t5a, t, b0 + .1); rise(t5b, t, Q('dapur')); [t5a, t5b].forEach(e => fadeOut(e, t, Q('was') - .3));
+    if (t < Q('now')) drip(F, { x: 600, y: 900 }, Q('form3'), Q('snap3'), 1380, 22, 1, t, { splash: false });
+    // harga
+    const w0 = Q('was'), st = Q('strike'), dim = E.inOut(inv(st + .1, st + .45, t));
+    if (t < w0) tf(was, 540, 480, 0); else { const [s, k] = squash(t, w0, { amt: .12 }); tf(was, 540, mix(480, 420, dim), s * mix(1, .8, dim) * (1 - k * .6), s * mix(1, .8, dim) * (1 + k)); }
+    was.setAttribute('opacity', mix(1, .55, dim));
+    tf(strike.parentNode, 540 - 200 * mix(1, .8, dim), mix(470, 418, dim), 1, 1, -6);
+    strike.setAttribute('width', 400 * mix(1, .8, dim) * E.inOut(inv(st, st + .26, t)));
+    rise(t6now, t, Q('now') - .25); rise(t6mo, t, Q('now') + .45);
+    popAt(pill, t, Q('rebate'), 540, 1160, { amt: .14 });
+    SLOT.forEach((s, i) => { const t0 = Q('months') + i * .11;
+      slots[i].parentNode.setAttribute('opacity', fling(inv(Q('rebate') + .2 + i * .03, Q('rebate') + .5 + i * .03, t)));
+      if (t >= t0) { const [sc, k] = squash(t, t0, { amt: .25 }); F.L.push([s.x, s.y + 40 * k, 40 * sc, 1]); }
+      slots[i].setAttribute('opacity', t >= t0 + .1 ? 1 : 0); });
+    // semua tenggelam bila gelombang CTA datang
+    setClip(clip6, t, T.w3, 1); setClip(clip5, t, T.w3, 1);
+    if (t > T.w3 + WD) F.txt = null;
+    wave(F, t, T.w3, 1, 11);
+  }
+
+  /* ---- 7: CTA, butang cecair, titis terakhir ---- */
+  const c0 = Q('card'), s7 = t >= T.w3 + .3;
+  vis(B7, s7);
+  if (s7) {
+    popAt(card, t, c0, 540, 600 + (t > c0 + .8 ? 6 * Math.sin((t - c0) * 2.2) : 0), { amt: .1 });
+    t7.forEach((l, i) => popAt(l.g, t, c0 + .15 + i * .03, l.x, l.y, { amt: .2 }));
+    ticks.forEach((g, i) => { const a = fling(inv(c0 + .45 + i * .1, c0 + .85 + i * .1, t)); g.setAttribute('transform', `translate(${mix(-400, 540, a)} ${1072 + i * 58})`); });
+    // dua titis hijau terbang masuk, bercantum, lalu meregang jadi butang kapsul
+    const b = Q('button'), u = inv(b - .35, b + .05, t), st = E.pop(inv(b + .05, b + .5, t));
+    if (t >= b - .35) {
+      const bob = t > b + .8 ? 5 * Math.sin((t - b) * 4) : 0;
+      if (u < 1) { const k = fling(u); F.L.push([mix(-80, 520, k), BTN.y + bob, 58, 9]); F.L.push([mix(1160, 560, k), BTN.y + bob, 58, 9]); }
+      else F.C.push([mix(520, BTN.x0, st), BTN.y + bob, mix(560, BTN.x1, st), BTN.y + bob, BTN.r * mix(.95, 1, st), BTN.r * mix(.95, 1, st), 9]);
+      btnT.setAttribute('transform', `translate(540 ${BTN.y + bob}) scale(${clamp(st)})`);
+      const tl = drip(F, { x: 540, y: BTN.y + BTN.r - 8 + bob }, Q('form4'), Q('snap4'), 1478, 16, 9, t, { splash: false });
+      const rp = inv(tl, tl + .9, t); ripple.setAttribute('rx', 160 * E.outQt(rp)); ripple.setAttribute('ry', 26 * E.outQt(rp)); ripple.setAttribute('stroke-opacity', rp > 0 ? .7 * (1 - rp) : 0);
+    } else btnT.setAttribute('transform', 'scale(0)');
+    fine.setAttribute('opacity', E.out(inv(c0, c0 + .4, t)));
+  }
+  renderGL(F);
+}
+MG.run(frame);
+});
+</script>
+</body></html>

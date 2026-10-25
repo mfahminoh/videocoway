@@ -2,7 +2,9 @@
 
 Satu video = satu halaman `videos/<ID>/index.html` yang ditulis tangan dan melukis setiap bingkai daripada masa `t`, dalam satu gaya motion design yang dikenali.
 Gaya, prompt asal dan rubrik datang dari [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15) (MIT), disalin ke [`reference/mg-styles-15/`](../../../../reference/mg-styles-15/README.md).
-Contoh siap: **`videos/NL01FV/`** (Flat Vector, VO NL01 "3 sebab ramai pilih Neon") → `out/mg/NL01FV_3-sebab-neon-flat-vector.mp4`.
+Contoh siap:
+- **`videos/NL01FV/`**: Flat Vector, VO NL01 "3 sebab ramai pilih Neon" → `out/mg/NL01FV_3-sebab-neon-flat-vector.mp4` (SVG).
+- **`videos/NEL08/`**: Liquid, VO NE08 "logam berat, paip lama" → `out/mg/NEL08_logam-berat-liquid.mp4` (WebGL2 metaball).
 
 Berbanding `scenes`/`hype` (templat elemen JSON), `mg` lebih lambat dibina (±400–600 baris setiap video), tapi rupa visualnya jauh lebih kuat dan berbeza.
 Untuk satu batch, bina video pertama dalam gaya itu, dapatkan kelulusan, kemudian salin `index.html` itu ke video lain dalam batch dan tukar teks, cue dan babak.
@@ -12,7 +14,7 @@ Untuk satu batch, bina video pertama dalam gaya itu, dapatkan kelulusan, kemudia
 | Gaya (`"mg"`) | Sesuai untuk Coway | Contoh sudut |
 |---|---|---|
 | `01-flat-vector` ✅ | Listicle, "3 sebab", ciri, harga | **NL01FV** |
-| `07-liquid` ✅ | Penapis air: titisan, aliran, penapisan, "air bersih" | Neon/Villaem: titis → gelas → penapis |
+| `07-liquid` ✅ | Penapis air: titisan, aliran, penapisan, "air bersih" | **NEL08**: titis karat → logam → membran Nanotrap → BERSIH |
 | `19-paperclip` ✅ | Explainer fakta: apa dalam air paip, perbandingan, carta | RO vs Nanotrap, kos sehari |
 | `08-morph` ✅ | Satu bentuk berubah sepanjang video | titis → gelas → produk → harga |
 | `03-isometric` ✅ | Rumah/dapur isometrik: pemasangan, servis, aliran udara | "Technician datang ke rumah" |
@@ -70,10 +72,12 @@ window.READY = Promise.all([document.fonts.load('400 100px Lilita'), ...]).then(
 - `#cap > #capText` dalam halaman = kapsyen VO automatik (gayakan ikut gaya; `<b>` = sorotan). Tiada `#cap` = tiada kapsyen.
 - Imej: laluan relatif dari `videos/<ID>/` (`../../assets/img/...`). Pastikan sudah dimuat sebelum `READY` selesai.
 - Pembantu `mg.js`: `E.pop` (cubic-bezier .34,1.56,.64,1), `E.outQt`, `E.outX`, `E.inB`; `MG.squash(t, t0, {amt})` → `[skala, squash]` untuk pop spring dengan squash & stretch; `MG.spring`, `MG.inv`, `MG.hump`, `MG.svg`, `MG.tf`.
+- **WebGL** (gaya cecair, kaca, aurora, HUD): kanvas `<canvas>` di bawah overlay SVG, dengan `preserveDrawingBuffer: true` supaya tangkapan skrin dapat bingkai. Chromium headless guna SwiftShader (CPU), jadi render ±0.5–1 s/bingkai. Lukis WebGL dalam fungsi `draw(t)` yang sama.
+- Corak dalam NEL08 yang boleh diguna semula: shader metaball (bola + kapsul + teks SDF, `smin` yang turut mencampur warna dan kecerunan, cahaya specular + fresnel), `drip()` (titis terbentuk → leher putus → jatuh → squash + percikan + titis sekunder), `wave()` + `setClip()` (gelombang beralun dan klip SVG yang ikut hadapan gelombang), teks cecair dari kanvas kabur (BERSIH → RM54 morph).
 - Corak dalam NL01FV yang boleh diguna semula: **shape wipe** (bulatan warna + `clipPath` yang sama bagi babak seterusnya, jadi tiada crossfade), `letters()` (huruf pop berselang), `popAt()` (pop dengan paksi), lukisan Neon rata `neon()`.
 
 ## Kos
 
-NL01FV (26 s): ±500 baris HTML/JS, 4 pusingan stills, render 48 s (`--jobs 4`). Untuk 10 video dalam satu gaya, kebanyakan kod boleh diguna semula; babak yang berubah ialah kandungan, bukan enjin.
+NL01FV (26 s, SVG): ±500 baris HTML/JS, 4 pusingan stills, render 48 s (`--jobs 4`). NEL08 (31 s, WebGL): ±550 baris, 4 pusingan stills, render lebih lama kerana shader berjalan atas CPU. Untuk 10 video dalam satu gaya, kebanyakan kod boleh diguna semula; babak yang berubah ialah kandungan, bukan enjin.
 
 Idea prompt lain (703 video Opus, termasuk iklan produk 9:16 dan explainer): [`reference/opus-video-prompts.md`](../../../../reference/opus-video-prompts.md).
