@@ -67,6 +67,9 @@ def prep(vid, align=True):
     R = Resolver(segs)
     vo_end = segs[-1]["b"]
     dur = round(OFF + vo_end + TAIL, 2)
+    caps = [[g["a"], g["b"], l.get("cap", l["text"])] for g, l in zip(segs, lines)]
+    if spec.get("player") == "mg":
+        return prep_mg(vid, d, spec, segs, caps, R, round(OFF + vo_end + spec.get("tail", TAIL), 2))
 
     # babak
     scenes = []
@@ -154,12 +157,33 @@ def prep(vid, align=True):
     if not any(s[0] == "impact" for s in sfx):
         sfx.insert(0, ["impact", segs[0]["b"], .3])
 
-    caps = [[g["a"], g["b"], l.get("cap", l["text"])] for g, l in zip(segs, lines)]
     V = {"off": OFF, "dur": dur, "lines": caps, "sfx": sfx, "bpm": spec.get("bpm", 100)}
     (d / "timing.js").write_text("window.V = " + json.dumps(V, ensure_ascii=False, indent=1) + ";\n")
     (d / "spec.js").write_text("window.SPEC = " + json.dumps({"scenes": scenes, "els": els, "clips": clips, **{k: spec[k] for k in PASS if k in spec}}, ensure_ascii=False, indent=1) + ";\n")
     (d / "index.html").write_text(PAGE.format(id=vid, player=spec.get("player", "scenes")))
     print(f"{vid}: {dur:.1f}s, {len(scenes)} babak, {len(els)} elemen, klip {list(clips)}")
+    return spec
+
+
+def prep_mg(vid, d, spec, segs, caps, R, dur):
+    """Pemain "mg": index.html ditulis tangan (videos/lib/mg.js); di sini hanya timing.js.
+    spec.json: "player": "mg", "mg": "<gaya>", "cues": {"nama": "@03%40", ...} (satu cue sheet untuk gambar & bunyi),
+    "sfx": [["pop", "nama", .3, 900], ["whoosh", "@02-0.3", .2], ...], "bpm", "tail" (pilihan)."""
+    if not (d / "index.html").exists():   # VO dulu: halaman ditulis selepas masa baris diketahui
+        print(f"  ! {vid}: belum ada videos/{vid}/index.html (lihat .claude/skills/coway-video/formats/mg-gaya.md)")
+    cues = {k: R(v) for k, v in spec.get("cues", {}).items()}
+
+    def C(x):   # nama cue (+/- anjakan) atau ungkapan masa biasa
+        m = re.fullmatch(r"([A-Za-z_]\w*)([+-][\d.]+)?", x) if isinstance(x, str) else None
+        return round(cues[m.group(1)] + float(m.group(2) or 0), 3) if m else R(x)
+
+    sfx = sorted(([s[0], C(s[1]), *s[2:]] for s in spec.get("sfx", [])), key=lambda x: x[1])
+    if not any(s[0] == "impact" for s in sfx):   # build_audio.py mula dram pada impact pertama
+        sfx.insert(0, ["impact", segs[0]["b"], .3])
+    V = {"off": OFF, "dur": dur, "lines": caps, "seg": {g["id"]: [g["a"], g["b"]] for g in segs}, "cues": cues, "sfx": sfx,
+         "bpm": spec.get("bpm", 100)}
+    (d / "timing.js").write_text("window.V = " + json.dumps(V, ensure_ascii=False, indent=1) + ";\n")
+    print(f"{vid}: {dur:.1f}s, mg/{spec.get('mg', '?')}, {len(sfx)} sfx")
     return spec
 
 
