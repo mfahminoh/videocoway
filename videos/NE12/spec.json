@@ -10,34 +10,70 @@
  "scenes": [
   {
    "at": 0,
-   "bg": "k-blue"
+   "bg": {
+    "image": "neon-p1-01/a_hook.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@02",
-   "bg": "k-white"
+   "bg": {
+    "image": "neon-p1-01/b_dapur.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@03",
-   "bg": "k-ink"
+   "bg": {
+    "image": "neon-p1-01/c_panas.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@04",
-   "bg": "k-sky"
+   "bg": {
+    "image": "neon-p1-01/d_5warna.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@05",
-   "bg": "k-pink"
+   "bg": {
+    "image": "neon-p1-01/e_minimalist.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@06",
-   "bg": "k-blue"
+   "bg": {
+    "image": "neon-p1-01/f_servis.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@07",
-   "bg": "k-ink"
+   "bg": {
+    "image": "neon-p1-01/g_selfservice.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
   },
   {
    "at": "@08",
+   "bg": {
+    "image": "neon-p1-01/h_keluarga.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
+  },
+  {
+   "at": "@08%50",
    "bg": "k-white"
   },
   {
@@ -54,13 +90,15 @@
    "type": "words",
    "in": "@01",
    "out": "@02",
-   "top": 420,
+   "top": 220,
    "items": [
     {
      "txt": "NAK CARI",
      "at": "@01",
-     "size": 150,
-     "color": "#fff"
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
     },
     {
      "txt": "PENAPIS AIR",
@@ -73,33 +111,27 @@
     {
      "txt": "MAMPU MILIK?",
      "at": "@01%60",
-     "size": 170,
+     "size": 140,
      "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
      "hit": true
     }
    ]
   },
   {
-   "type": "img",
-   "in": "@02",
-   "out": "@03",
-   "src": "../../assets/img/hype/neon_pink.png",
-   "w": 430,
-   "top": 330,
-   "anim": "rise",
-   "zoom": 1.05
-  },
-  {
    "type": "words",
    "in": "@02",
    "out": "@03",
-   "top": 140,
+   "top": 200,
    "items": [
     {
      "txt": "COWAY NEON",
      "at": "@02",
-     "size": 150,
-     "color": "#2f3337"
+     "size": 140,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
     }
    ]
   },
@@ -129,8 +161,10 @@
     {
      "txt": "LENGKAP!",
      "at": "@03",
-     "size": 170,
-     "color": "#fff"
+     "size": 150,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
     }
    ]
   },
@@ -138,7 +172,7 @@
    "type": "temps",
    "in": "@03",
    "out": "@04",
-   "top": 560,
+   "top": 780,
    "items": [
     {
      "k": "hot",
@@ -158,72 +192,51 @@
    "type": "words",
    "in": "@04",
    "out": "@05",
-   "top": 170,
+   "top": 200,
    "items": [
     {
-     "txt": "5",
+     "txt": "5 PILIHAN WARNA",
      "at": "@04",
-     "size": 330,
-     "color": "#fff",
-     "hit": true
-    },
-    {
-     "txt": "PILIHAN WARNA",
-     "at": "@04%35",
      "size": 110,
      "color": "#fff",
      "box": true,
      "bg": "#111"
+    },
+    {
+     "txt": "CANTIK!",
+     "at": "@04%45",
+     "size": 170,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
     }
    ]
-  },
-  {
-   "type": "img",
-   "in": "@04%20",
-   "out": "@05",
-   "src": "../../assets/img/hype/lineup_cut.png",
-   "w": 1000,
-   "top": 760,
-   "anim": "rise"
   },
   {
    "type": "words",
    "in": "@05",
    "out": "@06",
-   "top": 440,
+   "top": 200,
    "items": [
     {
-     "txt": "DESIGN",
+     "txt": "DESIGN SANGAT",
      "at": "@05",
-     "size": 160,
-     "color": "#2f3337"
-    },
-    {
-     "txt": "SANGAT",
-     "at": "@05%30",
-     "size": 160,
-     "color": "#2f3337"
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
     },
     {
      "txt": "MINIMALIST!",
      "at": "@05%55",
-     "size": 190,
+     "size": 170,
      "color": "#fff",
      "box": true,
-     "bg": "#111",
+     "bg": "#04A4E4",
      "hit": true
     }
    ]
-  },
-  {
-   "type": "tag",
-   "in": "@06%35",
-   "out": "@07",
-   "top": 560,
-   "pre": "HARGA BULANAN",
-   "big": "RM59",
-   "sub": "DENGAN SERVIS",
-   "hit": true
   },
   {
    "type": "words",
@@ -232,10 +245,37 @@
    "top": 200,
    "items": [
     {
-     "txt": "BERAPA?",
+     "txt": "HARGA BULANAN",
      "at": "@06",
-     "size": 170,
-     "color": "#fff"
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  },
+  {
+   "type": "tag",
+   "in": "@06%35",
+   "out": "@07",
+   "top": 1080,
+   "big": "RM59",
+   "sub": "DENGAN SERVIS",
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 200,
+   "items": [
+    {
+     "txt": "ATAU",
+     "at": "@07",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
     }
    ]
   },
@@ -243,8 +283,7 @@
    "type": "tag",
    "in": "@07",
    "out": "@08",
-   "top": 560,
-   "pre": "ATAU",
+   "top": 1080,
    "big": "RM54",
    "sub": "SELF-SERVICE",
    "hit": true
@@ -253,19 +292,23 @@
    "type": "words",
    "in": "@08",
    "out": "@08%50",
-   "top": 420,
+   "top": 220,
    "items": [
     {
      "txt": "ORDER SEKARANG",
      "at": "@08",
-     "size": 130,
-     "color": "#2f3337"
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
     },
     {
      "txt": "LAGI UNTUNG!",
      "at": "@08%20",
-     "size": 190,
-     "color": "#04A4E4",
+     "size": 160,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
      "hit": true
     }
    ]

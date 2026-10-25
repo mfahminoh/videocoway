@@ -3,45 +3,72 @@ window.SPEC = {
   {
    "t0": 0.0,
    "bg": {
-    "image": "../../assets/img/neon/podium5.jpg",
-    "color": "pastel",
-    "top": 420,
-    "h": 1080,
-    "mask": true
+    "image": "../../assets/img/neon-p1-01/a_hook.jpg",
+    "color": "navy",
+    "shade": true
    },
    "t1": 2.41
   },
   {
    "t0": 2.41,
-   "bg": "pastel",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/b_dapur.jpg",
+    "color": "navy",
+    "shade": true
+   },
+   "t1": 5.69
+  },
+  {
+   "t0": 5.69,
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/c_panas.jpg",
+    "color": "navy",
+    "shade": true
+   },
    "t1": 7.6
   },
   {
    "t0": 7.6,
-   "bg": "pastel",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/d_5warna.jpg",
+    "color": "navy",
+    "shade": true
+   },
    "t1": 9.86
   },
   {
    "t0": 9.86,
    "bg": {
-    "image": "../../assets/img/neon/pink.jpg",
-    "color": "pink",
-    "top": 380,
-    "h": 1080
+    "image": "../../assets/img/neon-p1-01/e_minimalist.jpg",
+    "color": "navy",
+    "shade": true
    },
    "t1": 13.92
   },
   {
    "t0": 13.92,
-   "bg": "blue",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/f_servis.jpg",
+    "color": "navy",
+    "shade": true
+   },
+   "t1": 17.69
+  },
+  {
+   "t0": 17.69,
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/g_selfservice.jpg",
+    "color": "navy",
+    "shade": true
+   },
    "t1": 21.21
   },
   {
    "t0": 21.21,
    "bg": {
-    "clip": "press_pour",
-    "c0": 3.0,
-    "c1": 6.6
+    "image": "../../assets/img/neon-p1-01/h_keluarga.jpg",
+    "color": "navy",
+    "shade": true
    },
    "t1": 25.131
   },
@@ -63,47 +90,22 @@ window.SPEC = {
  ],
  "els": [
   {
-   "type": "title",
-   "top": 170,
-   "size": 96,
-   "html": "NAK CARI<br>PENAPIS AIR",
-   "color": "#0B2F6B",
-   "shadow": false,
+   "type": "banner",
+   "top": 200,
+   "html": "NAK CARI PENAPIS AIR<br><em>MAMPU MILIK?</em>",
    "t0": 0.1,
    "t1": 2.41
   },
   {
-   "type": "pill",
-   "top": 410,
-   "html": "MAMPU MILIK?",
-   "bg": "var(--yellow)",
-   "color": "var(--navy)",
-   "t0": 0.874,
-   "t1": 2.41
-  },
-  {
-   "type": "title",
+   "type": "banner",
    "top": 200,
-   "size": 120,
-   "html": "COWAY <span style='color:#E86E5A'>NEON</span>",
-   "color": "#0B2F6B",
-   "shadow": false,
+   "html": "COWAY <em>NEON</em>",
    "t0": 2.41,
-   "t1": 7.6
-  },
-  {
-   "type": "photo",
-   "top": 380,
-   "left": 290,
-   "w": 500,
-   "h": 500,
-   "src": "../../assets/img/neon/pink.jpg",
-   "t0": 2.41,
-   "t1": 7.6
+   "t1": 5.69
   },
   {
    "type": "pill",
-   "top": 950,
+   "top": 330,
    "html": "✓ 3 SUHU",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
@@ -112,7 +114,7 @@ window.SPEC = {
   },
   {
    "type": "chips",
-   "top": 950,
+   "top": 220,
    "items": [
     {
      "text": "PANAS",
@@ -137,105 +139,38 @@ window.SPEC = {
    "t1": 7.6
   },
   {
-   "type": "title",
-   "top": 220,
-   "size": 100,
-   "html": "<span style='color:#E86E5A'>5</span> PILIHAN WARNA",
-   "color": "#0B2F6B",
-   "shadow": false,
+   "type": "banner",
+   "top": 200,
+   "html": "<em>5</em> PILIHAN WARNA",
    "t0": 7.6,
    "t1": 9.86
   },
   {
-   "type": "lineup",
-   "keys": [
-    {
-     "unit": "all",
-     "zoom": 1,
-     "t": 7.6
-    },
-    {
-     "unit": "pink",
-     "zoom": 2.1,
-     "t": 8.133
-    },
-    {
-     "unit": "mint",
-     "zoom": 2.1,
-     "t": 8.452
-    },
-    {
-     "unit": "ciel",
-     "zoom": 2.1,
-     "t": 8.771
-    },
-    {
-     "unit": "gray",
-     "zoom": 2.1,
-     "t": 9.091
-    },
-    {
-     "unit": "white",
-     "zoom": 2.1,
-     "t": 9.411
-    },
-    {
-     "unit": "all",
-     "zoom": 1,
-     "t": 9.73
-    }
-   ],
-   "t0": 7.6,
-   "t1": 9.86
-  },
-  {
-   "type": "title",
-   "top": 220,
-   "size": 120,
-   "html": "MINIMALIST",
-   "color": "#0B2F6B",
-   "shadow": false,
+   "type": "banner",
+   "top": 200,
+   "html": "DESIGN<br><em>SANGAT MINIMALIST</em>",
    "t0": 9.86,
    "t1": 13.92
   },
   {
-   "type": "text",
-   "top": 380,
-   "html": "cantik di mana-mana dapur",
-   "color": "#0B2F6B",
-   "t0": 10.874,
-   "t1": 13.92
-  },
-  {
-   "type": "title",
-   "top": 230,
-   "size": 90,
-   "html": "HARGA BULANAN",
-   "t0": 13.92,
-   "t1": 21.21
-  },
-  {
-   "type": "photo",
-   "top": 400,
-   "left": 350,
-   "w": 380,
-   "h": 380,
-   "src": "../../assets/img/neon/mint.jpg",
+   "type": "banner",
+   "top": 200,
+   "html": "HARGA <em>BULANAN</em>",
    "t0": 13.92,
    "t1": 21.21
   },
   {
    "type": "card",
-   "top": 840,
+   "top": 1260,
    "icon": "tech",
    "title": "RM59 SEBULAN",
    "sub": "Dengan servis, technician datang ke rumah",
    "t0": 15.0,
-   "t1": 21.21
+   "t1": 17.69
   },
   {
    "type": "card",
-   "top": 1080,
+   "top": 1260,
    "icon": "box",
    "icbg": "#fff3cc",
    "iccolor": "#b07b00",
@@ -246,7 +181,7 @@ window.SPEC = {
   },
   {
    "type": "pill",
-   "top": 300,
+   "top": 260,
    "html": "ORDER SEKARANG LAGI UNTUNG",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
@@ -330,13 +265,7 @@ window.SPEC = {
    "btnT": 33.177
   }
  ],
- "clips": {
-  "press_pour": {
-   "dir": "../../out/frames/NE11_press_pour/",
-   "n": 111,
-   "start": 3.0
-  }
- },
+ "clips": {},
  "theme": "coway",
  "brand": "COWAY",
  "tagline": "Own Your Aesthetics, Affordably.",

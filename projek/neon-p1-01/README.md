@@ -1,6 +1,6 @@
 # Coway Neon × P1 "Ingat tak layak / mampu milik" — neon-p1-01
 
-Asal: video TikTok kreator lain (showroom Coway, 34 s) yang user beri 25/10. Skrip sama, visual dibina semula dalam 3 gaya (suara sama, VO NE11 diguna semula).
+Asal: video TikTok kreator lain (showroom Coway, 34 s) yang user beri 25/10. Skrip sama, visual dibina semula dalam 3 gaya (suara sama, VO NE11 diguna semula). Baris 01–08 atas gambar realistik Seedream (`assets/img/neon-p1-01/`).
 
 | Langkah | Status | Fail | Nota |
 |---|---|---|---|
@@ -18,6 +18,8 @@ Asal: video TikTok kreator lain (showroom Coway, 34 s) yang user beri 25/10. Skr
 - 25/10: promo RM20 × 7 bulan pertama masih sah. (user) Ditulis sebagai **rebat RM20 sebulan**, bukan "RM20 sahaja", ikut brand-guide. (Claude)
 
 - 25/10: user minta gaya lain dengan skrip sama → pilih Kinetic (NE12) & Komik (NE13). (user)
+
+- 25/10: user minta gambar nampak real → 8 gambar Seedream 4.5 (rujukan gambar rasmi brand-brain) jadi latar baris 01–08 dalam NE11–NE13; harga promo, desakan & CTA kekal grafik. (user)
 
 ## Terbuka
 - [ ] User dengar sebutan "Coway Neon ni" (transkrip baca "Neo II") dan "tau".

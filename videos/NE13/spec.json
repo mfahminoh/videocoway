@@ -10,34 +10,70 @@
  "scenes": [
   {
    "at": 0,
-   "bg": "comic-pink"
+   "bg": {
+    "image": "neon-p1-01/a_hook.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@02",
-   "bg": "comic-sky"
+   "bg": {
+    "image": "neon-p1-01/b_dapur.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@03",
-   "bg": "comic-blue"
+   "bg": {
+    "image": "neon-p1-01/c_panas.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@04",
-   "bg": "comic-white"
+   "bg": {
+    "image": "neon-p1-01/d_5warna.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@05",
-   "bg": "comic-pink"
+   "bg": {
+    "image": "neon-p1-01/e_minimalist.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@06",
-   "bg": "comic-blue"
+   "bg": {
+    "image": "neon-p1-01/f_servis.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@07",
-   "bg": "comic-sky"
+   "bg": {
+    "image": "neon-p1-01/g_selfservice.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
   },
   {
    "at": "@08",
+   "bg": {
+    "image": "neon-p1-01/h_keluarga.jpg",
+    "color": "comic-blue",
+    "shade": true
+   }
+  },
+  {
+   "at": "@08%50",
    "bg": "comic-white"
   },
   {
@@ -54,7 +90,7 @@
    "type": "words",
    "in": "@01",
    "out": "@02",
-   "top": 240,
+   "top": 200,
    "items": [
     {
      "txt": "NAK CARI",
@@ -75,12 +111,12 @@
    "in": "@01%50",
    "out": "@02",
    "html": "MAMPU<br>MILIK?",
-   "top": 640,
-   "size": 620,
+   "top": 1000,
+   "size": 500,
    "x": 540,
    "color": "#fff",
    "textColor": "#ff8fb1",
-   "fs": 120,
+   "fs": 100,
    "rot": -6,
    "hit": true
   },
@@ -88,7 +124,7 @@
    "type": "words",
    "in": "@02",
    "out": "@03",
-   "top": 160,
+   "top": 170,
    "items": [
     {
      "txt": "COWAY NEON!",
@@ -97,16 +133,6 @@
      "color": "#04A4E4"
     }
    ]
-  },
-  {
-   "type": "img",
-   "in": "@02%10",
-   "out": "@03",
-   "src": "../../assets/img/hype/neon_pink.png",
-   "w": 430,
-   "top": 380,
-   "anim": "spin",
-   "float": true
   },
   {
    "type": "burst",
@@ -126,7 +152,7 @@
    "type": "temps",
    "in": "@03",
    "out": "@04",
-   "top": 380,
+   "top": 780,
    "items": [
     {
      "k": "hot",
@@ -164,19 +190,10 @@
    ]
   },
   {
-   "type": "img",
-   "in": "@04%15",
-   "out": "@05",
-   "src": "../../assets/img/hype/lineup_cut.png",
-   "w": 1000,
-   "top": 640,
-   "anim": "rise"
-  },
-  {
    "type": "words",
    "in": "@05",
    "out": "@06",
-   "top": 200,
+   "top": 170,
    "items": [
     {
      "txt": "DESIGN",
@@ -191,12 +208,12 @@
    "in": "@05%35",
    "out": "@06",
    "html": "SANGAT<br>MINIMALIST!",
-   "top": 460,
-   "size": 720,
+   "top": 1020,
+   "size": 560,
    "x": 540,
    "color": "#fff",
    "textColor": "#04A4E4",
-   "fs": 104,
+   "fs": 84,
    "rot": -6,
    "hit": true
   },
@@ -218,7 +235,7 @@
    "type": "tag",
    "in": "@06%35",
    "out": "@07",
-   "top": 600,
+   "top": 1080,
    "big": "RM59",
    "sub": "DENGAN SERVIS",
    "hit": true
@@ -241,7 +258,7 @@
    "type": "tag",
    "in": "@07%20",
    "out": "@08",
-   "top": 600,
+   "top": 1080,
    "big": "RM54",
    "sub": "SELF-SERVICE",
    "hit": true
@@ -268,22 +285,22 @@
   },
   {
    "type": "gift",
-   "in": "@08%30",
+   "in": "@08%50",
    "out": "@09",
-   "openAt": "@08%50",
+   "openAt": "@08%62",
    "top": 440,
    "size": 560,
    "rays": "rgba(4,164,228,.35)"
   },
   {
    "type": "words",
-   "in": "@08%55",
+   "in": "@08%62",
    "out": "@09",
    "top": 1060,
    "items": [
     {
      "txt": "REBAT RM20",
-     "at": "@08%58",
+     "at": "@08%65",
      "size": 140,
      "color": "#fff",
      "box": true,
@@ -292,7 +309,7 @@
     },
     {
      "txt": "× 7 BULAN PERTAMA*",
-     "at": "@08%75",
+     "at": "@08%78",
      "size": 90,
      "color": "#2f3337"
     }

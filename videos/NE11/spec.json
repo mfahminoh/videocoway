@@ -6,40 +6,65 @@
   {
    "at": 0,
    "bg": {
-    "image": "neon/podium5.jpg",
-    "color": "pastel",
-    "top": 420,
-    "h": 1080,
-    "mask": true
+    "image": "neon-p1-01/a_hook.jpg",
+    "color": "navy",
+    "shade": true
    }
   },
   {
    "at": "@02",
-   "bg": "pastel"
+   "bg": {
+    "image": "neon-p1-01/b_dapur.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "neon-p1-01/c_panas.jpg",
+    "color": "navy",
+    "shade": true
+   }
   },
   {
    "at": "@04",
-   "bg": "pastel"
+   "bg": {
+    "image": "neon-p1-01/d_5warna.jpg",
+    "color": "navy",
+    "shade": true
+   }
   },
   {
    "at": "@05",
    "bg": {
-    "image": "neon/pink.jpg",
-    "color": "pink",
-    "top": 380,
-    "h": 1080
+    "image": "neon-p1-01/e_minimalist.jpg",
+    "color": "navy",
+    "shade": true
    }
   },
   {
    "at": "@06",
-   "bg": "blue"
+   "bg": {
+    "image": "neon-p1-01/f_servis.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@07",
+   "bg": {
+    "image": "neon-p1-01/g_selfservice.jpg",
+    "color": "navy",
+    "shade": true
+   }
   },
   {
    "at": "@08",
    "bg": {
-    "clip": "press_pour",
-    "c0": 3.0,
-    "c1": 6.6
+    "image": "neon-p1-01/h_keluarga.jpg",
+    "color": "navy",
+    "shade": true
    }
   },
   {
@@ -57,49 +82,24 @@
  ],
  "els": [
   {
-   "type": "title",
+   "type": "banner",
    "in": "@01",
    "out": "@02",
-   "top": 170,
-   "size": 96,
-   "html": "NAK CARI<br>PENAPIS AIR",
-   "color": "#0B2F6B",
-   "shadow": false
-  },
-  {
-   "type": "pill",
-   "in": "@01%45",
-   "out": "@02",
-   "top": 410,
-   "html": "MAMPU MILIK?",
-   "bg": "var(--yellow)",
-   "color": "var(--navy)"
-  },
-  {
-   "type": "title",
-   "in": "@02",
-   "out": "@04",
    "top": 200,
-   "size": 120,
-   "html": "COWAY <span style='color:#E86E5A'>NEON</span>",
-   "color": "#0B2F6B",
-   "shadow": false
+   "html": "NAK CARI PENAPIS AIR<br><em>MAMPU MILIK?</em>"
   },
   {
-   "type": "photo",
+   "type": "banner",
    "in": "@02",
-   "out": "@04",
-   "top": 380,
-   "left": 290,
-   "w": 500,
-   "h": 500,
-   "src": "../../assets/img/neon/pink.jpg"
+   "out": "@03",
+   "top": 200,
+   "html": "COWAY <em>NEON</em>"
   },
   {
    "type": "pill",
    "in": "@02%55",
    "out": "@03",
-   "top": 950,
+   "top": 330,
    "html": "✓ 3 SUHU",
    "bg": "var(--yellow)",
    "color": "var(--navy)"
@@ -108,7 +108,7 @@
    "type": "chips",
    "in": "@03",
    "out": "@04",
-   "top": 950,
+   "top": 220,
    "items": [
     {
      "text": "PANAS",
@@ -128,98 +128,31 @@
    ]
   },
   {
-   "type": "title",
+   "type": "banner",
    "in": "@04",
    "out": "@05",
-   "top": 220,
-   "size": 100,
-   "html": "<span style='color:#E86E5A'>5</span> PILIHAN WARNA",
-   "color": "#0B2F6B",
-   "shadow": false
+   "top": 200,
+   "html": "<em>5</em> PILIHAN WARNA"
   },
   {
-   "type": "lineup",
-   "in": "@04",
-   "out": "@05",
-   "keys": [
-    {
-     "at": "@04",
-     "unit": "all",
-     "zoom": 1
-    },
-    {
-     "at": "@04%25",
-     "unit": "pink",
-     "zoom": 2.1
-    },
-    {
-     "at": "@04%40",
-     "unit": "mint",
-     "zoom": 2.1
-    },
-    {
-     "at": "@04%55",
-     "unit": "ciel",
-     "zoom": 2.1
-    },
-    {
-     "at": "@04%70",
-     "unit": "gray",
-     "zoom": 2.1
-    },
-    {
-     "at": "@04%85",
-     "unit": "white",
-     "zoom": 2.1
-    },
-    {
-     "at": "@04e",
-     "unit": "all",
-     "zoom": 1
-    }
-   ]
-  },
-  {
-   "type": "title",
+   "type": "banner",
    "in": "@05",
    "out": "@06",
-   "top": 220,
-   "size": 120,
-   "html": "MINIMALIST",
-   "color": "#0B2F6B",
-   "shadow": false
+   "top": 200,
+   "html": "DESIGN<br><em>SANGAT MINIMALIST</em>"
   },
   {
-   "type": "text",
-   "in": "@05%30",
-   "out": "@06",
-   "top": 380,
-   "html": "cantik di mana-mana dapur",
-   "color": "#0B2F6B"
-  },
-  {
-   "type": "title",
+   "type": "banner",
    "in": "@06",
    "out": "@08",
-   "top": 230,
-   "size": 90,
-   "html": "HARGA BULANAN"
-  },
-  {
-   "type": "photo",
-   "in": "@06",
-   "out": "@08",
-   "top": 400,
-   "left": 350,
-   "w": 380,
-   "h": 380,
-   "src": "../../assets/img/neon/mint.jpg"
+   "top": 200,
+   "html": "HARGA <em>BULANAN</em>"
   },
   {
    "type": "card",
    "in": "@06%30",
-   "out": "@08",
-   "top": 840,
+   "out": "@07",
+   "top": 1260,
    "icon": "tech",
    "title": "RM59 SEBULAN",
    "sub": "Dengan servis, technician datang ke rumah"
@@ -228,7 +161,7 @@
    "type": "card",
    "in": "@07",
    "out": "@08",
-   "top": 1080,
+   "top": 1260,
    "icon": "box",
    "icbg": "#fff3cc",
    "iccolor": "#b07b00",
@@ -239,7 +172,7 @@
    "type": "pill",
    "in": "@08",
    "out": "@08%55",
-   "top": 300,
+   "top": 260,
    "html": "ORDER SEKARANG LAGI UNTUNG",
    "bg": "var(--yellow)",
    "color": "var(--navy)"

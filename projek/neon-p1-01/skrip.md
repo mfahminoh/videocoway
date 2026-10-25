@@ -26,6 +26,8 @@ Nota kaki: *Harga bulanan RM59 (dengan servis) atau RM54 (self-service). Rebat R
 
 NE12 (kinetic) dan NE13 (komik) guna baris VO & suara yang sama; hanya visual berbeza (lihat `videos/neon-p1-01_batch.py`).
 
+Latar realistik (semua 3 video): 01 `a_hook` · 02 `b_dapur` · 03 `c_panas` · 04 `d_5warna` · 05 `e_minimalist` · 06 `f_servis` · 07 `g_selfservice` · 08 (separuh pertama) `h_keluarga`. Senarai & nota: `assets/img/neon-p1-01/README.txt`.
+
 ## Ubah daripada skrip asal
 - "with service" → "dengan servis"; "tahu" → "tau".
 - "hanya RM20 sahaja untuk 7 bulan pertama" → "rebat RM20 sebulan untuk 7 bulan pertama" (brand-guide: promo ialah rebat; "RM20 sahaja" mengelirukan).

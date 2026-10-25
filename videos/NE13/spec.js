@@ -2,41 +2,78 @@ window.SPEC = {
  "scenes": [
   {
    "t0": 0.0,
-   "bg": "comic-pink",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/a_hook.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 2.41
   },
   {
    "t0": 2.41,
-   "bg": "comic-sky",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/b_dapur.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 5.69
   },
   {
    "t0": 5.69,
-   "bg": "comic-blue",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/c_panas.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 7.6
   },
   {
    "t0": 7.6,
-   "bg": "comic-white",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/d_5warna.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 9.86
   },
   {
    "t0": 9.86,
-   "bg": "comic-pink",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/e_minimalist.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 13.92
   },
   {
    "t0": 13.92,
-   "bg": "comic-blue",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/f_servis.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 17.69
   },
   {
    "t0": 17.69,
-   "bg": "comic-sky",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/g_selfservice.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
    "t1": 21.21
   },
   {
    "t0": 21.21,
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/h_keluarga.jpg",
+    "color": "comic-blue",
+    "shade": true
+   },
+   "t1": 24.775
+  },
+  {
+   "t0": 24.775,
    "bg": "comic-white",
    "t1": 28.71
   },
@@ -54,7 +91,7 @@ window.SPEC = {
  "els": [
   {
    "type": "words",
-   "top": 240,
+   "top": 200,
    "items": [
     {
      "txt": "NAK CARI",
@@ -77,12 +114,12 @@ window.SPEC = {
   {
    "type": "burst",
    "html": "MAMPU<br>MILIK?",
-   "top": 640,
-   "size": 620,
+   "top": 1000,
+   "size": 500,
    "x": 540,
    "color": "#fff",
    "textColor": "#ff8fb1",
-   "fs": 120,
+   "fs": 100,
    "rot": -6,
    "hit": true,
    "t0": 0.96,
@@ -90,7 +127,7 @@ window.SPEC = {
   },
   {
    "type": "words",
-   "top": 160,
+   "top": 170,
    "items": [
     {
      "txt": "COWAY NEON!",
@@ -101,16 +138,6 @@ window.SPEC = {
     }
    ],
    "t0": 2.41,
-   "t1": 5.69
-  },
-  {
-   "type": "img",
-   "src": "../../assets/img/hype/neon_pink.png",
-   "w": 430,
-   "top": 380,
-   "anim": "spin",
-   "float": true,
-   "t0": 2.704,
    "t1": 5.69
   },
   {
@@ -129,7 +156,7 @@ window.SPEC = {
   },
   {
    "type": "temps",
-   "top": 380,
+   "top": 780,
    "items": [
     {
      "k": "hot",
@@ -174,17 +201,8 @@ window.SPEC = {
    "t1": 9.86
   },
   {
-   "type": "img",
-   "src": "../../assets/img/hype/lineup_cut.png",
-   "w": 1000,
-   "top": 640,
-   "anim": "rise",
-   "t0": 7.919,
-   "t1": 9.86
-  },
-  {
    "type": "words",
-   "top": 200,
+   "top": 170,
    "items": [
     {
      "txt": "DESIGN",
@@ -200,12 +218,12 @@ window.SPEC = {
   {
    "type": "burst",
    "html": "SANGAT<br>MINIMALIST!",
-   "top": 460,
-   "size": 720,
+   "top": 1020,
+   "size": 560,
    "x": 540,
    "color": "#fff",
    "textColor": "#04A4E4",
-   "fs": 104,
+   "fs": 84,
    "rot": -6,
    "hit": true,
    "t0": 11.043,
@@ -228,7 +246,7 @@ window.SPEC = {
   },
   {
    "type": "tag",
-   "top": 600,
+   "top": 1080,
    "big": "RM59",
    "sub": "DENGAN SERVIS",
    "hit": true,
@@ -252,7 +270,7 @@ window.SPEC = {
   },
   {
    "type": "tag",
-   "top": 600,
+   "top": 1080,
    "big": "RM54",
    "sub": "SELF-SERVICE",
    "hit": true,
@@ -286,9 +304,9 @@ window.SPEC = {
    "top": 440,
    "size": 560,
    "rays": "rgba(4,164,228,.35)",
-   "t0": 23.349,
+   "t0": 24.775,
    "t1": 28.71,
-   "openT": 24.775
+   "openT": 25.631
   },
   {
    "type": "words",
@@ -296,23 +314,23 @@ window.SPEC = {
    "items": [
     {
      "txt": "REBAT RM20",
-     "at": "@08%58",
+     "at": "@08%65",
      "size": 140,
      "color": "#fff",
      "box": true,
      "bg": "#04A4E4",
      "hit": true,
-     "t": 25.345
+     "t": 25.845
     },
     {
      "txt": "× 7 BULAN PERTAMA*",
-     "at": "@08%75",
+     "at": "@08%78",
      "size": 90,
      "color": "#2f3337",
-     "t": 26.558
+     "t": 26.771
     }
    ],
-   "t0": 25.131,
+   "t0": 25.631,
    "t1": 28.71
   },
   {

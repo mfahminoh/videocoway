@@ -2,41 +2,78 @@ window.SPEC = {
  "scenes": [
   {
    "t0": 0.0,
-   "bg": "k-blue",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/a_hook.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 2.41
   },
   {
    "t0": 2.41,
-   "bg": "k-white",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/b_dapur.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 5.69
   },
   {
    "t0": 5.69,
-   "bg": "k-ink",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/c_panas.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 7.6
   },
   {
    "t0": 7.6,
-   "bg": "k-sky",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/d_5warna.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 9.86
   },
   {
    "t0": 9.86,
-   "bg": "k-pink",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/e_minimalist.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 13.92
   },
   {
    "t0": 13.92,
-   "bg": "k-blue",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/f_servis.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 17.69
   },
   {
    "t0": 17.69,
-   "bg": "k-ink",
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/g_selfservice.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
    "t1": 21.21
   },
   {
    "t0": 21.21,
+   "bg": {
+    "image": "../../assets/img/neon-p1-01/h_keluarga.jpg",
+    "color": "k-ink",
+    "shade": true
+   },
+   "t1": 24.775
+  },
+  {
+   "t0": 24.775,
    "bg": "k-white",
    "t1": 28.71
   },
@@ -54,13 +91,15 @@ window.SPEC = {
  "els": [
   {
    "type": "words",
-   "top": 420,
+   "top": 220,
    "items": [
     {
      "txt": "NAK CARI",
      "at": "@01",
-     "size": 150,
+     "size": 120,
      "color": "#fff",
+     "box": true,
+     "bg": "#111",
      "t": 0.1
     },
     {
@@ -75,8 +114,10 @@ window.SPEC = {
     {
      "txt": "MAMPU MILIK?",
      "at": "@01%60",
-     "size": 170,
+     "size": 140,
      "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
      "hit": true,
      "t": 1.132
     }
@@ -85,24 +126,16 @@ window.SPEC = {
    "t1": 2.41
   },
   {
-   "type": "img",
-   "src": "../../assets/img/hype/neon_pink.png",
-   "w": 430,
-   "top": 330,
-   "anim": "rise",
-   "zoom": 1.05,
-   "t0": 2.41,
-   "t1": 5.69
-  },
-  {
    "type": "words",
-   "top": 140,
+   "top": 200,
    "items": [
     {
      "txt": "COWAY NEON",
      "at": "@02",
-     "size": 150,
-     "color": "#2f3337",
+     "size": 140,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111",
      "t": 2.41
     }
    ],
@@ -134,8 +167,10 @@ window.SPEC = {
     {
      "txt": "LENGKAP!",
      "at": "@03",
-     "size": 170,
+     "size": 150,
      "color": "#fff",
+     "box": true,
+     "bg": "#111",
      "t": 5.69
     }
    ],
@@ -144,7 +179,7 @@ window.SPEC = {
   },
   {
    "type": "temps",
-   "top": 560,
+   "top": 780,
    "items": [
     {
      "k": "hot",
@@ -167,63 +202,51 @@ window.SPEC = {
   },
   {
    "type": "words",
-   "top": 170,
+   "top": 200,
    "items": [
     {
-     "txt": "5",
+     "txt": "5 PILIHAN WARNA",
      "at": "@04",
-     "size": 330,
-     "color": "#fff",
-     "hit": true,
-     "t": 7.6
-    },
-    {
-     "txt": "PILIHAN WARNA",
-     "at": "@04%35",
      "size": 110,
      "color": "#fff",
      "box": true,
      "bg": "#111",
-     "t": 8.345
+     "t": 7.6
+    },
+    {
+     "txt": "CANTIK!",
+     "at": "@04%45",
+     "size": 170,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true,
+     "t": 8.559
     }
    ],
    "t0": 7.6,
    "t1": 9.86
   },
   {
-   "type": "img",
-   "src": "../../assets/img/hype/lineup_cut.png",
-   "w": 1000,
-   "top": 760,
-   "anim": "rise",
-   "t0": 8.026,
-   "t1": 9.86
-  },
-  {
    "type": "words",
-   "top": 440,
+   "top": 200,
    "items": [
     {
-     "txt": "DESIGN",
+     "txt": "DESIGN SANGAT",
      "at": "@05",
-     "size": 160,
-     "color": "#2f3337",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111",
      "t": 9.86
-    },
-    {
-     "txt": "SANGAT",
-     "at": "@05%30",
-     "size": 160,
-     "color": "#2f3337",
-     "t": 10.874
     },
     {
      "txt": "MINIMALIST!",
      "at": "@05%55",
-     "size": 190,
+     "size": 170,
      "color": "#fff",
      "box": true,
-     "bg": "#111",
+     "bg": "#04A4E4",
      "hit": true,
      "t": 11.719
     }
@@ -232,9 +255,25 @@ window.SPEC = {
    "t1": 13.92
   },
   {
+   "type": "words",
+   "top": 200,
+   "items": [
+    {
+     "txt": "HARGA BULANAN",
+     "at": "@06",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111",
+     "t": 13.92
+    }
+   ],
+   "t0": 13.92,
+   "t1": 17.69
+  },
+  {
    "type": "tag",
-   "top": 560,
-   "pre": "HARGA BULANAN",
+   "top": 1080,
    "big": "RM59",
    "sub": "DENGAN SERVIS",
    "hit": true,
@@ -246,20 +285,21 @@ window.SPEC = {
    "top": 200,
    "items": [
     {
-     "txt": "BERAPA?",
-     "at": "@06",
-     "size": 170,
+     "txt": "ATAU",
+     "at": "@07",
+     "size": 120,
      "color": "#fff",
-     "t": 13.92
+     "box": true,
+     "bg": "#111",
+     "t": 17.69
     }
    ],
-   "t0": 13.92,
-   "t1": 17.69
+   "t0": 17.69,
+   "t1": 21.21
   },
   {
    "type": "tag",
-   "top": 560,
-   "pre": "ATAU",
+   "top": 1080,
    "big": "RM54",
    "sub": "SELF-SERVICE",
    "hit": true,
@@ -268,20 +308,24 @@ window.SPEC = {
   },
   {
    "type": "words",
-   "top": 420,
+   "top": 220,
    "items": [
     {
      "txt": "ORDER SEKARANG",
      "at": "@08",
-     "size": 130,
-     "color": "#2f3337",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111",
      "t": 21.21
     },
     {
      "txt": "LAGI UNTUNG!",
      "at": "@08%20",
-     "size": 190,
-     "color": "#04A4E4",
+     "size": 160,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
      "hit": true,
      "t": 22.636
     }
