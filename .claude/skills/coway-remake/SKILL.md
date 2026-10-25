@@ -73,7 +73,7 @@ Guna skill `seedream`. Satu gambar 9:16 (`--size 1440x2560`) untuk setiap baris 
 python3 .claude/skills/coway-remake/scripts/pilih_gaya.py          # cetak 3 gaya + sebab dielak
 ```
 
-Pool = 6 gaya templat (`coway`, `kinetic`, `comic`, `glow`, `paper`, `ugc`) + 15 gaya `mg:*` (bila `videos/lib/mg.js` wujud). Gaya dalam 2 remake terakhir dielakkan. Jika user minta gaya tertentu, ikut user. Tulis pilihan dalam `storyboard.json` → `"video": [{"id": "NE14", "gaya": "glow"}, ...]` (ID: kod produk 2 huruf + nombor seterusnya, lihat `coway-video`).
+Pool = 6 gaya templat (`coway`, `kinetic`, `comic`, `glow`, `paper`, `ugc`) + 10 gaya `mg:*` bertanda ✅ dalam `coway-video/formats/mg-gaya.md` (`--semua` tambah 4 gaya ⚠️; `04-3d-render` tiada kerana perlukan Blender). Gaya dalam 2 remake terakhir dielakkan. Gaya `mg` ditulis tangan (±400–600 baris setiap video), jadi remake dengan 2–3 gaya mg jauh lebih lama. `--maks-mg 1` hadkan kepada satu, jika user mahu cepat. Jika user minta gaya tertentu, ikut user. Tulis pilihan dalam `storyboard.json` → `"video": [{"id": "NE14", "gaya": "glow"}, ...]` (ID: kod produk 2 huruf + nombor seterusnya, lihat `coway-video`).
 
 ## 6. Suara sekali, 3 video
 
@@ -86,7 +86,7 @@ python3 .claude/skills/coway-video/scripts/semak.py <ID1> <ID2> <ID3>
 ```
 
 - Gaya templat: spec dijana terus. Jangan edit `spec.json` dengan tangan, kerana ia ditulis semula setiap kali `remake.py` dijalankan. Baiki storyboard atau `videos/remake.py`.
-- Gaya `mg:*`: `remake.py` hanya sediakan `lines.json` + VO. Tulis `videos/<ID>/index.html` dan `spec.json` ikut `.claude/skills/coway-video/formats/mg.md` dan prompt gaya itu. Guna teks dari storyboard (tajuk/harga/sub) supaya kandungan sama dengan 2 video lain.
+- Gaya `mg:*`: `remake.py` sediakan `lines.json`, VO dan `spec.json` minimum (`player: "mg"`). Ikut langkah 3–7 dalam `.claude/skills/coway-video/formats/mg-gaya.md`: cue sheet, `index.html`, stills dengan `--no-align`, dan kritik ikut rubrik. Jika gaya itu dah pernah dibina (cari `"mg": "<gaya>"` dalam `videos/*/spec.json`, contohnya NL01FV untuk flat vector), salin `index.html` itu dan tukar kandungan sahaja. Guna teks storyboard (tajuk/harga/sub) dan gambar realistik yang sama supaya kandungan sepadan dengan 2 video lain.
 - Stills: `python3 videos/build_video.py <ID> --stills 1.6,4.6,7.2,9.2,12,16.8,20.5,23,26,30.5,35` (ubah ikut masa baris dalam `segments.json`). Jubin dengan ffmpeg dan Read. Bingkai kabur atau bertindih tepat pada mula elemen biasanya hanya animasi masuk: semak semula dengan masa +0.4 s sebelum baiki.
 - Semak khusus remake: teks putih atas gambar cerah (tukar ke kotak/`banner`), blok `temps` atau kad yang kena bar kapsyen (bawah ±1450 px), teks besar yang terpotong di tepi (pendekkan atau `|`).
 - Render: `python3 videos/build_video.py <ID> --render --review out/<kod>`, satu demi satu (±4–5 minit setiap satu), dalam background.

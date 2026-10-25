@@ -4,8 +4,9 @@
     python3 .claude/skills/coway-remake/scripts/pilih_gaya.py --n 3 --seed 7  # boleh diulang
     python3 .claude/skills/coway-remake/scripts/pilih_gaya.py --kecuali kinetic,comic
 
-Pool = 6 gaya templat (videos/remake.py jana spec terus dari storyboard) + 15 gaya mg (mg-styles-15, halaman ditulis
-tangan dengan pemain mg). Gaya mg hanya masuk pool bila videos/lib/mg.js wujud. Sejarah dibaca daripada
+Pool = 6 gaya templat (videos/remake.py jana spec terus dari storyboard) + 10 gaya mg ✅ (mg-styles-15, halaman ditulis
+tangan dengan pemain mg, lihat coway-video/formats/mg-gaya.md); --semua tambah 4 gaya ⚠️. Gaya mg hanya masuk pool bila
+videos/lib/mg.js wujud. Sejarah dibaca daripada
 projek/*/storyboard.json ("video": [{"gaya": ...}]): gaya dalam --elak remake terakhir dielakkan selagi pool cukup.
 """
 import argparse
@@ -22,22 +23,23 @@ TEMPLAT = {
     "paper": "kertas koyak, label bertampal, mesra",
     "ugc": "gaya post TikTok biasa, teks bergaris tebal, emoji",
 }
-MG = {
-    "mg:01-flat-vector": "flat vector: blok warna, bentuk geometri, lantun elastik",
-    "mg:02-line-art": "line art: satu garisan halus melukis semua",
-    "mg:03-isometric": "isometrik 2.5D: dunia mini, bangunan tumbuh",
-    "mg:04-3d-render": "3D render: bahan lembut/kaca, cahaya studio",
-    "mg:05-cel-boil": "lukisan tangan bergetar (line boil), tekstur kertas",
-    "mg:06-collage": "kolaj potongan foto, halftone, retro",
-    "mg:07-liquid": "cecair mengalir, titisan, peralihan percikan",
-    "mg:08-morph": "bentuk bertukar ke bentuk lain dengan licin",
-    "mg:09-bauhaus": "geometri Bauhaus: merah/kuning/biru, grid, ikut beat",
-    "mg:10-synthwave": "retro 80an / VHS / Y2K: grid neon, chrome",
-    "mg:12-aurora-glass": "aurora kabur + kad kaca (glassmorphism), perlahan & mewah",
-    "mg:18-hanazi": "hanazi (lihat prompts/18-hanazi.md)",
-    "mg:19-paperclip": "pelekat bergaris tebal gaya sains popular (PaperClip)",
-    "mg:20-pixel": "pixel art",
-    "mg:22-hud": "HUD / antara muka fiksyen sains",
+MG = {   # status dari coway-video/formats/mg-gaya.md: lalai = ✅; --semua tambah ⚠️; 04-3d-render (perlu Blender) tiada
+    "mg:01-flat-vector": "flat vector: blok warna, bentuk geometri, lantun elastik (contoh NL01FV)",
+    "mg:07-liquid": "cecair mengalir: titisan, aliran, penapisan, air bersih",
+    "mg:19-paperclip": "explainer pelekat bergaris tebal: fakta, perbandingan, carta",
+    "mg:08-morph": "satu bentuk berubah sepanjang video: titis -> gelas -> produk -> harga",
+    "mg:03-isometric": "rumah/dapur isometrik: pemasangan, servis",
+    "mg:06-collage": "kolaj kertas potong + gambar produk, mesra ibu",
+    "mg:12-aurora-glass": "aurora kabur + kad kaca, premium/teknologi",
+    "mg:22-hud": "HUD imbasan kualiti air/udara, sensor",
+    "mg:18-hanazi": "kapsyen meriah variety show atas gambar/klip",
+    "mg:02-line-art": "minimal: satu garisan melukis produk",
+}
+MG_LAIN = {
+    "mg:09-bauhaus": "geometri Bauhaus, premium; kurang mesra keluarga",
+    "mg:10-synthwave": "retro 80an / VHS / Y2K; promo malam / 11.11",
+    "mg:20-pixel": "pixel art; Gen Z",
+    "mg:05-cel-boil": "lukisan tangan bergetar; kerja paling berat",
 }
 
 
@@ -56,25 +58,32 @@ def main():
     ap.add_argument("--n", type=int, default=3)
     ap.add_argument("--elak", type=int, default=2, help="elak gaya dalam N remake terakhir")
     ap.add_argument("--kecuali", default="", help="gaya yang tak mahu, dipisah koma")
+    ap.add_argument("--semua", action="store_true", help="masukkan juga gaya mg bertanda ⚠️ dalam mg-gaya.md")
+    ap.add_argument("--maks-mg", type=int, default=3, help="had gaya mg (ditulis tangan, lebih lambat) dalam satu remake")
     ap.add_argument("--seed", type=int)
     a = ap.parse_args()
     pool = dict(TEMPLAT)
     mg_ok = (ROOT / "videos/lib/mg.js").exists()
     if mg_ok:
         pool.update(MG)
+        if a.semua:
+            pool.update(MG_LAIN)
     for k in filter(None, a.kecuali.split(",")):
         pool.pop(k.strip(), None)
     recent = {g for row in history()[-a.elak:] for g in row} if a.elak else set()
     fresh = [g for g in pool if g not in recent]
     rng = random.Random(a.seed)
-    pick = rng.sample(fresh, min(a.n, len(fresh)))
-    if len(pick) < a.n:                                   # pool segar tak cukup: tambah dari yang lain
-        pick += rng.sample([g for g in pool if g not in pick], a.n - len(pick))
+    pick = []
+    for cand in (rng.sample(fresh, len(fresh)), rng.sample(list(pool), len(pool))):   # segar dulu, kemudian selebihnya
+        for g in cand:
+            if len(pick) < a.n and g not in pick and (not g.startswith("mg:") or sum(x.startswith("mg:") for x in pick) < a.maks_mg):
+                pick.append(g)
     print(json.dumps(pick))
     for g in pick:
         print(f"  {g:22s} {pool[g]}")
-    print(f"pool: {len(pool)} gaya ({'termasuk' if mg_ok else 'tanpa'} 15 gaya mg"
-          f"{'' if mg_ok else ': videos/lib/mg.js belum ada'}), dielak: {', '.join(sorted(recent)) or '-'}")
+    n_mg = sum(g.startswith("mg:") for g in pool)
+    print(f"pool: {len(pool)} gaya ({len(pool) - n_mg} templat + {n_mg} mg"
+          f"{'' if mg_ok else '; videos/lib/mg.js belum ada'}), dielak: {', '.join(sorted(recent)) or '-'}")
 
 
 if __name__ == "__main__":

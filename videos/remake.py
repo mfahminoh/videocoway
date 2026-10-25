@@ -18,7 +18,8 @@ Jenis baris dan medannya ("|" dalam tajuk = pecah baris):
 Semua jenis boleh ada "gambar" (assets/img/..., latar penuh realistik).
 
 Gaya templat: coway (pemain scenes), kinetic, comic, glow, paper, ugc (pemain hype).
-Gaya "mg:<nama>" (15 gaya mg-styles-15) ditulis tangan; skrip ini hanya sediakan lines.json + salin VO.
+Gaya "mg:<nama>" (mg-styles-15, .claude/skills/coway-video/formats/mg-gaya.md) ditulis tangan: skrip ini sediakan
+lines.json, salin VO, dan spec.json minimum (hanya jika belum ada; cue sheet ditambah sendiri).
 """
 import json
 import pathlib
@@ -299,7 +300,11 @@ def main(path):
         d.mkdir(exist_ok=True)
         (d / "lines.json").write_text(json.dumps(lj, ensure_ascii=False, indent=1))
         if st.startswith("mg:"):
-            note = "tulis index.html sendiri (gaya mg), lihat coway-video/formats/mg.md"
+            assert (ROOT / "reference/mg-styles-15/prompts" / f"{st[3:]}.md").exists(), f"{vid}: gaya mg tiada: {st}"
+            if not (d / "spec.json").exists():
+                (d / "spec.json").write_text(json.dumps({"slug": f"{sb['slug']}-{st[3:].split('-', 1)[1]}", "voice": sb["voice"], "style": sb["style_tts"],
+                                                         "player": "mg", "mg": st[3:], "bpm": 120, "cues": {}, "sfx": []}, ensure_ascii=False, indent=1))
+            note = "mg: tulis index.html + cues ikut coway-video/formats/mg-gaya.md"
         else:
             assert st in TEMPLAT, f"{vid}: gaya tak dikenali '{st}' (templat: {', '.join(TEMPLAT)}, atau mg:<nama>)"
             head, scenes, els = coway_video(sb, lines) if st == "coway" else hype_video(st, sb, lines)
