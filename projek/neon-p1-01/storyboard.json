@@ -1,0 +1,129 @@
+{
+ "catatan": "Contoh rujukan coway-remake. NE11-NE13 dirender dari videos/neon-p1-01_batch.py; jangan jalankan remake.py atas fail ini.",
+ "kod": "neon-p1-01",
+ "slug": "penapis-air-mampu-milik",
+ "produk": "neon",
+ "sumber": "Video TikTok kreator lain (showroom Coway, 34 s), diberi user 25/10/2026",
+ "voice": "Aoede",
+ "style_tts": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "produk_img": "neon/pink.jpg",
+ "produk_cut": "hype/neon_pink.png",
+ "produk_lineup": "hype/lineup_cut.png",
+ "tagline": "Own Your Aesthetics, Affordably.",
+ "ticks": [
+  "RM59 DENGAN SERVIS*",
+  "RM54 SELF-SERVICE*",
+  "+ REBAT RM20 × 7 BULAN*"
+ ],
+ "button": "WhatsApp saya",
+ "fine": "*Harga bulanan RM59 (dengan servis) atau RM54 (self-service). Rebat RM20 sebulan untuk 7 bulan pertama. Kuota terhad. Tertakluk pada terma &amp; promosi semasa Coway.",
+ "video": [
+  {
+   "id": "NE11",
+   "gaya": "coway"
+  },
+  {
+   "id": "NE12",
+   "gaya": "kinetic"
+  },
+  {
+   "id": "NE13",
+   "gaya": "comic"
+  }
+ ],
+ "baris": [
+  {
+   "id": "01",
+   "text": "Nak cari penapis air yang mampu milik?",
+   "cap": "Nak cari penapis air *mampu milik?*",
+   "jenis": "hook",
+   "tajuk": "NAK CARI|PENAPIS AIR",
+   "sorot": "MAMPU MILIK?",
+   "gambar": "neon-p1-01/a_hook.jpg"
+  },
+  {
+   "id": "02",
+   "text": "Untuk model Coway Neon ni, lengkap dengan tiga suhu.",
+   "cap": "Coway *Neon*, lengkap *3 suhu*.",
+   "jenis": "produk",
+   "tajuk": "COWAY NEON",
+   "sorot": "3 SUHU",
+   "gambar": "neon-p1-01/b_dapur.jpg"
+  },
+  {
+   "id": "03",
+   "text": "Panas, sejuk, dan suhu bilik.",
+   "cap": "*Panas*, *sejuk*, *suhu bilik*.",
+   "jenis": "suhu",
+   "tajuk": "LENGKAP!",
+   "gambar": "neon-p1-01/c_panas.jpg"
+  },
+  {
+   "id": "04",
+   "text": "Ada lima pilihan warna yang cantik.",
+   "cap": "Ada *5 pilihan warna* yang cantik.",
+   "jenis": "warna",
+   "tajuk": "5 PILIHAN WARNA",
+   "sorot": "CANTIK!",
+   "gambar": "neon-p1-01/d_5warna.jpg"
+  },
+  {
+   "id": "05",
+   "text": "Dan design Coway Neon ni memang sangat minimalist untuk penapis air.",
+   "cap": "Design *sangat minimalist*.",
+   "jenis": "poin",
+   "tajuk": "DESIGN",
+   "sorot": "SANGAT MINIMALIST",
+   "gambar": "neon-p1-01/e_minimalist.jpg"
+  },
+  {
+   "id": "06",
+   "text": "Coway Neon ni korang boleh dapat dengan harga bulanan lima puluh sembilan ringgit, dengan servis.",
+   "cap": "Harga bulanan *RM59*, dengan servis.",
+   "jenis": "harga",
+   "label": "HARGA BULANAN",
+   "harga": "RM59",
+   "sub": "DENGAN SERVIS",
+   "ikon": "tech",
+   "gambar": "neon-p1-01/f_servis.jpg"
+  },
+  {
+   "id": "07",
+   "text": "Ataupun lima puluh empat ringgit, self-service.",
+   "cap": "Atau *RM54*, self-service.",
+   "jenis": "harga",
+   "label": "ATAU",
+   "harga": "RM54",
+   "sub": "SELF-SERVICE",
+   "ikon": "box",
+   "gambar": "neon-p1-01/g_selfservice.jpg"
+  },
+  {
+   "id": "08",
+   "text": "Siapa yang order sekarang lagi untung, sebab akan dapat harga special, rebat dua puluh ringgit sebulan, untuk tujuh bulan pertama.",
+   "cap": "Order sekarang: *rebat RM20* sebulan, *7 bulan pertama*.",
+   "jenis": "promo",
+   "tajuk": "ORDER SEKARANG|LAGI UNTUNG!",
+   "atas": "HARGA SPECIAL",
+   "pre": "REBAT",
+   "harga": "RM20",
+   "sub": "SEBULAN × 7 BULAN PERTAMA*",
+   "gambar": "neon-p1-01/h_keluarga.jpg"
+  },
+  {
+   "id": "09",
+   "text": "Tapi korang kena cepat, sebab kuota harga promo tak banyak tau.",
+   "cap": "Kena *cepat*, kuota promo *tak banyak* tau.",
+   "jenis": "desak",
+   "tajuk": "KENA|CEPAT!",
+   "sorot": "KUOTA TERHAD"
+  },
+  {
+   "id": "10",
+   "text": "Jadi siapa yang minat, terus tekan butang WhatsApp sekarang.",
+   "cap": "Minat? Terus tekan *WhatsApp* sekarang.",
+   "jenis": "cta",
+   "tajuk": "MINAT?"
+  }
+ ]
+}

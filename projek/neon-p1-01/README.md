@@ -21,6 +21,8 @@ Asal: video TikTok kreator lain (showroom Coway, 34 s) yang user beri 25/10. Skr
 
 - 25/10: user minta gambar nampak real → 8 gambar Seedream 4.5 (rujukan gambar rasmi brand-brain) jadi latar baris 01–08 dalam NE11–NE13; harga promo, desakan & CTA kekal grafik. (user)
 
+- 25/10: `storyboard.json` ditulis sebagai contoh rujukan skill `coway-remake`. NE11–NE13 sendiri dibina dengan `videos/neon-p1-01_batch.py` (sebelum `videos/remake.py` wujud); jangan jalankan `remake.py` atas projek ini, kerana ia akan menimpa spec NE11–NE13 yang dah dirender. (Claude)
+
 ## Terbuka
 - [ ] User dengar sebutan "Coway Neon ni" (transkrip baca "Neo II") dan "tau".
 - [ ] Sahkan promo ialah rebat RM20/bulan (bukan bayar RM20/bulan) untuk 7 bulan pertama.

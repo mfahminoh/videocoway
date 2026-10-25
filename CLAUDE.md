@@ -17,6 +17,7 @@ Satu skill satu langkah. Fail serahan dan struktur folder: [`projek/README.md`](
 
 - Mula setiap sesi projek dengan membaca `projek/<kod>/README.md` (papan status), dan kemas kini papan tu sebelum tamat.
 - Video dihasilkan 10 sebatch. Batch seterusnya hanya selepas batch semasa diluluskan.
+- Remake video TikTok (skrip sama, suara baru): `coway-remake` → `coway-video`. Satu batch remake = 1 video rujukan × 3 gaya berbeza (rawak).
 - Semua kerja di-commit dan digabung ke `main`.
 
 ## Meta Ads

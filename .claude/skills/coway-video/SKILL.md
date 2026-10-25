@@ -9,6 +9,8 @@ Input: `projek/<kod>/skrip.md` dengan status **DILULUSKAN** (dari `coway-skrip`)
 Output: `videos/<ID>/`, `out/<kod>/*.mp4`, halaman review, papan status dikemas kini.
 Langkah seterusnya: `coway-poster`, kemudian iklan / `coway-threads`.
 
+Remake video TikTok (satu skrip, 3 gaya): input ialah `projek/<kod>/storyboard.json` dari `coway-remake`, dan spec gaya templat dijana oleh `videos/remake.py` (bukan ditulis tangan). Langkah 2–5 di bawah tetap terpakai.
+
 Skrip belum diluluskan atau tiada → berhenti dan guna `coway-skrip`. Jangan tulis atau ubah sudut di sini; ubah kecil (pendekkan baris, betulkan sebutan) dibenarkan dan dicatat dalam `skrip.md`.
 
 **Satu batch = 10 video.** Batch seterusnya hanya selepas batch ini diluluskan dalam review.
@@ -22,6 +24,8 @@ Skrip belum diluluskan atau tiada → berhenti dan guna `coway-skrip`. Jangan tu
 | `hype` (`"player": "hype"`) | `videos/build_video.py` | Promo tenaga tinggi: kinetic, papercut, komik, neon glow, UGC |
 | `story` (spec dengan `shots`) | `videos/peti_ais.py` | Cerita emosi dengan gambar Seedream + Ken Burns (contoh PA01–PA05) |
 | **Footage AI** (Seedance / Veo / Google Flow) | klip AI sebagai latar `scenes` | Situasi hidup: orang, rumah, emosi. Panduan: [`formats/ai-klip.md`](formats/ai-klip.md) |
+
+Gaya `hype` boleh guna gambar latar penuh: `{"image": "<kod>/a_hook.jpg", "color": "k-ink", "shade": true}` (`shade` menggelapkan atas & bawah supaya teks jelas, sama seperti `scenes`).
 
 Ikut "Format cadangan" dalam `skrip.md`; variasikan dalam satu batch supaya iklan boleh diuji. Format baru (contohnya 3D) ditambah sebagai fail dalam `formats/`.
 Rujukan elemen, latar dan contoh spec: [`reference.md`](reference.md).
