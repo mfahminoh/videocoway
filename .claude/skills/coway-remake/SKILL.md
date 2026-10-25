@@ -23,7 +23,7 @@ python3 voiceover/transcribe_chunks.py $K/audio.wav 0 99 0.3                   #
 ```
 
 - Read `grid.jpg` (babak, teks besar, produk dalam video) dan setiap `kap_NN.jpg` (kapsyen setiap 0.2 s, cap masa merah).
-- Gemini 503 / 429 berterusan → jangan tunggu: kapsyen TikTok biasanya ikut suara perkataan demi perkataan, jadi bina skrip dari `kap_NN.jpg`. Bahagian tanpa kapsyen (hook dengan teks besar, babak harga): baca teks besar dalam `grid.jpg` atau jubin penuh bingkai bahagian itu.
+- Gemini 503 / 429 berterusan (tier percuma: ±20 permintaan audio sehari setiap model; mesej `generate_content_free_tier_requests` = kuota harian habis, TTS masih boleh) → jangan tunggu: kapsyen TikTok biasanya ikut suara perkataan demi perkataan, jadi bina skrip dari `kap_NN.jpg`. Bahagian tanpa kapsyen (hook dengan teks besar, babak harga): baca teks besar dalam `grid.jpg` atau jubin penuh bingkai bahagian itu.
 - Kapsyen bukan di 68–80 % tinggi bingkai → `--y0 .1 --y1 .25` (contoh), ulang.
 - Video ada muzik berhak cipta / suara orang lain: **jangan guna audio asal**. Hanya skrip diambil; suara dijana semula.
 
@@ -46,7 +46,8 @@ Tulis `projek/<kod>/storyboard.json` (contoh penuh: `projek/neon-p1-01/storyboar
 |---|---|---|
 | `hook` | `tajuk`, `sorot` | `"NAK CARI\|PENAPIS AIR"`, `"MAMPU MILIK?"` |
 | `produk` | `tajuk`, `sorot` | `"COWAY NEON"`, `"3 SUHU"` |
-| `suhu` | `tajuk`? | panas / sejuk / suhu bilik |
+| `suhu` | `tajuk`?, `liter`? | panas / sejuk / suhu bilik; `["3.6L", "7.1L", "10.4L"]` jadi label |
+| `angka` | `tajuk`, `harga` (nombor besar), `sub` | `"TOTAL KAPASITI"`, `"21.1L"`, `"MEMANG BESAR!"` |
 | `warna`, `poin` | `tajuk`, `sorot` | `"DESIGN"`, `"SANGAT MINIMALIST"` |
 | `harga` | `label`?, `harga`, `sub`, `per`?, `ikon`? | `"HARGA BULANAN"`, `"RM59"`, `"DENGAN SERVIS"` |
 | `promo` | `tajuk`, `pre`, `harga`, `sub`, `atas`? | separuh pertama atas gambar, separuh kedua harga besar |
@@ -62,7 +63,8 @@ Guna skill `seedream`. Satu gambar 9:16 (`--size 1440x2560`) untuk setiap baris 
 
 - **Produk**: rujukan gambar rasmi dari `brand-brain/coway/Other Brand Assets/<kategori>/<produk>/` (`--ref`). Tulis dalam prompt: "Keep the product exactly as in the reference ... small grey 'coway' wordmark only, no other text, flags or logos. Full-bleed photorealistic photo, no phone frame".
 - **Hook / masalah**: rumah Malaysia, tanpa produk Coway.
-- **Pakaian sopan** (peraturan user): wanita bertudung sarung dan berlengan panjang, lelaki berbaju dan berseluar panjang. Sebut dalam prompt.
+- **Pakaian sopan** (peraturan user): wanita bertudung sarung, berlengan panjang dan **berstoking** ("grey socks on both feet"; kaki ayam = tolak), lelaki berbaju dan berseluar panjang. Close-up tangan: "no face, no person visible", supaya tak keluar wanita tanpa tudung. Sebut dalam prompt.
+- **Bendera**: tulis "no flags" (Seedream suka letak Jalur Gemilang di pejabat; penggunaan bendera dalam iklan komersial berisiko). Produk dengan skrin palsu → "no screen, no display"; sisa kecil boleh dipotong (`crop` ffmpeg) daripada jana semula.
 - **Jana serentak**, kemudian Read setiap gambar. Tolak dan jana semula jika ada: tiada tudung, warna/bentuk produk salah, bingkai telefon, bendera/logo lain, atau fizik pelik (air paip jatuh atas mesin). Jangka ±1 daripada 2 gambar perlu dijana semula.
 - Simpan dalam `assets/img/<kod>/<huruf>_<babak>.jpg` + `README.txt` (model, kos, senarai babak) dan isi `gambar` dalam storyboard.
 - **Menunggu**: `until ! pgrep -f "python3 .claude/skills/[s]eedream" ...`. Tanpa `[s]`, `pgrep` turut jumpa arahan tunggu itu sendiri dan tak pernah berhenti.
@@ -85,6 +87,7 @@ python3 videos/remake.py projek/<kod>/storyboard.json                 # sekali l
 python3 .claude/skills/coway-video/scripts/semak.py <ID1> <ID2> <ID3>
 ```
 
+- Penjajaran baris lari (baris pertama terlalu panjang/pendek) dan transkripsi tak boleh: `python3 .claude/skills/coway-remake/scripts/jajar_jeda.py videos/<ID1> --tulis`, kemudian **`--no-align`** pada setiap `build_video.py` (stills, render), kerana tanpa itu `align.py` menimpa `segments.json`. Baris bertanda `<- ragu` disenaraikan untuk user dengar.
 - Gaya templat: spec dijana terus. Jangan edit `spec.json` dengan tangan, kerana ia ditulis semula setiap kali `remake.py` dijalankan. Baiki storyboard atau `videos/remake.py`.
 - Gaya `mg:*`: `remake.py` sediakan `lines.json`, VO dan `spec.json` minimum (`player: "mg"`). Ikut langkah 3–7 dalam `.claude/skills/coway-video/formats/mg-gaya.md`: cue sheet, `index.html`, stills dengan `--no-align`, dan kritik ikut rubrik. Jika gaya itu dah pernah dibina (cari `"mg": "<gaya>"` dalam `videos/*/spec.json`, contohnya NL01FV untuk flat vector), salin `index.html` itu dan tukar kandungan sahaja. Guna teks storyboard (tajuk/harga/sub) dan gambar realistik yang sama supaya kandungan sepadan dengan 2 video lain.
 - Stills: `python3 videos/build_video.py <ID> --stills 1.6,4.6,7.2,9.2,12,16.8,20.5,23,26,30.5,35` (ubah ikut masa baris dalam `segments.json`). Jubin dengan ffmpeg dan Read. Bingkai kabur atau bertindih tepat pada mula elemen biasanya hanya animasi masuk: semak semula dengan masa +0.4 s sebelum baiki.

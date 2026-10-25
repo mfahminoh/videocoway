@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>CP03 · Morph</title>
+<!-- Gaya mg 08-morph (mg-styles-15): satu bentuk hero berubah tanpa putus sepanjang video (titis -> tangki -> Core Plus ->
+     tangki 3 suhu -> 21.1L -> pin lokasi -> panel -> mangga -> bintang UV -> gear servis -> gelembung WhatsApp).
+     Setiap bentuk disampel ikut sudut dari pusat (jejari r(θ)), jadi interpolasi titik demi titik tak pernah terbelit;
+     A -> B melalui bulatan perantara, dengan squash & stretch + putaran kecil. Gambar realistik dipapar dalam bentuk hero. -->
+<style>
+@font-face { font-family: Lilita; src: url(../../assets/fonts/LilitaOne-Regular.ttf); }
+@font-face { font-family: Nunito; font-weight: 600; src: url(../../assets/fonts/NunitoSans-600.ttf); }
+@font-face { font-family: Nunito; font-weight: 800; src: url(../../assets/fonts/NunitoSans-800.ttf); }
+@font-face { font-family: Nunito; font-weight: 900; src: url(../../assets/fonts/NunitoSans-900.ttf); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #04A4E4; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+svg { display: block; position: absolute; inset: 0; }
+.el { position: absolute; will-change: transform, opacity; transform-origin: 50% 50%; }
+#brand { left: 60px; top: 70px; font: 900 46px Nunito; letter-spacing: 1px; }
+#cap { left: 0; width: 1080px; top: 1520px; height: 170px; display: flex; align-items: center; justify-content: center; padding: 0 60px; }
+#capText { display: inline-block; background: #fff; color: #10233F; font: 900 56px/1.12 Nunito; text-transform: uppercase; text-align: center;
+  padding: 14px 34px; border-radius: 26px; border: 6px solid #10233F; box-shadow: 0 10px 0 #10233F; }
+#capText b { color: #04A4E4; font-weight: 900; }
+</style></head>
+<body><div id="stage">
+<svg id="S" xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<div class="el" id="brand">coway</div>
+<div class="el" id="cap"><div id="capText"></div></div>
+</div>
+<script src="timing.js"></script>
+<script src="../lib/engine.js"></script>
+<script src="../lib/mg.js"></script>
+<script>
+const IMG = '../../assets/img/coreplus-remake-01/';
+const PHOTOS = { a: 'a_hook', f: 'f_lokasi', g: 'g_panel', h: 'h_childlock', i: 'i_uv', j: 'j_servis' };
+window.READY = Promise.all([
+  document.fonts.load('400 100px Lilita'), document.fonts.load('900 60px Nunito'), document.fonts.load('800 40px Nunito'), document.fonts.load('600 26px Nunito'),
+  ...Object.values(PHOTOS).map(n => new Promise(r => { const im = new Image(); im.onload = im.onerror = r; im.src = IMG + n + '.jpg'; })),
+]).then(() => {
+const { svg, tf, inv, hump, squash } = MG;
+const T = MG.at;
+const C = { BL: '#04A4E4', BLD: '#0389C0', CR: '#FFF6E9', INK: '#10233F', SU: '#FFC62B', CO: '#FF5A4E', MI: '#2EE6A8', UV: '#7B5CFF',
+  OAT: '#E6DAC4', OATD: '#CDBFA6', WA: '#25D366', WHITE: '#FFFFFF' };
+const S = document.getElementById('S');
+const G = (p, a) => svg('g', a || {}, p);
+const cv = document.createElement('canvas').getContext('2d');
+const width = (font, s) => { cv.font = font; return cv.measureText(s).width; };
+const ease = MG.bezier(.7, 0, .3, 1);            // kelajuan paling tinggi di tengah, kusyen di hujung (ciri gaya)
+const out = (t, t0, d = .22) => E.inB(inv(t0, t0 + d, t));
+function popAt(g, t, t0, x, y, { amt = .16, f = 2.4, z = .42, s0 = 1, r = 0 } = {}) {
+  if (t < t0 || s0 <= 0) { tf(g, x, y, 0); return 0; }
+  const [s, k] = squash(t, t0, { f, z, amt });
+  tf(g, x, y, s0 * s * (1 - k * .6), s0 * s * (1 + k), r); return s;
+}
+function letters(parent, str, x, y, size, fill) {
+  const font = `400 ${size}px Lilita`, total = width(font, str);
+  let cx = x - total / 2; const o = [];
+  for (const ch of str) { const w = width(font, ch), g = G(parent);
+    if (ch !== ' ') svg('text', { x: 0, y: size * .36, 'text-anchor': 'middle', fill, style: `font:${font}` }, g).textContent = ch;
+    o.push({ g, x: cx + w / 2, y }); cx += w; }
+  return o;
+}
+const text = (parent, str, x, y, size, fill, { family = 'Nunito', weight = 900, anchor = 'middle', op = 1 } = {}) => {
+  const e = svg('text', { x, y, 'text-anchor': anchor, fill, 'fill-opacity': op, style: `font:${weight} ${size}px ${family}` }, parent);
+  e.textContent = str; return e;
+};
+const hex = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
+const lerpC = (a, b, u) => { const A = hex(a), B = hex(b); return `rgb(${A.map((v, i) => Math.round(mix(v, B[i], u))).join(',')})`; };
+
+/* ---------- bentuk: r(θ) pada N sudut, θ0 = atas, ikut jam ---------- */
+const N = 200, TH = Array.from({ length: N }, (_, i) => -Math.PI / 2 + i * 2 * Math.PI / N);
+function polar(poly) {                    // poligon (titik) -> jejari maksimum sepanjang setiap sinar dari (0,0)
+  return TH.map(th => { const dx = Math.cos(th), dy = Math.sin(th); let best = 0;
+    for (let i = 0; i < poly.length; i++) { const [ax, ay] = poly[i], [bx, by] = poly[(i + 1) % poly.length];
+      const ex = bx - ax, ey = by - ay, den = dx * ey - dy * ex; if (Math.abs(den) < 1e-9) continue;
+      const tt = (ax * ey - ay * ex) / den, u = (ax * dy - ay * dx) / den;
+      if (tt > 0 && u >= 0 && u <= 1) best = Math.max(best, tt); }
+    return best; });
+}
+const fn = f => TH.map(f);
+function rrect(w, h, r, oy = 0) {          // segi empat bucu bulat sebagai poligon
+  const p = [], q = 10, hw = w / 2, hh = h / 2;
+  [[hw - r, -hh + r, -90], [hw - r, hh - r, 0], [-hw + r, hh - r, 90], [-hw + r, -hh + r, 180]].forEach(([cx, cy, a0]) => {
+    for (let i = 0; i <= q; i++) { const a = (a0 + 90 * i / q) * Math.PI / 180; p.push([cx + r * Math.cos(a), cy + r * Math.sin(a) + oy]); } });
+  return p;
+}
+const arcPts = (cx, cy, R, a0, a1, n = 28) => Array.from({ length: n + 1 }, (_, i) => { const a = (a0 + (a1 - a0) * i / n) * Math.PI / 180; return [cx + R * Math.cos(a), cy + R * Math.sin(a)]; });
+const SH = {
+  circle: R => fn(() => R),
+  drop: polar([[0, -190], ...arcPts(0, 40, 140, -55, 235)]),
+  tank: polar(rrect(560, 740, 70)),
+  unit: polar([[-138, -400], [138, -400], [138, -150], [124, -150], [124, 400], [-124, 400], [-124, -150], [-138, -150]]),
+  tank3: polar(rrect(440, 760, 64)),
+  big: fn(() => 330),
+  pin: polar([[0, 360], ...arcPts(0, -70, 260, 128, 412)]),
+  panel: polar(rrect(840, 400, 64)),
+  lock: polar(rrect(500, 400, 56, 90)),
+  star: fn(th => { const k = (((th + Math.PI / 2) / (2 * Math.PI) * 12) % 1 + 1) % 1; const tri = 1 - Math.abs(2 * k - 1); return 250 + 120 * tri ** 1.6; }),
+  gear: fn(th => { const k = (((th + Math.PI / 2) / (2 * Math.PI) * 10) % 1 + 1) % 1; const s = clamp((Math.abs(k - .5) - .14) / .1); return mix(345, 285, s); }),
+  bubble: polar([...rrect(640, 460, 130, -40).slice(0, 22), [-120, 190], [-230, 300], ...rrect(640, 460, 130, -40).slice(22)]),
+};
+const path = (R, sx = 1, sy = 1, off = 0) => 'M' + R.map((r, i) => `${(r * Math.cos(TH[i] + off) * sx).toFixed(1)} ${(r * Math.sin(TH[i] + off) * sy).toFixed(1)}`).join('L') + 'Z';
+
+/* ---------- babak: satu baris VO satu bentuk ---------- */
+const DARK = c => c === C.INK || c === C.BL || c === C.CO || c === C.BLD;
+const SC = [
+  { id: '01', sh: 'tank', x: 540, y: 900, s: 1, fill: C.CR, bg: C.BL, ph: 'a', ttl: ['TANGKI PALING', 'BESAR'], pill: 'DI MALAYSIA!', py: 1360 },
+  { id: '02', at: '@02%45', sh: 'unit', x: 540, y: 920, s: .95, fill: C.OAT, bg: C.CR, ttl: ['COWAY CORE PLUS'], unit: true },   // hook kekal hingga "Coway Core Plus"
+  { id: '03', sh: 'unit', x: 540, y: 960, s: .9, fill: C.OAT, bg: C.BL, ttl: ['FLOOR STANDING'], pill: 'TAK PERLU KABINET', py: 455, unit: true, floor: true },
+  { id: '04', sh: 'tank3', x: 330, y: 900, s: .9, fill: C.CR, bg: C.INK, ttl: ['3 SUHU'], layers: true },
+  { id: '05', sh: 'big', x: 540, y: 880, s: 1, fill: C.SU, bg: C.BL, ttl: ['TOTAL KAPASITI'], pill: 'MEMANG BESAR!', py: 1340, num: '21.1L' },
+  { id: '06', sh: 'pin', x: 540, y: 860, s: 1, fill: C.CO, bg: C.CR, ph: 'f', ttl: ['OFFICE · MASJID', 'SEKOLAH · RESTORAN'], pill: 'RUMAH PUN BOLEH!', py: 1340 },
+  { id: '07', sh: 'panel', x: 540, y: 860, s: 1, fill: C.CR, bg: C.INK, ph: 'g', ttl: ['TOUCH PANEL'], pill: 'PILIH SUHU & KUANTITI', py: 1190, tap: true },
+  { id: '08', sh: 'lock', x: 540, y: 880, s: 1, fill: C.CR, bg: C.CO, ph: 'h', ttl: ['SAFETY', 'CHILD LOCK'], pill: 'ELAK MELECUR', py: 1360, shackle: true },
+  { id: '09', sh: 'star', x: 540, y: 870, s: 1, fill: C.UV, bg: C.INK, ph: 'i', ttl: ['UV STERILIZATION'], pill: 'AIR SENTIASA BERSIH', py: 1350, spin: 6, glow: true },
+  { id: '10', sh: 'gear', x: 540, y: 880, s: 1, fill: C.BL, bg: C.CR, ph: 'j', ttl: ['SERVIS FILTER', 'BERJADUAL'], pill: '+ WARANTI KONTRAK', py: 1350, spin: 18 },
+  { id: '11', sh: 'bubble', x: 540, y: 720, s: .78, fill: C.WA, bg: C.BL, ttl: ['BERMINAT?'], cta: true },
+];
+const MD = .62;                                    // tempoh satu morph
+SC.forEach((c, k) => { c.a = T(c.at || '@' + c.id); c.m0 = k ? c.a - .2 : .12; c.R = typeof SH[c.sh] === 'function' ? SH[c.sh](300) : SH[c.sh]; });
+SC.forEach((c, k) => { c.end = k + 1 < SC.length ? SC[k + 1].m0 : 1e9; });
+const DROP = { R: SH.drop, x: 540, y: 900, s: .8, fill: C.CR };
+
+/* ---------- lapisan ---------- */
+const bgRect = svg('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: SC[0].bg }, S);
+const wipe = svg('circle', { cx: 540, cy: 900, r: 0, fill: SC[0].bg }, S);
+const DEFS = svg('defs', {}, S);
+const glowF = svg('filter', { id: 'glow', x: '-50%', y: '-50%', width: '200%', height: '200%' }, DEFS);
+svg('feGaussianBlur', { stdDeviation: 40 }, glowF);
+const floorG = G(S);
+const floorLine = svg('rect', { x: 0, y: 0, width: 0, height: 14, rx: 7, fill: C.CR }, floorG);
+const cab = G(floorG);              // kabinet kecil dipangkah
+svg('rect', { x: -70, y: -90, width: 140, height: 90, rx: 10, fill: C.OATD }, cab);
+svg('rect', { x: -60, y: -80, width: 56, height: 70, rx: 6, fill: C.OAT }, cab); svg('rect', { x: 4, y: -80, width: 56, height: 70, rx: 6, fill: C.OAT }, cab);
+const cabX = svg('path', { d: 'M-80 -100 L80 10 M80 -100 L-80 10', stroke: C.CO, 'stroke-width': 16, 'stroke-linecap': 'round', fill: 'none' }, cab);
+const halo = svg('path', { d: '', fill: C.UV, filter: 'url(#glow)', opacity: 0 }, S);
+const heroG = G(S);
+const heroClip = svg('path', { d: '' }, svg('clipPath', { id: 'hc' }, DEFS));
+const hero = svg('path', { d: '', fill: C.CR }, heroG);
+const photoG = G(heroG, { 'clip-path': 'url(#hc)' });
+const photo = {};
+Object.entries(PHOTOS).forEach(([k, n]) => { photo[k] = svg('image', { href: IMG + n + '.jpg', x: -480, y: -853, width: 960, height: 1706, preserveAspectRatio: 'xMidYMid slice', opacity: 0 }, photoG); });
+const rim = svg('path', { d: '', fill: 'none', stroke: C.WHITE, 'stroke-width': 10, 'stroke-opacity': 0 }, heroG);
+
+// butiran Core Plus (rata) dalam bentuk unit
+const unitD = G(heroG);
+svg('rect', { x: -124, y: -150, width: 248, height: 16, fill: C.OATD }, unitD);
+for (let i = 0; i < 5; i++) svg('circle', { cx: -70 + i * 35, cy: -330, r: 6, fill: C.OATD }, unitD);
+text(unitD, 'coway', -112, -366, 24, '#9C8F78', { anchor: 'start', weight: 800 });
+svg('rect', { x: -100, y: -120, width: 200, height: 190, rx: 12, fill: C.OATD }, unitD);
+[-42, 42].forEach(x => { svg('rect', { x: x - 20, y: -96, width: 40, height: 70, rx: 8, fill: C.OAT }, unitD); svg('rect', { x: x - 6, y: -120, width: 12, height: 22, rx: 4, fill: '#AFA58F' }, unitD); });
+svg('rect', { x: -100, y: 58, width: 200, height: 14, rx: 6, fill: '#B9AC93' }, unitD);
+svg('rect', { x: -124, y: 120, width: 248, height: 6, fill: C.OATD }, unitD);
+// tangki 3 lapis (tinggi ikut 3.6 / 7.1 / 10.4 L daripada 21.1 L)
+const LAY = [{ v: 3.6, c: C.CO, n: 'PANAS 3.6L' }, { v: 7.1, c: C.BL, n: 'SEJUK 7.1L' }, { v: 10.4, c: C.MI, n: 'SUHU BILIK 10.4L' }];
+const layG = G(heroG, { 'clip-path': 'url(#hc)' });
+let yb = 380; const bars = [];
+[...LAY].reverse().forEach(l => { const h = 760 * l.v / 21.1; bars.unshift({ e: svg('rect', { x: -230, y: yb - h, width: 460, height: 0, fill: l.c }, layG), y1: yb, h }); yb -= h; });
+const labs = LAY.map((l, i) => { const g = G(S); svg('rect', { x: -14, y: -46, width: 28, height: 92, rx: 14, fill: l.c }, g);
+  text(g, l.n, 34, 22, 60, C.CR, { family: 'Lilita', weight: 400, anchor: 'start' }); return g; });
+// nombor besar, ketik panel, mangga, ikon WhatsApp
+const numG = G(heroG); text(numG, '21.1L', 8, 84, 220, C.INK, { family: 'Lilita', weight: 400, op: .25 }); text(numG, '21.1L', 0, 76, 220, C.INK, { family: 'Lilita', weight: 400 });
+const ring = svg('circle', { cx: 0, cy: 0, r: 0, fill: 'none', stroke: C.SU, 'stroke-width': 12 }, heroG);
+const shackle = svg('path', { d: 'M-150 -110 V-170 A150 150 0 0 1 150 -170 V-110', fill: 'none', stroke: C.CR, 'stroke-width': 54, 'stroke-linecap': 'round' }, heroG);
+const SHL = 150 * Math.PI + 120; shackle.setAttribute('stroke-dasharray', SHL);
+const waG = G(heroG);
+svg('circle', { cx: 0, cy: -40, r: 120, fill: 'none', stroke: C.WHITE, 'stroke-width': 22 }, waG);
+svg('path', { d: 'M-92 70 L-74 18 L-40 52 Z', fill: C.WHITE }, waG);
+svg('path', { d: 'M-40 -92 c-18 8 -26 30 -14 56 c14 30 40 52 70 62 c22 8 40 0 46 -16 l-30 -22 l-18 14 c-18 -8 -34 -24 -42 -42 l14 -18 z', fill: C.WHITE }, waG);
+
+// teks setiap babak
+const TXT = SC.map(c => {
+  const ink = DARK(c.bg) ? C.CR : C.INK, two = c.ttl.length > 1;
+  const size = c.ttl.reduce((m, s) => Math.min(m, 940 / (s.length * .55)), two ? 104 : 116);
+  const rows = c.ttl.map((s, i) => letters(G(S), s, 540, (two ? 280 : 320) + i * (size * 1.08), Math.min(size, 116), ink));
+  let pill = null;
+  if (c.pill) { pill = G(S); const w = width('400 62px Lilita', c.pill) + 90;
+    svg('rect', { x: -w / 2, y: -50, width: w, height: 100, rx: 50, fill: DARK(c.bg) ? C.SU : C.INK }, pill);
+    text(pill, c.pill, 0, 22, 62, DARK(c.bg) ? C.INK : C.CR, { family: 'Lilita', weight: 400 }); }
+  return { rows, pill };
+});
+// CTA
+const TICKS = ['TANGKI 21.1 LITER', '3 SUHU + CHILD LOCK', 'SERVIS & WARANTI'];
+const ticks = TICKS.map(s => { const g = G(S); const w = width('800 46px Nunito', s);
+  svg('circle', { cx: -w / 2 - 36, cy: -15, r: 22, fill: C.SU }, g);
+  svg('path', { d: `M${-w / 2 - 47} -15 l8 9 l15 -17`, fill: 'none', stroke: C.INK, 'stroke-width': 6, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
+  text(g, s, 18, 0, 46, C.CR, { weight: 800 }); return g; });
+const btnG = G(S);
+const pulse = svg('rect', { x: -330, y: -64, width: 660, height: 128, rx: 64, fill: 'none', stroke: C.WA, 'stroke-width': 8 }, btnG);
+const btn = G(btnG);
+svg('rect', { x: -330, y: -52, width: 660, height: 128, rx: 64, fill: '#128C4A' }, btn);
+svg('rect', { x: -330, y: -64, width: 660, height: 128, rx: 64, fill: C.WA }, btn);
+svg('circle', { cx: -255, cy: 0, r: 34, fill: 'none', stroke: C.WHITE, 'stroke-width': 8 }, btn);
+svg('path', { d: 'M-281 28 L-275 9 L-263 21 Z', fill: C.WHITE }, btn);
+text(btn, 'WhatsApp saya', 42, 24, 68, C.WHITE, { family: 'Lilita', weight: 400 });
+const fine = text(S, '*Tertakluk pada terma & syarat semasa Coway.', 540, 1770, 28, C.CR, { weight: 600, op: .9 });
+
+/* ---------- keadaan hero pada masa t ---------- */
+function heroAt(t) {
+  let k = 0; SC.forEach((c, i) => { if (t >= c.m0) k = i; });
+  const c = SC[k], p = k ? SC[k - 1] : DROP;
+  const u = clamp((t - c.m0) / MD), e = ease(u), mid = u > 0 && u < 1;
+  let R;
+  if (p.sh === c.sh) R = c.R;                                   // bentuk sama: hanya gerak
+  else { const circ = 300 * mix(p.s, c.s, .5) / mix(p.s, c.s, e);    // bulatan perantara, saiz tetap pada skrin
+    R = e < .5 ? p.R.map((r, i) => mix(r, circ, ease(e * 2))) : c.R.map((r, i) => mix(circ, r, ease(e * 2 - 1))); }
+  const st = Math.sin(Math.PI * u) * (mid ? 1 : 0);
+  let sx = 1 + .13 * st, sy = 1 - .13 * st, rot = (k % 2 ? 1 : -1) * 14 * st;
+  if (t >= c.m0 + MD) { const [s, q] = squash(t, c.m0 + MD, { amt: .12, f: 2.2 }); sx = 1 - q * .6; sy = 1 + q; }
+  const x = mix(p.x, c.x, e), y = mix(p.y, c.y, e), s = mix(p.s, c.s, e);
+  const fill = lerpC(p.fill, c.fill, clamp(e * 1.4));
+  return { k, c, p, u, R, x, y, s, sx, sy, rot, fill };
+}
+
+MG.run(t => {
+  // titis jatuh (hook 0.5 s pertama), kemudian morph ke tangki
+  const H = heroAt(t);
+  let { x, y, s, sx, sy, rot } = H;
+  if (t < SC[0].m0) { const fall = E.in(inv(-.3, SC[0].m0, t)); y = mix(80, DROP.y, fall); sx = .9; sy = 1.15; }
+  const spin = H.c.spin && t > H.c.m0 ? (t - H.c.m0) * H.c.spin * Math.PI / 180 : 0;   // hanya bentuk berpusing, gambar kekal tegak
+  const d = path(H.R, sx, sy, spin);
+  hero.setAttribute('d', d); heroClip.setAttribute('d', d); rim.setAttribute('d', d); hero.setAttribute('fill', H.fill);
+  tf(heroG, x, y, s, s, rot);
+  const c = H.c, k = H.k, settled = inv(c.m0 + MD * .8, c.m0 + MD + .25, t) * (1 - inv(c.end - .05, c.end + .12, t));
+  // gambar dalam bentuk (tingkap)
+  Object.entries(photo).forEach(([key, im]) => im.setAttribute('opacity', c.ph === key ? settled : 0));
+  rim.setAttribute('stroke-opacity', c.ph ? .9 * settled : 0);
+  // latar: wipe bulatan dari pusat hero pada setiap morph
+  const prevBg = k ? SC[k - 1].bg : SC[0].bg, w = E.inOut(inv(c.m0, c.m0 + .5, t));
+  bgRect.setAttribute('fill', prevBg); wipe.setAttribute('fill', c.bg); wipe.setAttribute('cx', x); wipe.setAttribute('cy', y); wipe.setAttribute('r', 2300 * w);
+  const bgNow = w > .5 ? c.bg : prevBg;
+  const br = document.getElementById('brand'); br.style.color = DARK(bgNow) ? C.CR : C.BL;
+  // butiran ikut babak
+  unitD.setAttribute('opacity', c.unit ? settled : 0);
+  layG.setAttribute('opacity', c.layers ? 1 - inv(c.end - .05, c.end + .1, t) : 0);
+  const LT = ['@04', '@04%30', '@04%60'].map(x => Math.max(T(x), SC[3].m0 + MD - .05));   // selepas morph ke tangki selesai
+  bars.forEach((b, i) => { const g = c.layers ? E.outQt(inv(LT[i], LT[i] + .45, t)) : 0;
+    b.e.setAttribute('y', b.y1 - b.h * g); b.e.setAttribute('height', b.h * g); });
+  labs.forEach((g, i) => popAt(g, t, LT[i] + .05, 560, 900 + (bars[i].y1 - bars[i].h / 2) * .9, { s0: c.layers ? 1 - out(t, c.end) : 0 }));
+  popAt(numG, t, T('@05%10'), 0, 0, { amt: .22, s0: c.num ? 1 - out(t, c.end) : 0 });
+  if (c.tap) { const t0 = T('@07%40'), ph = inv(t0, t0 + .7, t); ring.setAttribute('r', 160 * E.outQt(ph)); ring.setAttribute('stroke-opacity', t >= t0 ? 1 - ph : 0); } else ring.setAttribute('stroke-opacity', 0);
+  shackle.setAttribute('stroke-dashoffset', c.shackle ? SHL * (1 - E.inOut(inv(c.m0 + MD, c.m0 + MD + .5, t)) * (1 - inv(c.end - .1, c.end + .1, t))) : SHL);
+  shackle.setAttribute('opacity', c.shackle ? 1 : 0);
+  halo.setAttribute('d', d); halo.setAttribute('transform', heroG.getAttribute('transform')); halo.setAttribute('opacity', c.glow ? .55 * settled * (1 + .2 * Math.sin(t * 5)) : 0);
+  waG.setAttribute('opacity', c.cta ? E.out(inv(c.m0 + MD * .7, c.m0 + MD + .2, t)) : 0);
+  // lantai + kabinet dipangkah (floor standing)
+  const fl = c.floor ? E.inOut(inv(c.a, c.a + .5, t)) * (1 - inv(c.end - .05, c.end + .15, t)) : 0;
+  tf(floorG, 0, 960 + 400 * .9 + 2, 1); floorLine.setAttribute('width', 1080 * fl); floorLine.setAttribute('x', 540 - 540 * fl);
+  popAt(cab, t, T('@03%45'), 880, 0, { s0: c.floor ? 1 - out(t, c.end) : 0 });
+  cabX.setAttribute('opacity', t > T('@03%60') ? 1 : 0);
+  // teks: tajuk huruf demi huruf, pil di tengah baris, keluar pada morph seterusnya
+  TXT.forEach((x, i) => {
+    const sc = SC[i], o = i === k ? out(t, sc.end) : 1, on = i === k;
+    x.rows.forEach((row, r) => row.forEach((l, j) => popAt(l.g, t, sc.a + .05 + r * .25 + j * .025, l.x, l.y, { amt: .2, s0: on ? 1 - o : 0 })));
+    if (x.pill) popAt(x.pill, t, T(`@${sc.id}%45`), 540, sc.py, { s0: on ? 1 - o : 0, r: -3 });
+  });
+  // CTA
+  const cta = SC[SC.length - 1], ca = cta.a;
+  ticks.forEach((g, i) => { const a = E.pop(inv(ca + .5 + i * .12, ca + .85 + i * .12, t)); g.setAttribute('transform', `translate(${mix(-500, 540, a)} ${1050 + i * 70})`); });
+  const bt = T('@11%40');
+  popAt(btnG, t, bt, 540, 1345 + (t > bt + .6 ? 6 * Math.sin((t - bt) * 4) : 0), { amt: .18 });
+  const ph = ((t - bt - .5) % 1.2 + 1.2) % 1.2 / 1.2;
+  pulse.setAttribute('opacity', t > bt + .5 ? 1 - ph : 0); tf(pulse, 0, 0, 1 + .18 * ph, 1 + .5 * ph);
+  fine.setAttribute('opacity', E.out(inv(ca, ca + .4, t)));
+});
+});
+</script>
+</body></html>

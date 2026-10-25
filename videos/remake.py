@@ -11,9 +11,10 @@ storyboard.json (contoh penuh: projek/neon-p1-01/storyboard.json):
   baris: [{"id": "01", "text", "cap", "jenis", ...medan ikut jenis}]
 
 Jenis baris dan medannya ("|" dalam tajuk = pecah baris):
-  hook    tajuk, sorot            produk  tajuk, sorot           suhu  tajuk?
+  hook    tajuk, sorot            produk  tajuk, sorot           suhu  tajuk?, liter? (["3.6L", "7.1L", "10.4L"])
   warna   tajuk, sorot            poin    tajuk, sorot           harga label?, harga, sub, per?, ikon?
   promo   tajuk, pre, harga, sub, atas?   (separuh pertama atas gambar, separuh kedua harga besar)
+  angka   tajuk, harga (nombor besar), sub      (contoh: TOTAL KAPASITI / 21.1L / MEMANG BESAR!)
   desak   tajuk, sorot            cta     tajuk
 Semua jenis boleh ada "gambar" (assets/img/..., latar penuh realistik).
 
@@ -33,7 +34,7 @@ TEMPLAT = ["coway", "kinetic", "comic", "glow", "paper", "ugc"]
 BGS = {"kinetic": ["k-blue", "k-ink", "k-white", "k-sky", "k-pink"], "comic": ["comic-pink", "comic-sky", "comic-blue", "comic-white"],
        "glow": ["glow-wall", "glow-dark"], "paper": ["paper-cream", "paper-blue", "paper-sky", "paper-pink"], "ugc": ["ugc-blue", "ugc-white"]}
 LIGHT = {"k-white", "k-sky", "k-pink", "comic-white", "comic-sky", "paper-cream", "paper-sky", "paper-pink", "ugc-white"}
-CHAR = {"kinetic": .5, "comic": .55, "glow": .62, "paper": .72, "ugc": .66}     # lebar purata aksara / saiz fon
+CHAR = {"kinetic": .5, "comic": .55, "glow": .82, "paper": .72, "ugc": .66}     # lebar purata aksara / saiz fon
 
 
 def pieces(s):
@@ -119,8 +120,10 @@ def hype_line(st, L, bg, sb, photo):
     elif j == "suhu":
         if tj:
             els.append(heading(top=200, size=150))
+        lt = L["liter"] or [None] * 3
         els.append({"type": "temps", "in": L.at, "out": L.out, "top": 780 if photo else 560,
-                    "items": [{"k": "hot", "at": L.at}, {"k": "cold", "at": L.mid(30)}, {"k": "room", "at": L.mid(60)}]})
+                    "items": [{"k": k, "at": a, **({"txt": f"{n} {x}"} if x else {})} for k, a, n, x in
+                              zip(("hot", "cold", "room"), (L.at, L.mid(30), L.mid(60)), ("PANAS", "SEJUK", "SUHU BILIK"), lt)]})
     elif j in ("warna", "poin"):
         items = [w(t, L.at if k == 0 else L.mid(25 * k), 120) for k, t in enumerate(tj)]
         if L["sorot"] and not (burst and j == "poin"):
@@ -155,6 +158,20 @@ def hype_line(st, L, bg, sb, photo):
         if st == "kinetic":
             els.append({"type": "ticker", "in": L.at, "out": sb["_after_promo"], "top": 1300, "text": f"{L['pre'] or ''} {L['harga']} {L['sub'] or ''}".strip(),
                         "rot": -5, "bg": "#111", "color": "#fff"})
+    elif j == "angka":
+        items = [w(L["tajuk"].replace("|", " "), L.at, 120)] if L["tajuk"] else []
+        items.append({**w(L["harga"], L.mid(15), 360, accent=True, hit=True), **({"box": True, "bg": "#111"} if st == "kinetic" and photo else {})})
+        if L["sub"]:
+            items.append({**w(L["sub"], L.mid(45), 110), **({"box": True, "bg": BLUE, "color": "#fff"} if st in ("kinetic", "ugc") else {})})
+        if burst:
+            els.append({"type": "burst", "in": L.mid(15), "out": L.out, "html": L["harga"], "top": 520, "size": 640, "x": 540, "color": YEL,
+                        "textColor": "#fff", "fs": 150, "rot": -6, "hit": True})
+            items = [i for i in items if i["txt"] != L["harga"]]
+            els.append(W(L.at, L.out, 200, items[:1]))
+            if len(items) > 1:
+                els.append(W(L.mid(45), L.out, 1180, items[1:]))
+        else:
+            els.append(W(L.at, L.out, 380, items))
     elif j == "desak":
         if burst:
             els.append({"type": "burst", "in": L.at, "out": L.out, "html": "<br>".join(tj), "top": 300, "size": 660, "x": 540, "color": YEL,
@@ -216,7 +233,7 @@ def coway_video(sb, lines):
             scenes += ([(at, img), (L.mid(55), "navy")] if g else [(at, "navy")])
         elif j == "cta":
             scenes.append((at, "blue"))
-        elif j == "desak":
+        elif j in ("desak", "angka"):
             scenes.append((at, img or "navy"))
         elif j == "harga":
             scenes.append((at, img or "blue"))
@@ -246,9 +263,10 @@ def coway_video(sb, lines):
         elif j == "suhu":
             if not g:
                 els.append(photo(L.at, L.out))
+            lt = L["liter"] or ["", "", ""]
             els.append({"type": "chips", "in": L.at, "out": L.out, "top": 220 if g else 950, "items": [
-                {"text": "PANAS", "color": "#ff7a6b", "at": L.at}, {"text": "SEJUK", "color": "#6cc2ff", "at": L.mid(30)},
-                {"text": "SUHU BILIK", "color": NAVY, "at": L.mid(60)}]})
+                {"text": f"PANAS {lt[0]}".strip(), "color": "#ff7a6b", "at": L.at}, {"text": f"SEJUK {lt[1]}".strip(), "color": "#6cc2ff", "at": L.mid(30)},
+                {"text": f"SUHU BILIK {lt[2]}".strip(), "color": NAVY, "at": L.mid(60)}]})
         elif j == "harga":
             if L["label"]:
                 els.append({"type": "banner", "in": L.at, "out": L.out, "top": 200, "html": em_last(L["label"])} if g else title(L.at, L.out, L["label"], top=230, size=90))
@@ -266,6 +284,13 @@ def coway_video(sb, lines):
             els.append(title(L.mid(s0), L.out, f"{L['pre'] or ''}<br><span style='color:var(--yellow)'>{L['harga']}</span>", top=420, size=170, hit=True))
             if L["sub"]:
                 els.append(pill(L.mid(s0 + 20), L.out, L["sub"], 900))
+        elif j == "angka":
+            if L["tajuk"]:
+                els.append({"type": "banner", "in": L.at, "out": L.out, "top": 200, "html": em_last(head)} if g else
+                           {"type": "text", "in": L.at, "out": L.out, "top": 300, "size": 64, "weight": 800, "html": head})
+            els.append(title(L.mid(15), L.out, f"<span style='color:var(--yellow)'>{L['harga']}</span>", top=420 if not g else 760, size=200, hit=True))
+            if L["sub"]:
+                els.append(pill(L.mid(45), L.out, L["sub"], 720 if not g else 1060))
         elif j == "desak":
             els.append({"type": "icon", "in": L.at, "out": L.out, "top": 300, "icon": "clock", "size": 260, "color": "#fff"})
             els.append(title(L.at, L.out, em_last(head).replace("<em>", "<span style='color:var(--yellow)'>").replace("</em>", "</span>"), top=640, size=130))
