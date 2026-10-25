@@ -1,0 +1,326 @@
+{
+ "slug": "penapis-air-mampu-milik",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "neon/podium5.jpg",
+    "color": "pastel",
+    "top": 420,
+    "h": 1080,
+    "mask": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "pastel"
+  },
+  {
+   "at": "@04",
+   "bg": "pastel"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "neon/pink.jpg",
+    "color": "pink",
+    "top": 380,
+    "h": 1080
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  },
+  {
+   "at": "@08",
+   "bg": {
+    "clip": "press_pour",
+    "c0": 3.0,
+    "c1": 6.6
+   }
+  },
+  {
+   "at": "@08%55",
+   "bg": "navy"
+  },
+  {
+   "at": "@09",
+   "bg": "navy"
+  },
+  {
+   "at": "@10",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 170,
+   "size": 96,
+   "html": "NAK CARI<br>PENAPIS AIR",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "pill",
+   "in": "@01%45",
+   "out": "@02",
+   "top": 410,
+   "html": "MAMPU MILIK?",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@04",
+   "top": 200,
+   "size": 120,
+   "html": "COWAY <span style='color:#E86E5A'>NEON</span>",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "photo",
+   "in": "@02",
+   "out": "@04",
+   "top": 380,
+   "left": 290,
+   "w": 500,
+   "h": 500,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@02%55",
+   "out": "@03",
+   "top": 950,
+   "html": "✓ 3 SUHU",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "chips",
+   "in": "@03",
+   "out": "@04",
+   "top": 950,
+   "items": [
+    {
+     "text": "PANAS",
+     "color": "#ff7a6b",
+     "at": "@03"
+    },
+    {
+     "text": "SEJUK",
+     "color": "#6cc2ff",
+     "at": "@03%30"
+    },
+    {
+     "text": "SUHU BILIK",
+     "color": "#0B2F6B",
+     "at": "@03%60"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 220,
+   "size": 100,
+   "html": "<span style='color:#E86E5A'>5</span> PILIHAN WARNA",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "lineup",
+   "in": "@04",
+   "out": "@05",
+   "keys": [
+    {
+     "at": "@04",
+     "unit": "all",
+     "zoom": 1
+    },
+    {
+     "at": "@04%25",
+     "unit": "pink",
+     "zoom": 2.1
+    },
+    {
+     "at": "@04%40",
+     "unit": "mint",
+     "zoom": 2.1
+    },
+    {
+     "at": "@04%55",
+     "unit": "ciel",
+     "zoom": 2.1
+    },
+    {
+     "at": "@04%70",
+     "unit": "gray",
+     "zoom": 2.1
+    },
+    {
+     "at": "@04%85",
+     "unit": "white",
+     "zoom": 2.1
+    },
+    {
+     "at": "@04e",
+     "unit": "all",
+     "zoom": 1
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 220,
+   "size": 120,
+   "html": "MINIMALIST",
+   "color": "#0B2F6B",
+   "shadow": false
+  },
+  {
+   "type": "text",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 380,
+   "html": "cantik di mana-mana dapur",
+   "color": "#0B2F6B"
+  },
+  {
+   "type": "title",
+   "in": "@06",
+   "out": "@08",
+   "top": 230,
+   "size": 90,
+   "html": "HARGA BULANAN"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@08",
+   "top": 400,
+   "left": 350,
+   "w": 380,
+   "h": 380,
+   "src": "../../assets/img/neon/mint.jpg"
+  },
+  {
+   "type": "card",
+   "in": "@06%30",
+   "out": "@08",
+   "top": 840,
+   "icon": "tech",
+   "title": "RM59 SEBULAN",
+   "sub": "Dengan servis, technician datang ke rumah"
+  },
+  {
+   "type": "card",
+   "in": "@07",
+   "out": "@08",
+   "top": 1080,
+   "icon": "box",
+   "icbg": "#fff3cc",
+   "iccolor": "#b07b00",
+   "title": "RM54 SEBULAN",
+   "sub": "Self-service, tukar filter sendiri"
+  },
+  {
+   "type": "pill",
+   "in": "@08",
+   "out": "@08%55",
+   "top": 300,
+   "html": "ORDER SEKARANG LAGI UNTUNG",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "text",
+   "in": "@08%55",
+   "out": "@09",
+   "top": 300,
+   "size": 60,
+   "weight": 800,
+   "html": "HARGA SPECIAL"
+  },
+  {
+   "type": "title",
+   "in": "@08%55",
+   "out": "@09",
+   "top": 420,
+   "size": 170,
+   "html": "REBAT<br><span style='color:var(--yellow)'>RM20</span>",
+   "hit": true
+  },
+  {
+   "type": "pill",
+   "in": "@08%75",
+   "out": "@09",
+   "top": 900,
+   "html": "SEBULAN × 7 BULAN PERTAMA*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "icon",
+   "in": "@09",
+   "out": "@10",
+   "top": 300,
+   "icon": "clock",
+   "size": 260,
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@09",
+   "out": "@10",
+   "top": 640,
+   "size": 130,
+   "html": "KENA <span style='color:var(--yellow)'>CEPAT!</span>"
+  },
+  {
+   "type": "stamp",
+   "in": "@09%55",
+   "out": "@10",
+   "top": 960,
+   "html": "KUOTA TERHAD",
+   "rot": -6
+  },
+  {
+   "type": "photo",
+   "in": "@10",
+   "out": null,
+   "top": 200,
+   "left": 330,
+   "w": 420,
+   "h": 420,
+   "src": "../../assets/img/neon/pink.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@10",
+   "top": 720,
+   "button": "WhatsApp saya",
+   "btnAt": "@10%35",
+   "ticks": [
+    "RM59 DENGAN SERVIS*",
+    "RM54 SELF-SERVICE*",
+    "+ REBAT RM20 × 7 BULAN*"
+   ],
+   "fine": "*Harga bulanan RM59 (dengan servis) atau RM54 (self-service). Rebat RM20 sebulan untuk 7 bulan pertama. Kuota terhad. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY",
+ "tagline": "Own Your Aesthetics, Affordably."
+}

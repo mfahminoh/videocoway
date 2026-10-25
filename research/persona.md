@@ -31,6 +31,8 @@ Pembanding yang lebih adil ialah kos setiap perbualan.
 - **Bukti (copy iklan):** "Korang masih tidur atas tilam lama yang dah tak selesa?" · "Peti sejuk anda dah lama? Dah tak sejuk macam dulu, makanan pun mudah rosak."
 - **Produk lazim:** tilam (Prime II, Prime Lite, BEREX), peti ais (551L, 715L). Juga penapis air lama yang dah habis bayar.
 - **Kes struktur paling kuat:** dua produk, dua ejen, pencetus sama.
+- **Bukti tambahan peti ais (25 Okt 2026, post awam, bukan pelanggan Coway; lihat [`peti-ais-voc.md`](peti-ais-voc.md)):** "Dua hari peti ais aku tak sejuk sampai lauk rosak. Semalam aku decide tak boleh jadi ni, so aku book, nak beli yang baru." (Threads) · "Rupanya compressor peti ais rosak teruk. 😭 Kena beli peti ais ke cane" (Threads) · "bertabah beli brg basah selang 2 hari" (Threads). Pencetus wujud dalam kategori; status kekal `HIPOTESIS` sehingga ada chat pelanggan ejen.
+- **Halangan khusus peti ais:** takut repair/waranti lambat ("datang check je dah kena bayar"), "worth it tak?" vs beli cash jenama established, buang peti lama.
 
 ### P3 · "Dah lama survey, perlukan tarikh akhir" — `HIPOTESIS` (sempadan)
 - **Situasi:** dah kaji model tertentu berminggu-minggu, tahu produk dan harga; perlukan sebab untuk bertindak sekarang.
@@ -46,7 +48,7 @@ Pembanding yang lebih adil ialah kos setiap perbualan.
 | ID | Persona | Data | Produk |
 |---|---|---|---|
 | P4 | Keluarga yang dah penat beli air botol / ais | Poster "Mineral Water" 17 perbualan @ RM12.87; iklan AIS 330 pendaftaran laman | Penapis air, AIS (ais) |
-| P5 | Pasangan baru, rumah pertama | "Neon 2 Baru Kahwin" ±5 perbualan / 4 akaun | Neon, Dazzie |
+| P5 | Pasangan baru, rumah pertama | "Neon 2 Baru Kahwin" ±5 perbualan / 4 akaun; pesaing sewa-milik guna "RUMAH BARU, BARANG BELUM ADA?" (Ad Library, Okt 2026) | Neon, Dazzie, peti ais |
 | P6 | Pekerja yang hadiahkan diri sendiri | Kerusi urut, 19 perbualan | Kerusi urut |
 | P7 | Ibu bapa baru (susu malam) | "Bancuh susu" 3, "ada anak kecil" 0 | Neon, Dazzie (tidak disokong dalam data) |
 

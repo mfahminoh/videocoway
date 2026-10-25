@@ -1,0 +1,352 @@
+{
+ "slug": "komik-penapis-air-mampu-milik",
+ "voice": "Aoede",
+ "style_tts": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "style": "comic",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "comic-pink"
+  },
+  {
+   "at": "@02",
+   "bg": "comic-sky"
+  },
+  {
+   "at": "@03",
+   "bg": "comic-blue"
+  },
+  {
+   "at": "@04",
+   "bg": "comic-white"
+  },
+  {
+   "at": "@05",
+   "bg": "comic-pink"
+  },
+  {
+   "at": "@06",
+   "bg": "comic-blue"
+  },
+  {
+   "at": "@07",
+   "bg": "comic-sky"
+  },
+  {
+   "at": "@08",
+   "bg": "comic-white"
+  },
+  {
+   "at": "@09",
+   "bg": "comic-pink"
+  },
+  {
+   "at": "@10",
+   "bg": "comic-blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 240,
+   "items": [
+    {
+     "txt": "NAK CARI",
+     "at": "@01",
+     "size": 140,
+     "color": "#fff"
+    },
+    {
+     "txt": "PENAPIS AIR",
+     "at": "@01%25",
+     "size": 140,
+     "color": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "burst",
+   "in": "@01%50",
+   "out": "@02",
+   "html": "MAMPU<br>MILIK?",
+   "top": 640,
+   "size": 620,
+   "x": 540,
+   "color": "#fff",
+   "textColor": "#ff8fb1",
+   "fs": 120,
+   "rot": -6,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 160,
+   "items": [
+    {
+     "txt": "COWAY NEON!",
+     "at": "@02",
+     "size": 150,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@02%10",
+   "out": "@03",
+   "src": "../../assets/img/hype/neon_pink.png",
+   "w": 430,
+   "top": 380,
+   "anim": "spin",
+   "float": true
+  },
+  {
+   "type": "burst",
+   "in": "@02%55",
+   "out": "@03",
+   "html": "3<br>SUHU!",
+   "top": 1000,
+   "size": 400,
+   "x": 800,
+   "color": "#ffd23f",
+   "textColor": "#fff",
+   "fs": 96,
+   "rot": 12,
+   "hit": true
+  },
+  {
+   "type": "temps",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@03"
+    },
+    {
+     "k": "cold",
+     "at": "@03%30"
+    },
+    {
+     "k": "room",
+     "at": "@03%60"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 170,
+   "items": [
+    {
+     "txt": "5 WARNA",
+     "at": "@04",
+     "size": 170,
+     "color": "#ff8fb1"
+    },
+    {
+     "txt": "CANTIK!",
+     "at": "@04%40",
+     "size": 150,
+     "color": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@04%15",
+   "out": "@05",
+   "src": "../../assets/img/hype/lineup_cut.png",
+   "w": 1000,
+   "top": 640,
+   "anim": "rise"
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 200,
+   "items": [
+    {
+     "txt": "DESIGN",
+     "at": "@05",
+     "size": 150,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "burst",
+   "in": "@05%35",
+   "out": "@06",
+   "html": "SANGAT<br>MINIMALIST!",
+   "top": 460,
+   "size": 720,
+   "x": 540,
+   "color": "#fff",
+   "textColor": "#04A4E4",
+   "fs": 104,
+   "rot": -6,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 170,
+   "items": [
+    {
+     "txt": "HARGA BULANAN",
+     "at": "@06",
+     "size": 120,
+     "color": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "tag",
+   "in": "@06%35",
+   "out": "@07",
+   "top": 600,
+   "big": "RM59",
+   "sub": "DENGAN SERVIS",
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 170,
+   "items": [
+    {
+     "txt": "ATAU...",
+     "at": "@07",
+     "size": 150,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "tag",
+   "in": "@07%20",
+   "out": "@08",
+   "top": 600,
+   "big": "RM54",
+   "sub": "SELF-SERVICE",
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": "@09",
+   "top": 170,
+   "items": [
+    {
+     "txt": "ORDER SEKARANG",
+     "at": "@08",
+     "size": 120,
+     "color": "#ff8fb1"
+    },
+    {
+     "txt": "LAGI UNTUNG!",
+     "at": "@08%20",
+     "size": 150,
+     "color": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "gift",
+   "in": "@08%30",
+   "out": "@09",
+   "openAt": "@08%50",
+   "top": 440,
+   "size": 560,
+   "rays": "rgba(4,164,228,.35)"
+  },
+  {
+   "type": "words",
+   "in": "@08%55",
+   "out": "@09",
+   "top": 1060,
+   "items": [
+    {
+     "txt": "REBAT RM20",
+     "at": "@08%58",
+     "size": 140,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "× 7 BULAN PERTAMA*",
+     "at": "@08%75",
+     "size": 90,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "burst",
+   "in": "@09",
+   "out": "@10",
+   "html": "CEPAT!",
+   "top": 300,
+   "size": 660,
+   "x": 540,
+   "color": "#ffd23f",
+   "textColor": "#fff",
+   "fs": 190,
+   "rot": -6,
+   "hit": true
+  },
+  {
+   "type": "words",
+   "in": "@09%50",
+   "out": "@10",
+   "top": 1050,
+   "items": [
+    {
+     "txt": "KUOTA TERHAD!",
+     "at": "@09%55",
+     "size": 130,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@10",
+   "out": null,
+   "top": 380,
+   "items": [
+    {
+     "txt": "MINAT?",
+     "at": "@10",
+     "size": 170,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@10%30",
+   "top": 780,
+   "button": "WhatsApp saya",
+   "btnAt": "@10%50",
+   "fine": "*Harga bulanan RM59 (dengan servis) atau RM54 (self-service). Rebat RM20 sebulan untuk 7 bulan pertama. Kuota terhad. Tertakluk pada terma &amp; promosi semasa Coway."
+  }
+ ]
+}

@@ -41,6 +41,8 @@ Teks penuh setiap laman produk: `Other Brand Assets/<kategori>/<produk>/copy.md`
 Kedua-dua: **Dual Hygiene**, iaitu Silver Ion di zon peti sejuk (hapus 99.99% E. coli & S. aureus, neutralkan sehingga 98.52% bau¹) dan penapis deodoriser di zon beku (neutralkan sehingga 98.4% Trimethylamine, iaitu bau ikan¹). HEART Service: CODY tukar penapis deodoriser secara berkala, servis percuma 7 tahun (pelan sewa). Self-Service: penghantaran penapis percuma 7 tahun.
 ¹ Wajib letak sebagai nota kaki bila guna angka ini.
 
+Waranti (coway.com.my/warranty-policy, semak 25 Okt 2026): **kompressor 10 tahun** (tunai & sewa); umum 1 tahun untuk tunai. Pelan lain: 551L HEART 5+0 RM119 / 3+2 RM147.34; 715L HEART 5+0 RM104 / 3+2 RM131.44. Tiada promo di halaman produk. Butiran: `research/peti-ais-produk.md`.
+
 Gambar terbaik: `deodoriser_filter_bg*.jpg` (makanan terapung dalam kiub, latar navy), `cooling_precision*.jpg` (551L terbuka + aliran sejuk biru), `spaces_for_everything_slide*.jpg`, `Coway_SBS715-Refrigerator_Card1/2_V2.jpg` (dapur), `Coway_SBS715-Refrigerator_Banner6b.jpg` (sayur sebelum/selepas Humidity Control), `step1-7.png` (CODY servis), `homebanner_fridge.png` (551L terbuka, latar lutsinar).
 
 ## Lain-lain
