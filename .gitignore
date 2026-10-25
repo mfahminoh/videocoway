@@ -33,6 +33,7 @@ out/*
 !out/neoplus_final.mp4
 !out/neoplus_full_final.mp4
 !out/NE[0-9][0-9]_*.mp4
+!out/neon-p1-01/
 !out/E04_*.mp4
 !out/README_neon.md
 !out/hype/
