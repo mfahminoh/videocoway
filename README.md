@@ -22,7 +22,7 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
 | **Threads / posting** | `threads/`, `promo/threads/` | — |
 | **Poster iklan Meta** | `posters/` | `posters/*.jpg` |
-| **Gaya motion graphic `mg`** (15 gaya mg-styles-15) — contoh NL01FV Flat Vector | `videos/lib/mg.js`, `videos/NL01FV/`, `reference/mg-styles-15/`, `reference/opus-video-prompts.md` | `out/mg/` |
+| **Gaya motion graphic `mg`** (15 gaya mg-styles-15) — contoh NL01FV Flat Vector, NEL08 Liquid | `videos/lib/mg.js`, `videos/NL01FV/`, `videos/NEL08/`, `reference/mg-styles-15/`, `reference/opus-video-prompts.md` | `out/mg/` |
 | Rujukan & iklan | `reference/`, `ads/`, `iklan_meta_whatsapp.md` | — |
 
 **Projek baru:** ikut aliran skill dalam [`projek/README.md`](projek/README.md): `coway-riset` → `coway-persona-produk` → `coway-skrip` → `coway-video` → `coway-poster` → `coway-threads` → `coway-iklan`. Persona induk: [`research/persona.md`](research/persona.md).
