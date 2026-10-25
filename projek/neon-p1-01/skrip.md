@@ -24,6 +24,8 @@ Video TikTok rujukan (kreator lain, 34 s, showroom Coway). Audio tak dapat ditra
 
 Nota kaki: *Harga bulanan RM59 (dengan servis) atau RM54 (self-service). Rebat RM20 sebulan untuk 7 bulan pertama. Kuota terhad. Tertakluk pada terma & promosi semasa Coway.
 
+NE12 (kinetic) dan NE13 (komik) guna baris VO & suara yang sama; hanya visual berbeza (lihat `videos/neon-p1-01_batch.py`).
+
 ## Ubah daripada skrip asal
 - "with service" → "dengan servis"; "tahu" → "tau".
 - "hanya RM20 sahaja untuk 7 bulan pertama" → "rebat RM20 sebulan untuk 7 bulan pertama" (brand-guide: promo ialah rebat; "RM20 sahaja" mengelirukan).
