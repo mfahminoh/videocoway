@@ -220,7 +220,7 @@ function seek(T) {
     pending = Clips.show('clipImg', bg.clip, mix(bg.c0, bg.c1, clamp(k)) - SP.clips[bg.clip].start);
     set('clipL', { o: 1, s: mix(1.04, 1.14, k) }); set('shade', { o: bg.shade === false ? 0 : 1 });
   } else if (bg.image) {
-    $('bgColor').className = 'layer bg-' + (bg.color || 'k-white'); set('bgColor', { o: 1 }); set('clipL', { o: 0 }); set('shade', { o: 0 });
+    $('bgColor').className = 'layer bg-' + (bg.color || 'k-white'); set('bgColor', { o: 1 }); set('clipL', { o: 0 }); set('shade', { o: bg.shade ? 1 : 0 });
     const img = $('bgImg');
     if (!img.src.endsWith(bg.image.replace('../../', ''))) { img.src = bg.image; pending = img.decode().catch(() => {}); }
     Object.assign(img.style, { left: (bg.left || 0) + 'px', top: (bg.top || 0) + 'px', width: (bg.w || 1080) + 'px', height: (bg.h || 1920) + 'px', objectFit: bg.fit || 'cover' });

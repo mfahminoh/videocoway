@@ -22,7 +22,7 @@ from playwright.sync_api import sync_playwright
 ROOT = pathlib.Path(__file__).parent
 FPS = 30
 W, H = 1080, 1920
-CHROMIUM = next((str(x) for x in sorted(pathlib.Path("/opt/pw-browsers").glob("chromium-*/chrome-linux*/chrome"), reverse=True)), None)
+CHROMIUM = next((str(x) for x in [pathlib.Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome"), pathlib.Path("/opt/pw-browsers/chromium")] if x.exists()), None)
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 
 
