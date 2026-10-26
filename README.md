@@ -19,6 +19,7 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Peti ais** — 5 video emosi, poster static | `videos/PA0x`, `campaigns/coway-peti-ais/`, `research/`, `static/` | `out/peti_ais/`, `out/static/` |
 | **Core Plus remake "tangki paling besar"** — CP01 glow, CP02 papercut, CP03 mg morph (`coway-remake`) | `projek/coreplus-remake-01/`, `videos/CP01`–`CP03` | `out/coreplus-remake-01/` |
 | **Neon × P1 "mampu milik"** — NE11–NE13, skrip TikTok rujukan → motion graphic / kinetic / komik | `projek/neon-p1-01/`, `videos/neon-p1-01_batch.py`, `videos/NE11`–`NE13` | `out/neon-p1-01/` |
+| **Pakej WP 2** — Cinnamon, Glaze, Ombak, Dazzie, Core Slim: 35 draf skrip mg (5 produk + 2 psikografik setiap model) | `projek/wp-pakej2-01/` | — |
 | **Peti ais & aircond** — plan content | `plan/` | — |
 | **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
 | **Threads / posting** | `threads/`, `promo/threads/` | — |
