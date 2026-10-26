@@ -87,7 +87,7 @@ const SH = {
   circle: R => fn(() => R),
   drop: polar([[0, -190], ...arcPts(0, 40, 140, -55, 235)]),
   tank: polar(rrect(560, 740, 70)),
-  unit: polar([[-138, -400], [138, -400], [138, -150], [124, -150], [124, 400], [-124, 400], [-124, -150], [-138, -150]]),
+  unit: polar(rrect(203, 800, 14)),          // Core Plus 320 × 1260 mm (spec rasmi): siluet depan segi empat lurus
   tank3: polar(rrect(440, 760, 64)),
   big: fn(() => 330),
   pin: polar([[0, 360], ...arcPts(0, -70, 260, 128, 412)]),
@@ -141,14 +141,18 @@ Object.entries(PHOTOS).forEach(([k, n]) => { photo[k] = svg('image', { href: IMG
 const rim = svg('path', { d: '', fill: 'none', stroke: C.WHITE, 'stroke-width': 10, 'stroke-opacity': 0 }, heroG);
 
 // butiran Core Plus (rata) dalam bentuk unit
-const unitD = G(heroG);
-svg('rect', { x: -124, y: -150, width: 248, height: 16, fill: C.OATD }, unitD);
-for (let i = 0; i < 5; i++) svg('circle', { cx: -70 + i * 35, cy: -330, r: 6, fill: C.OATD }, unitD);
-text(unitD, 'coway', -112, -366, 24, '#9C8F78', { anchor: 'start', weight: 800 });
-svg('rect', { x: -100, y: -120, width: 200, height: 190, rx: 12, fill: C.OATD }, unitD);
-[-42, 42].forEach(x => { svg('rect', { x: x - 20, y: -96, width: 40, height: 70, rx: 8, fill: C.OAT }, unitD); svg('rect', { x: x - 6, y: -120, width: 12, height: 22, rx: 4, fill: '#AFA58F' }, unitD); });
-svg('rect', { x: -100, y: 58, width: 200, height: 14, rx: 6, fill: '#B9AC93' }, unitD);
-svg('rect', { x: -124, y: 120, width: 248, height: 6, fill: C.OATD }, unitD);
+const unitD = G(heroG);      // butiran ikut lukisan spec (kedudukan diskala dari coway-core-plus-product-spec.png)
+text(unitD, 'coway', -88, -380, 16, '#9C8F78', { anchor: 'start', weight: 800 });
+[-349, -325].forEach((y, r) => [-60, -30, 18, 44, 70].forEach((x, i) => (r === 0 && i % 2) || svg('circle', { cx: x, cy: y, r: 3.2, fill: '#A89B84' }, unitD)));
+svg('rect', { x: -101.5, y: -270, width: 203, height: 159, fill: C.OATD }, unitD);                 // ruang air terbuka
+svg('rect', { x: -101.5, y: -270, width: 203, height: 14, fill: '#B9AC93', 'fill-opacity': .7 }, unitD); // bayang di bawah kepala
+[-44, 44].forEach(x => {
+  svg('ellipse', { cx: x, cy: -266, rx: 9, ry: 4, fill: '#E9EEF2', stroke: '#AEB4BA', 'stroke-width': 2 }, unitD);  // muncung bulat rata
+  svg('rect', { x: x - 16, y: -242, width: 32, height: 63, rx: 4, fill: C.OAT, stroke: '#B9AC93', 'stroke-width': 2 }, unitD);  // pemetik leper
+});
+svg('rect', { x: -101.5, y: -111, width: 203, height: 18, fill: '#B9AC93' }, unitD);                  // dulang titisan
+for (let i = 0; i < 9; i++) svg('rect', { x: -88 + i * 20, y: -107, width: 10, height: 10, rx: 2, fill: C.OATD }, unitD);
+svg('rect', { x: -101.5, y: -93, width: 203, height: 3, fill: C.OATD }, unitD);
 // tangki 3 lapis (tinggi ikut 3.6 / 7.1 / 10.4 L daripada 21.1 L)
 const LAY = [{ v: 3.6, c: C.CO, n: 'PANAS 3.6L' }, { v: 7.1, c: C.BL, n: 'SEJUK 7.1L' }, { v: 10.4, c: C.MI, n: 'SUHU BILIK 10.4L' }];
 const layG = G(heroG, { 'clip-path': 'url(#hc)' });
