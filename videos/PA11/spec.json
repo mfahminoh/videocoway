@@ -1,0 +1,196 @@
+{
+ "slug": "kompressor-rosak-baiki-atau-ganti",
+ "voice": "Achird",
+ "style": "Say in Malaysian Malay, as a calm, confident Coway agent explaining clearly to a friend, honest and friendly",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa11_a_repair.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa11_b_resit.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "BAIKI<br><em>ATAU GANTI?</em>"
+  },
+  {
+   "type": "chips",
+   "in": "@01",
+   "out": "@02",
+   "top": 1040,
+   "items": [
+    {
+     "text": "KOMPRESSOR RM250",
+     "color": "#fff",
+     "at": "@01"
+    },
+    {
+     "text": "GAS RM150",
+     "color": "#ffd23f",
+     "at": "@01%30"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@02",
+   "out": "@03",
+   "top": 1040,
+   "html": "TUNGGU ALAT GANTI 2–3 BULAN",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@04",
+   "top": 560,
+   "size": 120,
+   "html": "MACAM MANA<br>NAK DECIDE?"
+  },
+  {
+   "type": "reason",
+   "in": "@04",
+   "out": "@05",
+   "top": 600,
+   "num": "1",
+   "title": "DAH BERAPA TAHUN?"
+  },
+  {
+   "type": "reason",
+   "in": "@05",
+   "out": "@06",
+   "top": 600,
+   "num": "2",
+   "title": "ROSAK BERULANG?"
+  },
+  {
+   "type": "reason",
+   "in": "@06",
+   "out": "@07",
+   "top": 600,
+   "num": "3",
+   "title": "KOS REPAIR TINGGI?",
+   "sub": "hampir separuh harga peti baru"
+  },
+  {
+   "type": "vs",
+   "in": "@07",
+   "out": "@08",
+   "top": 420,
+   "left": {
+    "title": "BAIKI",
+    "color": "#1faa59",
+    "items": [
+     "Peti masih muda",
+     "Kali pertama rosak",
+     "Kos rendah"
+    ],
+    "at": "@07"
+   },
+   "right": {
+    "title": "GANTI",
+    "color": "#E5322D",
+    "items": [
+     "Peti dah tua",
+     "Rosak berulang",
+     "Kos tinggi"
+    ],
+    "at": "@07%40"
+   }
+  },
+  {
+   "type": "banner",
+   "in": "@08",
+   "out": "@09",
+   "top": 230,
+   "html": "KALAU GANTI, TENGOK<br><em>WARANTI KOMPRESSOR</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@08",
+   "out": "@08%55",
+   "top": 420,
+   "left": 240,
+   "w": 600,
+   "h": 700,
+   "src": "../../assets/img/coway_fridge/551_inv_comp.png",
+   "fit": "contain",
+   "shadow": false
+  },
+  {
+   "type": "pill",
+   "in": "@08%20",
+   "out": "@08%55",
+   "top": 1200,
+   "html": "KOMPRESSOR WARANTI 10 TAHUN*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "photo",
+   "in": "@08%55",
+   "out": "@09",
+   "top": 480,
+   "left": 90,
+   "w": 900,
+   "h": 515,
+   "src": "../../assets/img/coway_fridge/hs_step1.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@08%55",
+   "out": "@09",
+   "top": 1100,
+   "html": "CODY SERVIS BERKALA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 760,
+   "ticks": [
+    "PETI AIS COWAY DARI RM84/BULAN*",
+    "KOMPRESSOR WARANTI 10 TAHUN*",
+    "CODY SERVIS 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@09%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

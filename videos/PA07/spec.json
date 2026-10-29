@@ -1,0 +1,223 @@
+{
+ "slug": "5-tanda-peti-ais-nazak",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a calm, confident Coway agent explaining clearly to a friend, honest and friendly",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_a_nazak.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_b_getah.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_c_ais.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_a_nazak.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "image": "peti-ais-p2-01/pa11_a_repair.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  },
+  {
+   "at": "@09",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "<em>5 TANDA</em><br>PETI AIS DAH NAZAK"
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "<em>1</em> · GETAH PINTU KOYAK"
+  },
+  {
+   "type": "pill",
+   "in": "@02%25",
+   "out": "@03",
+   "top": 1180,
+   "html": "TOLAK KUAT BARU RAPAT",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "<em>2</em> · AIS TEBAL"
+  },
+  {
+   "type": "pill",
+   "in": "@03%25",
+   "out": "@04",
+   "top": 1180,
+   "html": "PENUH AIS, BUKAN LAUK",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "reason",
+   "in": "@04",
+   "out": "@05",
+   "top": 300,
+   "num": "3",
+   "title": "SEJUK TAK SEKATA",
+   "sub": "atas sejuk, bawah tak"
+  },
+  {
+   "type": "led",
+   "in": "@04%20",
+   "out": "@05",
+   "top": 640,
+   "items": [
+    {
+     "num": "3",
+     "unit": "°C",
+     "label": "ATAS",
+     "at": "@04%25"
+    },
+    {
+     "num": "14",
+     "unit": "°C",
+     "label": "BAWAH",
+     "at": "@04%60"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "<em>4</em> · BUNYI KUAT MALAM"
+  },
+  {
+   "type": "pill",
+   "in": "@05%25",
+   "out": "@06",
+   "top": 1180,
+   "html": "MACAM DAH PENAT",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "<em>5</em> · REPAIR, ROSAK BALIK"
+  },
+  {
+   "type": "pill",
+   "in": "@06%25",
+   "out": "@07",
+   "top": 1180,
+   "html": "DUIT KELUAR LAGI",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@07",
+   "out": "@08",
+   "top": 520,
+   "size": 150,
+   "html": "3 DARIPADA 5?"
+  },
+  {
+   "type": "pill",
+   "in": "@07%40",
+   "out": "@08",
+   "top": 800,
+   "html": "MULA SURVEY SEKARANG",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@08",
+   "out": "@09",
+   "top": 230,
+   "html": "PETI AIS <em>COWAY</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@08",
+   "out": "@09",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@08%30",
+   "out": "@09",
+   "top": 1200,
+   "html": "KOMPRESSOR WARANTI 10 TAHUN*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@09",
+   "top": 760,
+   "ticks": [
+    "PETI AIS COWAY DARI RM84/BULAN*",
+    "KOMPRESSOR WARANTI 10 TAHUN*",
+    "CODY SERVIS 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@09%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

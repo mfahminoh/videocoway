@@ -1,0 +1,194 @@
+{
+ "slug": "pasar-selang-dua-hari",
+ "voice": "Sulafat",
+ "style": "Say in Malaysian Malay, as a tired but sincere mother telling her own story, soft, warm and natural, not too slow",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa12_a_pasar.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa12_b_separuh.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/pa12_c_penat.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "peti-ais-p2-01/pa12_d_borong.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "pill",
+   "in": 0,
+   "out": "@02",
+   "top": 150,
+   "html": "LAKONAN SEMULA",
+   "bg": "rgba(0,0,0,.55)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "KE PASAR<br><em>SELANG 2 HARI</em>"
+  },
+  {
+   "type": "pill",
+   "in": "@02",
+   "out": "@03",
+   "top": 1100,
+   "html": "TAKUT ROSAK",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "chips",
+   "in": "@03",
+   "out": "@04",
+   "top": 1000,
+   "items": [
+    {
+     "text": "PENAT",
+     "color": "#fff",
+     "at": "@03"
+    },
+    {
+     "text": "MINYAK",
+     "color": "#fff",
+     "at": "@03%30"
+    },
+    {
+     "text": "MASA",
+     "color": "#ffd23f",
+     "at": "@03%60"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "SEKARANG:<br><em>BORONG SEMINGGU SEKALI</em>"
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "COWAY <em>715L</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@05",
+   "out": "@06",
+   "top": 400,
+   "left": 90,
+   "w": 900,
+   "h": 675,
+   "src": "../../assets/img/coway_fridge/715_humidity.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@05%40",
+   "out": "@06",
+   "top": 1140,
+   "html": "HUMIDITY CONTROL",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 330,
+   "left": 90,
+   "w": 900,
+   "h": 706,
+   "src": "../../assets/img/coway_fridge/715_open_dark.jpg"
+  },
+  {
+   "type": "led",
+   "in": "@06%30",
+   "out": "@07",
+   "top": 1080,
+   "items": [
+    {
+     "num": "-25",
+     "unit": "°C",
+     "label": "SUPER FREEZING",
+     "at": "@06%40"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@07",
+   "out": "@08",
+   "top": 230,
+   "html": "HEART SERVICE <em>7 TAHUN</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@08",
+   "top": 420,
+   "left": 90,
+   "w": 900,
+   "h": 515,
+   "src": "../../assets/img/coway_fridge/hs_step3.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "715L DARI RM84/BULAN*",
+    "HUMIDITY CONTROL",
+    "SUPER FREEZING −25°C"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Isnin call. Ahad baru datang.",
+  "cap": "Isnin call. *Ahad* datang."
+ },
+ {
+  "id": "02",
+  "text": "Datang tengok, kena bayar. Kompressor? Tunggu order.",
+  "cap": "Tengok, *bayar*. Kompressor? *Tunggu.*"
+ },
+ {
+  "id": "03",
+  "text": "Masa beli peti ais, jangan tengok harga je. Tengok siapa yang jaga lepas tu.",
+  "cap": "Tengok *siapa jaga*"
+ },
+ {
+  "id": "04",
+  "text": "Peti ais Coway. Kompressor waranti sepuluh tahun.",
+  "cap": "Kompressor waranti *10 TAHUN**"
+ },
+ {
+  "id": "05",
+  "text": "Dengan Heart Service, Cody datang servis berkala, tujuh tahun.",
+  "cap": "Cody datang · *7 tahun*"
+ },
+ {
+  "id": "06",
+  "text": "Semak suhu. Steaming. Tukar penapis bau. Cuci luar, dan letak umpan anti-perosak.",
+  "cap": "Semak suhu · *Steaming* · Tukar penapis"
+ },
+ {
+  "id": "07",
+  "text": "Cody datang ikut jadual. Bukan tunggu peti rosak.",
+  "cap": "Ikut *jadual*. Bukan tunggu rosak."
+ },
+ {
+  "id": "08",
+  "text": "Dari lapan puluh empat ringgit sebulan. WhatsApp saya sekarang.",
+  "cap": "dari *RM84*/bulan · *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,180 @@
+{
+ "slug": "dua-hari-tak-sejuk",
+ "voice": "Algieba",
+ "style": "Say in Malaysian Malay, as a sincere father telling a frustrating experience, quiet and heartfelt, natural pace",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa13_a_tong.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa13_b_cium.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/pa13_c_bungkus.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "peti-ais-p2-01/pa11_a_repair.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "dark"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "pill",
+   "in": 0,
+   "out": "@02",
+   "top": 150,
+   "html": "LAKONAN SEMULA",
+   "bg": "rgba(0,0,0,.55)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "DUA HARI <em>TAK SEJUK</em>"
+  },
+  {
+   "type": "pill",
+   "in": "@01%50",
+   "out": "@02",
+   "top": 1100,
+   "html": "LAUK SEMINGGU MASUK TONG",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "pill",
+   "in": "@03",
+   "out": "@04",
+   "top": 1100,
+   "html": "MALAM NI BUNGKUS. ESOK PUN BUNGKUS.",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@04",
+   "out": "@05",
+   "top": 1100,
+   "html": "DATANG TENGOK, KENA BAYAR",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 640,
+   "size": 170,
+   "html": "TAK BOLEH<br>JADI NI."
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "PETI AIS <em>COWAY</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+  },
+  {
+   "type": "card",
+   "in": "@07",
+   "out": "@07%55",
+   "top": 1120,
+   "icon": "shield",
+   "title": "KOMPRESSOR 10 TAHUN",
+   "sub": "Waranti kompressor*"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@07%55",
+   "top": 330,
+   "left": 240,
+   "w": 600,
+   "h": 700,
+   "src": "../../assets/img/coway_fridge/551_inv_comp.png",
+   "fit": "contain",
+   "shadow": false
+  },
+  {
+   "type": "photo",
+   "in": "@07%55",
+   "out": "@08",
+   "top": 420,
+   "left": 90,
+   "w": 900,
+   "h": 515,
+   "src": "../../assets/img/coway_fridge/hs_step5.jpg"
+  },
+  {
+   "type": "card",
+   "in": "@07%55",
+   "out": "@08",
+   "top": 1040,
+   "icon": "tech",
+   "title": "CODY 7 TAHUN",
+   "sub": "Ada orang yang jaga"
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "PETI AIS COWAY DARI RM84/BULAN*",
+    "KOMPRESSOR WARANTI 10 TAHUN*",
+    "CODY SERVIS 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

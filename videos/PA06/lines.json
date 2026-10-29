@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Baru balik beli barang dapur, buka peti ais, dah tak ada ruang?",
+  "cap": "Buka peti… *dah tak ada ruang?*"
+ },
+ {
+  "id": "02",
+  "text": "Ramai terus salahkan saiz peti. Padahal, selalunya ada tiga punca lain.",
+  "cap": "Bukan saiz je. Ada *3 punca lain.*"
+ },
+ {
+  "id": "03",
+  "text": "Satu, bekas terlalu besar. Separuh isi dia, angin je.",
+  "cap": "1 · Bekas *terlalu besar*"
+ },
+ {
+  "id": "04",
+  "text": "Dua, tiada zon. Ayam, sayur, air kotak, semua bercampur atas satu rak.",
+  "cap": "2 · *Tiada zon*"
+ },
+ {
+  "id": "05",
+  "text": "Tiga, sumbat sampai penuh. Isi dua pertiga je, supaya angin sejuk boleh bergerak.",
+  "cap": "3 · Isi ± *2/3 sahaja*"
+ },
+ {
+  "id": "06",
+  "text": "Dah susun, tapi masih tak muat? Barulah masalah dia, saiz.",
+  "cap": "Masih tak muat? *Barulah saiz.*"
+ },
+ {
+  "id": "07",
+  "text": "Masa tu, peti ais Coway lima ratus lima puluh satu liter ni ada empat pintu, dan satu zon boleh tukar sejuk atau beku, ikut keperluan.",
+  "cap": "Coway *551L*: 4 pintu, *Convertible Zone*"
+ },
+ {
+  "id": "08",
+  "text": "Dari sembilan puluh sembilan ringgit sebulan. Punca yang mana satu? Komen, atau WhatsApp saya.",
+  "cap": "551L dari *RM99*/bulan · *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,233 @@
+{
+ "slug": "3-ukuran-wajib-sebelum-beli",
+ "voice": "Zephyr",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa10_a_tak_lepas.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa10_b_ukur.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "pill",
+   "in": 0,
+   "out": "@02",
+   "top": 150,
+   "html": "LAKONAN SEMULA",
+   "bg": "rgba(0,0,0,.55)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "PETI DAH SAMPAI…<br><em>TAK LEPAS PINTU</em>"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@03",
+   "top": 1000,
+   "size": 120,
+   "html": "UKUR 3 BENDA",
+   "color": "#ffffff"
+  },
+  {
+   "type": "grid",
+   "in": "@03",
+   "out": "@04",
+   "top": 420,
+   "items": [
+    {
+     "big": "L",
+     "small": "LEBAR",
+     "at": "@03"
+    },
+    {
+     "big": "D",
+     "small": "DALAM",
+     "at": "@03%30"
+    },
+    {
+     "big": "T",
+     "small": "TINGGI",
+     "at": "@03%65"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 300,
+   "size": 110,
+   "html": "UKUR LALUAN"
+  },
+  {
+   "type": "chips",
+   "in": "@04",
+   "out": "@05",
+   "top": 620,
+   "items": [
+    {
+     "text": "PINTU RUMAH",
+     "color": "#fff",
+     "at": "@04%20"
+    },
+    {
+     "text": "PINTU DAPUR",
+     "color": "#fff",
+     "at": "@04%40"
+    },
+    {
+     "text": "SELEKOH",
+     "color": "#fff",
+     "at": "@04%60"
+    },
+    {
+     "text": "LIF",
+     "color": "#ffd23f",
+     "at": "@04%80"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 380,
+   "size": 110,
+   "html": "BERI RUANG<br>DI BELAKANG"
+  },
+  {
+   "type": "pill",
+   "in": "@05%40",
+   "out": "@06",
+   "top": 760,
+   "html": "SUPAYA HABA BOLEH KELUAR",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "COWAY <em>715L</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 360,
+   "left": 280,
+   "w": 520,
+   "h": 520,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg"
+  },
+  {
+   "type": "grid",
+   "in": "@06%25",
+   "out": "@07",
+   "top": 920,
+   "items": [
+    {
+     "big": "91",
+     "small": "LEBAR (CM)",
+     "at": "@06%25"
+    },
+    {
+     "big": "74",
+     "small": "DALAM (CM)",
+     "at": "@06%50"
+    },
+    {
+     "big": "190.5",
+     "small": "TINGGI (CM)",
+     "at": "@06%75"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@07",
+   "out": "@08",
+   "top": 230,
+   "html": "COWAY <em>551L</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@08",
+   "top": 360,
+   "left": 280,
+   "w": 520,
+   "h": 520,
+   "src": "../../assets/img/coway_fridge/551_front.jpg"
+  },
+  {
+   "type": "grid",
+   "in": "@07%20",
+   "out": "@08",
+   "top": 920,
+   "items": [
+    {
+     "big": "90.5",
+     "small": "LEBAR (CM)",
+     "at": "@07%20"
+    },
+    {
+     "big": "59.7",
+     "small": "DALAM (CM)",
+     "at": "@07%45"
+    },
+    {
+     "big": "190.2",
+     "small": "TINGGI (CM)",
+     "at": "@07%70"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "HANTAR UKURAN DAPUR",
+    "SAYA SEMAK MODEL YANG MUAT",
+    "715L DARI RM84/BULAN*"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Harga sewa bulanan 715L pelan HEART Service 7 tahun (7+0), termasuk SST. 551L dari RM99. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

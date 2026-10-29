@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Jangan pilih saiz peti ais ikut rupa. Jawab tiga soalan ni dulu.",
+  "cap": "Pilih liter? *Jawab 3 soalan* dulu"
+ },
+ {
+  "id": "02",
+  "text": "Satu. Berapa orang dalam rumah?",
+  "cap": "1 · Berapa *orang*?"
+ },
+ {
+  "id": "03",
+  "text": "Dua. Awak beli barang dapur setiap hari, atau borong seminggu sekali?",
+  "cap": "2 · Harian atau *borong*?"
+ },
+ {
+  "id": "04",
+  "text": "Tiga. Selalu simpan stok? Daging korban, kuih raya?",
+  "cap": "3 · Simpan *stok*?"
+ },
+ {
+  "id": "05",
+  "text": "Empat hingga enam orang, suka barang tersusun, peti empat pintu lima ratus lima puluh satu liter, cukup selesa.",
+  "cap": "4–6 orang, suka tersusun → *551L, 4 pintu*"
+ },
+ {
+  "id": "06",
+  "text": "Keluarga besar, freezer selalu penuh stok, pergi tujuh ratus lima belas liter.",
+  "cap": "Keluarga besar, stok banyak → *715L*"
+ },
+ {
+  "id": "07",
+  "text": "Tapi ukur dapur dulu. Tujuh ratus lima belas liter tu, lebar sembilan puluh satu sentimeter.",
+  "cap": "Ukur dapur: 715L lebar *91 cm*"
+ },
+ {
+  "id": "08",
+  "text": "Rumah awak berapa orang? WhatsApp saya, saya bantu pilih.",
+  "cap": "Berapa orang? *WhatsApp saya*"
+ }
+]

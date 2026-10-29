@@ -1,0 +1,199 @@
+{
+ "slug": "peti-besar-tak-cukup-ruang",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa06_a_penuh.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/pa06_b_bekas.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "peti-ais-p2-01/pa06_c_campur.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "blue"
+  },
+  {
+   "at": "@07",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "BUKA PETI…<br><em>DAH TAK ADA RUANG?</em>"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@03",
+   "top": 560,
+   "size": 110,
+   "html": "BUKAN SAIZ JE",
+   "color": "#ffffff"
+  },
+  {
+   "type": "pill",
+   "in": "@02%45",
+   "out": "@03",
+   "top": 760,
+   "html": "ADA 3 PUNCA LAIN",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "<em>1</em> · BEKAS TERLALU BESAR"
+  },
+  {
+   "type": "pill",
+   "in": "@03%25",
+   "out": "@04",
+   "top": 1180,
+   "html": "SEPARUH ISI, ANGIN JE",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "<em>2</em> · TIADA ZON"
+  },
+  {
+   "type": "pill",
+   "in": "@04%25",
+   "out": "@05",
+   "top": 1180,
+   "html": "SEMUA BERCAMPUR SATU RAK",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "reason",
+   "in": "@05",
+   "out": "@06",
+   "top": 300,
+   "num": "3",
+   "title": "SUMBAT SAMPAI PENUH",
+   "sub": "angin sejuk tak boleh bergerak"
+  },
+  {
+   "type": "counter",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 640,
+   "from": 0,
+   "to": 2,
+   "suffix": "/3",
+   "decimals": 0,
+   "dur": 0.6,
+   "size": 300
+  },
+  {
+   "type": "pill",
+   "in": "@05%55",
+   "out": "@06",
+   "top": 1000,
+   "html": "ISI ± 2/3 SAHAJA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@06",
+   "out": "@07",
+   "top": 520,
+   "size": 110,
+   "html": "MASIH TAK MUAT?"
+  },
+  {
+   "type": "stamp",
+   "in": "@06%50",
+   "out": "@07",
+   "top": 820,
+   "html": "BARU MASALAH SAIZ",
+   "rot": -6
+  },
+  {
+   "type": "banner",
+   "in": "@07",
+   "out": "@08",
+   "top": 230,
+   "html": "COWAY <em>551L</em> · 4 PINTU"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@07%55",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+  },
+  {
+   "type": "photo",
+   "in": "@07%55",
+   "out": "@08",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_drawers.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@07%55",
+   "out": "@08",
+   "top": 1200,
+   "html": "CONVERTIBLE ZONE: SEJUK ↔ BEKU",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "551L DARI RM99/BULAN*",
+    "4 PINTU · CONVERTIBLE ZONE",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*551L: harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}
