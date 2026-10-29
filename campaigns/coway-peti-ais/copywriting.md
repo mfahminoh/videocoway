@@ -392,3 +392,19 @@ Tugas: publish split test iklan static peti ais Coway di Meta Ads.
 - Buat dalam keadaan PAUSED dulu, tunjuk ringkasan untuk saya sahkan sebelum aktifkan.
 - Peraturan kill & giliran: ikut bahagian "PELAN SPLIT TEST" dalam fail yang sama.
 ```
+
+---
+
+# STATUS DI META (29/10/2026)
+
+Akaun **Coway Azzuddin** (`990723860427887`) · Page **FZ Home & Living** (`1374545175738046`)
+Kempen: `FIZAH | Sales | Whatsapp | Peti Ais 715L Besar Test | 29102026` (`120250111047430480`), DRAFT
+Tetapan ikut kempen FIZAH Peti Ais 17/10: Sales → WhatsApp, optimization Conversations, MY tanpa Sabah/Sarawak, umur 23+, Advantage+ audience & placements.
+
+| Ad set | ID | Bajet | Iklan (ID) | Gambar (Cloudinary) |
+|---|---|---|---|---|
+| T1-A1-gedabak | 120250111051000480 | RM10/hari | A1 \| besar_A_gedabak (120250111168670480) | coway-peti-ais/besar_A_gedabak |
+| T1-A2-715liter | 120250111054450480 | RM10/hari | A2 \| besar_B_715liter (120250111169040480) | coway-peti-ais/besar_B_715liter |
+| T1-A3-gudang | 120250111054800480 | RM10/hari | A3 \| besar_C_gudang (120250111169100480) | coway-peti-ais/besar_C_gudang |
+
+Gantian seterusnya: upload PNG ke Cloudinary (`coway-peti-ais/`) → Meta media library → ad set baru (salin tetapan T1) dengan copy dari Bahagian A.
