@@ -1,0 +1,37 @@
+[
+ {
+  "id": "01",
+  "text": "Ambil sehelai kertas. Selit kat pintu peti ais, tutup, kemudian tarik.",
+  "cap": "Selit *kertas*. Tutup. *Tarik.*"
+ },
+ {
+  "id": "02",
+  "text": "Kalau kertas tu keluar senang je, maknanya getah pintu dah tak rapat.",
+  "cap": "Keluar senang? Getah *tak rapat*"
+ },
+ {
+  "id": "03",
+  "text": "Angin sejuk terlepas, peti kena kerja lebih kuat, dan lauk pun tak sejuk macam sepatutnya.",
+  "cap": "Angin sejuk *terlepas*"
+ },
+ {
+  "id": "04",
+  "text": "Cuba kat beberapa tempat. Atas, bawah, dan tepi pintu.",
+  "cap": "Cuba *atas, bawah, tepi*"
+ },
+ {
+  "id": "05",
+  "text": "Kalau kotor, lap dengan kain lembap. Kalau dah koyak atau keras, itu tanda nak tukar.",
+  "cap": "Kotor → *lap*. Koyak → *tukar*."
+ },
+ {
+  "id": "06",
+  "text": "Simpan video ni, dan pergi check peti ais rumah awak sekarang.",
+  "cap": "*Simpan* & check sekarang"
+ },
+ {
+  "id": "07",
+  "text": "Kalau peti dah tua dan banyak sangat masalah, peti ais Coway dari lapan puluh empat ringgit sebulan, Cody datang servis berkala. WhatsApp saya.",
+  "cap": "Peti ais Coway dari *RM84*/bulan · *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Dua hari peti ais tak sejuk. Lauk seminggu, masuk tong sampah.",
+  "cap": "Dua hari *tak sejuk*. Lauk seminggu *masuk tong sampah.*"
+ },
+ {
+  "id": "02",
+  "text": "Isteri saya cium satu-satu bekas lauk. Muka dia, saya tak boleh lupa.",
+  "cap": "Cium *satu-satu* bekas lauk"
+ },
+ {
+  "id": "03",
+  "text": "Malam tu kami makan bungkus. Esok pun, bungkus.",
+  "cap": "Makan *bungkus*"
+ },
+ {
+  "id": "04",
+  "text": "Saya call repair. Datang tengok, kena bayar. Kompressor, kena tunggu.",
+  "cap": "Datang tengok, *kena bayar*"
+ },
+ {
+  "id": "05",
+  "text": "Masa tu saya cakap, tak boleh jadi ni.",
+  "cap": "*Tak boleh jadi ni.*"
+ },
+ {
+  "id": "06",
+  "text": "Saya tukar peti ais Coway. Bukan sebab peti dia je.",
+  "cap": "Tukar peti ais *Coway*"
+ },
+ {
+  "id": "07",
+  "text": "Kompressor dia waranti sepuluh tahun. Dan Cody datang servis berkala, tujuh tahun. Ada orang yang jaga.",
+  "cap": "Kompressor waranti *10 tahun** · Cody *7 tahun*"
+ },
+ {
+  "id": "08",
+  "text": "Dari lapan puluh empat ringgit sebulan. Kalau peti awak pun dah mula buat hal, WhatsApp saya.",
+  "cap": "dari *RM84*/bulan · *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,47 @@
+[
+ {
+  "id": "01",
+  "text": "Kompressor dua ratus lima puluh. Upah gas seratus lima puluh. Baiki, atau beli baru?",
+  "cap": "Kompressor *RM250* + gas *RM150*. Baiki atau ganti?"
+ },
+ {
+  "id": "02",
+  "text": "Ada yang kena tunggu alat ganti, dua tiga bulan.",
+  "cap": "Tunggu alat ganti *2–3 bulan*"
+ },
+ {
+  "id": "03",
+  "text": "Macam mana nak decide? Tiga soalan.",
+  "cap": "Macam mana nak *decide*?"
+ },
+ {
+  "id": "04",
+  "text": "Satu. Peti ni dah berapa tahun?",
+  "cap": "1 · Dah berapa *tahun*?"
+ },
+ {
+  "id": "05",
+  "text": "Dua. Ini kali pertama rosak, atau dah berulang?",
+  "cap": "2 · Rosak *berulang*?"
+ },
+ {
+  "id": "06",
+  "text": "Tiga. Kos repair dah hampir separuh harga peti baru?",
+  "cap": "3 · Kos repair ≈ *separuh harga baru*?"
+ },
+ {
+  "id": "07",
+  "text": "Peti muda, baru sekali rosak, baiki. Dah tua, berulang, dan mahal, ramai pilih ganti.",
+  "cap": "Tua + berulang + mahal → *ganti*"
+ },
+ {
+  "id": "08",
+  "text": "Kalau ganti, tengok waranti. Peti ais Coway, kompressor waranti sepuluh tahun, Cody datang servis berkala.",
+  "cap": "Coway: kompressor waranti *10 tahun**"
+ },
+ {
+  "id": "09",
+  "text": "Dari lapan puluh empat ringgit sebulan. WhatsApp saya.",
+  "cap": "dari *RM84*/bulan · *WhatsApp saya*"
+ }
+]

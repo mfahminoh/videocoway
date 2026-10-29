@@ -1,0 +1,344 @@
+{
+ "slug": "ujian-kertas-getah-pintu",
+ "voice": "Kore",
+ "style_tts": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "player": "hype",
+ "style": "ugc",
+ "bpm": 110,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa08_a_kertas.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "ugc-blue"
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/pa08_a_kertas.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "ugc-white"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "peti-ais-p2-01/pa08_b_lap.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05%60",
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_b_getah.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "ugc-blue"
+  },
+  {
+   "at": "@07",
+   "bg": "ugc-white"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "items": [
+    {
+     "txt": "UJIAN",
+     "at": "@01",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "KERTAS",
+     "at": "@01%25",
+     "size": 170,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@01%35",
+   "out": "@02",
+   "top": 1180,
+   "items": [
+    {
+     "txt": "SELIT",
+     "at": "@01%35",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TUTUP",
+     "at": "@01%60",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TARIK!",
+     "at": "@01%80",
+     "size": 140,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 520,
+   "items": [
+    {
+     "txt": "KELUAR",
+     "at": "@02",
+     "size": 150,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "SENANG?",
+     "at": "@02%20",
+     "size": 190,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "GETAH TAK RAPAT",
+     "at": "@02%55",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#E5322D",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "items": [
+    {
+     "txt": "ANGIN SEJUK",
+     "at": "@03",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TERLEPAS!",
+     "at": "@03%20",
+     "size": 170,
+     "color": "#fff",
+     "box": true,
+     "bg": "#E5322D",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 420,
+   "items": [
+    {
+     "txt": "CUBA DI",
+     "at": "@04",
+     "size": 120,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "ATAS",
+     "at": "@04%25",
+     "size": 170,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "BAWAH",
+     "at": "@04%50",
+     "size": 170,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "TEPI",
+     "at": "@04%72",
+     "size": 170,
+     "color": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@05%60",
+   "top": 230,
+   "items": [
+    {
+     "txt": "KOTOR?",
+     "at": "@05",
+     "size": 130,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "LAP KAIN LEMBAP",
+     "at": "@05%20",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05%60",
+   "out": "@06",
+   "top": 230,
+   "items": [
+    {
+     "txt": "KOYAK / KERAS?",
+     "at": "@05%60",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TUKAR",
+     "at": "@05%75",
+     "size": 190,
+     "color": "#fff",
+     "box": true,
+     "bg": "#E5322D",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 520,
+   "items": [
+    {
+     "txt": "SIMPAN",
+     "at": "@06",
+     "size": 200,
+     "color": "#fff",
+     "hit": true
+    },
+    {
+     "txt": "VIDEO NI",
+     "at": "@06%25",
+     "size": 130,
+     "color": "#fff"
+    },
+    {
+     "txt": "CHECK SEKARANG!",
+     "at": "@06%55",
+     "size": 110,
+     "color": "#2f3337",
+     "box": true,
+     "bg": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@07",
+   "out": "@07%50",
+   "src": "../../assets/img/coway_fridge/715_kitchen2.jpg",
+   "w": 760,
+   "top": 330,
+   "anim": "rise"
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@07%50",
+   "top": 1180,
+   "items": [
+    {
+     "txt": "PETI AIS COWAY",
+     "at": "@07",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@07%50",
+   "top": 760,
+   "button": "WhatsApp saya",
+   "btnAt": "@07%70",
+   "fine": "*Peti ais Coway 715L, harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  },
+  {
+   "type": "words",
+   "in": "@07%50",
+   "out": null,
+   "top": 420,
+   "items": [
+    {
+     "txt": "DARI RM84",
+     "at": "@07%50",
+     "size": 150,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "SEBULAN*",
+     "at": "@07%55",
+     "size": 100,
+     "color": "#2f3337"
+    }
+   ]
+  }
+ ]
+}

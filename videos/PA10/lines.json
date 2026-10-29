@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Peti ais dah sampai depan rumah. Tapi tak lepas pintu dapur. Naya.",
+  "cap": "Peti dah sampai… *tak lepas pintu.*"
+ },
+ {
+  "id": "02",
+  "text": "Sebelum beli, ukur tiga benda ni.",
+  "cap": "Ukur *3 benda* ni"
+ },
+ {
+  "id": "03",
+  "text": "Satu, lebar. Dua, dalam, dari dinding ke depan kabinet. Tiga, tinggi, kalau ada kabinet atas.",
+  "cap": "Lebar · Dalam · *Tinggi*"
+ },
+ {
+  "id": "04",
+  "text": "Lepas tu, ukur laluan. Pintu rumah, pintu dapur, selekoh, dan lif.",
+  "cap": "Ukur *laluan*: pintu, selekoh, lif"
+ },
+ {
+  "id": "05",
+  "text": "Dan tinggalkan ruang sikit di belakang dan tepi, supaya haba boleh keluar.",
+  "cap": "Ruang di *belakang* untuk haba"
+ },
+ {
+  "id": "06",
+  "text": "Untuk rujukan, Coway tujuh ratus lima belas liter, lebar sembilan puluh satu, dalam tujuh puluh empat, tinggi seratus sembilan puluh sentimeter.",
+  "cap": "715L: *91 × 74 × 190.5 cm*"
+ },
+ {
+  "id": "07",
+  "text": "Yang lima ratus lima puluh satu liter lebih nipis, dalam dia kurang enam puluh sentimeter je.",
+  "cap": "551L: *90.5 × 59.7 × 190.2 cm*"
+ },
+ {
+  "id": "08",
+  "text": "Hantar ukuran dapur awak kat WhatsApp saya. Saya semak model mana yang muat.",
+  "cap": "Hantar ukuran · *WhatsApp saya*"
+ }
+]

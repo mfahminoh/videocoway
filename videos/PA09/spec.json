@@ -1,0 +1,201 @@
+{
+ "slug": "berapa-liter-peti-ais-sesuai",
+ "voice": "Laomedeia",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa09_a_keluarga.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "blue"
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "PILIH LITER?<br><em>JAWAB 3 SOALAN</em>"
+  },
+  {
+   "type": "reason",
+   "in": "@02",
+   "out": "@03",
+   "top": 300,
+   "num": "1",
+   "title": "BERAPA ORANG?",
+   "sub": "dalam rumah"
+  },
+  {
+   "type": "icon",
+   "in": "@02",
+   "out": "@03",
+   "top": 620,
+   "icon": "home",
+   "size": 300
+  },
+  {
+   "type": "reason",
+   "in": "@03",
+   "out": "@04",
+   "top": 300,
+   "num": "2",
+   "title": "HARIAN ATAU BORONG?"
+  },
+  {
+   "type": "chips",
+   "in": "@03",
+   "out": "@04",
+   "top": 700,
+   "items": [
+    {
+     "text": "SETIAP HARI",
+     "color": "#fff",
+     "at": "@03%30"
+    },
+    {
+     "text": "SEMINGGU SEKALI",
+     "color": "#ffd23f",
+     "at": "@03%60"
+    }
+   ]
+  },
+  {
+   "type": "reason",
+   "in": "@04",
+   "out": "@05",
+   "top": 300,
+   "num": "3",
+   "title": "SIMPAN STOK?"
+  },
+  {
+   "type": "chips",
+   "in": "@04",
+   "out": "@05",
+   "top": 700,
+   "items": [
+    {
+     "text": "DAGING KORBAN",
+     "color": "#fff",
+     "at": "@04%30"
+    },
+    {
+     "text": "KUIH RAYA",
+     "color": "#fff",
+     "at": "@04%50"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "4–6 ORANG · TERSUSUN"
+  },
+  {
+   "type": "photo",
+   "in": "@05",
+   "out": "@06",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@05%50",
+   "out": "@06",
+   "top": 1200,
+   "html": "551L · 4 PINTU",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "KELUARGA BESAR · STOK BANYAK"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_spaces.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@06%40",
+   "out": "@07",
+   "top": 1200,
+   "html": "715L",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@07",
+   "out": "@08",
+   "top": 380,
+   "size": 100,
+   "html": "UKUR DAPUR DULU"
+  },
+  {
+   "type": "icon",
+   "in": "@07",
+   "out": "@08",
+   "top": 600,
+   "icon": "ruler",
+   "size": 260
+  },
+  {
+   "type": "pill",
+   "in": "@07%45",
+   "out": "@08",
+   "top": 960,
+   "html": "715L · LEBAR 91 CM",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "715L DARI RM84/BULAN*",
+    "551L DARI RM99/BULAN*",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

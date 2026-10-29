@@ -1,0 +1,47 @@
+[
+ {
+  "id": "01",
+  "text": "Jangan tunggu peti ais mati, masa stok tengah penuh. Ni lima tanda dia dah nazak.",
+  "cap": "*5 tanda* peti ais dah nazak"
+ },
+ {
+  "id": "02",
+  "text": "Satu. Getah pintu dah koyak, atau pintu kena tolak kuat, baru rapat.",
+  "cap": "1 · Getah pintu *koyak*"
+ },
+ {
+  "id": "03",
+  "text": "Dua. Freezer penuh ais tebal. Bukan penuh lauk.",
+  "cap": "2 · Ais *tebal* dalam freezer"
+ },
+ {
+  "id": "04",
+  "text": "Tiga. Atas sejuk, bawah tak sejuk. Sejuk dah tak sekata.",
+  "cap": "3 · Sejuk *tak sekata*"
+ },
+ {
+  "id": "05",
+  "text": "Empat. Malam-malam berbunyi kuat, macam dah penat.",
+  "cap": "4 · Bunyi *kuat* waktu malam"
+ },
+ {
+  "id": "06",
+  "text": "Lima. Dah repair, tapi rosak balik.",
+  "cap": "5 · Repair, *rosak balik*"
+ },
+ {
+  "id": "07",
+  "text": "Kalau peti awak ada tiga daripada lima, mula survey sekarang, sebelum lauk seminggu yang jadi mangsa.",
+  "cap": "3 daripada 5? *Mula survey.*"
+ },
+ {
+  "id": "08",
+  "text": "Peti ais Coway, kompressor dia waranti sepuluh tahun, dari lapan puluh empat ringgit sebulan.",
+  "cap": "Kompressor waranti *10 tahun** · dari *RM84*/bulan"
+ },
+ {
+  "id": "09",
+  "text": "Peti ais awak dah berapa tahun? WhatsApp saya, saya bantu semak.",
+  "cap": "Dah berapa tahun? *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Bawah tak sejuk, atas je okay. Jadi saya ke pasar, selang dua hari.",
+  "cap": "Bawah *tak sejuk*. Ke pasar *selang 2 hari*."
+ },
+ {
+  "id": "02",
+  "text": "Ayam beli sikit-sikit. Sayur beli sikit-sikit. Takut rosak.",
+  "cap": "Beli *sikit-sikit*. Takut rosak."
+ },
+ {
+  "id": "03",
+  "text": "Penat. Minyak kereta. Masa dengan anak-anak pun habis kat pasar.",
+  "cap": "Penat · minyak · *masa*"
+ },
+ {
+  "id": "04",
+  "text": "Lepas tukar peti, rutin saya berubah. Borong seminggu sekali je.",
+  "cap": "Sekarang: *borong seminggu sekali*"
+ },
+ {
+  "id": "05",
+  "text": "Peti ais Coway tujuh ratus lima belas liter. Laci sayur ada kawalan kelembapan, jadi sayur kekal segar lebih lama.",
+  "cap": "715L · *Humidity Control*"
+ },
+ {
+  "id": "06",
+  "text": "Freezer pula ada super freezing, sampai negatif dua puluh lima darjah, untuk stok ayam dan ikan.",
+  "cap": "Super Freezing *−25°C*"
+ },
+ {
+  "id": "07",
+  "text": "Cody datang servis berkala, tujuh tahun.",
+  "cap": "HEART Service *7 tahun*"
+ },
+ {
+  "id": "08",
+  "text": "Dari lapan puluh empat ringgit sebulan. Kalau awak pun ke pasar selang dua hari, WhatsApp saya.",
+  "cap": "dari *RM84*/bulan · *WhatsApp saya*"
+ }
+]
