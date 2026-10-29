@@ -9,6 +9,7 @@ projek/<kod>/
 ├── README.md      # papan status: langkah, fail, keputusan, perkara terbuka (setiap skill kemas kini)
 ├── brief.md       # coway-persona-produk: persona → produk → sudut, harga disahkan, format video
 ├── skrip.md       # coway-skrip: batch skrip (10 setiap batch), status kelulusan
+├── storyboard.json # coway-remake: baris skrip + jenis babak + gambar + 3 gaya (videos/remake.py)
 ├── threads.md     # coway-threads: post Threads jual pakej + pelan posting
 └── poster/        # coway-poster: sumber HTML / prompt Seedream (PNG siap dalam out/<kod>/poster/)
 videos/<ID>/       # coway-video: lines.json, spec.json, vo.wav (satu folder satu video)
@@ -23,6 +24,7 @@ research/          # coway-riset: persona.md (induk) + satu fail satu topik
 | 1 | `coway-riset` | soalan riset, data (chat, komen, iklan) | `research/<topik>.md`, `research/persona.md` |
 | 2 | `coway-persona-produk` | `research/persona.md`, `brand-brain/coway/products.md` | `projek/<kod>/brief.md`, `README.md` |
 | 3 | `coway-skrip` | `brief.md`, `research/*` | `projek/<kod>/skrip.md` |
+| 3b | `coway-remake` (ganti 1–3 untuk satu video TikTok rujukan) | video rujukan, `brand-brain/` | `projek/<kod>/skrip.md`, `storyboard.json`, `assets/img/<kod>/` |
 | 4 | `coway-video` | `skrip.md` (diluluskan) | `videos/<ID>/`, `out/<kod>/*.mp4`, halaman review |
 | 5 | `coway-poster` | `brief.md`, `skrip.md`, video siap | `projek/<kod>/poster/`, `out/<kod>/poster/*.png` |
 | 6 | `coway-threads` | video + poster siap, pakej | `projek/<kod>/threads.md`, `promo/<kod>/pelan.html` |

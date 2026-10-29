@@ -1,0 +1,373 @@
+{
+ "slug": "tangki-paling-besar-glow",
+ "voice": "Aoede",
+ "style_tts": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "style": "glow",
+ "player": "hype",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "coreplus-remake-01/a_hook.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "coreplus-remake-01/b_produk.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "coreplus-remake-01/c_floor.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "coreplus-remake-01/d_suhu.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "glow-wall"
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "image": "coreplus-remake-01/f_lokasi.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@07",
+   "bg": {
+    "image": "coreplus-remake-01/g_panel.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@08",
+   "bg": {
+    "image": "coreplus-remake-01/h_childlock.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@09",
+   "bg": {
+    "image": "coreplus-remake-01/i_uv.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@10",
+   "bg": {
+    "image": "coreplus-remake-01/j_servis.jpg",
+    "color": "glow-wall",
+    "shade": true
+   }
+  },
+  {
+   "at": "@11",
+   "bg": "glow-dark"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 220,
+   "items": [
+    {
+     "txt": "TANGKI PALING",
+     "at": "@01",
+     "size": 88,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "BESAR",
+     "at": "@01%30",
+     "size": 130,
+     "g": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@01%55",
+   "out": "@02",
+   "top": 1180,
+   "items": [
+    {
+     "txt": "DI MALAYSIA!",
+     "at": "@01%60",
+     "size": 95,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 170,
+   "items": [
+    {
+     "txt": "COWAY CORE PLUS",
+     "at": "@02",
+     "size": 76,
+     "g": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 200,
+   "items": [
+    {
+     "txt": "FLOOR STANDING",
+     "at": "@03",
+     "size": 81,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "TAK PERLU KABINET",
+     "at": "@03%45",
+     "size": 67,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 200,
+   "items": [
+    {
+     "txt": "3 SUHU",
+     "at": "@04",
+     "size": 150,
+     "g": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "temps",
+   "in": "@04",
+   "out": "@05",
+   "top": 780,
+   "items": [
+    {
+     "k": "hot",
+     "at": "@04",
+     "txt": "PANAS 3.6L"
+    },
+    {
+     "k": "cold",
+     "at": "@04%30",
+     "txt": "SEJUK 7.1L"
+    },
+    {
+     "k": "room",
+     "at": "@04%60",
+     "txt": "SUHU BILIK 10.4L"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 380,
+   "items": [
+    {
+     "txt": "TOTAL KAPASITI",
+     "at": "@05",
+     "size": 81,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "21.1L",
+     "at": "@05%15",
+     "size": 229,
+     "g": "#ff4f8f",
+     "hit": true
+    },
+    {
+     "txt": "MEMANG BESAR!",
+     "at": "@05%45",
+     "size": 88,
+     "g": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 200,
+   "items": [
+    {
+     "txt": "OFFICE · MASJID",
+     "at": "@06",
+     "size": 76,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "SEKOLAH · RESTORAN",
+     "at": "@06%25",
+     "size": 63,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "RUMAH PUN BOLEH!",
+     "at": "@06%45",
+     "size": 71,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 200,
+   "items": [
+    {
+     "txt": "TOUCH PANEL",
+     "at": "@07",
+     "size": 104,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "PILIH SUHU & KUANTITI",
+     "at": "@07%45",
+     "size": 56,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": "@09",
+   "top": 200,
+   "items": [
+    {
+     "txt": "SAFETY",
+     "at": "@08",
+     "size": 120,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "CHILD LOCK",
+     "at": "@08%25",
+     "size": 114,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "ELAK MELECUR",
+     "at": "@08%45",
+     "size": 95,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@09",
+   "out": "@10",
+   "top": 200,
+   "items": [
+    {
+     "txt": "UV STERILIZATION",
+     "at": "@09",
+     "size": 71,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "AIR SENTIASA BERSIH",
+     "at": "@09%45",
+     "size": 60,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@10",
+   "out": "@11",
+   "top": 200,
+   "items": [
+    {
+     "txt": "SERVIS FILTER",
+     "at": "@10",
+     "size": 88,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "BERJADUAL",
+     "at": "@10%25",
+     "size": 120,
+     "g": "#04A4E4"
+    },
+    {
+     "txt": "+ WARANTI KONTRAK",
+     "at": "@10%45",
+     "size": 67,
+     "g": "#ff4f8f",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@11",
+   "out": null,
+   "top": 330,
+   "items": [
+    {
+     "txt": "BERMINAT?",
+     "at": "@11",
+     "size": 127,
+     "g": "#04A4E4"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@11",
+   "top": 900,
+   "button": "WhatsApp saya",
+   "btnAt": "@11%40",
+   "fine": "*Tertakluk pada terma &amp; syarat semasa Coway."
+  }
+ ]
+}

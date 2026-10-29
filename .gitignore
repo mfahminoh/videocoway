@@ -34,10 +34,13 @@ out/*
 !out/neoplus_final.mp4
 !out/neoplus_full_final.mp4
 !out/NE[0-9][0-9]_*.mp4
+!out/neon-p1-01/
+!out/coreplus-remake-01/
 !out/E04_*.mp4
 !out/README_neon.md
 !out/hype/
 !out/listicle/
+!out/mg/
 !out/coway/
 
 # Penapis air lain
@@ -75,3 +78,6 @@ out/tilam/_*
 out/poster/_*
 out/jerebu/_*
 out/kesedaran/_*
+
+# Projek neon-p3-01 (poster BOFU)
+!out/neon-p3-01/

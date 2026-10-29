@@ -17,10 +17,14 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Tilam** — BEREX Elite, copy gradualization, poster | `tilam/`, `copy/` | `out/tilam/`, `out/poster/`, `posters/P3*` |
 | **Penapis udara (jerebu)** | `build_jerebu.py`, `build_short.py`, `JEREBU_PACKAGE.md` | `out/jerebu/`, `out/pendek/`, `out/model/`, `out/kesedaran/` |
 | **Peti ais** — 5 video emosi, poster static | `videos/PA0x`, `campaigns/coway-peti-ais/`, `research/`, `static/` | `out/peti_ais/`, `out/static/` |
+| **Core Plus remake "tangki paling besar"** — CP01 glow, CP02 papercut, CP03 mg morph (`coway-remake`) | `projek/coreplus-remake-01/`, `videos/CP01`–`CP03` | `out/coreplus-remake-01/` |
+| **Neon × P1 "mampu milik"** — NE11–NE13, skrip TikTok rujukan → motion graphic / kinetic / komik | `projek/neon-p1-01/`, `videos/neon-p1-01_batch.py`, `videos/NE11`–`NE13` | `out/neon-p1-01/` |
+| **Pakej WP 2** — Cinnamon, Glaze, Ombak, Dazzie, Core Slim: 35 draf skrip mg (5 produk + 2 psikografik setiap model) | `projek/wp-pakej2-01/` | — |
 | **Peti ais & aircond** — plan content | `plan/` | — |
 | **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
 | **Threads / posting** | `threads/`, `promo/threads/` | — |
 | **Poster iklan Meta** | `posters/` | `posters/*.jpg` |
+| **Gaya motion graphic `mg`** (15 gaya mg-styles-15) — contoh NL01FV Flat Vector, NEL08 Liquid | `videos/lib/mg.js`, `videos/NL01FV/`, `videos/NEL08/`, `reference/mg-styles-15/`, `reference/opus-video-prompts.md` | `out/mg/` |
 | Rujukan & iklan | `reference/`, `ads/`, `iklan_meta_whatsapp.md` | — |
 
 **Projek baru:** ikut aliran skill dalam [`projek/README.md`](projek/README.md): `coway-riset` → `coway-persona-produk` → `coway-skrip` → `coway-video` → `coway-poster` → `coway-threads` → `coway-iklan`. Persona induk: [`research/persona.md`](research/persona.md).

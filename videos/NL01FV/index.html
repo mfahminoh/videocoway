@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8"><title>NL01FV · Flat Vector</title>
+<!-- Gaya mg 01-flat-vector (mg-styles-15): warna rata tanpa gradien, bentuk geometri, spring dengan squash & stretch,
+     elemen masuk berselang 2–4 bingkai, satu hero bergerak pada satu masa, peralihan shape wipe yang dibawa elemen. -->
+<style>
+@font-face { font-family: Lilita; src: url(../../assets/fonts/LilitaOne-Regular.ttf); }
+@font-face { font-family: Nunito; font-weight: 600; src: url(../../assets/fonts/NunitoSans-600.ttf); }
+@font-face { font-family: Nunito; font-weight: 800; src: url(../../assets/fonts/NunitoSans-800.ttf); }
+@font-face { font-family: Nunito; font-weight: 900; src: url(../../assets/fonts/NunitoSans-900.ttf); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #04A4E4; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+svg { display: block; position: absolute; inset: 0; }
+.el { position: absolute; will-change: transform, opacity; transform-origin: 50% 50%; }
+#brand { left: 60px; top: 70px; font: 900 46px Nunito; letter-spacing: 1px; }
+#cap { left: 0; width: 1080px; top: 1520px; height: 170px; display: flex; align-items: center; justify-content: center; padding: 0 60px; }
+#capText { display: inline-block; background: #fff; color: #10233F; font: 900 58px/1.12 Nunito; text-transform: uppercase; text-align: center;
+  padding: 14px 34px; border-radius: 26px; border: 6px solid #10233F; box-shadow: 0 10px 0 #10233F; }
+#capText b { color: #FF5A4E; font-weight: 900; }
+</style></head>
+<body><div id="stage">
+<svg id="S" xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<div class="el" id="brand">coway</div>
+<div class="el" id="cap"><div id="capText"></div></div>
+</div>
+<script src="timing.js"></script>
+<script src="../lib/engine.js"></script>
+<script src="../lib/mg.js"></script>
+<script>
+// semua binaan selepas fon dimuat, kerana letters()/ticks mengukur teks dengan measureText
+window.READY = Promise.all([
+  document.fonts.load('400 100px Lilita'), document.fonts.load('900 60px Nunito'), document.fonts.load('800 40px Nunito'), document.fonts.load('600 26px Nunito'),
+]).then(() => {
+const { svg, tf, inv, hump, squash } = MG;
+const Q = MG.cue;
+const C = { BL: '#04A4E4', BLD: '#0389C0', CR: '#FFF6E9', CRD: '#F1E3CC', INK: '#10233F', SU: '#FFC62B', CO: '#FF5A4E', MI: '#2EE6A8',
+  WOOD: '#E4CFA8', WA: '#25D366', WHITE: '#FFFFFF' };
+// warna rasmi 5 unit Neon (rata) dan bayangnya
+const NEON = [
+  { k: 'pink', name: 'PINK', c: '#F4C7CF', d: '#E3A9B4', tint: '#FBE1E6', tile: '#F4C7CF' },
+  { k: 'mint', name: 'MINT', c: '#C8D9C3', d: '#A9C0A2', tint: '#E3EFDE', tile: '#C8DCC1' },
+  { k: 'ciel', name: 'BIRU', c: '#BCD3EA', d: '#98B6D3', tint: '#E0EBF7', tile: '#BCD3EA' },
+  { k: 'gray', name: 'KELABU', c: '#45474D', d: '#2E3035', tint: '#E4E4E6', tile: '#BDBEC2' },
+  { k: 'white', name: 'PUTIH', c: '#F7F7F5', d: '#D9D9D6', tint: '#F4F4F2', tile: '#E2E2DF' },
+];
+const S = document.getElementById('S');
+const G = (p, a) => svg('g', a || {}, p);
+const vis = (e, v) => { e.style.display = v ? '' : 'none'; };
+const cv = document.createElement('canvas').getContext('2d');
+const width = (font, s) => { cv.font = font; return cv.measureText(s).width; };
+/* teks satu huruf satu <text> supaya boleh pop berselang; pulang [{g, cx}] berpusat pada (x, y baseline) */
+function letters(parent, str, x, y, size, fill, family = 'Lilita', weight = 400, track = 0) {
+  const font = `${weight} ${size}px ${family}`;
+  const total = width(font, str) + track * (str.length - 1);
+  let cx = x - total / 2; const out = [];
+  for (const ch of str) {
+    const w = width(font, ch);
+    const g = G(parent);
+    if (ch !== ' ') svg('text', { x: 0, y: size * .36, 'text-anchor': 'middle', fill, style: `font:${font}` }, g).textContent = ch;
+    out.push({ g, x: cx + w / 2, y: y - size * .36 }); cx += w + track;
+  }
+  return out;
+}
+const text = (parent, str, x, y, size, fill, { family = 'Nunito', weight = 900, anchor = 'middle', track = 0, op = 1 } = {}) => {
+  const e = svg('text', { x, y, 'text-anchor': anchor, fill, 'fill-opacity': op, 'letter-spacing': track, style: `font:${weight} ${size}px ${family}` }, parent);
+  e.textContent = str; return e;
+};
+/* pop spring dengan squash; asal (x, y) = titik paksi */
+function popAt(g, t, t0, x, y, { amt = .14, f = 2.4, z = .42, s0 = 1 } = {}) {
+  if (t < t0) { tf(g, x, y, 0); return 0; }
+  const [s, k] = squash(t, t0, { f, z, amt });
+  tf(g, x, y, s0 * s * (1 - k * .6), s0 * s * (1 + k)); return s;
+}
+const out = (t, t0, d = .28) => E.inB(inv(t0, t0 + d, t));   // 0 -> 1 keluar (antisipasi kecil dulu)
+
+/* Neon rata, pandangan depan: asal di tengah bawah, lebar 210, tinggi 420 */
+function neon(parent, col) {
+  const g = G(parent);
+  svg('rect', { x: -100, y: -300, width: 200, height: 300, rx: 6, fill: col.c }, g);
+  svg('rect', { x: 72, y: -300, width: 28, height: 300, fill: col.d }, g);
+  svg('rect', { x: -100, y: -300, width: 200, height: 34, fill: col.d, 'fill-opacity': .55 }, g);
+  svg('rect', { x: -108, y: -420, width: 216, height: 128, rx: 16, fill: col.c }, g);
+  svg('rect', { x: 80, y: -420, width: 28, height: 128, fill: col.d, 'fill-opacity': .8 }, g);
+  svg('rect', { x: -108, y: -300, width: 216, height: 10, fill: col.d }, g);
+  svg('rect', { x: -15, y: -292, width: 30, height: 12, rx: 4, fill: col.k === 'gray' ? '#6c6f75' : '#AEB4BA' }, g);
+  for (let i = 0; i < 5; i++) svg('circle', { cx: -64 + i * 32, cy: -352, r: 7, fill: col.d }, g);
+  svg('path', { d: 'M0 -334 C-8 -322 -10 -318 -10 -313 A10 10 0 0 0 10 -313 C10 -318 8 -322 0 -334 Z', fill: col.d }, g);
+  text(g, 'coway', -90, -386, 22, col.k === 'gray' ? C.CR : C.INK, { anchor: 'start', weight: 800, op: .5 });
+  return g;
+}
+function badge(parent, n, fill, ink) {
+  const g = G(parent);
+  svg('circle', { cx: 0, cy: 0, r: 74, fill }, g);
+  text(g, String(n), 0, 38, 110, ink, { family: 'Lilita', weight: 400 });
+  return g;
+}
+
+/* ---------- lapisan: latar, kemudian [wipe k, babak k] supaya setiap wipe menutup babak sebelumnya ---------- */
+svg('rect', { x: 0, y: 0, width: 1080, height: 1920, fill: C.BL }, S);
+const WIPES = [null,
+  { t: Q('wipe1'), c: C.CR, x: 300, y: 730 },
+  { t: Q('exit1') + .16, c: C.BL, x: 540, y: 1920 },
+  { t: Q('wipe3'), c: C.SU, x: 150, y: 290 },
+  { t: Q('wipe4'), c: C.CR, x: 540, y: 800 },
+  { t: Q('wipe5'), c: C.BL, x: 540, y: 960 },
+];
+const DEFS = svg('defs', {}, S);
+// babak k didedahkan oleh bulatan wipe-nya sendiri (warna + klip), jadi babak lama tertutup tanpa crossfade
+const LAY = WIPES.map((w, k) => {
+  if (!w) return { g: G(S) };
+  const clip = svg('circle', { cx: w.x, cy: w.y, r: 0 }, svg('clipPath', { id: 'w' + k }, DEFS));
+  return { circ: svg('circle', { cx: w.x, cy: w.y, r: 0, fill: w.c }, S), clip, g: G(S, { 'clip-path': `url(#w${k})` }) };
+});
+const WD = .44;
+const wipeR = (w, t) => 2400 * E.inOut(inv(w.t, w.t + WD, t));
+const FIELD = [C.BL, C.CR, C.BL, C.SU, C.CR, C.BL];
+
+/* ================= Babak 0: hook (titik jatuh -> 3 titik -> COWAY NEON) ================= */
+const B0 = LAY[0].g;
+const dots = [[C.CR, C.INK], [C.SU, C.INK], [C.CO, C.CR]].map(([fill, ink], i) => {
+  const g = G(B0); svg('circle', { cx: 0, cy: 0, r: 110, fill }, g);
+  const num = text(g, String(i + 1), 0, 44, 124, ink, { family: 'Lilita', weight: 400 }); return { g, num };
+});
+const sub0 = text(B0, 'SEBAB RAMAI PILIH', 540, 1010, 60, C.CR, { track: 4 });
+const ttl0 = letters(B0, 'COWAY NEON', 540, 1170, 150, C.CR);
+const bar0 = svg('rect', { x: 0, y: -13, width: 620, height: 26, rx: 13, fill: C.SU }, G(B0));
+const sw0 = NEON.map(n => { const g = G(B0); svg('circle', { cx: 0, cy: 0, r: 34, fill: n.c, stroke: C.CR, 'stroke-width': n.k === 'white' ? 4 : 0 }, g); return g; });
+function draw0(t) {
+  const land = Q('land'), split = Q('split'), title = Q('title');
+  // hero jatuh: regang semasa jatuh, squash bila mendarat, kemudian bergerak ke kedudukan "1"
+  const d = dots[0];
+  if (t < land) { const u = E.in(inv(-.3, land, t)); tf(d.g, 540, mix(150, 730, u), .9, 1.16); }
+  else {
+    const dt = t - land, def = -.26 * Math.exp(-7 * dt) * Math.cos(2 * Math.PI * 3.2 * dt);
+    const mv = E.pop(inv(split, split + .38, t));
+    tf(d.g, mix(540, 300, mv), 730 + 110 * -def, 1 - def * .8, 1 + def);
+  }
+  vis(d.num, t >= split);
+  popAt(dots[1].g, t, split + .1, 540, 730);
+  popAt(dots[2].g, t, split + .2, 780, 730);
+  const a = E.outQt(inv(split + .25, split + .6, t));
+  sub0.setAttribute('opacity', a); sub0.setAttribute('transform', `translate(0 ${mix(40, 0, a)})`);
+  ttl0.forEach((l, i) => popAt(l.g, t, title + i * .035, l.x, l.y, { amt: .2 }));
+  const b = E.outQt(inv(title + .3, title + .6, t));
+  tf(bar0.parentNode, 230, 1222, 1); bar0.setAttribute('width', 620 * b);
+  sw0.forEach((g, i) => popAt(g, t, Q('swatch') + i * .07, 340 + i * 100, 1345));
+}
+
+/* ================= Babak 1: "Satu, ada lima warna" + pilih ikut tema dapur ================= */
+const B1 = LAY[1].g;
+const wallClip = svg('clipPath', { id: 'wall' }, svg('defs', {}, S));
+svg('rect', { x: 0, y: 0, width: 1080, height: 1180 }, wallClip);
+const tintG = G(B1, { 'clip-path': 'url(#wall)' });
+const PICK = [0, 1, 2];   // pink, mint, biru
+const UX = [130, 335, 540, 745, 950];
+const tints = PICK.map(i => svg('circle', { cx: UX[i], cy: 900, r: 0, fill: NEON[i].tint }, tintG));
+const tiles = [];
+for (let j = 0; j < 3; j++) for (let i = 0; i < 12; i++) {
+  const x = 8 + i * 90, y = 922 + j * 86;
+  tiles.push({ e: svg('rect', { x, y, width: 80, height: 76, rx: 14, fill: C.CRD }, B1), x: x + 40, y: y + 38 });
+}
+const props = [];
+{ // tingkap, rak + cawan, pasu pokok
+  const w = G(B1); svg('rect', { x: -170, y: -150, width: 340, height: 300, rx: 22, fill: C.CR, stroke: C.WOOD, 'stroke-width': 18 }, w);
+  svg('rect', { x: -152, y: -132, width: 304, height: 264, rx: 10, fill: '#BFE8F8' }, w);
+  svg('circle', { cx: 70, cy: -50, r: 38, fill: C.SU }, w);
+  svg('rect', { x: -9, y: -132, width: 18, height: 264, fill: C.WOOD }, w); svg('rect', { x: -152, y: -9, width: 304, height: 18, fill: C.WOOD }, w);
+  props.push({ g: w, x: 260, y: 640 });
+  const s = G(B1); svg('rect', { x: -190, y: 0, width: 380, height: 20, rx: 8, fill: C.WOOD }, s);
+  [[-130, C.CO], [-50, C.BL], [30, C.MI]].forEach(([x, c]) => { svg('rect', { x: x - 28, y: -70, width: 56, height: 70, rx: 10, fill: c }, s);
+    svg('path', { d: `M${x + 28} -54 h12 a14 14 0 0 1 0 28 h-12`, fill: 'none', stroke: c, 'stroke-width': 9 }, s); });
+  svg('path', { d: 'M120 0 L108 -60 L172 -60 L160 0 Z', fill: C.CO }, s);
+  [[-30, -150, -22], [0, -170, 0], [30, -150, 22]].forEach(([dx, h, r]) => svg('ellipse', { cx: 140 + dx * .7, cy: -60 + h / 2, rx: 16, ry: -h / 2.2, fill: C.MI, transform: `rotate(${r} 140 -60)` }, s));
+  props.push({ g: s, x: 790, y: 720 });
+}
+const counter = G(B1);
+svg('rect', { x: 0, y: 1180, width: 1080, height: 34, fill: C.WOOD }, counter);
+svg('rect', { x: 0, y: 1214, width: 1080, height: 226, fill: C.INK }, counter);
+for (let i = 0; i < 4; i++) svg('rect', { x: 90 + i * 270, y: 1238, width: 90, height: 12, rx: 6, fill: C.CR, 'fill-opacity': .25 }, counter);
+const units = NEON.map((n, i) => ({ g: neon(B1, n), x: UX[i] }));
+const labs = NEON.map((n, i) => { const g = G(B1); text(g, n.name, 0, 12, 36, C.CR, { track: 2 }); return g; });
+const b1 = badge(B1, 1, C.CO, C.CR);
+const l1 = G(B1); text(l1, 'ADA 5 WARNA', 0, 34, 96, C.INK, { family: 'Lilita', weight: 400, anchor: 'start' });
+function draw1(t) {
+  const b = Q('badge1'), ex = Q('exit1');
+  const o = out(t, ex);
+  popAt(b1, t, b, 150, 290, { s0: 1 - o });
+  { const a = E.pop(inv(b + .08, b + .45, t)); l1.setAttribute('transform', `translate(${mix(200, 248, a)} 290) scale(${a * (1 - o)})`); }
+  props.forEach((p, i) => popAt(p.g, t, b + .15 + i * .1, p.x, p.y, { s0: 1 - out(t, ex + .05 * i) }));
+  // dinding ikut warna yang dipilih: bulatan tint + jubin bertukar dalam gelombang dari unit
+  let tileCol = C.CRD, ci = -1;
+  PICK.forEach((n, j) => { const pt = Q('pick' + (j + 1)); tints[j].setAttribute('r', 1500 * E.inOut(inv(pt, pt + .5, t))); if (t >= pt) ci = j; });
+  tiles.forEach(tl => {
+    let col = C.CRD;
+    PICK.forEach((n, j) => { const pt = Q('pick' + (j + 1)); if (t >= pt + Math.hypot(tl.x - UX[n], tl.y - 900) / 2600) col = NEON[n].tile; });
+    tl.e.setAttribute('fill', col);
+  });
+  units.forEach((u, i) => {
+    const t0 = Q('unit' + (i + 1));
+    const hop = PICK.reduce((h, n, j) => n === i ? h + 70 * hump(inv(Q('pick' + (j + 1)), Q('pick' + (j + 1)) + .36, t)) : h, 0);
+    const fly = 1500 * E.inB(inv(ex + i * .045, ex + i * .045 + .34, t));
+    if (t < t0) return tf(u.g, u.x, 1180, 0);
+    const [s, k] = squash(t, t0, { amt: .2 });
+    tf(u.g, u.x, 1180 - hop - fly, .86 * s * (1 - k * .6), .86 * s * (1 + k));
+    popAt(labs[i], t, t0 + .08, u.x, 1300, { s0: 1 - o });
+  });
+}
+
+/* ================= Babak 2: "Dua, panas, sejuk, suhu bilik. Satu tekan je." ================= */
+const B2 = LAY[2].g;
+const b2 = badge(B2, 2, C.SU, C.INK);
+const l2 = G(B2); text(l2, '3 SUHU AIR', 0, 34, 96, C.CR, { family: 'Lilita', weight: 400, anchor: 'start' });
+const big = G(B2); neon(big, NEON[0]);
+const UNIT = { x: 285, y: 1400, s: 1.55 };
+const NOZ = UNIT.y - 292 * UNIT.s;
+const stream = svg('rect', { x: UNIT.x - 9, y: NOZ, width: 18, height: 0, rx: 9, fill: '#fff' }, B2);
+const glass = G(B2);
+const glassClip = svg('clipPath', { id: 'gl' }, svg('defs', {}, S));
+svg('path', { d: 'M-62 -170 L62 -170 L52 0 L-52 0 Z' }, glassClip);
+const water = svg('rect', { x: -70, y: 0, width: 140, height: 0, fill: '#fff' }, G(glass, { 'clip-path': 'url(#gl)' }));
+svg('path', { d: 'M-62 -170 L62 -170 L52 0 L-52 0 Z', fill: 'none', stroke: C.CR, 'stroke-width': 9, 'stroke-linejoin': 'round' }, glass);
+const TEMP = [
+  { k: 'hot', name: 'PANAS', c: C.CO, w: '#FFB3A8' },
+  { k: 'cold', name: 'SEJUK', c: C.CR, w: '#9FDDF7' },
+  { k: 'room', name: 'SUHU BILIK', c: C.MI, w: '#C5F5E3' },
+];
+const rows = TEMP.map((m, i) => {
+  const g = G(B2); svg('circle', { cx: 0, cy: 0, r: 66, fill: m.c }, g);
+  const ic = G(g);
+  if (m.k === 'hot') [-20, 0, 20].forEach(x => svg('path', { d: `M${x} 26 c-14 -14 14 -24 0 -38 c-14 -14 14 -24 0 -38`, fill: 'none', stroke: C.CR, 'stroke-width': 8, 'stroke-linecap': 'round' }, ic));
+  if (m.k === 'cold') [0, 60, 120].forEach(r => svg('path', { d: 'M0 -36 V36 M-10 -26 L0 -16 L10 -26 M-10 26 L0 16 L10 26', fill: 'none', stroke: C.BL, 'stroke-width': 8, 'stroke-linecap': 'round', transform: `rotate(${r})` }, ic));
+  if (m.k === 'room') svg('path', { d: 'M0 -40 C-14 -18 -24 -6 -24 10 A24 24 0 0 0 24 10 C24 -6 14 -18 0 -40 Z', fill: C.CR }, ic);
+  text(g, m.name, 92, 24, 64, C.CR, { family: 'Lilita', weight: 400, anchor: 'start' });
+  return { g, ic, y: 640 + i * 200 };
+});
+const tekan = G(B2);
+svg('rect', { x: -190, y: -58, width: 380, height: 116, rx: 58, fill: C.SU }, tekan);
+text(tekan, '1 TEKAN JE!', 0, 24, 66, C.INK, { family: 'Lilita', weight: 400 });
+const ring = svg('circle', { cx: UNIT.x, cy: UNIT.y - 352 * UNIT.s, r: 0, fill: 'none', stroke: C.SU, 'stroke-width': 10 }, B2);
+function draw2(t) {
+  const b = Q('badge2');
+  popAt(b2, t, b, 150, 290);
+  { const a = E.pop(inv(b + .08, b + .45, t)); l2.setAttribute('transform', `translate(${mix(200, 248, a)} 290) scale(${a})`); }
+  { const a = E.pop(inv(b - .05, b + .4, t)); tf(big, UNIT.x, UNIT.y + 700 * (1 - a), UNIT.s); }
+  // aliran air dari muncung pada setiap suhu; gelas terisi berperingkat
+  let level = 0, col = '#fff', flow = 0;
+  TEMP.forEach((m, i) => { const t0 = Q(m.k); if (t >= t0) { col = m.w; level += 50 * E.out(inv(t0 + .12, t0 + .55, t)); }
+    const on = inv(t0, t0 + .12, t) * (1 - inv(t0 + .5, t0 + .62, t)); flow = Math.max(flow, on); });
+  const gy = UNIT.y, gTop = gy - 170;
+  popAt(glass, t, b + .25, UNIT.x, gy);
+  water.setAttribute('y', -level); water.setAttribute('height', level); water.setAttribute('fill', col);
+  stream.setAttribute('fill', col); stream.setAttribute('height', Math.max(0, (gy - level - NOZ) * flow)); stream.setAttribute('y', NOZ);
+  rows.forEach((r, i) => {
+    const t0 = Q(TEMP[i].k), pr = Q('press');
+    const a = E.pop(inv(t0, t0 + .42, t)), bob = 18 * hump(inv(pr, pr + .3, t));
+    r.g.setAttribute('transform', `translate(${mix(1300, 610, a)} ${r.y - bob})`);
+    r.ic.setAttribute('transform', `rotate(${TEMP[i].k === 'cold' ? 30 * Math.sin(t * 2) : 0})`);
+  });
+  const pr = Q('press');
+  ring.setAttribute('r', 150 * E.outQt(inv(pr, pr + .6, t))); ring.setAttribute('stroke-opacity', t >= pr ? 1 - inv(pr + .2, pr + .6, t) : 0);
+  if (t < pr) tf(tekan, 0, 0, 0); else { const [s, k] = squash(t, pr, { amt: .2 }); tekan.setAttribute('transform', `translate(${UNIT.x + 40} ${UNIT.y - 420 * UNIT.s - 100}) rotate(-6) scale(${s * (1 - k * .6)} ${s * (1 + k)})`); }
+}
+
+/* ================= Babak 3: "Tiga, dan ini yang ramai tak jangka" ================= */
+const B3 = LAY[3].g;
+const b3 = badge(B3, 3, C.CO, C.CR);
+const face = G(B3);
+svg('circle', { cx: 0, cy: 0, r: 250, fill: C.CR }, face);
+const eyes = [-82, 82].map(x => { const g = G(face); svg('ellipse', { cx: 0, cy: 0, rx: 28, ry: 40, fill: C.INK }, g);
+  const pu = svg('circle', { cx: 0, cy: 0, r: 10, fill: C.CR }, g); return { g, pu, x }; });
+const brows = [-82, 82].map(x => svg('rect', { x: -40, y: -10, width: 80, height: 20, rx: 10, fill: C.INK }, G(face)));
+const smile = svg('path', { d: 'M-60 90 Q0 130 60 90', fill: 'none', stroke: C.INK, 'stroke-width': 16, 'stroke-linecap': 'round' }, face);
+const mouth = svg('ellipse', { cx: 0, cy: 0, rx: 42, ry: 56, fill: C.INK }, G(face, { transform: 'translate(0 110)' }));
+const huhs = [[230, 560, -14], [850, 520, 12], [880, 1060, 18]].map(([x, y, r]) => { const g = G(B3); text(g, '?', 0, 56, 170, C.INK, { family: 'Lilita', weight: 400 }); return { g, x, y, r }; });
+const yr = text(B3, 'YANG RAMAI', 540, 1180, 62, C.INK, { track: 6 });
+const wow = letters(B3, 'TAK JANGKA!', 540, 1320, 150, C.INK, 'Lilita', 400, 6);
+function draw3(t) {
+  const b = Q('badge3'), h = Q('huh'), w = Q('wow');
+  popAt(b3, t, b, 150, 290);
+  popAt(face, t, b + .1, 540, 800, { amt: .16 });
+  const blink = 1 - .9 * hump(inv(h - .14, h, t));
+  eyes.forEach(e => { tf(e.g, e.x, -40, 1, blink); e.pu.setAttribute('cx', -10 * E.out(inv(h, h + .2, t))); e.pu.setAttribute('cy', -14 * E.out(inv(h, h + .2, t))); });
+  brows.forEach((r, i) => tf(r.parentNode, [-82, 82][i], -112 - 34 * E.pop(inv(w - .1, w + .2, t)), 1, 1, (i ? 1 : -1) * 10 * E.pop(inv(w - .1, w + .2, t))));
+  const m = E.pop(inv(w - .05, w + .3, t));
+  vis(smile, m < .05); tf(mouth, 0, 0, m, m);
+  huhs.forEach((q, i) => { const s = popAt(q.g, t, h + i * .12, q.x, q.y, { amt: .2 });
+    if (s) q.g.setAttribute('transform', q.g.getAttribute('transform') + ` rotate(${q.r + 8 * Math.sin(t * 5 + i)})`); });
+  const a = E.outQt(inv(h + .1, h + .45, t));
+  yr.setAttribute('opacity', a); yr.setAttribute('transform', `translate(0 ${mix(30, 0, a)})`);
+  wow.forEach((l, i) => popAt(l.g, t, w + i * .03, l.x, l.y, { amt: .22 }));
+}
+
+/* ================= Babak 4: harga + rebat ================= */
+const B4 = LAY[4].g;
+const was = G(B4);
+text(was, 'HARGA ASAL', 0, -160, 54, C.INK, { track: 4, op: .7 });
+text(was, 'RM104', 0, 0, 210, C.INK, { family: 'Lilita', weight: 400 });
+const strike = svg('rect', { x: 0, y: -13, width: 0, height: 26, rx: 13, fill: C.CO }, G(B4));
+const nowLab = text(B4, 'SEKARANG', 540, 690, 56, C.CO, { track: 6 });
+const now = G(B4);
+text(now, 'RM54', 6, 16, 300, C.INK, { family: 'Lilita', weight: 400 });
+text(now, 'RM54', 0, 0, 300, C.CO, { family: 'Lilita', weight: 400 });
+const perMo = text(B4, 'SEBULAN', 540, 1040, 64, C.INK, { track: 6 });
+const coins = [[130, 640], [950, 610], [105, 1150], [975, 1150]].map(([x, y], i) => { const g = G(B4);
+  svg('circle', { cx: 0, cy: 0, r: 56, fill: C.SU }, g); svg('circle', { cx: 0, cy: 0, r: 40, fill: 'none', stroke: '#F0A91A', 'stroke-width': 6 }, g);
+  text(g, 'RM', 0, 12, 32, C.INK); return { g, x, y }; });
+const pill = G(B4);
+svg('rect', { x: -330, y: -56, width: 660, height: 112, rx: 56, fill: C.INK }, pill);
+text(pill, '+ REBAT RM20 × 7 BULAN', 0, 22, 58, C.CR, { family: 'Lilita', weight: 400 });
+const months = Array.from({ length: 7 }, (_, i) => { const g = G(B4);
+  svg('rect', { x: -56, y: -56, width: 112, height: 112, rx: 18, fill: C.WHITE, stroke: C.INK, 'stroke-width': 5 }, g);
+  svg('path', { d: 'M-56 -30 V-38 A18 18 0 0 1 -38 -56 H38 A18 18 0 0 1 56 -38 V-30 Z', fill: C.CO }, g);
+  text(g, String(i + 1), 0, 34, 56, C.INK, { family: 'Lilita', weight: 400 }); return { g, x: 106 + 56 + i * 126 }; });
+function draw4(t) {
+  const w0 = Q('was'), st = Q('strike'), n = Q('now'), r = Q('rebate'), m = Q('months');
+  const dim = E.inOut(inv(st + .1, st + .45, t));
+  if (t < w0) tf(was, 540, 520, 0);
+  else { const [s, k] = squash(t, w0, { amt: .14 }); tf(was, 540, mix(520, 470, dim), s * mix(1, .74, dim) * (1 - k * .6), s * mix(1, .74, dim) * (1 + k)); }
+  was.setAttribute('opacity', mix(1, .5, dim));
+  tf(strike.parentNode, 540 - 270 * mix(1, .74, dim), mix(458, 422, dim), mix(1, .74, dim), mix(1, .74, dim), -7);
+  strike.setAttribute('width', 540 * E.inOut(inv(st, st + .26, t)));
+  const a = E.outQt(inv(n - .3, n, t)); nowLab.setAttribute('opacity', a); nowLab.setAttribute('transform', `translate(0 ${mix(24, 0, a)})`);
+  if (t < n) tf(now, 540, 960, 0);
+  else { const [s, k] = squash(t, n, { amt: .22, f: 2.8 }); const sl = mix(1.7, 1, E.outQt(inv(n, n + .14, t))); tf(now, 540, 960, sl * s * (1 - k * .6), sl * s * (1 + k)); }
+  const pm = E.outQt(inv(n + .2, n + .5, t)); perMo.setAttribute('opacity', pm); perMo.setAttribute('transform', `translate(0 ${mix(24, 0, pm)})`);
+  coins.forEach((c, i) => { const t0 = n + .1 + i * .08;
+    if (t < t0) return tf(c.g, c.x, c.y, 0);
+    const s = E.pop(inv(t0, t0 + .35, t)); tf(c.g, c.x, c.y + 8 * Math.sin(t * 3 + i), s * Math.max(.08, Math.abs(Math.cos(2 * Math.PI * .5 * (t - t0)))), s); });
+  popAt(pill, t, r, 540, 1150, { amt: .16 });
+  months.forEach((mo, i) => popAt(mo.g, t, m + i * .1, mo.x, 1300, { amt: .2 }));
+}
+
+/* ================= Babak 5: CTA ================= */
+const B5 = LAY[5].g;
+const sw5 = NEON.map(n => { const g = G(B5); svg('circle', { cx: 0, cy: 0, r: 30, fill: n.c, stroke: C.CR, 'stroke-width': 5 }, g); return g; });
+const card = G(B5);
+svg('rect', { x: -450, y: -270, width: 900, height: 570, rx: 48, fill: C.BLD }, card);
+svg('rect', { x: -450, y: -286, width: 900, height: 570, rx: 48, fill: C.CR }, card);
+const imgClip = svg('clipPath', { id: 'img' }, svg('defs', {}, S));
+svg('rect', { x: -428, y: -264, width: 856, height: 526, rx: 32 }, imgClip);
+const cardImg = G(card, { 'clip-path': 'url(#img)' });
+svg('rect', { x: -428, y: -264, width: 856, height: 526, fill: C.WHITE }, cardImg);
+svg('image', { href: '../../assets/img/neon/lineup5.png', x: -470, y: -470 - 20, width: 940, height: 940, preserveAspectRatio: 'xMidYMid meet' }, cardImg);
+const ttl5 = letters(B5, 'COWAY NEON', 540, 1030, 130, C.CR);
+const TICKS = ['PROMOSI RM54 SEBULAN*', '+ REBAT RM20 × 7 BULAN*', 'PEMASANGAN PERCUMA'];
+const ticks = TICKS.map(s => { const g = G(B5); const w = width('800 42px Nunito', s);
+  svg('circle', { cx: -w / 2 - 34, cy: -14, r: 20, fill: C.SU }, g);
+  svg('path', { d: `M${-w / 2 - 44} -14 l7 8 l14 -15`, fill: 'none', stroke: C.INK, 'stroke-width': 6, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
+  text(g, s, 18, 0, 42, C.CR, { weight: 800 }); return g; });
+const btnG = G(B5);
+const pulse = svg('rect', { x: -330, y: -64, width: 660, height: 128, rx: 64, fill: 'none', stroke: C.WA, 'stroke-width': 8 }, btnG);
+const btn = G(btnG);
+svg('rect', { x: -330, y: -52, width: 660, height: 128, rx: 64, fill: '#128C4A' }, btn);
+svg('rect', { x: -330, y: -64, width: 660, height: 128, rx: 64, fill: C.WA }, btn);
+svg('circle', { cx: -255, cy: 0, r: 34, fill: 'none', stroke: C.WHITE, 'stroke-width': 8 }, btn);
+svg('path', { d: 'M-281 28 L-275 9 L-263 21 Z', fill: C.WHITE }, btn);
+text(btn, 'WhatsApp saya', 42, 24, 68, C.WHITE, { family: 'Lilita', weight: 400 });
+const fine = G(B5);
+text(fine, '*Harga asal RM104/bulan. Rebat ulang tahun Coway RM20 selama 7 bulan.', 540, 1745, 26, C.CR, { weight: 600, op: .9 });
+text(fine, 'Tertakluk pada terma & promosi semasa Coway.', 540, 1780, 26, C.CR, { weight: 600, op: .9 });
+function draw5(t) {
+  const c = Q('card'), bt = Q('button');
+  sw5.forEach((g, i) => popAt(g, t, Q('wipe5') + .2 + i * .06, 360 + i * 90, 210));
+  popAt(card, t, c, 540, 600 + 6 * Math.sin((t - c) * 2.2) * (t > c + .8), { amt: .1 });
+  ttl5.forEach((l, i) => popAt(l.g, t, c + .15 + i * .03, l.x, l.y, { amt: .2 }));
+  ticks.forEach((g, i) => { const a = E.pop(inv(c + .45 + i * .1, c + .8 + i * .1, t)); g.setAttribute('transform', `translate(${mix(-400, 540, a)} ${1110 + i * 62})`); });
+  popAt(btnG, t, bt, 540, 1360 + (t > bt + .6 ? 6 * Math.sin((t - bt) * 4) : 0), { amt: .18 });
+  const ph = ((t - bt - .5) % 1.2 + 1.2) % 1.2 / 1.2;
+  pulse.setAttribute('opacity', t > bt + .5 ? 1 - ph : 0); tf(pulse, 0, 0, 1 + .18 * ph, 1 + .5 * ph);
+  fine.setAttribute('opacity', E.out(inv(c, c + .4, t)));
+}
+
+const DRAW = [draw0, draw1, draw2, draw3, draw4, draw5];
+const START = [-9, ...WIPES.slice(1).map(w => w.t)];
+MG.run(t => {
+    let cur = 0;
+    LAY.forEach((L, k) => {
+      const w = WIPES[k], r = w ? wipeR(w, t) : 0;
+      if (w) { L.circ.setAttribute('r', r); L.clip.setAttribute('r', r); }
+      const next = WIPES[k + 1], covered = next && t >= next.t + WD;
+      const on = t >= START[k] && !covered;
+      vis(L.g, on); if (on) DRAW[k](t);
+      if (!w || t >= w.t + WD / 2) cur = k;
+    });
+    const dark = FIELD[cur] === C.CR;
+    const br = document.getElementById('brand'); br.style.color = dark ? C.BL : C.CR;
+});
+});
+</script>
+</body></html>

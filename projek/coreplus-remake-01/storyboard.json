@@ -1,0 +1,135 @@
+{
+ "kod": "coreplus-remake-01",
+ "slug": "tangki-paling-besar",
+ "produk": "coreplus",
+ "sumber": "Video TikTok kreator lain (penyampai + footage Core Plus, 66 s), diberi user 25/10/2026",
+ "voice": "Aoede",
+ "style_tts": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "produk_img": "coreplus-remake-01/produk.jpg",
+ "produk_cut": "coreplus-remake-01/produk.jpg",
+ "produk_lineup": "coreplus-remake-01/produk.jpg",
+ "tagline": "Own the best of size, substance and style.",
+ "ticks": [
+  "TANGKI 21.1 LITER",
+  "3 SUHU + CHILD LOCK",
+  "SERVIS & WARANTI"
+ ],
+ "button": "WhatsApp saya",
+ "fine": "*Tertakluk pada terma &amp; syarat semasa Coway.",
+ "video": [
+  {
+   "id": "CP01",
+   "gaya": "glow"
+  },
+  {
+   "id": "CP02",
+   "gaya": "paper"
+  },
+  {
+   "id": "CP03",
+   "gaya": "mg:08-morph"
+  }
+ ],
+ "baris": [
+  {
+   "id": "01",
+   "text": "Coway dengan tangki paling besar di Malaysia!",
+   "cap": "Coway dengan tangki *paling besar* di Malaysia!",
+   "jenis": "hook",
+   "tajuk": "TANGKI PALING|BESAR",
+   "sorot": "DI MALAYSIA!",
+   "gambar": "coreplus-remake-01/a_hook.jpg"
+  },
+  {
+   "id": "02",
+   "text": "Nama model ni, Coway Core Plus.",
+   "cap": "Nama model ni, *Coway Core Plus*.",
+   "jenis": "produk",
+   "tajuk": "COWAY CORE PLUS",
+   "gambar": "coreplus-remake-01/b_produk.jpg"
+  },
+  {
+   "id": "03",
+   "text": "Dia jenis floor standing, jadi korang tak perlukan kabinet untuk letak penapis air ni.",
+   "cap": "Jenis *floor standing*, tak perlu *kabinet*.",
+   "jenis": "poin",
+   "tajuk": "FLOOR STANDING",
+   "sorot": "TAK PERLU KABINET",
+   "gambar": "coreplus-remake-01/c_floor.jpg"
+  },
+  {
+   "id": "04",
+   "text": "Core Plus ni ada lengkap tiga suhu. Panas, tiga perpuluhan enam liter. Sejuk, tujuh perpuluhan satu liter. Dan suhu bilik, sepuluh perpuluhan empat liter.",
+   "cap": "*Panas 3.6L*, *sejuk 7.1L*, *suhu bilik 10.4L*.",
+   "jenis": "suhu",
+   "tajuk": "3 SUHU",
+   "liter": [
+    "3.6L",
+    "7.1L",
+    "10.4L"
+   ],
+   "gambar": "coreplus-remake-01/d_suhu.jpg"
+  },
+  {
+   "id": "05",
+   "text": "Total kapasiti tangki dia, sebesar dua puluh satu perpuluhan satu liter! Memang besar, guys.",
+   "cap": "Total *21.1 liter*! Memang *besar*, guys.",
+   "jenis": "angka",
+   "tajuk": "TOTAL KAPASITI",
+   "harga": "21.1L",
+   "sub": "MEMANG BESAR!"
+  },
+  {
+   "id": "06",
+   "text": "Sebab tu ia jadi pilihan terbaik untuk office, masjid, restoran, sekolah, dan family yang ramai. Nak pasang kat rumah pun tak ada masalah tau.",
+   "cap": "*Office*, *masjid*, *restoran*, *sekolah*, rumah pun *boleh*.",
+   "jenis": "poin",
+   "tajuk": "OFFICE · MASJID|SEKOLAH · RESTORAN",
+   "sorot": "RUMAH PUN BOLEH!",
+   "gambar": "coreplus-remake-01/f_lokasi.jpg"
+  },
+  {
+   "id": "07",
+   "text": "Design dia pun cantik, dengan touch panel untuk pilih suhu dan kuantiti air yang korang nak.",
+   "cap": "*Touch panel*: pilih *suhu* & *kuantiti*.",
+   "jenis": "poin",
+   "tajuk": "TOUCH PANEL",
+   "sorot": "PILIH SUHU & KUANTITI",
+   "gambar": "coreplus-remake-01/g_panel.jpg"
+  },
+  {
+   "id": "08",
+   "text": "Ada safety child lock untuk elak kemalangan melecur terkena air panas.",
+   "cap": "*Child lock*, elak *melecur*.",
+   "jenis": "poin",
+   "tajuk": "SAFETY|CHILD LOCK",
+   "sorot": "ELAK MELECUR",
+   "gambar": "coreplus-remake-01/h_childlock.jpg"
+  },
+  {
+   "id": "09",
+   "text": "Yang paling best, dalam tangki ada fungsi UV sterilization, untuk memastikan air dalam tangki sentiasa bersih.",
+   "cap": "*UV sterilization*, air tangki sentiasa *bersih*.",
+   "jenis": "poin",
+   "tajuk": "UV STERILIZATION",
+   "sorot": "AIR SENTIASA BERSIH",
+   "gambar": "coreplus-remake-01/i_uv.jpg"
+  },
+  {
+   "id": "10",
+   "text": "Bila beli Core Plus, korang dapat sekali servis penukaran filter berjadual, dan waranti sepanjang tempoh kontrak.",
+   "cap": "*Servis filter berjadual* + *waranti* sepanjang kontrak.",
+   "jenis": "poin",
+   "tajuk": "SERVIS FILTER|BERJADUAL",
+   "sorot": "+ WARANTI KONTRAK",
+   "gambar": "coreplus-remake-01/j_servis.jpg"
+  },
+  {
+   "id": "11",
+   "text": "Kalau berminat nak dapatkan Coway Core Plus, terus tekan butang WhatsApp sekarang.",
+   "cap": "Berminat? Tekan *WhatsApp* sekarang.",
+   "jenis": "cta",
+   "tajuk": "BERMINAT?"
+  }
+ ]
+}

@@ -46,7 +46,7 @@ SP.els.forEach((e, i) => {
     case 'img': h = `<img class="el pic" src="${e.src}" style="${top} left:${e.left != null ? e.left : (1080 - e.w) / 2}px; width:${e.w}px; --g:${e.g || '#04A4E4'}">`; break;
     case 'temps': h = `<div class="el c" style="${top}">${e.items.map((it, k) => `<div class="tp" id="${e.id}_${k}" style="--tc:${TEMP[it.k][1]}">
         <i><svg width="84" height="84" viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${ICO[it.k]}</svg></i>
-        <b><small>AIR</small>${TEMP[it.k][0]}</b></div>`).join('')}</div>`; break;
+        <b><small>AIR</small>${it.txt || TEMP[it.k][0]}</b></div>`).join('')}</div>`; break;
     case 'gift': {
       const S = e.size || 640, box = e.box || '#04A4E4', rib = e.ribbon || '#ff8fb1', st = ST === 'comic' ? 'stroke="#111" stroke-width="4"' : '';
       const rays = Array.from({ length: 12 }, (_, k) => { const a = k * Math.PI / 6, b = a + .16;
@@ -220,7 +220,7 @@ function seek(T) {
     pending = Clips.show('clipImg', bg.clip, mix(bg.c0, bg.c1, clamp(k)) - SP.clips[bg.clip].start);
     set('clipL', { o: 1, s: mix(1.04, 1.14, k) }); set('shade', { o: bg.shade === false ? 0 : 1 });
   } else if (bg.image) {
-    $('bgColor').className = 'layer bg-' + (bg.color || 'k-white'); set('bgColor', { o: 1 }); set('clipL', { o: 0 }); set('shade', { o: 0 });
+    $('bgColor').className = 'layer bg-' + (bg.color || 'k-white'); set('bgColor', { o: 1 }); set('clipL', { o: 0 }); set('shade', { o: bg.shade ? 1 : 0 });
     const img = $('bgImg');
     if (!img.src.endsWith(bg.image.replace('../../', ''))) { img.src = bg.image; pending = img.decode().catch(() => {}); }
     Object.assign(img.style, { left: (bg.left || 0) + 'px', top: (bg.top || 0) + 'px', width: (bg.w || 1080) + 'px', height: (bg.h || 1920) + 'px', objectFit: bg.fit || 'cover' });
