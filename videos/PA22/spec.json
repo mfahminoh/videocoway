@@ -1,0 +1,289 @@
+{
+ "slug": "rutin-10-minit-peti-bersih",
+ "voice": "Zephyr",
+ "style_tts": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "player": "hype",
+ "style": "ugc",
+ "bpm": 110,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/s13_buang.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "ugc-blue"
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/s13_buang.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "peti-ais-p2-01/s12_lap.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "peti-ais-p2-01/s08_tersusun.jpg",
+    "color": "ugc-white",
+    "shade": true
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "ugc-blue"
+  },
+  {
+   "at": "@07",
+   "bg": "ugc-white"
+  },
+  {
+   "at": "@08",
+   "bg": "ugc-white"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "items": [
+    {
+     "txt": "TUNGGU",
+     "at": "@01",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "BERBAU?",
+     "at": "@01%30",
+     "size": 170,
+     "color": "#fff",
+     "box": true,
+     "bg": "#E5322D",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 480,
+   "items": [
+    {
+     "txt": "RUTIN",
+     "at": "@02",
+     "size": 150,
+     "color": "#fff"
+    },
+    {
+     "txt": "10 MINIT",
+     "at": "@02%20",
+     "size": 220,
+     "color": "#fff",
+     "hit": true
+    },
+    {
+     "txt": "SEMINGGU SEKALI",
+     "at": "@02%55",
+     "size": 100,
+     "color": "#2f3337",
+     "box": true,
+     "bg": "#ffd23f"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "items": [
+    {
+     "txt": "1 · BUANG",
+     "at": "@03",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "MAKANAN LAMA",
+     "at": "@03%30",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "items": [
+    {
+     "txt": "2 · LAP",
+     "at": "@04",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TUMPAHAN",
+     "at": "@04%30",
+     "size": 130,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "items": [
+    {
+     "txt": "3 · CUCI BEKAS",
+     "at": "@05",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "4 · SUSUN SEMULA",
+     "at": "@05%50",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 520,
+   "items": [
+    {
+     "txt": "TAG",
+     "at": "@06",
+     "size": 230,
+     "color": "#fff",
+     "hit": true
+    },
+    {
+     "txt": "ORANG RUMAH",
+     "at": "@06%30",
+     "size": 120,
+     "color": "#fff"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@07",
+   "out": "@07%50",
+   "src": "../../assets/img/coway_fridge/hs_step3.jpg",
+   "w": 960,
+   "top": 420,
+   "anim": "rise"
+  },
+  {
+   "type": "img",
+   "in": "@07%50",
+   "out": "@08",
+   "src": "../../assets/img/coway_fridge/hs_step4.jpg",
+   "w": 960,
+   "top": 420
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 1060,
+   "items": [
+    {
+     "txt": "CODY",
+     "at": "@07",
+     "size": 120,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "STEAMING",
+     "at": "@07%45",
+     "size": 110,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "TUKAR PENAPIS",
+     "at": "@07%70",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": null,
+   "top": 330,
+   "items": [
+    {
+     "txt": "DARI RM84",
+     "at": "@08",
+     "size": 150,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "SEBULAN*",
+     "at": "@08%15",
+     "size": 100,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Peti ais Coway 715L, harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ]
+}

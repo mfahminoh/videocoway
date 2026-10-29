@@ -23,3 +23,8 @@ pa13_a_tong      buang lauk rosak (PA13 01)
 pa13_b_cium      isteri cium bekas lauk (PA13 02)
 pa13_c_bungkus   keluarga makan nasi bungkus malam (PA13 03)
 pa15_a_kira      lelaki kira dengan kalkulator (PA15 01)
+
+Batch 2 (PA16–PA25), dijana 30/10/2026, Seedream 4.5, 1440x2560: bingkai pertama untuk shot Google Flow (projek/peti-ais-p2-01/shots.md)
+dan latar sementara sehingga klip Flow dimuat naik. 21 imej dijana (17 diguna, 4 ditolak: logo Pepsi/Fanta/Coca-Cola, tulisan jenama pada peti/kotak).
+s01_layu s02_balut s03_periuk s04_bekas s05_cari s06_lutsinar s07_mentah s08_tersusun s09_termometer s10_periuk_panas
+s11_ruang s12_lap s13_buang s15_kedai s16_mealprep s17_bekal · pa23_atas (peti 2 pintu biasa, PA23)

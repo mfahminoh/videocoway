@@ -1,0 +1,157 @@
+{
+ "slug": "meal-prep-untuk-anak",
+ "voice": "Vindemiatrix",
+ "style": "Say in Malaysian Malay, as a tired but sincere mother telling her own story, soft, warm and natural, not too slow",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/s16_mealprep.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/s03_periuk.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "blue"
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "peti-ais-p2-01/s17_bekal.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "pill",
+   "in": 0,
+   "out": "@02",
+   "top": 150,
+   "html": "LAKONAN SEMULA",
+   "bg": "rgba(0,0,0,.55)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "AHAD MASAK <em>3 HARI</em>"
+  },
+  {
+   "type": "chips",
+   "in": "@02",
+   "out": "@03",
+   "top": 1080,
+   "items": [
+    {
+     "text": "BEKAL",
+     "color": "#fff",
+     "at": "@02"
+    },
+    {
+     "text": "SARAPAN",
+     "color": "#fff",
+     "at": "@02%30"
+    },
+    {
+     "text": "LAUK MALAM",
+     "color": "#ffd23f",
+     "at": "@02%60"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@03",
+   "out": "@04",
+   "top": 1180,
+   "html": "DULU: PETI LAMA TAK MUAT",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "steps",
+   "in": "@04",
+   "out": "@05",
+   "top": 380,
+   "items": [
+    {
+     "text": "BEKAS LEPER SAMA SAIZ",
+     "at": "@04"
+    },
+    {
+     "text": "SATU RAK, SATU HARI",
+     "at": "@04%45"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "ANAK AMBIL <em>SENDIRI</em>"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "COWAY <em>551L</em> · 4 PINTU"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_drawers.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@06%40",
+   "out": "@07",
+   "top": 1200,
+   "html": "ZON BAWAH: BEKU ↔ SEJUK",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@07",
+   "top": 760,
+   "ticks": [
+    "551L DARI RM99/BULAN*",
+    "CONVERTIBLE ZONE",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@07%40",
+   "fine": "*551L: harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

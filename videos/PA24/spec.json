@@ -1,0 +1,257 @@
+{
+ "slug": "7-perkara-sebelum-beli-peti-ais",
+ "voice": "Algieba",
+ "style_tts": "Say in Malaysian Malay, as an energetic, punchy young man on TikTok, fast, bold and confident",
+ "player": "hype",
+ "style": "kinetic",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/s15_kedai.jpg",
+    "color": "k-ink",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "k-white"
+  },
+  {
+   "at": "@04",
+   "bg": "k-blue"
+  },
+  {
+   "at": "@05",
+   "bg": "k-white"
+  },
+  {
+   "at": "@07",
+   "bg": "k-blue"
+  },
+  {
+   "at": "@08",
+   "bg": "k-white"
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 300,
+   "items": [
+    {
+     "txt": "HARGA",
+     "at": "@01",
+     "size": 150,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "BUKAN SEMUA.",
+     "at": "@01%20",
+     "size": 120,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "7 PERKARA",
+     "at": "@01%55",
+     "size": 200,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "SEBELUM BELI",
+     "at": "@01%70",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 420,
+   "items": [
+    {
+     "txt": "1 · KAPASITI",
+     "at": "@02",
+     "size": 120,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "2 · UKURAN",
+     "at": "@02%50",
+     "size": 130,
+     "color": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 420,
+   "items": [
+    {
+     "txt": "3 · JENIS PINTU",
+     "at": "@03",
+     "size": 110,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "4 · ZON SUHU",
+     "at": "@03%50",
+     "size": 130,
+     "color": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 520,
+   "items": [
+    {
+     "txt": "5 · SENANG",
+     "at": "@04",
+     "size": 130,
+     "color": "#fff"
+    },
+    {
+     "txt": "JAGA",
+     "at": "@04%35",
+     "size": 220,
+     "color": "#fff",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": "@06",
+   "top": 420,
+   "items": [
+    {
+     "txt": "6 · WARANTI",
+     "at": "@05",
+     "size": 130,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "& SERVIS",
+     "at": "@05%45",
+     "size": 150,
+     "color": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@06",
+   "out": "@07",
+   "top": 420,
+   "items": [
+    {
+     "txt": "7 · JUMLAH",
+     "at": "@06",
+     "size": 130,
+     "color": "#2f3337"
+    },
+    {
+     "txt": "KOS",
+     "at": "@06%30",
+     "size": 230,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "BUKAN BULANAN JE",
+     "at": "@06%65",
+     "size": 90,
+     "color": "#fff",
+     "box": true,
+     "bg": "#E5322D"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "in": "@07",
+   "out": "@08",
+   "src": "../../assets/img/coway_fridge/551_inv_comp.png",
+   "w": 600,
+   "top": 260,
+   "anim": "rise"
+  },
+  {
+   "type": "words",
+   "in": "@07",
+   "out": "@08",
+   "top": 1040,
+   "items": [
+    {
+     "txt": "KOMPRESSOR 10 TAHUN*",
+     "at": "@07%15",
+     "size": 90,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "CODY 7 TAHUN",
+     "at": "@07%55",
+     "size": 110,
+     "color": "#fff",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@08",
+   "out": null,
+   "top": 330,
+   "items": [
+    {
+     "txt": "SIMPAN",
+     "at": "@08",
+     "size": 150,
+     "color": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "CHECKLIST NI",
+     "at": "@08%15",
+     "size": 100,
+     "color": "#2f3337"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway."
+  }
+ ]
+}

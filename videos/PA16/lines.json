@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Sayur beli hari Ahad. Rabu dah layu.",
+  "cap": "Ahad beli. *Rabu dah layu.*"
+ },
+ {
+  "id": "02",
+  "text": "Selalunya bukan salah sayur. Ada tiga sebab.",
+  "cap": "Bukan salah sayur. *3 sebab.*"
+ },
+ {
+  "id": "03",
+  "text": "Satu, simpan basah. Air yang melekat buat sayur cepat lembik.",
+  "cap": "1 · Simpan *basah*"
+ },
+ {
+  "id": "04",
+  "text": "Dua, campur dengan buah. Ada buah yang lepaskan gas, cepatkan sayur layu.",
+  "cap": "2 · Campur dengan *buah*"
+ },
+ {
+  "id": "05",
+  "text": "Tiga, laci terlalu kering, atau terlalu lembap.",
+  "cap": "3 · Kelembapan *tak sesuai*"
+ },
+ {
+  "id": "06",
+  "text": "Cuba lap kering, balut dengan tisu dapur, dan simpan dalam bekas bertutup.",
+  "cap": "Lap kering · balut tisu · *bekas tutup*"
+ },
+ {
+  "id": "07",
+  "text": "Peti ais Coway tujuh ratus lima belas liter ada laci kawalan kelembapan, untuk sayur dan buah.",
+  "cap": "715L · *Humidity Control*"
+ },
+ {
+  "id": "08",
+  "text": "Dari lapan puluh empat ringgit sebulan. Nak tips simpan sayur lagi? WhatsApp saya.",
+  "cap": "dari *RM84*/bulan · *WhatsApp saya*"
+ }
+]

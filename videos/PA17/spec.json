@@ -1,0 +1,153 @@
+{
+ "slug": "lauk-lebihan-tak-muat",
+ "voice": "Sulafat",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/s03_periuk.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/s04_bekas.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "LEBIHAN LAUK…<br><em>PERIUK TAK MUAT</em>"
+  },
+  {
+   "type": "pill",
+   "in": "@02",
+   "out": "@03",
+   "top": 1180,
+   "html": "PERIUK = MAKAN RUANG",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "BEKAS <em>LEPER</em> BERTUTUP"
+  },
+  {
+   "type": "pill",
+   "in": "@03%40",
+   "out": "@04",
+   "top": 1180,
+   "html": "CEPAT SEJUK · SUSUN BERTINGKAT",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "icon",
+   "in": "@04",
+   "out": "@05",
+   "top": 380,
+   "icon": "clock",
+   "size": 260
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 700,
+   "size": 100,
+   "html": "SEJUK SEKEJAP<br>→ TERUS SIMPAN"
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 520,
+   "size": 130,
+   "html": "MASAK UNTUK<br>3 HARI?"
+  },
+  {
+   "type": "pill",
+   "in": "@05%40",
+   "out": "@06",
+   "top": 880,
+   "html": "PERLU RUANG LEBIH",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "COWAY <em>551L</em> · 4 PINTU"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@06%55",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+  },
+  {
+   "type": "photo",
+   "in": "@06%55",
+   "out": "@07",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_drawers.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@06%55",
+   "out": "@07",
+   "top": 1200,
+   "html": "CONVERTIBLE ZONE: SEJUK ↔ BEKU",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@07",
+   "top": 760,
+   "ticks": [
+    "551L DARI RM99/BULAN*",
+    "4 PINTU · CONVERTIBLE ZONE",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@07%40",
+   "fine": "*551L: harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

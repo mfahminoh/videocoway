@@ -1,0 +1,170 @@
+{
+ "slug": "2-pintu-side-by-side-4-pintu",
+ "voice": "Achird",
+ "style": "Say in Malaysian Malay, as a calm, confident Coway agent explaining clearly to a friend, honest and friendly",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa23_atas.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 560,
+   "size": 170,
+   "html": "3 JENIS<br>PETI AIS"
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "<em>1</em> · 2 PINTU BIASA"
+  },
+  {
+   "type": "pill",
+   "in": "@02%25",
+   "out": "@03",
+   "top": 1180,
+   "html": "JIMAT RUANG · TERHAD",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "<em>2</em> · SIDE-BY-SIDE"
+  },
+  {
+   "type": "photo",
+   "in": "@03",
+   "out": "@04",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@03%40",
+   "out": "@04",
+   "top": 1200,
+   "html": "SESUAI YANG STOK BANYAK",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "<em>3</em> · 4 PINTU"
+  },
+  {
+   "type": "photo",
+   "in": "@04",
+   "out": "@05",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@04%40",
+   "out": "@05",
+   "top": 1200,
+   "html": "SUKA SUSUN IKUT KATEGORI",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "icon",
+   "in": "@05",
+   "out": "@06",
+   "top": 420,
+   "icon": "ruler",
+   "size": 280
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 760,
+   "size": 110,
+   "html": "SEMAK RUANG<br>BUKA PINTU"
+  },
+  {
+   "type": "vs",
+   "in": "@06",
+   "out": "@07",
+   "top": 420,
+   "left": {
+    "title": "715L",
+    "color": "#04A4E4",
+    "items": [
+     "Side-by-side",
+     "2 pintu",
+     "dari RM84/bulan*"
+    ],
+    "at": "@06"
+   },
+   "right": {
+    "title": "551L",
+    "color": "#0B2F6B",
+    "items": [
+     "4 pintu",
+     "Convertible Zone",
+     "dari RM99/bulan*"
+    ],
+    "at": "@06%55"
+   }
+  },
+  {
+   "type": "cta",
+   "in": "@07",
+   "top": 760,
+   "ticks": [
+    "715L DARI RM84/BULAN*",
+    "551L DARI RM99/BULAN*",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@07%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

@@ -161,3 +161,160 @@ Video pelan: 27 · Kategori: 6 Bantahan & conversion · Persona: P2 · Suara: Or
 | 06 | Dan tak perlu keluar hampir enam ribu sekali gus. | Tak perlu *RM5,899* sekali gus | Tajuk |
 | 07 | Kalau ada tunai, dan tak kisah urus servis sendiri, beli tunai. Itu nasihat jujur saya. | Ada tunai? *Beli tunai.* | Cop NASIHAT JUJUR |
 | 08 | Nak bayar bulanan, dan ada orang yang jaga? WhatsApp saya. | Nak bulanan? *WhatsApp saya* | CTA |
+
+
+---
+
+# Batch 2 (PA16–PA25)
+
+Status: **DILULUSKAN 30 Okt 2026** (user: "sambung next batch"; batch 1 dianggap lulus) · Harga disahkan: 25 Okt 2026
+Dijana daripada `videos/peti-ais-p2-01_b2.py`. Shot hidup `sNN`: Google Flow (Veo), prompt dalam `shots.md`.
+
+| ID (pelan) | Hook | Kategori | Jenis hook | Suara | Format | ±saat |
+|---|---|---|---|---|---|---|
+| PA16 (02) | Sayur beli hari Ahad. Rabu dah layu. | 1 Masalah harian | Seru situasi | Aoede | scenes | ±35 |
+| PA17 (03) | Masak banyak untuk keluarga. Nak simpan lebihan, periuk tak muat masuk peti. | 1 Masalah harian | Seru situasi | Sulafat | scenes | ±38 |
+| PA18 (04) | Barang sebenarnya ada. Kita je yang tak nampak. | 1 Masalah harian | Seru situasi | Orus | scenes | ±35 |
+| PA19 (06) | Kalau semua benda campak masuk peti, memang cepat serabut. | 2 Tips | Tips / arahan | Kore | scenes | ±30 |
+| PA20 (07) | Nombor paling sejuk, tak semestinya setting paling betul. | 2 Tips | Mitos vs fakta | Puck | scenes | ±37 |
+| PA21 (09) | Peti penuh rasa puas hati. Tapi angin sejuk tak boleh lalu. | 2 Tips | Seru situasi | Laomedeia | scenes | ±37 |
+| PA22 (10) | Tak payah tunggu peti berbau, baru nak cuci. | 2 Tips | Tips / arahan | Zephyr | ugc | ±32 |
+| PA23 (12) | Tiga jenis peti ais. Cara guna tak sama. | 3 Panduan memilih | Perbandingan | Achird | scenes | ±38 |
+| PA24 (15) | Harga bukan satu-satunya benda nak tengok. Ni tujuh perkara sebelum beli peti ais. | 3 Panduan memilih | Listicle | Algieba | kinetic | ±33 |
+| PA25 (17) | Hari Ahad, saya masak untuk tiga hari. Pagi Isnin, tak kelam-kabut. | 4 Situasi hidup | Cerita pertama | Vindemiatrix | scenes | ±36 |
+
+---
+
+### PA16 · Kenapa sayur cepat layu dalam peti ais?
+Video pelan: 02 · Kategori: 1 Masalah harian · Persona: P2 · Suara: Aoede · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Sayur beli hari Ahad. Rabu dah layu. | Ahad beli. *Rabu dah layu.* | Flow s01: ibu keluarkan sayur layu dari laci |
+| 02 | Selalunya bukan salah sayur. Ada tiga sebab. | Bukan salah sayur. *3 sebab.* | s01 sambung, tajuk |
+| 03 | Satu, simpan basah. Air yang melekat buat sayur cepat lembik. | 1 · Simpan *basah* | Grafik titisan air |
+| 04 | Dua, campur dengan buah. Ada buah yang lepaskan gas, cepatkan sayur layu. | 2 · Campur dengan *buah* | Grafik |
+| 05 | Tiga, laci terlalu kering, atau terlalu lembap. | 3 · Kelembapan *tak sesuai* | Grafik |
+| 06 | Cuba lap kering, balut dengan tisu dapur, dan simpan dalam bekas bertutup. | Lap kering · balut tisu · *bekas tutup* | Flow s02: tangan balut sayur |
+| 07 | Peti ais Coway tujuh ratus lima belas liter ada laci kawalan kelembapan, untuk sayur dan buah. | 715L · *Humidity Control* | Rasmi 715_humidity |
+| 08 | Dari lapan puluh empat ringgit sebulan. Nak tips simpan sayur lagi? WhatsApp saya. | dari *RM84*/bulan · *WhatsApp saya* | CTA |
+
+### PA17 · Lauk lebihan tak muat masuk peti
+Video pelan: 03 · Kategori: 1 Masalah harian · Persona: P2 · Suara: Sulafat · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Masak banyak untuk keluarga. Nak simpan lebihan, periuk tak muat masuk peti. | Lebihan lauk… *periuk tak muat* | Flow s03: ibu sumbat periuk |
+| 02 | Ramai simpan terus dengan periuk. Itulah yang makan ruang. | Simpan dengan *periuk* = makan ruang | s03 sambung |
+| 03 | Pindahkan ke bekas leper bertutup. Lebih cepat sejuk, dan boleh susun bertingkat. | Bekas *leper bertutup*, susun bertingkat | Flow s04: isi bekas leper |
+| 04 | Biar lauk sejuk sekejap, kemudian terus masuk peti. Jangan biar atas meja terlalu lama. | Sejuk sekejap → *terus simpan* | Grafik jam |
+| 05 | Kalau selalu masak sekali untuk tiga hari, awak memang perlukan ruang lebih. | Masak untuk *3 hari*? Perlu ruang lebih | Grafik |
+| 06 | Peti ais Coway lima ratus lima puluh satu liter, empat pintu. Satu zon boleh tukar sejuk atau beku. | 551L · *Convertible Zone* | Rasmi 551_open_food, 551_drawers |
+| 07 | Dari sembilan puluh sembilan ringgit sebulan. Masak hari-hari, atau sekali untuk beberapa hari? WhatsApp saya. | 551L dari *RM99* · *WhatsApp saya* | CTA |
+
+### PA18 · Buka peti, tak jumpa barang
+Video pelan: 04 · Kategori: 1 Masalah harian · Persona: P2 · Suara: Orus · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Barang sebenarnya ada. Kita je yang tak nampak. | Barang ada. *Kita je tak nampak.* | Flow s05: lelaki cari dalam peti |
+| 02 | Cari sos, alih tiga bekas. Pintu terbuka lama, angin sejuk keluar. | Pintu buka lama = *angin sejuk keluar* | s05 sambung |
+| 03 | Cuba tiga cara ni. | *3 cara* ni | Tajuk |
+| 04 | Satu, satu rak, satu kategori. Minuman, lauk, bahan mentah. | 1 · Satu rak, *satu kategori* | Cip |
+| 05 | Dua, guna bekas lutsinar, supaya nampak isi tanpa buka. | 2 · Bekas *lutsinar* | Flow s06: bin lutsinar |
+| 06 | Tiga, barang lama ke depan, barang baru ke belakang. | 3 · Lama *depan*, baru *belakang* | Grafik |
+| 07 | Peti ais Coway lima ratus lima puluh satu liter, empat pintu, senang asingkan ikut kategori. Dari sembilan puluh sembilan ringgit sebulan. | 551L · 4 pintu · dari *RM99* | Rasmi 551_open_food |
+| 08 | Rate susunan peti ais awak, satu hingga sepuluh. Komen, atau WhatsApp saya. | Rate 1–10? *WhatsApp saya* | CTA |
+
+### PA19 · Susun peti ais ikut zon
+Video pelan: 06 · Kategori: 2 Tips · Persona: P2 · Suara: Kore · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Kalau semua benda campak masuk peti, memang cepat serabut. | Campak masuk = *cepat serabut* | Seedream pa06_c_campur |
+| 02 | Ini susunan yang lebih selamat. | Susunan lebih *selamat* | Flow s08: peti tersusun |
+| 03 | Rak atas, makanan sedia makan. Lauk masak, kuih, susu. | Rak atas · *sedia makan* | Grafik zon |
+| 04 | Rak bawah, ayam, daging, ikan mentah, dalam bekas bertutup. Supaya air dia tak menitik ke makanan lain. | Rak bawah · *mentah, bertutup* | Flow s07: letak ayam mentah |
+| 05 | Laci, sayur dan buah. Pintu, minuman dan sos. | Laci · sayur · Pintu · *minuman* | Grafik zon |
+| 06 | Simpan video ni untuk hari kemas peti. | *Simpan* video ni | s08 |
+| 07 | Nak peti yang memang ada zon? Peti ais Coway, dari lapan puluh empat ringgit sebulan. WhatsApp saya. | Peti ais Coway dari *RM84* · *WhatsApp saya* | Rasmi 715_spaces + CTA |
+
+### PA20 · Suhu peti ais awak betul ke?
+Video pelan: 07 · Kategori: 2 Tips · Persona: P2 · Suara: Puck · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Nombor paling sejuk, tak semestinya setting paling betul. | Paling sejuk ≠ *paling betul* | Grafik |
+| 02 | Garis panduan keselamatan makanan: peti sejuk empat darjah atau kurang. Freezer, negatif lapan belas. | Peti ≤ *4°C* · Freezer *−18°C* | LED |
+| 03 | Terlalu panas, kuman cepat membiak. Terlalu sejuk, sayur boleh beku. | Panas: *kuman* · Terlalu sejuk: *sayur beku* | VS |
+| 04 | Cara semak: letak termometer peti di rak tengah, tunggu beberapa jam, baru baca. | Termometer di *rak tengah* | Flow s09: letak termometer |
+| 05 | Peti lama yang getah pintu dah koyak, selalunya susah nak kekal pada suhu ni. | Getah koyak = suhu *tak stabil* | Seedream pa07_b_getah |
+| 06 | Peti ais Coway lima ratus lima puluh satu liter, ada zon dari lima darjah sampai negatif dua puluh. | 551L · Convertible Zone *5°C → −20°C* | Rasmi 551_cooling |
+| 07 | Dari sembilan puluh sembilan ringgit sebulan. Nak tahu lagi? WhatsApp saya. | 551L dari *RM99* · *WhatsApp saya* | CTA |
+
+### PA21 · Jangan sumbat peti sampai penuh
+Video pelan: 09 · Kategori: 2 Tips · Persona: P2 · Suara: Laomedeia · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Peti penuh rasa puas hati. Tapi angin sejuk tak boleh lalu. | Peti penuh = angin sejuk *tak boleh lalu* | Seedream pa06_a_penuh |
+| 02 | Angin sejuk perlu bergerak. Kalau tersekat, ada bahagian yang tak cukup sejuk. | Tersekat → *tak cukup sejuk* | Grafik |
+| 03 | Isi lebih kurang dua pertiga, dan jangan tutup lubang angin dalam peti. | Isi *± 2/3* · jangan tutup *lubang angin* | Flow s11: susun berjarak |
+| 04 | Jangan masukkan periuk panas banyak-banyak sekali gus. Biar sejuk sekejap dulu. | Periuk panas? *Sejuk sekejap dulu* | Flow s10: periuk rendang berasap |
+| 05 | Kalau selalu tak cukup ruang, itu tanda peti dah kecil untuk keluarga awak. | Selalu penuh? *Peti dah kecil* | Grafik |
+| 06 | Peti ais Coway tujuh ratus lima belas liter, untuk keluarga yang stok banyak. Dari lapan puluh empat ringgit sebulan. | 715L · dari *RM84*/bulan | Rasmi 715_spaces |
+| 07 | Awak jenis penuhkan peti, atau suka ruang kosong? WhatsApp saya. | Penuh atau kosong? *WhatsApp saya* | CTA |
+
+### PA22 · Rutin 10 minit peti ais bersih
+Video pelan: 10 · Kategori: 2 Tips · Persona: P2 · Suara: Zephyr · Format: ugc
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Tak payah tunggu peti berbau, baru nak cuci. | Tunggu *berbau* baru cuci? | Flow s13: buang lauk lama |
+| 02 | Ni rutin sepuluh minit, seminggu sekali. | Rutin *10 minit*, seminggu sekali | Kinetic |
+| 03 | Satu, keluarkan makanan lama, dan yang dah lepas tarikh. | 1 · Buang *makanan lama* | Flow s13 |
+| 04 | Dua, lap tumpahan dengan kain lembap dan sabun lembut. | 2 · Lap *tumpahan* | Flow s12: lap rak |
+| 05 | Tiga, cuci bekas yang melekit. Empat, susun semula ikut zon. | 3 · Cuci bekas · 4 · *Susun semula* | Seedream s08 |
+| 06 | Tag orang rumah yang selalu kena buat kerja ni. | *Tag* orang rumah | Kinetic |
+| 07 | Untuk penjagaan lebih dalam, peti ais Coway ada Cody datang servis berkala, termasuk steaming dan tukar penapis bau. | Cody · *Steaming* · tukar penapis | Rasmi hs_step3, hs_step4 |
+| 08 | Dari lapan puluh empat ringgit sebulan. WhatsApp saya. | dari *RM84*/bulan · *WhatsApp saya* | CTA |
+
+### PA23 · 2 pintu biasa, side-by-side atau 4 pintu?
+Video pelan: 12 · Kategori: 3 Panduan memilih · Persona: P2 · Suara: Achird · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Tiga jenis peti ais. Cara guna tak sama. | *3 jenis* peti ais | Grafik |
+| 02 | Dua pintu biasa: freezer atas, peti bawah. Jimat ruang, tapi terhad. | 2 pintu biasa · *jimat ruang* | Seedream pa23_atas |
+| 03 | Side-by-side: freezer kiri, peti kanan, tinggi penuh. Sesuai yang stok banyak. | Side-by-side · *stok banyak* | Rasmi 715_kitchen1 |
+| 04 | Empat pintu: peti sejuk di atas, ruang bawah berasingan. Sesuai yang suka susun ikut kategori. | 4 pintu · *ikut kategori* | Rasmi 551_open_food |
+| 05 | Semak juga ruang depan, untuk buka pintu sepenuhnya. | Semak ruang *buka pintu* | Ikon pembaris |
+| 06 | Coway ada dua: side-by-side tujuh ratus lima belas liter, dari lapan puluh empat ringgit, dan empat pintu lima ratus lima puluh satu liter, dari sembilan puluh sembilan ringgit sebulan. | 715L *RM84* · 551L *RM99* | Rasmi kedua-dua |
+| 07 | Awak pilih yang mana? Komen, atau WhatsApp saya. | Pilih yang mana? *WhatsApp saya* | CTA |
+
+### PA24 · 7 perkara periksa sebelum beli peti ais
+Video pelan: 15 · Kategori: 3 Panduan memilih · Persona: P2 · Suara: Algieba · Format: kinetic
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Harga bukan satu-satunya benda nak tengok. Ni tujuh perkara sebelum beli peti ais. | *7 perkara* sebelum beli | Flow s15: pasangan di kedai |
+| 02 | Satu, kapasiti ikut keluarga. Dua, ukuran ruang dan laluan. | 1 Kapasiti · 2 *Ukuran* | Kinetic |
+| 03 | Tiga, jenis pintu. Empat, kawalan suhu dan zon. | 3 Jenis pintu · 4 *Zon suhu* | Kinetic |
+| 04 | Lima, senang jaga dan bersihkan. | 5 *Senang jaga* | Kinetic |
+| 05 | Enam, waranti kompressor, dan siapa yang servis. | 6 *Waranti & servis* | Kinetic |
+| 06 | Tujuh, jumlah kos sepanjang tempoh, bukan bayaran bulanan je. | 7 *Jumlah kos* | Kinetic |
+| 07 | Peti ais Coway: kompressor waranti sepuluh tahun, Cody servis berkala tujuh tahun, dari lapan puluh empat ringgit sebulan. | Kompressor *10 tahun** · Cody *7 tahun* | Rasmi 551_inv_comp |
+| 08 | Simpan checklist ni sebelum survey. WhatsApp saya untuk banding model. | *Simpan* · *WhatsApp saya* | CTA |
+
+### PA25 · Mak ayah yang meal prep untuk anak
+Video pelan: 17 · Kategori: 4 Situasi hidup · Persona: P2 · Suara: Vindemiatrix · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Hari Ahad, saya masak untuk tiga hari. Pagi Isnin, tak kelam-kabut. | Ahad masak *3 hari*. Isnin *tak kelam-kabut.* | Flow s16: ibu susun bekas |
+| 02 | Bekal sekolah, sarapan, lauk makan malam. Semua dah siap dalam bekas. | Bekal · sarapan · *lauk malam* | s16 sambung |
+| 03 | Tapi dulu, peti lama tak muat. Separuh bekas terpaksa simpan atas meja. | Dulu: peti lama *tak muat* | Seedream s03_periuk |
+| 04 | Kuncinya, bekas leper sama saiz, dan satu rak untuk setiap hari. | Bekas *sama saiz* · satu rak sehari | Grafik |
+| 05 | Pagi, anak ambil sendiri bekal dia. | Anak ambil *sendiri* | Flow s17: anak ambil bekal |
+| 06 | Peti ais Coway lima ratus lima puluh satu liter, empat pintu. Zon bawah boleh tukar jadi peti sejuk, bila stok lauk lebih. | 551L · zon bawah tukar *jadi peti sejuk* | Rasmi 551_drawers |
+| 07 | Dari sembilan puluh sembilan ringgit sebulan. Siapa sini suka masak awal-awal? WhatsApp saya. | 551L dari *RM99* · *WhatsApp saya* | CTA |

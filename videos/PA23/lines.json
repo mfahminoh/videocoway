@@ -1,0 +1,37 @@
+[
+ {
+  "id": "01",
+  "text": "Tiga jenis peti ais. Cara guna tak sama.",
+  "cap": "*3 jenis* peti ais"
+ },
+ {
+  "id": "02",
+  "text": "Dua pintu biasa: freezer atas, peti bawah. Jimat ruang, tapi terhad.",
+  "cap": "2 pintu biasa · *jimat ruang*"
+ },
+ {
+  "id": "03",
+  "text": "Side-by-side: freezer kiri, peti kanan, tinggi penuh. Sesuai yang stok banyak.",
+  "cap": "Side-by-side · *stok banyak*"
+ },
+ {
+  "id": "04",
+  "text": "Empat pintu: peti sejuk di atas, ruang bawah berasingan. Sesuai yang suka susun ikut kategori.",
+  "cap": "4 pintu · *ikut kategori*"
+ },
+ {
+  "id": "05",
+  "text": "Semak juga ruang depan, untuk buka pintu sepenuhnya.",
+  "cap": "Semak ruang *buka pintu*"
+ },
+ {
+  "id": "06",
+  "text": "Coway ada dua: side-by-side tujuh ratus lima belas liter, dari lapan puluh empat ringgit, dan empat pintu lima ratus lima puluh satu liter, dari sembilan puluh sembilan ringgit sebulan.",
+  "cap": "715L *RM84* · 551L *RM99*"
+ },
+ {
+  "id": "07",
+  "text": "Awak pilih yang mana? Komen, atau WhatsApp saya.",
+  "cap": "Pilih yang mana? *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,37 @@
+[
+ {
+  "id": "01",
+  "text": "Peti penuh rasa puas hati. Tapi angin sejuk tak boleh lalu.",
+  "cap": "Peti penuh = angin sejuk *tak boleh lalu*"
+ },
+ {
+  "id": "02",
+  "text": "Angin sejuk perlu bergerak. Kalau tersekat, ada bahagian yang tak cukup sejuk.",
+  "cap": "Tersekat → *tak cukup sejuk*"
+ },
+ {
+  "id": "03",
+  "text": "Isi lebih kurang dua pertiga, dan jangan tutup lubang angin dalam peti.",
+  "cap": "Isi *± 2/3* · jangan tutup *lubang angin*"
+ },
+ {
+  "id": "04",
+  "text": "Jangan masukkan periuk panas banyak-banyak sekali gus. Biar sejuk sekejap dulu.",
+  "cap": "Periuk panas? *Sejuk sekejap dulu*"
+ },
+ {
+  "id": "05",
+  "text": "Kalau selalu tak cukup ruang, itu tanda peti dah kecil untuk keluarga awak.",
+  "cap": "Selalu penuh? *Peti dah kecil*"
+ },
+ {
+  "id": "06",
+  "text": "Peti ais Coway tujuh ratus lima belas liter, untuk keluarga yang stok banyak. Dari lapan puluh empat ringgit sebulan.",
+  "cap": "715L · dari *RM84*/bulan"
+ },
+ {
+  "id": "07",
+  "text": "Awak jenis penuhkan peti, atau suka ruang kosong? WhatsApp saya.",
+  "cap": "Penuh atau kosong? *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,149 @@
+{
+ "slug": "kenapa-sayur-cepat-layu",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/s01_layu.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "image": "peti-ais-p2-01/s02_balut.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "AHAD BELI.<br><em>RABU DAH LAYU.</em>"
+  },
+  {
+   "type": "title",
+   "in": "@02",
+   "out": "@03",
+   "top": 600,
+   "size": 180,
+   "html": "3 SEBAB",
+   "color": "#ffffff"
+  },
+  {
+   "type": "reason",
+   "in": "@03",
+   "out": "@04",
+   "top": 420,
+   "num": "1",
+   "title": "SIMPAN BASAH",
+   "sub": "air melekat, sayur cepat lembik"
+  },
+  {
+   "type": "icon",
+   "in": "@03",
+   "out": "@04",
+   "top": 720,
+   "icon": "drop",
+   "size": 280
+  },
+  {
+   "type": "reason",
+   "in": "@04",
+   "out": "@05",
+   "top": 420,
+   "num": "2",
+   "title": "CAMPUR DENGAN BUAH",
+   "sub": "ada buah lepaskan gas"
+  },
+  {
+   "type": "reason",
+   "in": "@05",
+   "out": "@06",
+   "top": 420,
+   "num": "3",
+   "title": "KELEMBAPAN TAK SESUAI",
+   "sub": "terlalu kering / terlalu lembap"
+  },
+  {
+   "type": "steps",
+   "in": "@06",
+   "out": "@07",
+   "top": 300,
+   "items": [
+    {
+     "text": "LAP KERING",
+     "at": "@06"
+    },
+    {
+     "text": "BALUT TISU DAPUR",
+     "at": "@06%35"
+    },
+    {
+     "text": "BEKAS BERTUTUP",
+     "at": "@06%65"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@07",
+   "out": "@08",
+   "top": 230,
+   "html": "COWAY <em>715L</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@08",
+   "top": 420,
+   "left": 90,
+   "w": 900,
+   "h": 675,
+   "src": "../../assets/img/coway_fridge/715_humidity.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@07%40",
+   "out": "@08",
+   "top": 1160,
+   "html": "HUMIDITY CONTROL",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 760,
+   "ticks": [
+    "715L DARI RM84/BULAN*",
+    "LACI KAWALAN KELEMBAPAN",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

@@ -1,0 +1,37 @@
+[
+ {
+  "id": "01",
+  "text": "Nombor paling sejuk, tak semestinya setting paling betul.",
+  "cap": "Paling sejuk ≠ *paling betul*"
+ },
+ {
+  "id": "02",
+  "text": "Garis panduan keselamatan makanan: peti sejuk empat darjah atau kurang. Freezer, negatif lapan belas.",
+  "cap": "Peti ≤ *4°C* · Freezer *−18°C*"
+ },
+ {
+  "id": "03",
+  "text": "Terlalu panas, kuman cepat membiak. Terlalu sejuk, sayur boleh beku.",
+  "cap": "Panas: *kuman* · Terlalu sejuk: *sayur beku*"
+ },
+ {
+  "id": "04",
+  "text": "Cara semak: letak termometer peti di rak tengah, tunggu beberapa jam, baru baca.",
+  "cap": "Termometer di *rak tengah*"
+ },
+ {
+  "id": "05",
+  "text": "Peti lama yang getah pintu dah koyak, selalunya susah nak kekal pada suhu ni.",
+  "cap": "Getah koyak = suhu *tak stabil*"
+ },
+ {
+  "id": "06",
+  "text": "Peti ais Coway lima ratus lima puluh satu liter, ada zon dari lima darjah sampai negatif dua puluh.",
+  "cap": "551L · Convertible Zone *5°C → −20°C*"
+ },
+ {
+  "id": "07",
+  "text": "Dari sembilan puluh sembilan ringgit sebulan. Nak tahu lagi? WhatsApp saya.",
+  "cap": "551L dari *RM99* · *WhatsApp saya*"
+ }
+]

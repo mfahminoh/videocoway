@@ -1,0 +1,177 @@
+{
+ "slug": "suhu-peti-ais-betul-ke",
+ "voice": "Puck",
+ "style": "Say in Malaysian Malay, as a calm, confident Coway agent explaining clearly to a friend, honest and friendly",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@02",
+   "bg": "navy"
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "peti-ais-p2-01/s09_termometer.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_b_getah.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@06",
+   "bg": "navy"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 560,
+   "size": 120,
+   "html": "PALING SEJUK<br>≠ PALING BETUL"
+  },
+  {
+   "type": "led",
+   "in": "@02",
+   "out": "@03",
+   "top": 330,
+   "items": [
+    {
+     "num": "4",
+     "unit": "°C",
+     "label": "PETI SEJUK",
+     "at": "@02%20"
+    },
+    {
+     "num": "-18",
+     "unit": "°C",
+     "label": "FREEZER",
+     "at": "@02%65"
+    }
+   ]
+  },
+  {
+   "type": "pill",
+   "in": "@02%30",
+   "out": "@03",
+   "top": 1060,
+   "html": "GARIS PANDUAN KESELAMATAN MAKANAN",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "vs",
+   "in": "@03",
+   "out": "@04",
+   "top": 420,
+   "left": {
+    "title": "TERLALU PANAS",
+    "color": "#E5322D",
+    "items": [
+     "Kuman cepat membiak"
+    ],
+    "at": "@03"
+   },
+   "right": {
+    "title": "TERLALU SEJUK",
+    "color": "#04A4E4",
+    "items": [
+     "Sayur beku & rosak"
+    ],
+    "at": "@03%50"
+   }
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "<em>✓</em> · TERMOMETER DI RAK TENGAH"
+  },
+  {
+   "type": "pill",
+   "in": "@04%25",
+   "out": "@05",
+   "top": 1180,
+   "html": "TUNGGU BEBERAPA JAM",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "<em>!</em> · GETAH KOYAK"
+  },
+  {
+   "type": "pill",
+   "in": "@05%25",
+   "out": "@06",
+   "top": 1180,
+   "html": "SUHU TAK STABIL",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "COWAY <em>551L</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 400,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_cooling.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@06%35",
+   "out": "@07",
+   "top": 1200,
+   "html": "CONVERTIBLE ZONE 5°C → −20°C",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@07",
+   "top": 760,
+   "ticks": [
+    "551L DARI RM99/BULAN*",
+    "CONVERTIBLE ZONE",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@07%40",
+   "fine": "*551L: harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

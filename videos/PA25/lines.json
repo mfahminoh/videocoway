@@ -1,0 +1,37 @@
+[
+ {
+  "id": "01",
+  "text": "Hari Ahad, saya masak untuk tiga hari. Pagi Isnin, tak kelam-kabut.",
+  "cap": "Ahad masak *3 hari*. Isnin *tak kelam-kabut.*"
+ },
+ {
+  "id": "02",
+  "text": "Bekal sekolah, sarapan, lauk makan malam. Semua dah siap dalam bekas.",
+  "cap": "Bekal · sarapan · *lauk malam*"
+ },
+ {
+  "id": "03",
+  "text": "Tapi dulu, peti lama tak muat. Separuh bekas terpaksa simpan atas meja.",
+  "cap": "Dulu: peti lama *tak muat*"
+ },
+ {
+  "id": "04",
+  "text": "Kuncinya, bekas leper sama saiz, dan satu rak untuk setiap hari.",
+  "cap": "Bekas *sama saiz* · satu rak sehari"
+ },
+ {
+  "id": "05",
+  "text": "Pagi, anak ambil sendiri bekal dia.",
+  "cap": "Anak ambil *sendiri*"
+ },
+ {
+  "id": "06",
+  "text": "Peti ais Coway lima ratus lima puluh satu liter, empat pintu. Zon bawah boleh tukar jadi peti sejuk, bila stok lauk lebih.",
+  "cap": "551L · zon bawah tukar *jadi peti sejuk*"
+ },
+ {
+  "id": "07",
+  "text": "Dari sembilan puluh sembilan ringgit sebulan. Siapa sini suka masak awal-awal? WhatsApp saya.",
+  "cap": "551L dari *RM99* · *WhatsApp saya*"
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "01",
+  "text": "Barang sebenarnya ada. Kita je yang tak nampak.",
+  "cap": "Barang ada. *Kita je tak nampak.*"
+ },
+ {
+  "id": "02",
+  "text": "Cari sos, alih tiga bekas. Pintu terbuka lama, angin sejuk keluar.",
+  "cap": "Pintu buka lama = *angin sejuk keluar*"
+ },
+ {
+  "id": "03",
+  "text": "Cuba tiga cara ni.",
+  "cap": "*3 cara* ni"
+ },
+ {
+  "id": "04",
+  "text": "Satu, satu rak, satu kategori. Minuman, lauk, bahan mentah.",
+  "cap": "1 · Satu rak, *satu kategori*"
+ },
+ {
+  "id": "05",
+  "text": "Dua, guna bekas lutsinar, supaya nampak isi tanpa buka.",
+  "cap": "2 · Bekas *lutsinar*"
+ },
+ {
+  "id": "06",
+  "text": "Tiga, barang lama ke depan, barang baru ke belakang.",
+  "cap": "3 · Lama *depan*, baru *belakang*"
+ },
+ {
+  "id": "07",
+  "text": "Peti ais Coway lima ratus lima puluh satu liter, empat pintu, senang asingkan ikut kategori. Dari sembilan puluh sembilan ringgit sebulan.",
+  "cap": "551L · 4 pintu · dari *RM99*"
+ },
+ {
+  "id": "08",
+  "text": "Rate susunan peti ais awak, satu hingga sepuluh. Komen, atau WhatsApp saya.",
+  "cap": "Rate 1–10? *WhatsApp saya*"
+ }
+]

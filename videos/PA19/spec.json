@@ -1,0 +1,149 @@
+{
+ "slug": "susun-peti-ikut-zon",
+ "voice": "Kore",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa06_c_campur.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/s08_tersusun.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "image": "peti-ais-p2-01/s07_mentah.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@05",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": {
+    "image": "peti-ais-p2-01/s08_tersusun.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "CAMPAK MASUK =<br><em>CEPAT SERABUT</em>"
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "SUSUNAN LEBIH <em>SELAMAT</em>"
+  },
+  {
+   "type": "card",
+   "in": "@03",
+   "out": "@04",
+   "top": 520,
+   "icon": "cup",
+   "title": "RAK ATAS",
+   "sub": "Sedia makan: lauk masak, kuih, susu"
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "<em>↓</em> · RAK BAWAH: MENTAH"
+  },
+  {
+   "type": "pill",
+   "in": "@04%25",
+   "out": "@05",
+   "top": 1180,
+   "html": "DALAM BEKAS BERTUTUP",
+   "bg": "rgba(0,0,0,.6)",
+   "color": "#fff"
+  },
+  {
+   "type": "card",
+   "in": "@05",
+   "out": "@05%50",
+   "top": 520,
+   "icon": "box",
+   "title": "LACI",
+   "sub": "Sayur dan buah"
+  },
+  {
+   "type": "card",
+   "in": "@05%50",
+   "out": "@06",
+   "top": 520,
+   "icon": "drop",
+   "title": "PINTU",
+   "sub": "Minuman dan sos"
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "<em>SIMPAN</em> VIDEO NI"
+  },
+  {
+   "type": "banner",
+   "in": "@07",
+   "out": null,
+   "top": 230,
+   "html": "PETI AIS <em>COWAY</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": null,
+   "top": 380,
+   "left": 280,
+   "w": 520,
+   "h": 520,
+   "src": "../../assets/img/coway_fridge/715_spaces.jpg"
+  },
+  {
+   "type": "cta",
+   "in": "@07%30",
+   "top": 960,
+   "ticks": [
+    "715L DARI RM84/BULAN*",
+    "551L DARI RM99/BULAN*",
+    "SERVIS HEART 7 TAHUN"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@07%60",
+   "fine": "*Harga sewa bulanan pelan HEART Service 7 tahun (7+0), termasuk SST. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

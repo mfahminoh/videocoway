@@ -1,0 +1,37 @@
+[
+ {
+  "id": "01",
+  "text": "Kalau semua benda campak masuk peti, memang cepat serabut.",
+  "cap": "Campak masuk = *cepat serabut*"
+ },
+ {
+  "id": "02",
+  "text": "Ini susunan yang lebih selamat.",
+  "cap": "Susunan lebih *selamat*"
+ },
+ {
+  "id": "03",
+  "text": "Rak atas, makanan sedia makan. Lauk masak, kuih, susu.",
+  "cap": "Rak atas · *sedia makan*"
+ },
+ {
+  "id": "04",
+  "text": "Rak bawah, ayam, daging, ikan mentah, dalam bekas bertutup. Supaya air dia tak menitik ke makanan lain.",
+  "cap": "Rak bawah · *mentah, bertutup*"
+ },
+ {
+  "id": "05",
+  "text": "Laci, sayur dan buah. Pintu, minuman dan sos.",
+  "cap": "Laci · sayur · Pintu · *minuman*"
+ },
+ {
+  "id": "06",
+  "text": "Simpan video ni untuk hari kemas peti.",
+  "cap": "*Simpan* video ni"
+ },
+ {
+  "id": "07",
+  "text": "Nak peti yang memang ada zon? Peti ais Coway, dari lapan puluh empat ringgit sebulan. WhatsApp saya.",
+  "cap": "Peti ais Coway dari *RM84* · *WhatsApp saya*"
+ }
+]
