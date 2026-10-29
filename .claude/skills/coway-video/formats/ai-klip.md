@@ -74,6 +74,11 @@ Jika `--check` kata tiada model, guna Google Flow manual.
    ```
 4. Tonton klip (stills dengan `render.py` atau ekstrak bingkai) sebelum guna. Klip 16:9 akan dipotong tengah, jadi pastikan subjek berada di tengah.
 
+**Shot yang ada unit Coway (ujian 30 Okt 2026, promo-rm18-01):** Text to Video melukis penapis generik dengan logo rosak, dan gambar rasmi jarang sesuai terus sebagai frame 9:16 (kebanyakan 1:1 atau banner lebar, latar studio). Kaedah yang menjadi:
+1. **Image → Nano Banana 2.1, 9:16** (0 kredit): lampirkan 2–3 gambar rasmi produk (butang **+** → Upload media → Add to prompt) dan tulis prompt yang menerangkan **bentuk** produk dengan perkataan (siluet, panel kawalan, paip, dulang, lubang udara, warna; tanpa ukuran mm). Semak still dengan gambar rasmi, pilih yang tiada teks rosak di latar.
+2. **Video → Frames**, Start = still itu, prompt gerakan kamera perlahan + "keep exactly as shown in the first frame… rigid objects". Bentuk kekal sepanjang 8 s.
+Contoh penuh dan teks bentuk setiap model: `projek/promo-rm18-01/shots.md`. Veo kadang-kadang menambah papan tanda di latar semasa push-in; jika jadi, kurangkan push-in atau tulis "plain walls, no store signage". Jangan sebut peralatan kamera ("on a gimbal") atau "bokeh": Veo melukisnya dalam bingkai. "A highlight glides across" boleh menukar warna unit gelap seketika.
+
 ## Guna dalam spec
 
 ```json
