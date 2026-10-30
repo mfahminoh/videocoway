@@ -115,3 +115,8 @@ Sudut: 3 · Kesedaran: sedar masalah · Suara: L
 | 03 | Selama tujuh bulan. WhatsApp saya sekarang. | Serendah *RM18*/bulan · 7 bulan | kad harga → CTA |
 
 CTA (semua): "WhatsApp saya sekarang" (perkataan sahaja, tiada nombor) · Penafian: "*Serendah RM18/bulan selama 7 bulan. Tertakluk terma & syarat."
+
+## Nota penjanaan video (30 Okt 2026)
+- Teks VO tidak diubah. PR06, PR07, PR08 dijana semula sekali: take pertama PR06 terpotong baris 01 bersama arahan gaya, PR07 terlalu perlahan (18.6 s, model flash-lite), PR08 TTS menambah ayat sendiri ("Apa khabar semua…").
+- Kapsyen skrin (oleh `capfix` dalam `videos/promo-rm18-01_batch.py`, perkataan sama): "·" ditulis sebagai koma supaya tidak jadi potongan sendiri, sorotan jadi `*RM18/bulan*`, "penapis air" / "tong air" kekal dalam satu potongan.
+- PR02: kad harga ditambah pada 30% akhir baris 02 (sebelum CTA). PR06: label "SERENDAH" di atas RM18.

@@ -21,6 +21,7 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Neon × P1 "mampu milik"** — NE11–NE13, skrip TikTok rujukan → motion graphic / kinetic / komik | `projek/neon-p1-01/`, `videos/neon-p1-01_batch.py`, `videos/NE11`–`NE13` | `out/neon-p1-01/` |
 | **Pakej WP 2** — Cinnamon, Glaze, Ombak, Dazzie, Core Slim: 35 draf skrip mg (5 produk + 2 psikografik setiap model) | `projek/wp-pakej2-01/` | — |
 | **Peti ais × P2 pakej 30 video** — batch 1 PA06–PA15, batch 2 PA16–PA25 (6 kategori: masalah, tips, pilih, situasi, produk, bantahan; shot Google Flow dalam `shots.md`) | `projek/peti-ais-p2-01/`, `videos/peti-ais-p2-01_batch.py`, `videos/peti-ais-p2-01_b2.py`, `videos/PA06`–`PA25`, `assets/img/peti-ais-p2-01/` | `out/peti-ais-p2-01/` |
+| **Promo "Serendah RM18" × penapis air** — PR01–PR10, video promo 10–16 s, klip showroom Google Flow (Neon, Villaem 3, Neo Plus) + kad harga + CTA WhatsApp | `projek/promo-rm18-01/`, `videos/promo-rm18-01_batch.py`, `videos/PR01`–`PR10`, `assets/clips/promo-rm18-01_s0*.mp4` | `out/promo-rm18-01/` |
 | **Peti ais & aircond** — plan content | `plan/` | — |
 | **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
 | **Threads / posting** | `threads/`, `promo/threads/` | — |

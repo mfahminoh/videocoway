@@ -23,8 +23,19 @@ CORAL = "#E86E5A"
 CLIP_END = {"s01": 7.9, "s02": 7.9, "s03": 7.9, "s04": 7.9, "s05": 6.5}
 
 
+NBSP = "\u00a0"   # engine.js memecah kapsyen pada ruang biasa sahaja: frasa ini kekal dalam satu potongan
+
+
+def capfix(c):
+    """Kapsyen skrip -> kapsyen skrin: "·" jadi koma (bukan perkataan sendiri), sorotan RM18 ditutup selepas /bulan."""
+    c = c.replace(" · ", ", ").replace("*RM18*/bulan", "*RM18/bulan*")
+    for w in ("penapis air", "tong air"):
+        c = c.replace(w, w.replace(" ", NBSP))
+    return c
+
+
 def L(*rows):
-    return [{"id": f"{i + 1:02d}", "text": t, "cap": c} for i, (t, c) in enumerate(rows)]
+    return [{"id": f"{i + 1:02d}", "text": t, "cap": capfix(c)} for i, (t, c) in enumerate(rows)]
 
 
 def banner(at, out, html, top=210):
@@ -63,11 +74,12 @@ V["PR02"] = dict(slug="rm18-itu-je", who="L", lines=L(
     ("Lapan belas ringgit sebulan. Itu je.", "*RM18* sebulan. Itu je."),
     ("Untuk penapis air Coway, semua model. Promosi ulang tahun, selama tujuh bulan.", "Semua model · 7 bulan"),
     ("Nak pilih model, WhatsApp saya.", "WhatsApp saya sekarang")),
-  scenes=[(0, "s02"), ("@02", "s04"), ("@03", "blue")],
+  scenes=[(0, "s02"), ("@02", "s04"), ("@02%70", "blue")],
   els=[{"type": "title", "in": "@01", "out": "@02", "top": 300, "size": 230, "html": "RM18"},
        {"type": "text", "in": "@01%35", "out": "@02", "top": 560, "html": "sebulan. <b>Itu je.</b>", "size": 80, "weight": 800},
-       banner("@02", "@03", "PENAPIS AIR COWAY<br><em>SEMUA MODEL</em>"),
-       pill("@02%55", "@03", "PROMOSI ULANG TAHUN · 7 BULAN*", top=420),
+       banner("@02", "@02%70", "PENAPIS AIR COWAY<br><em>SEMUA MODEL</em>"),
+       pill("@02%30", "@02%70", "PROMOSI ULANG TAHUN · 7 BULAN*", top=420),
+       price("@02%70", "@03", "@02%80"),
        cta("@03", "@03%40")])
 
 V["PR03"] = dict(slug="coway-mahal-bulan-ni-tak", who="P", lines=L(
@@ -113,6 +125,7 @@ V["PR06"] = dict(slug="enam-puluh-sen-sehari", who="L", lines=L(
        {"type": "counter", "in": "@01%15", "out": "@02", "top": 460, "from": 0, "to": 60, "suffix": " SEN", "dur": 0.9, "size": 200},
        {"type": "text", "in": "@01%55", "out": "@02", "top": 720, "html": "sehari", "size": 80, "weight": 800},
        banner("@02", "@02%60", "PROMOSI<br><em>ULANG TAHUN COWAY</em>"),
+       {"type": "text", "in": "@02%60", "out": "@03%40", "top": 330, "html": "SERENDAH", "size": 60, "weight": 800},
        {"type": "title", "in": "@02%60", "out": "@03%40", "top": 420, "size": 200, "html": "RM18"},
        {"type": "text", "in": "@02%75", "out": "@03%40", "top": 680, "html": "÷ 30 hari = <b>60 sen sehari</b>", "size": 70, "weight": 700},
        pill("@03", "@03%40", "SELAMA 7 BULAN*", top=860),
