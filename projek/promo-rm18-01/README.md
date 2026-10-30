@@ -9,7 +9,7 @@ Iklan promo 10–15 s untuk pelanggan akhir. Footage: Google Flow (showroom pann
 | 3 Skrip batch 1 (PR01–PR10) | ✅ | skrip.md | diluluskan user 30 Okt 2026 |
 | 4 Video batch 1 | ✅ | out/promo-rm18-01/, videos/PR01–PR10 | 10 video 12–16 s dirender 30 Okt 2026; menunggu review user: https://claude.ai/artifact/EHqyTP7xpSX1m9JLEnDFwV |
 | 5 Poster | — | | |
-| 7 Iklan | — | | |
+| 7 Iklan | ⏳ | iklan.md | 10 kempen draf di akaun Coway Azzuddin, page Coway Trusted Agent, RM10/hari setiap satu, Semenanjung; menunggu user sahkan nombor WhatsApp & terbit |
 
 ## Keputusan
 - 2026-10-29: tawaran = Promosi Ulang Tahun Coway, serendah RM18/bulan selama 7 bulan, semua model. CTA perkataan sahaja, tiada nombor WhatsApp.
