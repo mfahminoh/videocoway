@@ -25,11 +25,11 @@ globals().update({k: getattr(b1, k) for k in (
     "F", "NAVY", "YEL", "BLUE", "RED", "INK", "BRAND", "FEM", "MALE", "L", "banner", "title", "pill", "photo", "card")})
 KOD = "peti-ais-explainer-01"
 
-FINE = ("*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service "
-        "7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; "
-        "syarat Coway. ¹Ujian makmal dalam persekitaran terkawal. Kapasiti ialah kapasiti kasar.")
-TICKS = {"551": ["551L · BAYAR RM20/BULAN · 7 BULAN PERTAMA*", "KEMUDIAN RM99 SEBULAN", "HANTAR & PASANG PERCUMA"],
-         "715": ["715L · BAYAR RM20/BULAN · 7 BULAN PERTAMA*", "KEMUDIAN RM84 SEBULAN", "HANTAR & PASANG PERCUMA"]}
+FINE = ("*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L), pelan HEART Service "
+        "7 tahun, termasuk SST. Hantar &amp; pasang percuma seluruh Malaysia. Promosi terhad, tertakluk terma &amp; syarat Coway. "
+        "¹Ujian makmal dalam persekitaran terkawal.")
+TICKS = {"551": ["BAYAR RM20 × 7 BULAN PERTAMA*", "KEMUDIAN 551L RM99 SEBULAN", "HANTAR & PASANG PERCUMA"],
+         "715": ["BAYAR RM20 × 7 BULAN PERTAMA*", "KEMUDIAN 715L RM84 SEBULAN", "HANTAR & PASANG PERCUMA"]}
 
 
 def C(name):
@@ -38,7 +38,7 @@ def C(name):
 
 
 def cta(at, model):
-    return {"type": "cta", "in": at, "top": 760, "ticks": TICKS[model], "button": "WhatsApp saya", "btnAt": f"{at}%40", "fine": FINE}
+    return {"type": "cta", "in": at, "top": 700, "ticks": TICKS[model], "button": "WhatsApp saya", "btnAt": f"{at}%40", "fine": FINE}
 
 
 def chips(at, out, top, *items):
@@ -57,14 +57,14 @@ V["PA36"] = dict(model="551", tajuk="551L, 4 pintu: besar kerana tersusun, bukan
   slug="explainer-multi-door-551l", voice="Orus", style=MALE, lines=L(
     ("Peti ais besar, bukan bermaksud semua barang dicampak dalam satu ruang.", "Besar ≠ *campak dalam satu ruang*", "Klip rasmi 551_bigspace"),
     ("Ini peti ais Coway Multi-Door, lima ratus lima puluh satu liter, empat pintu, warna Black Inox.", "Coway *Multi-Door 551L* · 4 pintu", "Rasmi 551_front"),
-    ("Empat pintu bantu kita bahagikan makanan ikut rutin dan kategori. Barang yang selalu guna, lebih senang dicapai.",
+    ("Empat pintu bantu bahagikan makanan ikut rutin dan kategori. Barang yang selalu guna, senang dicapai.",
      "Bahagi ikut *rutin & kategori*", "Rasmi 551_open_food"),
     ("Bahagian bawah ialah Convertible Zone, dengan empat julat suhu: dari lima darjah untuk sayur dan buah, sampai negatif dua puluh untuk simpanan lama.",
      "*Convertible Zone* · 4 julat suhu", "Klip rasmi 551_convert + cip julat"),
     ("Triple inverter dengan dua kipas, dan dinding penyejuk logam, untuk penyejukan yang konsisten.", "Triple Inverter · *Metal Cooling*", "Klip rasmi 551_airflow"),
-    ("Untuk bau, silver ion di zon peti sejuk, dan penapis penyahbau di zon freezer. Dalam ujian makmal, ia neutralkan sehingga sembilan puluh lapan perpuluhan empat peratus bau ikan.",
+    ("Silver ion di peti sejuk, penapis penyahbau di freezer. Dalam ujian makmal, ia neutralkan sehingga sembilan puluh lapan perpuluhan empat peratus bau ikan.",
      "Dual Hygiene · *98.4%* bau ikan¹", "Rasmi 551_deo_cubes"),
-    ("Ukurannya, lebar sembilan puluh, dalam enam puluh, tinggi seratus sembilan puluh sentimeter, dengan rekaan built-in. Ukur juga laluan masuk dan ruang buka pintu, atau tengok dulu dalam dapur awak guna app Coway AR.",
+    ("Lebar sembilan puluh, dalam enam puluh, tinggi seratus sembilan puluh sentimeter, rekaan built-in. Ukur laluan dan ruang buka pintu, atau cuba dulu dalam dapur guna app Coway AR.",
      "*90.5 × 59.7 × 190.2 cm* · app Coway AR", "Rasmi 551_builtin + grid"),
     ("Kalau rumah awak kerap masak dan suka susunan fleksibel, Multi-Door pilihan yang praktikal. WhatsApp saya untuk semak ruang dan model.",
      "Kerap masak? *Multi-Door* · *WhatsApp saya*", "CTA")),
@@ -77,8 +77,8 @@ V["PA36"] = dict(model="551", tajuk="551L, 4 pintu: besar kerana tersusun, bukan
        photo("@03", "@04", "551_open_food.jpg", top=380),
        pill("@03%50", "@04", "BARANG SELALU GUNA, SENANG DICAPAI", top=1180),
        banner("@04", "@05", "<em>CONVERTIBLE</em> ZONE"),
-       chips("@04%20", "@05", 1340, ("5→3°C SAYUR/BUAH", "@04%25", "#fff"), ("2→0°C MINUMAN", "@04%40", "#fff"),
-             ("−1→−7°C SINGKAT", "@04%55", "#fff"), ("−8→−20°C LAMA", "@04%70", YEL)),
+       chips("@04%20", "@05", 1180, ("5→3°C", "@04%25", "#fff"), ("2→0°C", "@04%40", "#fff"),
+             ("−1→−7°C", "@04%55", "#fff"), ("−8→−20°C", "@04%70", YEL)),
        banner("@05", "@06", "TRIPLE <em>INVERTER</em>"),
        chips("@05%30", "@06", 1340, ("2 KIPAS", "@05%35", "#fff"), ("DINDING LOGAM", "@05%55", "#fff"), ("SEJUK KONSISTEN", "@05%75", YEL)),
        banner("@06", "@07", "DUAL <em>HYGIENE</em>"),
@@ -86,9 +86,9 @@ V["PA36"] = dict(model="551", tajuk="551L, 4 pintu: besar kerana tersusun, bukan
        chips("@06%15", "@07", 1180, ("SILVER ION · PETI", "@06%15", "#fff"), ("PENYAHBAU · FREEZER", "@06%35", "#fff")),
        pill("@06%65", "@07", "98.4% BAU IKAN (TRIMETHYLAMINE)¹", top=1290),
        banner("@07", "@08", "UKUR <em>DULU</em>"),
-       photo("@07", "@08", "551_builtin.jpg", top=360, w=520, h=520),
-       grid("@07%10", "@08", 920, ("90.5", "LEBAR (CM)", "@07%12"), ("59.7", "DALAM (CM)", "@07%22"), ("190.2", "TINGGI (CM)", "@07%32")),
-       pill("@07%70", "@08", "LALUAN · BUKAAN PINTU · APP COWAY AR", top=1380),
+       photo("@07", "@08", "551_builtin.jpg", top=330, w=400, h=400),
+       grid("@07%10", "@08", 760, ("90.5", "LEBAR (CM)", "@07%12"), ("59.7", "DALAM (CM)", "@07%22"), ("190.2", "TINGGI (CM)", "@07%32")),
+       pill("@07%70", "@08", "UKUR LALUAN · CUBA APP COWAY AR", top=1420),
        cta("@08", "551")])
 
 # ---------------------------------------------------------------- PA37 · Explainer Side-by-Side 715L
