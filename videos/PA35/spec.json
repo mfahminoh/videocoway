@@ -1,0 +1,154 @@
+{
+ "slug": "551l-atau-715l-3-soalan",
+ "voice": "Vindemiatrix",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@02",
+   "bg": "blue"
+  },
+  {
+   "at": "@03",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 520,
+   "size": 170,
+   "html": "JAWAB<br>3 SOALAN"
+  },
+  {
+   "type": "chips",
+   "in": "@02",
+   "out": "@03",
+   "top": 600,
+   "items": [
+    {
+     "text": "BERAPA ORANG?",
+     "color": "#fff",
+     "at": "@02"
+    },
+    {
+     "text": "BERAPA STOK?",
+     "color": "#fff",
+     "at": "@02%35"
+    },
+    {
+     "text": "BERAPA DALAM RUANG?",
+     "color": "#ffd23f",
+     "at": "@02%65"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "<em>551L</em> · 4 PINTU"
+  },
+  {
+   "type": "photo",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@03%40",
+   "out": "@04",
+   "top": 1180,
+   "html": "TERSUSUN · DALAM 59.7 CM",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "<em>715L</em> · SIDE-BY-SIDE"
+  },
+  {
+   "type": "photo",
+   "in": "@04",
+   "out": "@05",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_spaces.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@04%40",
+   "out": "@05",
+   "top": 1180,
+   "html": "STOK BANYAK · DALAM 74 CM",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 420,
+   "size": 130,
+   "html": "DUA MODEL<br>BAYAR RM20",
+   "color": "#ffffff"
+  },
+  {
+   "type": "pill",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 840,
+   "html": "SEBULAN · 7 BULAN PERTAMA*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@05%60",
+   "out": "@06",
+   "top": 1080,
+   "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@06",
+   "top": 760,
+   "ticks": [
+    "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 · 551L RM99",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@06%40",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

@@ -1,4 +1,4 @@
-# Shot Google Flow — peti-ais-p2-01, batch 2 (PA16–PA25)
+# Shot Google Flow — peti-ais-p2-01, batch 2–3 (PA16–PA35)
 
 Enjin: **Google Flow (Veo), manual oleh user**. API Veo tiada akses untuk key sesi (semak 30 Okt 2026).
 Setiap shot = **frame → video**: muat naik bingkai pertama (gambar Seedream di bawah) sebagai *starting frame*, tampal prompt, 9:16, 8 saat.
@@ -37,6 +37,14 @@ Akhiran yang sama untuk semua prompt (sudah dimasukkan): *"Realistic, natural sk
 | s16 | PA25 / 01–02 | `s16_mealprep.jpg` | Vertical 9:16. The Malaysian woman in a tudung places lids on rows of meal-prep containers on the counter, smiling calmly. Slow lateral camera move along the containers. Bright Sunday-morning light. Realistic, documentary style. Slow, subtle motion. No text, no logos, no subtitles, no brand names. |
 | s17 | PA25 / 05 | `s17_bekal.jpg` | Vertical 9:16. The schoolboy in long sleeves takes a lunchbox from the open fridge and closes the door, seen from behind and side, face not in close-up. Medium shot, static camera. Morning light. Realistic, documentary style. Slow, subtle motion. No text, no logos, no subtitles, no brand names. |
 
+## Batch 3 (PA26–PA35)
+
+| Shot | Video / baris | Bingkai pertama | Prompt (tampal ke Flow) |
+|---|---|---|---|
+| s18 | PA26 / 01 | `s18_balik_raya.jpg` | Vertical 9:16. The Malaysian family in modest festive clothes walks up the steps of the wooden kampung house carrying food containers, the grandmother in a tudung smiles and opens her arms at the door. Camera follows gently from behind. Warm late-morning light. Realistic, documentary style. Slow, subtle motion. No close-up of children's faces. No text, no logos, no subtitles, no brand names. |
+| s19 | PA26 / 02–03 | `s19_dapur_raya.jpg` | Vertical 9:16. Hari Raya kitchen: steam rises from pots of rendang, slow pan across ketupat and trays of kuih to the old fridge crammed full with its door ajar. Handheld, slow lateral move. Warm festive light. Realistic, documentary style. Slow, subtle motion. No text, no logos, no subtitles, no brand names. |
+| s20 | PA27 / 01–02 | `s20_dapur_baru.jpg` | Vertical 9:16. Slow push-in across a newly renovated white kitchen toward the small old yellowed fridge standing in the gap, clearly mismatched. Static then slow dolly. Soft daylight. Realistic, documentary style. Slow, subtle motion. No text, no logos, no subtitles, no brand names. |
+
 Tiada shot untuk PA23 (perbandingan, guna gambar rasmi + Seedream `pa23_atas`) dan shot s14 tidak digunakan.
 Produk Coway **tidak** dijana dengan Flow: babak produk guna gambar rasmi coway.com.my.
 
@@ -44,4 +52,4 @@ Produk Coway **tidak** dijana dengan Flow: babak produk guna gambar rasmi coway.
 
 | Shot | Klip dimuat naik | Take dipilih / seed | Nota |
 |---|---|---|---|
-| s01–s17 | — | | menunggu user |
+| s01–s20 | — | | menunggu user (19 shot: s01–s13, s15–s20) |

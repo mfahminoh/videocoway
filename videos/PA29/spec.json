@@ -1,0 +1,172 @@
+{
+ "slug": "715l-besar-macam-mana",
+ "voice": "Puck",
+ "style": "Say in Malaysian Malay, as a calm, confident Coway agent explaining clearly to a friend, honest and friendly",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@03",
+   "bg": "navy"
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "photo",
+   "in": 0,
+   "out": "@03",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg"
+  },
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "<em>715L</em> BESAR MACAM MANA?"
+  },
+  {
+   "type": "grid",
+   "in": "@02",
+   "out": "@03",
+   "top": 1160,
+   "items": [
+    {
+     "big": "91",
+     "small": "LEBAR (CM)",
+     "at": "@02"
+    },
+    {
+     "big": "190.5",
+     "small": "TINGGI (CM)",
+     "at": "@02%40"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "SEBELAH <em>PETI</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_kitchen_open.jpg"
+  },
+  {
+   "type": "chips",
+   "in": "@03%25",
+   "out": "@04",
+   "top": 1180,
+   "items": [
+    {
+     "text": "RAK",
+     "color": "#fff",
+     "at": "@03%25"
+    },
+    {
+     "text": "LACI SAYUR",
+     "color": "#fff",
+     "at": "@03%45"
+    },
+    {
+     "text": "RAK PINTU",
+     "color": "#ffd23f",
+     "at": "@03%65"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "SEBELAH <em>FREEZER</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@04",
+   "out": "@05",
+   "top": 330,
+   "left": 90,
+   "w": 900,
+   "h": 706,
+   "src": "../../assets/img/coway_fridge/715_open_dark.jpg"
+  },
+  {
+   "type": "led",
+   "in": "@04%40",
+   "out": "@05",
+   "top": 1080,
+   "items": [
+    {
+     "num": "-25",
+     "unit": "°C",
+     "label": "SUPER FREEZING",
+     "at": "@04%45"
+    }
+   ]
+  },
+  {
+   "type": "price",
+   "in": "@05",
+   "out": "@06",
+   "top": 360,
+   "label": "HARGA BULANAN",
+   "from": "RM84",
+   "strikeAt": "@05%35",
+   "to": "RM20",
+   "toAt": "@05%50",
+   "badge": "7 BULAN PERTAMA*",
+   "badgeAt": "@05%70"
+  },
+  {
+   "type": "pill",
+   "in": "@05%70",
+   "out": "@06",
+   "top": 1180,
+   "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@06",
+   "top": 760,
+   "ticks": [
+    "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 · 551L RM99",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@06%40",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

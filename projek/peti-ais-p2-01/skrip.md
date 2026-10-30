@@ -318,3 +318,151 @@ Video pelan: 17 · Kategori: 4 Situasi hidup · Persona: P2 · Suara: Vindemiatr
 | 05 | Pagi, anak ambil sendiri bekal dia. | Anak ambil *sendiri* | Flow s17: anak ambil bekal |
 | 06 | Peti ais Coway lima ratus lima puluh satu liter, empat pintu. Zon bawah boleh tukar jadi peti sejuk, bila stok lauk lebih. | 551L · zon bawah tukar *jadi peti sejuk* | Rasmi 551_drawers |
 | 07 | Dari sembilan puluh sembilan ringgit sebulan. Siapa sini suka masak awal-awal? WhatsApp saya. | 551L dari *RM99* · *WhatsApp saya* | CTA |
+
+
+---
+
+# Batch 3 (PA26–PA35)
+
+Status: **DILULUSKAN 30 Okt 2026** (user: "sambung batch 3" + promo; batch 2 dianggap lulus)
+Promo (user, 30 Okt 2026): rebat, bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L); penghantaran & pemasangan percuma seluruh Malaysia; tiada tarikh tamat ("promosi terhad").
+Dijana daripada `videos/peti-ais-p2-01_b3.py`. Shot hidup s18–s20: Google Flow, prompt dalam `shots.md`.
+
+Nota kaki CTA: *Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran & pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma & syarat Coway.
+
+| ID (pelan) | Hook | Kategori | Jenis hook | Suara | Format | ±saat |
+|---|---|---|---|---|---|---|
+| PA26 (18) | Bila semua balik kampung, peti yang biasa cukup, tiba-tiba rasa kecil. | 4 Situasi hidup | Seru situasi | Kore | scenes | ±35 |
+| PA27 (19) | Kabinet baru. Jubin baru. Peti ais, dari rumah sewa. | 4 Situasi hidup | Seru situasi | Orus | scenes | ±38 |
+| PA28 (21) | Kalau awak suka barang dapur tersusun ikut kategori, tengok yang ni. | 5 Kenali produk | Seru situasi | Aoede | scenes | ±40 |
+| PA29 (22) | Tujuh ratus lima belas liter. Besar macam mana sebenarnya? | 5 Kenali produk | Soalan / angka | Puck | scenes | ±36 |
+| PA30 (23) | Kenapa laci sayur ada kawalan kelembapan? | 5 Kenali produk | Soalan | Zephyr | scenes | ±37 |
+| PA31 (24) | Bukan semua mod peti ais buat kerja yang sama. | 5 Kenali produk | Listicle | Fenrir | kinetic | ±30 |
+| PA32 (26) | Saya tak akan cadang peti besar kepada semua orang. | 6 Bantahan & conversion | Ejen jujur | Achird | scenes | ±40 |
+| PA33 (28) | Saya berminat, tapi takut peti tak muat. | 6 Bantahan & conversion | Soalan bantahan | Laomedeia | scenes | ±34 |
+| PA34 (29) | Beza sepuluh ringgit sebulan, bukan benda paling penting nak banding. | 6 Bantahan & conversion | Angka / kira | Algieba | scenes | ±32 |
+| PA35 (30) | Sebelum pilih peti ais Coway, jawab tiga soalan ni. | 6 Bantahan & conversion | Kuiz | Vindemiatrix | scenes | ±36 |
+
+---
+
+### PA26 · Bila satu keluarga balik beraya
+Video pelan: 18 · Kategori: 4 Situasi hidup · Persona: P2 · Suara: Kore · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Bila semua balik kampung, peti yang biasa cukup, tiba-tiba rasa kecil. | Semua balik… *peti tiba-tiba kecil* | Flow s18: keluarga sampai beraya |
+| 02 | Rendang, ketupat, kuih, air sirap satu tong. Semua nak masuk peti. | Rendang · kuih · *air sirap* | Flow s19: dapur raya penuh |
+| 03 | Akhirnya, lauk tidur atas meja, dan air batu kena beli kat kedai. | Lauk *atas meja*. Air batu *beli kedai*. | s19 sambung |
+| 04 | Peti ais Coway tujuh ratus lima belas liter, ruang untuk stok satu keluarga besar, dengan super freezing sampai negatif dua puluh lima. | 715L · *Super Freezing −25°C* | Rasmi 715_spaces + LED |
+| 05 | Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, lapan puluh empat ringgit. | Bayar *RM20*/bulan · *7 bulan pertama** | Harga: RM84 → RM20, lencana 7 bulan |
+| 06 | Penghantaran dan pemasangan percuma, seluruh Malaysia. WhatsApp saya. | Hantar & pasang *percuma* · *WhatsApp saya* | CTA |
+
+### PA27 · Dah renovate dapur, peti lama tak padan
+Video pelan: 19 · Kategori: 4 Situasi hidup · Persona: P2 · Suara: Orus · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Kabinet baru. Jubin baru. Peti ais, dari rumah sewa. | Kabinet baru… *peti dari rumah sewa* | Flow s20: dapur baru, peti lama |
+| 02 | Lepas renovate, peti lama nampak kecil, kekuningan, dan tak padan dengan ruang yang dah diukur. | Kecil · kuning · *tak padan* | s20 sambung |
+| 03 | Sebelum pilih, padankan tiga benda: saiz ruang, arah buka pintu, dan warna dapur. | Saiz · bukaan pintu · *warna* | Cip |
+| 04 | Peti ais Coway lima ratus lima puluh satu liter, warna Black Inox, rekaan built-in, ruang enam milimeter je dengan kabinet. | 551L · Black Inox · *built-in 6 mm* | Rasmi 551_builtin, 551_front |
+| 05 | Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, sembilan puluh sembilan ringgit. | Bayar *RM20*/bulan · *7 bulan pertama** | Harga: RM99 → RM20, lencana 7 bulan |
+| 06 | Penghantaran dan pemasangan percuma seluruh Malaysia. Hantar gambar dapur awak kat WhatsApp saya. | Hantar gambar dapur · *WhatsApp saya* | CTA |
+
+### PA28 · Kenali peti ais Coway Multi-Door 551L
+Video pelan: 21 · Kategori: 5 Kenali produk · Persona: P2 · Suara: Aoede · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Kalau awak suka barang dapur tersusun ikut kategori, tengok yang ni. | Suka *tersusun*? Tengok ni. | Rasmi 551_wide |
+| 02 | Peti ais Coway lima ratus lima puluh satu liter, empat pintu, warna Black Inox. | 551L · 4 pintu · *Black Inox* | Rasmi 551_front |
+| 03 | Zon bawah boleh tukar: dari lima darjah untuk sayur, sampai negatif dua puluh untuk simpanan lama. | Convertible Zone *5°C → −20°C* | Rasmi 551_drawers + cip julat |
+| 04 | Triple inverter, dua kipas, dinding penyejuk logam, untuk sejuk yang konsisten. | Triple Inverter · *Metal Cooling* | Rasmi 551_inv_fan, 551_metal |
+| 05 | Silver ion dan penapis penyahbau, bantu kurangkan bau ikan dalam peti. | Dual Hygiene¹ · kurang *bau ikan* | Rasmi 551_deo_cubes |
+| 06 | Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, sembilan puluh sembilan ringgit. | Bayar *RM20*/bulan · *7 bulan pertama** | Harga: RM99 → RM20, lencana 7 bulan |
+| 07 | Penghantaran dan pemasangan percuma seluruh Malaysia. Nak tengok lebih dekat? WhatsApp saya. | Hantar & pasang *percuma* · *WhatsApp saya* | CTA |
+
+### PA29 · 715L besar macam mana sebenarnya?
+Video pelan: 22 · Kategori: 5 Kenali produk · Persona: P2 · Suara: Puck · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Tujuh ratus lima belas liter. Besar macam mana sebenarnya? | *715L* besar macam mana? | Rasmi 715_kitchen1 |
+| 02 | Lebar sembilan puluh satu sentimeter, tinggi hampir dua meter. Freezer kiri, peti kanan. | 91 cm lebar · *190.5 cm* tinggi | Rasmi 715_kitchen1 + grid |
+| 03 | Sebelah peti: rak, laci sayur dengan kawalan kelembapan, dan rak pintu untuk botol. | Peti: rak · *laci sayur* · rak pintu | Rasmi 715_kitchen_open |
+| 04 | Sebelah freezer: stok ayam, ikan dan daging, dengan super freezing sampai negatif dua puluh lima. | Freezer · *−25°C* | Rasmi 715_open_dark + LED |
+| 05 | Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, lapan puluh empat ringgit. | Bayar *RM20*/bulan · *7 bulan pertama** | Harga: RM84 → RM20, lencana 7 bulan |
+| 06 | Hantar dan pasang percuma. Kalau ada ruang sebesar ni, apa benda pertama awak nak simpan? WhatsApp saya. | Apa nak simpan dulu? *WhatsApp saya* | CTA |
+
+### PA30 · Apa fungsi kawalan kelembapan dalam peti?
+Video pelan: 23 · Kategori: 5 Kenali produk · Persona: P2 · Suara: Zephyr · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Kenapa laci sayur ada kawalan kelembapan? | Laci sayur ada *kawalan kelembapan?* | Seedream s01_layu |
+| 02 | Sayur berdaun suka lembap. Ada buah pula lebih elok kalau kurang lembap. | Sayur daun: *lembap* · buah: *kurang lembap* | Cip |
+| 03 | Laci peti biasa, satu keadaan untuk semua. Sebab tu ada yang cepat layu, ada yang cepat lembik. | Satu keadaan untuk *semua* | Seedream s01_layu |
+| 04 | Peti ais Coway tujuh ratus lima belas liter ada kawalan kelembapan di laci, bantu sayur dan buah kekal segar lebih lama. | 715L · *Humidity Control* | Rasmi 715_humidity, 715_humid_drawer |
+| 05 | Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, lapan puluh empat ringgit. | Bayar *RM20*/bulan · *7 bulan pertama** | Harga: RM84 → RM20, lencana 7 bulan |
+| 06 | Hantar dan pasang percuma seluruh Malaysia. Nak tahu fungsi lain? WhatsApp saya. | Hantar & pasang *percuma* · *WhatsApp saya* | CTA |
+
+### PA31 · Smart, Eco, Power Cool, Super Freezing: apa beza?
+Video pelan: 24 · Kategori: 5 Kenali produk · Persona: P2 · Suara: Fenrir · Format: kinetic
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Bukan semua mod peti ais buat kerja yang sama. | *4 mod*, 4 kerja | Kinetic |
+| 02 | Smart: laraskan suhu peti dan freezer, sendiri. | *SMART* | Rasmi 715_panel_touch |
+| 03 | Eco: guna tenaga dengan lebih cekap. | *ECO* | Kinetic |
+| 04 | Power Cool: sejukkan peti dengan cepat, contoh lepas borong. | *POWER COOL* | Kinetic |
+| 05 | Super Freezing: freezer turun sampai negatif dua puluh lima darjah. | *SUPER FREEZING −25°C* | Kinetic |
+| 06 | Peti ais Coway tujuh ratus lima belas liter. Promosi rebat: bayar dua puluh ringgit sebulan, tujuh bulan pertama. Lepas tu, lapan puluh empat. | 715L · bayar *RM20*/bulan · *7 bulan** | Tag harga |
+| 07 | Hantar dan pasang percuma. WhatsApp saya sekarang. | Hantar & pasang *percuma* · *WhatsApp saya* | CTA |
+
+### PA32 · Peti besar ni sesuai untuk siapa sebenarnya?
+Video pelan: 26 · Kategori: 6 Bantahan & conversion · Persona: P2 · Suara: Achird · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Saya tak akan cadang peti besar kepada semua orang. | Peti besar *bukan untuk semua* | Tajuk |
+| 02 | Kalau rumah dua orang, jarang masak, dan dapur sempit, peti besar cuma makan ruang. | 2 orang · jarang masak · dapur sempit → *tak perlu* | VS |
+| 03 | Tapi kalau lima orang ke atas, borong seminggu sekali, dan selalu simpan stok, ruang tambahan memang membantu. | 5+ orang · borong · stok → *sesuai* | Seedream pa09_a_keluarga |
+| 04 | Dan pastikan dapur muat. Tujuh ratus lima belas liter, lebar sembilan puluh satu, dalam tujuh puluh empat sentimeter. | 715L · *91 × 74 cm* | Rasmi 715_kitchen1 |
+| 05 | Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, lapan puluh empat ringgit. | Bayar *RM20*/bulan · *7 bulan pertama** | Harga: RM84 → RM20, lencana 7 bulan |
+| 06 | Hantar dan pasang percuma. Beritahu saya berapa orang dalam rumah, dan ukuran ruang peti awak. WhatsApp saya. | Berapa orang? Ukuran? *WhatsApp saya* | CTA |
+
+### PA33 · "Saya berminat, tapi takut tak muat"
+Video pelan: 28 · Kategori: 6 Bantahan & conversion · Persona: P2 · Suara: Laomedeia · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Saya berminat, tapi takut peti tak muat. | "Takut *tak muat*" | Gelembung chat |
+| 02 | Jangan risau. Kita semak ukuran dulu, sebelum hantar. | Semak ukuran *dulu* | Seedream pa10_b_ukur |
+| 03 | Ukur lebar, dalam dan tinggi ruang. Kemudian pintu rumah, pintu dapur dan lif. | L · D · T · *laluan* | Grid + cip |
+| 04 | Tujuh ratus lima belas liter, dalam tujuh puluh empat sentimeter. Lima ratus lima puluh satu liter lebih nipis, dalam enam puluh je. | 715L dalam *74 cm* · 551L dalam *59.7 cm* | VS dua model |
+| 05 | Dua-dua model sekarang ada promosi rebat: bayar dua puluh ringgit sebulan, untuk tujuh bulan pertama. | Dua model: bayar *RM20*/bulan · *7 bulan** | Harga RM20 + dua model |
+| 06 | Penghantaran dan pemasangan percuma seluruh Malaysia. Hantar ukuran ruang dapur awak, saya semak dulu. WhatsApp saya. | Hantar ukuran · *WhatsApp saya* | CTA |
+
+### PA34 · Jangan banding peti ais ikut harga bulanan sahaja
+Video pelan: 29 · Kategori: 6 Bantahan & conversion · Persona: P2 · Suara: Algieba · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Beza sepuluh ringgit sebulan, bukan benda paling penting nak banding. | Beza RM10? *Bukan paling penting* | Seedream pa15_a_kira |
+| 02 | Banding juga: tempoh kontrak, jumlah bayaran, servis, waranti, dan pemasangan. | Tempoh · jumlah · servis · waranti · *pasang* | Steps |
+| 03 | Contoh, peti ais Coway tujuh ratus lima belas liter dengan promosi: tujuh bulan pertama dua puluh ringgit, lepas tu lapan puluh empat. | 7 bulan × *RM20*, kemudian *RM84* | Kira |
+| 04 | Jumlah tujuh tahun, enam ribu enam ratus lapan ringgit. | Jumlah 7 tahun *RM6,608** | Counter |
+| 05 | Dalam tu, Cody servis berkala tujuh tahun, kompressor waranti sepuluh tahun, hantar dan pasang percuma. | Cody *7 tahun* · kompressor *10 tahun** · pasang *percuma* | Kad |
+| 06 | Itu yang patut dibanding. Nak checklist banding dua model? WhatsApp saya. | Banding *keseluruhan* · *WhatsApp saya* | CTA |
+
+### PA35 · Peti ais Coway mana sesuai: 551L atau 715L?
+Video pelan: 30 · Kategori: 6 Bantahan & conversion · Persona: P2 · Suara: Vindemiatrix · Format: scenes
+
+| # | VO | Kapsyen | Visual |
+|---|---|---|---|
+| 01 | Sebelum pilih peti ais Coway, jawab tiga soalan ni. | Jawab *3 soalan* ni | Tajuk |
+| 02 | Berapa orang dalam rumah? Berapa banyak stok yang awak simpan? Dan berapa dalam ruang dapur? | Orang · stok · *ruang* | Cip |
+| 03 | Suka tersusun ikut kategori, ruang tak berapa dalam: lima ratus lima puluh satu liter, empat pintu. | 551L · tersusun · dalam *59.7 cm* | Rasmi 551_open_food |
+| 04 | Keluarga besar, stok banyak, ruang cukup dalam: tujuh ratus lima belas liter, side-by-side. | 715L · stok banyak · dalam *74 cm* | Rasmi 715_spaces |
+| 05 | Dua-dua model sekarang ada promosi rebat: bayar dua puluh ringgit sebulan, untuk tujuh bulan pertama. | Dua model: bayar *RM20*/bulan · *7 bulan** | Harga RM20 + dua model |
+| 06 | Lepas tu lapan puluh empat atau sembilan puluh sembilan. Hantar dan pasang percuma. WhatsApp saya, saya bantu pilih. | Kemudian *RM84* / *RM99* · *WhatsApp saya* | CTA |

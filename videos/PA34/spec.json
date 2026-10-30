@@ -1,0 +1,165 @@
+{
+ "slug": "jangan-banding-bulanan-sahaja",
+ "voice": "Algieba",
+ "style": "Say in Malaysian Malay, as a calm, confident Coway agent explaining clearly to a friend, honest and friendly",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa15_a_kira.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": "blue"
+  },
+  {
+   "at": "@03",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "BEZA RM10 SEBULAN?<br><em>BUKAN PALING PENTING</em>"
+  },
+  {
+   "type": "steps",
+   "in": "@02",
+   "out": "@03",
+   "top": 300,
+   "items": [
+    {
+     "text": "TEMPOH KONTRAK",
+     "at": "@02%10"
+    },
+    {
+     "text": "JUMLAH BAYARAN",
+     "at": "@02%28"
+    },
+    {
+     "text": "SERVIS",
+     "at": "@02%46"
+    },
+    {
+     "text": "WARANTI",
+     "at": "@02%62"
+    },
+    {
+     "text": "PEMASANGAN",
+     "at": "@02%78"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@04",
+   "top": 340,
+   "size": 80,
+   "html": "715L DENGAN PROMOSI"
+  },
+  {
+   "type": "grid",
+   "in": "@03",
+   "out": "@04",
+   "top": 520,
+   "items": [
+    {
+     "big": "RM20",
+     "small": "× 7 BULAN",
+     "at": "@03%35"
+    },
+    {
+     "big": "RM84",
+     "small": "× 77 BULAN",
+     "at": "@03%70"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 360,
+   "size": 90,
+   "html": "JUMLAH 7 TAHUN"
+  },
+  {
+   "type": "counter",
+   "in": "@04",
+   "out": "@05",
+   "top": 540,
+   "from": 0,
+   "to": 6608,
+   "prefix": "RM",
+   "decimals": 0,
+   "dur": 0.9,
+   "size": 220
+  },
+  {
+   "type": "pill",
+   "in": "@04%60",
+   "out": "@05",
+   "top": 880,
+   "html": "7 × RM20 + 77 × RM84 = RM6,608*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "card",
+   "in": "@05",
+   "out": "@06",
+   "top": 380,
+   "icon": "tech",
+   "title": "CODY 7 TAHUN",
+   "sub": "Servis berkala"
+  },
+  {
+   "type": "card",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 620,
+   "icon": "shield",
+   "title": "KOMPRESSOR 10 TAHUN",
+   "sub": "Waranti kompressor*"
+  },
+  {
+   "type": "card",
+   "in": "@05%60",
+   "out": "@06",
+   "top": 860,
+   "icon": "home",
+   "title": "HANTAR & PASANG",
+   "sub": "Percuma seluruh Malaysia"
+  },
+  {
+   "type": "cta",
+   "in": "@06",
+   "top": 760,
+   "ticks": [
+    "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 · 551L RM99",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@06%40",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway. Jumlah 7 tahun 715L dengan promosi: RM6,608."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

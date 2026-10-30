@@ -1,0 +1,32 @@
+[
+ {
+  "id": "01",
+  "text": "Kenapa laci sayur ada kawalan kelembapan?",
+  "cap": "Laci sayur ada *kawalan kelembapan?*"
+ },
+ {
+  "id": "02",
+  "text": "Sayur berdaun suka lembap. Ada buah pula lebih elok kalau kurang lembap.",
+  "cap": "Sayur daun: *lembap* · buah: *kurang lembap*"
+ },
+ {
+  "id": "03",
+  "text": "Laci peti biasa, satu keadaan untuk semua. Sebab tu ada yang cepat layu, ada yang cepat lembik.",
+  "cap": "Satu keadaan untuk *semua*"
+ },
+ {
+  "id": "04",
+  "text": "Peti ais Coway tujuh ratus lima belas liter ada kawalan kelembapan di laci, bantu sayur dan buah kekal segar lebih lama.",
+  "cap": "715L · *Humidity Control*"
+ },
+ {
+  "id": "05",
+  "text": "Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, lapan puluh empat ringgit.",
+  "cap": "Bayar *RM20*/bulan · *7 bulan pertama**"
+ },
+ {
+  "id": "06",
+  "text": "Hantar dan pasang percuma seluruh Malaysia. Nak tahu fungsi lain? WhatsApp saya.",
+  "cap": "Hantar & pasang *percuma* · *WhatsApp saya*"
+ }
+]

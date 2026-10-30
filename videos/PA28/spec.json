@@ -1,0 +1,222 @@
+{
+ "slug": "kenali-coway-551l",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@03",
+   "bg": "navy"
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  },
+  {
+   "at": "@07",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "photo",
+   "in": 0,
+   "out": "@02",
+   "top": 420,
+   "left": 90,
+   "w": 900,
+   "h": 703,
+   "src": "../../assets/img/coway_fridge/551_wide.jpg"
+  },
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "SUKA <em>TERSUSUN</em>?"
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "COWAY <em>551L</em> · 4 PINTU"
+  },
+  {
+   "type": "photo",
+   "in": "@02",
+   "out": "@03",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_front.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@02%45",
+   "out": "@03",
+   "top": 1180,
+   "html": "BLACK INOX",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "<em>CONVERTIBLE</em> ZONE"
+  },
+  {
+   "type": "photo",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "left": 220,
+   "w": 640,
+   "h": 640,
+   "src": "../../assets/img/coway_fridge/551_drawers.jpg"
+  },
+  {
+   "type": "chips",
+   "in": "@03%30",
+   "out": "@04",
+   "top": 1060,
+   "items": [
+    {
+     "text": "5→3°C BUAH/SAYUR",
+     "color": "#fff",
+     "at": "@03%30"
+    },
+    {
+     "text": "2→0°C MINUMAN",
+     "color": "#fff",
+     "at": "@03%45"
+    },
+    {
+     "text": "−1→−7°C",
+     "color": "#fff",
+     "at": "@03%60"
+    },
+    {
+     "text": "−8→−20°C",
+     "color": "#ffd23f",
+     "at": "@03%75"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "TRIPLE <em>INVERTER</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@04",
+   "out": "@04%50",
+   "top": 360,
+   "left": 240,
+   "w": 600,
+   "h": 700,
+   "src": "../../assets/img/coway_fridge/551_inv_fan.png",
+   "fit": "contain",
+   "shadow": false
+  },
+  {
+   "type": "photo",
+   "in": "@04%50",
+   "out": "@05",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_metal.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@04%50",
+   "out": "@05",
+   "top": 1180,
+   "html": "METAL COOLING",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "DUAL <em>HYGIENE</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@05",
+   "out": "@06",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_deo_cubes.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 1180,
+   "html": "SILVER ION · PENAPIS PENYAHBAU¹",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "price",
+   "in": "@06",
+   "out": "@07",
+   "top": 360,
+   "label": "HARGA BULANAN",
+   "from": "RM99",
+   "strikeAt": "@06%35",
+   "to": "RM20",
+   "toAt": "@06%50",
+   "badge": "7 BULAN PERTAMA*",
+   "badgeAt": "@06%70"
+  },
+  {
+   "type": "pill",
+   "in": "@06%70",
+   "out": "@07",
+   "top": 1180,
+   "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@07",
+   "top": 760,
+   "ticks": [
+    "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 · 551L RM99",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@07%40",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. ¹Ujian makmal dalam persekitaran terkawal."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

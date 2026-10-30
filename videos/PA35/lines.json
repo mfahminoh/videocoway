@@ -1,0 +1,32 @@
+[
+ {
+  "id": "01",
+  "text": "Sebelum pilih peti ais Coway, jawab tiga soalan ni.",
+  "cap": "Jawab *3 soalan* ni"
+ },
+ {
+  "id": "02",
+  "text": "Berapa orang dalam rumah? Berapa banyak stok yang awak simpan? Dan berapa dalam ruang dapur?",
+  "cap": "Orang · stok · *ruang*"
+ },
+ {
+  "id": "03",
+  "text": "Suka tersusun ikut kategori, ruang tak berapa dalam: lima ratus lima puluh satu liter, empat pintu.",
+  "cap": "551L · tersusun · dalam *59.7 cm*"
+ },
+ {
+  "id": "04",
+  "text": "Keluarga besar, stok banyak, ruang cukup dalam: tujuh ratus lima belas liter, side-by-side.",
+  "cap": "715L · stok banyak · dalam *74 cm*"
+ },
+ {
+  "id": "05",
+  "text": "Dua-dua model sekarang ada promosi rebat: bayar dua puluh ringgit sebulan, untuk tujuh bulan pertama.",
+  "cap": "Dua model: bayar *RM20*/bulan · *7 bulan**"
+ },
+ {
+  "id": "06",
+  "text": "Lepas tu lapan puluh empat atau sembilan puluh sembilan. Hantar dan pasang percuma. WhatsApp saya, saya bantu pilih.",
+  "cap": "Kemudian *RM84* / *RM99* · *WhatsApp saya*"
+ }
+]

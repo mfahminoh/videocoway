@@ -1,0 +1,185 @@
+{
+ "slug": "takut-peti-tak-muat",
+ "voice": "Laomedeia",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "blue"
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa10_b_ukur.jpg",
+    "color": "navy",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": "blue"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "chat",
+   "in": "@01",
+   "out": "@02",
+   "top": 520,
+   "items": [
+    {
+     "side": "L",
+     "text": "Saya berminat, tapi takut peti tak muat 😟",
+     "at": "@01"
+    },
+    {
+     "side": "R",
+     "text": "Jangan risau, kita semak ukuran dulu 👍",
+     "at": "@01%80"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "SEMAK UKURAN <em>DULU</em>"
+  },
+  {
+   "type": "grid",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "items": [
+    {
+     "big": "L",
+     "small": "LEBAR",
+     "at": "@03"
+    },
+    {
+     "big": "D",
+     "small": "DALAM",
+     "at": "@03%20"
+    },
+    {
+     "big": "T",
+     "small": "TINGGI",
+     "at": "@03%40"
+    }
+   ]
+  },
+  {
+   "type": "chips",
+   "in": "@03%55",
+   "out": "@04",
+   "top": 1000,
+   "items": [
+    {
+     "text": "PINTU RUMAH",
+     "color": "#fff",
+     "at": "@03%55"
+    },
+    {
+     "text": "PINTU DAPUR",
+     "color": "#fff",
+     "at": "@03%70"
+    },
+    {
+     "text": "LIF",
+     "color": "#ffd23f",
+     "at": "@03%85"
+    }
+   ]
+  },
+  {
+   "type": "vs",
+   "in": "@04",
+   "out": "@05",
+   "top": 420,
+   "left": {
+    "title": "715L",
+    "color": "#04A4E4",
+    "items": [
+     "Lebar 91 cm",
+     "Dalam 74 cm",
+     "Tinggi 190.5 cm"
+    ],
+    "at": "@04"
+   },
+   "right": {
+    "title": "551L",
+    "color": "#0B2F6B",
+    "items": [
+     "Lebar 90.5 cm",
+     "Dalam 59.7 cm",
+     "Tinggi 190.2 cm"
+    ],
+    "at": "@04%50"
+   }
+  },
+  {
+   "type": "title",
+   "in": "@05",
+   "out": "@06",
+   "top": 420,
+   "size": 170,
+   "html": "BAYAR<br>RM20",
+   "color": "#ffffff"
+  },
+  {
+   "type": "pill",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 840,
+   "html": "SEBULAN · 7 BULAN PERTAMA*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@05%50",
+   "out": "@06",
+   "top": 960,
+   "html": "KEMUDIAN 715L RM84 · 551L RM99",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "pill",
+   "in": "@05%70",
+   "out": "@06",
+   "top": 1180,
+   "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@06",
+   "top": 760,
+   "ticks": [
+    "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 · 551L RM99",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@06%40",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

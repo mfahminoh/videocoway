@@ -102,6 +102,8 @@ Lajur **Asal**: C = idea ChatGPT dikekalkan · C* = idea ChatGPT diubah · R = s
 
 ## Fakta & dakwaan dibenarkan
 
+- **Batch 3 (PA26–PA35) sahaja — promo daripada user, 30 Okt 2026:** rebat, *bayar RM20 sebulan untuk 7 bulan pertama*, kemudian RM84 (715L) / RM99 (551L); penghantaran & pemasangan percuma seluruh Malaysia; tiada tarikh tamat ("promosi terhad"). Nota kaki wajib: "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran & pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma & syarat Coway." Jumlah 7 tahun 715L dengan promo: 7 × RM20 + 77 × RM84 = RM6,608. Batch 1–2 kekal tanpa promo.
+
 - Harga: "dari RM84 sebulan" (715L, HEART 7+0); "551L dari RM99 sebulan"; tunai RM5,899 / RM6,799. "Harga termasuk SST. *Tertakluk terma & syarat."
 - "Kompressor waranti 10 tahun" (coway.com.my/warranty-policy). Nota kaki: "*Tertakluk polisi waranti Coway."
 - HEART Service: "servis percuma 7 tahun", Cody, 7 langkah termasuk steaming dan tukar penapis deodoriser.

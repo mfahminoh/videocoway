@@ -1,0 +1,32 @@
+[
+ {
+  "id": "01",
+  "text": "Saya tak akan cadang peti besar kepada semua orang.",
+  "cap": "Peti besar *bukan untuk semua*"
+ },
+ {
+  "id": "02",
+  "text": "Kalau rumah dua orang, jarang masak, dan dapur sempit, peti besar cuma makan ruang.",
+  "cap": "2 orang · jarang masak · dapur sempit → *tak perlu*"
+ },
+ {
+  "id": "03",
+  "text": "Tapi kalau lima orang ke atas, borong seminggu sekali, dan selalu simpan stok, ruang tambahan memang membantu.",
+  "cap": "5+ orang · borong · stok → *sesuai*"
+ },
+ {
+  "id": "04",
+  "text": "Dan pastikan dapur muat. Tujuh ratus lima belas liter, lebar sembilan puluh satu, dalam tujuh puluh empat sentimeter.",
+  "cap": "715L · *91 × 74 cm*"
+ },
+ {
+  "id": "05",
+  "text": "Sekarang ada promosi rebat: bayar dua puluh ringgit je sebulan, untuk tujuh bulan pertama. Lepas tu, lapan puluh empat ringgit.",
+  "cap": "Bayar *RM20*/bulan · *7 bulan pertama**"
+ },
+ {
+  "id": "06",
+  "text": "Hantar dan pasang percuma. Beritahu saya berapa orang dalam rumah, dan ukuran ruang peti awak. WhatsApp saya.",
+  "cap": "Berapa orang? Ukuran? *WhatsApp saya*"
+ }
+]
