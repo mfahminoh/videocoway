@@ -1,0 +1,79 @@
+{
+ "slug": "orang-berduit-je",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, cheerful young woman chatting on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "promo-rm18-01_s02",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "promo-rm18-01_s05",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02%55",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 380,
+   "size": 120,
+   "html": "COWAY UNTUK<br>ORANG BERDUIT JE?"
+  },
+  {
+   "type": "stamp",
+   "in": "@01e-0.3",
+   "out": "@02",
+   "top": 900,
+   "html": "MITOS!",
+   "color": "#E86E5A",
+   "rot": -8
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@02%55",
+   "top": 210,
+   "html": "SEMUA MODEL<br><em>PENAPIS AIR</em>"
+  },
+  {
+   "type": "price",
+   "in": "@02%55",
+   "out": "@03%50",
+   "top": 470,
+   "label": "SERENDAH",
+   "from": "RM18",
+   "sub": "sebulan",
+   "badge": "SELAMA 7 BULAN*",
+   "badgeAt": "@03%15"
+  },
+  {
+   "type": "cta",
+   "in": "@03%50",
+   "top": 720,
+   "ticks": [
+    "SEMUA MODEL PENAPIS AIR",
+    "SERENDAH RM18 SEBULAN*",
+    "SELAMA 7 BULAN*"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@03%70",
+   "fine": "*Serendah RM18/bulan selama 7 bulan. Tertakluk terma &amp; syarat."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

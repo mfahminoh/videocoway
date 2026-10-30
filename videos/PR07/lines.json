@@ -1,0 +1,17 @@
+[
+ {
+  "id": "01",
+  "text": "Customer saya semalam terkejut tengok harga ni.",
+  "cap": "Customer saya *terkejut*"
+ },
+ {
+  "id": "02",
+  "text": "Penapis air Coway, semua model, serendah lapan belas ringgit sebulan.",
+  "cap": "Semua model"
+ },
+ {
+  "id": "03",
+  "text": "Promosi ulang tahun, selama tujuh bulan. WhatsApp saya sekarang.",
+  "cap": "Serendah *RM18*/bulan · 7 bulan"
+ }
+]

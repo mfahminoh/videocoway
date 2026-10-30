@@ -1,0 +1,95 @@
+{
+ "slug": "dapur-kecil-keluarga-besar",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "promo-rm18-01_s01",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "promo-rm18-01_s03",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02%55",
+   "bg": {
+    "clip": "promo-rm18-01_s05",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "chips",
+   "in": "@01",
+   "out": "@02",
+   "top": 330,
+   "items": [
+    {
+     "text": "DAPUR KECIL?",
+     "color": "#6cc2ff",
+     "at": "@01"
+    },
+    {
+     "text": "KELUARGA BESAR?",
+     "color": "#ffd23f",
+     "at": "@01%50"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 210,
+   "html": "ADA MODEL UNTUK<br><em>SETIAP RUMAH</em>"
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@03%35",
+   "top": 210,
+   "html": "PROMOSI<br><em>ULANG TAHUN</em>"
+  },
+  {
+   "type": "price",
+   "in": "@03%35",
+   "out": "@04",
+   "top": 470,
+   "label": "SERENDAH",
+   "from": "RM18",
+   "sub": "sebulan",
+   "badge": "SELAMA 7 BULAN*",
+   "badgeAt": "@03%80"
+  },
+  {
+   "type": "cta",
+   "in": "@04",
+   "top": 720,
+   "ticks": [
+    "SEMUA MODEL PENAPIS AIR",
+    "SERENDAH RM18 SEBULAN*",
+    "SELAMA 7 BULAN*"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@04%30",
+   "fine": "*Serendah RM18/bulan selama 7 bulan. Tertakluk terma &amp; syarat."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

@@ -1,0 +1,109 @@
+{
+ "slug": "enam-puluh-sen-sehari",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "promo-rm18-01_s01",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "promo-rm18-01_s05",
+    "c0": 0.0,
+    "c1": 3.0
+   }
+  },
+  {
+   "at": "@02%60",
+   "bg": "navy"
+  },
+  {
+   "at": "@03%40",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "title",
+   "in": "@01",
+   "out": "@02",
+   "top": 300,
+   "size": 90,
+   "html": "AIR BERSIH DI RUMAH"
+  },
+  {
+   "type": "counter",
+   "in": "@01%15",
+   "out": "@02",
+   "top": 460,
+   "from": 0,
+   "to": 60,
+   "suffix": " SEN",
+   "dur": 0.9,
+   "size": 200
+  },
+  {
+   "type": "text",
+   "in": "@01%55",
+   "out": "@02",
+   "top": 720,
+   "html": "sehari",
+   "size": 80,
+   "weight": 800
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@02%60",
+   "top": 210,
+   "html": "PROMOSI<br><em>ULANG TAHUN COWAY</em>"
+  },
+  {
+   "type": "title",
+   "in": "@02%60",
+   "out": "@03%40",
+   "top": 420,
+   "size": 200,
+   "html": "RM18"
+  },
+  {
+   "type": "text",
+   "in": "@02%75",
+   "out": "@03%40",
+   "top": 680,
+   "html": "÷ 30 hari = <b>60 sen sehari</b>",
+   "size": 70,
+   "weight": 700
+  },
+  {
+   "type": "pill",
+   "in": "@03",
+   "out": "@03%40",
+   "top": 860,
+   "html": "SELAMA 7 BULAN*",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@03%40",
+   "top": 720,
+   "ticks": [
+    "SEMUA MODEL PENAPIS AIR",
+    "SERENDAH RM18 SEBULAN*",
+    "SELAMA 7 BULAN*"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@03%65",
+   "fine": "*Serendah RM18/bulan selama 7 bulan. Tertakluk terma &amp; syarat."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}
