@@ -8,7 +8,7 @@
    "bg": {
     "clip": "promo-rm18-01_s02",
     "c0": 0.0,
-    "c1": 3.0
+    "c1": 2.64
    }
   },
   {
@@ -16,11 +16,11 @@
    "bg": {
     "clip": "promo-rm18-01_s04",
     "c0": 0.0,
-    "c1": 3.0
+    "c1": 3.63
    }
   },
   {
-   "at": "@03",
+   "at": "@02%70",
    "bg": "blue"
   }
  ],
@@ -45,18 +45,29 @@
   {
    "type": "banner",
    "in": "@02",
-   "out": "@03",
+   "out": "@02%70",
    "top": 210,
    "html": "PENAPIS AIR COWAY<br><em>SEMUA MODEL</em>"
   },
   {
    "type": "pill",
-   "in": "@02%55",
-   "out": "@03",
+   "in": "@02%30",
+   "out": "@02%70",
    "top": 420,
    "html": "PROMOSI ULANG TAHUN · 7 BULAN*",
    "bg": "var(--yellow)",
    "color": "var(--navy)"
+  },
+  {
+   "type": "price",
+   "in": "@02%70",
+   "out": "@03",
+   "top": 470,
+   "label": "SERENDAH",
+   "from": "RM18",
+   "sub": "sebulan",
+   "badge": "SELAMA 7 BULAN*",
+   "badgeAt": "@02%80"
   },
   {
    "type": "cta",

@@ -8,7 +8,7 @@
    "bg": {
     "clip": "promo-rm18-01_s01",
     "c0": 0.0,
-    "c1": 3.0
+    "c1": 3.95
    }
   },
   {
@@ -16,7 +16,7 @@
    "bg": {
     "clip": "promo-rm18-01_s05",
     "c0": 0.0,
-    "c1": 3.0
+    "c1": 3.93
    }
   },
   {
@@ -63,6 +63,15 @@
    "out": "@02%60",
    "top": 210,
    "html": "PROMOSI<br><em>ULANG TAHUN COWAY</em>"
+  },
+  {
+   "type": "text",
+   "in": "@02%60",
+   "out": "@03%40",
+   "top": 330,
+   "html": "SERENDAH",
+   "size": 60,
+   "weight": 800
   },
   {
    "type": "title",
