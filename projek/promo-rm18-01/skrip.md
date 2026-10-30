@@ -1,6 +1,6 @@
 # Skrip: promo-rm18-01 — Batch 1 (PR01–PR10)
 
-Status: DRAF · Brief: brief.md · Harga disahkan: 29 Okt 2026 (user: serendah RM18 selama 7 bulan, semua model)
+Status: DILULUSKAN 30 Okt 2026 · Brief: brief.md · Harga disahkan: 29 Okt 2026 (user: serendah RM18 selama 7 bulan, semua model)
 
 Setiap video 10–15 s: klip showroom Flow (s01/s02) → klip produk (s03–s05) → kad harga → CTA.
 Fine print kad harga (semua video): "*Serendah RM18/bulan selama 7 bulan. Tertakluk terma & syarat."

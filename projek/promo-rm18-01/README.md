@@ -5,9 +5,9 @@ Iklan promo 10–15 s untuk pelanggan akhir. Footage: Google Flow (showroom pann
 | Langkah | Status | Fail | Nota |
 |---|---|---|---|
 | 2 Brief | ✅ | brief.md | RM18 × 7 bulan, semua model (disahkan user) |
-| Shot Flow | ✅ | shots.md, assets/clips/promo-rm18-01_s01–s05.mp4 | 5 klip dijana 30 Okt 2026 (still Nano Banana dari gambar rasmi → Frames to Video); s01 diluluskan, s02–s05 dipilih oleh Claude |
-| 3 Skrip batch 1 (PR01–PR10) | ⏳ | skrip.md | draf, tunggu kelulusan |
-| 4 Video batch 1 | — | out/promo-rm18-01/ | |
+| Shot Flow | ✅ | shots.md, assets/clips/promo-rm18-01_s01–s05.mp4 | 5 klip dijana 30 Okt 2026 (still Nano Banana dari gambar rasmi → Frames to Video); s01–s05 diluluskan user (30 Okt 2026) |
+| 3 Skrip batch 1 (PR01–PR10) | ✅ | skrip.md | diluluskan user 30 Okt 2026 |
+| 4 Video batch 1 | ⏳ | out/promo-rm18-01/ | sedang dijana |
 | 5 Poster | — | | |
 | 7 Iklan | — | | |
 
@@ -17,6 +17,6 @@ Iklan promo 10–15 s untuk pelanggan akhir. Footage: Google Flow (showroom pann
 - 2026-10-30: setiap klip Flow mesti guna gambar rujukan produk rasmi (Text to Video tanpa rujukan melukis produk salah). Kaedah: still Nano Banana 9:16 dari 3 gambar rasmi → Frames to Video. Veo 3.1 Fast untuk semua take.
 
 ## Terbuka
-- [ ] Kelulusan skrip batch 1.
+- [x] Kelulusan skrip batch 1 (30 Okt 2026).
 - [x] Klip s01–s05 dijana di Google Flow (30 Okt 2026) dan disimpan dalam `assets/clips/`.
-- [ ] User semak s02–s05 (nota setiap take dalam shots.md → Take terpilih).
+- [x] User luluskan klip s02–s05 (30 Okt 2026).
