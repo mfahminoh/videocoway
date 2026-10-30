@@ -8,7 +8,7 @@ Audiens: pelanggan akhir (keluarga). Untuk ejen (pakej): tiada nama ejen, CTA "W
 | 1 Riset | ✅ | research/peti-ais-produk.md | fakta "WAJIB SAHKAN" dalam pelan disemak dengan coway.com.my (25 Okt 2026) |
 | 2 Brief | ✅ | brief.md | |
 | 3 Skrip | ✅ | skrip.md | PA36 (551L), PA37 (715L), diluluskan 30 Okt (user) |
-| 4 Video | ⏳ | out/peti-ais-explainer-01/ | |
+| 4 Video | ⏳ review | out/peti-ais-explainer-01/ | dirender 30 Okt (PA36 57.6 s, PA37 62.1 s); review: https://claude.ai/artifact/WnkQVcjVT2WKMHNrjMD1BK |
 
 ## Keputusan
 - 30 Okt 2026: user beri pelan explainer; buat selepas 30 video pakej siap.
