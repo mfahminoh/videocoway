@@ -20,7 +20,7 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Core Plus remake "tangki paling besar"** — CP01 glow, CP02 papercut, CP03 mg morph (`coway-remake`) | `projek/coreplus-remake-01/`, `videos/CP01`–`CP03` | `out/coreplus-remake-01/` |
 | **Neon × P1 "mampu milik"** — NE11–NE13, skrip TikTok rujukan → motion graphic / kinetic / komik | `projek/neon-p1-01/`, `videos/neon-p1-01_batch.py`, `videos/NE11`–`NE13` | `out/neon-p1-01/` |
 | **Pakej WP 2** — Cinnamon, Glaze, Ombak, Dazzie, Core Slim: 35 draf skrip mg (5 produk + 2 psikografik setiap model) | `projek/wp-pakej2-01/` | — |
-| **Peti ais × P2 pakej 30 video** — batch 1 PA06–PA15 (6 kategori: masalah, tips, pilih, situasi, produk, bantahan) | `projek/peti-ais-p2-01/`, `videos/peti-ais-p2-01_batch.py`, `videos/PA06`–`PA15`, `assets/img/peti-ais-p2-01/` | `out/peti-ais-p2-01/` |
+| **Peti ais × P2 pakej 30 video** — batch 1 PA06–PA15, batch 2 PA16–PA25 (6 kategori: masalah, tips, pilih, situasi, produk, bantahan; shot Google Flow dalam `shots.md`) | `projek/peti-ais-p2-01/`, `videos/peti-ais-p2-01_batch.py`, `videos/peti-ais-p2-01_b2.py`, `videos/PA06`–`PA25`, `assets/img/peti-ais-p2-01/` | `out/peti-ais-p2-01/` |
 | **Peti ais & aircond** — plan content | `plan/` | — |
 | **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
 | **Threads / posting** | `threads/`, `promo/threads/` | — |

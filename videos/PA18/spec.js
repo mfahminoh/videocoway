@@ -118,7 +118,8 @@ window.SPEC = {
    "type": "reason",
    "top": 600,
    "num": "3",
-   "title": "LAMA DEPAN, BARU BELAKANG",
+   "title": "LAMA DI DEPAN",
+   "sub": "baru di belakang",
    "t0": 17.92,
    "t1": 21.48
   },

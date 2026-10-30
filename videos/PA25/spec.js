@@ -12,7 +12,7 @@ window.SPEC = {
   {
    "t0": 5.94,
    "bg": {
-    "image": "../../assets/img/peti-ais-p2-01/pa06_b_bekas.jpg",
+    "image": "../../assets/img/peti-ais-p2-01/s03_periuk.jpg",
     "color": "navy",
     "shade": true
    },
