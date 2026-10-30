@@ -11,7 +11,7 @@ Pakej video peti ais untuk dijual kepada ejen: 30 video (3 batch × 10), tiada n
 | 3 Skrip batch 2 (02, 03, 04, 06, 07, 09, 10, 12, 15, 17) | ✅ | skrip.md (Batch 2) | PA16–PA25, diluluskan 30 Okt |
 | 4 Video batch 2 | ✅ versi awal (dianggap lulus 30 Okt) | out/peti-ais-p2-01/ | dirender 30 Okt, latar = bingkai Seedream; review: https://claude.ai/artifact/LP4D1ySHeRfpjkGK6CRrgX; menunggu 16 klip Google Flow (shots.md) |
 | 3 Skrip batch 3 (18, 19, 21, 22, 23, 24, 26, 28, 29, 30) | ✅ | skrip.md (Batch 3) | PA26–PA35 dengan promo RM20 × 7 bulan, diluluskan 30 Okt |
-| 4 Video batch 3 | ⏳ | out/peti-ais-p2-01/ | latar s18–s20 = bingkai Seedream sehingga klip Flow |
+| 4 Video batch 3 | ⏳ review | out/peti-ais-p2-01/ | dirender 30 Okt; review: https://claude.ai/artifact/2uF3gSMm1aGJhR3ZaxpnJS; latar s18–s20 = bingkai Seedream sehingga klip Flow |
 | 5 Poster | — | out/peti-ais-p2-01/poster/ | poster pakej (audiens ejen) |
 | 6 Threads | — | threads.md | |
 | 7 Iklan | — | | |
