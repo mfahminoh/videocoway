@@ -1,0 +1,252 @@
+{
+ "slug": "explainer-side-by-side-715l",
+ "voice": "Aoede",
+ "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "navy"
+  },
+  {
+   "at": "@08",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "banner",
+   "in": "@01",
+   "out": "@02",
+   "top": 230,
+   "html": "<em>715L</em> UNTUK STOK KELUARGA"
+  },
+  {
+   "type": "photo",
+   "in": 0,
+   "out": "@02",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_spaces.jpg"
+  },
+  {
+   "type": "banner",
+   "in": "@02",
+   "out": "@03",
+   "top": 230,
+   "html": "COWAY <em>SIDE-BY-SIDE</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@02",
+   "out": "@03",
+   "top": 330,
+   "left": 90,
+   "w": 900,
+   "h": 706,
+   "src": "../../assets/img/coway_fridge/715_open_dark.jpg"
+  },
+  {
+   "type": "chips",
+   "in": "@02%30",
+   "out": "@03",
+   "top": 1120,
+   "items": [
+    {
+     "text": "FREEZER KIRI",
+     "color": "#fff",
+     "at": "@02%35"
+    },
+    {
+     "text": "PETI SEJUK KANAN",
+     "color": "#ffd23f",
+     "at": "@02%55"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@03",
+   "out": "@04",
+   "top": 230,
+   "html": "SETIAP BARANG <em>ADA TEMPAT</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@03",
+   "out": "@04",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/715_kitchen_open.jpg"
+  },
+  {
+   "type": "chips",
+   "in": "@03%15",
+   "out": "@04",
+   "top": 1180,
+   "items": [
+    {
+     "text": "RAK PINTU",
+     "color": "#fff",
+     "at": "@03%15"
+    },
+    {
+     "text": "RUANG UTAMA",
+     "color": "#fff",
+     "at": "@03%40"
+    },
+    {
+     "text": "FREEZER BERLABEL",
+     "color": "#ffd23f",
+     "at": "@03%65"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@04",
+   "out": "@05",
+   "top": 230,
+   "html": "<em>HUMIDITY</em> CONTROL"
+  },
+  {
+   "type": "photo",
+   "in": "@04",
+   "out": "@05",
+   "top": 420,
+   "left": 90,
+   "w": 900,
+   "h": 675,
+   "src": "../../assets/img/coway_fridge/715_humidity.jpg"
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "DOUBLE <em>INVERTER</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@05",
+   "out": "@06",
+   "top": 360,
+   "left": 260,
+   "w": 560,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/715_panel_touch.jpg"
+  },
+  {
+   "type": "chips",
+   "in": "@05%30",
+   "out": "@06",
+   "top": 980,
+   "items": [
+    {
+     "text": "SMART",
+     "color": "#fff",
+     "at": "@05%40"
+    },
+    {
+     "text": "ECO",
+     "color": "#fff",
+     "at": "@05%52"
+    },
+    {
+     "text": "POWER COOL",
+     "color": "#fff",
+     "at": "@05%64"
+    },
+    {
+     "text": "SUPER FREEZING −25°C",
+     "color": "#ffd23f",
+     "at": "@05%76"
+    }
+   ]
+  },
+  {
+   "type": "banner",
+   "in": "@06",
+   "out": "@07",
+   "top": 230,
+   "html": "DUAL <em>HYGIENE</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@06",
+   "out": "@07",
+   "top": 380,
+   "left": 160,
+   "w": 760,
+   "h": 760,
+   "src": "../../assets/img/coway_fridge/551_deo_cubes.jpg"
+  },
+  {
+   "type": "pill",
+   "in": "@06%55",
+   "out": "@07",
+   "top": 1180,
+   "html": "98.4% BAU IKAN (TRIMETHYLAMINE)¹",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "banner",
+   "in": "@07",
+   "out": "@08",
+   "top": 230,
+   "html": "UKUR <em>DULU</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@07",
+   "out": "@08",
+   "top": 360,
+   "left": 280,
+   "w": 520,
+   "h": 520,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg"
+  },
+  {
+   "type": "grid",
+   "in": "@07%10",
+   "out": "@08",
+   "top": 920,
+   "items": [
+    {
+     "big": "91",
+     "small": "LEBAR (CM)",
+     "at": "@07%30"
+    },
+    {
+     "big": "74",
+     "small": "DALAM (CM)",
+     "at": "@07%12"
+    },
+    {
+     "big": "190.5",
+     "small": "TINGGI (CM)",
+     "at": "@07%45"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "in": "@08",
+   "top": 700,
+   "ticks": [
+    "BAYAR RM20 × 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 SEBULAN",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@08%40",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L), pelan HEART Service 7 tahun, termasuk SST. Hantar &amp; pasang percuma seluruh Malaysia. Promosi terhad, tertakluk terma &amp; syarat Coway. ¹Ujian makmal dalam persekitaran terkawal."
+  }
+ ],
+ "theme": "coway",
+ "brand": "COWAY"
+}

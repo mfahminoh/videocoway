@@ -3,7 +3,7 @@
 Status: **DILULUSKAN 30 Okt 2026** (user: pelan explainer, "pergi ke next task") · Sumber: `pelan-user.md` bahagian 3–4
 Fakta disemak dengan coway.com.my (`research/peti-ais-produk.md`, 25 Okt 2026). Dijana daripada `videos/peti-ais-explainer-01_batch.py`.
 
-Nota kaki CTA: *Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran & pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma & syarat Coway. ¹Ujian makmal dalam persekitaran terkawal. Kapasiti ialah kapasiti kasar.
+Nota kaki CTA: *Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L), pelan HEART Service 7 tahun, termasuk SST. Hantar & pasang percuma seluruh Malaysia. Promosi terhad, tertakluk terma & syarat Coway. ¹Ujian makmal dalam persekitaran terkawal.
 
 
 ## PA36 · 551L, 4 pintu: besar kerana tersusun, bukan sekadar luas
@@ -13,11 +13,11 @@ Suara: Orus · Format: scenes + klip/gambar rasmi Coway
 |---|---|---|---|
 | 01 | Peti ais besar, bukan bermaksud semua barang dicampak dalam satu ruang. | Besar ≠ *campak dalam satu ruang* | Klip rasmi 551_bigspace |
 | 02 | Ini peti ais Coway Multi-Door, lima ratus lima puluh satu liter, empat pintu, warna Black Inox. | Coway *Multi-Door 551L* · 4 pintu | Rasmi 551_front |
-| 03 | Empat pintu bantu kita bahagikan makanan ikut rutin dan kategori. Barang yang selalu guna, lebih senang dicapai. | Bahagi ikut *rutin & kategori* | Rasmi 551_open_food |
+| 03 | Empat pintu bantu bahagikan makanan ikut rutin dan kategori. Barang yang selalu guna, senang dicapai. | Bahagi ikut *rutin & kategori* | Rasmi 551_open_food |
 | 04 | Bahagian bawah ialah Convertible Zone, dengan empat julat suhu: dari lima darjah untuk sayur dan buah, sampai negatif dua puluh untuk simpanan lama. | *Convertible Zone* · 4 julat suhu | Klip rasmi 551_convert + cip julat |
 | 05 | Triple inverter dengan dua kipas, dan dinding penyejuk logam, untuk penyejukan yang konsisten. | Triple Inverter · *Metal Cooling* | Klip rasmi 551_airflow |
-| 06 | Untuk bau, silver ion di zon peti sejuk, dan penapis penyahbau di zon freezer. Dalam ujian makmal, ia neutralkan sehingga sembilan puluh lapan perpuluhan empat peratus bau ikan. | Dual Hygiene · *98.4%* bau ikan¹ | Rasmi 551_deo_cubes |
-| 07 | Ukurannya, lebar sembilan puluh, dalam enam puluh, tinggi seratus sembilan puluh sentimeter, dengan rekaan built-in. Ukur juga laluan masuk dan ruang buka pintu, atau tengok dulu dalam dapur awak guna app Coway AR. | *90.5 × 59.7 × 190.2 cm* · app Coway AR | Rasmi 551_builtin + grid |
+| 06 | Silver ion di peti sejuk, penapis penyahbau di freezer. Dalam ujian makmal, ia neutralkan sehingga sembilan puluh lapan perpuluhan empat peratus bau ikan. | Dual Hygiene · *98.4%* bau ikan¹ | Rasmi 551_deo_cubes |
+| 07 | Lebar sembilan puluh, dalam enam puluh, tinggi seratus sembilan puluh sentimeter, rekaan built-in. Ukur laluan dan ruang buka pintu, atau cuba dulu dalam dapur guna app Coway AR. | *90.5 × 59.7 × 190.2 cm* · app Coway AR | Rasmi 551_builtin + grid |
 | 08 | Kalau rumah awak kerap masak dan suka susunan fleksibel, Multi-Door pilihan yang praktikal. WhatsApp saya untuk semak ruang dan model. | Kerap masak? *Multi-Door* · *WhatsApp saya* | CTA |
 
 ## PA37 · 715L side-by-side: ruang besar untuk stok keluarga

@@ -116,8 +116,9 @@ window.SPEC = {
   {
    "type": "title",
    "top": 420,
-   "size": 120,
-   "html": "DUA MODEL · BAYAR<br><span style='color:var(--yellow)'>RM20</span>",
+   "size": 130,
+   "html": "DUA MODEL<br>BAYAR RM20",
+   "color": "#ffffff",
    "t0": 15.54,
    "t1": 19.03
   },

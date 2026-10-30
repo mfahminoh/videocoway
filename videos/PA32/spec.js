@@ -66,8 +66,8 @@ window.SPEC = {
      "Borong seminggu",
      "Simpan stok"
     ],
-    "at": "@03",
-    "t": 5.91
+    "at": "@02%55",
+    "t": 4.145
    },
    "t0": 2.66,
    "t1": 5.91
