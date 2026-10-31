@@ -1,0 +1,283 @@
+{
+ "slug": "demo-pakej-peti-ais",
+ "voice": "Fenrir",
+ "style_tts": "Say in Malaysian Malay, as an energetic, punchy young man pitching to fellow sales agents, fast and confident",
+ "player": "hype",
+ "style": "kinetic",
+ "bpm": 128,
+ "brand": "coway",
+ "cap": true,
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "clip": "pakej-demo_c01",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@01%50",
+   "bg": {
+    "clip": "pakej-demo_c02",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "pakej-demo_c03",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@02%35",
+   "bg": {
+    "clip": "pakej-demo_c04",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@02%70",
+   "bg": {
+    "clip": "pakej-demo_c05",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "clip": "pakej-demo_c06",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@03%35",
+   "bg": {
+    "clip": "pakej-demo_c07",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@03%70",
+   "bg": {
+    "clip": "pakej-demo_c08",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@04",
+   "bg": {
+    "clip": "pakej-demo_c09",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@04%50",
+   "bg": {
+    "clip": "pakej-demo_c10",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@05",
+   "bg": {
+    "clip": "pakej-demo_c11",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  },
+  {
+   "at": "@05%45",
+   "bg": {
+    "clip": "pakej-demo_c12",
+    "c0": 0,
+    "c1": 2.1,
+    "color": "k-ink",
+    "shade": false
+   }
+  }
+ ],
+ "els": [
+  {
+   "type": "words",
+   "in": "@01",
+   "out": "@02",
+   "top": 130,
+   "items": [
+    {
+     "txt": "NAK JUAL PETI AIS?",
+     "at": "@01",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TAK ADA VIDEO?",
+     "at": "@01%45",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@02",
+   "out": "@03",
+   "top": 130,
+   "items": [
+    {
+     "txt": "PAKEJ",
+     "at": "@02",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "32 VIDEO",
+     "at": "@02%30",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "PETI AIS COWAY",
+     "at": "@02%60",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@03",
+   "out": "@04",
+   "top": 130,
+   "items": [
+    {
+     "txt": "MASALAH · TIPS",
+     "at": "@03",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "CARA PILIH",
+     "at": "@03%35",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "KIRA SEWA VS TUNAI",
+     "at": "@03%70",
+     "size": 90,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@04",
+   "out": "@05",
+   "top": 130,
+   "items": [
+    {
+     "txt": "VERSI PROMO",
+     "at": "@04",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "+ 2 EXPLAINER",
+     "at": "@04%50",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  },
+  {
+   "type": "words",
+   "in": "@05",
+   "out": null,
+   "top": 130,
+   "items": [
+    {
+     "txt": "TIADA NAMA EJEN",
+     "at": "@05",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    },
+    {
+     "txt": "TERUS GUNA",
+     "at": "@05%25",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#04A4E4",
+     "hit": true
+    },
+    {
+     "txt": "KOMEN \"PAKEJ\" / DM",
+     "at": "@05%55",
+     "size": 100,
+     "color": "#fff",
+     "box": true,
+     "bg": "#111"
+    }
+   ]
+  }
+ ]
+}
