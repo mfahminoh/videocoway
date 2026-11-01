@@ -19,7 +19,7 @@ END_551 = ("Peti ais Coway empat pintu, dari sembilan puluh sembilan ringgit. Pr
 
 
 def tail(n, frm):
-    return [price(f"@{n:02d}", f"@{n:02d}%60", frm), hantar(f"@{n:02d}%40", f"@{n:02d}%60"), cta(f"@{n:02d}%60", fine=FINE_PW)]
+    return [price(f"@{n:02d}", f"@{n:02d}%60", frm), hantar(f"@{n:02d}%40", f"@{n:02d}%60"), cta(f"@{n:02d}%60", fine=FINE_PW, btn=f"@{n:02d}%80")]
 
 
 CODY = lambda a, o: [banner(a, o, "ADA ORANG <em>YANG JAGA</em>"), photo(a, o, "hs_step3.jpg", top=420, w=900, h=515),

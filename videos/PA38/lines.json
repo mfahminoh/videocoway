@@ -1,0 +1,27 @@
+[
+ {
+  "id": "01",
+  "text": "Penat. Banyak kali dah terpaksa buang lauk basah kat freezer, sebab peti rosak.",
+  "cap": "Penat. *Banyak kali dah* buang lauk basah"
+ },
+ {
+  "id": "02",
+  "text": "Ayam, ikan, rendang. Semua masuk tong sampah.",
+  "cap": "Ayam · ikan · *rendang*"
+ },
+ {
+  "id": "03",
+  "text": "Sampai satu tahap, daripada buang lauk je selalu, biar peti ni yang saya buang.",
+  "cap": "*Biar peti ni yang saya buang*"
+ },
+ {
+  "id": "04",
+  "text": "Kali ni saya nak peti yang ada orang jaga. Cody datang servis berkala tujuh tahun, kompressor waranti sepuluh tahun.",
+  "cap": "Cody *7 tahun* · kompressor *10 tahun**"
+ },
+ {
+  "id": "05",
+  "text": "Peti ais Coway, dari lapan puluh empat ringgit. Sekarang promosi rebat, bayar dua puluh ringgit je sebulan, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya.",
+  "cap": "Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya*"
+ }
+]

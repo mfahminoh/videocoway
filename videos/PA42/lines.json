@@ -1,0 +1,27 @@
+[
+ {
+  "id": "01",
+  "text": "Murah, tapi jangan tertipu.",
+  "cap": "Murah, tapi *jangan tertipu*"
+ },
+ {
+  "id": "02",
+  "text": "Ramai beli peti sebab harga. Tak sampai setahun, tiga kali claim.",
+  "cap": "Tak sampai setahun, *3 kali claim*"
+ },
+ {
+  "id": "03",
+  "text": "Mahal sikit tak apa, asal tak sakit kepala. Biar alah membeli, menang memakai.",
+  "cap": "Biar alah membeli, *menang memakai*"
+ },
+ {
+  "id": "04",
+  "text": "Peti ais Coway, bayar bulanan, Cody datang servis berkala tujuh tahun, kompressor waranti sepuluh tahun.",
+  "cap": "Cody *7 tahun* · kompressor *10 tahun**"
+ },
+ {
+  "id": "05",
+  "text": "Peti ais Coway, dari lapan puluh empat ringgit. Sekarang promosi rebat, bayar dua puluh ringgit je sebulan, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya.",
+  "cap": "Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya*"
+ }
+]
