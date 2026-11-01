@@ -1,7 +1,7 @@
 # Peti Ais — VoC
 
 Tarikh: 25 Okt 2026 · Sumber: Threads (teks post dari hasil carian), Lemon8, Kuali, FB DRCJ & post awam, Lowyat (ringkasan), riset 13 Okt & plan 23 Okt (petikan lama dikumpul semula di sini)
-Sumber kosong: threads.com tak boleh dibuka terus dari sesi 25 Okt (DNS disekat), jadi balasan dalam thread tak dapat dibaca (dah boleh dari 1 Nov melalui pelayar terbina dalam; lihat bahagian Psikografik); Reddit/Lowyat tiada thread peti ais Coway; **tiada chat WhatsApp pelanggan**
+Sumber kosong: threads.com tak boleh dibuka terus dari sesi 25 Okt (DNS disekat), jadi balasan dalam thread tak dapat dibaca (dah boleh dari 1 Nov melalui pelayar terbina dalam; lihat [`peti-ais-psikografik.md`](peti-ais-psikografik.md)); Reddit/Lowyat tiada thread peti ais Coway; **tiada chat WhatsApp pelanggan**
 Had & bias: post awam = pemilik peti ais umum, bukan pelanggan Coway. Ramai pengulas "Coway" di Threads ialah ejen (ditanda). Tarikh tepat post Threads tak dapat dibaca; semua dari 2025–2026 ikut ID post. Bahasa: Melayu santai, wanita lebih ramai di Threads/Lemon8.
 
 ## Ringkasan (5 baris)
@@ -47,78 +47,8 @@ Had & bias: post awam = pemilik peti ais umum, bukan pelanggan Coway. Ramai peng
 - Trade-in: pengguna tanya tukar peti LG lama; dijawab trade-in peti ais belum ada, hanya penapis lama Coway (Threads @i_am_aqilah, **ejen**)
 - Riset 23 Okt: "Coway baru je buat peti ais" · kontrak 7 tahun · sewa > tunai · muat ke dapur? · Black Inox sahaja.
 
-## Psikografik pengguna peti ais bermasalah (1 Nov 2026)
-
-Sumber: [thread @yurizna_mr](https://www.threads.com/@yurizna_mr/post/DfJN0oXE6h7), ±31 Okt 2026, 71K tontonan, 322 suka, 171 balasan, 213 kongsi. Dibaca 1 Nov: 116 balasan peringkat atas dan penulis; balasan bersarang lain tak dibuka.
-Had & bias: satu thread, tentang Hisense, jadi Hisense terlebih wakil dan pemuji jenama lain ramai datang membalas. Bukan pelanggan Coway. Kiraan ± ialah kodan tangan, bukan statistik.
-
-**Rantaian kes penulis:** rosak tahun ke-2, claim waranti → rosak teruk tahun ke-4 → tukar kompressor RM730 → 3 bulan "kejap rosak, kejap elok" → buang, beli Toshiba, kedai angkut peti lama.
-
-### 1. Titik putus ialah penat, bukan rosak
-Mereka bertahan melalui beberapa kali repair. Yang menamatkannya ialah rasa penat dan lauk yang terbuang berulang kali.
-- "Penat banyak kali dah terpaksa buang lauk basah kat freezer tu sbb peti rosak." (@yurizna_mr)
-- "Bosan hadap perangai peti ni, beli baru je lah akhirnya 😂" (@yurizna_mr)
-- "Daripada buang lauk je selalu, biar peti ni yg sy buang 😂" (@yurizna_mr)
-- "fridge saya ni pun rasa nak buang sungai je." (@arrshma)
-
-### 2. Ukuran peti yang baik: 10–20 tahun, peti mak
-Tanda aras datang dari peti zaman mak dan peti lama sendiri, bukan spesifikasi. ±15–20 balasan menyebut tempoh tahan (10, 15, 19, 20 tahun). 4 tahun dirasakan sebagai malu dan rugi.
-- "Peti ais toshiba mak sy bertahan 20 tahun" (@yurizna_mr)
-- "Org lain smua pakai atas 10 tahun.. Kita bru msok tahun ke 4 dh rosak" (@ctnanardidijuliet)
-- "Zaman dulu punya pakai sampai kiamat" (@egustavo56)
-
-### 3. Waranti tak lagi dipercayai
-Kekecewaan terbesar: waranti panjang di atas kertas, tapi tetap keluar duit. Repair dikira sama dengan beli baru.
-- "Walaupun warranty 12 tahun, nak tukar kompressor tetap kena bayar RM700+." (@dammedamiah)
-- "Wlaupun dlm waranti tetap kna byr 520 upah." (@afsarra_tg)
-- "kos technicians dtg ape semua kene tmbh duit..pastu kos sme mcm bli baru" (@nurulamalina970)
-- "technician dia datg rumah tengok pun tak sure rosak sebab apa." (@afifiromli)
-
-### 4. Menyesal pilih murah, sanggup bayar lebih untuk tenang
-Ramai beli kerana mampu milik dan kini menyalahkan keputusan itu. Mereka berpindah dari "harga" ke "tahan lama", dan menerima harga tinggi sebagai sakit yang berbaloi.
-- "Biar alah membeli menang memakai." (@yurizna_mr, penulis)
-- "Mahal Tp rsnya tahan lama" (@tuanshafq, 36 suka)
-- "tapi harge tu boleh kata yg sakit sikit haha" (@nangbotinang_kuibotikui)
-- "Murah tapi jgn tertipula ek." (@amny.rauhah)
-
-### 5. Percaya pada jenama lama dan orang dekat, ragu pada jenama baru
-Isyarat percaya mereka: umur syarikat, negara asal, pengalaman mak, nasihat promoter kedai. Ulasan dalam talian dicurigai bila dah terkena. **Ini halangan terus untuk Coway, yang baru di kategori peti ais.**
-- "yg mmg terbukti syarikatnya wujud sejak zaman dinocor lg." (@lynn_hashriq)
-- "rumah aku leh percaya brand Jepun ja." (@anqabath)
-- "bdk promoter tuh larang kami ambik jenama hisense nie" (@ibudanishadam)
-- "Beli sebab tengok review kata bagus." (@delarose615)
-
-### 6. Pasrah: "ikut rezeki"
-Ada kumpulan (±5 balasan) yang menerima kerosakan sebagai nasib atau zaman. Malah penjual memberi jangkaan rendah. Metafora "jodoh" menunjukkan peti dianggap ahli rumah, dan rugi dihadapi dengan gurauan.
-- "Semua ikut rezeki masing2 haha" (@rdznrhmn_)
-- "seller cakap sekarang ni barang eletronik brand apa pun semua 4-5 tahun rosak." (@esrazeneka)
-- "Moga jodoh sy panjang la dgn peti ais baru ni." (@yurizna_mr)
-
-### 7. Dapur dan rumah yang aktif
-Peti ialah stok makanan keluarga. Ada isi rumah yang bertambah dan yang sedang kira-kira sama ada baiki atau ganti. Sebahagiannya repair sendiri atau cari teknisyen luar sebelum menyerah (PCB Shopee RM150 vs kedai RM700).
-- "harap bertahan lama la kita ni kaki masak🤣" (@abil09)
-- "Cuma nk besar ahli dh bertambah" (@madihahzaidi)
-- "husbnd tukar box dkt belakang je order shopee rm150 until now jadi" (@rihan_empire)
-
-### Lima situasi dalam thread ni
-Semua di bawah P2, bukan persona baru.
-
-| Situasi | Fikiran | Bukti | Kesediaan beli |
-|---|---|---|---|
-| **Dalam gelung repair** | Baiki lagi atau ganti? | "tengah berkira kira nak beli baru" (@dammedamiah) · "skejap elok, skejap tak😭" (@__nurulfatihah__) | Paling tinggi, tapi tingkapnya pendek |
-| **Serik** | Tak mahu lagi jenama ni | "skrg tgk apa2 jenama hisense mmg rasa ick euw" (@widuri_143) | Dah beli, atau tegar pada jenama Jepun |
-| **Cemas pemilik sama** (±9) | Peti aku pun akan rosak? | "Adui takut la pulak. Kat rumah pakai banyak barang Hisense." (@tengkuazwan6) | Belum, tapi peka |
-| **Sedang survey** | Jenama apa yang selamat? | "Tengah dilema nk beli brand apa." (@madihahzaidi) · "4 pintu brand apa ok ?" (@yeenkiennn) | Tinggi |
-| **Pasrah** | Semua sama sahaja | "tkpela redha je la kalau nk rosak pun" (@yhssvnvhy) | Rendah |
-
-### Tiga isyarat untuk jualan
-- **Keputusan sangat cepat.** Ejen @ezaticoway membalas "Nak tak peti ais hntar bulan ni, bayar tahun depan?" (7 suka). Penulis tertarik tapi lewat: "Woww promo ape tu? Sy dah beli fridge baru dah 😄"
-- **Angkut peti lama** ialah soalan nyata: "Orang dtg ambil tu bagi saja atau jual?" (@shah_aryl). Penulis minta kedai bawa sekali; rumahnya tiada ruang.
-- **Bukan satu jenama sahaja selamat.** LG, Toshiba, Samsung pun ada kisah rosak (@afifiromli, @esrazeneka, @manjeffry). Peluang: "jenama besar pun rosak, yang penting apa jadi selepas rosak".
-
-### Risiko untuk Coway
-- Coway belum ada rekod 10–20 tahun, jadi jangan bertanding atas "tahan lama"; jawapan yang tersedia ialah waranti dan servis.
-- Terma Coway sendiri ([`peti-ais-produk.md`](peti-ais-produk.md)): kompressor 10 tahun, tapi selepas tempoh umum tamat upah dan caj servis dibayar pelanggan. Ini **sakit yang sama** dengan "warranty 12 tahun tetap bayar RM700+". Jangan guna sudut waranti sehingga HQ sahkan liputan pelan sewa.
+## Psikografik
+Dah dipindahkan ke [`peti-ais-psikografik.md`](peti-ais-psikografik.md) (thread Hisense, 171 balasan).
 
 ## Bank bahasa pelanggan
 Frasa sebenar untuk hook & copy:
