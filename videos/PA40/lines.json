@@ -1,31 +1,36 @@
 [
  {
   "id": "01",
+  "text": "Peti ais rosak lagi. Selalu sangat buat masalah.",
+  "cap": "Peti ais *rosak lagi*"
+ },
+ {
+  "id": "02",
   "text": "Ada waranti, tapi nak tukar kompressor, tetap kena bayar tujuh ratus ringgit lebih.",
   "cap": "Ada waranti… tetap bayar *RM700+*"
  },
  {
-  "id": "02",
+  "id": "03",
   "text": "Technician datang rumah, tengok pun tak pasti rosak sebab apa.",
   "cap": "Tengok pun *tak pasti rosak sebab apa*"
  },
  {
-  "id": "03",
+  "id": "04",
   "text": "Kos dia, sama macam beli baru.",
   "cap": "Kos *sama macam beli baru*"
  },
  {
-  "id": "04",
+  "id": "05",
   "text": "Jadi bila nak tukar, tanya dulu: lepas beli, siapa yang jaga?",
   "cap": "Lepas beli, *siapa yang jaga?*"
  },
  {
-  "id": "05",
+  "id": "06",
   "text": "Peti ais Coway ada dua jenis. Multi-Door, lima ratus lima puluh satu liter, empat pintu. Dan Side-by-Side, tujuh ratus lima belas liter. Dua-dua, Cody datang servis berkala tujuh tahun.",
   "cap": "Coway: *551L 4 pintu* · *715L side-by-side*"
  },
  {
-  "id": "06",
+  "id": "07",
   "text": "Dari lapan puluh empat ringgit sebulan. Sekarang promosi rebat, bayar dua puluh ringgit je, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya.",
   "cap": "Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya*"
  }

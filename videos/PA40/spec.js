@@ -3,44 +3,53 @@ window.SPEC = {
   {
    "t0": 0.0,
    "bg": {
+    "image": "../../assets/img/peti-ais-p2-01/pa07_a_nazak.jpg",
+    "color": "night",
+    "shade": true
+   },
+   "t1": 3.74
+  },
+  {
+   "t0": 3.74,
+   "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa11_b_resit.jpg",
     "color": "navy",
     "shade": true
    },
-   "t1": 5.89
+   "t1": 9.27
   },
   {
-   "t0": 5.89,
+   "t0": 9.27,
    "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa11_a_repair.jpg",
     "color": "navy",
     "shade": true
    },
-   "t1": 9.13
+   "t1": 13.12
   },
   {
-   "t0": 9.13,
+   "t0": 13.12,
    "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa15_a_kira.jpg",
     "color": "navy",
     "shade": true
    },
-   "t1": 11.24
+   "t1": 15.92
   },
   {
-   "t0": 11.24,
+   "t0": 15.92,
    "bg": "navy",
-   "t1": 15.73
+   "t1": 21.67
   },
   {
-   "t0": 15.73,
+   "t0": 21.67,
    "bg": "navy",
-   "t1": 26.06
+   "t1": 35.33
   },
   {
-   "t0": 26.06,
+   "t0": 35.33,
    "bg": "blue",
-   "t1": 37.16
+   "t1": 48.25
   }
  ],
  "els": [
@@ -51,7 +60,25 @@ window.SPEC = {
    "bg": "rgba(0,0,0,.55)",
    "color": "#fff",
    "t0": 0,
-   "t1": 5.89
+   "t1": 13.12
+  },
+  {
+   "type": "title",
+   "top": 420,
+   "size": 150,
+   "html": "PETI AIS<br>ROSAK LAGI?",
+   "color": "#ffffff",
+   "t0": 0.1,
+   "t1": 3.74
+  },
+  {
+   "type": "pill",
+   "top": 820,
+   "html": "SELALU BUAT MASALAH",
+   "bg": "#E5322D",
+   "color": "#fff",
+   "t0": 1.206,
+   "t1": 3.74
   },
   {
    "type": "photo",
@@ -63,8 +90,8 @@ window.SPEC = {
    "fit": "contain",
    "radius": 0,
    "shadow": false,
-   "t0": 0.09,
-   "t1": 5.89
+   "t0": 3.74,
+   "t1": 9.27
   },
   {
    "type": "pill",
@@ -72,8 +99,8 @@ window.SPEC = {
    "html": "TENGOK PUN TAK PASTI ROSAK SEBAB APA",
    "bg": "#E5322D",
    "color": "#fff",
-   "t0": 5.89,
-   "t1": 9.13
+   "t0": 9.27,
+   "t1": 13.12
   },
   {
    "type": "title",
@@ -81,23 +108,23 @@ window.SPEC = {
    "size": 110,
    "html": "KOS SAMA MACAM<br>BELI BARU",
    "color": "#ffffff",
-   "t0": 9.13,
-   "t1": 11.24
+   "t0": 13.12,
+   "t1": 15.92
   },
   {
    "type": "title",
    "top": 640,
    "size": 110,
    "html": "LEPAS BELI,<br>SIAPA YANG JAGA?",
-   "t0": 11.24,
-   "t1": 15.73
+   "t0": 15.92,
+   "t1": 21.67
   },
   {
    "type": "banner",
    "top": 230,
    "html": "PETI AIS COWAY <em>ADA 2 JENIS</em>",
-   "t0": 15.73,
-   "t1": 26.06
+   "t0": 21.67,
+   "t1": 35.33
   },
   {
    "type": "photo",
@@ -109,8 +136,8 @@ window.SPEC = {
    "fit": "contain",
    "bg": "#ffffff",
    "radius": 28,
-   "t0": 15.73,
-   "t1": 26.06
+   "t0": 21.67,
+   "t1": 35.33
   },
   {
    "type": "photo",
@@ -122,8 +149,8 @@ window.SPEC = {
    "fit": "contain",
    "bg": "#ffffff",
    "radius": 28,
-   "t0": 19.02,
-   "t1": 26.06
+   "t0": 26.231,
+   "t1": 35.33
   },
   {
    "type": "chips",
@@ -132,18 +159,18 @@ window.SPEC = {
     {
      "text": "551L · 4 PINTU",
      "color": "#fff",
-     "at": "@05%15",
-     "t": 17.14
+     "at": "@06%15",
+     "t": 23.625
     },
     {
      "text": "715L · SIDE-BY-SIDE",
      "color": "#ffd23f",
-     "at": "@05%40",
-     "t": 19.49
+     "at": "@06%40",
+     "t": 26.882
     }
    ],
-   "t0": 15.73,
-   "t1": 26.06
+   "t0": 21.67,
+   "t1": 35.33
   },
   {
    "type": "card",
@@ -151,8 +178,8 @@ window.SPEC = {
    "icon": "tech",
    "title": "CODY SERVIS BERKALA",
    "sub": "Dua-dua model, 7 tahun",
-   "t0": 22.31,
-   "t1": 26.06
+   "t0": 30.791,
+   "t1": 35.33
   },
   {
    "type": "price",
@@ -161,11 +188,11 @@ window.SPEC = {
    "from": "RM84",
    "to": "RM20",
    "badge": "7 BULAN PERTAMA*",
-   "t0": 26.06,
-   "t1": 31.1,
-   "badgeT": 31.94,
-   "strikeT": 29.0,
-   "toT": 30.26
+   "t0": 35.33,
+   "t1": 41.462,
+   "badgeT": 42.484,
+   "strikeT": 38.907,
+   "toT": 40.44
   },
   {
    "type": "pill",
@@ -173,8 +200,8 @@ window.SPEC = {
    "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 29.42,
-   "t1": 31.1
+   "t0": 39.418,
+   "t1": 41.462
   },
   {
    "type": "cta",
@@ -186,9 +213,9 @@ window.SPEC = {
    ],
    "button": "WhatsApp saya",
    "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway.",
-   "t0": 31.1,
+   "t0": 41.462,
    "t1": null,
-   "btnT": 32.78
+   "btnT": 43.506
   }
  ],
  "clips": {},

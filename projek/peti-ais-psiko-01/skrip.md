@@ -29,12 +29,13 @@ Status: DILULUSKAN 1 Nov 2026 (user). Sumber hook: research/peti-ais-psikografik
 
 | # | VO | Kapsyen | Visual |
 |---|---|---|---|
-| 01 | Ada waranti, tapi nak tukar kompressor, tetap kena bayar tujuh ratus ringgit lebih. | Ada waranti… tetap bayar *RM700+* | pa11_b_resit |
-| 02 | Technician datang rumah, tengok pun tak pasti rosak sebab apa. | Tengok pun *tak pasti rosak sebab apa* | pa11_a_repair |
-| 03 | Kos dia, sama macam beli baru. | Kos *sama macam beli baru* | pa15_a_kira |
-| 04 | Jadi bila nak tukar, tanya dulu: lepas beli, siapa yang jaga? | Lepas beli, *siapa yang jaga?* | Tajuk |
-| 05 | Peti ais Coway ada dua jenis. Multi-Door, lima ratus lima puluh satu liter, empat pintu. Dan Side-by-Side, tujuh ratus lima belas liter. Dua-dua, Cody datang servis berkala tujuh tahun. | Coway: *551L 4 pintu* · *715L side-by-side* | Rasmi 551_front + 715_kitchen1, kad Cody |
-| 06 | Dari lapan puluh empat ringgit sebulan. Sekarang promosi rebat, bayar dua puluh ringgit je, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya. | Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya* | Harga + CTA |
+| 01 | Peti ais rosak lagi. Selalu sangat buat masalah. | Peti ais *rosak lagi* | pa07_a_nazak + tajuk |
+| 02 | Ada waranti, tapi nak tukar kompressor, tetap kena bayar tujuh ratus ringgit lebih. | Ada waranti… tetap bayar *RM700+* | pa11_b_resit + kad komen |
+| 03 | Technician datang rumah, tengok pun tak pasti rosak sebab apa. | Tengok pun *tak pasti rosak sebab apa* | pa11_a_repair |
+| 04 | Kos dia, sama macam beli baru. | Kos *sama macam beli baru* | pa15_a_kira |
+| 05 | Jadi bila nak tukar, tanya dulu: lepas beli, siapa yang jaga? | Lepas beli, *siapa yang jaga?* | Tajuk |
+| 06 | Peti ais Coway ada dua jenis. Multi-Door, lima ratus lima puluh satu liter, empat pintu. Dan Side-by-Side, tujuh ratus lima belas liter. Dua-dua, Cody datang servis berkala tujuh tahun. | Coway: *551L 4 pintu* · *715L side-by-side* | Rasmi 551_front + 715_kitchen1, kad Cody |
+| 07 | Dari lapan puluh empat ringgit sebulan. Sekarang promosi rebat, bayar dua puluh ringgit je, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya. | Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya* | Harga + CTA |
 
 ## PA41 · Peti mak 20 tahun, peti kita 4 tahun
 

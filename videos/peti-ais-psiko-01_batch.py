@@ -77,16 +77,21 @@ V["PA39"] = dict(tajuk="Kejap elok, kejap rosak", slug="kejap-elok-kejap-rosak",
        banner("@03", "@04", "BAIKI LAGI,<br><em>ATAU BELI BARU?</em>"),
        bridge("@04", "@05", "PILIH YANG<br>ADA ORANG JAGA"), *intro("@05", "@06", "PA39"), *tail(6)])
 V["PA40"] = dict(tajuk="Ada waranti, tetap kena bayar", slug="waranti-tetap-kena-bayar", voice="Algieba", style=MALE_S, lines=L(
-    ("Ada waranti, tapi nak tukar kompressor, tetap kena bayar tujuh ratus ringgit lebih.", "Ada waranti… tetap bayar *RM700+*", "pa11_b_resit"),
+    ("Peti ais rosak lagi. Selalu sangat buat masalah.", "Peti ais *rosak lagi*", "pa07_a_nazak + tajuk"),
+    ("Ada waranti, tapi nak tukar kompressor, tetap kena bayar tujuh ratus ringgit lebih.", "Ada waranti… tetap bayar *RM700+*", "pa11_b_resit + kad komen"),
     ("Technician datang rumah, tengok pun tak pasti rosak sebab apa.", "Tengok pun *tak pasti rosak sebab apa*", "pa11_a_repair"),
     ("Kos dia, sama macam beli baru.", "Kos *sama macam beli baru*", "pa15_a_kira"),
     ("Jadi bila nak tukar, tanya dulu: lepas beli, siapa yang jaga?", "Lepas beli, *siapa yang jaga?*", "Tajuk"),
     INTRO, END),
-  scenes=[(0, R("pa11_b_resit")), ("@02", R("pa11_a_repair")), ("@03", R("pa15_a_kira")), SC[0], SC[1], SC[2]],
-  els=[lakonan(), komen("PA40"),
-       pill("@02", "@03", "TENGOK PUN TAK PASTI ROSAK SEBAB APA", top=1180, bg=RED, color="#fff"),
-       title("@03", "@04", "KOS SAMA MACAM<br>BELI BARU", top=600, size=110, color="#ffffff"),
-       bridge("@04", "@05", "LEPAS BELI,<br>SIAPA YANG JAGA?"), *intro("@05", "@06", "PA40"), *tail(6)])
+  scenes=[(0, R("pa07_a_nazak", "night")), ("@02", R("pa11_b_resit")), ("@03", R("pa11_a_repair")), ("@04", R("pa15_a_kira")),
+          ("@05", "navy"), ("@06", "navy"), ("@07", "blue")],
+  els=[lakonan("@04"),
+       title("@01", "@02", "PETI AIS<br>ROSAK LAGI?", top=420, size=150, color="#ffffff"),
+       pill("@01%35", "@02", "SELALU BUAT MASALAH", top=820, bg=RED, color="#fff"),
+       {**komen("PA40", "@03"), "in": "@02"},
+       pill("@03", "@04", "TENGOK PUN TAK PASTI ROSAK SEBAB APA", top=1180, bg=RED, color="#fff"),
+       title("@04", "@05", "KOS SAMA MACAM<br>BELI BARU", top=600, size=110, color="#ffffff"),
+       bridge("@05", "@06", "LEPAS BELI,<br>SIAPA YANG JAGA?"), *intro("@06", "@07", "PA40"), *tail(7)])
 V["PA41"] = dict(tajuk="Peti mak 20 tahun, peti kita 4 tahun", slug="peti-mak-20-tahun", voice="Aoede", style=FEM_S, lines=L(
     ("Peti ais mak saya bertahan dua puluh tahun. Peti saya? Empat tahun je.", "Peti mak *20 tahun*. Peti saya? *4 tahun je.*", "pa07_a_nazak"),
     ("Orang lain semua pakai atas sepuluh tahun. Kita baru masuk tahun keempat, dah rosak.", "Kita baru tahun ke-4, *dah rosak*", "pa13_a_tong"),
