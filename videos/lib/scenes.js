@@ -245,7 +245,7 @@ function seek(T) {
   }
   set('flash', { o: SP.scenes.slice(1).some(s => t >= s.t0 && t < s.t0 + .2) ? (1 - (t - sc.t0) / .2) * .3 : 0 });
   SP.els.forEach(e => drawEl(e, t));
-  caption(CH, t);
+  if (SP.cap !== false) caption(CH, t); else set('cap', { o: 0 });
   if (SP.brand) { const L = isLight(t); $('brandTag').style.color = L ? '#04A4E4' : '#fff'; $('brandTag').style.textShadow = L ? 'none' : '0 2px 10px rgba(0,0,0,.4)'; }
   return pending;
 }
