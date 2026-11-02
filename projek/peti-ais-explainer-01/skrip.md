@@ -6,22 +6,25 @@ Fakta disemak dengan coway.com.my (`research/peti-ais-produk.md`, 25 Okt 2026). 
 Nota kaki CTA: *Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L), pelan HEART Service 7 tahun, termasuk SST. Hantar & pasang percuma seluruh Malaysia. Promosi terhad, tertakluk terma & syarat Coway. ¹Ujian makmal dalam persekitaran terkawal.
 
 
-## PA36 · 551L, 4 pintu: besar kerana tersusun, bukan sekadar luas
+## PA36 · 551L, 4 pintu: Convertible Zone, satu laci empat fungsi
 Suara: Orus · Format: scenes + klip/gambar rasmi Coway
 
 | # | VO | Kapsyen | Visual |
 |---|---|---|---|
 | 01 | Peti ais besar, bukan bermaksud semua barang dicampak dalam satu ruang. | Besar ≠ *campak dalam satu ruang* | Klip rasmi 551_bigspace |
 | 02 | Ini peti ais Coway Multi-Door, lima ratus lima puluh satu liter, empat pintu, warna Black Inox. | Coway *Multi-Door 551L* · 4 pintu | Rasmi 551_front |
-| 03 | Empat pintu bantu bahagikan makanan ikut rutin dan kategori. Barang yang selalu guna, senang dicapai. | Bahagi ikut *rutin & kategori* | Rasmi 551_open_food |
-| 04 | Bahagian bawah ialah Convertible Zone, dengan empat julat suhu: dari lima darjah untuk sayur dan buah, sampai negatif dua puluh untuk simpanan lama. | *Convertible Zone* · 4 julat suhu | Klip rasmi 551_convert + cip julat |
-| 05 | Triple inverter dengan dua kipas, dan dinding penyejuk logam, untuk penyejukan yang konsisten. | Triple Inverter · *Metal Cooling* | Klip rasmi 551_airflow |
-| 06 | Silver ion di peti sejuk, penapis penyahbau di freezer. Dalam ujian makmal, ia neutralkan sehingga sembilan puluh lapan perpuluhan empat peratus bau ikan. | Dual Hygiene · *98.4%* bau ikan¹ | Rasmi 551_deo_cubes |
-| 07 | Lebar sembilan puluh, dalam enam puluh, tinggi seratus sembilan puluh sentimeter, rekaan built-in. Ukur laluan dan ruang buka pintu, atau cuba dulu dalam dapur guna app Coway AR. | *90.5 × 59.7 × 190.2 cm* · app Coway AR | Rasmi 551_builtin + grid |
-| 08 | Kalau rumah awak kerap masak dan suka susunan fleksibel, Multi-Door pilihan yang praktikal. WhatsApp saya untuk semak ruang dan model. | Kerap masak? *Multi-Door* · *WhatsApp saya* | CTA |
+| 03 | Tapi bintang dia, Convertible Zone. Laci bawah ni, satu ruang, empat fungsi. Tukar ikut keperluan, bila-bila masa. | *Convertible Zone*: 1 laci, 4 fungsi | Klip rasmi 551_convert |
+| 04 | Lima hingga tiga darjah: buah dan sayur, bila borong banyak. | 5→3°C · *buah & sayur* | LED 3°C + 551_drawers |
+| 05 | Dua hingga kosong darjah: minuman sejuk. Tetamu datang, air dah sedia. | 2→0°C · *minuman sejuk* | LED 0°C |
+| 06 | Negatif satu hingga negatif tujuh: simpanan singkat. Ayam dan ikan untuk masak esok atau lusa. | −1→−7°C · *simpanan singkat* | LED −7°C |
+| 07 | Negatif lapan hingga negatif dua puluh: simpanan lama. Stok daging korban, stok raya. | −8→−20°C · *simpanan lama* | LED −20°C |
+| 08 | Musim raya, jadikan freezer tambahan. Lepas raya, tukar balik jadi peti sejuk. Satu laci, ikut musim keluarga awak. | Raya: *freezer* · Lepas raya: *peti sejuk* | Rasmi 551_drawers + cip |
+| 09 | Triple inverter dan dinding penyejuk logam, untuk sejuk yang konsisten. Silver ion dan penapis penyahbau, bantu kurangkan bau ikan. | Triple Inverter · Dual Hygiene¹ | Klip rasmi 551_airflow |
+| 10 | Lebar sembilan puluh, dalam enam puluh sentimeter. Ukur dulu, atau cuba dalam dapur guna app Coway AR. | *90.5 × 59.7 cm* · app Coway AR | Rasmi 551_builtin + grid |
+| 11 | Nak satu laci yang ikut musim keluarga? WhatsApp saya untuk semak ruang dan model. | *WhatsApp saya* | CTA |
 
 ## PA37 · 715L side-by-side: ruang besar untuk stok keluarga
-Suara: Aoede · Format: scenes + klip/gambar rasmi Coway
+Suara: Kore · Format: scenes + klip/gambar rasmi Coway
 
 | # | VO | Kapsyen | Visual |
 |---|---|---|---|
