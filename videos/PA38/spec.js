@@ -54,9 +54,15 @@ window.SPEC = {
    "t1": 6.25
   },
   {
-   "type": "banner",
-   "top": 230,
-   "html": "PENAT. <em>BANYAK KALI DAH</em><br>BUANG LAUK BASAH",
+   "type": "photo",
+   "top": 300,
+   "left": 70,
+   "w": 940,
+   "h": 454,
+   "src": "../../assets/img/peti-ais-psiko-01/komen_PA38.png",
+   "fit": "contain",
+   "radius": 0,
+   "shadow": false,
    "t0": 0.08,
    "t1": 6.25
   },
@@ -95,27 +101,33 @@ window.SPEC = {
   },
   {
    "type": "photo",
-   "top": 400,
-   "left": 70,
-   "w": 450,
-   "h": 560,
-   "src": "../../assets/img/coway_fridge/551_front.jpg",
+   "top": 380,
+   "left": 60,
+   "w": 465,
+   "h": 620,
+   "src": "../../assets/img/peti-ais-psiko-01/r551_a.png",
+   "fit": "contain",
+   "bg": "#ffffff",
+   "radius": 28,
    "t0": 18.39,
    "t1": 27.14
   },
   {
    "type": "photo",
-   "top": 400,
-   "left": 560,
-   "w": 450,
-   "h": 560,
-   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg",
+   "top": 380,
+   "left": 555,
+   "w": 465,
+   "h": 620,
+   "src": "../../assets/img/peti-ais-psiko-01/r715_a.jpg",
+   "fit": "contain",
+   "bg": "#ffffff",
+   "radius": 28,
    "t0": 21.309,
    "t1": 27.14
   },
   {
    "type": "chips",
-   "top": 1000,
+   "top": 1030,
    "items": [
     {
      "text": "551L · 4 PINTU",
@@ -135,7 +147,7 @@ window.SPEC = {
   },
   {
    "type": "card",
-   "top": 1150,
+   "top": 1160,
    "icon": "tech",
    "title": "CODY SERVIS BERKALA",
    "sub": "Dua-dua model, 7 tahun",

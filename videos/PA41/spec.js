@@ -54,9 +54,15 @@ window.SPEC = {
    "t1": 2.72
   },
   {
-   "type": "banner",
-   "top": 230,
-   "html": "PETI MAK <em>20 TAHUN</em>.<br>PETI SAYA? <em>4 TAHUN JE.</em>",
+   "type": "photo",
+   "top": 300,
+   "left": 70,
+   "w": 940,
+   "h": 810,
+   "src": "../../assets/img/peti-ais-psiko-01/komen_PA41.png",
+   "fit": "contain",
+   "radius": 0,
+   "shadow": false,
    "t0": 0.02,
    "t1": 2.72
   },
@@ -95,27 +101,33 @@ window.SPEC = {
   },
   {
    "type": "photo",
-   "top": 400,
-   "left": 70,
-   "w": 450,
-   "h": 560,
-   "src": "../../assets/img/coway_fridge/551_front.jpg",
+   "top": 380,
+   "left": 60,
+   "w": 465,
+   "h": 620,
+   "src": "../../assets/img/peti-ais-psiko-01/r551_a.png",
+   "fit": "contain",
+   "bg": "#ffffff",
+   "radius": 28,
    "t0": 12.18,
    "t1": 24.73
   },
   {
    "type": "photo",
-   "top": 400,
-   "left": 560,
-   "w": 450,
-   "h": 560,
-   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg",
+   "top": 380,
+   "left": 555,
+   "w": 465,
+   "h": 620,
+   "src": "../../assets/img/peti-ais-psiko-01/r715_b.jpg",
+   "fit": "contain",
+   "bg": "#ffffff",
+   "radius": 28,
    "t0": 16.436,
    "t1": 24.73
   },
   {
    "type": "chips",
-   "top": 1000,
+   "top": 1030,
    "items": [
     {
      "text": "551L · 4 PINTU",
@@ -135,7 +147,7 @@ window.SPEC = {
   },
   {
    "type": "card",
-   "top": 1150,
+   "top": 1160,
    "icon": "tech",
    "title": "CODY SERVIS BERKALA",
    "sub": "Dua-dua model, 7 tahun",
