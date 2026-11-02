@@ -7,35 +7,40 @@ window.SPEC = {
     "color": "navy",
     "shade": true
    },
-   "t1": 5.07
+   "t1": 3.58
   },
   {
-   "t0": 5.07,
+   "t0": 3.58,
    "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa13_b_cium.jpg",
     "color": "night",
     "shade": true
    },
-   "t1": 10.2
+   "t1": 7.61
   },
   {
-   "t0": 10.2,
+   "t0": 7.61,
    "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa11_a_repair.jpg",
     "color": "navy",
     "shade": true
    },
-   "t1": 17.35
+   "t1": 14.95
   },
   {
-   "t0": 17.35,
+   "t0": 14.95,
    "bg": "navy",
-   "t1": 23.2
+   "t1": 19.4
   },
   {
-   "t0": 23.2,
+   "t0": 19.4,
+   "bg": "navy",
+   "t1": 32.16
+  },
+  {
+   "t0": 32.16,
    "bg": "blue",
-   "t1": 38.7
+   "t1": 48.21
   }
  ],
  "els": [
@@ -43,8 +48,8 @@ window.SPEC = {
    "type": "banner",
    "top": 230,
    "html": "SEKEJAP ELOK,<br><em>SEKEJAP TAK</em> 😭",
-   "t0": 0.1,
-   "t1": 5.07
+   "t0": 0.09,
+   "t1": 3.58
   },
   {
    "type": "pill",
@@ -52,63 +57,92 @@ window.SPEC = {
    "html": "PAGI SEJUK · PETANG DAH BERBAU",
    "bg": "#E5322D",
    "color": "#fff",
-   "t0": 5.07,
-   "t1": 10.2
+   "t0": 3.58,
+   "t1": 7.61
   },
   {
    "type": "banner",
    "top": 230,
    "html": "BAIKI LAGI,<br><em>ATAU BELI BARU?</em>",
-   "t0": 10.2,
-   "t1": 17.35
+   "t0": 7.61,
+   "t1": 14.95
+  },
+  {
+   "type": "title",
+   "top": 640,
+   "size": 110,
+   "html": "PILIH YANG<br>ADA ORANG JAGA",
+   "t0": 14.95,
+   "t1": 19.4
   },
   {
    "type": "banner",
    "top": 230,
-   "html": "ADA ORANG <em>YANG JAGA</em>",
-   "t0": 17.35,
-   "t1": 23.2
+   "html": "PETI AIS COWAY <em>ADA 2 JENIS</em>",
+   "t0": 19.4,
+   "t1": 32.16
   },
   {
    "type": "photo",
-   "top": 420,
-   "left": 90,
-   "w": 900,
-   "h": 515,
-   "src": "../../assets/img/coway_fridge/hs_step3.jpg",
-   "t0": 17.35,
-   "t1": 23.2
+   "top": 400,
+   "left": 70,
+   "w": 450,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/551_front.jpg",
+   "t0": 19.4,
+   "t1": 32.16
+  },
+  {
+   "type": "photo",
+   "top": 400,
+   "left": 560,
+   "w": 450,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg",
+   "t0": 23.747,
+   "t1": 32.16
+  },
+  {
+   "type": "chips",
+   "top": 1000,
+   "items": [
+    {
+     "text": "551L · 4 PINTU",
+     "color": "#fff",
+     "at": "@05%15",
+     "t": 21.263
+    },
+    {
+     "text": "715L · SIDE-BY-SIDE",
+     "color": "#ffd23f",
+     "at": "@05%40",
+     "t": 24.368
+    }
+   ],
+   "t0": 19.4,
+   "t1": 32.16
   },
   {
    "type": "card",
-   "top": 1000,
+   "top": 1150,
    "icon": "tech",
    "title": "CODY SERVIS BERKALA",
-   "sub": "7 tahun, ikut jadual",
-   "t0": 18.82,
-   "t1": 23.2
-  },
-  {
-   "type": "card",
-   "top": 1220,
-   "icon": "shield",
-   "title": "KOMPRESSOR 10 TAHUN*",
-   "sub": "Waranti kompressor",
-   "t0": 20.29,
-   "t1": 23.2
+   "sub": "Dua-dua model, 7 tahun",
+   "t0": 28.094,
+   "t1": 32.16
   },
   {
    "type": "price",
    "top": 360,
    "label": "HARGA BULANAN",
-   "from": "RM99",
+   "from": "RM84",
    "to": "RM20",
    "badge": "7 BULAN PERTAMA*",
-   "t0": 23.2,
-   "t1": 30.88,
-   "badgeT": 32.16,
-   "strikeT": 27.68,
-   "toT": 29.6
+   "t0": 32.16,
+   "t1": 40.17,
+   "badgeT": 41.505,
+   "strikeT": 36.832,
+   "toT": 38.835
   },
   {
    "type": "pill",
@@ -116,8 +150,8 @@ window.SPEC = {
    "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 28.32,
-   "t1": 30.88
+   "t0": 37.5,
+   "t1": 40.17
   },
   {
    "type": "cta",
@@ -129,13 +163,14 @@ window.SPEC = {
    ],
    "button": "WhatsApp saya",
    "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway.",
-   "t0": 30.88,
+   "t0": 40.17,
    "t1": null,
-   "btnT": 33.44
+   "btnT": 42.84
   }
  ],
  "clips": {},
  "theme": "coway",
  "brand": "COWAY",
- "style": "Say in Malaysian Malay, as a tired, fed-up mother venting honestly to a friend, emotional but natural"
+ "style": "Say in Malaysian Malay, as a tired, fed-up mother venting honestly to a friend, emotional but natural",
+ "cap": false
 };
