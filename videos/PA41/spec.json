@@ -33,6 +33,10 @@
   },
   {
    "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
    "bg": "blue"
   }
  ],
@@ -72,57 +76,84 @@
    "color": "#ffffff"
   },
   {
-   "type": "banner",
+   "type": "title",
    "in": "@04",
    "out": "@05",
+   "top": 640,
+   "size": 110,
+   "html": "KALI NI,<br>SAYA NAK TENANG"
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
    "top": 230,
-   "html": "ADA ORANG <em>YANG JAGA</em>"
+   "html": "PETI AIS COWAY <em>ADA 2 JENIS</em>"
   },
   {
    "type": "photo",
-   "in": "@04",
-   "out": "@05",
-   "top": 420,
-   "left": 90,
-   "w": 900,
-   "h": 515,
-   "src": "../../assets/img/coway_fridge/hs_step3.jpg"
+   "in": "@05",
+   "out": "@06",
+   "top": 400,
+   "left": 70,
+   "w": 450,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/551_front.jpg"
+  },
+  {
+   "type": "photo",
+   "in": "@05%35",
+   "out": "@06",
+   "top": 400,
+   "left": 560,
+   "w": 450,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg"
+  },
+  {
+   "type": "chips",
+   "in": "@05",
+   "out": "@06",
+   "top": 1000,
+   "items": [
+    {
+     "text": "551L · 4 PINTU",
+     "color": "#fff",
+     "at": "@05%15"
+    },
+    {
+     "text": "715L · SIDE-BY-SIDE",
+     "color": "#ffd23f",
+     "at": "@05%40"
+    }
+   ]
   },
   {
    "type": "card",
-   "in": "@04%30",
-   "out": "@05",
-   "top": 1000,
+   "in": "@05%70",
+   "out": "@06",
+   "top": 1150,
    "icon": "tech",
    "title": "CODY SERVIS BERKALA",
-   "sub": "7 tahun, ikut jadual"
-  },
-  {
-   "type": "card",
-   "in": "@04%60",
-   "out": "@05",
-   "top": 1220,
-   "icon": "shield",
-   "title": "KOMPRESSOR 10 TAHUN*",
-   "sub": "Waranti kompressor"
+   "sub": "Dua-dua model, 7 tahun"
   },
   {
    "type": "price",
-   "in": "@05",
-   "out": "@05%60",
+   "in": "@06",
+   "out": "@06%60",
    "top": 360,
    "label": "HARGA BULANAN",
-   "from": "RM99",
-   "strikeAt": "@05%35",
+   "from": "RM84",
+   "strikeAt": "@06%35",
    "to": "RM20",
-   "toAt": "@05%50",
+   "toAt": "@06%50",
    "badge": "7 BULAN PERTAMA*",
-   "badgeAt": "@05%70"
+   "badgeAt": "@06%70"
   },
   {
    "type": "pill",
-   "in": "@05%40",
-   "out": "@05%60",
+   "in": "@06%40",
+   "out": "@06%60",
    "top": 1180,
    "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
    "bg": "var(--yellow)",
@@ -130,7 +161,7 @@
   },
   {
    "type": "cta",
-   "in": "@05%60",
+   "in": "@06%60",
    "top": 760,
    "ticks": [
     "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
@@ -138,10 +169,11 @@
     "HANTAR & PASANG PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "btnAt": "@05%80",
+   "btnAt": "@06%80",
    "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway."
   }
  ],
+ "cap": false,
  "theme": "coway",
  "brand": "COWAY"
 }

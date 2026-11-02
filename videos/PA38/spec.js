@@ -7,35 +7,40 @@ window.SPEC = {
     "color": "night",
     "shade": true
    },
-   "t1": 6.53
+   "t1": 6.25
   },
   {
-   "t0": 6.53,
+   "t0": 6.25,
    "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa13_b_cium.jpg",
     "color": "night",
     "shade": true
    },
-   "t1": 9.65
+   "t1": 10.63
   },
   {
-   "t0": 9.65,
+   "t0": 10.63,
    "bg": {
     "image": "../../assets/img/peti-ais-p2-01/pa07_a_nazak.jpg",
     "color": "night",
     "shade": true
    },
-   "t1": 17.23
+   "t1": 15.98
   },
   {
-   "t0": 17.23,
+   "t0": 15.98,
    "bg": "navy",
-   "t1": 23.73
+   "t1": 18.39
   },
   {
-   "t0": 23.73,
+   "t0": 18.39,
+   "bg": "navy",
+   "t1": 27.14
+  },
+  {
+   "t0": 27.14,
    "bg": "blue",
-   "t1": 36.92
+   "t1": 40.77
   }
  ],
  "els": [
@@ -46,14 +51,14 @@ window.SPEC = {
    "bg": "rgba(0,0,0,.55)",
    "color": "#fff",
    "t0": 0,
-   "t1": 6.53
+   "t1": 6.25
   },
   {
    "type": "banner",
    "top": 230,
    "html": "PENAT. <em>BANYAK KALI DAH</em><br>BUANG LAUK BASAH",
-   "t0": 0.1,
-   "t1": 6.53
+   "t0": 0.08,
+   "t1": 6.25
   },
   {
    "type": "pill",
@@ -61,8 +66,8 @@ window.SPEC = {
    "html": "AYAM · IKAN · RENDANG → TONG SAMPAH",
    "bg": "#E5322D",
    "color": "#fff",
-   "t0": 6.53,
-   "t1": 9.65
+   "t0": 6.25,
+   "t1": 10.63
   },
   {
    "type": "title",
@@ -70,43 +75,72 @@ window.SPEC = {
    "size": 110,
    "html": "BIAR PETI NI<br>YANG SAYA BUANG",
    "color": "#ffffff",
-   "t0": 9.65,
-   "t1": 17.23
+   "t0": 10.63,
+   "t1": 15.98
+  },
+  {
+   "type": "title",
+   "top": 640,
+   "size": 110,
+   "html": "KALI NI, NAK YANG<br>ADA ORANG JAGA",
+   "t0": 15.98,
+   "t1": 18.39
   },
   {
    "type": "banner",
    "top": 230,
-   "html": "ADA ORANG <em>YANG JAGA</em>",
-   "t0": 17.23,
-   "t1": 23.73
+   "html": "PETI AIS COWAY <em>ADA 2 JENIS</em>",
+   "t0": 18.39,
+   "t1": 27.14
   },
   {
    "type": "photo",
-   "top": 420,
-   "left": 90,
-   "w": 900,
-   "h": 515,
-   "src": "../../assets/img/coway_fridge/hs_step3.jpg",
-   "t0": 17.23,
-   "t1": 23.73
+   "top": 400,
+   "left": 70,
+   "w": 450,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/551_front.jpg",
+   "t0": 18.39,
+   "t1": 27.14
+  },
+  {
+   "type": "photo",
+   "top": 400,
+   "left": 560,
+   "w": 450,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/715_kitchen1.jpg",
+   "t0": 21.309,
+   "t1": 27.14
+  },
+  {
+   "type": "chips",
+   "top": 1000,
+   "items": [
+    {
+     "text": "551L · 4 PINTU",
+     "color": "#fff",
+     "at": "@05%15",
+     "t": 19.641
+    },
+    {
+     "text": "715L · SIDE-BY-SIDE",
+     "color": "#ffd23f",
+     "at": "@05%40",
+     "t": 21.726
+    }
+   ],
+   "t0": 18.39,
+   "t1": 27.14
   },
   {
    "type": "card",
-   "top": 1000,
+   "top": 1150,
    "icon": "tech",
    "title": "CODY SERVIS BERKALA",
-   "sub": "7 tahun, ikut jadual",
-   "t0": 19.075,
-   "t1": 23.73
-  },
-  {
-   "type": "card",
-   "top": 1220,
-   "icon": "shield",
-   "title": "KOMPRESSOR 10 TAHUN*",
-   "sub": "Waranti kompressor",
-   "t0": 20.92,
-   "t1": 23.73
+   "sub": "Dua-dua model, 7 tahun",
+   "t0": 24.228,
+   "t1": 27.14
   },
   {
    "type": "price",
@@ -115,11 +149,11 @@ window.SPEC = {
    "from": "RM84",
    "to": "RM20",
    "badge": "7 BULAN PERTAMA*",
-   "t0": 23.73,
-   "t1": 30.024,
-   "badgeT": 31.073,
-   "strikeT": 27.401,
-   "toT": 28.975
+   "t0": 27.14,
+   "t1": 33.698,
+   "badgeT": 34.791,
+   "strikeT": 30.965,
+   "toT": 32.605
   },
   {
    "type": "pill",
@@ -127,8 +161,8 @@ window.SPEC = {
    "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 27.926,
-   "t1": 30.024
+   "t0": 31.512,
+   "t1": 33.698
   },
   {
    "type": "cta",
@@ -140,13 +174,14 @@ window.SPEC = {
    ],
    "button": "WhatsApp saya",
    "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway.",
-   "t0": 30.024,
+   "t0": 33.698,
    "t1": null,
-   "btnT": 32.122
+   "btnT": 35.884
   }
  ],
  "clips": {},
  "theme": "coway",
  "brand": "COWAY",
- "style": "Say in Malaysian Malay, as a tired, fed-up mother venting honestly to a friend, emotional but natural"
+ "style": "Say in Malaysian Malay, as a tired, fed-up mother venting honestly to a friend, emotional but natural",
+ "cap": false
 };
