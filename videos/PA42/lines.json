@@ -1,0 +1,32 @@
+[
+ {
+  "id": "01",
+  "text": "Murah, tapi jangan tertipu.",
+  "cap": "Murah, tapi *jangan tertipu*"
+ },
+ {
+  "id": "02",
+  "text": "Ramai beli peti sebab harga. Tak sampai setahun, tiga kali claim.",
+  "cap": "Tak sampai setahun, *3 kali claim*"
+ },
+ {
+  "id": "03",
+  "text": "Mahal sikit tak apa, asal tak sakit kepala. Biar alah membeli, menang memakai.",
+  "cap": "Biar alah membeli, *menang memakai*"
+ },
+ {
+  "id": "04",
+  "text": "Kali ni, pilih yang ada orang jaga.",
+  "cap": "Pilih yang *ada orang jaga*"
+ },
+ {
+  "id": "05",
+  "text": "Peti ais Coway ada dua jenis. Multi-Door, lima ratus lima puluh satu liter, empat pintu. Dan Side-by-Side, tujuh ratus lima belas liter. Dua-dua, Cody datang servis berkala tujuh tahun.",
+  "cap": "Coway: *551L 4 pintu* · *715L side-by-side*"
+ },
+ {
+  "id": "06",
+  "text": "Dari lapan puluh empat ringgit sebulan. Sekarang promosi rebat, bayar dua puluh ringgit je, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya.",
+  "cap": "Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya*"
+ }
+]

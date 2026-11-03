@@ -11,32 +11,47 @@
  },
  {
   "id": "03",
-  "text": "Empat pintu bantu bahagikan makanan ikut rutin dan kategori. Barang yang selalu guna, senang dicapai.",
-  "cap": "Bahagi ikut *rutin & kategori*"
+  "text": "Tapi bintang dia, Convertible Zone. Laci bawah ni, satu ruang, empat fungsi. Tukar ikut keperluan, bila-bila masa.",
+  "cap": "*Convertible Zone*: 1 laci, 4 fungsi"
  },
  {
   "id": "04",
-  "text": "Bahagian bawah ialah Convertible Zone, dengan empat julat suhu: dari lima darjah untuk sayur dan buah, sampai negatif dua puluh untuk simpanan lama.",
-  "cap": "*Convertible Zone* · 4 julat suhu"
+  "text": "Lima hingga tiga darjah: buah dan sayur, bila borong banyak.",
+  "cap": "5→3°C · *buah & sayur*"
  },
  {
   "id": "05",
-  "text": "Triple inverter dengan dua kipas, dan dinding penyejuk logam, untuk penyejukan yang konsisten.",
-  "cap": "Triple Inverter · *Metal Cooling*"
+  "text": "Dua hingga kosong darjah: minuman sejuk. Tetamu datang, air dah sedia.",
+  "cap": "2→0°C · *minuman sejuk*"
  },
  {
   "id": "06",
-  "text": "Silver ion di peti sejuk, penapis penyahbau di freezer. Dalam ujian makmal, ia neutralkan sehingga sembilan puluh lapan perpuluhan empat peratus bau ikan.",
-  "cap": "Dual Hygiene · *98.4%* bau ikan¹"
+  "text": "Negatif satu hingga negatif tujuh: simpanan singkat. Ayam dan ikan untuk masak esok atau lusa.",
+  "cap": "−1→−7°C · *simpanan singkat*"
  },
  {
   "id": "07",
-  "text": "Lebar sembilan puluh, dalam enam puluh, tinggi seratus sembilan puluh sentimeter, rekaan built-in. Ukur laluan dan ruang buka pintu, atau cuba dulu dalam dapur guna app Coway AR.",
-  "cap": "*90.5 × 59.7 × 190.2 cm* · app Coway AR"
+  "text": "Negatif lapan hingga negatif dua puluh: simpanan lama. Stok daging korban, stok raya.",
+  "cap": "−8→−20°C · *simpanan lama*"
  },
  {
   "id": "08",
-  "text": "Kalau rumah awak kerap masak dan suka susunan fleksibel, Multi-Door pilihan yang praktikal. WhatsApp saya untuk semak ruang dan model.",
-  "cap": "Kerap masak? *Multi-Door* · *WhatsApp saya*"
+  "text": "Musim raya, jadikan freezer tambahan. Lepas raya, tukar balik jadi peti sejuk. Satu laci, ikut musim keluarga awak.",
+  "cap": "Raya: *freezer* · Lepas raya: *peti sejuk*"
+ },
+ {
+  "id": "09",
+  "text": "Triple inverter dan dinding penyejuk logam, untuk sejuk yang konsisten. Silver ion dan penapis penyahbau, bantu kurangkan bau ikan.",
+  "cap": "Triple Inverter · Dual Hygiene¹"
+ },
+ {
+  "id": "10",
+  "text": "Lebar sembilan puluh, dalam enam puluh sentimeter. Ukur dulu, atau cuba dalam dapur guna app Coway AR.",
+  "cap": "*90.5 × 59.7 cm* · app Coway AR"
+ },
+ {
+  "id": "11",
+  "text": "Nak satu laci yang ikut musim keluarga? WhatsApp saya untuk semak ruang dan model.",
+  "cap": "*WhatsApp saya*"
  }
 ]

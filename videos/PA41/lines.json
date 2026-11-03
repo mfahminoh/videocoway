@@ -1,0 +1,32 @@
+[
+ {
+  "id": "01",
+  "text": "Peti ais mak saya bertahan dua puluh tahun. Peti saya? Empat tahun je.",
+  "cap": "Peti mak *20 tahun*. Peti saya? *4 tahun je.*"
+ },
+ {
+  "id": "02",
+  "text": "Orang lain semua pakai atas sepuluh tahun. Kita baru masuk tahun keempat, dah rosak.",
+  "cap": "Kita baru tahun ke-4, *dah rosak*"
+ },
+ {
+  "id": "03",
+  "text": "Belum puas pakai, dah kena buang. Serupa harga pakai buang je.",
+  "cap": "Belum puas pakai, *dah kena buang*"
+ },
+ {
+  "id": "04",
+  "text": "Kali ni, saya nak tenang.",
+  "cap": "Kali ni, saya nak *tenang*"
+ },
+ {
+  "id": "05",
+  "text": "Peti ais Coway ada dua jenis. Multi-Door, lima ratus lima puluh satu liter, empat pintu. Dan Side-by-Side, tujuh ratus lima belas liter. Dua-dua, Cody datang servis berkala tujuh tahun.",
+  "cap": "Coway: *551L 4 pintu* · *715L side-by-side*"
+ },
+ {
+  "id": "06",
+  "text": "Dari lapan puluh empat ringgit sebulan. Sekarang promosi rebat, bayar dua puluh ringgit je, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya.",
+  "cap": "Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya*"
+ }
+]

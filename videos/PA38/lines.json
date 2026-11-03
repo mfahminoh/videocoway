@@ -1,0 +1,32 @@
+[
+ {
+  "id": "01",
+  "text": "Penat. Banyak kali dah terpaksa buang lauk basah kat freezer, sebab peti rosak.",
+  "cap": "Penat. *Banyak kali dah* buang lauk basah"
+ },
+ {
+  "id": "02",
+  "text": "Ayam, ikan, rendang. Semua masuk tong sampah.",
+  "cap": "Ayam · ikan · *rendang*"
+ },
+ {
+  "id": "03",
+  "text": "Sampai satu tahap, daripada buang lauk je selalu, biar peti ni yang saya buang.",
+  "cap": "*Biar peti ni yang saya buang*"
+ },
+ {
+  "id": "04",
+  "text": "Kali ni, saya nak peti yang ada orang jaga.",
+  "cap": "Kali ni, nak yang *ada orang jaga*"
+ },
+ {
+  "id": "05",
+  "text": "Peti ais Coway ada dua jenis. Multi-Door, lima ratus lima puluh satu liter, empat pintu. Dan Side-by-Side, tujuh ratus lima belas liter. Dua-dua, Cody datang servis berkala tujuh tahun.",
+  "cap": "Coway: *551L 4 pintu* · *715L side-by-side*"
+ },
+ {
+  "id": "06",
+  "text": "Dari lapan puluh empat ringgit sebulan. Sekarang promosi rebat, bayar dua puluh ringgit je, tujuh bulan pertama. Hantar dan pasang percuma. WhatsApp saya.",
+  "cap": "Bayar *RM20*/bulan · 7 bulan* · *WhatsApp saya*"
+ }
+]

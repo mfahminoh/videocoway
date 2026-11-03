@@ -1,0 +1,191 @@
+{
+ "slug": "penat-buang-lauk-basah",
+ "voice": "Sulafat",
+ "style": "Say in Malaysian Malay, as a tired, fed-up mother venting honestly to a friend, emotional but natural",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "peti-ais-p2-01/pa13_a_tong.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "peti-ais-p2-01/pa13_b_cium.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@03",
+   "bg": {
+    "image": "peti-ais-p2-01/pa07_a_nazak.jpg",
+    "color": "night",
+    "shade": true
+   }
+  },
+  {
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@05",
+   "bg": "navy"
+  },
+  {
+   "at": "@06",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "pill",
+   "in": 0,
+   "out": "@02",
+   "top": 150,
+   "html": "LAKONAN SEMULA",
+   "bg": "rgba(0,0,0,.55)",
+   "color": "#fff"
+  },
+  {
+   "type": "photo",
+   "in": "@01",
+   "out": "@02",
+   "top": 300,
+   "left": 70,
+   "w": 940,
+   "h": 454,
+   "src": "../../assets/img/peti-ais-psiko-01/komen_PA38.png",
+   "fit": "contain",
+   "radius": 0,
+   "shadow": false
+  },
+  {
+   "type": "pill",
+   "in": "@02",
+   "out": "@03",
+   "top": 1180,
+   "html": "AYAM · IKAN · RENDANG → TONG SAMPAH",
+   "bg": "#E5322D",
+   "color": "#fff"
+  },
+  {
+   "type": "title",
+   "in": "@03",
+   "out": "@04",
+   "top": 600,
+   "size": 110,
+   "html": "BIAR PETI NI<br>YANG SAYA BUANG",
+   "color": "#ffffff"
+  },
+  {
+   "type": "title",
+   "in": "@04",
+   "out": "@05",
+   "top": 640,
+   "size": 110,
+   "html": "KALI NI, NAK YANG<br>ADA ORANG JAGA"
+  },
+  {
+   "type": "banner",
+   "in": "@05",
+   "out": "@06",
+   "top": 230,
+   "html": "PETI AIS COWAY <em>ADA 2 JENIS</em>"
+  },
+  {
+   "type": "photo",
+   "in": "@05",
+   "out": "@06",
+   "top": 380,
+   "left": 60,
+   "w": 465,
+   "h": 620,
+   "src": "../../assets/img/peti-ais-psiko-01/r551_a.png",
+   "fit": "contain",
+   "bg": "#ffffff",
+   "radius": 28
+  },
+  {
+   "type": "photo",
+   "in": "@05%35",
+   "out": "@06",
+   "top": 380,
+   "left": 555,
+   "w": 465,
+   "h": 620,
+   "src": "../../assets/img/peti-ais-psiko-01/r715_a.jpg",
+   "fit": "contain",
+   "bg": "#ffffff",
+   "radius": 28
+  },
+  {
+   "type": "chips",
+   "in": "@05",
+   "out": "@06",
+   "top": 1030,
+   "items": [
+    {
+     "text": "551L · 4 PINTU",
+     "color": "#fff",
+     "at": "@05%15"
+    },
+    {
+     "text": "715L · SIDE-BY-SIDE",
+     "color": "#ffd23f",
+     "at": "@05%40"
+    }
+   ]
+  },
+  {
+   "type": "card",
+   "in": "@05%70",
+   "out": "@06",
+   "top": 1160,
+   "icon": "tech",
+   "title": "CODY SERVIS BERKALA",
+   "sub": "Dua-dua model, 7 tahun"
+  },
+  {
+   "type": "price",
+   "in": "@06",
+   "out": "@06%60",
+   "top": 360,
+   "label": "HARGA BULANAN",
+   "from": "RM84",
+   "strikeAt": "@06%35",
+   "to": "RM20",
+   "toAt": "@06%50",
+   "badge": "7 BULAN PERTAMA*",
+   "badgeAt": "@06%70"
+  },
+  {
+   "type": "pill",
+   "in": "@06%40",
+   "out": "@06%60",
+   "top": 1180,
+   "html": "PENGHANTARAN &amp; PEMASANGAN PERCUMA",
+   "bg": "var(--yellow)",
+   "color": "var(--navy)"
+  },
+  {
+   "type": "cta",
+   "in": "@06%60",
+   "top": 760,
+   "ticks": [
+    "BAYAR RM20/BULAN · 7 BULAN PERTAMA*",
+    "KEMUDIAN 715L RM84 · 551L RM99",
+    "HANTAR & PASANG PERCUMA"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@06%80",
+   "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L) sebulan, pelan HEART Service 7 tahun (7+0), termasuk SST. Penghantaran &amp; pemasangan percuma seluruh Malaysia. Promosi terhad. Tertakluk terma &amp; syarat Coway. Waranti kompressor 10 tahun tertakluk polisi waranti Coway."
+  }
+ ],
+ "cap": false,
+ "theme": "coway",
+ "brand": "COWAY"
+}

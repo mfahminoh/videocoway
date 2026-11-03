@@ -3,12 +3,12 @@ window.SPEC = {
   {
    "t0": 0.0,
    "bg": "navy",
-   "t1": 51.91
+   "t1": 53.86
   },
   {
-   "t0": 51.91,
+   "t0": 53.86,
    "bg": "blue",
-   "t1": 62.13
+   "t1": 64.69
   }
  ],
  "els": [
@@ -16,8 +16,8 @@ window.SPEC = {
    "type": "banner",
    "top": 230,
    "html": "<em>715L</em> UNTUK STOK KELUARGA",
-   "t0": 0.09,
-   "t1": 6.62
+   "t0": 0.16,
+   "t1": 6.18
   },
   {
    "type": "photo",
@@ -27,14 +27,14 @@ window.SPEC = {
    "h": 760,
    "src": "../../assets/img/coway_fridge/715_spaces.jpg",
    "t0": 0,
-   "t1": 6.62
+   "t1": 6.18
   },
   {
    "type": "banner",
    "top": 230,
    "html": "COWAY <em>SIDE-BY-SIDE</em>",
-   "t0": 6.62,
-   "t1": 12.81
+   "t0": 6.18,
+   "t1": 12.91
   },
   {
    "type": "photo",
@@ -43,8 +43,8 @@ window.SPEC = {
    "w": 900,
    "h": 706,
    "src": "../../assets/img/coway_fridge/715_open_dark.jpg",
-   "t0": 6.62,
-   "t1": 12.81
+   "t0": 6.18,
+   "t1": 12.91
   },
   {
    "type": "chips",
@@ -54,24 +54,24 @@ window.SPEC = {
      "text": "FREEZER KIRI",
      "color": "#fff",
      "at": "@02%35",
-     "t": 8.664
+     "t": 8.444
     },
     {
      "text": "PETI SEJUK KANAN",
      "color": "#ffd23f",
      "at": "@02%55",
-     "t": 9.832
+     "t": 9.739
     }
    ],
-   "t0": 8.372,
-   "t1": 12.81
+   "t0": 8.121,
+   "t1": 12.91
   },
   {
    "type": "banner",
    "top": 230,
    "html": "SETIAP BARANG <em>ADA TEMPAT</em>",
-   "t0": 12.81,
-   "t1": 18.6
+   "t0": 12.91,
+   "t1": 19.22
   },
   {
    "type": "photo",
@@ -80,8 +80,8 @@ window.SPEC = {
    "w": 760,
    "h": 760,
    "src": "../../assets/img/coway_fridge/715_kitchen_open.jpg",
-   "t0": 12.81,
-   "t1": 18.6
+   "t0": 12.91,
+   "t1": 19.22
   },
   {
    "type": "chips",
@@ -91,30 +91,30 @@ window.SPEC = {
      "text": "RAK PINTU",
      "color": "#fff",
      "at": "@03%15",
-     "t": 13.626
+     "t": 13.815
     },
     {
      "text": "RUANG UTAMA",
      "color": "#fff",
      "at": "@03%40",
-     "t": 14.986
+     "t": 15.322
     },
     {
      "text": "FREEZER BERLABEL",
      "color": "#ffd23f",
      "at": "@03%65",
-     "t": 16.346
+     "t": 16.829
     }
    ],
-   "t0": 13.626,
-   "t1": 18.6
+   "t0": 13.815,
+   "t1": 19.22
   },
   {
    "type": "banner",
    "top": 230,
    "html": "<em>HUMIDITY</em> CONTROL",
-   "t0": 18.6,
-   "t1": 23.81
+   "t0": 19.22,
+   "t1": 24.63
   },
   {
    "type": "photo",
@@ -123,15 +123,15 @@ window.SPEC = {
    "w": 900,
    "h": 675,
    "src": "../../assets/img/coway_fridge/715_humidity.jpg",
-   "t0": 18.6,
-   "t1": 23.81
+   "t0": 19.22,
+   "t1": 24.63
   },
   {
    "type": "banner",
    "top": 230,
    "html": "DOUBLE <em>INVERTER</em>",
-   "t0": 23.81,
-   "t1": 33.8
+   "t0": 24.63,
+   "t1": 34.99
   },
   {
    "type": "photo",
@@ -140,8 +140,8 @@ window.SPEC = {
    "w": 560,
    "h": 560,
    "src": "../../assets/img/coway_fridge/715_panel_touch.jpg",
-   "t0": 23.81,
-   "t1": 33.8
+   "t0": 24.63,
+   "t1": 34.99
   },
   {
    "type": "chips",
@@ -151,36 +151,36 @@ window.SPEC = {
      "text": "SMART",
      "color": "#fff",
      "at": "@05%40",
-     "t": 27.678
+     "t": 28.714
     },
     {
      "text": "ECO",
      "color": "#fff",
      "at": "@05%52",
-     "t": 28.838
+     "t": 29.939
     },
     {
      "text": "POWER COOL",
      "color": "#fff",
      "at": "@05%64",
-     "t": 29.999
+     "t": 31.164
     },
     {
      "text": "SUPER FREEZING −25°C",
      "color": "#ffd23f",
      "at": "@05%76",
-     "t": 31.159
+     "t": 32.39
     }
    ],
-   "t0": 26.711,
-   "t1": 33.8
+   "t0": 27.693,
+   "t1": 34.99
   },
   {
    "type": "banner",
    "top": 230,
    "html": "DUAL <em>HYGIENE</em>",
-   "t0": 33.8,
-   "t1": 43.21
+   "t0": 34.99,
+   "t1": 45.09
   },
   {
    "type": "photo",
@@ -189,8 +189,8 @@ window.SPEC = {
    "w": 760,
    "h": 760,
    "src": "../../assets/img/coway_fridge/551_deo_cubes.jpg",
-   "t0": 33.8,
-   "t1": 43.21
+   "t0": 34.99,
+   "t1": 45.09
   },
   {
    "type": "pill",
@@ -198,15 +198,15 @@ window.SPEC = {
    "html": "98.4% BAU IKAN (TRIMETHYLAMINE)¹",
    "bg": "var(--yellow)",
    "color": "var(--navy)",
-   "t0": 38.855,
-   "t1": 43.21
+   "t0": 40.342,
+   "t1": 45.09
   },
   {
    "type": "banner",
    "top": 230,
    "html": "UKUR <em>DULU</em>",
-   "t0": 43.21,
-   "t1": 51.91
+   "t0": 45.09,
+   "t1": 53.86
   },
   {
    "type": "photo",
@@ -215,8 +215,8 @@ window.SPEC = {
    "w": 520,
    "h": 520,
    "src": "../../assets/img/coway_fridge/715_kitchen1.jpg",
-   "t0": 43.21,
-   "t1": 51.91
+   "t0": 45.09,
+   "t1": 53.86
   },
   {
    "type": "grid",
@@ -226,23 +226,23 @@ window.SPEC = {
      "big": "91",
      "small": "LEBAR (CM)",
      "at": "@07%30",
-     "t": 45.757
+     "t": 47.649
     },
     {
      "big": "74",
      "small": "DALAM (CM)",
      "at": "@07%12",
-     "t": 44.229
+     "t": 46.114
     },
     {
      "big": "190.5",
      "small": "TINGGI (CM)",
      "at": "@07%45",
-     "t": 47.031
+     "t": 48.928
     }
    ],
-   "t0": 44.059,
-   "t1": 51.91
+   "t0": 45.943,
+   "t1": 53.86
   },
   {
    "type": "cta",
@@ -254,13 +254,13 @@ window.SPEC = {
    ],
    "button": "WhatsApp saya",
    "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L), pelan HEART Service 7 tahun, termasuk SST. Hantar &amp; pasang percuma seluruh Malaysia. Promosi terhad, tertakluk terma &amp; syarat Coway. ¹Ujian makmal dalam persekitaran terkawal.",
-   "t0": 51.91,
+   "t0": 53.86,
    "t1": null,
-   "btnT": 54.918
+   "btnT": 57.112
   }
  ],
  "clips": {},
  "theme": "coway",
  "brand": "COWAY",
- "style": "Say in Malaysian Malay, as a warm, friendly young woman sharing a useful tip on TikTok, relaxed, clear and fairly quick"
+ "style": "Speak in Bahasa Melayu with a natural Malaysian (Kuala Lumpur) accent, like a friendly Malaysian TV presenter. Use Malaysian Malay pronunciation and intonation, not Indonesian. Warm, clear, moderately paced"
 };

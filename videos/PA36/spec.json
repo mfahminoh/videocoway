@@ -18,7 +18,7 @@
    "bg": "navy"
   },
   {
-   "at": "@04",
+   "at": "@03",
    "bg": {
     "clip": "peti-ais-explainer-01_551_convert",
     "c0": 0,
@@ -28,7 +28,11 @@
    }
   },
   {
-   "at": "@05",
+   "at": "@04",
+   "bg": "navy"
+  },
+  {
+   "at": "@09",
    "bg": {
     "clip": "peti-ais-explainer-01_551_airflow",
     "c0": 0,
@@ -38,11 +42,11 @@
    }
   },
   {
-   "at": "@06",
+   "at": "@10",
    "bg": "navy"
   },
   {
-   "at": "@08",
+   "at": "@11",
    "bg": "blue"
   }
  ],
@@ -99,147 +103,167 @@
    "in": "@03",
    "out": "@04",
    "top": 230,
-   "html": "IKUT <em>RUTIN & KATEGORI</em>"
-  },
-  {
-   "type": "photo",
-   "in": "@03",
-   "out": "@04",
-   "top": 380,
-   "left": 160,
-   "w": 760,
-   "h": 760,
-   "src": "../../assets/img/coway_fridge/551_open_food.jpg"
+   "html": "<em>CONVERTIBLE</em> ZONE"
   },
   {
    "type": "pill",
-   "in": "@03%50",
+   "in": "@03%40",
    "out": "@04",
-   "top": 1180,
-   "html": "BARANG SELALU GUNA, SENANG DICAPAI",
+   "top": 1350,
+   "html": "1 LACI · 4 FUNGSI · TUKAR BILA-BILA MASA",
    "bg": "var(--yellow)",
    "color": "var(--navy)"
   },
   {
    "type": "banner",
    "in": "@04",
-   "out": "@05",
+   "out": "@08",
    "top": 230,
    "html": "<em>CONVERTIBLE</em> ZONE"
   },
   {
-   "type": "chips",
-   "in": "@04%20",
+   "type": "photo",
+   "in": "@04",
+   "out": "@08",
+   "top": 360,
+   "left": 260,
+   "w": 560,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/551_drawers.jpg"
+  },
+  {
+   "type": "led",
+   "in": "@04",
    "out": "@05",
-   "top": 1180,
+   "top": 960,
    "items": [
     {
-     "text": "5→3°C",
-     "color": "#fff",
-     "at": "@04%25"
-    },
+     "num": "3",
+     "unit": "°C",
+     "label": "BUAH & SAYUR · 5→3°C",
+     "at": "@04"
+    }
+   ]
+  },
+  {
+   "type": "led",
+   "in": "@05",
+   "out": "@06",
+   "top": 960,
+   "items": [
     {
-     "text": "2→0°C",
-     "color": "#fff",
-     "at": "@04%40"
-    },
+     "num": "0",
+     "unit": "°C",
+     "label": "MINUMAN SEJUK · 2→0°C",
+     "at": "@05"
+    }
+   ]
+  },
+  {
+   "type": "led",
+   "in": "@06",
+   "out": "@07",
+   "top": 960,
+   "items": [
     {
-     "text": "−1→−7°C",
-     "color": "#fff",
-     "at": "@04%55"
-    },
+     "num": "-7",
+     "unit": "°C",
+     "label": "SIMPANAN SINGKAT · −1→−7°C",
+     "at": "@06"
+    }
+   ]
+  },
+  {
+   "type": "led",
+   "in": "@07",
+   "out": "@08",
+   "top": 960,
+   "items": [
     {
-     "text": "−8→−20°C",
-     "color": "#ffd23f",
-     "at": "@04%70"
+     "num": "-20",
+     "unit": "°C",
+     "label": "SIMPANAN LAMA · −8→−20°C",
+     "at": "@07"
     }
    ]
   },
   {
    "type": "banner",
-   "in": "@05",
-   "out": "@06",
+   "in": "@08",
+   "out": "@09",
+   "top": 230,
+   "html": "<em>IKUT MUSIM</em> KELUARGA"
+  },
+  {
+   "type": "photo",
+   "in": "@08",
+   "out": "@09",
+   "top": 360,
+   "left": 260,
+   "w": 560,
+   "h": 560,
+   "src": "../../assets/img/coway_fridge/551_drawers.jpg"
+  },
+  {
+   "type": "vs",
+   "in": "@08%20",
+   "out": "@09",
+   "top": 960,
+   "left": {
+    "title": "MUSIM RAYA",
+    "color": "#0B2F6B",
+    "items": [
+     "Freezer tambahan",
+     "Stok rendang & daging"
+    ],
+    "at": "@08%20"
+   },
+   "right": {
+    "title": "LEPAS RAYA",
+    "color": "#04A4E4",
+    "items": [
+     "Tukar balik",
+     "Jadi peti sejuk"
+    ],
+    "at": "@08%55"
+   }
+  },
+  {
+   "type": "banner",
+   "in": "@09",
+   "out": "@10",
    "top": 230,
    "html": "TRIPLE <em>INVERTER</em>"
   },
   {
    "type": "chips",
-   "in": "@05%30",
-   "out": "@06",
+   "in": "@09%30",
+   "out": "@10",
    "top": 1340,
    "items": [
     {
-     "text": "2 KIPAS",
+     "text": "METAL COOLING",
      "color": "#fff",
-     "at": "@05%35"
+     "at": "@09%30"
     },
     {
-     "text": "DINDING LOGAM",
-     "color": "#fff",
-     "at": "@05%55"
-    },
-    {
-     "text": "SEJUK KONSISTEN",
+     "text": "DUAL HYGIENE¹",
      "color": "#ffd23f",
-     "at": "@05%75"
+     "at": "@09%60"
     }
    ]
   },
   {
    "type": "banner",
-   "in": "@06",
-   "out": "@07",
-   "top": 230,
-   "html": "DUAL <em>HYGIENE</em>"
-  },
-  {
-   "type": "photo",
-   "in": "@06",
-   "out": "@07",
-   "top": 380,
-   "left": 160,
-   "w": 760,
-   "h": 760,
-   "src": "../../assets/img/coway_fridge/551_deo_cubes.jpg"
-  },
-  {
-   "type": "chips",
-   "in": "@06%15",
-   "out": "@07",
-   "top": 1180,
-   "items": [
-    {
-     "text": "SILVER ION · PETI",
-     "color": "#fff",
-     "at": "@06%15"
-    },
-    {
-     "text": "PENYAHBAU · FREEZER",
-     "color": "#fff",
-     "at": "@06%35"
-    }
-   ]
-  },
-  {
-   "type": "pill",
-   "in": "@06%65",
-   "out": "@07",
-   "top": 1290,
-   "html": "98.4% BAU IKAN (TRIMETHYLAMINE)¹",
-   "bg": "var(--yellow)",
-   "color": "var(--navy)"
-  },
-  {
-   "type": "banner",
-   "in": "@07",
-   "out": "@08",
+   "in": "@10",
+   "out": "@11",
    "top": 230,
    "html": "UKUR <em>DULU</em>"
   },
   {
    "type": "photo",
-   "in": "@07",
-   "out": "@08",
+   "in": "@10",
+   "out": "@11",
    "top": 330,
    "left": 340,
    "w": 400,
@@ -248,39 +272,34 @@
   },
   {
    "type": "grid",
-   "in": "@07%10",
-   "out": "@08",
+   "in": "@10%10",
+   "out": "@11",
    "top": 760,
    "items": [
     {
      "big": "90.5",
      "small": "LEBAR (CM)",
-     "at": "@07%12"
+     "at": "@10%12"
     },
     {
      "big": "59.7",
      "small": "DALAM (CM)",
-     "at": "@07%22"
-    },
-    {
-     "big": "190.2",
-     "small": "TINGGI (CM)",
-     "at": "@07%32"
+     "at": "@10%30"
     }
    ]
   },
   {
    "type": "pill",
-   "in": "@07%70",
-   "out": "@08",
-   "top": 1420,
-   "html": "UKUR LALUAN · CUBA APP COWAY AR",
+   "in": "@10%60",
+   "out": "@11",
+   "top": 1000,
+   "html": "CUBA DALAM DAPUR · APP COWAY AR",
    "bg": "var(--yellow)",
    "color": "var(--navy)"
   },
   {
    "type": "cta",
-   "in": "@08",
+   "in": "@11",
    "top": 700,
    "ticks": [
     "BAYAR RM20 × 7 BULAN PERTAMA*",
@@ -288,7 +307,7 @@
     "HANTAR & PASANG PERCUMA"
    ],
    "button": "WhatsApp saya",
-   "btnAt": "@08%40",
+   "btnAt": "@11%40",
    "fine": "*Promosi rebat: bayar RM20 sebulan untuk 7 bulan pertama, kemudian RM84 (715L) / RM99 (551L), pelan HEART Service 7 tahun, termasuk SST. Hantar &amp; pasang percuma seluruh Malaysia. Promosi terhad, tertakluk terma &amp; syarat Coway. ¹Ujian makmal dalam persekitaran terkawal."
   }
  ],
