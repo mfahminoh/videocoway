@@ -5,8 +5,8 @@
 | Langkah | Status | Fail | Nota |
 |---|---|---|---|
 | 2 Brief | ✅ ringkas | brief.md | dari arahan user 3 Nov 2026; butiran tawaran belum disahkan |
-| 3 Skrip BF01–BF05 | ⏳ draf v2 | skrip.md, copy.md | v2 ikut copy user (3 Nov); menunggu pengesahan butiran tawaran & kelulusan |
-| 4 Video | ⏳ | videos/bofu-rm20-01_batch.py, videos/BF01–BF05 | teks di satu tempat (tengah, capTop 860) untuk FB Feed 4:5; klip showroom promo-rm18-01 |
+| 3 Skrip BF01–BF05 | ✅ v2 | skrip.md, copy.md | v2 ikut copy user (3 Nov); menunggu pengesahan butiran tawaran & kelulusan |
+| 4 Video | ✅ | out/bofu-rm20-01/, videos/BF01–BF05 | 5 video 19.6–23.9 s dirender 3 Nov 2026, teks di tengah sahaja; review: https://claude.ai/artifact/A3jMPMJBFr3K342U9AaDZP |
 | 5 Poster | — | | |
 | 7 Iklan | — | | |
 
@@ -23,4 +23,5 @@
 
 ## Terbuka
 - [ ] Sahkan butiran RM20 (harga sewa / rebat, tempoh, model), jenis free gift, tempoh "5 terawal", dan sama ada Sabah & Sarawak termasuk.
-- [ ] Kelulusan skrip BF01–BF05.
+- [x] Skrip v2 (copy user) diteruskan ke video atas arahan user 3 Nov 2026.
+- [ ] User review BF01–BF05 di halaman review. BF01 (23.9 s) dan BF03 (23.7 s) melebihi 20 s.
