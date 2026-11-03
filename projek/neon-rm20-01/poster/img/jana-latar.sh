@@ -1,0 +1,11 @@
+cd /Users/Fahmi/Documents/GitHub/videocoway
+
+COMMON="Recreate this reference as one clean, high-resolution photorealistic 4:5 photograph with the same people, poses, expressions, clothing, room and warm lighting. Completely REMOVE the white/blue water purifier machine: the lower-left area where it stood must show only an empty kitchen counter top (plain surface, nothing standing on it). Remove ALL text, headlines, logos, price badges, stickers, icons, doodles, arrows and the delivery banner at the bottom; no text or graphics anywhere. Keep the upper-left third of the frame calm and slightly darker so headline text can be placed there. Natural skin, realistic Malaysian home, shallow depth of field."
+gen(){ python3 .claude/skills/seedream/scripts/seedream.py "$COMMON $2" --ref projek/neon-rm20-01/poster/img/ref/ref$1.png --size 1728x2160 --out projek/neon-rm20-01/poster/img/bg/p0$1 > $S/gen$1.log 2>&1; }
+gen 1 "Scene: a tired woman with hair in a messy bun, long-sleeved top, leaning on her hand in front of an open fridge holding an empty plastic water bottle, frustrated expression, on the right half of the frame." &
+gen 2 "Scene: an annoyed man in a t-shirt carrying bulky packs of plastic mineral water bottles, many water bottle packs stacked behind him, on the right half of the frame." &
+gen 3 "Scene: a happy small family (father, mother in long-sleeved blouse, little girl drinking a glass of water) smiling at the kitchen counter, on the right half of the frame." &
+gen 4 "Scene: a wife in a long-sleeved top resting her chin on her hands looking dreamily at her husband, husband looking tired and thinking, both at the kitchen counter, on the right side of the frame." &
+gen 5 "Scene: a happy expecting couple, the pregnant wife in a fully covering long-sleeved loose cream dress (belly covered by fabric, no skin showing) with her hands on her belly, husband hugging her from behind, sitting on a sofa on the right; on the counter in front: a pink mother's health book with no readable text, folded baby clothes, a teddy bear and a baby bottle." &
+gen 6 "Scene: a compact, narrow modern Malaysian kitchen corner with marble counter, sink, potted herbs, jars and kettle, warm under-cabinet lights, no people; the empty counter space is on the left-centre." &
+wait
