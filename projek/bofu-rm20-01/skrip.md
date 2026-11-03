@@ -6,6 +6,9 @@ BOFU, 15–20 s setiap video, 9:16. Gaya: santai, mesra, catchy. Audiens: dah ke
 Setiap video bawa tiga tawaran: **serendah RM20 sebulan · hantar & pasang PERCUMA seluruh Malaysia · free gift premium 5 pelanggan terawal**, tutup dengan "WhatsApp saya sekarang".
 Fine print (semua video): "*Serendah RM20/bulan. Free gift untuk 5 pelanggan terawal. Tertakluk terma & syarat."
 
+**Teks di satu tempat sahaja** (user 3 Nov): kapsyen VO di tengah skrin (top 860 px), tiada banner atas, tiada bar kapsyen bawah, tiada tag brand. Kad CTA akhir juga di tengah (660–1250 px). Semua teks dalam jalur y 560–1300, jadi kekal nampak dalam Facebook Feed (9:16 dipotong ke 4:5 = y 285–1635) dan tak dilindungi UI Reels/Stories.
+Visual: baris 01–02 klip showroom; baris tawaran (03) latar biru dengan ikon putih tanpa teks (harga → lori → hadiah) di atas kapsyen; CTA latar biru. BF02 mula dengan ikon hadiah atas latar biru. Lajur "Visual" di bawah ialah cadangan asal; yang dibina ikut `videos/bofu-rm20-01_batch.py`.
+
 VO diringkaskan daripada copy post user supaya muat 15–20 s (±45–50 perkataan); ayat asal dikekalkan sebanyak mungkin. Emoji dibuang dari VO; angka dieja ("dua puluh ringgit").
 
 | ID | Tajuk | Hook (baris 1) | Strategi | Suara | ±saat |

@@ -48,6 +48,7 @@ out/*
 
 # Penapis air lain
 !out/promo-rm18-01/
+!out/bofu-rm20-01/
 !out/airbotol_final.mp4
 !out/pakej30_v1.mp4
 !out/pakej30_v2.mp4

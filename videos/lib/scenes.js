@@ -4,6 +4,8 @@ const ICON = {
   tech: '<circle cx="32" cy="18" r="10"/><path d="M12 56 c0-12 9-20 20-20 s20 8 20 20"/><path d="M44 30 l10 -10 m-4 -4 l8 8"/>',
   box: '<path d="M8 20 L32 8 L56 20 V46 L32 58 L8 46 Z"/><path d="M8 20 L32 32 L56 20 M32 32 V58"/>',
   drop: '<path d="M32 8 C44 26 50 34 50 44 a18 18 0 0 1 -36 0 C14 34 20 26 32 8 Z"/>',
+  gift: '<rect x="10" y="26" width="44" height="30" rx="3"/><rect x="6" y="18" width="52" height="10" rx="3"/><path d="M32 18 V56 M32 18 c-4-10-18-12-16-2 c1 4 10 2 16 2 c6 0 15 2 16-2 c2-10-12-8-16 2"/>',
+  truck: '<path d="M4 16 h34 v28 h-34 Z M38 26 h12 l8 10 v8 h-20 Z"/><circle cx="16" cy="48" r="6"/><circle cx="48" cy="48" r="6"/>',
   home: '<path d="M8 30 L32 10 L56 30"/><path d="M14 26 V56 H50 V26"/><path d="M27 56 V40 H37 V56"/>',
   clock: '<circle cx="32" cy="32" r="24"/><path d="M32 18 V32 L42 38"/>',
   shield: '<path d="M32 6 L54 14 V30 C54 44 44 54 32 58 C20 54 10 44 10 30 V14 Z"/><path d="M22 32 L30 40 L43 25"/>',
@@ -125,6 +127,7 @@ SP.els.forEach((e, i) => {
 });
 if (SP.brand) add(`<div class="el" id="brandTag">${SP.brand}</div>`);
 add('<div class="el c" id="cap"><div id="capText"></div></div><div class="layer" id="flash" style="background:#fff; opacity:0"></div>');
+if (SP.capTop != null) $('cap').style.top = SP.capTop + 'px';     // kapsyen di tengah (cth. 860), lalai 1520 dalam scenes.css
 
 /* ---------- lukis ---------- */
 function lineupCam(e, t) {
