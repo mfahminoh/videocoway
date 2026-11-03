@@ -1,71 +1,101 @@
 # Skrip: bofu-rm20-01 — Batch 1 (BF01–BF05)
 
-Status: DRAF 3 Nov 2026 · Brief: brief.md · Harga: RM20 sebulan (dari user 3 Nov 2026, butiran belum disahkan)
+Status: DRAF v2 3 Nov 2026 (ikut versi user) · Brief: brief.md · Copy post/iklan: copy.md · Harga: RM20 sebulan (butiran belum disahkan)
 
-BOFU, 15–20 s setiap video. Semua video bawa tiga tawaran yang sama: **serendah RM20 sebulan · hantar & pasang PERCUMA seluruh Malaysia · free gift premium 5 terawal**, dan tutup dengan CTA WhatsApp.
+BOFU, 15–20 s setiap video, 9:16. Gaya: santai, mesra, catchy. Audiens: dah kenal Coway, dah survey, tunggu tawaran.
+Setiap video bawa tiga tawaran: **serendah RM20 sebulan · hantar & pasang PERCUMA seluruh Malaysia · free gift premium 5 pelanggan terawal**, tutup dengan "WhatsApp saya sekarang".
 Fine print (semua video): "*Serendah RM20/bulan. Free gift untuk 5 pelanggan terawal. Tertakluk terma & syarat."
 
-| ID | Hook | Jenis hook | Suara | Format cadangan | ±saat |
+VO diringkaskan daripada copy post user supaya muat 15–20 s (±45–50 perkataan); ayat asal dikekalkan sebanyak mungkin. Emoji dibuang dari VO; angka dieja ("dua puluh ringgit").
+
+| ID | Tajuk | Hook (baris 1) | Strategi | Suara | ±saat |
 |---|---|---|---|---|---|
-| BF01 | Tiga sebab sekarang masa paling sesuai pasang penapis air. | Listicle | P | Klip showroom + kad 1-2-3 | 18 |
-| BF02 | Hadiah ni, untuk lima orang je. | Kelangkaan | L | Kotak hadiah + kiraan 5 slot | 16 |
-| BF03 | Duduk jauh dari bandar? Takut kena caj hantar dan pasang? | Soalan bantahan | P | Peta Malaysia + van/pin + kad harga | 18 |
-| BF04 | Dah berapa lama awak simpan screenshot penapis air ni? | Seru situasi (P3) | L | Skrin telefon (galeri screenshot) → showroom | 17 |
-| BF05 | Pasang penapis air, mesti ada caj tambahan? Tak semestinya. | Mitos vs fakta | P | Cop MITOS/FAKTA + offer stack | 16 |
+| BF01 | Dah Lama Survey? Ini Masanya! | Dah lama survey penapis air Coway, tapi asyik tangguh nak pasang? | Relatable + direct conversion | P | 18 |
+| BF02 | Siapa Cepat, Dia Dapat! | Eh! Ada hadiah untuk lima orang terawal sahaja! | Scarcity + FOMO | L | 18 |
+| BF03 | Tak Perlu Pening Fikir Caj Pemasangan! | Nak pasang Coway, tapi takut kena macam-macam caj tambahan? | Objection handling | P | 17 |
+| BF04 | Asyik Tengok, Bila Nak Pasang? | Jujur sikit, berapa lama dah simpan gambar penapis air Coway dalam phone? | Emotional trigger + P3 retargeting | L | 19 |
+| BF05 | RM20 Je Sebulan?! | Dua puluh ringgit sebulan? | Price hook + value stacking | P | 17 |
 
 Suara: P = perempuan (Aoede, mesra ceria), L = lelaki (Orus, yakin santai).
 
 ---
-### BF01 · Tiga sebab sekarang
-Kesedaran: tahu produk, tunggu masa · Suara: P
+### BF01 · Dah Lama Survey? Ini Masanya!
+Strategi: relatable + direct conversion · Suara: P
 
 | # | VO | Kapsyen skrin | Visual |
 |---|---|---|---|
-| 01 | Tiga sebab sekarang masa paling sesuai pasang penapis air. | *3 sebab* pasang sekarang | s01 pan showroom, tajuk "3 SEBAB" |
-| 02 | Satu, serendah dua puluh ringgit sebulan. | 1. Serendah *RM20*/bulan | s03 NeoN pedestal, kad "1" + harga |
-| 03 | Dua, hantar dan pasang percuma, seluruh Malaysia. | 2. Hantar & pasang *PERCUMA* | s04 Villaem 3, kad "2" + ikon van |
-| 04 | Tiga, lima orang terawal dapat free gift premium. | 3. Free gift *5 terawal* | kotak hadiah terbuka, kad "3" |
-| 05 | WhatsApp saya sekarang. | WhatsApp saya sekarang | CTA + 3 tick tawaran |
+| 01 | Dah lama survey penapis air Coway, tapi asyik tangguh nak pasang? | Dah lama *survey*? 👀 | s01 pan showroom |
+| 02 | Haa, mungkin ini offer yang awak tunggu-tunggu! | Offer yang awak *tunggu-tunggu* | s03 NeoN pedestal, banner |
+| 03 | Serendah dua puluh ringgit sebulan. Hantar dan pasang percuma, seluruh Malaysia. Free gift premium untuk lima pelanggan terawal. | Serendah *RM20*/bulan | offer stack 💧🚚🎁 muncul satu-satu |
+| 04 | Dah lama fikir, jangan terlepas peluang ni pula. WhatsApp saya sekarang! | WhatsApp saya sekarang | CTA + 3 tick tawaran |
 
-### BF02 · Untuk lima orang je
-Kesedaran: dah survey, perlu sebab bertindak · Suara: L
-
-| # | VO | Kapsyen skrin | Visual |
-|---|---|---|---|
-| 01 | Hadiah ni, untuk lima orang je. | Untuk *5 orang* je | kotak hadiah bergoyang, reben (isi tak ditunjuk) |
-| 02 | Lima orang terawal yang pasang penapis air Coway dengan saya, dapat free gift premium. | Free gift *premium* | s02 dolly showroom, 5 ikon slot |
-| 03 | Bayaran serendah dua puluh ringgit sebulan, hantar dan pasang percuma. | *RM20*/bulan · pasang *percuma* | kad harga + lencana PERCUMA |
-| 04 | Bila dah cukup lima, habis. WhatsApp saya sekarang. | Slot terhad · WhatsApp saya | slot berkurang 5→… (tiada angka sebenar), CTA |
-
-### BF03 · Duduk jauh dari bandar
-Kesedaran: berminat, risau kos tersembunyi · Suara: P
+### BF02 · Siapa Cepat, Dia Dapat!
+Strategi: scarcity + FOMO · Suara: L
 
 | # | VO | Kapsyen skrin | Visual |
 |---|---|---|---|
-| 01 | Duduk jauh dari bandar? Takut kena caj hantar dan pasang? | Takut kena *caj pasang*? | peta Malaysia, pin di luar bandar |
-| 02 | Penapis air Coway, saya hantar dan pasang percuma, seluruh Malaysia. | Hantar & pasang *PERCUMA* seluruh Malaysia | van bergerak di peta → s05 Neo Plus |
-| 03 | Serendah dua puluh ringgit sebulan. Lima orang terawal dapat free gift premium. | Serendah *RM20*/bulan · free gift *5 terawal* | kad harga + kotak hadiah |
-| 04 | WhatsApp saya, bagitahu lokasi awak. | WhatsApp saya sekarang | CTA |
+| 01 | Eh! Ada hadiah untuk lima orang terawal sahaja! | 🚨 Untuk *5 orang* je! | kotak hadiah tertutup bergoyang, cop 🚨 |
+| 02 | Kalau tengah survey penapis air Coway, jangan scroll dulu. | Jangan *scroll* dulu! | s02 dolly showroom |
+| 03 | Penapis air Coway serendah dua puluh ringgit sebulan. Hantar dan pasang percuma, seluruh Malaysia. Free gift premium untuk lima pelanggan terawal. | Serendah *RM20*/bulan | offer stack ✨ + 5 ikon slot |
+| 04 | Bukan selalu ada peluang macam ni tau! WhatsApp saya sekarang. | WhatsApp saya sekarang | CTA |
 
-### BF04 · Simpan screenshot
-Persona: P3 "dah lama survey" · Suara: L
-
-| # | VO | Kapsyen skrin | Visual |
-|---|---|---|---|
-| 01 | Dah berapa lama awak simpan screenshot penapis air ni? | Dah lama *survey*? | galeri telefon penuh screenshot penapis air |
-| 02 | Kalau dah lama survey, ni masanya. | Ni *masanya* | s01 pan showroom |
-| 03 | Penapis air Coway serendah dua puluh ringgit sebulan, hantar dan pasang percuma. | *RM20*/bulan · pasang *percuma* | s03 NeoN pedestal + kad harga |
-| 04 | Dan untuk lima orang terawal, ada free gift premium. | Free gift *5 terawal* | kotak hadiah |
-| 05 | Jangan tunggu, WhatsApp saya sekarang. | WhatsApp saya sekarang | CTA |
-
-### BF05 · Mitos caj tambahan
-Kesedaran: berminat, risau caj · Suara: P
+### BF03 · Tak Perlu Pening Fikir Caj Pemasangan!
+Strategi: objection handling · Suara: P
 
 | # | VO | Kapsyen skrin | Visual |
 |---|---|---|---|
-| 01 | Pasang penapis air, mesti ada caj tambahan? Tak semestinya. | Mesti ada *caj tambahan*? | cop MITOS di atas s02 showroom |
-| 02 | Dengan saya, hantar dan pasang percuma, seluruh Malaysia. | Hantar & pasang *PERCUMA* | cop FAKTA, s04 Villaem 3 |
-| 03 | Bayaran bulanan serendah dua puluh ringgit. | Serendah *RM20*/bulan | kad harga |
-| 04 | Lima orang terawal dapat free gift premium lagi. WhatsApp saya sekarang. | Free gift *5 terawal* · WhatsApp saya | kotak hadiah → CTA |
+| 01 | Nak pasang Coway, tapi takut kena macam-macam caj tambahan? | Takut *caj tambahan*? 🤔 | s01 showroom, ikon resit/caj bertanda soal |
+| 02 | Jangan risau, tengok tawaran ni. | Tengok *tawaran* ni | s04 Villaem 3 |
+| 03 | Serendah dua puluh ringgit sebulan. Hantar dan pasang percuma, seluruh Malaysia. Free gift premium untuk lima pelanggan terawal. | Hantar & pasang *PERCUMA* | offer stack + peta Malaysia, van |
+| 04 | Duduk jauh pun jangan risau. WhatsApp saya, saya bantu explain sampai faham! | WhatsApp saya sekarang | CTA |
+
+### BF04 · Asyik Tengok, Bila Nak Pasang?
+Strategi: emotional trigger + P3 retargeting · Suara: L
+
+| # | VO | Kapsyen skrin | Visual |
+|---|---|---|---|
+| 01 | Jujur sikit, berapa lama dah simpan gambar penapis air Coway dalam phone? | Simpan gambar dalam *phone*? 😂 | galeri telefon penuh screenshot penapis air |
+| 02 | Tengok punya tengok, survey punya survey, tapi belum pasang lagi! | Tapi *belum pasang* lagi! | s02 dolly showroom |
+| 03 | Sekarang, serendah dua puluh ringgit sebulan. Hantar dan pasang percuma, seluruh Malaysia. Free gift premium untuk lima pelanggan terawal. | Serendah *RM20*/bulan | offer stack 💥 |
+| 04 | Jom WhatsApp saya sekarang, kita borak dulu! | WhatsApp saya sekarang | CTA |
+
+### BF05 · RM20 Je Sebulan?!
+Strategi: price hook + value stacking · Suara: P
+
+| # | VO | Kapsyen skrin | Visual |
+|---|---|---|---|
+| 01 | Dua puluh ringgit sebulan? Ya, awak tak salah baca! | *RM20* sebulan?! 👀 | angka RM20 besar, zoom-in, s05 Neo Plus |
+| 02 | Kalau dah lama teringin nak pasang penapis air Coway, ini masanya. | Ini *masanya* | s03 NeoN pedestal |
+| 03 | Serendah dua puluh ringgit sebulan. Hantar dan pasang percuma, seluruh Malaysia. Free gift premium untuk lima pelanggan terawal. | 3 tawaran dalam *1 kempen* 🔥 | offer stack, kira 1-2-3 |
+| 04 | Tiga tawaran dalam satu kempen! WhatsApp saya sekarang. | WhatsApp saya sekarang | CTA |
 
 CTA (semua): "WhatsApp saya sekarang" (perkataan sahaja, tiada nombor) · Penafian: "*Serendah RM20/bulan. Free gift untuk 5 pelanggan terawal. Tertakluk terma & syarat."
+Kotak hadiah kekal tertutup sehingga jenis free gift disahkan.
+
+---
+## Bonus: 10 hook untuk video ads (dari user, untuk batch seterusnya / ujian hook)
+
+| No. | Jenis hook | Ayat hook |
+|---|---|---|
+| 1 | Curiosity | Eh, betul ke Coway sekarang serendah RM20 sebulan? |
+| 2 | FOMO | Lima orang je dapat free gift premium ni! |
+| 3 | Direct selling | Yang tengah survey Coway, kejap! Tengok ni. |
+| 4 | Relatable | Dah berbulan survey, tapi belum pasang-pasang? |
+| 5 | Price hook | RM20 sebulan? Ini yang awak kena tengok! |
+| 6 | Casual | Okay, saya ada berita baik untuk awak! |
+| 7 | Urgency | Kalau memang nak pasang Coway, jangan skip offer ni! |
+| 8 | Problem solving | Nak Coway tapi asyik fikir pasal kos? |
+| 9 | Engagement | Siapa dekat sini tengah cari penapis air? |
+| 10 | Friendly | Saya rasa awak patut tengok offer ni dulu! |
+
+## Cadangan ujian Meta Ads (dari user)
+
+| Keutamaan | Video | Sudut |
+|---|---|---|
+| 1 | BF04 | Relatable |
+| 2 | BF01 | Direct conversion |
+| 3 | BF02 | FOMO |
+| 4 | BF03 | Objection handling |
+| 5 | BF05 | Price hook |
+
+KPI: kos setiap perbualan WhatsApp, kualiti prospek, kadar prospek berminat, kadar pemasangan sebenar.
