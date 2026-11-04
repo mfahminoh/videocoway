@@ -145,7 +145,7 @@ Klik WhatsApp untuk dapatkan maklumat lanjut!
 ```
 Headline: **Dapur Sempit? Kenali NeoN!** · Description: Coway NeoN bermula RM20.*
 
-## Dicipta di Meta (4 Nov 2026, DRAF — belum diterbitkan)
+## Dicipta di Meta (4 Nov 2026) — AKTIF 5 Nov 2026
 
 Imej dimuat naik dari `out/neon-flow-01/poster/*.jpg` (commit 102a954). Semua ad set: RM5/hari, CONVERSATIONS → WhatsApp, page FZ Home & Living, MY tanpa Sabah & Sarawak, umur 23+, Advantage+ audience & placement, Instagram melalui identiti page (17841456236566351).
 
@@ -157,4 +157,6 @@ Imej dimuat naik dari `out/neon-flow-01/poster/*.jpg` (commit 102a954). Semua ad
 | G2 | 120250211629500480 | 120250211639770480 | 3035130096828489 | 6309af998a634ebbec1448b6c2166dae |
 | D1 | 120250211629690480 | 120250211640570480 | 1086905327676333 | 20e20b4011d323cc171159a5dd1d0257 |
 
-Penghalang: "Advertiser is missing" — Malaysia wajibkan advertiser & payer yang disahkan Meta pada setiap ad set. Tool API tidak boleh pilih identiti ini; user pilih dalam Ads Manager (sama seperti ad set asal), kemudian terbitkan draf.
+- "Advertiser is missing": Malaysia wajibkan advertiser & payer yang disahkan Meta pada setiap ad set. Tool API tidak boleh memilihnya; user pilih dalam Ads Manager dan terbitkan 5 ad set (5 Nov).
+- "Link title and description of creative's Call to Action are deprecated (#1815589)": `ads_create_creative` meletakkan headline/description dalam `call_to_action.value`. Dibaiki dengan creative inline (headline & description hanya dalam `link_data.name`/`description`, CTA `{"type":"WHATSAPP_MESSAGE","value":{"app_destination":"WHATSAPP"}}`), kemudian 5 iklan diterbitkan (5 Nov). Creative ID dalam jadual di atas tidak lagi dipakai oleh iklan.
+- Status 5 Nov: 5 ad set ACTIVE (RM5/hari), 5 iklan ACTIVE, dalam semakan Meta (IN_PROCESS). Audit selepas 3–5 hari: `coway-ads-audit`.

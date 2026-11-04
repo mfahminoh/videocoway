@@ -6,7 +6,7 @@
 |---|---|---|---|
 | Poster (6) | ✅ draf | `flow/*.jpg` (asal 896×1200) → `out/neon-flow-01/poster/{C1,B1,G1,G2,D1}.jpg` (1080×1350) | 5 diluluskan user 4 Nov 2026; A1 ditolak (produk salah) |
 | Copy iklan | ✅ draf | `iklan.md` | dari playbook + "*Tertakluk terma & syarat." |
-| 7 Iklan | ⏳ | iklan.md | 5 ad set salinan dalam kempen FIZAH \| WP, RM5/hari setiap satu |
+| 7 Iklan | ✅ | iklan.md | 5 ad set + 5 iklan AKTIF 5 Nov 2026 dalam kempen FIZAH \| WP, RM5/hari setiap satu |
 
 ## Cara jana (boleh diulang)
 
@@ -23,5 +23,6 @@
 ## Terbuka
 - [x] User luluskan 5 poster (C1, B1, G1, G2, D1); A1 ditolak terus
 - [x] Bajet RM5/hari setiap ad set baru
-- [ ] Sahkan nombor WhatsApp dalam pratonton sebelum aktif
+- [ ] Sahkan nombor WhatsApp pada iklan yang aktif
+- [ ] Audit selepas 3–5 hari (kos setiap perbualan ikut angle)
 - [ ] Iklan "FIZAH | Coway Neon Mampu Milik | 1" guna primary text Peti Ais 715L: semak dengan user
