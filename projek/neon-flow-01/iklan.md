@@ -160,3 +160,21 @@ Imej dimuat naik dari `out/neon-flow-01/poster/*.jpg` (commit 102a954). Semua ad
 - "Advertiser is missing": Malaysia wajibkan advertiser & payer yang disahkan Meta pada setiap ad set. Tool API tidak boleh memilihnya; user pilih dalam Ads Manager dan terbitkan 5 ad set (5 Nov).
 - "Link title and description of creative's Call to Action are deprecated (#1815589)": `ads_create_creative` meletakkan headline/description dalam `call_to_action.value`. Dibaiki dengan creative inline (headline & description hanya dalam `link_data.name`/`description`, CTA `{"type":"WHATSAPP_MESSAGE","value":{"app_destination":"WHATSAPP"}}`), kemudian 5 iklan diterbitkan (5 Nov). Creative ID dalam jadual di atas tidak lagi dipakai oleh iklan.
 - Status 5 Nov: 5 ad set ACTIVE (RM5/hari), 5 iklan ACTIVE, dalam semakan Meta (IN_PROCESS). Audit selepas 3–5 hari: `coway-ads-audit`.
+
+## Akaun Mira / MEERA (611632542246193): AKTIF 5 Nov 2026
+
+Arahan user: "publishkan ads yang sama tadi ke akaun Mira Noramira". Akaun dikenal pasti melalui page **Coway Mirah** (1400436746483571), iaitu page yang sama dengan iklan video NeoN MEERA yang sedang aktif. Copy dan poster sama seperti FIZAH (C1, B1, G1, G2, D1).
+
+- **Kempen:** `MEERA | Engagement | WhatsApp | Penapis Air 5 Video | 17102026` (52560738730779).
+- **Ad set (sedia ada, dipilih user):** `MEERA | WhatsApp | Penapis Air | MY tanpa Sabah Sarawak | 27102026` (52562858199579): RM20/hari, CONVERSATIONS → WhatsApp, MY tanpa Sabah & Sarawak, Advantage+. Ad set baru RM5/hari ditolak oleh Meta ("Advertiser is missing", subcode 3858634), jadi 5 iklan dimasukkan ke ad set ini dan berkongsi bajet RM20 dengan iklan video "Neon Ada Anak Kecil".
+- Akaun ini tiada akaun Instagram yang dipautkan (Instagram guna identiti page).
+
+| ID | Iklan | Creative |
+|---|---|---|
+| C1 | 52564876075379 | 2700493457073278 |
+| B1 | 52564876201779 | 2732504897169534 |
+| G1 | 52564876210779 | 2255452672053410 |
+| G2 | 52564876225979 | 2201357100415811 |
+| D1 | 52564876252979 | 1640136244561068 |
+
+Status 5 Nov: 5 iklan ACTIVE, dalam semakan Meta (PENDING_REVIEW / IN_PROCESS).
