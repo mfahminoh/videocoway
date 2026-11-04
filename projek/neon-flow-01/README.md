@@ -4,9 +4,9 @@
 
 | Langkah | Status | Fail | Nota |
 |---|---|---|---|
-| Poster (6) | ✅ draf | `flow/*.jpg` (asal 896×1200) → `out/neon-flow-01/poster/{C1,B1,A1,G1,G2,D1}.jpg` (1080×1350) | menunggu semakan user |
+| Poster (6) | ✅ draf | `flow/*.jpg` (asal 896×1200) → `out/neon-flow-01/poster/{C1,B1,G1,G2,D1}.jpg` (1080×1350) | 5 diluluskan user 4 Nov 2026; A1 ditolak (produk salah) |
 | Copy iklan | ✅ draf | `iklan.md` | dari playbook + "*Tertakluk terma & syarat." |
-| 7 Iklan | — | | 6 ad set salinan dalam kempen FIZAH \| WP, PAUSED |
+| 7 Iklan | ⏳ | iklan.md | 5 ad set salinan dalam kempen FIZAH \| WP, RM5/hari setiap satu |
 
 ## Cara jana (boleh diulang)
 
@@ -16,11 +16,12 @@
 - Pilih 1 daripada 2 take: semak ejaan headline (B1 take b: "SETIAP SETIAP"), bentuk NeoN (G1 take a: tapak lebar), artifak teks (D1 take a). Potong 4:5 (offset ikut kedudukan footer) dan besarkan ke 1080×1350.
 
 ## Keputusan
+- 2026-11-04: A1 dan D1 asal: unit NeoN pendek & gemuk (spek 195 × 405 mm, depan ±2:1). Jana semula dengan gambar depan rasmi + arahan nisbah: D1d diterima, A1 (semua take) ditolak. Edit Flow tidak mengubah bentuk unit.
 - 2026-11-04: user pilih poster penuh dari Flow (bukan komposit HTML), akaun Coway Azzuddin, harga RM20/bulan + penghantaran & pemasangan percuma disahkan.
 - 2026-11-04: sambung dalam kempen sedia ada `FIZAH | Sales | Whatsapp | WP | 26102026`, duplicate ad set sahaja (pengecualian kepada peraturan 1-1-1). Page FZ Home & Living.
 
 ## Terbuka
-- [ ] User luluskan 6 poster
-- [ ] Bajet setiap ad set baru (ad set asal RM20/hari)
+- [x] User luluskan 5 poster (C1, B1, G1, G2, D1); A1 ditolak terus
+- [x] Bajet RM5/hari setiap ad set baru
 - [ ] Sahkan nombor WhatsApp dalam pratonton sebelum aktif
 - [ ] Iklan "FIZAH | Coway Neon Mampu Milik | 1" guna primary text Peti Ais 715L: semak dengan user

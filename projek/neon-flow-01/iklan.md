@@ -8,7 +8,7 @@ Aliran A (servis iklan ejen). Disediakan 4 Nov 2026. Copy dari `playbook.md` bah
 - **Kempen sedia ada:** `FIZAH | Sales | Whatsapp | WP | 26102026` (120250044622870480). Arahan user: sambung dalam kempen ini, **duplicate ad set sahaja** (bukan kempen baru 1-1-1).
 - **Ad set asal:** `FIZAH | Sales | Whatsapp | WP | 26102026` (120250044622930480): RM20/hari, Conversations → WhatsApp, MY tanpa Sabah & Sarawak, umur 23–65, Advantage+ audience & placement.
 - **Page:** FZ Home & Living (1374545175738046), sama seperti 3 iklan video NeoN dalam ad set asal. Nombor WhatsApp = nombor yang dipautkan pada page ini; sahkan dalam pratonton sebelum aktif.
-- **Struktur:** 6 ad set baru (salinan ad set asal), satu poster satu ad set, dicipta **PAUSED**.
+- **Struktur:** 5 ad set baru (salinan ad set asal), satu poster satu ad set, **RM5/hari** setiap satu. A1 ditolak (tiada iklan).
 - **Nama ad set:** `FIZAH | Sales | Whatsapp | WP | <ID> <angle> | 04112026`; nama iklan: `FIZAH | NeoN Flow | <ID>`.
 
 ## Copy (Primary text · Headline · Description · CTA = WhatsApp)
