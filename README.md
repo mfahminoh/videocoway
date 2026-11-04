@@ -23,6 +23,7 @@ Kerja baru: mula dari branch ini, dan gabung balik ke sini bila siap.
 | **Peti ais × P2 pakej 30 video** — batch 1 PA06–PA15, batch 2 PA16–PA25, batch 3 PA26–PA35 (promo RM20 × 7 bulan) (6 kategori: masalah, tips, pilih, situasi, produk, bantahan; shot Google Flow dalam `shots.md`) | `projek/peti-ais-p2-01/`, `videos/peti-ais-p2-01_batch.py`, `videos/peti-ais-p2-01_b2.py`, `videos/peti-ais-p2-01_b3.py`, `videos/PA06`–`PA35`, `assets/img/peti-ais-p2-01/` | `out/peti-ais-p2-01/` |
 | **Peti ais explainer** — PA36 Multi-Door 551L, PA37 Side-by-Side 715L (pelan user) | `projek/peti-ais-explainer-01/`, `videos/peti-ais-explainer-01_batch.py`, `videos/PA36`–`PA37` | `out/peti-ais-explainer-01/` |
 | **Promo "Serendah RM18" × penapis air** — PR01–PR10, video promo 10–16 s, klip showroom Google Flow (Neon, Villaem 3, Neo Plus) + kad harga + CTA WhatsApp | `projek/promo-rm18-01/`, `videos/promo-rm18-01_batch.py`, `videos/PR01`–`PR10`, `assets/clips/promo-rm18-01_s0*.mp4` | `out/promo-rm18-01/` |
+| **BOFU penapis air × RM20 sebulan** — BF01–BF05, 17–24 s, teks di tengah sahaja (selamat untuk FB Feed 4:5), hantar & pasang percuma + free gift 5 terawal | `projek/bofu-rm20-01/`, `videos/bofu-rm20-01_batch.py`, `videos/BF01`–`BF05` | `out/bofu-rm20-01/` |
 | **Peti ais & aircond** — plan content | `plan/` | — |
 | **Brand brain** (suara, warna, font, aset rasmi) | `brand-brain/` | — |
 | **Threads / posting** | `threads/`, `promo/threads/` | — |

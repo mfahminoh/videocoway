@@ -1,0 +1,76 @@
+{
+ "slug": "siapa-cepat-dia-dapat",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": "blue"
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "clip": "promo-rm18-01_s02",
+    "c0": 0.0,
+    "c1": 3.57
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "icon",
+   "in": 0,
+   "out": "@02",
+   "icon": "gift",
+   "top": 560,
+   "size": 260,
+   "color": "#ffffff"
+  },
+  {
+   "type": "icon",
+   "in": "@03",
+   "out": "@03%33",
+   "icon": "money",
+   "top": 560,
+   "size": 230,
+   "color": "#ffffff"
+  },
+  {
+   "type": "icon",
+   "in": "@03%33",
+   "out": "@03%72",
+   "icon": "truck",
+   "top": 560,
+   "size": 230,
+   "color": "#ffffff"
+  },
+  {
+   "type": "icon",
+   "in": "@03%72",
+   "out": "@03e",
+   "icon": "gift",
+   "top": 560,
+   "size": 230,
+   "color": "#ffffff"
+  },
+  {
+   "type": "cta",
+   "in": "@04e+0.3",
+   "top": 660,
+   "ticks": [
+    "SERENDAH RM20 SEBULAN*",
+    "HANTAR &amp; PASANG PERCUMA",
+    "FREE GIFT 5 TERAWAL*"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@04e+0.3",
+   "fine": "*Serendah RM20/bulan. Free gift untuk 5 pelanggan terawal. Tertakluk terma &amp; syarat."
+  }
+ ],
+ "theme": "coway",
+ "capTop": 860
+}

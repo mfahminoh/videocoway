@@ -33,7 +33,7 @@ PAGE = """<!DOCTYPE html>
 <script src="../lib/engine.js"></script><script src="../lib/{player}.js"></script>
 </body></html>
 """
-PASS = ("theme", "brand", "tagline", "style", "cap")   # kunci spec.json yang diteruskan ke pemain
+PASS = ("theme", "brand", "tagline", "style", "cap", "capTop")   # kunci spec.json yang diteruskan ke pemain
 
 
 def run(*cmd):
