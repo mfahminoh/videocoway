@@ -144,3 +144,17 @@ Klik WhatsApp untuk dapatkan maklumat lanjut!
 *Tertakluk terma & syarat.
 ```
 Headline: **Dapur Sempit? Kenali NeoN!** · Description: Coway NeoN bermula RM20.*
+
+## Dicipta di Meta (4 Nov 2026, DRAF — belum diterbitkan)
+
+Imej dimuat naik dari `out/neon-flow-01/poster/*.jpg` (commit 102a954). Semua ad set: RM5/hari, CONVERSATIONS → WhatsApp, page FZ Home & Living, MY tanpa Sabah & Sarawak, umur 23+, Advantage+ audience & placement, Instagram melalui identiti page (17841456236566351).
+
+| ID | Ad set | Iklan | Creative | Image hash |
+|---|---|---|---|---|
+| C1 | 120250211612660480 | 120250211637730480 | 1089105950788408 | 50ebfae460515f65b0d0259515295833 |
+| B1 | 120250211628340480 | 120250211638280480 | 1174228194926829 | 1480f4c4038173a3bbb8696060db7e86 |
+| G1 | 120250211629220480 | 120250211638730480 | 1668698808251095 | 1fcc66a9f0fac7615ef2d345e20c7e32 |
+| G2 | 120250211629500480 | 120250211639770480 | 3035130096828489 | 6309af998a634ebbec1448b6c2166dae |
+| D1 | 120250211629690480 | 120250211640570480 | 1086905327676333 | 20e20b4011d323cc171159a5dd1d0257 |
+
+Penghalang: "Advertiser is missing" — Malaysia wajibkan advertiser & payer yang disahkan Meta pada setiap ad set. Tool API tidak boleh pilih identiti ini; user pilih dalam Ads Manager (sama seperti ad set asal), kemudian terbitkan draf.
