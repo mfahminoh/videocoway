@@ -1,0 +1,67 @@
+{
+ "slug": "menyampah-angkut-tong-air",
+ "voice": "Orus",
+ "style": "Say in Malaysian Malay, as a friendly and confident young man on TikTok, relaxed and fairly quick, smiling",
+ "scenes": [
+  {
+   "at": 0,
+   "bg": {
+    "image": "bofu-rm20-01_b2/a_angkut.jpg"
+   }
+  },
+  {
+   "at": "@02",
+   "bg": {
+    "image": "bofu-rm20-01_b2/a_neon.jpg"
+   }
+  },
+  {
+   "at": "@03",
+   "bg": "blue"
+  }
+ ],
+ "els": [
+  {
+   "type": "icon",
+   "in": "@03",
+   "out": "@03%33",
+   "icon": "money",
+   "top": 560,
+   "size": 230,
+   "color": "#ffffff"
+  },
+  {
+   "type": "icon",
+   "in": "@03%33",
+   "out": "@03%72",
+   "icon": "truck",
+   "top": 560,
+   "size": 230,
+   "color": "#ffffff"
+  },
+  {
+   "type": "icon",
+   "in": "@03%72",
+   "out": "@03e",
+   "icon": "gift",
+   "top": 560,
+   "size": 230,
+   "color": "#ffffff"
+  },
+  {
+   "type": "cta",
+   "in": "@04e+0.3",
+   "top": 660,
+   "ticks": [
+    "SERENDAH RM20 SEBULAN*",
+    "HANTAR &amp; PASANG PERCUMA",
+    "FREE GIFT 5 TERAWAL*"
+   ],
+   "button": "WhatsApp saya",
+   "btnAt": "@04e+0.3",
+   "fine": "*Serendah RM20/bulan. Free gift untuk 5 pelanggan terawal. Tertakluk terma &amp; syarat."
+  }
+ ],
+ "theme": "coway",
+ "capTop": 860
+}

@@ -90,6 +90,27 @@ V["BF05"] = dict(slug="rm20-je-sebulan", who="P", lines=L(
   els=[*offer_icons(), cta("@04e+0.3")])
 
 
+# Batch 2 (4 Nov): angle baru user dari Google Flow, gambar dijana semula tanpa teks dengan Seedream 4.5
+# (assets/img/bofu-rm20-01_b2/). BF07: babak produk guna klip NeoN Flow kerana Seedream asyik tambah dulang titis.
+IMG = "bofu-rm20-01_b2/"
+
+V["BF06"] = dict(slug="menyampah-angkut-tong-air", who="L", lines=L(
+    ("Menyampah dah, tiap minggu beli air, angkut tong naik tangga.", "Menyampah *angkut tong air* tiap minggu?"),
+    ("Dengan penapis air Coway, air bersih terus dari dapur. Tekan je.", "Air bersih terus dari dapur. *Tekan je*"),
+    (OFFER_VO, OFFER_CAP),
+    ("Tak payah angkut tong lagi. WhatsApp saya sekarang!", "Tak payah *angkut* lagi! WhatsApp saya")),
+  scenes=[(0, {"image": IMG + "a_angkut.jpg"}), ("@02", {"image": IMG + "a_neon.jpg"}), ("@03", "blue")],
+  els=[*offer_icons(), cta("@04e+0.3")])
+
+V["BF07"] = dict(slug="tengah-tunggu-baby", who="P", lines=L(
+    ("Tengah tunggu baby? Banyak benda nak disiapkan.", "Tengah *tunggu baby*?"),
+    ("Coway NeoN ada air panas, sejuk dan suhu bilik, dengan kunci keselamatan untuk air panas.", "Panas, sejuk, suhu bilik + *kunci keselamatan*"),
+    (OFFER_VO, OFFER_CAP),
+    ("Siapkan dapur sebelum baby sampai. WhatsApp saya sekarang!", "Siap *sebelum baby sampai*! WhatsApp saya")),
+  scenes=[(0, {"image": IMG + "b_hamil.jpg"}), ("@02", "s03"), ("@03", "blue")],
+  els=[*offer_icons(), cta("@04e+0.3")])
+
+
 def at_time(at, seg):
     """`0`, `"@02"`, `"@02%40"`, `"@02e"` -> saat VO (hanya bentuk yang dipakai dalam fail ini)."""
     if not isinstance(at, str):
@@ -108,7 +129,7 @@ def scenes(vid, rows):
     seg = {s["id"]: s for s in json.loads(segf.read_text())} if segf.exists() else None
     out = []
     for i, (at, bg) in enumerate(rows):
-        if bg in CLIP_END:
+        if isinstance(bg, str) and bg in CLIP_END:
             dur = 3.0
             if seg and i + 1 < len(rows):
                 dur = at_time(rows[i + 1][0], seg) - at_time(at, seg)
