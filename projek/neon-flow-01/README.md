@@ -7,6 +7,7 @@
 | Poster (6) | ✅ draf | `flow/*.jpg` (asal 896×1200) → `out/neon-flow-01/poster/{C1,B1,G1,G2,D1}.jpg` (1080×1350) | 5 diluluskan user 4 Nov 2026; A1 ditolak (produk salah) |
 | Copy iklan | ✅ draf | `iklan.md` | dari playbook + "*Tertakluk terma & syarat." |
 | 7 Iklan | ✅ | iklan.md | 5 ad set + 5 iklan AKTIF 5 Nov 2026 dalam kempen FIZAH \| WP, RM5/hari setiap satu |
+| Variasi copy (30) | ✅ draf | `variasi.md`, `prompts-30.md` | 6 angle × 5 gaya: headline poster + copy Meta baharu; belum dijana atau dipasang |
 
 ## Cara jana (boleh diulang)
 
@@ -18,9 +19,11 @@
 ## Keputusan
 - 2026-11-04: A1 dan D1 asal: unit NeoN pendek & gemuk (spek 195 × 405 mm, depan ±2:1). Jana semula dengan gambar depan rasmi + arahan nisbah: D1d diterima, A1 (semua take) ditolak. Edit Flow tidak mengubah bentuk unit.
 - 2026-11-04: user pilih poster penuh dari Flow (bukan komposit HTML), akaun Coway Azzuddin, harga RM20/bulan + penghantaran & pemasangan percuma disahkan.
+- 2026-11-05: user minta gabung `prompts-30.md` (30 prompt Flow) untuk lebih banyak variasi copy. Bank copy dalam `variasi.md`.
 - 2026-11-04: sambung dalam kempen sedia ada `FIZAH | Sales | Whatsapp | WP | 26102026`, duplicate ad set sahaja (pengecualian kepada peraturan 1-1-1). Page FZ Home & Living.
 
 ## Terbuka
+- [ ] Pilih cara guna variasi: text options pada 5 iklan sedia ada, atau poster Flow baharu bagi setiap variasi
 - [x] User luluskan 5 poster (C1, B1, G1, G2, D1); A1 ditolak terus
 - [x] Bajet RM5/hari setiap ad set baru
 - [ ] Sahkan nombor WhatsApp pada iklan yang aktif
