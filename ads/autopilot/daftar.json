@@ -1,0 +1,54 @@
+{
+  "_nota": "Daftar akaun autopilot. Diputuskan user 11 Nov 2026: akaun Coway Azzuddin sahaja; benchmark ikut akaun (+30%); hanya kempen dalam 'kumpulan' disentuh; bajet TIDAK dinaikkan (iklan ganti masuk ad set yang sama). Suis henti: 'autopilot': false. 'mod': 'auto' = laksana, 'cadang' = laporan sahaja.",
+  "peraturan": {
+    "min_umur_hari": 3,
+    "min_belanja": 20,
+    "min_impression": 1000,
+    "min_mesej_benchmark": 10,
+    "benchmark_lalai": 30,
+    "faktor_kosong": 1.5,
+    "faktor_tetingkap": 2.0,
+    "faktor_mahal": 1.3,
+    "faktor_bocor": 2.0,
+    "faktor_menang": 0.8,
+    "min_mesej_menang": 3,
+    "ctr_rendah": 1.0,
+    "ctr_baik": 1.5,
+    "freq_letih": 2.8,
+    "faktor_ctr_jatuh": 0.75,
+    "max_pause_sehari": 3,
+    "max_iklan_baru_sehari": 3,
+    "min_stok_bank": 3,
+    "naik_bajet": false
+  },
+  "akaun": {
+    "990723860427887": {
+      "nama": "Coway Azzuddin",
+      "autopilot": true,
+      "mod": "auto",
+      "kumpulan": {
+        "fizah-wp": {
+          "tajuk": "FIZAH | penapis air NeoN (page FZ Home & Living)",
+          "page_id": "1374545175738046",
+          "instagram_user_id": "17841456236566351",
+          "awalan": "FIZAH",
+          "kempen": ["120250044622870480"]
+        },
+        "fizah-peti-ais": {
+          "tajuk": "FIZAH | peti ais (page FZ Home & Living)",
+          "page_id": "1374545175738046",
+          "instagram_user_id": "17841456236566351",
+          "awalan": "FIZAH",
+          "kempen": ["120249925910840480"]
+        },
+        "trusted-agent": {
+          "tajuk": "Azzuddin | penapis air RM18 (page Coway Trusted Agent)",
+          "page_id": "484033591801812",
+          "instagram_user_id": "17841437837530722",
+          "awalan": "Azzuddin",
+          "kempen": ["120250117240530480", "120250117240800480", "120250117240930480", "120249941240390480"]
+        }
+      }
+    }
+  }
+}

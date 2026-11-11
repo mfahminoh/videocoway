@@ -22,4 +22,5 @@ Satu skill satu langkah. Fail serahan dan struktur folder: [`projek/README.md`](
 
 ## Meta Ads
 
+- **Autopilot harian:** skill `coway-autopilot` (fail `ads/autopilot/`). Ia pause iklan kalah dan ganti dengan kreatif `LULUS` dari `ads/autopilot/bank.json` dalam ad set yang sama, tanpa naikkan bajet. Peraturan dan akaun dalam `ads/autopilot/daftar.json`. `ads/neon_autopilot.json` ialah rekod lama (Okt 2026).
 - **Struktur kempen 1-1-1:** setiap kempen ada 1 ad set dan 1 iklan sahaja. Kalau ada 3 video, buat 3 kempen berasingan (satu video satu kempen), bukan 3 iklan dalam satu ad set. Bajet yang user beri "untuk 1 kempen" ialah bajet setiap kempen.

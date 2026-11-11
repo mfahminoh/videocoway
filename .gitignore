@@ -88,3 +88,8 @@ out/kesedaran/_*
 # Projek neon-p3-01 (poster BOFU)
 !out/neon-p3-01/
 !out/neon-rm20-01/
+
+# Autopilot: data prestasi klien kekal lokal (repo ini awam)
+ads/autopilot/data/
+ads/autopilot/pelan/
+ads/autopilot/log.jsonl
