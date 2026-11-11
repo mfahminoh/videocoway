@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!--
+  TEMPLAT "X? NAH, COWAY." — swipe dari Grüns #6 / #21 (Nütrops "ADDERALL? NAH, MUSHROOMS", 39–69 hari aktif)
+  Anatomi: soalan = cara lama yang semua orang kenal · jawapan 2–4 perkataan · produk di tengah dikelilingi prop cara lama
+           · pil "Ejen Sah Coway" (macam "From the creators of") · meterai harga · baris T&C.
+  Tambah varian: tambah satu objek dalam VARIAN di bawah. Latar = gambar Seedream dengan tengah kosong (lihat flow-prompts.md).
+  Render: python3 .claude/skills/coway-poster/scripts/render_poster.py projek/neon-swipe-01/poster/templat-nah.html --out out/neon-swipe-01/poster
+-->
+<style>
+@font-face{font-family:Lilita;src:url(../../../assets/fonts/LilitaOne-Regular.ttf)}
+@font-face{font-family:Nunito;src:url(../../../assets/fonts/NunitoSans-900.ttf);font-weight:900}
+@font-face{font-family:Nunito;src:url(../../../assets/fonts/NunitoSans-800.ttf);font-weight:800}
+@font-face{font-family:Nunito;src:url(../../../assets/fonts/NunitoSans-700.ttf);font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222}
+:root{--navy:#0B2F6B;--blue:#01A7E1;--hot:#E5322D;--yellow:#FFD23F;--ink:#464646}
+.poster{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Nunito,sans-serif;margin-bottom:20px;background:#eaf4fb}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.h{position:absolute;left:40px;right:40px;top:56px;text-align:center;font-family:Lilita;line-height:.94;letter-spacing:1px}
+.h .q{display:block;white-space:nowrap;font-size:178px;color:var(--navy);-webkit-text-stroke:2px var(--navy)}
+.h .a{display:block;white-space:nowrap;font-size:124px;margin-top:6px}
+.unit{position:absolute;left:50%;top:452px;width:470px;transform:translateX(-50%);
+  filter:saturate(1.25) contrast(1.06) drop-shadow(0 26px 24px rgba(11,47,107,.38)) drop-shadow(0 3px 5px rgba(0,0,0,.30))}
+.floor{position:absolute;left:50%;top:1000px;width:540px;height:70px;transform:translateX(-50%);
+  background:radial-gradient(ellipse at 50% 50%,rgba(11,47,107,.30),rgba(11,47,107,0) 70%)}
+.agen{position:absolute;left:44px;top:812px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.agen small{font:800 20px/1 Nunito;letter-spacing:2px;color:var(--navy)}
+.agen b{font:900 28px/1 Nunito;color:#fff;background:var(--blue);padding:10px 18px 12px;border-radius:12px;transform:rotate(-3deg);
+  box-shadow:0 6px 14px rgba(1,167,225,.35)}
+.seal{position:absolute;right:40px;top:800px;width:250px;height:250px;transform:rotate(10deg)}
+.seal svg{position:absolute;inset:0;overflow:visible}
+.seal .in{position:absolute;inset:38px;border-radius:50%;background:var(--yellow);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--navy);text-align:center;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.seal .in small{font:900 21px/1 Nunito;letter-spacing:1px}
+.seal .in strong{font:400 74px/.95 Lilita;color:var(--hot)}
+.seal .in em{font:900 21px/1 Nunito;font-style:normal}
+.chips{position:absolute;left:50%;top:1112px;transform:translateX(-50%);display:flex;gap:12px;white-space:nowrap}
+.chips span{font:800 28px/1 Nunito;color:var(--navy);background:#fff;border-radius:999px;padding:14px 22px;box-shadow:0 6px 16px rgba(11,47,107,.16)}
+.cta{position:absolute;left:50%;top:1196px;transform:translateX(-50%);font:900 34px/1 Nunito;color:#fff;background:#25D366;border-radius:999px;
+  padding:18px 40px;white-space:nowrap;box-shadow:0 8px 18px rgba(37,211,102,.35)}
+.tnc{position:absolute;left:60px;right:60px;bottom:16px;text-align:center;font:700 19px/1.3 Nunito;color:var(--navy);background:rgba(255,255,255,.78);border-radius:999px;padding:8px 16px}
+</style></head><body>
+<div id="root"></div>
+<script>
+// Satu objek = satu poster (fail PNG ikut id). Teks dan harga mesti ikut promo yang disahkan (bank.json / brief).
+const VARIAN = [
+  { id: "nah-a1-air-botol", bg: "img/bg_a1.jpg",
+    soalan: "AIR BOTOL?", jawapan: "NAH, COWAY NEON.", warnaJawapan: "var(--hot)",
+    harga: "RM20", chips: ["Panas", "Sejuk", "Suhu bilik"],
+    tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
+  { id: "nah-a2-masak-air", bg: "img/bg_a2.jpg",
+    soalan: "MASAK AIR?", jawapan: "NAH, TEKAN JE.", warnaJawapan: "var(--blue)",
+    harga: "RM20", chips: ["Panas", "Sejuk", "Lebar 19.5 cm"],
+    tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
+];
+const UNIT = "img/neon-ciel-34.png";   // potongan rasmi NeoN (tanpa latar). Tukar warna = tukar fail.
+
+const ring = (txt) => `<svg viewBox="0 0 250 250"><defs><path id="c" d="M125 125 m-108 0 a108 108 0 1 1 216 0 a108 108 0 1 1 -216 0"/></defs>
+  <circle cx="125" cy="125" r="122" fill="#fff"/><text font-family="Nunito" font-weight="900" font-size="19" letter-spacing="3.2" fill="#0B2F6B">
+  <textPath href="#c">${txt}</textPath></text></svg>`;
+
+document.getElementById("root").innerHTML = VARIAN.map(v => `
+<div class="poster" id="${v.id}">
+  <img class="bg" src="${v.bg}">
+  <div class="h"><span class="q">${v.soalan}</span><span class="a" style="color:${v.warnaJawapan}">${v.jawapan}</span></div>
+  <div class="floor"></div>
+  <img class="unit" src="${UNIT}">
+  <div class="agen"><small>DARI</small><b>EJEN SAH COWAY</b></div>
+  <div class="seal">${ring("HANTAR PERCUMA • PASANG PERCUMA • ")}
+    <div class="in"><small>SERENDAH</small><strong>${v.harga}<span style="font-size:.45em">*</span></strong><em>SEBULAN</em></div></div>
+  <div class="chips">${v.chips.map(c => `<span>${c}</span>`).join("")}</div>
+  <div class="cta">WHATSAPP SAYA SEKARANG</div>
+  <div class="tnc">${v.tnc}</div>
+</div>`).join("");
+// Tajuk satu baris: kecilkan sehingga muat 1000 px
+document.querySelectorAll(".h span").forEach(el => {
+  let fs = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollWidth > 1000 && fs > 60) { fs -= 2; el.style.fontSize = fs + "px"; }
+});
+</script>
+</body></html>

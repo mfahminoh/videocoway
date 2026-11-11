@@ -21,6 +21,19 @@ Langkah seterusnya: iklan (jenis A) atau `coway-threads` (jenis B).
 
 Satu batch: jenis A = 5–7 poster (satu setiap sudut / layout brand-guide §8); jenis B = 1 poster utama + 1 untuk setiap hari kempen Threads (lihat `coway-threads`).
 
+## Templat swipe (boleh guna semula)
+
+Templat HTML yang dah siap, setiap satu dengan senarai `VARIAN` (satu objek = satu poster). Salin fail ke `projek/<kod>/poster/` dan ubah `VARIAN`.
+
+| Templat | Fail | Asal | Sesuai untuk |
+|---|---|---|---|
+| "X? NAH, COWAY." | `projek/neon-swipe-01/poster/templat-nah.html` | Grüns #6/#21 | Hook cara lama → jawapan pendek; produk di tengah, prop di tepi |
+| "Selamat tinggal / Hello" | `projek/neon-swipe-01/poster/templat-goodbye.html` | Grüns #212 | Lawan kebiasaan lama; editorial, latar krim |
+
+Prompt Google Flow untuk templat ini: `projek/neon-swipe-01/poster/flow-prompts.md`. Swipe file asal: artifak Grüns Swipe File dan O Positiv Swipe File (gambar dalam `~/Claude/VideoCoway/swipe-file-*/img/`).
+
+Render di Mac ini: `/Users/Fahmi/Claude/VideoCoway/.venv/bin/python` (ada Playwright) + Google Chrome yang dipasang (dikesan sendiri oleh `render_poster.py`).
+
 ## 1. Kandungan
 
 - **A:** hook & harga dari skrip yang menang / `skrip.md`; ikut layout `brand-brain/coway/brand-guide.md` §8 (hero produk, ciri, masalah→penyelesaian, banding model, testimoni/trade-in, promo urgency). Headline 4–8 perkataan, bahasa persona.

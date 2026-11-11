@@ -14,7 +14,8 @@ import re
 from playwright.sync_api import sync_playwright
 
 CHROMIUM = next((str(x) for x in [pathlib.Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome"),
-                                  pathlib.Path("/opt/pw-browsers/chromium")] if x.exists()), None)
+                                  pathlib.Path("/opt/pw-browsers/chromium"),
+                                  pathlib.Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")] if x.exists()), None)
 
 
 def main():

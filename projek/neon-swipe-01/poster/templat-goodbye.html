@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!--
+  TEMPLAT "SELAMAT TINGGAL / HELLO" — swipe dari Grüns #212 ("Goodbye, Messy Greens! / Hello, Tasty Gummies!")
+  Anatomi: latar krim satu warna · atas = cara lama (prop, tajuk serif) · bawah = produk + satu ayat janji + harga
+           · lawan KEBIASAAN, bukan jenama lain (risiko rendah) · ruang kosong banyak, rasa editorial.
+  Tambah varian: tambah satu objek dalam VARIAN. Prop atas = gambar Seedream atas latar krim (#F2EEE6) tanpa teks.
+  Render: python3 .claude/skills/coway-poster/scripts/render_poster.py projek/neon-swipe-01/poster/templat-goodbye.html --out out/neon-swipe-01/poster
+-->
+<style>
+@font-face{font-family:Playfair;src:url(../../../assets/fonts/PlayfairDisplay.ttf)}
+@font-face{font-family:Nunito;src:url(../../../assets/fonts/NunitoSans-900.ttf);font-weight:900}
+@font-face{font-family:Nunito;src:url(../../../assets/fonts/NunitoSans-800.ttf);font-weight:800}
+@font-face{font-family:Nunito;src:url(../../../assets/fonts/NunitoSans-600.ttf);font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222}
+:root{--cream:#F2EEE6;--navy:#0B2F6B;--blue:#01A7E1;--hot:#E5322D;--yellow:#FFD23F;--ink:#464646}
+.poster{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--cream);font-family:Nunito,sans-serif;margin-bottom:20px}
+.serif{font-family:Playfair,Georgia,serif;font-weight:700;letter-spacing:-.5px;color:var(--navy)}
+.bye{position:absolute;left:72px;right:72px;top:64px}
+.bye .l1{font-size:54px;line-height:1.05;opacity:.85}
+.bye .l2{font-size:80px;line-height:1.02;margin-top:4px}
+.bye .l2 s{text-decoration-thickness:6px;text-decoration-color:var(--hot)}
+.prop{position:absolute;left:0;right:0;top:250px;height:430px;
+  -webkit-mask-image:radial-gradient(ellipse 62% 70% at 50% 52%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 62% 70% at 50% 52%,#000 58%,transparent 100%)}
+.prop img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 55%)}
+.rule{position:absolute;left:72px;right:72px;top:700px;height:3px;background:var(--navy);opacity:.15}
+.hello{position:absolute;left:72px;top:736px;width:540px}
+.hello .l1{font-size:54px;line-height:1.05;color:var(--blue)}
+.hello .l2{font-size:66px;line-height:1.04;margin-top:4px}
+.hello p{font:600 28px/1.38 Nunito;width:560px;color:var(--ink);margin-top:22px}
+.hello p b{font-weight:900;color:var(--navy)}
+.price{position:absolute;left:72px;top:1086px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.price .tag{font:900 30px/1 Nunito;color:var(--navy);background:var(--yellow);padding:16px 22px;border-radius:14px;transform:rotate(-2deg)}
+.price .tag b{font-size:44px;color:var(--hot)}
+.price .wa{font:900 28px/1 Nunito;color:#fff;background:#25D366;padding:18px 24px;border-radius:999px}
+.unit{position:absolute;right:32px;top:790px;width:340px;filter:drop-shadow(0 22px 18px rgba(11,47,107,.25)) drop-shadow(0 3px 4px rgba(0,0,0,.22))}
+.floor{position:absolute;right:22px;top:1212px;width:370px;height:50px;background:radial-gradient(ellipse at 50% 50%,rgba(11,47,107,.28),rgba(11,47,107,0) 70%)}
+.agen{position:absolute;right:72px;top:722px;font:900 20px/1 Nunito;letter-spacing:2px;color:var(--blue)}
+.tnc{position:absolute;left:72px;right:72px;bottom:24px;font:600 19px/1.3 Nunito;color:var(--navy);opacity:.7}
+</style></head><body>
+<div id="root"></div>
+<script>
+const VARIAN = [
+  { id: "goodbye-b1-angkut-air", prop: "img/bg_b1.jpg", pos: "50% 60%",
+    bye1: "Selamat tinggal,", bye2: "angkut air botol!",
+    hello1: "Hello,", hello2: "air panas & sejuk terus di dapur.",
+    body: "<b>Coway NeoN</b>: tekan je, air terus keluar. Panas, sejuk & suhu bilik dalam satu mesin.",
+    harga: "RM20",
+    tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
+  { id: "goodbye-b2-masak-air", prop: "img/bg_b2.jpg", pos: "50% 58%",
+    bye1: "Selamat tinggal,", bye2: "tunggu cerek mendidih!",
+    hello1: "Hello,", hello2: "air panas sedia bila-bila masa.",
+    body: "<b>Coway NeoN</b>: lebar hanya 19.5 cm, muat di dapur kecil. Panas, sejuk & suhu bilik.",
+    harga: "RM20",
+    tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
+];
+const UNIT = "img/neon-ciel-34.png";
+
+document.getElementById("root").innerHTML = VARIAN.map(v => `
+<div class="poster" id="${v.id}">
+  <div class="bye serif"><div class="l1">${v.bye1}</div><div class="l2">${v.bye2}</div></div>
+  <div class="prop" style="--pos:${v.pos}"><img src="${v.prop}"></div>
+  <div class="rule"></div>
+  <div class="hello serif"><div class="l1">${v.hello1}</div><div class="l2">${v.hello2}</div><p>${v.body}</p></div>
+  <div class="agen">EJEN SAH COWAY</div>
+  <div class="floor"></div>
+  <img class="unit" src="${UNIT}">
+  <div class="price"><div class="tag">SERENDAH <b>${v.harga}</b>/BULAN*</div><div class="wa">WhatsApp saya</div></div>
+  <div class="tnc">${v.tnc}</div>
+</div>`).join("");
+</script>
+</body></html>

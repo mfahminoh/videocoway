@@ -93,3 +93,4 @@ out/kesedaran/_*
 ads/autopilot/data/
 ads/autopilot/pelan/
 ads/autopilot/log.jsonl
+!out/neon-swipe-01/
