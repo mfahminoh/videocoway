@@ -22,6 +22,9 @@ Jika tak jelas, tanya user: aliran mana, akaun iklan/page mana, bajet setiap kem
 
 ## 2. Sediakan
 
+**Gaya bahasa:** ikut skill `coway-gaya-bahasa` (santai, pendek, bahasa pelanggan sebenar). Jalankan `python3 .claude/skills/coway-gaya-bahasa/semak_gaya.py <fail>` dan baiki semua 🔴 sebelum tunjuk kepada user.
+
+
 - Pilih kreatif: video "Lulus" dari review (A) atau poster/video pakej (B). Satu kreatif satu kempen.
 - Copy iklan: primary text dari skrip/hook kreatif itu (A: bahasa persona, harga + "*Tertakluk", nama ejen jika ada; B: dari `threads.md`). Headline ≤ 40 aksara.
 - Nama kempen: `<kod> | <ID kreatif> | <A/B> | <tarikh>`, supaya audit boleh padankan prestasi dengan sudut dan persona.

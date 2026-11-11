@@ -131,6 +131,7 @@ Maksimum ±15 baris. Bahasa BM santai. Jika ada tindakan atau amaran, hantar jug
 
 ## Tugas user (bila diminta dalam chat)
 
+- **Semak gaya dulu**: `python3 .claude/skills/coway-gaya-bahasa/semak_gaya.py --bank ads/autopilot/bank.json --status DRAF`. Item dengan 🔴 ditulis semula ikut `coway-gaya-bahasa` sebelum ditunjuk kepada user.
 - **Lulus variasi**: tunjuk item `DRAF` dalam `bank.json` (tajuk, headline, 2 baris pertama copy). Tukar ke `LULUS` hanya yang user pilih, tambah `"diluluskan": "<tarikh>"`, commit.
 - **Promo baru / sahkan semula**: kemas kini `promo` dan `promo_sah_hingga` item berkaitan. Item yang copy-nya sebut harga lama mesti `DIHENTIKAN`, bukan dilanjutkan.
 - **Tambah kreatif**: video/poster siap dari `coway-video` / `coway-poster` → upload ke akaun (`ads_creative_upload_media`), buat creative inline sekali melalui iklan pertama atau `ads_create_creative`, kemudian tambah item dengan `creative_id`, `creative_ids`, `media`, `kumpulan`, `promo_sah_hingga`, `status: "LULUS"` (selepas user lulus).

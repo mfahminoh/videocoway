@@ -13,6 +13,9 @@ Tiada brief? Jalankan `coway-persona-produk` dulu, atau jika user dah beri produ
 
 ## 1. Bahan
 
+**Gaya bahasa:** ikut skill `coway-gaya-bahasa` (santai, pendek, bahasa pelanggan sebenar). Jalankan `python3 .claude/skills/coway-gaya-bahasa/semak_gaya.py <fail>` dan baiki semua 🔴 sebelum tunjuk kepada user. Lajur VO juga mesti lulus.
+
+
 - Sudut, fakta, penafian dan "Jangan" dari `brief.md`. **Hanya** fakta dalam brief / `brand-brain/coway/products.md`.
 - Bahasa pelanggan sebenar dari fail VoC (`research/<produk>-voc.md`, `research/peti-ais-coway-headline-research.md`, `tilam/padanan_pain_coway.md`). Guna frasa mereka dalam hook dan pain.
 - Nada & ayat terbukti: `brand-brain/coway/brand-guide.md` §5. Formula hook dari video rujukan: `reference/README.md`.

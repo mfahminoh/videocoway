@@ -9,6 +9,10 @@ User ialah pembuat kandungan untuk **ejen Coway** (bukan Coway Malaysia). Dua su
 
 Jangan campur dua audiens ni: video & poster **iklan** bercakap kepada pelanggan akhir (keluarga). Post **Threads** dan poster pakej bercakap kepada **ejen Coway**.
 
+## Gaya bahasa
+
+Semua copy kepada pelanggan (iklan, poster, skrip, bank autopilot) ikut skill `coway-gaya-bahasa`: macam ejen WhatsApp kawan, ayat pendek, bahasa pelanggan sebenar, bukan terjemahan. Penyemak: `.claude/skills/coway-gaya-bahasa/semak_gaya.py`.
+
 ## Aliran kerja projek video
 
 Satu skill satu langkah. Fail serahan dan struktur folder: [`projek/README.md`](projek/README.md).

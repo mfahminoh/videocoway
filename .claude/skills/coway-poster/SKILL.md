@@ -36,6 +36,9 @@ Render di Mac ini: `/Users/Fahmi/Claude/VideoCoway/.venv/bin/python` (ada Playwr
 
 ## 1. Kandungan
 
+**Gaya bahasa:** ikut skill `coway-gaya-bahasa` (santai, pendek, bahasa pelanggan sebenar). Jalankan `python3 .claude/skills/coway-gaya-bahasa/semak_gaya.py <fail>` dan baiki semua 🔴 sebelum tunjuk kepada user. Tajuk poster ≤ 6 perkataan.
+
+
 - **A:** hook & harga dari skrip yang menang / `skrip.md`; ikut layout `brand-brain/coway/brand-guide.md` §8 (hero produk, ciri, masalah→penyelesaian, banding model, testimoni/trade-in, promo urgency). Headline 4–8 perkataan, bahasa persona.
 - **B:** nama pakej, bilangan video, 3–4 isi ("✅ Siap VO BM, 9:16, download terus post"), harga pakej, had ("TERHAD 25 ORANG"), kata kunci komen. Harga pakej mesti sama dengan `projek/<kod>/threads.md` / CLAUDE.md.
 - Penafian (A): "*Tertakluk terma & syarat" untuk promo; TÜV untuk UV 99.9%; nota kaki angka peti ais. Label kecil "Ejen Sah Coway" jika logo Coway dipakai.

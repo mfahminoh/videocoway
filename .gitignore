@@ -94,3 +94,6 @@ ads/autopilot/data/
 ads/autopilot/pelan/
 ads/autopilot/log.jsonl
 !out/neon-swipe-01/
+
+# Chat WhatsApp lead (nama & nombor pelanggan): kekal lokal
+research/whatsapp/
