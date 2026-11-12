@@ -31,11 +31,12 @@ MODELS = ["gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-fl
 
 
 def tts(text, voice):
+    tries = int(os.environ.get("TTS_TRIES", 12))
     req_body = {"contents": [{"parts": [{"text": text}]}],
                        "generationConfig": {"responseModalities": ["AUDIO"],
                                             "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
     body = json.dumps(req_body).encode()
-    for i in range(12):
+    for i in range(tries):
         m = MODELS[i % len(MODELS)]
         req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
                                      data=body, headers=HEADERS)

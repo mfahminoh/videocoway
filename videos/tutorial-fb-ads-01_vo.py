@@ -7,14 +7,14 @@ diletak pada masa mula kapsyen tu (dipercepat sedikit jika tak muat), kemudian d
     python3 videos/tutorial-fb-ads-01_vo.py            # jana baris yang belum ada + mix + mux
     python3 videos/tutorial-fb-ads-01_vo.py --redo 3,28  # jana semula baris tertentu
 """
-import argparse, concurrent.futures as cf, json, pathlib, re, subprocess, sys, wave
+import argparse, concurrent.futures as cf, json, os, pathlib, re, subprocess, sys, wave
 import numpy as np
 
 ROOT = pathlib.Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "voiceover"))
 import gemini_tts  # noqa: E402
 from gemini_tts import tts  # noqa: E402
-gemini_tts.MODELS[:] = ["gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]  # 3.1 diutamakan; 3.8/2.5 kerap baca arahan gaya (semakan panjang tapis)
+gemini_tts.MODELS[:] = os.environ["TTS_MODELS"].split(",") if os.environ.get("TTS_MODELS") else ["gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]  # 3.1 diutamakan; 3.8/2.5 kerap baca arahan gaya (semakan panjang tapis)
 
 D = ROOT / "videos" / "TF01"
 SRT = ROOT / "projek" / "tutorial-fb-ads-01" / "kapsyen.srt"
@@ -62,7 +62,7 @@ def gen(seg):
         text = text.replace(k, v)
     exp = len(text) / CPS
     best = None
-    for attempt in range(4):
+    for attempt in range(int(os.environ.get("TTS_FIRST_ATTEMPT", 0)), 4):  # 3 = terus tanpa arahan gaya
         prompt = f"{STYLE}: {text}" if attempt < 3 else text   # cubaan terakhir tanpa arahan gaya
         try:
             data, model = tts(prompt, VOICE)

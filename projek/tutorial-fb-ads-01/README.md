@@ -18,8 +18,11 @@ python3 videos/tutorial-fb-ads-01_vo.py --redo 3,28  # jana semula baris tertent
 Setiap baris SRT dijana berasingan (`videos/TF01/line_NN.wav`), diletak pada masa mula kapsyennya dan dipercepat sehingga ×1.25 jika tak muat. Masa sebenar dalam `videos/TF01/timing.json`. URL disebut "business titik facebook titik com" / "ads manager titik facebook titik com" (kapsyen kekal).
 
 ## Keputusan
-- 2026-11-12: suara Kore (perempuan, mesra/tenang), tiada muzik latar. Model dikunci ke `gemini-3.1-flash-tts-preview` kerana 3.8 / 2.5 kerap membaca arahan gaya.
+- 2026-11-12: suara Kore (perempuan, mesra/tenang), tiada muzik latar. 3.1-preview diutamakan kerana 3.8 / 2.5 kerap membaca arahan gaya; setiap baris disemak panjangnya (aksara ÷ 14.5/s) dan dijana semula jika tak munasabah.
+- 2026-11-12: kuota percuma harian Gemini TTS (10 permintaan/model/hari) habis; baris 25, 31, 33–35, 38–40 dijana dengan `gemini-3.8-flash-lite-tts` tanpa arahan gaya (`TTS_MODELS=... TTS_FIRST_ATTEMPT=3`). Transkrip semakan penuh sepadan dengan skrip.
+- Masa: VO paling lewat ~1.6 s di belakang kapsyen (baris 21–26, langkah Create Page) dan ~1 s di baris 39–40; baris lain dalam slot kapsyen. Banyak baris dipercepat ×1.1–1.25 kerana slot SRT ketat.
 
 ## Terbuka
 - [ ] User dengar sebutan istilah Inggeris (Profile, Ads Manager, Business Portfolio, Ad Set) dan URL.
 - [ ] Muzik latar lembut? (belum ditambah)
+- [ ] Baris 25, 31, 33–35, 38–40 dari model lite: semak warna suara sama dengan baris lain; jana semula dengan 3.1-preview bila kuota pulih jika perlu (`--redo`).
