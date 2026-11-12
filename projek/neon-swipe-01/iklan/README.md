@@ -18,3 +18,11 @@ Page Coway Trusted Agent (484033591801812), IG 17841437837530722. Bajet ad set t
 
 Copy: `copy.json` (lulus `semak_gaya.py`). Bank autopilot: `SWIPE-A1`, `SWIPE-A2`, `SWIPE-B1` (kumpulan trusted-agent).
 Upload terus dengan `ads_create_upload_url` → curl → `ads_finalize_upload` (URL upload tamat ±30 min; minta dan guna serta-merta).
+
+## D1 baru (12 Nov 2026, arahan user "ganti sekarang")
+
+| Ad set | Iklan lama (di-pause) | Iklan baru | Copy |
+|---|---|---|---|
+| `FIZAH \| Sales \| Whatsapp \| WP \| D1 Dapur Sempit` (120250211629690480) | FIZAH \| NeoN Flow \| D1 (120250211640570480), gambar ada "19.5 cm" | 120250323496960480 (creative 3057398257985815) | bank `NEON-D1-V1` |
+
+Page FZ Home & Living (1374545175738046). Image hash 975abeffde553ec3c13a4d7688149c3d.

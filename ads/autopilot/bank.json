@@ -483,7 +483,9 @@
       "angle": "05",
       "jenis_media": "image",
       "media": "975abeffde553ec3c13a4d7688149c3d",
-      "creative_ids": [],
+      "creative_ids": [
+        "3057398257985815"
+      ],
       "promo": "Pakej serendah RM20 + penghantaran & pemasangan percuma (disahkan user 4 Nov 2026)",
       "promo_sah_hingga": "2026-11-30",
       "copy": {
@@ -492,7 +494,14 @@
         "description": "NeoN sejengkal je"
       },
       "sumber": "projek/neon-flow-01/variasi.md 05.1",
-      "guna": [],
+      "guna": [
+        {
+          "akaun": "990723860427887",
+          "adset": "120250211629690480",
+          "iklan": "120250323496960480",
+          "tarikh": "2026-11-12"
+        }
+      ],
       "gaya": "ditulis semula 2026-11-11, tanpa ukuran cm 2026-11-12",
       "diluluskan": "2026-11-12",
       "media_lama": "20e20b4011d323cc171159a5dd1d0257",
