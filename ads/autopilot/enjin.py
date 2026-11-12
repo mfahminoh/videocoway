@@ -167,6 +167,10 @@ def prestasi_item(item, snap):
             tot.belanja += h.belanja
             tot.mesej += h.mesej
             tot.imp += h.imp
+    # rekod tersimpan (bila iklan item dah berhenti, snapshot tak nampak dia lagi)
+    simpan = item.get("prestasi") or {}
+    if float(simpan.get("belanja", 0)) > tot.belanja:
+        tot.belanja, tot.mesej = float(simpan["belanja"]), int(simpan.get("mesej", 0))
     return tot
 
 
@@ -320,6 +324,7 @@ def nilai(snap, daftar, bank):
             nama_baru = f"{k['awalan']} | AUTO | {item['id']} | {hari_ini.strftime('%d%m%Y')}"
             pelan["tindakan"].append({
                 "jenis": "GANTI", "iklan_lama": r["id"], "nama_lama": r["nama"], "adset": adset,
+                "creative_lama": creative_by_ad.get(r["id"]),
                 "kumpulan": k_id, "sebab": r["sebab"], "diagnosis": r.get("diagnosis"),
                 "keputusan": r["keputusan"],
                 "pause_walau_gagal": r["keputusan"] == "KOSONG" or bool(r.get("bocor")),
@@ -333,6 +338,7 @@ def nilai(snap, daftar, bank):
             pause_ikut_adset.setdefault(adset, []).append(r["id"])
         elif r["keputusan"] == "KOSONG" or r.get("bocor") or tinggal >= 1:
             pelan["tindakan"].append({"jenis": "PAUSE", "iklan_lama": r["id"], "nama_lama": r["nama"], "adset": adset,
+                                      "creative_lama": creative_by_ad.get(r["id"]),
                                       "kumpulan": k_id, "sebab": r["sebab"] + "; tiada kreatif ganti dalam bank",
                                       "ad_set_kosong": tinggal < 1})
             pause_kiraan += 1
@@ -343,6 +349,12 @@ def nilai(snap, daftar, bank):
             pelan["amaran"].append(f"{r['nama']}: mahal ({r['sebab']}) tapi bank {k_id} kosong dan ia satu-satunya "
                                    "iklan dalam ad set. Dibiarkan; isi bank.")
 
+    pelan["prestasi_bank"] = {}
+    for item in bank["item"]:
+        perf = prestasi_item(item, snap)
+        if perf.belanja > 0:
+            pelan["prestasi_bank"][item["id"]] = {"belanja": round(perf.belanja, 2), "mesej": perf.mesej,
+                                                  "tarikh": snap["tarikh"]}
     pelan["stok_bank"] = stok_bank(bank, cfg, hari_ini, snap, Bv, p)
     for k_id, s in pelan["stok_bank"].items():
         if s["lulus"] < p["min_stok_bank"]:
@@ -408,7 +420,18 @@ def rekod(pelan, hasil, bank_path, log_path):
             if h.get("berjaya") and h.get("iklan_baru_id"):
                 idx[t["bank_item"]].setdefault("guna", []).append(
                     {"akaun": pelan["akaun"], "adset": t["adset"], "iklan": h["iklan_baru_id"], "tarikh": pelan["tarikh"]})
+        # kreatif yang kalah tak boleh dipilih semula (pepijat 12 Nov: PR09 dipilih kerana iklannya dah berhenti)
+        dipause = (t["jenis"] == "GANTI" and h.get("pause_lama")) or (t["jenis"] == "PAUSE" and h.get("berjaya"))
+        if dipause and t.get("creative_lama"):
+            for item in bank["item"]:
+                if t["creative_lama"] in item.get("creative_ids", []) and item.get("status") == "LULUS":
+                    item["status"] = "DIHENTIKAN"
+                    item["nota"] = f"Kalah {pelan['tarikh']} di {pelan['akaun']}: {t['sebab']}"
+                    baris.setdefault("bank_dihentikan", []).append(item["id"])
         log.append(baris)
+    for item_id, pr in (pelan.get("prestasi_bank") or {}).items():
+        if item_id in idx and float(pr["belanja"]) >= float((idx[item_id].get("prestasi") or {}).get("belanja", 0)):
+            idx[item_id]["prestasi"] = pr
     tulis(bank_path, bank)
     with open(log_path, "a", encoding="utf-8") as f:
         for b in log:

@@ -66,6 +66,8 @@ KAKU = {
     "paling laris": "dakwaan tanpa sumber Coway: buang",
     "terlaris": "dakwaan tanpa sumber Coway: buang",
     "ramai dah pasang": "bukti sosial tak disahkan: buang",
+    "19.5 cm": "jangan sebut ukuran cm; guna \"sejengkal je\" (keputusan user 12 Nov 2026)",
+    "kertas a4": "buang perbandingan ukuran; guna \"sejengkal je\"",
     "nah,": "\"nah\" dalam BM = \"nah, ambik\"; guna \"Tak payah dah.\" / \"Dah tak zaman.\"",
     "berkualiti tinggi": "sebut fakta (penapis Nanotrap, servis HEART)",
     "gaya hidup": "sebut situasi sebenar",

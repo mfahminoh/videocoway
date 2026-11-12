@@ -166,6 +166,28 @@ class Ujian(unittest.TestCase):
         teks = enjin.laporan(self.nilai(s, [item("B", cr="n")]))
         self.assertIn("Ganti 'bad'", teks)
 
+    def test_kalah_ditanda_dihentikan_dan_prestasi_disimpan(self):
+        # PR10 kalah -> diganti; item yang creative-nya PR10 mesti jadi DIHENTIKAN
+        s = snap({"bad": ("S1", "cr-bad", "2026-11-01"), "w": ("S2", "cr-w", "2026-11-01")},
+                 {"bad": semua([50, 3000, 0.4, 13, 1.2, 0]), "w": semua([60, 3000, 2.5, 20, 1.2, 6])})
+        bank = {"item": [item("BAD", cr="cr-bad"), item("W", cr="cr-w"), item("NEW", cr="n")]}
+        pelan = enjin.nilai(s, copy.deepcopy(DAFTAR), bank)
+        self.assertEqual(pelan["tindakan"][0]["creative_lama"], "cr-bad")
+        with tempfile.TemporaryDirectory() as d:
+            bp, lp = Path(d) / "bank.json", Path(d) / "log.jsonl"
+            bp.write_text(json.dumps(bank))
+            enjin.rekod(pelan, [{"tindakan": 0, "berjaya": True, "iklan_baru_id": "X", "pause_lama": True}], bp, lp)
+            b2 = {i["id"]: i for i in json.loads(bp.read_text())["item"]}
+        self.assertEqual(b2["BAD"]["status"], "DIHENTIKAN")
+        self.assertEqual(b2["W"]["prestasi"]["mesej"], 6)
+
+    def test_rekod_tersimpan_halang_pemenang_palsu(self):
+        # item yang iklannya dah berhenti (tiada dalam snapshot) tapi rekod tersimpan kalah -> tak dipilih
+        s = snap({"bad": ("S1", "cr-bad", "2026-11-01")}, {"bad": semua([50, 3000, 0.4, 13, 1.2, 0])})
+        lama = item("LAMA", cr="cr-lama"); lama["prestasi"] = {"belanja": 122.14, "mesej": 1}
+        p = self.nilai(s, [lama, item("BARU", cr="cr-baru")])
+        self.assertEqual(p["tindakan"][0]["bank_item"], "BARU")
+
 
 class UjianSnapshot(unittest.TestCase):
     """Baris sebenar dari Meta Ads connector (11 Nov 2026), dipendekkan."""

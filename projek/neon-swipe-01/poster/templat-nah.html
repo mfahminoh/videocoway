@@ -36,7 +36,12 @@ body{background:#222}
 .seal .in strong{font:400 74px/.95 Lilita;color:var(--hot)}
 .seal .in em{font:900 21px/1 Nunito;font-style:normal}
 .chips{position:absolute;left:50%;top:1112px;transform:translateX(-50%);display:flex;gap:12px;white-space:nowrap}
-.chips span{font:800 28px/1 Nunito;color:var(--navy);background:#fff;border-radius:999px;padding:14px 22px;box-shadow:0 6px 16px rgba(11,47,107,.16)}
+.chips span{font:800 26px/1 Nunito;color:var(--navy);background:#fff;border-radius:999px;padding:13px 20px;box-shadow:0 6px 16px rgba(11,47,107,.16)}
+.chips span{display:inline-flex;align-items:center;gap:10px}
+.chips i{display:inline-block;width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(11,47,107,.25)}
+.chips .dots{display:inline-flex;gap:5px}
+.chips .dots i{width:20px;height:20px}
+
 .cta{position:absolute;left:50%;top:1196px;transform:translateX(-50%);font:900 34px/1 Nunito;color:#fff;background:#25D366;border-radius:999px;
   padding:18px 40px;white-space:nowrap;box-shadow:0 8px 18px rgba(37,211,102,.35)}
 .tnc{position:absolute;left:60px;right:60px;bottom:16px;text-align:center;font:700 19px/1.3 Nunito;color:var(--navy);background:rgba(255,255,255,.78);border-radius:999px;padding:8px 16px}
@@ -47,13 +52,19 @@ body{background:#222}
 const VARIAN = [
   { id: "nah-a1-air-botol", bg: "img/bg_a1.jpg",
     soalan: "ANGKUT AIR BOTOL?", jawapan: "TAK PAYAH DAH.", warnaJawapan: "var(--hot)",
-    harga: "RM20", chips: ["Panas", "Sejuk", "Suhu bilik"],
+    harga: "RM20",
     tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
   { id: "nah-a2-masak-air", bg: "img/bg_a2.jpg",
     soalan: "MASAK AIR LAGI?", jawapan: "SEKARANG TEKAN JE.", warnaJawapan: "var(--blue)",
-    harga: "RM20", chips: ["Panas", "Sejuk", "Lebar 19.5 cm je"],
+    harga: "RM20",
     tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
 ];
+// Sorotan wajib setiap poster (keputusan user 12 Nov 2026): 3 suhu + 5 pilihan warna.
+const SOROTAN = [["Panas", "#E5322D"], ["Sejuk", "#2F8BE6"], ["Suhu bilik", "#80ABCE"]];
+const WARNA = ["#CDEBD9", "#BFE1F2", "#F4C7C3", "#B9BDC1", "#F7F5F1"];   // mint, ciel blue, peach pink, pebble gray, porcelain white
+const chipHTML = (tambahan = []) => SOROTAN.map(([t, c]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")
+  + `<span><b class="dots">${WARNA.map(c => `<i style="background:${c}"></i>`).join("")}</b>5 pilihan warna</span>`
+  + tambahan.map(t => `<span>${t}</span>`).join("");
 const UNIT = "img/neon-ciel-34.png";   // potongan rasmi NeoN (tanpa latar). Tukar warna = tukar fail.
 
 const ring = (txt) => `<svg viewBox="0 0 250 250"><defs><path id="c" d="M125 125 m-108 0 a108 108 0 1 1 216 0 a108 108 0 1 1 -216 0"/></defs>
@@ -69,14 +80,16 @@ document.getElementById("root").innerHTML = VARIAN.map(v => `
   <div class="agen"><small>DARI</small><b>EJEN SAH COWAY</b></div>
   <div class="seal">${ring("HANTAR PERCUMA • PASANG PERCUMA • ")}
     <div class="in"><small>SERENDAH</small><strong>${v.harga}<span style="font-size:.45em">*</span></strong><em>SEBULAN</em></div></div>
-  <div class="chips">${v.chips.map(c => `<span>${c}</span>`).join("")}</div>
+  <div class="chips">${chipHTML(v.tambahan)}</div>
   <div class="cta">WHATSAPP SAYA SEKARANG</div>
   <div class="tnc">${v.tnc}</div>
 </div>`).join("");
 // Tajuk satu baris: kecilkan sehingga muat 1000 px
+document.fonts.ready.then(() => {
 document.querySelectorAll(".h span").forEach(el => {
   let fs = parseFloat(getComputedStyle(el).fontSize);
   while (el.scrollWidth > 1000 && fs > 60) { fs -= 2; el.style.fontSize = fs + "px"; }
+});
 });
 </script>
 </body></html>

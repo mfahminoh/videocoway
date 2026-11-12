@@ -11,7 +11,7 @@ Dua templat poster iklan (pelanggan akhir) yang di-swipe dari artifak **Grüns S
 |---|---|---|---|
 | 5 Poster HTML (4) | ✅ draf | `out/neon-swipe-01/poster/{nah-a1-air-botol,nah-a2-masak-air,goodbye-b1-angkut-air,goodbye-b2-masak-air}.png` | menunggu kelulusan user |
 | Prompt Flow | ✅ draf | `poster/flow-prompts.md` | A1, A2, B1, B2 + idea varian |
-| 7 Iklan / bank autopilot | — | `ads/autopilot/bank.json` | selepas lulus: upload ke akaun Azzuddin, tambah sebagai item `fizah-wp` |
+| 7 Iklan | ✅ 12 Nov | `iklan/README.md` | A1, A2, B1 × 2 ad set promo RM18 (Coway Azzuddin), ganti PR06 & PR09; bank `SWIPE-A1/A2/B1` |
 
 ## Cara guna templat
 
@@ -31,6 +31,8 @@ Dua templat poster iklan (pelanggan akhir) yang di-swipe dari artifak **Grüns S
 - Kos Seedream: 5 gambar ≈ USD 0.20
 
 ## Keputusan
+- 2026-11-12: user: tiada ukuran cm ("sejengkal" sahaja); setiap poster sorot panas, sejuk, suhu bilik + 5 pilihan warna. Copy ikut `coway-gaya-bahasa`.
+- 2026-11-12: user: iklan melebihi had kos → tukar kepada 3 poster (A1, A2, B1).
 - 2026-11-11: user pilih templat Grüns #6/#21 dan #212, bentuk HTML + prompt Flow.
 - 2026-11-11: harga = pakej serendah RM20 sebulan + penghantaran & pemasangan percuma (disahkan 4 Nov 2026, sah hingga 30 Nov 2026 dalam bank autopilot).
 

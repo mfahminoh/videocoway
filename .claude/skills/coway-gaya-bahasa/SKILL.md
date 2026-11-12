@@ -32,11 +32,13 @@ Sampel kecil (1–7 mesej setiap iklan). Ia petanda, bukan bukti muktamad. Tapi 
 3. **Ayat pendek.** Satu idea satu ayat, ±12 perkataan. Hook ≤ 8 perkataan. Tajuk poster ≤ 6 perkataan.
 4. **Bahasa lisan, ejaan penuh.** Guna: tak, nak, dah, je, lah, kan, tau, pun, kena, ke, ni, tu, macam, ngam, takpe. Jangan singkatan SMS (x, nk, dh, sbb) dalam iklan.
 5. **Panggil orang, jangan "anda".** Ikut situasi: "Abang", "Mak-mak", "Puan", "awak", atau tiada kata ganti langsung. "Anda" hanya dalam T&C.
-6. **Sebut benda sebenar, bukan kategori.** ✗ "Pelbagai pilihan suhu air" ✓ "Panas, sejuk, suhu bilik. Tekan je." ✗ "Rekaan kompak" ✓ "Lebar 19.5 cm je."
+6. **Sebut benda sebenar, bukan kategori.** ✗ "Pelbagai pilihan suhu air" ✓ "Panas, sejuk, suhu bilik. Tekan je." ✗ "Rekaan kompak" ✓ "Kecik, sejengkal je."
 7. **Harga terus dan ringan.** "RM20 sebulan je*" · "Siap hantar & pasang free*". Bukan "Pakej serendah RM20 sahaja!*"
 8. **CTA bunyi macam ejen.** ✓ "WhatsApp saya, saya kira pakej yang ngam untuk rumah awak." ✓ "Tanya dulu pun takpe." ✗ "Klik WhatsApp untuk dapatkan maklumat lanjut sekarang!"
 9. **Emoji maksimum 3.** Satu pada hook, satu-dua pada senarai. Bukan setiap baris.
 10. **English yang orang Malaysia memang guna, boleh.** filter, promo, install, worth it, free, upgrade, servis. Elak istilah marketing (premium experience, lifestyle, elevate).
+
+**Saiz & sorotan NeoN (keputusan user 12 Nov 2026):** jangan sebut ukuran dalam cm; kalau perlu, "sejengkal je". Setiap poster NeoN mesti sorot **panas, sejuk, suhu bilik** dan **5 pilihan warna**.
 
 Peraturan fakta tetap terpakai (brand-guide, brief, `projek/*/brief.md`): harga yang disahkan sahaja, tiada dakwaan kesihatan/terlaris/bukti sosial palsu, `*Tertakluk terma & syarat.` di hujung.
 
@@ -72,7 +74,7 @@ WhatsApp saya, saya semak pakej untuk awak.
 ```
 "Abang, bila lagi nak pasang Coway?" 😂
 Dah tiga kali tanya. Abang buat-buat tak dengar.
-Coway NeoN: panas, sejuk, suhu bilik. Lebar 19.5 cm je.
+Coway NeoN: panas, sejuk, suhu bilik. 5 pilihan warna.
 RM20 sebulan je, siap hantar & pasang free*.
 WhatsApp saya sebelum hint keempat sampai.
 *Tertakluk terma & syarat.

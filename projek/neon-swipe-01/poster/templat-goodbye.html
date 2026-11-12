@@ -30,10 +30,17 @@ body{background:#222}
 .hello .l2{font-size:66px;line-height:1.04;margin-top:4px}
 .hello p{font:600 28px/1.38 Nunito;width:560px;color:var(--ink);margin-top:22px}
 .hello p b{font-weight:900;color:var(--navy)}
-.price{position:absolute;left:72px;top:1086px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.chips{position:absolute;left:72px;top:var(--chips-top,1040px);width:600px;display:flex;flex-wrap:wrap;gap:10px}
+.chips span{font:800 24px/1 Nunito;color:var(--navy);background:#fff;border-radius:999px;padding:12px 18px;box-shadow:0 4px 12px rgba(11,47,107,.10)}
+.chips span{display:inline-flex;align-items:center;gap:10px}
+.chips i{display:inline-block;width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(11,47,107,.25)}
+.chips .dots{display:inline-flex;gap:5px}
+.chips .dots i{width:20px;height:20px}
+
+.price{position:absolute;left:72px;top:1190px;display:flex;align-items:center;gap:14px}
 .price .tag{font:900 30px/1 Nunito;color:var(--navy);background:var(--yellow);padding:16px 22px;border-radius:14px;transform:rotate(-2deg)}
 .price .tag b{font-size:44px;color:var(--hot)}
-.price .wa{font:900 28px/1 Nunito;color:#fff;background:#25D366;padding:18px 24px;border-radius:999px}
+.price .wa{font:900 26px/1 Nunito;color:#fff;background:#25D366;padding:18px 24px;border-radius:999px}
 .unit{position:absolute;right:32px;top:790px;width:340px;filter:drop-shadow(0 22px 18px rgba(11,47,107,.25)) drop-shadow(0 3px 4px rgba(0,0,0,.22))}
 .floor{position:absolute;right:22px;top:1212px;width:370px;height:50px;background:radial-gradient(ellipse at 50% 50%,rgba(11,47,107,.28),rgba(11,47,107,0) 70%)}
 .agen{position:absolute;right:72px;top:722px;font:900 20px/1 Nunito;letter-spacing:2px;color:var(--blue)}
@@ -45,14 +52,20 @@ const VARIAN = [
   { id: "goodbye-b1-angkut-air", prop: "img/bg_b1.jpg", pos: "50% 60%",
     bye1: "Dulu:", bye2: "angkut air botol tiap minggu.",
     hello1: "Sekarang:", hello2: "tekan je, air terus keluar.",
-    body: "<b>Coway NeoN</b>: panas, sejuk, suhu bilik.<br>Satu mesin kecil je.",
+    body: "<b>Coway NeoN</b> kecik, sejengkal je.",
     harga: "RM20", tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
   { id: "goodbye-b2-masak-air", prop: "img/bg_b2.jpg", pos: "50% 58%",
     bye1: "Dulu:", bye2: "tunggu cerek berbunyi.",
     hello1: "Sekarang:", hello2: "nak air panas? Tekan je.",
-    body: "<b>Coway NeoN</b> lebar 19.5 cm je.<br>Muat dapur sempit.",
+    body: "<b>Coway NeoN</b> sejengkal je. Muat dapur sempit.",
     harga: "RM20", tnc: "*Pakej serendah RM20 sebulan, penghantaran & pemasangan percuma. Tertakluk terma & syarat." },
 ];
+// Sorotan wajib setiap poster (keputusan user 12 Nov 2026): 3 suhu + 5 pilihan warna.
+const SOROTAN = [["Panas", "#E5322D"], ["Sejuk", "#2F8BE6"], ["Suhu bilik", "#80ABCE"]];
+const WARNA = ["#CDEBD9", "#BFE1F2", "#F4C7C3", "#B9BDC1", "#F7F5F1"];   // mint, ciel blue, peach pink, pebble gray, porcelain white
+const chipHTML = (tambahan = []) => SOROTAN.map(([t, c]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")
+  + `<span><b class="dots">${WARNA.map(c => `<i style="background:${c}"></i>`).join("")}</b>5 pilihan warna</span>`
+  + tambahan.map(t => `<span>${t}</span>`).join("");
 const UNIT = "img/neon-ciel-34.png";
 
 document.getElementById("root").innerHTML = VARIAN.map(v => `
@@ -64,12 +77,21 @@ document.getElementById("root").innerHTML = VARIAN.map(v => `
   <div class="agen">EJEN SAH COWAY</div>
   <div class="floor"></div>
   <img class="unit" src="${UNIT}">
+  <div class="chips">${chipHTML()}</div>
   <div class="price"><div class="tag">SERENDAH <b>${v.harga}</b>/BULAN*</div><div class="wa">WhatsApp saya</div></div>
   <div class="tnc">${v.tnc}</div>
 </div>`).join("");
+document.fonts.ready.then(() => {
 document.querySelectorAll(".bye .l2").forEach(el => {
   let fs = parseFloat(getComputedStyle(el).fontSize);
   while (el.scrollWidth > 936 && fs > 48) { fs -= 2; el.style.fontSize = fs + "px"; }
+});
+});
+document.fonts.ready.then(() => {
+document.querySelectorAll(".poster").forEach(p => {
+  const body = p.querySelector(".hello p").getBoundingClientRect(), top = p.getBoundingClientRect().top;
+  p.querySelector(".chips").style.top = (body.bottom - top + 22) + "px";
+});
 });
 </script>
 </body></html>
