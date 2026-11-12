@@ -85,3 +85,5 @@ out/kesedaran/_*
 
 # Projek neon-p3-01 (poster BOFU)
 !out/neon-p3-01/
+!out/tutorial-fb-ads-01/
+videos/TF01/_*.wav

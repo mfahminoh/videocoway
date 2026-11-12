@@ -1,0 +1,160 @@
+1
+00:00:00,000 --> 00:00:06,352
+Baru nak mula iklan Facebook, tapi pening? Profile, Page, Ads Manager... semuanya nampak sama.
+
+2
+00:00:06,352 --> 00:00:13,748
+Jangan risau. Saya terangkan perbezaannya, susunannya, dan cara create Page & Ads Manager, langkah demi langkah.
+
+3
+00:00:13,748 --> 00:00:21,144
+Pertama, Facebook Profile. Ini akaun peribadi anda. Guna nama sebenar, untuk berkawan dengan kawan dan keluarga.
+
+4
+00:00:21,144 --> 00:00:25,350
+Tapi ingat, Profile tak boleh digunakan untuk buat iklan.
+
+5
+00:00:25,350 --> 00:00:31,818
+Walaupun begitu, anda tetap perlukan Profile, sebab itulah akaun yang anda guna untuk log masuk.
+
+6
+00:00:31,818 --> 00:00:40,548
+Kedua, Facebook Page. Ini muka depan bisnes anda. Sesiapa pun boleh nampak, walaupun tak ada akaun Facebook, dan followers tak ada had.
+
+7
+00:00:40,548 --> 00:00:45,624
+Anda boleh letak beberapa admin, dan ada Insights untuk tengok prestasi.
+
+8
+00:00:45,624 --> 00:00:52,382
+Paling penting, Page inilah yang jadi nama di iklan anda. Page dicipta daripada Profile, dan percuma.
+
+9
+00:00:52,382 --> 00:00:58,154
+Ketiga, Ads Manager. Ia alat untuk buat dan urus iklan. Ini bukan tempat untuk post.
+
+10
+00:00:58,154 --> 00:01:03,462
+Di dalamnya ada Akaun Iklan, tempat anda letak kaedah bayaran dan mata wang.
+
+11
+00:01:03,462 --> 00:01:08,944
+Dan di sini juga anda boleh tengok berapa belanja, dan berapa mesej yang masuk.
+
+12
+00:01:08,944 --> 00:01:13,382
+Senang nak ingat macam ni. Profile ialah kad pengenalan anda.
+
+13
+00:01:13,382 --> 00:01:16,382
+Page ialah kedai anda.
+
+14
+00:01:16,382 --> 00:01:20,878
+Dan Ads Manager ialah tempat anda sewa papan iklan, dan bayar.
+
+15
+00:01:20,878 --> 00:01:26,302
+Sekarang, macam mana susunannya? Bermula dengan Profile anda, untuk log masuk.
+
+16
+00:01:26,302 --> 00:01:33,350
+Profile cipta Page. Kemudian ada Business Portfolio, iaitu bekas besar yang simpan semua aset bisnes anda.
+
+17
+00:01:33,350 --> 00:01:36,860
+Di dalam Portfolio, ada Page dan Akaun Iklan.
+
+18
+00:01:36,860 --> 00:01:41,124
+Dan Akaun Iklan inilah yang anda buka melalui Ads Manager.
+
+19
+00:01:41,124 --> 00:01:47,940
+Dalam Ads Manager, susunannya ada tiga peringkat. Pertama Campaign, di sini anda pilih objektif iklan.
+
+20
+00:01:47,940 --> 00:01:51,102
+Kedua Ad Set: audien, bajet dan jadual.
+
+21
+00:01:51,102 --> 00:01:54,902
+Ketiga Ad: gambar atau video, dan teks iklan anda.
+
+22
+00:01:54,902 --> 00:01:59,282
+Jom create Page. Satu, log masuk Facebook guna Profile anda.
+
+23
+00:01:59,282 --> 00:02:03,372
+Dua, tekan menu, pilih Pages, kemudian Create new Page.
+
+24
+00:02:03,372 --> 00:02:08,216
+Tiga, isi nama Page dan kategori. Nama biar sama dengan nama bisnes.
+
+25
+00:02:08,216 --> 00:02:12,190
+Empat, tulis bio ringkas, kemudian tekan Create Page.
+
+26
+00:02:12,190 --> 00:02:16,454
+Lima, masukkan gambar profile atau logo, dan gambar cover.
+
+27
+00:02:16,454 --> 00:02:19,454
+Siap! Page anda dah hidup.
+
+28
+00:02:19,454 --> 00:02:28,822
+Seterusnya, buat Business Portfolio. Pergi ke business.facebook.com, log masuk guna Profile yang sama, kemudian tekan Create a business portfolio.
+
+29
+00:02:28,822 --> 00:02:32,216
+Isi nama bisnes, nama anda dan emel bisnes.
+
+30
+00:02:32,216 --> 00:02:35,216
+Lepas tu, sahkan emel anda.
+
+31
+00:02:35,216 --> 00:02:41,336
+Sekarang, buat Akaun Iklan. Dalam Business Settings, pilih Accounts, kemudian Ad accounts.
+
+32
+00:02:41,336 --> 00:02:44,846
+Tekan Add, dan pilih Create a new ad account.
+
+33
+00:02:44,846 --> 00:02:53,170
+Letak nama akaun, pilih zon masa Kuala Lumpur dan mata wang Ringgit Malaysia. Pilih betul-betul, sebab susah nak tukar kemudian.
+
+34
+00:02:53,170 --> 00:02:56,170
+Lepas tu, tambah kaedah bayaran.
+
+35
+00:02:56,170 --> 00:03:04,436
+Ingat, Portfolio baru hanya boleh ada satu akaun iklan pada mulanya, dan akaun iklan tak boleh dipadam. Jadi buat sekali je ya.
+
+36
+00:03:04,436 --> 00:03:10,324
+Pastikan Page anda dipautkan dalam Portfolio: Settings, Accounts, Pages, kemudian Add.
+
+37
+00:03:10,324 --> 00:03:14,936
+Pastikan juga anda ada akses penuh pada Page dan Akaun Iklan tu.
+
+38
+00:03:14,936 --> 00:03:21,172
+Akhir sekali, buka adsmanager.facebook.com, dan tekan Create untuk mula kempen pertama anda.
+
+39
+00:03:21,172 --> 00:03:27,292
+Ringkasnya: Profile untuk log masuk. Page untuk bisnes anda. Ads Manager untuk buat iklan.
+
+40
+00:03:27,292 --> 00:03:34,804
+Kalau menu nampak lain sikit, jangan risau. Meta memang selalu ubah susunan. Cari nama yang sama. Selamat mencuba!
+
