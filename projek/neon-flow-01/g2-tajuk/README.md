@@ -12,7 +12,7 @@ Pasangan, unit NeoN, pelekat RM20 dan footer kekal piksel demi piksel sama denga
 |---|---|---|---|
 | V1 | BAJU BABY DAH BELI. / PENAPIS AIR DAH ADA? / Satu lagi benda nak siap sebelum baby sampai. | fa26734f16e88b307b8e12f3596ec84f | 120250323776000480 |
 | V2 | DAH NAK BERSALIN? / DAPUR DAH SIAP? / Air panas, sejuk, suhu bilik. Tekan je. | 38cf253eae1e29b819e2eff6ae170e59 | 120250323776870480 |
-| V3 | BABY NAK SAMPAI... / AIR PANAS DAH SEDIA. / Tak payah tunggu cerek lagi. | 31677fe3c5b2907e4198bbc383f5a4a9 | 120250323777260480 |
+| V3 | BABY NAK SAMPAI... / AIR PANAS DAH SEDIA. / Tak payah tunggu cerek lagi. | 31677fe3c5b2907e4198bbc383f5a4a9 | 120250323777260480 (**di-pause 12 Nov, user tak mahu**) |
 
 Ad set: `Azzuddin | Awareness Water Purifier | 18102026 | Ais` (120249941240380480), RM10/hari tidak diubah, bersama iklan "Coway Ais".
 Copy: teks asal G2 (`projek/neon-flow-01/iklan.md` bahagian G2), headline "Sebelum Si Kecil Tiba...". Bank autopilot: `G2-SCALE-V1/V2/V3`.
