@@ -107,7 +107,7 @@ def main():
     segs = srt()
     redo = {int(i) for i in a.redo.split(",") if i}
     todo = [s for s in segs if s["i"] in redo or not (D / f"line_{s['i']:02d}.wav").exists()]
-    with cf.ThreadPoolExecutor(2) as ex:
+    with cf.ThreadPoolExecutor(1) as ex:
         for i, dur, model in ex.map(gen, todo):
             print(f"baris {i:02d}: {dur:.2f}s ({model})", flush=True)
 
