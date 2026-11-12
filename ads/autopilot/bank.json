@@ -119,7 +119,7 @@
     },
     {
       "id": "NEON-D1",
-      "status": "LULUS",
+      "status": "DIHENTIKAN",
       "kumpulan": "fizah-wp",
       "produk": "NeoN",
       "tajuk": "Poster D1 · Dapur sempit? Kenali NeoN (copy asal)",
@@ -141,7 +141,8 @@
           "iklan": "asal",
           "tarikh": "2026-11-05"
         }
-      ]
+      ],
+      "nota": "Gambar poster asal ada tulisan 'Hanya 19.5 cm Lebar'; user tak mahu ukuran cm (12 Nov 2026). Iklan live asal tidak disentuh."
     },
     {
       "id": "NEON-G1-V1",
@@ -478,10 +479,10 @@
       "status": "LULUS",
       "kumpulan": "fizah-wp",
       "produk": "NeoN",
-      "tajuk": "Poster D1 + copy variasi 05.1 (Pain point)",
+      "tajuk": "Poster D1 baru (nah-d1-dapur-sempit) + copy variasi 05.1 (Pain point)",
       "angle": "05",
       "jenis_media": "image",
-      "media": "20e20b4011d323cc171159a5dd1d0257",
+      "media": "975abeffde553ec3c13a4d7688149c3d",
       "creative_ids": [],
       "promo": "Pakej serendah RM20 + penghantaran & pemasangan percuma (disahkan user 4 Nov 2026)",
       "promo_sah_hingga": "2026-11-30",
@@ -493,17 +494,19 @@
       "sumber": "projek/neon-flow-01/variasi.md 05.1",
       "guna": [],
       "gaya": "ditulis semula 2026-11-11, tanpa ukuran cm 2026-11-12",
-      "diluluskan": "2026-11-12"
+      "diluluskan": "2026-11-12",
+      "media_lama": "20e20b4011d323cc171159a5dd1d0257",
+      "nota": "Gambar ditukar 12 Nov 2026 ke poster D1 baru tanpa '19.5 cm' (projek/neon-swipe-01)."
     },
     {
       "id": "NEON-D1-V2",
       "status": "LULUS",
       "kumpulan": "fizah-wp",
       "produk": "NeoN",
-      "tajuk": "Poster D1 + copy variasi 05.2 (Product focused)",
+      "tajuk": "Poster D1 baru (nah-d1-dapur-sempit) + copy variasi 05.2 (Product focused)",
       "angle": "05",
       "jenis_media": "image",
-      "media": "20e20b4011d323cc171159a5dd1d0257",
+      "media": "975abeffde553ec3c13a4d7688149c3d",
       "creative_ids": [],
       "promo": "Pakej serendah RM20 + penghantaran & pemasangan percuma (disahkan user 4 Nov 2026)",
       "promo_sah_hingga": "2026-11-30",
@@ -515,17 +518,19 @@
       "sumber": "projek/neon-flow-01/variasi.md 05.2",
       "guna": [],
       "gaya": "ditulis semula 2026-11-11, tanpa ukuran cm 2026-11-12",
-      "diluluskan": "2026-11-12"
+      "diluluskan": "2026-11-12",
+      "media_lama": "20e20b4011d323cc171159a5dd1d0257",
+      "nota": "Gambar ditukar 12 Nov 2026 ke poster D1 baru tanpa '19.5 cm' (projek/neon-swipe-01)."
     },
     {
       "id": "NEON-D1-V3",
       "status": "LULUS",
       "kumpulan": "fizah-wp",
       "produk": "NeoN",
-      "tajuk": "Poster D1 + copy variasi 05.3 (Lifestyle)",
+      "tajuk": "Poster D1 baru (nah-d1-dapur-sempit) + copy variasi 05.3 (Lifestyle)",
       "angle": "05",
       "jenis_media": "image",
-      "media": "20e20b4011d323cc171159a5dd1d0257",
+      "media": "975abeffde553ec3c13a4d7688149c3d",
       "creative_ids": [],
       "promo": "Pakej serendah RM20 + penghantaran & pemasangan percuma (disahkan user 4 Nov 2026)",
       "promo_sah_hingga": "2026-11-30",
@@ -537,17 +542,19 @@
       "sumber": "projek/neon-flow-01/variasi.md 05.3",
       "guna": [],
       "gaya": "ditulis semula 2026-11-11, tanpa ukuran cm 2026-11-12",
-      "diluluskan": "2026-11-12"
+      "diluluskan": "2026-11-12",
+      "media_lama": "20e20b4011d323cc171159a5dd1d0257",
+      "nota": "Gambar ditukar 12 Nov 2026 ke poster D1 baru tanpa '19.5 cm' (projek/neon-swipe-01)."
     },
     {
       "id": "NEON-D1-V4",
       "status": "LULUS",
       "kumpulan": "fizah-wp",
       "produk": "NeoN",
-      "tajuk": "Poster D1 + copy variasi 05.4 (Objection handling)",
+      "tajuk": "Poster D1 baru (nah-d1-dapur-sempit) + copy variasi 05.4 (Objection handling)",
       "angle": "05",
       "jenis_media": "image",
-      "media": "20e20b4011d323cc171159a5dd1d0257",
+      "media": "975abeffde553ec3c13a4d7688149c3d",
       "creative_ids": [],
       "promo": "Pakej serendah RM20 + penghantaran & pemasangan percuma (disahkan user 4 Nov 2026)",
       "promo_sah_hingga": "2026-11-30",
@@ -559,17 +566,19 @@
       "sumber": "projek/neon-flow-01/variasi.md 05.4",
       "guna": [],
       "gaya": "ditulis semula 2026-11-11, tanpa ukuran cm 2026-11-12",
-      "diluluskan": "2026-11-12"
+      "diluluskan": "2026-11-12",
+      "media_lama": "20e20b4011d323cc171159a5dd1d0257",
+      "nota": "Gambar ditukar 12 Nov 2026 ke poster D1 baru tanpa '19.5 cm' (projek/neon-swipe-01)."
     },
     {
       "id": "NEON-D1-V5",
       "status": "LULUS",
       "kumpulan": "fizah-wp",
       "produk": "NeoN",
-      "tajuk": "Poster D1 + copy variasi 05.5 (Direct response)",
+      "tajuk": "Poster D1 baru (nah-d1-dapur-sempit) + copy variasi 05.5 (Direct response)",
       "angle": "05",
       "jenis_media": "image",
-      "media": "20e20b4011d323cc171159a5dd1d0257",
+      "media": "975abeffde553ec3c13a4d7688149c3d",
       "creative_ids": [],
       "promo": "Pakej serendah RM20 + penghantaran & pemasangan percuma (disahkan user 4 Nov 2026)",
       "promo_sah_hingga": "2026-11-30",
@@ -581,7 +590,9 @@
       "sumber": "projek/neon-flow-01/variasi.md 05.5",
       "guna": [],
       "gaya": "ditulis semula 2026-11-11, tanpa ukuran cm 2026-11-12",
-      "diluluskan": "2026-11-12"
+      "diluluskan": "2026-11-12",
+      "media_lama": "20e20b4011d323cc171159a5dd1d0257",
+      "nota": "Gambar ditukar 12 Nov 2026 ke poster D1 baru tanpa '19.5 cm' (projek/neon-swipe-01)."
     },
     {
       "id": "NEON-C1-V1",

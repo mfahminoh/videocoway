@@ -10,6 +10,7 @@ Dua templat poster iklan (pelanggan akhir) yang di-swipe dari artifak **Grüns S
 | Langkah | Status | Fail | Nota |
 |---|---|---|---|
 | 5 Poster HTML (4) | ✅ draf | `out/neon-swipe-01/poster/{nah-a1-air-botol,nah-a2-masak-air,goodbye-b1-angkut-air,goodbye-b2-masak-air}.png` | menunggu kelulusan user |
+| Poster D1 baru | ✅ 12 Nov | `out/neon-swipe-01/poster/nah-d1-dapur-sempit.png` | "DAPUR SEMPIT? TETAP MUAT." + garis "sejengkal je"; hash 975abeffde553ec3c13a4d7688149c3d; gambar untuk 5 variasi NEON-D1-V* |
 | Prompt Flow | ✅ draf | `poster/flow-prompts.md` | A1, A2, B1, B2 + idea varian |
 | 7 Iklan | ✅ 12 Nov | `iklan/README.md` | A1, A2, B1 × 2 ad set promo RM18 (Coway Azzuddin), ganti PR06 & PR09; bank `SWIPE-A1/A2/B1` |
 
@@ -27,6 +28,7 @@ Dua templat poster iklan (pelanggan akhir) yang di-swipe dari artifak **Grüns S
 
 - `poster/img/bg_a1.jpg`, `bg_a2.jpg`: latar prop templat A (Seedream 4.5, 1728×2160)
 - `poster/img/bg_b1.jpg`, `bg_b2.jpg`: prop templat B (Seedream 4.5, 2048×2048). `bg_b1.jpg` ialah versi edit tanpa tulisan "19.5L" pada galon; `bg_b1_asal.jpg` asal.
+- `poster/img/bg_d1.jpg`: latar dapur sempit templat A (Seedream 4.5, 12 Nov)
 - `poster/img/neon-ciel-34.png`: unit NeoN Ciel Blue rasmi (dari neon-rm20-01)
 - Kos Seedream: 5 gambar ≈ USD 0.20
 
