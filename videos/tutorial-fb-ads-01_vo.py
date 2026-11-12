@@ -14,7 +14,7 @@ ROOT = pathlib.Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "voiceover"))
 import gemini_tts  # noqa: E402
 from gemini_tts import tts  # noqa: E402
-gemini_tts.MODELS[:] = ["gemini-3.1-flash-tts-preview"]  # 3.8/2.5 kerap baca arahan gaya
+gemini_tts.MODELS[:] = ["gemini-3.1-flash-tts-preview", "gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"]  # 3.1 diutamakan; 3.8/2.5 kerap baca arahan gaya (semakan panjang tapis)
 
 D = ROOT / "videos" / "TF01"
 SRT = ROOT / "projek" / "tutorial-fb-ads-01" / "kapsyen.srt"
@@ -64,7 +64,11 @@ def gen(seg):
     best = None
     for attempt in range(4):
         prompt = f"{STYLE}: {text}" if attempt < 3 else text   # cubaan terakhir tanpa arahan gaya
-        data, model = tts(prompt, VOICE)
+        try:
+            data, model = tts(prompt, VOICE)
+        except SystemExit:
+            print(f"  baris {seg['i']:02d}: TTS gagal (had kadar), cuba lagi", flush=True)
+            continue
         if data[:4] == b"RIFF":
             raw = D / "_raw.wav"; raw.write_bytes(data); x, sr = read(raw); raw.unlink()
         else:
@@ -76,6 +80,8 @@ def gen(seg):
         if 0.75 < r < 1.3:
             break
         print(f"  baris {seg['i']:02d} cubaan {attempt + 1}: {len(y) / sr:.1f}s vs jangka {exp:.1f}s, ulang", flush=True)
+    if best is None:
+        return seg["i"], 0.0, "GAGAL"
     y, sr, r, model = best
     with wave.open(str(p), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes((y * 32767).astype("<i2").tobytes())
