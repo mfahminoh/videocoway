@@ -1,0 +1,13 @@
+Use the image generation tool to create ONE portrait Facebook ad poster, aspect ratio 4:5 (1080x1350). Malaysian direct-response style: bold, high contrast, clean, readable on a phone.
+
+PRODUCT (must match the attached reference photos exactly): Coway 551L Multi-Door refrigerator, model CR551. Black brushed-metal finish, FOUR doors: two tall upper French doors on top and two shorter lower drawer-doors below, small lowercase "coway" logo top-left of the left upper door, small digital display panel on the right upper door. Do NOT redesign it, do not add a water dispenser, do not change colour, do not turn it into a 2-door side-by-side.
+
+LAYOUT (strict):
+1. Very top, small centred label in bold caps: "PETI AIS COWAY" (small, like a kicker, not the main headline).
+2. Centre of the poster: the MAIN HEADLINE in huge, extra-bold, heavy condensed sans-serif capitals, stacked on 2-3 lines, the biggest element on the poster, center of attention: "STOK SEBULAN PUN MUAT!"
+3. Left side AND right side: one Coway 4-door fridge on each side, full height, framing the headline (left fridge doors open, packed neatly with groceries, frozen meat and vegetables, right fridge doors closed, front view).
+4. A round/starburst promo BADGE overlapping near the headline: "SERENDAH" small on top, "RM20" very big, "SEBULAN*" small below.
+5. Bottom: a full-width banner strip: "SIAP HANTAR & PASANG FREE*" in bold caps, and under it a tiny line "*Tertakluk terma & syarat."
+
+STYLE: Warm Malaysian kitchen photo background blurred, dark overlay in the centre so the white headline pops, "MUAT!" in big yellow, red badge, red bottom banner.
+All text in Bahasa Melayu, spelled EXACTLY as given, no other words, no extra slogans, no fake logos, no watermark. Save the final image as V3_stok_sebulan.png in the current directory.
