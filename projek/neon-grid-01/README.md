@@ -8,7 +8,7 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 | G2 3 tanda | NE09 | out/neon-grid-01/g2-3-tanda.png | ⏳ draf |
 | G3 4 langkah | NE10 | out/neon-grid-01/g3-4-langkah.png | ⏳ draf |
 | G4 Bajet kecil | NE01 | out/neon-grid-01/g4-bajet-kecil.png | ⏳ draf |
-| Copy Threads | — | copy.md | ⏳ draf |
+| Copy Threads + headline + label panel (Codex) | — | copy.md | ⏳ draf v2 |
 | 7 Iklan | — | | — |
 
 ## Cara bina
@@ -24,6 +24,8 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 - 2026-11-19: user minta guna skrip pakej 30 video penapis air dan mampatkan beberapa video Neon ke grid 4 panel macam iklan mop. Pilih NE05, NE09, NE10, NE01. (user + Claude)
 - 2026-11-19: harga ikut tawaran semasa (RM20 sebulan + hantar & pasang free), bukan RM54 + rebat dalam video asal. Ukuran tulis "sejengkal je". (Claude, ikut coway-gaya-bahasa)
 - 2026-11-19: close-up unit dari klip presenter/press_pour ada tulisan butang herot (klip AI) → panel pakej guna gambar rasmi self-service & heart service.
+
+- 2026-11-19: copy (caption, headline, label panel) ditulis semula oleh Codex ikut AGENTS.md; label tanpa emoji, G4 panel 4 "air terus ada". Lulus semak_gaya. (user minta Codex)
 
 ## Terbuka
 - [ ] User luluskan 4 grid + copy
