@@ -40,3 +40,5 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 - [x] User luluskan G1, G5–G7 + copy (19 Nov 2026)
 - [x] User luluskan versi halus (produk ±60%, model panel 3) (19 Nov 2026)
 - [ ] Sahkan dengan ejen: RM20 sebulan masih sah untuk NeoN
+- [x] 4 grid dimasukkan ke Coway Monitor 9 pagi (Drive Library/Poster/neon, Cloudinary, state.bank `pending`, batch `batch-PILOT-001-202611192250` dalam Panel Kawalan) (19 Nov 2026)
+- [ ] Lulus batch dalam Panel Kawalan supaya monitor boleh publish
