@@ -1,0 +1,106 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Grid 4 panel NeoN (gaya iklan Threads "mop"), 1080x1080. Satu grid = satu video NE (skrip videos/NExx/lines.json).
+     Gambar: bingkai klip asal assets/clips/neon (img/*.jpg), cutout rasmi img/neon-ciel-34.png, podium 5 warna. -->
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=block" rel="stylesheet">
+<style>
+@font-face{font-family:Nunito;src:url(../../assets/fonts/NunitoSans-900.ttf);font-weight:900}
+@font-face{font-family:Nunito;src:url(../../assets/fonts/NunitoSans-800.ttf);font-weight:800}
+@font-face{font-family:Nunito;src:url(../../assets/fonts/NunitoSans-700.ttf);font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222}
+.poster{width:1080px;height:1080px;background:#fff;display:grid;grid-template-columns:537px 537px;grid-template-rows:537px 537px;gap:6px;margin-bottom:20px;font-family:Nunito,sans-serif}
+.p{position:relative;overflow:hidden}
+.p>img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.p .fade{position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0))}
+.lbl{position:absolute;left:18px;top:24px;max-width:470px;transform:rotate(-3deg);transform-origin:left top;
+  font:700 37px/1.32 Kalam,cursive;color:#151515}
+.lbl span.hl{background:#ffe25a;padding:2px 12px;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+  box-shadow:0 3px 8px rgba(0,0,0,.18)}
+.r{color:#e1262c}.b{color:#1565c0}
+.sub{position:absolute;left:22px;max-width:330px;font:800 19px/1.25 Nunito;color:#1d1d1d;background:rgba(255,255,255,.88);
+  padding:8px 12px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.15)}
+.tnc{position:absolute;right:12px;bottom:8px;font:700 12px/1 Nunito;color:rgba(0,0,0,.55)}
+.tnc.w{color:rgba(255,255,255,.85);text-shadow:0 1px 2px rgba(0,0,0,.6)}
+/* panel produk */
+.prod{background:radial-gradient(circle at 70% 60%,#ffffff 0%,#e8f3fa 55%,#d3e7f3 100%)}
+.prod .unit{position:absolute;right:-6px;bottom:28px;width:250px;filter:drop-shadow(0 14px 14px rgba(0,0,0,.22))}
+.prod .floor{position:absolute;right:20px;bottom:18px;width:230px;height:30px;background:radial-gradient(ellipse,rgba(0,0,0,.25),rgba(0,0,0,0) 70%)}
+.chips{position:absolute;left:18px;top:158px;display:flex;flex-direction:column;gap:12px;width:268px}
+.chip{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:8px 10px;box-shadow:0 3px 10px rgba(0,0,0,.12);
+  font:800 17px/1.2 Nunito;color:#1b2a3a}
+.chip i{flex:0 0 46px;height:46px;border-radius:50%;background:#1565c0;display:flex;align-items:center;justify-content:center}
+.chip svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.tag{position:absolute;left:18px;bottom:22px;background:#1565c0;color:#fff;font:900 20px/1 Nunito;letter-spacing:1.5px;padding:8px 12px;border-radius:6px}
+.call{position:absolute;font:700 30px/1.05 Kalam,cursive;color:#1565c0;transform:rotate(-6deg);text-align:center}
+.call small{display:block;font-size:20px;color:#1b2a3a}
+.arrow{position:absolute;stroke:#1565c0;fill:none;stroke-width:3;stroke-linecap:round}
+/* bulatan sebelum/selepas */
+.circ{position:absolute;width:150px;text-align:center}
+.circ img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.circ b{display:inline-block;margin-top:-14px;position:relative;background:#fff;border-radius:20px;padding:4px 12px;font:900 15px/1 Nunito;color:#1b2a3a;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="i-temp" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.2 6 10.5a6 6 0 0 1-12 0C6 10.2 9 7 12 3z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M12 10.5a1.5 1.5 0 0 1 3 0V12a1.5 1.5 0 0 1 3 0v3.5A5.5 5.5 0 0 1 12.5 21h-1a5 5 0 0 1-4.3-2.5L5 14.5a1.5 1.5 0 0 1 2.5-1.6L9 15"/></symbol>
+  <symbol id="i-color" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.2-1-1.6-1-2.6 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></symbol>
+  <symbol id="i-size" viewBox="0 0 24 24"><path d="M4 12h16M4 12l3-3M4 12l3 3M20 12l-3-3M20 12l-3 3"/></symbol>
+</defs></svg>
+
+<div id="root"></div>
+
+<script>
+const S = (t)=>t.replace(/\{r:(.*?)\}/g,'<span class="r">$1</span>').replace(/\{b:(.*?)\}/g,'<span class="b">$1</span>');
+const lbl = (t,extra='')=>`<div class="lbl" ${extra}>${t.split('\n').map(l=>`<span class="hl">${S(l)}</span>`).join('<br>')}</div>`;
+const sub = (t,top=150)=>t?`<div class="sub" style="top:${top}px">${S(t)}</div>`:'';
+const chip = (ic,t)=>`<div class="chip"><i><svg><use href="#i-${ic}"/></svg></i><span>${t}</span></div>`;
+
+function photo(p){
+  return `<div class="p"><img class="bg" src="img/${p.img}" style="object-position:${p.pos||'50% 50%'}"><div class="fade"></div>
+    ${lbl(p.l)}${sub(p.s,p.st)}${p.circ||''}${p.tnc?'<div class="tnc w">*Tertakluk terma & syarat.</div>':''}</div>`;
+}
+function prod(p){
+  return `<div class="p prod"><div class="floor"></div><img class="unit" src="img/neon-ciel-34.png">
+    <div class="tag">COWAY</div>${lbl(p.l,'style="top:64px"')}
+    <div class="chips">${p.chips.map(c=>chip(c[0],c[1])).join('')}</div>
+    <div class="call" style="right:150px;bottom:30px"><small>Sebulan</small>RM20 je*</div>
+    <div class="tnc">*Tertakluk terma & syarat.</div></div>`;
+}
+const circ=(img,lab,x,y)=>`<div class="circ" style="left:${x}px;top:${y}px"><img src="img/${img}"><br><b>${lab}</b></div>`;
+
+const GRIDS = [
+ // NE05 — Pukul 3 pagi
+ {id:'g1-pukul-3-pagi', p:[
+  {img:'sibuk-b.jpg', pos:'50% 62%', l:'Pukul 3 pagi,\n{r:baby menangis} 😩', s:'Susu kena siap sekarang. Mata separuh terbuka...', st:150},
+  {prod:1, l:'Pasang Coway {b:NeoN} je!', chips:[['temp','Panas, sejuk, suhu bilik'],['tap','Tekan je, 250ml berhenti sendiri'],['color','5 pilihan warna']]},
+  {img:'tuang.jpg', pos:'50% 72%', l:'Tekan je,\n{b:air terus keluar} ✅', s:'Tak payah jerang, tak payah tunggu.', st:150},
+  {img:'ke-baby.jpg', pos:'50% 55%', l:'Malam pun\n{b:tak kelam-kabut} 😊', s:''},
+ ]},
+ // NE09 — 3 tanda
+ {id:'g2-3-tanda', p:[
+  {img:'presenter.jpg', pos:'50% 40%', l:'{r:1.} Dapur kecil? 🤔', s:'NeoN kecil, sejengkal je. Tak makan ruang.', st:104},
+  {img:'self-service.jpg', pos:'50% 50%', l:'{r:2.} Selalu sibuk?', s:'Ambil pakej self-service. Filter dihantar tiap 8 bulan.', st:104},
+  {img:'tekan.jpg', pos:'50% 58%', l:'{r:3.} Ada budak kecil?', s:'Air panas berkunci. Kena tekan 3 saat.', st:104},
+  {img:'../../../assets/img/neon/podium5.jpg', pos:'50% 60%', l:'Bonus: {b:5 warna}! ✅', s:'Panas, sejuk, suhu bilik. RM20 sebulan je*', st:104, tnc:1},
+ ]},
+ // NE10 — 4 langkah
+ {id:'g3-4-langkah', p:[
+  {img:'presenter.jpg', pos:'50% 40%', l:'{r:1.} WhatsApp saya', s:'Tak tahu proses? Tanya dulu pun takpe.', st:104},
+  {img:'../../../assets/img/neon/podium5.jpg', pos:'50% 60%', l:'{r:2.} Pilih warna', s:'Ada 5. Ikut tema dapur.', st:104},
+  {img:'heart-service.jpg', pos:'88% 50%', l:'{r:3.} Pilih pakej', s:'Technician datang servis, atau self-service.', st:104},
+  {img:'tuang.jpg', pos:'50% 72%', l:'{r:4.} Pasang {b:free},\nterus guna ✅', s:'Panas, sejuk, suhu bilik. RM20 sebulan je*', st:150, tnc:1},
+ ]},
+ // NE01 — Bajet kecil
+ {id:'g4-bajet-kecil', p:[
+  {img:'../../../assets/img/neon/podium5.jpg', pos:'50% 60%', l:'Bajet kecil,\n{r:tak boleh cantik?} 🤔', s:'Siapa kata?', st:150},
+  {prod:1, l:'Ni Coway {b:NeoN}', chips:[['color','5 warna: pink, mint, biru, kelabu, putih'],['temp','Panas, sejuk, suhu bilik'],['size','Kecik, sejengkal je']]},
+  {img:'presenter.jpg', pos:'50% 40%', l:'Ngam untuk\n{b:dapur kecil} ✅', s:'', st:150},
+  {img:'tuang.jpg', pos:'50% 72%', l:'Dapur cantik,\n{b:air pun bersih} 😊', s:'Siap hantar & pasang free*', st:150, tnc:1},
+ ]},
+];
+
+document.getElementById('root').innerHTML = GRIDS.map(g=>
+  `<div class="poster" id="${g.id}">${g.p.map(p=>p.prod?prod(p):photo(p)).join('')}</div>`).join('');
+</script>
+</body></html>
