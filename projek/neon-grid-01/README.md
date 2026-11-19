@@ -38,4 +38,5 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 
 ## Terbuka
 - [x] User luluskan G1, G5–G7 + copy (19 Nov 2026)
+- [x] User luluskan versi halus (produk ±60%, model panel 3) (19 Nov 2026)
 - [ ] Sahkan dengan ejen: RM20 sebulan masih sah untuk NeoN
