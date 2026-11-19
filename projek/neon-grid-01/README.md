@@ -8,10 +8,10 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 | G2 3 tanda | NE09 | (dibuang) | ❌ ditolak (19 Nov) |
 | G3 4 langkah | NE10 | (dibuang) | ❌ ditolak (19 Nov) |
 | G4 Bajet kecil | NE01 | (dibuang) | ❌ ditolak (19 Nov) |
-| G5 Baru kahwin | NE02 | out/neon-grid-01/g5-baru-kahwin.png | ⏳ draf |
-| G6 Penat masak air | bank bahasa | out/neon-grid-01/g6-masak-air.png | ⏳ draf |
-| G7 Angkut tong air | bank bahasa | out/neon-grid-01/g7-angkut-tong.png | ⏳ draf |
-| Copy Threads + headline + label panel (Codex) | — | copy.md | ⏳ draf v2 |
+| G5 Baru kahwin | NE02 | out/neon-grid-01/g5-baru-kahwin.png | ✅ lulus (19 Nov) |
+| G6 Penat masak air | bank bahasa | out/neon-grid-01/g6-masak-air.png | ✅ lulus (19 Nov) |
+| G7 Angkut tong air | bank bahasa | out/neon-grid-01/g7-angkut-tong.png | ✅ lulus (19 Nov) |
+| Copy Threads + headline + label panel (Codex) | — | copy.md | ✅ lulus (19 Nov) |
 | 7 Iklan | — | | — |
 
 ## Cara bina
@@ -35,5 +35,5 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 - 2026-11-19: G5–G7: copy ditulis Codex (struktur G1), gambar panel 1 & 4 dijana Codex (`img/gen/`, tiada unit NeoN AI, pakaian sopan). Panel 3 guna semula bingkai klip (tuang/tekan).
 
 ## Terbuka
-- [ ] User luluskan G5–G7 + copy
+- [x] User luluskan G1, G5–G7 + copy (19 Nov 2026)
 - [ ] Sahkan dengan ejen: RM20 sebulan masih sah untuk NeoN
