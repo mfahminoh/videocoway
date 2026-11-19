@@ -34,6 +34,8 @@ Poster 1080×1080 untuk iklan Threads/Meta (pelanggan akhir), gaya rujukan iklan
 
 - 2026-11-19: G5–G7: copy ditulis Codex (struktur G1), gambar panel 1 & 4 dijana Codex (`img/gen/`, tiada unit NeoN AI, pakaian sopan). Panel 3 guna semula bingkai klip (tuang/tekan).
 
+- 2026-11-19: penghalusan (user): panel 2 unit NeoN dibesarkan ±60% panel dan lebih tajam; panel 3 G5–G7 (tiada kaitan bayi) ganti bingkai botol dengan model ±60% panel guna NeoN (dijana Codex dengan rujukan cutout rasmi, `img/gen/g*-p3.png`), label di bawah tanpa subteks supaya muka tak tertutup. G1 panel 3 kekal (cerita bayi).
+
 ## Terbuka
 - [x] User luluskan G1, G5–G7 + copy (19 Nov 2026)
 - [ ] Sahkan dengan ejen: RM20 sebulan masih sah untuk NeoN

@@ -23,13 +23,13 @@ body{background:#222}
 .tnc{position:absolute;right:12px;bottom:8px;font:700 12px/1 Nunito;color:rgba(0,0,0,.55)}
 .tnc.w{color:rgba(255,255,255,.85);text-shadow:0 1px 2px rgba(0,0,0,.6)}
 /* panel produk */
-.prod{background:radial-gradient(circle at 70% 60%,#ffffff 0%,#e8f3fa 55%,#d3e7f3 100%)}
-.prod .unit{position:absolute;right:-6px;bottom:28px;width:250px;filter:drop-shadow(0 14px 14px rgba(0,0,0,.22))}
-.prod .floor{position:absolute;right:20px;bottom:18px;width:230px;height:30px;background:radial-gradient(ellipse,rgba(0,0,0,.25),rgba(0,0,0,0) 70%)}
-.chips{position:absolute;left:18px;top:158px;display:flex;flex-direction:column;gap:12px;width:268px}
+.prod{background:radial-gradient(circle at 70% 62%,#ffffff 0%,#eef4f8 45%,#c9dcea 100%)}
+.prod .unit{position:absolute;right:14px;bottom:24px;width:300px;filter:contrast(1.08) saturate(1.25) drop-shadow(0 18px 18px rgba(0,0,0,.28)) drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.prod .floor{position:absolute;right:10px;bottom:12px;width:300px;height:36px;background:radial-gradient(ellipse,rgba(0,0,0,.25),rgba(0,0,0,0) 70%)}
+.chips{position:absolute;left:14px;top:150px;display:flex;flex-direction:column;gap:10px;width:212px}
 .chip{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:8px 10px;box-shadow:0 3px 10px rgba(0,0,0,.12);
-  font:800 17px/1.2 Nunito;color:#1b2a3a}
-.chip i{flex:0 0 46px;height:46px;border-radius:50%;background:#1565c0;display:flex;align-items:center;justify-content:center}
+  font:800 15px/1.2 Nunito;color:#1b2a3a}
+.chip i{flex:0 0 40px;height:40px;border-radius:50%;background:#1565c0;display:flex;align-items:center;justify-content:center}
 .chip svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 .tag{position:absolute;left:18px;bottom:22px;background:#1565c0;color:#fff;font:900 20px/1 Nunito;letter-spacing:1.5px;padding:8px 12px;border-radius:6px}
 .call{position:absolute;font:700 30px/1.05 Kalam,cursive;color:#1565c0;transform:rotate(-6deg);text-align:center}
@@ -58,13 +58,13 @@ const chip = (ic,t)=>`<div class="chip"><i><svg><use href="#i-${ic}"/></svg></i>
 
 function photo(p){
   return `<div class="p"><img class="bg" src="img/${p.img}" style="object-position:${p.pos||'50% 50%'}"><div class="fade"></div>
-    ${lbl(p.l)}${sub(p.s,p.st)}${p.circ||''}${p.tnc?'<div class="tnc w">*Tertakluk terma & syarat.</div>':''}</div>`;
+    ${lbl(p.l,p.ls?`style="${p.ls}"`:'')}${sub(p.s,p.st)}${p.circ||''}${p.tnc?'<div class="tnc w">*Tertakluk terma & syarat.</div>':''}</div>`;
 }
 function prod(p){
   return `<div class="p prod"><div class="floor"></div><img class="unit" src="img/neon-ciel-34.png">
     <div class="tag">COWAY</div>${lbl(p.l,'style="top:64px"')}
     <div class="chips">${p.chips.map(c=>chip(c[0],c[1])).join('')}</div>
-    <div class="call" style="right:150px;bottom:30px"><small>Sebulan</small>RM20 je*</div>
+    <div class="call" style="left:40px;bottom:66px"><small>Sebulan</small>RM20 je*</div>
     <div class="tnc">*Tertakluk terma & syarat.</div></div>`;
 }
 const circ=(img,lab,x,y)=>`<div class="circ" style="left:${x}px;top:${y}px"><img src="img/${img}"><br><b>${lab}</b></div>`;
@@ -81,21 +81,21 @@ const GRIDS = [
  {id:'g5-baru-kahwin', p:[
   {img:'gen/g5-p1.png', pos:'50% 60%', l:'Baru kahwin,\n{r:rumah penuh kotak}', s:'Dapur baru, banyak benda nak susun.', st:150},
   {prod:1, l:'Pasang Coway {b:NeoN} je!', chips:[['temp','Panas, sejuk, suhu bilik'],['tap','Tekan je, 250ml berhenti sendiri'],['color','5 pilihan warna']]},
-  {img:'tuang.jpg', pos:'50% 72%', l:'Tekan je,\n{b:air terus keluar}', s:'Tak payah masak air, tak payah tunggu.', st:150},
+  {img:'gen/g5-p3.png', pos:'50% 50%', l:'Tekan je,\n{b:air terus keluar}', s:'', ls:'top:auto;bottom:34px'},
   {img:'gen/g5-p4.png', pos:'50% 60%', l:'Rumah dah kemas,\n{b:minum pun tenang} 🥤', s:'Dapur baru, air pun senang nak ambil.', st:150},
  ]},
  // G6 — Penat masak air · copy Codex
  {id:'g6-masak-air', p:[
   {img:'gen/g6-p1.png', pos:'50% 60%', l:'Air dah masak,\n{r:kena tunggu sejuk lagi?}', s:'Ibu tunggu air, kerja lain pun tertangguh.', st:150},
   {prod:1, l:'Pasang Coway {b:NeoN} je!', chips:[['temp','Panas, sejuk, suhu bilik'],['tap','Tekan je, 250ml berhenti sendiri'],['color','5 pilihan warna']]},
-  {img:'tekan.jpg', pos:'50% 58%', l:'Tekan je,\n{b:air terus keluar}', s:'Nak minum sekarang pun boleh.', st:150},
+  {img:'gen/g6-p3.png', pos:'50% 50%', l:'Tekan je,\n{b:air terus keluar}', s:'', ls:'top:auto;bottom:34px'},
   {img:'gen/g6-p4.png', pos:'50% 60%', l:'Tak perlu tunggu,\n{b:boleh santai minum} 😌', s:'Air sejuk terus ada bila nak minum.', st:150},
  ]},
  // G7 — Angkut tong air · copy Codex
  {id:'g7-angkut-tong', p:[
   {img:'gen/g7-p1.png', pos:'50% 60%', l:'Dua tong besar,\n{r:naik tangga tiap minggu?}', s:'Penat angkut, dapur pun belum tentu kemas.', st:150},
   {prod:1, l:'Pasang Coway {b:NeoN} je!', chips:[['temp','Panas, sejuk, suhu bilik'],['tap','Tekan je, 250ml berhenti sendiri'],['color','5 pilihan warna']]},
-  {img:'tuang.jpg', pos:'50% 72%', l:'Tekan je,\n{b:air terus keluar}', s:'Tak payah angkut, tak payah tunggu.', st:150},
+  {img:'gen/g7-p3.png', pos:'50% 50%', l:'Tekan je,\n{b:air terus keluar}', s:'', ls:'top:auto;bottom:34px'},
   {img:'gen/g7-p4.png', pos:'50% 60%', l:'Tong dah tak ada,\n{b:dapur pun lapang} 😌', s:'Nak minum, ambil je dekat dapur.', st:150},
  ]},
 ];
