@@ -13,6 +13,10 @@ Jangan campur dua audiens ni: video & poster **iklan** bercakap kepada pelanggan
 
 Semua copy kepada pelanggan (iklan, poster, skrip, bank autopilot) ikut skill `coway-gaya-bahasa`: macam ejen WhatsApp kawan, ayat pendek, bahasa pelanggan sebenar, bukan terjemahan. Penyemak: `.claude/skills/coway-gaya-bahasa/semak_gaya.py`.
 
+**Copywriting iklan ditulis oleh Codex** (pilihan user, 19 Nov 2026). Arahan Codex: `AGENTS.md`. Panggil dari Bash, contohnya:
+`codex exec --sandbox workspace-write "Tulis copy iklan untuk projek/<kod> ... simpan dalam projek/<kod>/copy.md" < /dev/null`
+Claude semak hasilnya dengan `semak_gaya.py` dan fakta/harga, kemudian guna dalam poster atau iklan dan commit. Kalau `AGENTS.md` dan skill gaya bahasa berubah, pastikan kedua-duanya selari.
+
 ## Aliran kerja projek video
 
 Satu skill satu langkah. Fail serahan dan struktur folder: [`projek/README.md`](projek/README.md).
