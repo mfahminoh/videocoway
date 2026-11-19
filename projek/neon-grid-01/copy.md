@@ -38,100 +38,113 @@ WhatsApp saya, tanya dulu pun takpe.
    **Label utama:** Malam pun
    {b:tak kelam-kabut}
 
-## G2 · 3 tanda (NE09)
+## G5 · Baru kahwin, rumah pertama (NE02)
 **Primary text:**
-DAPUR KECIL? SELALU SIBUK? ADA BUDAK KECIL? 🤔
+BARU KAHWIN, BARU NAK SUSUN RUMAH PERTAMA?
 
-Kalau satu pun kena, NeoN mungkin ngam untuk rumah awak.
-Kecik, sejengkal je. Ada pilihan self-service untuk yang sibuk.
-Panas, sejuk, suhu bilik. Ada 5 pilihan warna.
+Dapur penuh kotak. Nak air minum pun kena fikir.
+Pasang Coway NeoN je. Panas, sejuk, suhu bilik.
+Ada 5 pilihan warna ikut tema rumah.
 RM20 sebulan je, siap hantar & pasang free*.
 WhatsApp saya, tanya dulu pun takpe.
 *Tertakluk terma & syarat.
 
-**Headline:** 3 Tanda NeoN Ngam
+**Headline:** Rumah Pertama, Terus Ngam
 
 **Panel:**
 
-1. **Gambar:** `presenter.jpg`
-   **Label utama:** {r:1.} Dapur kecil? 🤔
-   **Subteks:** NeoN kecik, sejengkal je.
-
-2. **Gambar:** `self-service.jpg`
-   **Label utama:** {r:2.} Selalu sibuk?
-   **Subteks:** Self-service, filter dihantar tiap 8 bulan.
-
-3. **Gambar:** `tekan.jpg`
-   **Label utama:** {r:3.} Ada budak kecil?
-   **Subteks:** Air panas berkunci, tekan 3 saat.
-
-4. **Gambar:** `podium5.jpg`
-   **Label utama:** Bonus: {b:5 warna}!
-   **Subteks:** Panas, sejuk, suhu bilik. RM20 sebulan je*.
-
-## G3 · 4 langkah (NE10)
-**Primary text:**
-NAK PASANG COWAY TAPI TAK TAHU PROSES? SENANG JE ✅
-
-Mula dengan WhatsApp saya. Lepas tu pilih warna dan pakej.
-Technician datang pasang free. Siap, terus boleh guna.
-Panas, sejuk, suhu bilik. Ada 5 pilihan warna.
-RM20 sebulan je*.
-Tanya dulu pun takpe.
-*Tertakluk terma & syarat.
-
-**Headline:** Pasang NeoN, 4 Langkah Je
-
-**Panel:**
-
-1. **Gambar:** `presenter.jpg`
-   **Label utama:** {r:1.} WhatsApp saya
-   **Subteks:** Tak tahu proses? Tanya dulu pun takpe.
-
-2. **Gambar:** `podium5.jpg`
-   **Label utama:** {r:2.} Pilih warna
-   **Subteks:** Ada 5. Pilih ikut tema dapur.
-
-3. **Gambar:** `heart-service.jpg`
-   **Label utama:** {r:3.} Pilih pakej
-   **Subteks:** HEART Service atau self-service.
-
-4. **Gambar:** `tuang.jpg`
-   **Label utama:** {r:4.} Pasang {b:free},
-   terus guna
-   **Subteks:** Panas, sejuk, suhu bilik. RM20 sebulan je*.
-
-## G4 · Bajet kecil (NE01)
-**Primary text:**
-BAJET KECIL, NAK DAPUR CANTIK? BOLEH JE 🤔
-
-Coway NeoN ada 5 pilihan warna. Pilih yang ngam dengan dapur.
-Kecik, sejengkal je. Panas, sejuk, suhu bilik pun ada.
-RM20 sebulan je, siap hantar & pasang free*.
-WhatsApp saya, tanya dulu pun takpe.
-*Tertakluk terma & syarat.
-
-**Headline:** Bajet Kecil, Dapur Cantik
-
-**Panel:**
-
-1. **Gambar:** `podium5.jpg`
-   **Label utama:** Bajet kecil,
-   {r:tak boleh cantik?}
-   **Subteks:** Siapa kata?
+1. **Gambar:** `rumah-baru-kotak.jpg`
+   **Label utama:** Baru kahwin,
+   {r:rumah penuh kotak}
+   **Subteks:** Dapur baru, banyak benda nak susun.
 
 2. **Produk:** `neon-ciel-34.png`
-   **Label utama:** Ni Coway {b:NeoN}
+   **Label utama:** Pasang Coway {b:NeoN} je!
    **Cip ciri:**
-   - 5 warna: pink, mint, biru, kelabu, putih
    - Panas, sejuk, suhu bilik
-   - Kecik, sejengkal je
+   - Tekan je, 250ml berhenti sendiri
+   - 5 pilihan warna
 
-3. **Gambar:** `presenter.jpg`
-   **Label utama:** Ngam untuk
-   {b:dapur kecil}
+3. **Gambar:** `tuang.jpg`
+   **Label utama:** Tekan je,
+   {b:air terus keluar}
+   **Subteks:** Tak payah masak air, tak payah tunggu.
 
-4. **Gambar:** `tuang.jpg`
-   **Label utama:** Dapur cantik,
-   {b:air terus ada}
-   **Subteks:** Siap hantar & pasang free*.
+4. **Gambar:** `pasangan-minum-dapur.jpg`
+   **Label utama:** Rumah dah kemas,
+   {b:minum pun tenang} 🥤
+   **Subteks:** Dapur baru, air pun senang nak ambil.
+
+## G6 · Penat masak air
+**Primary text:**
+MALAS NAK PENING MASAK AIR?
+
+Cerek atas dapur. Tunggu air masak, lepas tu tunggu sejuk.
+Pasang Coway NeoN je. Panas, sejuk, suhu bilik.
+Ada 5 pilihan warna untuk dapur awak.
+RM20 sebulan je, siap hantar & pasang free*.
+WhatsApp saya, tanya dulu pun takpe.
+*Tertakluk terma & syarat.
+
+**Headline:** Tak Payah Tunggu Air Sejuk
+
+**Panel:**
+
+1. **Gambar:** `cerek-dapur-gas.jpg`
+   **Label utama:** Air dah masak,
+   {r:kena tunggu sejuk lagi?}
+   **Subteks:** Ibu tunggu air, kerja lain pun tertangguh.
+
+2. **Produk:** `neon-ciel-34.png`
+   **Label utama:** Pasang Coway {b:NeoN} je!
+   **Cip ciri:**
+   - Panas, sejuk, suhu bilik
+   - Tekan je, 250ml berhenti sendiri
+   - 5 pilihan warna
+
+3. **Gambar:** `tekan.jpg`
+   **Label utama:** Tekan je,
+   {b:air terus keluar}
+   **Subteks:** Nak minum sekarang pun boleh.
+
+4. **Gambar:** `ibu-minum-sejuk.jpg`
+   **Label utama:** Tak perlu tunggu,
+   {b:boleh santai minum} 😌
+   **Subteks:** Air sejuk terus ada bila nak minum.
+
+## G7 · Angkut tong air
+**Primary text:**
+ANGKUT TONG AIR NAIK TANGGA TIAP MINGGU?
+
+Dua tong besar sekali angkut. Naik tangga, ulang lagi minggu depan.
+Pasang Coway NeoN je. Panas, sejuk, suhu bilik.
+Ada 5 pilihan warna untuk dapur awak.
+RM20 sebulan je, siap hantar & pasang free*.
+WhatsApp saya, tanya dulu pun takpe.
+*Tertakluk terma & syarat.
+
+**Headline:** Tak Payah Angkut Tong Lagi
+
+**Panel:**
+
+1. **Gambar:** `tong-naik-tangga.jpg`
+   **Label utama:** Dua tong besar,
+   {r:naik tangga tiap minggu?}
+   **Subteks:** Penat angkut, dapur pun belum tentu kemas.
+
+2. **Produk:** `neon-ciel-34.png`
+   **Label utama:** Pasang Coway {b:NeoN} je!
+   **Cip ciri:**
+   - Panas, sejuk, suhu bilik
+   - Tekan je, 250ml berhenti sendiri
+   - 5 pilihan warna
+
+3. **Gambar:** `tuang.jpg`
+   **Label utama:** Tekan je,
+   {b:air terus keluar}
+   **Subteks:** Tak payah angkut, tak payah tunggu.
+
+4. **Gambar:** `dapur-kemas-tong-kosong.jpg`
+   **Label utama:** Tong dah tak ada,
+   {b:dapur pun lapang} 😌
+   **Subteks:** Nak minum, ambil je dekat dapur.
