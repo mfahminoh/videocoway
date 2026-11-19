@@ -2,7 +2,7 @@
 
 | Langkah | Status | Fail | Nota |
 |---|---|---|---|
-| 5 Poster iklan (6) | ✅ draf | `poster/rm20.html` → `out/neon-rm20-01/poster/p01–p06.png` | menunggu semakan user |
+| 5 Poster iklan (6) | ✅ lulus | `poster/rm20.html` → `out/neon-rm20-01/poster/p01–p06.png` | diluluskan user 2026-11-19 |
 | 7 Iklan | — | | 1 poster = 1 kempen (1-1-1) |
 
 Remake 6 poster rujukan user (grid 3×2, Ciel Blue, "SERENDAH RM20 SAHAJA*", bar "PENGHANTARAN & PEMASANGAN PERCUMA*"). Headline sama dengan rujukan.
@@ -12,5 +12,5 @@ Remake 6 poster rujukan user (grid 3×2, Ciel Blue, "SERENDAH RM20 SAHAJA*", bar
 - Teks, harga, logo dari HTML. Logo Coway: `poster/img/coway-logo-sky.png` (dari logo putih rasmi).
 
 ## Terbuka
-- [ ] User sahkan 6 poster
+- [x] User sahkan 6 poster (2026-11-19)
 - [ ] Sahkan dengan ejen harga "serendah RM20" dan terma promo untuk NeoN
